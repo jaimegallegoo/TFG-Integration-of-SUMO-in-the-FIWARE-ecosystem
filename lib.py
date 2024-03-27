@@ -49,7 +49,7 @@ def convert_SUMO_to_FIWARE(originalSUMO, originalFIWARE):
     # ROUTE COLOR MAPPING
         
     # Extract the routeColor from the source data
-    route_color = data['routes']['route'][0]['@color']
+    route_color = data['ptLines']['ptLine'][0]['@color']
 
     # Split the string into separate numbers
     r, g, b = map(int, route_color.split(','))
