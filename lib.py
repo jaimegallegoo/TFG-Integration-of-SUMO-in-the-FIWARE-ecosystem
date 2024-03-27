@@ -15,7 +15,7 @@ def convert_xml_to_json(xml_file_path, json_file_path):
     with open(json_file_path, 'w') as file:
         file.write(json_string)
 
-def convert_SUMO_to_FIWARE(originalSUMO, originalFIWARE):
+def convert_SUMO_to_FIWARE(originalSUMO, originalFIWARE, element):
     # Open the source JSON file and load the data
     with open(originalSUMO, 'r') as source_file:
         data = json.load(source_file)
@@ -39,7 +39,7 @@ def convert_SUMO_to_FIWARE(originalSUMO, originalFIWARE):
     }
 
     # Extract the transportation type from the source data
-    transportation_type = data['ptLines']['plLine'][0]['@vClass']
+    transportation_type = data['ptLines']['plLine'][element]['@vClass']
 
     # Map the transportation type to a number
     transportation_type_number = transportation_type_mapping.get(transportation_type, None)
@@ -49,7 +49,7 @@ def convert_SUMO_to_FIWARE(originalSUMO, originalFIWARE):
     # ROUTE COLOR MAPPING
         
     # Extract the routeColor from the source data
-    route_color = data['ptLines']['ptLine'][0]['@color']
+    route_color = data['ptLines']['ptLine'][element]['@color']
 
     # Split the string into separate numbers
     r, g, b = map(int, route_color.split(','))
@@ -61,13 +61,13 @@ def convert_SUMO_to_FIWARE(originalSUMO, originalFIWARE):
 
     # Extract the id from the route field and create a new dictionary
     converted_data = {
-        'id': data['routes']['route'][0]['@id'],
+        'id': data['ptLines']['ptLine'][element]['@id'],
         'type': 'PublicTransportRoute',
-        'routeCode': data['routes']['route'][0]['@id'],
-        'name': data['routes']['flow'][0]['param'][0]['@value'],
+        'routeCode': '?',
+        'name': data['ptLines']['ptLine'][element]['@name'],
         'transportationType': transportation_type_number,
         'routeColor': route_color_hex,
-        'routeSegments': '?',
+        'routeSegments': data['ptLines']['ptLine'][element]['busStop'][0]["@name"], # PENDIENTE
     }
 
     # Open the destination JSON file and dump the converted data
