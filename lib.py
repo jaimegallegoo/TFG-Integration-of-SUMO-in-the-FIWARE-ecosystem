@@ -26,20 +26,20 @@ def convert_SUMO_to_FIWARE(originalSUMO, originalFIWARE):
         
     # Define a mapping from transportation types to numbers
     transportation_type_mapping = {
-        'pt_tram': 0,
-        'pt_subway': 1,
-        'pt_rail': 2,
-        'pt_bus': 3,
-        'pt_ferry': 4,
-        'pt_cable_tram': 5,
-        'pt_aerial_lift': 6,
-        'pt_funicular': 7,
-        'pt_trolleybus': 11,
-        'pt_monorail': 12,
+        'tram': 0,
+        'subway': 1,
+        'rail': 2,
+        'bus': 3,
+        'ferry': 4,
+        'cable_tram': 5,
+        'aerial_lift': 6,
+        'funicular': 7,
+        'trolleybus': 11,
+        'monorail': 12,
     }
 
     # Extract the transportation type from the source data
-    transportation_type = data['routes']['flow'][0]['@type']
+    transportation_type = data['ptLines']['plLine'][0]['@vClass']
 
     # Map the transportation type to a number
     transportation_type_number = transportation_type_mapping.get(transportation_type, None)
