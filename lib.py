@@ -2,7 +2,7 @@ import xmltodict
 import json
 
 def convert_xml_to_json(xml_file_path, json_file_path):
-    with open(xml_file_path, 'r') as file:
+    with open(xml_file_path, 'r', encoding='utf-8') as file:
         xml_string = file.read()
 
     # Parse the XML string to a dictionary
