@@ -1,0 +1,9 @@
+{
+    "id": "pt_bus_265:0",
+    "type": "PublicTransportRoute",
+    "routeCode": "pt_bus_265:0",
+    "name": "Bus 265: U Stadtmitte => Mitte, Fischerinsel",
+    "transportationType": 3,
+    "routeColor": "#95276e",
+    "routeSegments": "?"
+}
