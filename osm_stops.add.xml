@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-03-28 11:34:01 by Eclipse SUMO netconvert Version 1.19.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="${SUMO_HOME}/data/typemap/osmNetconvert.typ.xml,${SUMO_HOME}/data/typemap/osmNetconvertAerialway.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml.gz"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml.gz"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <junctions>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+    </junctions>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+    </railway>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <busStop id="-11069774703" name="Parque Varadero" lane="-856315368_0" startPos="0.00" endPos="2.89" friendlyPos="true" lines="4"/>
+    <busStop id="-11069791046" name="Menéndez Pelayo 97" lane="-276525454#15_0" startPos="56.53" endPos="71.53" friendlyPos="true" lines="5C1 TUS-5C1"/>
+    <busStop id="-11069791050" name="Reina Victoria 117" lane="-174927187#0_0" startPos="30.73" endPos="45.73" friendlyPos="true" lines="N3 5C1 5C2 11"/>
+    <busStop id="-11070423989" name="Intercambiador del Sardinero 1" lane="-26492608#2_0" startPos="29.56" endPos="44.56" friendlyPos="true" lines="LC 15 3 4"/>
+    <busStop id="-11070424002" name="Barrio La Torre 123" lane="-920236485#1_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="N1"/>
+    <busStop id="-11072027632" name="Intercambiador Sardinero 2" lane="-26492608#2_0" startPos="6.34" endPos="21.34" friendlyPos="true" lines="E1 E31"/>
+    <busStop id="-11074485758" name="Gerardo Diego 1" lane="-276997556_0" startPos="10.25" endPos="25.25" friendlyPos="true" lines="7C1 7C2"/>
+    <busStop id="-11079510982" name="Corbanera 57" lane="-278790909#0_0" startPos="13.20" endPos="28.20" friendlyPos="true" lines="18"/>
+    <busStop id="-11080951161" name="La Gloria 179" lane="-22919832#3_0" startPos="3.06" endPos="18.06" friendlyPos="true" lines="17"/>
+    <busStop id="-11082786494" name="Campogiro 23" lane="-396699111#4_0" startPos="26.39" endPos="41.39" friendlyPos="true" lines="3"/>
+    <busStop id="-1524411651" name="General Dávila 28" lane="-247661919#10_0" startPos="12.87" endPos="27.87" friendlyPos="true" lines="5C2"/>
+    <busStop id="-2337169285" name="Maliaño" lane="-87356747#0_0" startPos="1644.52" endPos="1844.52" friendlyPos="true"/>
+    <busStop id="-3058796840" name="Santander RENFE" lane="-128439714_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="-1039012435#0_0" pos="10.60" length="39.64" friendlyPos="1"/>
+        <access lane="-1039012468#0_0" pos="52.78" length="39.92" friendlyPos="1"/>
+        <access lane="1039012399_0" pos="78.29" length="35.12" friendlyPos="1"/>
+        <access lane="1039012435#0_0" pos="41.89" length="34.83" friendlyPos="1"/>
+        <access lane="1039012435#1_0" pos="0.00" length="48.37" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-3135021046" name="Valdecilla" lane="-87371002#0_0" startPos="336.30" endPos="536.30" friendlyPos="true">
+        <access lane="-1057606719#0_0" pos="791.29" length="9.86" friendlyPos="1"/>
+        <access lane="1057606719#0_0" pos="29.59" length="14.66" friendlyPos="1"/>
+        <access lane="1118442400#2_0" pos="27.38" length="28.48" friendlyPos="1"/>
+        <access lane="308213122_0" pos="8.85" length="11.73" friendlyPos="1"/>
+        <access lane="833352650#0_0" pos="0.00" length="29.25" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-33638419" name="Muriedas-Bahía" lane="-87356747#0_0" startPos="1132.55" endPos="1332.55" friendlyPos="true"/>
+    <busStop id="-5355552886" name="Santander RENFE" lane="-308709119_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="-1039012435#0_0" pos="10.60" length="35.31" friendlyPos="1"/>
+        <access lane="-1039012468#0_0" pos="53.13" length="44.22" friendlyPos="1"/>
+        <access lane="1039012399_0" pos="77.94" length="39.42" friendlyPos="1"/>
+        <access lane="1039012435#0_0" pos="41.89" length="30.49" friendlyPos="1"/>
+        <access lane="1039012435#1_0" pos="0.00" length="45.07" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-6652674778" name="Nueva Montaña" lane="-87371002#0_0" startPos="2237.69" endPos="2437.69" friendlyPos="true">
+        <access lane="-339176393#1_0" pos="37.74" length="35.39" friendlyPos="1"/>
+        <access lane="103643081_0" pos="3.15" length="28.50" friendlyPos="1"/>
+        <access lane="339176393#1_0" pos="10.57" length="30.59" friendlyPos="1"/>
+        <access lane="797070801_0" pos="17.87" length="6.53" friendlyPos="1"/>
+        <access lane="798475539_0" pos="0.00" length="34.70" friendlyPos="1"/>
+    </busStop>
+    <busStop id="10855709507" name="Rectorado" lane="4337977_0" startPos="82.06" endPos="97.06" friendlyPos="true"/>
+    <busStop id="11069774685" name="Intercambiador Avenida de Valdecilla" lane="5888985#1_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11069774686" name="Jesús de Monasterio 21" lane="1194237600_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11069774687" name="Piquío" lane="427072144_0" startPos="6.82" endPos="21.82" friendlyPos="true"/>
+    <busStop id="11069774688" name="Los Castros 23" lane="446821796#1_0" startPos="19.42" endPos="34.42" friendlyPos="true"/>
+    <busStop id="11069774689" name="Ayuntamiento" lane="448485610#0_0" startPos="6.00" endPos="21.00" friendlyPos="true"/>
+    <busStop id="11069774690" name="Los Pinares" lane="4340624#2_0" startPos="0.00" endPos="1.57" friendlyPos="true"/>
+    <busStop id="11069774691" name="Canalejas 90" lane="4340623#0_0" startPos="5.01" endPos="20.01" friendlyPos="true"/>
+    <busStop id="11069774692" name="Canalejas 42" lane="4339486#13_0" startPos="1.80" endPos="16.80" friendlyPos="true"/>
+    <busStop id="11069774693" name="Canalejas 26" lane="4339486#9_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11069774694" name="Escolapios" lane="4339486#1_0" startPos="26.75" endPos="41.75" friendlyPos="true"/>
+    <busStop id="11069774695" name="Casimiro Sainz 6" lane="25115121#1_0" startPos="43.56" endPos="58.56" friendlyPos="true"/>
+    <busStop id="11069774696" name="Puertochico" lane="1193641627_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="E2"/>
+    <busStop id="11069774697" name="Jardines de Pereda" lane="134212920_0" startPos="46.52" endPos="61.52" friendlyPos="true"/>
+    <busStop id="11069774698" name="Correos" lane="23089470#1_0" startPos="27.80" endPos="42.80" friendlyPos="true"/>
+    <busStop id="11069774699" name="Jesús de Monasterio 7" lane="4337167#1_0" startPos="6.30" endPos="21.30" friendlyPos="true" lines="15"/>
+    <busStop id="11069774700" name="Estaciones" lane="1192822155_0" startPos="13.18" endPos="28.18" friendlyPos="true"/>
+    <busStop id="11069774701" name="Marqués de la Hermida 1" lane="25114357#0_0" startPos="32.01" endPos="47.01" friendlyPos="true"/>
+    <busStop id="11069774702" name="Marqués de la Hermida 15" lane="448641821_0" startPos="24.84" endPos="39.84" friendlyPos="true"/>
+    <busStop id="11069774704" name="Barrio Pesquero" lane="26037164_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11069791005" name="Marqués de la Hermida 36" lane="445720827_0" startPos="55.77" endPos="70.77" friendlyPos="true" lines="4"/>
+    <busStop id="11069791006" name="La Lonja" lane="445720824_0" startPos="12.48" endPos="27.48" friendlyPos="true" lines="N3"/>
+    <busStop id="11069791007" name="Francisco Tomás y Valiente 23" lane="364770263#1_0" startPos="2.05" endPos="17.05" friendlyPos="true"/>
+    <busStop id="11069791008" name="Santiago El Mayor 9" lane="4335295#0_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11069791009" name="Eusebio Santamaría 1" lane="448782798#1_0" startPos="90.18" endPos="105.18" friendlyPos="true"/>
+    <busStop id="11069791013" name="San Martín del Pino 13" lane="24971236#4_0" startPos="13.95" endPos="28.95" friendlyPos="true"/>
+    <busStop id="11069791014" name="Nuevo Parque" lane="277829093#2_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="11069791015" name="Francisco Rivas Moreno" lane="69408563#3_0" startPos="9.15" endPos="24.15" friendlyPos="true" lines="24C2 12"/>
+    <busStop id="11069791024" name="Alto de la Peña" lane="396699111#3_0" startPos="8.51" endPos="23.51" friendlyPos="true"/>
+    <busStop id="11069791025" name="Campogiro 90" lane="428461905#3_0" startPos="8.08" endPos="23.08" friendlyPos="true"/>
+    <busStop id="11069791026" name="Las Californias" lane="31910245#6_0" startPos="12.38" endPos="27.38" friendlyPos="true">
+        <access lane="-1076796878_0" pos="0.00" length="39.79" friendlyPos="1"/>
+        <access lane="-370752531#1_0" pos="0.00" length="40.39" friendlyPos="1"/>
+        <access lane="1076796878_0" pos="2.59" length="35.02" friendlyPos="1"/>
+        <access lane="370752531#1_0" pos="28.75" length="35.71" friendlyPos="1"/>
+        <access lane="370752533#1_0" pos="11.97" length="51.04" friendlyPos="1"/>
+    </busStop>
+    <busStop id="11069791027" name="Parque Doctor Morales" lane="444936107#0_0" startPos="66.69" endPos="81.69" friendlyPos="true">
+        <access lane="-42409367#2_0" pos="163.17" length="18.58" friendlyPos="1"/>
+        <access lane="-444936132#1_0" pos="0.00" length="40.44" friendlyPos="1"/>
+        <access lane="-444936145#1_0" pos="0.00" length="33.94" friendlyPos="1"/>
+        <access lane="42409367#2_0" pos="70.62" length="23.38" friendlyPos="1"/>
+        <access lane="444936145#1_0" pos="56.08" length="31.22" friendlyPos="1"/>
+    </busStop>
+    <busStop id="11069791028" name="Cajo 10" lane="389014121#1_0" startPos="10.54" endPos="25.54" friendlyPos="true">
+        <access lane="169080881_0" pos="89.85" length="63.98" friendlyPos="1"/>
+        <access lane="169080889_0" pos="22.18" length="31.65" friendlyPos="1"/>
+        <access lane="297319288#1_0" pos="10.17" length="53.60" friendlyPos="1"/>
+        <access lane="42409371#1_0" pos="98.38" length="42.46" friendlyPos="1"/>
+        <access lane="42409371#2_0" pos="0.00" length="57.36" friendlyPos="1"/>
+    </busStop>
+    <busStop id="11069791029" name="Cajo 2" lane="389010997_0" startPos="0.00" endPos="8.65" friendlyPos="true">
+        <access lane="-389015487_0" pos="111.96" length="7.69" friendlyPos="1"/>
+        <access lane="-4335169#1_0" pos="73.90" length="29.39" friendlyPos="1"/>
+        <access lane="293290201#9_0" pos="27.18" length="13.17" friendlyPos="1"/>
+        <access lane="389015487_0" pos="0.00" length="12.30" friendlyPos="1"/>
+        <access lane="4335169#1_0" pos="0.00" length="32.92" friendlyPos="1"/>
+    </busStop>
+    <busStop id="11069791030" name="Jerónimo Saiz de la Maza 9" lane="448635005_0" startPos="3.48" endPos="18.48" friendlyPos="true"/>
+    <busStop id="11069791032" name="Puente La Marga" lane="28095369_0" startPos="48.72" endPos="63.72" friendlyPos="true">
+        <access lane="26264059_0" pos="0.00" length="27.77" friendlyPos="1"/>
+        <access lane="53568688#0_0" pos="0.20" length="30.50" friendlyPos="1"/>
+        <access lane="53568688#1_0" pos="3.64" length="27.58" friendlyPos="1"/>
+        <access lane="53568774_0" pos="181.03" length="14.73" friendlyPos="1"/>
+        <access lane="833352693#3_0" pos="24.62" length="31.22" friendlyPos="1"/>
+    </busStop>
+    <busStop id="11069791033" name="Calle Castilla 64" lane="304648704#0_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11069791034" name="Calle Castilla 71" lane="445720804_0" startPos="68.14" endPos="83.14" friendlyPos="true"/>
+    <busStop id="11069791035" name="Calle Castilla 51" lane="448641344_0" startPos="52.05" endPos="67.05" friendlyPos="true"/>
+    <busStop id="11069791036" name="Calle Castilla 27" lane="448643013_0" startPos="20.10" endPos="35.10" friendlyPos="true" lines="24C1 14"/>
+    <busStop id="11069791037" name="Las Estaciones" lane="278001738#2_0" startPos="16.21" endPos="31.21" friendlyPos="true"/>
+    <busStop id="11069791038" name="Jesús de Monasterio 12" lane="299414083#2_0" startPos="26.70" endPos="41.70" friendlyPos="true"/>
+    <busStop id="11069791039" name="Plaza Ayuntamiento" lane="4337168_0" startPos="35.55" endPos="50.55" friendlyPos="true" lines="17"/>
+    <busStop id="11069791040" name="Correos" lane="1193035759_0" startPos="38.02" endPos="53.02" friendlyPos="true"/>
+    <busStop id="11069791041" name="Paseo de Pereda" lane="380886524#1_0" startPos="29.31" endPos="44.31" friendlyPos="true" lines="3 18"/>
+    <busStop id="11069791042" name="Paseo de Pereda 35" lane="1193922378_0" startPos="10.61" endPos="25.61" friendlyPos="true"/>
+    <busStop id="11069791043" name="Casimiro Sainz 9" lane="445731773#1_0" startPos="9.94" endPos="24.94" friendlyPos="true"/>
+    <busStop id="11069791044" name="Menéndez Pelayo 25" lane="276525454#3_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11069791045" name="Menéndez Pelayo 61" lane="276525454#7_0" startPos="31.47" endPos="46.47" friendlyPos="true"/>
+    <busStop id="11069791047" name="Avenida Los Infantes" lane="1194029124#1_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="11069791048" name="Pérez Galdós 17" lane="277850638#1_0" startPos="84.21" endPos="99.21" friendlyPos="true"/>
+    <busStop id="11069791049" name="Las Esclavas" lane="277850637#1_0" startPos="3.35" endPos="18.35" friendlyPos="true"/>
+    <busStop id="11069791051" name="Plaza de Italia Casino" lane="1192475897_0" startPos="26.17" endPos="41.17" friendlyPos="true"/>
+    <busStop id="11069791052" name="Francisco Tomás y Valiente 11" lane="1192475898_0" startPos="8.94" endPos="23.94" friendlyPos="true"/>
+    <busStop id="11070253998" name="Los Ciruelos 26" lane="332182481#1_0" startPos="29.89" endPos="44.89" friendlyPos="true"/>
+    <busStop id="11070253999" name="José María Cossío 52" lane="446056718#2_0" startPos="117.57" endPos="132.57" friendlyPos="true"/>
+    <busStop id="11070254000" name="José María Cossío 44" lane="446056718#0_0" startPos="5.96" endPos="20.96" friendlyPos="true"/>
+    <busStop id="11070254001" name="José María Cossío 24" lane="448457940_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11070254002" name="José María Cossío 12" lane="22919868#0_0" startPos="19.17" endPos="34.17" friendlyPos="true"/>
+    <busStop id="11070254003" name="Plaza Manuel Llano" lane="4337037#1_0" startPos="13.51" endPos="28.51" friendlyPos="true"/>
+    <busStop id="11070254004" name="Torres Quevedo 22" lane="46916240#7_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11070319505" name="San Fernando 66" lane="716756870#3_0" startPos="31.61" endPos="46.61" friendlyPos="true"/>
+    <busStop id="11070319506" name="San Fernando 22" lane="448670832#0_0" startPos="22.00" endPos="37.00" friendlyPos="true"/>
+    <busStop id="11070319507" name="Castelar 1" lane="448483123_0" startPos="33.28" endPos="48.28" friendlyPos="true"/>
+    <busStop id="11070319508" name="Castelar 29" lane="1236908233_0" startPos="52.56" endPos="67.56" friendlyPos="true" lines="4 14"/>
+    <busStop id="11070319509" name="San Martín" lane="134216790#0_0" startPos="25.90" endPos="40.90" friendlyPos="true"/>
+    <busStop id="11070319510" name="Reina Victoria 79" lane="277850604#3_0" startPos="27.80" endPos="42.80" friendlyPos="true"/>
+    <busStop id="11070319511" name="La Magdalena" lane="427072148#1_0" startPos="62.14" endPos="77.14" friendlyPos="true"/>
+    <busStop id="11070319512" name="Reina Victoria 129" lane="174927187#3_0" startPos="26.62" endPos="41.62" friendlyPos="true"/>
+    <busStop id="11070319513" name="General Dávila 15" lane="276538984#0_0" startPos="11.13" endPos="26.13" friendlyPos="true"/>
+    <busStop id="11070319514" name="Santa Clotilde" lane="840970019#0_0" startPos="10.17" endPos="25.17" friendlyPos="true"/>
+    <busStop id="11070319515" name="General Dávila 41" lane="448482519#2_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="11070319516" name="Prado San Roque" lane="849436234#1_0" startPos="6.00" endPos="21.00" friendlyPos="true"/>
+    <busStop id="11070319517" name="Los Salesianos" lane="448481956_0" startPos="2.99" endPos="17.99" friendlyPos="true"/>
+    <busStop id="11070319518" name="General Dávila 77" lane="428461929#0_0" startPos="0.41" endPos="15.41" friendlyPos="true"/>
+    <busStop id="11070319519" name="General Dávila 87" lane="822482102#0_0" startPos="2.89" endPos="17.89" friendlyPos="true"/>
+    <busStop id="11070319520" name="General Dávila 89" lane="445087214_0" startPos="24.10" endPos="39.10" friendlyPos="true"/>
+    <busStop id="11070319521" name="Las Mercedarias" lane="448471739#1_0" startPos="0.00" endPos="13.31" friendlyPos="true"/>
+    <busStop id="11070319522" name="General Dávila 117" lane="448780160_0" startPos="3.84" endPos="18.84" friendlyPos="true"/>
+    <busStop id="11070319523" name="General Dávila 125" lane="333302649#2_0" startPos="20.11" endPos="35.11" friendlyPos="true"/>
+    <busStop id="11070319524" name="La Albericia 1" lane="4342651_0" startPos="0.00" endPos="4.02" friendlyPos="true"/>
+    <busStop id="11070319525" name="Lavapies 1" lane="68235483#1_0" startPos="1.02" endPos="16.02" friendlyPos="true"/>
+    <busStop id="11070319526" name="Avenida del Deporte 11" lane="310996726#2_0" startPos="5.77" endPos="20.77" friendlyPos="true"/>
+    <busStop id="11070319527" name="Avenida del Deporte 9" lane="447683575_0" startPos="0.00" endPos="11.03" friendlyPos="true" lines="N2 24C1 17 6C1"/>
+    <busStop id="11070319528" name="Emilio Díaz Caneja 2" lane="233294316#0_0" startPos="8.85" endPos="23.85" friendlyPos="true"/>
+    <busStop id="11070319529" name="Avenida del Deporte 6" lane="310996726#0_0" startPos="60.75" endPos="75.75" friendlyPos="true"/>
+    <busStop id="11070319530" name="Lavapies 34" lane="22922123#4_0" startPos="94.84" endPos="109.84" friendlyPos="true"/>
+    <busStop id="11070319531" name="La Albericia 18" lane="446828316_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11070319532" name="Emilio Diaz Caneja" lane="233294316#1_0" startPos="2.65" endPos="17.65" friendlyPos="true"/>
+    <busStop id="11070319533" name="General Dávila 314" lane="333302649#1_0" startPos="0.00" endPos="8.34" friendlyPos="true"/>
+    <busStop id="11070319534" name="Grupo San Francisco" lane="448780160_0" startPos="17.25" endPos="32.25" friendlyPos="true"/>
+    <busStop id="11070319535" name="General Dávila 266" lane="428461918#1_0" startPos="1.18" endPos="16.18" friendlyPos="true"/>
+    <busStop id="11070319536" name="General Dávila 256" lane="445087214_0" startPos="43.78" endPos="58.78" friendlyPos="true"/>
+    <busStop id="11070319537" name="General Dávila 224" lane="446828202#0_0" startPos="0.00" endPos="14.42" friendlyPos="true"/>
+    <busStop id="11070319538" name="General Dávila 208" lane="428461919_0" startPos="42.08" endPos="57.08" friendlyPos="true"/>
+    <busStop id="11070319539" name="Los Salesianos" lane="278009970_0" startPos="4.23" endPos="19.23" friendlyPos="true"/>
+    <busStop id="11070319540" name="General Dávila 122" lane="428461922#2_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11070319541" name="General Dávila 84" lane="446827592#3_0" startPos="0.56" endPos="15.56" friendlyPos="true"/>
+    <busStop id="11070319542" name="General Dávila 58" lane="840970019#0_0" startPos="10.01" endPos="25.01" friendlyPos="true"/>
+    <busStop id="11070319543" name="Miranda" lane="183591292#2_0" startPos="20.09" endPos="35.09" friendlyPos="true"/>
+    <busStop id="11070319544" name="Los Castros 20" lane="446821796#1_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11070319545" name="Plaza Brisas" lane="276193074_0" startPos="12.51" endPos="27.51" friendlyPos="true"/>
+    <busStop id="11070319546" name="Plaza de Italia 3" lane="179433545_0" startPos="38.46" endPos="53.46" friendlyPos="true"/>
+    <busStop id="11070319547" name="Luis Martínez" lane="174927187#3_0" startPos="19.18" endPos="34.18" friendlyPos="true"/>
+    <busStop id="11070319548" name="La Magdalena" lane="427072145#1_0" startPos="28.82" endPos="43.82" friendlyPos="true"/>
+    <busStop id="11070319549" name="Avenida Reina Victoria 38" lane="132382282#2_0" startPos="34.32" endPos="49.32" friendlyPos="true"/>
+    <busStop id="11070319550" name="Avenida Reina Victoria" lane="132382282#1_0" startPos="12.57" endPos="27.57" friendlyPos="true"/>
+    <busStop id="11070319551" name="Reina Victoria 18" lane="1231895079#1_0" startPos="35.20" endPos="50.20" friendlyPos="true"/>
+    <busStop id="11070319552" name="Castelar" lane="448483226#0_0" startPos="30.07" endPos="45.07" friendlyPos="true"/>
+    <busStop id="11070319553" name="San Fernando" lane="448673782_0" startPos="8.36" endPos="23.36" friendlyPos="true" lines="LC"/>
+    <busStop id="11070319554" name="Instituto Torres Quevedo" lane="46916240#9_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11070319555" name="Manuel Llano" lane="4337038#2_0" startPos="0.00" endPos="3.22" friendlyPos="true"/>
+    <busStop id="11070319556" name="José María Cossío 1" lane="448457943_0" startPos="6.19" endPos="21.19" friendlyPos="true"/>
+    <busStop id="11070319557" name="José María Cossío 17" lane="446056720#0_0" startPos="1.95" endPos="16.95" friendlyPos="true"/>
+    <busStop id="11070319558" name="José María Cossío 33" lane="448457349_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11070319559" name="José María Cossío 54" lane="446056721#1_0" startPos="4.46" endPos="19.46" friendlyPos="true"/>
+    <busStop id="11070319560" name="Los Ciruelos 27" lane="22919861#0_0" startPos="11.65" endPos="26.65" friendlyPos="true" lines="1 2 N1 N2"/>
+    <busStop id="11070423972" name="Barrio La Torre 76" lane="935482735_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="11070423973" name="Jorge Sepúlveda 2" lane="364906269#4_0" startPos="4.12" endPos="19.12" friendlyPos="true"/>
+    <busStop id="11070423974" name="Avenida de Cantabria 76" lane="279506337#1_0" startPos="0.00" endPos="8.16" friendlyPos="true"/>
+    <busStop id="11070423975" name="Avenida de Cantabria 100" lane="894686354_0" startPos="0.00" endPos="14.78" friendlyPos="true"/>
+    <busStop id="11070423976" name="Padre Menni" lane="894686355#0_0" startPos="9.95" endPos="24.95" friendlyPos="true"/>
+    <busStop id="11070423977" name="Francisco Cáceres" lane="956015403#1_0" startPos="27.36" endPos="42.36" friendlyPos="true"/>
+    <busStop id="11070423978" name="Concha Espina 18" lane="275921305#2_0" startPos="68.71" endPos="83.71" friendlyPos="true"/>
+    <busStop id="11070423979" name="Consuelo Berges 22" lane="4356080#6_0" startPos="15.77" endPos="30.77" friendlyPos="true"/>
+    <busStop id="11070423980" name="Consuelo Berges 16" lane="275921308#1_0" startPos="2.59" endPos="17.59" friendlyPos="true" lines="1 2"/>
+    <busStop id="11070423984" name="Los Agustinos" lane="26492608#2_0" startPos="10.64" endPos="25.64" friendlyPos="true"/>
+    <busStop id="11070423985" name="Doctor Fleming" lane="276191855#4_0" startPos="27.05" endPos="42.05" friendlyPos="true"/>
+    <busStop id="11070423986" name="Parque Piquío" lane="365257566#1_0" startPos="18.04" endPos="33.04" friendlyPos="true"/>
+    <busStop id="11070423987" name="Plaza de Italia" lane="1192475897_0" startPos="49.36" endPos="64.36" friendlyPos="true"/>
+    <busStop id="11070423988" name="Plaza Doctor Fleming" lane="276191855#6_0" startPos="0.00" endPos="4.80" friendlyPos="true"/>
+    <busStop id="11070423993" name="Avenida Cantabria 11" lane="35573234#14_0" startPos="0.00" endPos="10.41" friendlyPos="true"/>
+    <busStop id="11070423994" name="Padre Menni" lane="35573238#0_0" startPos="1.00" endPos="16.00" friendlyPos="true"/>
+    <busStop id="11070423995" name="Avenida de Cantabria 35" lane="892632799#0_0" startPos="0.00" endPos="0.67" friendlyPos="true"/>
+    <busStop id="11070423996" name="Avenida Cantabria 43" lane="892632800#0_0" startPos="0.00" endPos="5.73" friendlyPos="true"/>
+    <busStop id="11070423997" name="Jorge Sepúlveda 11" lane="364906269#5_0" startPos="1.73" endPos="16.73" friendlyPos="true"/>
+    <busStop id="11070423998" name="Barrio La Torre 2" lane="276767471#0_0" startPos="27.37" endPos="42.37" friendlyPos="true"/>
+    <busStop id="11070423999" name="Barrio La Torre 1" lane="276767471#0_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11070424000" name="Barrio La Torre 95" lane="24271319#1_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11070424001" name="Barrio La Torre 60" lane="24271319#1_0" startPos="4.89" endPos="19.89" friendlyPos="true"/>
+    <busStop id="11070426708" name="Calle Repuente 15" lane="307899857_0" startPos="7.45" endPos="22.45" friendlyPos="true"/>
+    <busStop id="11070426709" name="Calle Repuente 16" lane="307899857_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11071861808" name="Alcalde Vega Lamera 1" lane="24273171#1_0" startPos="155.60" endPos="170.60" friendlyPos="true"/>
+    <busStop id="11071861809" name="Instituto Las Llamas" lane="833354473_0" startPos="35.11" endPos="50.11" friendlyPos="true"/>
+    <busStop id="11071861810" name="Intercambiador Sardinero" lane="842637661#4_0" startPos="105.23" endPos="120.23" friendlyPos="true"/>
+    <busStop id="11071861811" name="Intercambiador de Valdecilla" lane="5888988#1_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="11"/>
+    <busStop id="11072202501" name="Torres Quevedo 12" lane="428461914#0_0" startPos="0.00" endPos="3.38" friendlyPos="true"/>
+    <busStop id="11072338605" name="Institutos" lane="69408563#2_0" startPos="4.39" endPos="19.39" friendlyPos="true"/>
+    <busStop id="11072338606" name="San Martín del Pino 23" lane="277829093#1_0" startPos="33.03" endPos="48.03" friendlyPos="true"/>
+    <busStop id="11072338607" name="San Martín del Pino 24" lane="24971236#2_0" startPos="67.01" endPos="82.01" friendlyPos="true"/>
+    <busStop id="11072338611" name="Eusebio Santamaría 2" lane="26204069#2_0" startPos="3.40" endPos="18.40" friendlyPos="true"/>
+    <busStop id="11072338612" name="Santiago el Mayor 10" lane="4335293#4_0" startPos="41.38" endPos="56.38" friendlyPos="true"/>
+    <busStop id="11072338613" name="Colegio Nueva Montaña" lane="4335291#2_0" startPos="9.72" endPos="24.72" friendlyPos="true"/>
+    <busStop id="11072338614" name="Bartolomé Darnis" lane="4843511#1_0" startPos="3.18" endPos="18.18" friendlyPos="true"/>
+    <busStop id="11072338615" name="Francisco Tomás y Valiente 7" lane="4335288#3_0" startPos="33.71" endPos="48.71" friendlyPos="true"/>
+    <busStop id="11072338616" name="Abilio García Barón 1" lane="4334291#1_0" startPos="40.99" endPos="55.99" friendlyPos="true"/>
+    <busStop id="11072338617" name="Avenida Parayas 32" lane="4334529#0_0" startPos="95.19" endPos="110.19" friendlyPos="true"/>
+    <busStop id="11072338618" name="Avenida de Parayas 28" lane="4329606#0_0" startPos="20.76" endPos="35.76" friendlyPos="true"/>
+    <busStop id="11072338619" name="Avenida Parayas 14" lane="4329605#1_0" startPos="54.40" endPos="69.40" friendlyPos="true"/>
+    <busStop id="11072338620" name="Calvo Sotelo 1" lane="99834812_0" startPos="13.85" endPos="28.85" friendlyPos="true" lines="6C1"/>
+    <busStop id="11072338621" name="Avenida Cantabria 10" lane="55491354#1_0" startPos="36.63" endPos="51.63" friendlyPos="true"/>
+    <busStop id="11072338622" name="Ernest Lluch 3" lane="895285357#1_0" startPos="9.41" endPos="24.41" friendlyPos="true"/>
+    <busStop id="11072338623" name="Ernest Lluch 9" lane="895285360#1_0" startPos="10.40" endPos="25.40" friendlyPos="true"/>
+    <busStop id="11072338624" name="Ernest Lluch 17" lane="516965747_0" startPos="8.38" endPos="23.38" friendlyPos="true"/>
+    <busStop id="11072338625" name="Ernest Lluch 25" lane="913963949_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11072338626" name="Calle Repuente 26" lane="24271325#1_0" startPos="170.57" endPos="185.57" friendlyPos="true"/>
+    <busStop id="11072338627" name="Calle Repuente 43" lane="26000292#11_0" startPos="29.36" endPos="44.36" friendlyPos="true"/>
+    <busStop id="11072591802" name="Calle Repuente 36" lane="26000292#11_0" startPos="57.98" endPos="72.98" friendlyPos="true"/>
+    <busStop id="11072591803" name="Calle Repuente 19" lane="24271321#0_0" startPos="11.27" endPos="26.27" friendlyPos="true"/>
+    <busStop id="11072609005" name="Ernest Lluch 26" lane="913963949_0" startPos="1.71" endPos="16.71" friendlyPos="true"/>
+    <busStop id="11072609007" name="Ernest Lluch 18" lane="516965747_0" startPos="31.40" endPos="46.40" friendlyPos="true"/>
+    <busStop id="11072609009" name="Ernest Lluch 10" lane="895285360#1_0" startPos="20.13" endPos="35.13" friendlyPos="true"/>
+    <busStop id="11072609010" name="Ernest Lluch 2" lane="35573241#1_0" startPos="41.97" endPos="56.97" friendlyPos="true"/>
+    <busStop id="11072609011" name="Avenida de Cantabria 28" lane="274833676#1_0" startPos="0.00" endPos="10.27" friendlyPos="true"/>
+    <busStop id="11072609012" name="Avenida Cantabria 12" lane="1017774373_0" startPos="0.00" endPos="9.29" friendlyPos="true"/>
+    <busStop id="11072609013" name="Catedral" lane="224720710#1_0" startPos="31.51" endPos="46.51" friendlyPos="true"/>
+    <busStop id="11073109824" name="UIMP" lane="448474915_0" startPos="3.21" endPos="18.21" friendlyPos="true"/>
+    <busStop id="11073109825" name="Escuela Sup. Ing. Caminos" lane="4890674#1_0" startPos="58.13" endPos="73.13" friendlyPos="true"/>
+    <busStop id="11073109826" name="Interfacultativo" lane="448474237#1_0" startPos="221.09" endPos="236.09" friendlyPos="true"/>
+    <busStop id="11073109827" name="Los Castros 53" lane="79081313#5_0" startPos="24.08" endPos="39.08" friendlyPos="true"/>
+    <busStop id="11073109828" name="Parque la Teja" lane="79081313#0_0" startPos="47.76" endPos="62.76" friendlyPos="true"/>
+    <busStop id="11073109829" name="Avenida Los Castros 83" lane="113789802#1_0" startPos="18.94" endPos="33.94" friendlyPos="true" lines="E2"/>
+    <busStop id="11073109830" name="Los Castros 63" lane="4890675#1_0" startPos="16.19" endPos="31.19" friendlyPos="true"/>
+    <busStop id="11073109831" name="Plaza de las Estaciones" lane="278001738#2_0" startPos="5.09" endPos="20.09" friendlyPos="true"/>
+    <busStop id="11073399751" name="Calle Arriba 64" lane="895834601#1_0" startPos="9.74" endPos="24.74" friendlyPos="true"/>
+    <busStop id="11073399752" name="Veridiano Rojo" lane="198571125#3_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11073399753" name="Residencia Mayores de Cueto" lane="887924006_0" startPos="41.01" endPos="56.01" friendlyPos="true"/>
+    <busStop id="11073399754" name="Calle Arriba 31" lane="277990052#4_0" startPos="56.07" endPos="71.07" friendlyPos="true"/>
+    <busStop id="11073399764" name="Avenida el Faro 20" lane="55491358#1_0" startPos="222.22" endPos="237.22" friendlyPos="true"/>
+    <busStop id="11073399765" name="Cardenal Herrera Oria 31" lane="4847892#9_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11073399766" name="Cardenal Herrera Oria 51" lane="26477278#3_0" startPos="41.30" endPos="56.30" friendlyPos="true"/>
+    <busStop id="11073399768" name="Cardenal Herrera Oria 95" lane="276997549#0_0" startPos="21.74" endPos="36.74" friendlyPos="true" lines="6C2 13"/>
+    <busStop id="11074193746" name="Calle La Pereda" lane="279506342#4_0" startPos="38.20" endPos="53.20" friendlyPos="true"/>
+    <busStop id="11074193747" name="Marqués de Hazas" lane="4359020_0" startPos="11.60" endPos="26.60" friendlyPos="true"/>
+    <busStop id="11074193750" name="Residencia Santa Lucía" lane="448628008_0" startPos="22.98" endPos="37.98" friendlyPos="true"/>
+    <busStop id="11074193751" name="Ricardo León" lane="179432871#0_0" startPos="22.51" endPos="37.51" friendlyPos="true"/>
+    <busStop id="11074193752" name="Cardenal Herrera Oria 76" lane="26477278#3_0" startPos="11.17" endPos="26.17" friendlyPos="true"/>
+    <busStop id="11074193753" name="Cardenal Herrera Oria 42" lane="4847892#9_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11074193754" name="Cardenal Herrera Oria 26" lane="62289901#1_0" startPos="19.13" endPos="34.13" friendlyPos="true"/>
+    <busStop id="11074193755" name="Facultad de Medicina" lane="359821095#1_0" startPos="0.72" endPos="15.72" friendlyPos="true"/>
+    <busStop id="11074193756" name="Camilo Alonso Vega 32" lane="448780350#1_0" startPos="9.19" endPos="24.19" friendlyPos="true"/>
+    <busStop id="11074193757" name="Camilo Alonso Vega 22" lane="448490148#2_0" startPos="0.00" endPos="11.19" friendlyPos="true" lines="5C1"/>
+    <busStop id="11074193758" name="Camilo Alonso Vega 9" lane="333302522#1_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11074193759" name="Camilo Alonso Vega 10" lane="1194029123_0" startPos="0.90" endPos="15.90" friendlyPos="true"/>
+    <busStop id="11074392130" name="Palacio de Exposiciones" lane="276792886#4_0" startPos="20.75" endPos="35.75" friendlyPos="true"/>
+    <busStop id="11074392131" name="Camilo Alonso Vega 19" lane="445891557_0" startPos="29.14" endPos="44.14" friendlyPos="true"/>
+    <busStop id="11074392132" name="Colegio La Salle" lane="448780350#1_0" startPos="6.61" endPos="21.61" friendlyPos="true"/>
+    <busStop id="11074392133" name="Cardenal Herrera Oria" lane="359821095#1_0" startPos="44.82" endPos="59.82" friendlyPos="true"/>
+    <busStop id="11074392134" name="Cardenal Herrera Oria 17" lane="62289901#4_0" startPos="53.20" endPos="68.20" friendlyPos="true"/>
+    <busStop id="11074392135" name="Cardenal Herrera Oria 23" lane="62289901#1_0" startPos="28.41" endPos="43.41" friendlyPos="true"/>
+    <busStop id="11074392138" name="Marqués de Hazas 5" lane="4359020_0" startPos="36.08" endPos="51.08" friendlyPos="true"/>
+    <busStop id="11074392139" name="Calle La Pereda 14" lane="279506342#4_0" startPos="34.41" endPos="49.41" friendlyPos="true"/>
+    <busStop id="11074485750" name="Gerardo Diego" lane="22933674#1_0" startPos="5.02" endPos="20.02" friendlyPos="true"/>
+    <busStop id="11074485751" name="Los Castros 39" lane="364903880#1_0" startPos="0.90" endPos="15.90" friendlyPos="true"/>
+    <busStop id="11074485752" name="Los Castros 95" lane="120271881#7_0" startPos="26.22" endPos="41.22" friendlyPos="true"/>
+    <busStop id="11074485753" name="Avenida Los Castros 119" lane="120271881#3_0" startPos="13.44" endPos="28.44" friendlyPos="true"/>
+    <busStop id="11074485754" name="Avenida Los Castros 139" lane="826154168#1_0" startPos="102.05" endPos="117.05" friendlyPos="true"/>
+    <busStop id="11074485755" name="Avenida de los Castros 155" lane="826154162#1_0" startPos="14.03" endPos="29.03" friendlyPos="true"/>
+    <busStop id="11074485756" name="Avenida de los Castros" lane="5890804#0_0" startPos="14.73" endPos="29.73" friendlyPos="true"/>
+    <busStop id="11074485757" name="Gutiérrez Solana 13" lane="31615654#0_0" startPos="3.41" endPos="18.41" friendlyPos="true"/>
+    <busStop id="11074485759" name="Luis Quintanilla Isasi" lane="38192117#3_0" startPos="0.00" endPos="5.34" friendlyPos="true"/>
+    <busStop id="11078057122" name="Gregorio Marañón" lane="68235390#2_0" startPos="21.78" endPos="36.78" friendlyPos="true"/>
+    <busStop id="11078571620" name="Calle Castilla 64" lane="296393170_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11078763679" name="Gutiérrez Solana 34" lane="31615656#0_0" startPos="7.24" endPos="22.24" friendlyPos="true"/>
+    <busStop id="11078763680" name="Avenida de los Castros" lane="514990329#1_0" startPos="3.53" endPos="18.53" friendlyPos="true"/>
+    <busStop id="11078763681" name="Los Castros 136" lane="514990329#1_0" startPos="3.53" endPos="18.53" friendlyPos="true"/>
+    <busStop id="11078763682" name="Bajada del Caleruco" lane="448461444_0" startPos="37.14" endPos="52.14" friendlyPos="true"/>
+    <busStop id="11078763683" name="Bajada San Juan" lane="26256908_0" startPos="21.32" endPos="36.32" friendlyPos="true"/>
+    <busStop id="11078763684" name="Avenida Los Castros 115" lane="113789783#2_0" startPos="3.78" endPos="18.78" friendlyPos="true"/>
+    <busStop id="11078763685" name="Los Castros 76" lane="825142174_0" startPos="5.38" endPos="20.38" friendlyPos="true"/>
+    <busStop id="11078763686" name="Los Castros 62" lane="278028679_0" startPos="141.54" endPos="156.54" friendlyPos="true"/>
+    <busStop id="11078763687" name="Los Castros 38" lane="364903880#3_0" startPos="0.00" endPos="9.52" friendlyPos="true"/>
+    <busStop id="11078763688" name="Joaquín Bustamante 5" lane="22930738#6_0" startPos="7.74" endPos="22.74" friendlyPos="true"/>
+    <busStop id="11078763689" name="Joaquín Bustamante 10" lane="277786702#1_0" startPos="79.65" endPos="94.65" friendlyPos="true"/>
+    <busStop id="11078817607" name="Plaza de toros" lane="4334495#1_0" startPos="2.48" endPos="17.48" friendlyPos="true"/>
+    <busStop id="11078817608" name="Calle Argentina 7" lane="4334496#3_0" startPos="7.67" endPos="22.67" friendlyPos="true"/>
+    <busStop id="11078817609" name="Calle Alta 56" lane="715008549#1_0" startPos="99.68" endPos="114.68" friendlyPos="true"/>
+    <busStop id="11078817610" name="Calle Alta 46" lane="712459547#1_0" startPos="20.27" endPos="35.27" friendlyPos="true"/>
+    <busStop id="11078817611" name="Calle Alta 28" lane="712459548#0_0" startPos="12.93" endPos="27.93" friendlyPos="true"/>
+    <busStop id="11078817612" name="Monte Caloca" lane="4337919#0_0" startPos="9.44" endPos="24.44" friendlyPos="true"/>
+    <busStop id="11078817613" name="Calle Alta 45" lane="712459547#1_0" startPos="9.05" endPos="24.05" friendlyPos="true"/>
+    <busStop id="11078817614" name="Calle Alta 81" lane="715008549#2_0" startPos="0.51" endPos="15.51" friendlyPos="true"/>
+    <busStop id="11078817615" name="Calle Alta 80" lane="277791363#0_0" startPos="42.27" endPos="57.27" friendlyPos="true"/>
+    <busStop id="11078817616" name="Calle Alta 109" lane="277791363#0_0" startPos="42.27" endPos="57.27" friendlyPos="true"/>
+    <busStop id="11078817617" name="Mercado Méjico" lane="448195250#0_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11079510960" name="Cruce Aviche" lane="130422165#5_0" startPos="0.00" endPos="8.45" friendlyPos="true"/>
+    <busStop id="11079510961" name="Canteros de Transmiera 2" lane="24273703#5_0" startPos="5.81" endPos="20.81" friendlyPos="true"/>
+    <busStop id="11079510962" name="Aviche 37" lane="40623036#2_0" startPos="5.44" endPos="20.44" friendlyPos="true"/>
+    <busStop id="11079510963" name="Barrio Bolado 58" lane="40623121#6_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11079510964" name="Barrio Bolado 37" lane="40623121#1_0" startPos="0.00" endPos="1.81" friendlyPos="true"/>
+    <busStop id="11079510965" name="Barrio Bolado 23" lane="130425416#0_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11079510966" name="El Parque" lane="28951194#1_0" startPos="10.37" endPos="25.37" friendlyPos="true"/>
+    <busStop id="11079510967" name="Corbanera 162" lane="1193641626_0" startPos="131.01" endPos="146.01" friendlyPos="true" lines="18"/>
+    <busStop id="11079510968" name="El Castillo" lane="1193641626_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11079510969" name="Corbanera 53" lane="40623190#0_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11079510970" name="Corbanera 95" lane="40623190#3_0" startPos="28.45" endPos="43.45" friendlyPos="true"/>
+    <busStop id="11079510971" name="San Pedro del Mar 64" lane="188727327#0_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11079510972" name="Iglesia" lane="188727327#8_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="11079510973" name="Grupo Ateca" lane="278787256#3_0" startPos="2.36" endPos="17.36" friendlyPos="true"/>
+    <busStop id="11079510974" name="Caleruco" lane="445653103#3_0" startPos="0.00" endPos="6.18" friendlyPos="true"/>
+    <busStop id="11079510975" name="Pedro San Martín 12;Juzgados" lane="407466220#1_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11079510976" name="Pedro San Martín 8" lane="26258719#1_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11079510977" name="Caleruco 3" lane="448460308#0_0" startPos="0.00" endPos="1.78" friendlyPos="true"/>
+    <busStop id="11079510978" name="Calle Repuente" lane="25030085#1_0" startPos="0.00" endPos="7.03" friendlyPos="true"/>
+    <busStop id="11079510979" name="San Pedro del Mar 51" lane="188727327#10_0" startPos="0.00" endPos="9.41" friendlyPos="true"/>
+    <busStop id="11079510980" name="San Pedro del Mar 91" lane="411025254_0" startPos="1.03" endPos="16.03" friendlyPos="true"/>
+    <busStop id="11079510981" name="Corbanera 93" lane="278790903#0_0" startPos="0.00" endPos="2.17" friendlyPos="true"/>
+    <busStop id="11079510983" name="Corbanera" lane="1193641628_0" startPos="0.00" endPos="9.61" friendlyPos="true"/>
+    <busStop id="11080951152" name="Casa del Deporte" lane="276792883#0_0" startPos="87.35" endPos="102.35" friendlyPos="true"/>
+    <busStop id="11080951153" name="Instituto La Albericia" lane="447683575_0" startPos="0.00" endPos="11.03" friendlyPos="true"/>
+    <busStop id="11080951154" name="Avenida del Deporte 2" lane="310996724#1_0" startPos="1.73" endPos="16.73" friendlyPos="true"/>
+    <busStop id="11080951155" name="La Cavaduca" lane="22922123#3_0" startPos="7.40" endPos="22.40" friendlyPos="true"/>
+    <busStop id="11080951156" name="Avenida del Deporte 3" lane="310996724#0_0" startPos="57.11" endPos="72.11" friendlyPos="true"/>
+    <busStop id="11080951158" name="La Gloria 1" lane="278178979#2_0" startPos="0.00" endPos="12.72" friendlyPos="true"/>
+    <busStop id="11080951159" name="La Gloria 43" lane="278178979#6_0" startPos="13.06" endPos="28.06" friendlyPos="true"/>
+    <busStop id="11080951160" name="La Gloria 157" lane="278211629#2_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11080951169" name="La Gloria 234" lane="22919832#2_0" startPos="0.00" endPos="7.44" friendlyPos="true"/>
+    <busStop id="11080951170" name="La Gloria 194" lane="278178979#14_0" startPos="232.58" endPos="247.58" friendlyPos="true"/>
+    <busStop id="11080951171" name="La Gloria 123" lane="278178979#14_0" startPos="76.94" endPos="91.94" friendlyPos="true"/>
+    <busStop id="11080951172" name="La Gloria 120" lane="278178979#14_0" startPos="70.36" endPos="85.36" friendlyPos="true"/>
+    <busStop id="11080951173" name="La Gloria 60" lane="278178979#9_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11080951174" name="La Gloria 8" lane="278178979#1_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="11081089487" name="Guevara 15" lane="26254547#4_0" startPos="3.13" endPos="18.13" friendlyPos="true"/>
+    <busStop id="11081089488" name="Valliciergo 7" lane="183405011#0_0" startPos="19.53" endPos="34.53" friendlyPos="true"/>
+    <busStop id="11081089489" name="Calle del Monte 30" lane="4876826#11_0" startPos="0.00" endPos="10.78" friendlyPos="true"/>
+    <busStop id="11081089490" name="Calle del Monte 12" lane="4876826#2_0" startPos="8.46" endPos="23.46" friendlyPos="true"/>
+    <busStop id="11081089491" name="Cervantes 29" lane="4340000_0" startPos="13.17" endPos="28.17" friendlyPos="true"/>
+    <busStop id="11081089492" name="Juan XXIII 2" lane="4876824#5_0" startPos="15.02" endPos="30.02" friendlyPos="true"/>
+    <busStop id="11081089493" name="Vía Cornelia" lane="781299672#3_0" startPos="1.63" endPos="16.63" friendlyPos="true"/>
+    <busStop id="11081089494" name="María Cristina" lane="68566064_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11081089495" name="Cuesta de la Atalaya 32" lane="4342506#0_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11081089496" name="Cuesta de la Atalaya 2" lane="28441902#0_0" startPos="4.94" endPos="19.94" friendlyPos="true"/>
+    <busStop id="11081089497" name="Plaza de los Remedios" lane="4339980_0" startPos="10.35" endPos="25.35" friendlyPos="true" lines="16"/>
+    <busStop id="11081089498" name="Santa Lucía 1" lane="62017312_0" startPos="0.00" endPos="13.11" friendlyPos="true"/>
+    <busStop id="11081089499" name="Francisco Palazuelos 13" lane="23876223#10_0" startPos="31.02" endPos="46.02" friendlyPos="true"/>
+    <busStop id="11081661256" name="Estación de autobuses 2" lane="130874201#2_0" startPos="4.25" endPos="19.25" friendlyPos="true"/>
+    <busStop id="11081661257" name="Estación de autobuses 1" lane="130874201#2_0" startPos="29.28" endPos="44.28" friendlyPos="true"/>
+    <busStop id="11081661258" name="Candina" lane="965410651#1_0" startPos="0.00" endPos="15.00" friendlyPos="true">
+        <access lane="1057833946_0" pos="5.03" length="23.98" friendlyPos="1"/>
+        <access lane="1057833949_0" pos="0.00" length="16.49" friendlyPos="1"/>
+        <access lane="619375028_0" pos="3.65" length="22.11" friendlyPos="1"/>
+        <access lane="833352694_0" pos="0.00" length="12.31" friendlyPos="1"/>
+        <access lane="833352695#1_0" pos="11.52" length="14.13" friendlyPos="1"/>
+    </busStop>
+    <busStop id="11081661259" name="Valdecilla Sur" lane="446818998_0" startPos="35.44" endPos="50.44" friendlyPos="true"/>
+    <busStop id="11081661260" name="Jerónimo Saiz de la Maza" lane="4333108#4_0" startPos="31.12" endPos="46.12" friendlyPos="true"/>
+    <busStop id="11081661261" name="Plaza de Méjico" lane="278003738_0" startPos="10.86" endPos="25.86" friendlyPos="true"/>
+    <busStop id="11081661262" name="Los Peligros" lane="1193829860_0" startPos="2.97" endPos="17.97" friendlyPos="true" lines="14"/>
+    <busStop id="11082786490" name="Cajo 5" lane="389010996#0_0" startPos="25.98" endPos="40.98" friendlyPos="true">
+        <access lane="-389015487_0" pos="51.79" length="47.44" friendlyPos="1"/>
+        <access lane="388741257_0" pos="36.19" length="25.70" friendlyPos="1"/>
+        <access lane="389015487_0" pos="56.68" length="52.25" friendlyPos="1"/>
+        <access lane="4335171#6_0" pos="3.98" length="60.85" friendlyPos="1"/>
+        <access lane="4335174_0" pos="50.68" length="37.31" friendlyPos="1"/>
+    </busStop>
+    <busStop id="11082786491" name="Cajo 17" lane="444936107#0_0" startPos="67.92" endPos="82.92" friendlyPos="true">
+        <access lane="-42409367#2_0" pos="161.95" length="18.58" friendlyPos="1"/>
+        <access lane="-444936132#1_0" pos="0.00" length="40.43" friendlyPos="1"/>
+        <access lane="-444936145#1_0" pos="0.00" length="35.43" friendlyPos="1"/>
+        <access lane="42409367#2_0" pos="71.84" length="23.38" friendlyPos="1"/>
+        <access lane="444936145#1_0" pos="56.08" length="32.82" friendlyPos="1"/>
+    </busStop>
+    <busStop id="11082786492" name="Campogiro 5" lane="31910245#4_0" startPos="13.88" endPos="28.88" friendlyPos="true">
+        <access lane="-1076796878_0" pos="0.00" length="10.12" friendlyPos="1"/>
+        <access lane="-370752531#1_0" pos="0.00" length="13.47" friendlyPos="1"/>
+        <access lane="-871441876#2_0" pos="14.09" length="28.27" friendlyPos="1"/>
+        <access lane="1076796878_0" pos="2.59" length="13.51" friendlyPos="1"/>
+        <access lane="370752531#1_0" pos="28.75" length="16.17" friendlyPos="1"/>
+    </busStop>
+    <busStop id="11082786493" name="Campogiro" lane="428461905#0_0" startPos="1.65" endPos="16.65" friendlyPos="true"/>
+    <busStop id="11083543465" name="Cruce de Polio" lane="894686352_0" startPos="7.88" endPos="22.88" friendlyPos="true" lines="13"/>
+    <busStop id="11083543466" name="Calle Arriba 85" lane="279968705#5_0" startPos="0.54" endPos="15.54" friendlyPos="true" lines="13"/>
+    <busStop id="11083793815" name="Fernando Calderón Rueda 6" lane="23863913#1_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11083793816" name="Bajada la Encina s/n" lane="276538976#1_0" startPos="11.56" endPos="26.56" friendlyPos="true"/>
+    <busStop id="11083793817" name="Bajada la Encina 1" lane="23863907#0_0" startPos="28.71" endPos="43.71" friendlyPos="true"/>
+    <busStop id="11084262839" name="Menéndez Pelayo 76" lane="276525454#13_0" startPos="48.01" endPos="63.01" friendlyPos="true"/>
+    <busStop id="11084262840" name="Menéndez Pelayo 46" lane="276525454#7_0" startPos="66.20" endPos="81.20" friendlyPos="true"/>
+    <busStop id="11084262841" name="Menéndez Pelayo 14" lane="276525454#2_0" startPos="0.00" endPos="10.65" friendlyPos="true"/>
+    <busStop id="11084262842" name="Miranda" lane="1194095092_0" startPos="16.04" endPos="31.04" friendlyPos="true"/>
+    <busStop id="11085386677" name="Pérez Galdós 36" lane="277850638#12_0" startPos="31.13" endPos="46.13" friendlyPos="true"/>
+    <busStop id="11085386678" name="Pérez Galdós 18" lane="277850638#3_0" startPos="1.66" endPos="16.66" friendlyPos="true"/>
+    <busStop id="11085386679" name="Pérez Galdós 4" lane="1193561012#2_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="11085490357" name="Tetuán 41" lane="314846526#7_0" startPos="13.86" endPos="28.86" friendlyPos="true"/>
+    <busStop id="11085490358" name="Centro de Salud Puertochico" lane="25115300#1_0" startPos="0.00" endPos="13.66" friendlyPos="true"/>
+    <busStop id="11085490359" name="Barrio Camino, 27" lane="314846522#4_0" startPos="19.15" endPos="34.15" friendlyPos="true"/>
+    <busStop id="11085490360" name="Canalejas 93" lane="4340623#1_0" startPos="6.12" endPos="21.12" friendlyPos="true"/>
+    <busStop id="11087437204" name="Plaza de San Martín" lane="55267713#1_0" startPos="0.00" endPos="14.94" friendlyPos="true"/>
+    <busStop id="1166735432" name="Cuatro Caminos" lane="26259370#1_0" startPos="27.08" endPos="42.08" friendlyPos="true" lines="E1 5C2"/>
+    <busStop id="2337169285" name="Maliaño" lane="87356747#0_0" startPos="352.45" endPos="552.45" friendlyPos="true"/>
+    <busStop id="2545626000" name="Avenida Parayas" lane="278821850_0" startPos="58.91" endPos="73.91" friendlyPos="true" lines="ALSA-S3"/>
+    <busStop id="26419292" name="González de Riancho" lane="277850604#1_0" startPos="19.98" endPos="34.98" friendlyPos="true"/>
+    <busStop id="3058796840" name="Santander RENFE" lane="128439714_0" startPos="139.45" endPos="339.45" friendlyPos="true">
+        <access lane="-1039012435#0_0" pos="10.60" length="39.64" friendlyPos="1"/>
+        <access lane="-1039012468#0_0" pos="52.78" length="39.92" friendlyPos="1"/>
+        <access lane="1039012399_0" pos="78.29" length="35.12" friendlyPos="1"/>
+        <access lane="1039012435#0_0" pos="41.89" length="34.83" friendlyPos="1"/>
+        <access lane="1039012435#1_0" pos="0.00" length="48.37" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3120146104" name="Estación de autobuses" lane="53583536#1_0" startPos="36.00" endPos="51.00" friendlyPos="true"/>
+    <busStop id="3135021046" name="Valdecilla" lane="87356747#1_0" startPos="3284.16" endPos="3484.16" friendlyPos="true">
+        <access lane="-1057606719#0_0" pos="791.29" length="9.86" friendlyPos="1"/>
+        <access lane="1057606719#0_0" pos="29.59" length="14.66" friendlyPos="1"/>
+        <access lane="1118442400#2_0" pos="27.38" length="28.48" friendlyPos="1"/>
+        <access lane="308213122_0" pos="8.85" length="11.73" friendlyPos="1"/>
+        <access lane="833352650#0_0" pos="0.00" length="29.25" friendlyPos="1"/>
+    </busStop>
+    <busStop id="33638419" name="Muriedas-Bahía" lane="87356747#0_0" startPos="864.42" endPos="1064.42" friendlyPos="true"/>
+    <busStop id="4363683591" name="Valdecilla" lane="1194095093_0" startPos="12.46" endPos="27.46" friendlyPos="true" lines="13 3"/>
+    <busStop id="4363689590" name="Avenida de Valdecilla" lane="45747440_0" startPos="98.68" endPos="113.68" friendlyPos="true"/>
+    <busStop id="5355552886" name="Santander RENFE" lane="308709119_0" startPos="139.16" endPos="339.16" friendlyPos="true">
+        <access lane="-1039012435#0_0" pos="10.60" length="35.31" friendlyPos="1"/>
+        <access lane="-1039012468#0_0" pos="53.13" length="44.22" friendlyPos="1"/>
+        <access lane="1039012399_0" pos="77.94" length="39.42" friendlyPos="1"/>
+        <access lane="1039012435#0_0" pos="41.89" length="30.49" friendlyPos="1"/>
+        <access lane="1039012435#1_0" pos="0.00" length="45.07" friendlyPos="1"/>
+    </busStop>
+    <busStop id="6652674778" name="Nueva Montaña" lane="87356747#1_0" startPos="1382.77" endPos="1582.77" friendlyPos="true">
+        <access lane="-339176393#1_0" pos="37.74" length="35.39" friendlyPos="1"/>
+        <access lane="103643081_0" pos="3.15" length="28.50" friendlyPos="1"/>
+        <access lane="339176393#1_0" pos="10.57" length="30.59" friendlyPos="1"/>
+        <access lane="797070801_0" pos="17.87" length="6.53" friendlyPos="1"/>
+        <access lane="798475539_0" pos="0.00" length="34.70" friendlyPos="1"/>
+    </busStop>
+</additional>

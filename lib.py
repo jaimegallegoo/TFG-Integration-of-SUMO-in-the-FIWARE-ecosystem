@@ -15,7 +15,11 @@ def convert_xml_to_json(xml_file_path, json_file_path):
     with open(json_file_path, 'w') as file:
         file.write(json_string)
 
-def convert_SUMO_to_FIWARE(originalSUMO, originalFIWARE, element):
+# ---------------------------------------------------------------------
+# ---------------------------------------------------------------------
+
+# This function converts a line from a SUMO osm_ptline to a FIWARE PublicTransportRoute
+def convert_SUMO_line_to_FIWARE_route(originalSUMO, originalFIWARE, element):
     # Open the source JSON file and load the data
     with open(originalSUMO, 'r') as source_file:
         data = json.load(source_file)
@@ -95,3 +99,14 @@ def convert_SUMO_to_FIWARE(originalSUMO, originalFIWARE, element):
     # Open the destination JSON file and dump the converted data
     with open(originalFIWARE, 'w') as destination_file:
         json.dump(converted_data, destination_file, indent=4)
+
+# ---------------------------------------------------------------------
+# ---------------------------------------------------------------------
+
+# This function converts a stop from a SUMO osm_stop to a FIWARE PublicTransportStop
+def convert_SUMO_stop_to_FIWARE_stop(originalSUMO, originalFIWARE, element):
+    # Open the source JSON file and load the data
+    with open(originalSUMO, 'r') as source_file:
+        data = json.load(source_file)
+
+    
