@@ -70,16 +70,26 @@ def convert_SUMO_to_FIWARE(originalSUMO, originalFIWARE, element):
         route_color_hex = color_mapping.get(route_color.lower(), None)
 
     # ---------------------------------------------------------------------
+        
+    # LINE MAPPING
+
+    # Extract the transportation line from the source data
+    line = data['ptLines']['ptLine'][element]['@line']
+
+    # ---------------------------------------------------------------------
 
     # Extract the id from the route field and create a new dictionary
     converted_data = {
-        'id': data['ptLines']['ptLine'][element]['@id'],
+        'id': f'urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:{line}', # PENDIENTE. Hay que hacer que en vez de Santander y busLine se pongan los valores correctos.
         'type': 'PublicTransportRoute',
-        'routeCode': '?',
+        'routeCode': data['ptLines']['ptLine'][element]['@id'],
+        'shortRouteCode': line,
         'name': data['ptLines']['ptLine'][element]['@name'],
         'transportationType': transportation_type_number,
         'routeColor': route_color_hex,
-        'routeSegments': data['ptLines']['ptLine'][element]['busStop'][0]["@name"], # PENDIENTE
+        'routeSegments': '?', # PENDIENTE. 
+        # Los route edges en SUMO no entiendo en qué formato están y no sé como convertirlos a FIWARE.
+        # En FIWARE los routeSegments son paradas de bus mientras que en SUMO parecen coordenadas de un mapa.
     }
 
     # Open the destination JSON file and dump the converted data
