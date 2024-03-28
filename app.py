@@ -15,7 +15,7 @@ def main():
     elif orden == "SUMOtoFIWARE":
         originalSUMO = sys.argv[2]
         originalFIWARE = sys.argv[3]
-        convert_SUMO_to_FIWARE(originalSUMO, originalFIWARE)
+        convert_SUMO_to_FIWARE(originalSUMO, originalFIWARE, 1)
     #python app.py SUMOtoFIWARE input_file.json output_file.json
 
     else:
