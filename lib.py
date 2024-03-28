@@ -19,9 +19,9 @@ def convert_xml_to_json(xml_file_path, json_file_path):
 # ---------------------------------------------------------------------
 
 # This function converts a line from a SUMO osm_ptline to a FIWARE PublicTransportRoute
-def convert_SUMO_line_to_FIWARE_route(originalSUMO, originalFIWARE, element):
+def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, element):
     # Open the source JSON file and load the data
-    with open(originalSUMO, 'r') as source_file:
+    with open(originalSUMOline, 'r') as source_file:
         data = json.load(source_file)
 
     # ---------------------------------------------------------------------
@@ -82,7 +82,7 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMO, originalFIWARE, element):
 
     # ---------------------------------------------------------------------
 
-    # Extract the id from the route field and create a new dictionary
+    # Create a new dictionary with the converted data
     converted_data = {
         'id': f'urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:{line}', # PENDIENTE. Hay que hacer que en vez de Santander y busLine se pongan los valores correctos.
         'type': 'PublicTransportRoute',
@@ -97,16 +97,52 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMO, originalFIWARE, element):
     }
 
     # Open the destination JSON file and dump the converted data
-    with open(originalFIWARE, 'w') as destination_file:
+    with open(originalFIWAREroute, 'w') as destination_file:
         json.dump(converted_data, destination_file, indent=4)
 
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
 
 # This function converts a stop from a SUMO osm_stop to a FIWARE PublicTransportStop
-def convert_SUMO_stop_to_FIWARE_stop(originalSUMO, originalFIWARE, element):
+def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, element):
     # Open the source JSON file and load the data
-    with open(originalSUMO, 'r') as source_file:
+    with open(originalSUMOstop, 'r') as source_file:
         data = json.load(source_file)
+
+    # ---------------------------------------------------------------------
+        
+    # STOP MAPPING
+
+    # Extract the transportation stop from the source data
+    stop = '?'
+
+    # ---------------------------------------------------------------------
+
+    # LINES MAPPING
+
+    # Extract the transportation lines from the source data
+    lines = data['additional']['busStop'][element]['@lines']
+
+    # Split the string into separate values
+    lines_array = lines.split()
+
+    # ---------------------------------------------------------------------
+
+    # Create a new dictionary with the converted data
+    converted_data = {
+        'id': f'urn:ngsi-ld:PublicTransportStop:santander:busStop:{stop}', # PENDIENTE. Hay que hacer que en vez de Santander y busLine se pongan los valores correctos.
+        'type': 'PublicTransportStop',
+        'stopCode': '?',
+        'shortStopCode': stop,
+        'name': data['additional']['busStop'][element]['@name'],
+        'transportationType': '?',
+        'refPublicTransportRoute': [
+            f'urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:{line}' for line in lines_array
+        ],
+    }
+
+    # Open the destination JSON file and dump the converted data
+    with open(originalFIWAREstop, 'w') as destination_file:
+        json.dump(converted_data, destination_file, indent=4)
 
     
