@@ -39,7 +39,7 @@ def convert_SUMO_to_FIWARE(originalSUMO, originalFIWARE, element):
     }
 
     # Extract the transportation type from the source data
-    transportation_type = data['ptLines']['plLine'][element]['@vClass']
+    transportation_type = data['ptLines']['ptLine'][element]['@vClass']
 
     # Map the transportation type to a number
     transportation_type_number = transportation_type_mapping.get(transportation_type, None)
@@ -47,15 +47,27 @@ def convert_SUMO_to_FIWARE(originalSUMO, originalFIWARE, element):
     # ---------------------------------------------------------------------
 
     # ROUTE COLOR MAPPING
-        
+
     # Extract the routeColor from the source data
     route_color = data['ptLines']['ptLine'][element]['@color']
 
-    # Split the string into separate numbers
-    r, g, b = map(int, route_color.split(','))
+    if ',' in route_color:
+        # Split the string into separate numbers
+        r, g, b = map(int, route_color.split(','))
 
-    # Convert each number to hexadecimal and concatenate them together
-    route_color_hex = '#{:02x}{:02x}{:02x}'.format(r, g, b)
+        # Convert each number to hexadecimal and concatenate them together
+        route_color_hex = '#{:02x}{:02x}{:02x}'.format(r, g, b)
+    else:
+        # Map the color name to its corresponding hexadecimal value
+        color_mapping = {
+            'red': '#ff0000',
+            'green': '#00ff00',
+            'blue': '#0000ff',
+            # Add more color mappings as needed
+        }
+
+        # Get the hexadecimal value for the color name
+        route_color_hex = color_mapping.get(route_color.lower(), None)
 
     # ---------------------------------------------------------------------
 
