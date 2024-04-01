@@ -82,7 +82,7 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
 
     # ---------------------------------------------------------------------
 
-    # Create a new dictionary with the converted data
+    # Create a new dictionary in NGSI-v2 (keyvalues) with the converted data
     converted_data = {
         'id': f'urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:{line}', # PENDIENTE. Hay que hacer que en vez de Santander y busLine se pongan los valores correctos.
         'type': 'PublicTransportRoute',
@@ -96,9 +96,38 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
         # En FIWARE los routeSegments son paradas de bus mientras que en SUMO parecen coordenadas de un mapa.
     }
 
+    # Create a new dictionary in NGSI-v2 (normalized) with the converted data
+    converted_data_normalized = {
+        'id': f'urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:{line}', # PENDIENTE. Hay que hacer que en vez de Santander y busLine se pongan los valores correctos.
+        'type': 'PublicTransportRoute',
+        "routeCode": {
+            "type": "Text",
+            "value": data['ptLines']['ptLine'][element]['@id']
+        },
+        "shortRouteCode": {
+            "type": "Text",
+            "value": line
+        },
+        "name": {
+            "type": "Text",
+            "value": data['ptLines']['ptLine'][element]['@name']
+        },
+        "transportationType": {
+            "type": "Number",
+            "value": transportation_type_number
+        },
+        "routeColor": {
+            "type": "Text",
+            "value": route_color_hex
+        },
+        'routeSegments': '?', # PENDIENTE. 
+        # Los route edges en SUMO no entiendo en qué formato están y no sé como convertirlos a FIWARE.
+        # En FIWARE los routeSegments son paradas de bus mientras que en SUMO parecen coordenadas de un mapa.
+    }
+
     # Open the destination JSON file and dump the converted data
     with open(originalFIWAREroute, 'w') as destination_file:
-        json.dump(converted_data, destination_file, indent=4)
+        json.dump(converted_data_normalized, destination_file, indent=4)
 
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
