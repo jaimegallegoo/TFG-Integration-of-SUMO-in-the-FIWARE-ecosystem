@@ -55,11 +55,12 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
     # Extract the routeColor from the source data
     route_color = data['ptLines']['ptLine'][element]['@color']
 
+    # Check if the routeColor is in the format 'r,g,b'
     if ',' in route_color:
         # Split the string into separate numbers
         r, g, b = map(int, route_color.split(','))
 
-        # Convert each number to hexadecimal and concatenate them together
+        # Convert each number to hexadecimal
         route_color_hex = '#{:02x}{:02x}{:02x}'.format(r, g, b)
     else:
         # Map the color name to its corresponding hexadecimal value
@@ -67,7 +68,7 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
             'red': '#ff0000',
             'green': '#00ff00',
             'blue': '#0000ff',
-            # Add more color mappings as needed
+            # ...
         }
 
         # Get the hexadecimal value for the color name
@@ -131,7 +132,8 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
 
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
-        
+
+# This function converts a line from a SUMO "osm_ptlines.xml" to a FIWARE PublicTransportRoute
 def convert_SUMO_line(originalSUMOlineXML):
     originalSUMOlineJSON = 'originalSUMOlineJSON.json'
     originalFIWAREroute = 'originalFIWAREroute.json'
@@ -141,7 +143,7 @@ def convert_SUMO_line(originalSUMOlineXML):
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
 
-# This function converts a stop from a SUMO osm_stop to a FIWARE PublicTransportStop
+# This function converts a stop from a SUMO "osm_stop.xml" to a FIWARE PublicTransportStop
 def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, element):
     # Open the source JSON file and load the data
     with open(originalSUMOstop, 'r') as source_file:
