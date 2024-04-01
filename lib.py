@@ -131,6 +131,15 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
 
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
+        
+def convert_SUMO_line(originalSUMOlineXML):
+    originalSUMOlineJSON = 'originalSUMOlineJSON.json'
+    originalFIWAREroute = 'originalFIWAREroute.json'
+    convert_xml_to_json(originalSUMOlineXML, originalSUMOlineJSON)
+    convert_SUMO_line_to_FIWARE_route(originalSUMOlineJSON, originalFIWAREroute, 1)
+
+# ---------------------------------------------------------------------
+# ---------------------------------------------------------------------
 
 # This function converts a stop from a SUMO osm_stop to a FIWARE PublicTransportStop
 def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, element):

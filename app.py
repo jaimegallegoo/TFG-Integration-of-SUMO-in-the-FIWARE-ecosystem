@@ -1,5 +1,5 @@
 import sys
-from lib import convert_xml_to_json, convert_SUMO_line_to_FIWARE_route, convert_SUMO_stop_to_FIWARE_stop
+from lib import *
 
 def main():
 
@@ -17,6 +17,12 @@ def main():
         originalFIWAREroute = sys.argv[3]
         convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, 1)
     #python app.py SUMO_line_to_FIWARE_route input_file.json output_file.json
+        
+    # Con esta orden se hacen las dos anteriores en una sola
+    elif orden == "SUMO_line":
+        originalSUMOlineXML = sys.argv[2]
+        convert_SUMO_line(originalSUMOlineXML)
+    #python app.py SUMO_line osm_ptlines.xml
         
     elif orden == "SUMO_stop_to_FIWARE_stop":
         originalSUMOstop = sys.argv[2]
