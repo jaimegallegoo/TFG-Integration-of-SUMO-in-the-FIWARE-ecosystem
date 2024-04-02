@@ -1,6 +1,14 @@
 import xmltodict
 import json
 
+# Global variables
+
+city = 'santander'
+
+# ---------------------------------------------------------------------
+# ---------------------------------------------------------------------
+
+# This function converts an XML file to a JSON file
 def convert_xml_to_json(xml_file_path, json_file_path):
     with open(xml_file_path, 'r', encoding='utf-8') as file:
         xml_string = file.read()
@@ -90,10 +98,10 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
 
     for i in range(len(bus_stops) - 1):
         segment = {
-            "segmentName": bus_stops[i]['@name'] + ' - ' + bus_stops[i+1]['@name'],
-            "refPublicTransportStops": [
-                "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:" + bus_stops[i]['@id'],
-                "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:" + bus_stops[i+1]['@id']
+            'segmentName': bus_stops[i]['@name'] + ' - ' + bus_stops[i+1]['@name'],
+            'refPublicTransportStops': [
+                f'urn:ngsi-ld:PublicTransportStop:{city}:transport:busStop:' + bus_stops[i]['@id'],
+                f'urn:ngsi-ld:PublicTransportStop:{city}:transport:busStop:' + bus_stops[i+1]['@id']
             ]
         }
         route_segments.append(segment)
@@ -102,7 +110,7 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
 
     # Create a new dictionary in NGSI-v2 (keyvalues) with the converted data
     converted_data = {
-        'id': f'urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:{line}', # PENDIENTE. Hay que hacer que en vez de Santander y busLine se pongan los valores correctos.
+        'id': f'urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{line}', # PENDIENTE. Hay que hacer que en vez de Santander y busLine se pongan los valores correctos.
         'type': 'PublicTransportRoute',
         'routeCode': data['ptLines']['ptLine'][element]['@id'],
         'shortRouteCode': line,
@@ -116,29 +124,29 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
     converted_data_normalized = {
         'id': f'urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:{line}', # PENDIENTE. Hay que hacer que en vez de Santander y busLine se pongan los valores correctos.
         'type': 'PublicTransportRoute',
-        "routeCode": {
-            "type": "Text",
-            "value": data['ptLines']['ptLine'][element]['@id']
+        'routeCode': {
+            'type': 'Text',
+            'value': data['ptLines']['ptLine'][element]['@id']
         },
-        "shortRouteCode": {
-            "type": "Text",
-            "value": line
+        'shortRouteCode': {
+            'type': 'Text',
+            'value': line
         },
-        "name": {
-            "type": "Text",
-            "value": data['ptLines']['ptLine'][element]['@name']
+        'name': {
+            'type': 'Text',
+            'value': data['ptLines']['ptLine'][element]['@name']
         },
-        "transportationType": {
-            "type": "Number",
-            "value": transportation_type_number
+        'transportationType': {
+            'type': 'Number',
+            'value': transportation_type_number
         },
-        "routeColor": {
-            "type": "Text",
-            "value": route_color_hex
+        'routeColor': {
+            'type': 'Text',
+            'value': route_color_hex
         },
-        "routeSegments": {
-            "type": "StructuredValue",
-            "value": route_segments
+        'routeSegments': {
+            'type': 'StructuredValue',
+            'value': route_segments
         }
     }
 
@@ -170,7 +178,7 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, eleme
     # STOP MAPPING
 
     # Extract the transportation stop from the source data
-    stop = '?'
+    id = data['additional']['busStop'][element]['@id']
 
     # ---------------------------------------------------------------------
 
@@ -186,14 +194,13 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, eleme
 
     # Create a new dictionary with the converted data
     converted_data = {
-        'id': f'urn:ngsi-ld:PublicTransportStop:santander:busStop:{stop}', # PENDIENTE. Hay que hacer que en vez de Santander y busLine se pongan los valores correctos.
+        'id': f'urn:ngsi-ld:PublicTransportStop:{city}:busStop:{id}', # PENDIENTE. Hay que hacer que en vez de Santander y busLine se pongan los valores correctos.
         'type': 'PublicTransportStop',
-        'stopCode': '?',
-        'shortStopCode': stop,
+        'stopCode': id,
         'name': data['additional']['busStop'][element]['@name'],
         'transportationType': '?',
         'refPublicTransportRoute': [
-            f'urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:{line}' for line in lines_array
+            f'urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{line}' for line in lines_array
         ],
     }
 
