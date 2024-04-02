@@ -1,0 +1,43 @@
+{
+    "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:C-1",
+    "type": "PublicTransportRoute",
+    "routeCode": {
+        "type": "Text",
+        "value": "11784870"
+    },
+    "shortRouteCode": {
+        "type": "Text",
+        "value": "C-1"
+    },
+    "name": {
+        "type": "Text",
+        "value": "C-1 Reinosa-Santander"
+    },
+    "transportationType": {
+        "type": "Number",
+        "value": 2
+    },
+    "routeColor": {
+        "type": "Text",
+        "value": "#ff0000"
+    },
+    "routeSegments": {
+        "type": "StructuredValue",
+        "value": [
+            {
+                "segmentName": "Nueva Monta\u00f1a - Valdecilla",
+                "refPublicTransportStops": [
+                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:6652674778",
+                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:3135021046"
+                ]
+            },
+            {
+                "segmentName": "Valdecilla - Santander RENFE",
+                "refPublicTransportStops": [
+                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:3135021046",
+                    "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:3058796840"
+                ]
+            }
+        ]
+    }
+}

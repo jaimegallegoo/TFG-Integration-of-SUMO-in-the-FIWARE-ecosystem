@@ -83,6 +83,23 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
 
     # ---------------------------------------------------------------------
 
+    # ROUTE SEGMENTS MAPPING
+
+    bus_stops = data['ptLines']['ptLine'][element]['busStop']
+    route_segments = []
+
+    for i in range(len(bus_stops) - 1):
+        segment = {
+            "segmentName": bus_stops[i]['@name'] + ' - ' + bus_stops[i+1]['@name'],
+            "refPublicTransportStops": [
+                "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:" + bus_stops[i]['@id'],
+                "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:" + bus_stops[i+1]['@id']
+            ]
+        }
+        route_segments.append(segment)
+
+    # ---------------------------------------------------------------------
+
     # Create a new dictionary in NGSI-v2 (keyvalues) with the converted data
     converted_data = {
         'id': f'urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:{line}', # PENDIENTE. Hay que hacer que en vez de Santander y busLine se pongan los valores correctos.
@@ -92,9 +109,7 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
         'name': data['ptLines']['ptLine'][element]['@name'],
         'transportationType': transportation_type_number,
         'routeColor': route_color_hex,
-        'routeSegments': '?', # PENDIENTE. 
-        # Los route edges en SUMO no entiendo en qué formato están y no sé como convertirlos a FIWARE.
-        # En FIWARE los routeSegments son paradas de bus mientras que en SUMO parecen coordenadas de un mapa.
+        'routeSegments': route_segments
     }
 
     # Create a new dictionary in NGSI-v2 (normalized) with the converted data
@@ -121,9 +136,10 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
             "type": "Text",
             "value": route_color_hex
         },
-        'routeSegments': '?', # PENDIENTE. 
-        # Los route edges en SUMO no entiendo en qué formato están y no sé como convertirlos a FIWARE.
-        # En FIWARE los routeSegments son paradas de bus mientras que en SUMO parecen coordenadas de un mapa.
+        "routeSegments": {
+            "type": "StructuredValue",
+            "value": route_segments
+        }
     }
 
     # Open the destination JSON file and dump the converted data
@@ -138,7 +154,7 @@ def convert_SUMO_line(originalSUMOlineXML):
     originalSUMOlineJSON = 'originalSUMOlineJSON.json'
     originalFIWAREroute = 'originalFIWAREroute.json'
     convert_xml_to_json(originalSUMOlineXML, originalSUMOlineJSON)
-    convert_SUMO_line_to_FIWARE_route(originalSUMOlineJSON, originalFIWAREroute, 1)
+    convert_SUMO_line_to_FIWARE_route(originalSUMOlineJSON, originalFIWAREroute, 0)
 
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
