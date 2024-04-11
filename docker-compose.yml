@@ -66,6 +66,7 @@ services:
       - ORION_URL=http://orion:${ORION_PORT}
     volumes:
       - ./scripts/web-server:/app
+      - ./web:/web
     working_dir: /app
     command: bash -c "pip install -r requirements.txt && python server.py"
     build: ./scripts/web-server
