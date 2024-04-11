@@ -58,7 +58,20 @@ services:
       timeout: 5s
       retries: 3
       start_period: 5s
-    
+  
+  # Web Server
+  web-server:
+    image: python:3.8
+    environment:
+      - ORION_URL=http://orion:${ORION_PORT}
+    volumes:
+      - ./scripts/web-server:/app
+    working_dir: /app
+    command: python your-web-server-script.py
+    ports:
+      - "8000:8000"
+    networks:
+      - default
 
 networks:
   default:
