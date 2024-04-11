@@ -67,7 +67,8 @@ services:
     volumes:
       - ./scripts/web-server:/app
     working_dir: /app
-    command: python your-web-server-script.py
+    command: bash -c "pip install -r requirements.txt && python server.py"
+    build: ./scripts/web-server
     ports:
       - "8000:8000"
     networks:
