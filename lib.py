@@ -51,7 +51,10 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
     }
 
     # Extract the transportation type from the source data
+
+    # REVISAR, A VECES VIENE COMO vClass Y OTRAS COMO type
     transportation_type = data['ptLines']['ptLine'][element]['@vClass']
+    transportation_type = data['ptLines']['ptLine'][element]['@type']
 
     # Map the transportation type to a number
     transportation_type_number = transportation_type_mapping.get(transportation_type, None)
@@ -162,7 +165,7 @@ def convert_SUMO_line(originalSUMOlineXML):
     originalSUMOlineJSON = 'originalSUMOlineJSON.json'
     originalFIWAREroute = 'originalFIWAREroute.json'
     convert_xml_to_json(originalSUMOlineXML, originalSUMOlineJSON)
-    convert_SUMO_line_to_FIWARE_route(originalSUMOlineJSON, originalFIWAREroute, 0)
+    convert_SUMO_line_to_FIWARE_route(originalSUMOlineJSON, originalFIWAREroute, 4)
 
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
@@ -184,11 +187,21 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, eleme
 
     # LINES MAPPING
 
-    # Extract the transportation lines from the source data
-    lines = data['additional']['busStop'][element]['@lines']
+    # Extract the transportation lines from the source data if present
+    lines = data['additional']['busStop'][element].get('@lines')
 
-    # Split the string into separate values
-    lines_array = lines.split()
+    # Proceed only if lines is not None
+    if lines is not None:
+        # Split the string into separate values
+        lines_array = lines.split()
+
+    # Check if lines_array exists and is not empty
+    if 'lines_array' in locals() and lines_array:
+        refPublicTransportRoute = [
+            f'urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{line}' for line in lines_array
+        ]
+    else:
+        refPublicTransportRoute = []
 
     # ---------------------------------------------------------------------
 
@@ -199,13 +212,22 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, eleme
         'stopCode': id,
         'name': data['additional']['busStop'][element]['@name'],
         'transportationType': '?',
-        'refPublicTransportRoute': [
-            f'urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{line}' for line in lines_array
-        ],
+        'refPublicTransportRoute': refPublicTransportRoute,
     }
 
     # Open the destination JSON file and dump the converted data
     with open(originalFIWAREstop, 'w') as destination_file:
         json.dump(converted_data, destination_file, indent=4)
 
-    
+# ---------------------------------------------------------------------
+# ---------------------------------------------------------------------
+
+# This function converts a stop from a SUMO "osm_stops.add.xml" to a FIWARE PublicTransportStop
+def convert_SUMO_stop(originalSUMOstopXML):
+    originalSUMOstopJSON = 'originalSUMOstopJSON.json'
+    originalFIWAREstop = 'originalFIWAREstop.json'
+    convert_xml_to_json(originalSUMOstopXML, originalSUMOstopJSON)
+    convert_SUMO_stop_to_FIWARE_stop(originalSUMOstopJSON, originalFIWAREstop, 0)
+
+# ---------------------------------------------------------------------
+# ---------------------------------------------------------------------

@@ -30,6 +30,12 @@ def main():
         convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, 2)
     #python app.py SUMO_stop_to_FIWARE_stop input_file.json output_file.json
 
+    # Con esta orden se hacen las dos anteriores en una sola
+    elif orden == "SUMO_stop":
+        originalSUMOstopXML = sys.argv[2]
+        convert_SUMO_stop(originalSUMOstopXML)
+    #python app.py SUMO_stop osm_stops.add.xml
+
     else:
         print(f"Orden no reconocida: {orden}")
 
