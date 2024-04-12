@@ -101,17 +101,33 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
     # ROUTE SEGMENTS MAPPING
 
     bus_stops = data['ptLines']['ptLine'][element]['busStop']
+
+    # If bus_stops is a dictionary, convert it to a list
+    if isinstance(bus_stops, dict):
+        bus_stops = [bus_stops]
+
     route_segments = []
 
-    for i in range(len(bus_stops) - 1):
+    # Check if there is only one element in bus_stops
+    if len(bus_stops) == 1:
         segment = {
-            'segmentName': bus_stops[i]['@name'] + ' - ' + bus_stops[i+1]['@name'],
+            'segmentName': bus_stops[0]['@name'],
             'refPublicTransportStops': [
-                f'urn:ngsi-ld:PublicTransportStop:{city}:transport:busStop:' + bus_stops[i]['@id'],
-                f'urn:ngsi-ld:PublicTransportStop:{city}:transport:busStop:' + bus_stops[i+1]['@id']
+                f'urn:ngsi-ld:PublicTransportStop:{city}:transport:busStop:' + bus_stops[0]['@id']
             ]
         }
         route_segments.append(segment)
+
+    else:
+        for i in range(len(bus_stops) - 1):
+            segment = {
+                'segmentName': bus_stops[i]['@name'] + ' - ' + bus_stops[i+1]['@name'],
+                'refPublicTransportStops': [
+                    f'urn:ngsi-ld:PublicTransportStop:{city}:transport:busStop:' + bus_stops[i]['@id'],
+                    f'urn:ngsi-ld:PublicTransportStop:{city}:transport:busStop:' + bus_stops[i+1]['@id']
+                ]
+            }
+            route_segments.append(segment)    
 
     # ---------------------------------------------------------------------
 
