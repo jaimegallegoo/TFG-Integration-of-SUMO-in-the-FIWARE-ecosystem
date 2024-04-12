@@ -54,7 +54,7 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
 
     # REVISAR, A VECES VIENE COMO vClass Y OTRAS COMO type
     transportation_type = data['ptLines']['ptLine'][element]['@vClass']
-    transportation_type = data['ptLines']['ptLine'][element]['@type']
+    #transportation_type = data['ptLines']['ptLine'][element]['@type']
 
     # Map the transportation type to a number
     transportation_type_number = transportation_type_mapping.get(transportation_type, None)
@@ -64,26 +64,30 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
     # ROUTE COLOR MAPPING
 
     # Extract the routeColor from the source data
-    route_color = data['ptLines']['ptLine'][element]['@color']
+    route_color = data['ptLines']['ptLine'][element].get('@color')
 
-    # Check if the routeColor is in the format 'r,g,b'
-    if ',' in route_color:
-        # Split the string into separate numbers
-        r, g, b = map(int, route_color.split(','))
-
-        # Convert each number to hexadecimal
-        route_color_hex = '#{:02x}{:02x}{:02x}'.format(r, g, b)
+    # Check if the routeColor is None
+    if route_color is None:
+        route_color_hex = None
     else:
-        # Map the color name to its corresponding hexadecimal value
-        color_mapping = {
-            'red': '#ff0000',
-            'green': '#00ff00',
-            'blue': '#0000ff',
-            # ...
-        }
+        # Check if the routeColor is in the format 'r,g,b'
+        if ',' in route_color:
+            # Split the string into separate numbers
+            r, g, b = map(int, route_color.split(','))
 
-        # Get the hexadecimal value for the color name
-        route_color_hex = color_mapping.get(route_color.lower(), None)
+            # Convert each number to hexadecimal
+            route_color_hex = '#{:02x}{:02x}{:02x}'.format(r, g, b)
+        else:
+            # Map the color name to its corresponding hexadecimal value
+            color_mapping = {
+                'red': '#ff0000',
+                'green': '#00ff00',
+                'blue': '#0000ff',
+                # ...
+            }
+
+            # Get the hexadecimal value for the color name
+            route_color_hex = color_mapping.get(route_color.lower(), None)
 
     # ---------------------------------------------------------------------
         
@@ -165,7 +169,7 @@ def convert_SUMO_line(originalSUMOlineXML):
     originalSUMOlineJSON = 'originalSUMOlineJSON.json'
     originalFIWAREroute = 'originalFIWAREroute.json'
     convert_xml_to_json(originalSUMOlineXML, originalSUMOlineJSON)
-    convert_SUMO_line_to_FIWARE_route(originalSUMOlineJSON, originalFIWAREroute, 4)
+    convert_SUMO_line_to_FIWARE_route(originalSUMOlineJSON, originalFIWAREroute, 0)
 
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
