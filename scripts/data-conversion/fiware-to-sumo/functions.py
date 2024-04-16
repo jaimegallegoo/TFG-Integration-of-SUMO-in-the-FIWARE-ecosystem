@@ -20,16 +20,30 @@ def convert_FIWARE_route_to_SUMO_line(originalFIWAREroute, originalSUMOline):
 
     # TRANSPORTATION TYPE MAPPING
         
-    # Define a mapping from numbers to transportation types
-    transportation_type_mapping = {
+    # Define a mapping from numbers to vClass
+    vClass_mapping = {
         0: 'tram',
-        1: 'subway',
+        1: 'rail_urban',
         2: 'rail',
         3: 'bus',
+        4: 'ship',
+        5: 'rail_urban',
+        6: 'rail_urban',
+        7: 'rail_urban',
+        11: 'bus',
+        12: 'rail_urban',
+    }
+
+    # Define a mapping from numbers to types
+    type_mapping = {
+        0: 'tram',
+        1: 'subway',
+        2: 'train',
+        3: 'bus',
         4: 'ferry',
-        5: 'cable_tram',
-        6: 'aerial_lift',
-        7: 'funicular',
+        5: 'tram',
+        6: 'aerialway',
+        7: 'tram',
         11: 'trolleybus',
         12: 'monorail',
     }
@@ -46,8 +60,11 @@ def convert_FIWARE_route_to_SUMO_line(originalFIWAREroute, originalSUMOline):
         # Extract the transportation type from the source data
         transportation_type_number = item['transportationType']['value']
 
-        # Map the transportation type to a number
-        transportation_type = transportation_type_mapping.get(transportation_type_number, "No data available")
+        # Map the vClass from the transportation type number
+        vClass = vClass_mapping.get(transportation_type_number, "No data available")
+
+        # Map the type from the transportation type number
+        type = type_mapping.get(transportation_type_number, "No data available")
         # ---------------------------------------------------------------------
 
         # Create a new ptLine XML element and set its attributes
@@ -55,8 +72,8 @@ def convert_FIWARE_route_to_SUMO_line(originalFIWAREroute, originalSUMOline):
             "id": item['routeCode']['value'],
             "name": item['name']['value'],
             "line": item['shortRouteCode']['value'],
-            "type": "PENDIENTE",
-            "vClass": transportation_type,
+            "type": type,
+            "vClass": vClass,
             "period": "PENDIENTE",
             "color": "PENDIENTE",
             "completeness": "PENDIENTE" 
