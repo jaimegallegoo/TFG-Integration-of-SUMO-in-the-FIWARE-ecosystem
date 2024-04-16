@@ -83,6 +83,7 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
                 'red': '#ff0000',
                 'green': '#00ff00',
                 'blue': '#0000ff',
+                'white': '#ffffff',
                 # ...
             }
 
