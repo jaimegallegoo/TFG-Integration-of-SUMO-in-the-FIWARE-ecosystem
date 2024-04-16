@@ -173,9 +173,19 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
         }
     }
 
-    # Open the destination JSON file and dump the converted data
+    # Open the destination JSON file and load the existing data
+    with open(originalFIWAREroute, 'r') as destination_file:
+        try:
+            existing_data = json.load(destination_file)
+        except json.JSONDecodeError:
+            existing_data = []
+
+    # Append the converted data to the existing data
+    existing_data.append(converted_data_normalized)
+
+    # Open the destination JSON file again and dump the updated data
     with open(originalFIWAREroute, 'w') as destination_file:
-        json.dump(converted_data_normalized, destination_file, indent=4)
+        json.dump(existing_data, destination_file, indent=4)
 
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
@@ -185,7 +195,18 @@ def convert_SUMO_line(originalSUMOlineXML):
     originalSUMOlineJSON = 'originalSUMOlineJSON.json'
     originalFIWAREroute = 'originalFIWAREroute.json'
     convert_xml_to_json(originalSUMOlineXML, originalSUMOlineJSON)
-    convert_SUMO_line_to_FIWARE_route(originalSUMOlineJSON, originalFIWAREroute, 0)
+
+    # Load the JSON file into a Python object
+    with open(originalSUMOlineJSON) as f:
+        data = json.load(f)
+
+    # Get the "ptLine" list
+    ptLine_list = data['ptLines']['ptLine']
+
+    # Iterate over each element in the "ptLine" list
+    for i, ptLine in enumerate(ptLine_list):
+        # Call convert_SUMO_line_to_FIWARE_route for each "ptLine"
+        convert_SUMO_line_to_FIWARE_route(originalSUMOlineJSON, originalFIWAREroute, i)
 
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
