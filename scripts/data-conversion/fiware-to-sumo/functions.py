@@ -20,18 +20,18 @@ def convert_FIWARE_route_to_SUMO_line(originalFIWAREroute, originalSUMOline):
 
     # TRANSPORTATION TYPE MAPPING
         
-    # Define a mapping from transportation types to numbers
+    # Define a mapping from numbers to transportation types
     transportation_type_mapping = {
-        'tram': 0,
-        'subway': 1,
-        'rail': 2,
-        'bus': 3,
-        'ferry': 4,
-        'cable_tram': 5,
-        'aerial_lift': 6,
-        'funicular': 7,
-        'trolleybus': 11,
-        'monorail': 12,
+        0: 'tram',
+        1: 'subway',
+        2: 'rail',
+        3: 'bus',
+        4: 'ferry',
+        5: 'cable_tram',
+        6: 'aerial_lift',
+        7: 'funicular',
+        11: 'trolleybus',
+        12: 'monorail',
     }
 
     # ---------------------------------------------------------------------
@@ -41,13 +41,22 @@ def convert_FIWARE_route_to_SUMO_line(originalFIWAREroute, originalSUMOline):
 
     # Iterate over the data
     for item in data:
+
+        # ---------------------------------------------------------------------
+        # Extract the transportation type from the source data
+        transportation_type_number = item['transportationType']['value']
+
+        # Map the transportation type to a number
+        transportation_type = transportation_type_mapping.get(transportation_type_number, "No data available")
+        # ---------------------------------------------------------------------
+
         # Create a new ptLine XML element and set its attributes
         ptLine = ET.SubElement(root, "ptLine", {
             "id": item['routeCode']['value'],
             "name": item['name']['value'],
             "line": item['shortRouteCode']['value'],
             "type": "PENDIENTE",
-            "vClass": "PENDIENTE",
+            "vClass": transportation_type,
             "period": "PENDIENTE",
             "color": "PENDIENTE",
             "completeness": "PENDIENTE" 
