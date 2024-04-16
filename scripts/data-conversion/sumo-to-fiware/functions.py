@@ -40,12 +40,10 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
     transportation_type_mapping = {
         'tram': 0,
         'subway': 1,
-        'rail': 2,
+        'train': 2,
         'bus': 3,
         'ferry': 4,
-        'cable_tram': 5,
-        'aerial_lift': 6,
-        'funicular': 7,
+        'aerialway': 6,
         'trolleybus': 11,
         'monorail': 12,
     }
@@ -53,8 +51,8 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
     # Extract the transportation type from the source data
 
     # REVISAR, A VECES VIENE COMO vClass Y OTRAS COMO type
-    transportation_type = data['ptLines']['ptLine'][element]['@vClass']
-    #transportation_type = data['ptLines']['ptLine'][element]['@type']
+    #transportation_type = data['ptLines']['ptLine'][element]['@vClass']
+    transportation_type = data['ptLines']['ptLine'][element]['@type']
 
     # Map the transportation type to a number
     transportation_type_number = transportation_type_mapping.get(transportation_type, None)
