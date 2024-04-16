@@ -68,7 +68,7 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
 
     # Check if the routeColor is None
     if route_color is None:
-        route_color_hex = None
+        route_color_hex = "No data available"
     else:
         # Check if the routeColor is in the format 'r,g,b'
         if ',' in route_color:
@@ -100,34 +100,39 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
 
     # ROUTE SEGMENTS MAPPING
 
-    bus_stops = data['ptLines']['ptLine'][element]['busStop']
+    #bus_stops = data['ptLines']['ptLine'][element]['busStop']
+    bus_stops = data['ptLines']['ptLine'][element].get('busStop')
 
-    # If bus_stops is a dictionary, convert it to a list
-    if isinstance(bus_stops, dict):
-        bus_stops = [bus_stops]
+    # Check if bus_stops is not None
+    if bus_stops:
+        # If bus_stops is a dictionary, convert it to a list
+        if isinstance(bus_stops, dict):
+            bus_stops = [bus_stops]
 
-    route_segments = []
+        route_segments = []
 
-    # Check if there is only one element in bus_stops
-    if len(bus_stops) == 1:
-        segment = {
-            'segmentName': bus_stops[0]['@name'],
-            'refPublicTransportStops': [
-                f'urn:ngsi-ld:PublicTransportStop:{city}:transport:busStop:' + bus_stops[0]['@id']
-            ]
-        }
-        route_segments.append(segment)
-
-    else:
-        for i in range(len(bus_stops) - 1):
+        # Check if there is only one element in bus_stops
+        if len(bus_stops) == 1:
             segment = {
-                'segmentName': bus_stops[i]['@name'] + ' - ' + bus_stops[i+1]['@name'],
+                'segmentName': bus_stops[0]['@name'],
                 'refPublicTransportStops': [
-                    f'urn:ngsi-ld:PublicTransportStop:{city}:transport:busStop:' + bus_stops[i]['@id'],
-                    f'urn:ngsi-ld:PublicTransportStop:{city}:transport:busStop:' + bus_stops[i+1]['@id']
+                    f'urn:ngsi-ld:PublicTransportStop:{city}:transport:busStop:' + bus_stops[0]['@id']
                 ]
             }
-            route_segments.append(segment)    
+            route_segments.append(segment)
+
+        else:
+            for i in range(len(bus_stops) - 1):
+                segment = {
+                    'segmentName': bus_stops[i]['@name'] + ' - ' + bus_stops[i+1]['@name'],
+                    'refPublicTransportStops': [
+                        f'urn:ngsi-ld:PublicTransportStop:{city}:transport:busStop:' + bus_stops[i]['@id'],
+                        f'urn:ngsi-ld:PublicTransportStop:{city}:transport:busStop:' + bus_stops[i+1]['@id']
+                    ]
+                }
+                route_segments.append(segment)
+    else:
+        route_segments = "No data available"    
 
     # ---------------------------------------------------------------------
 
