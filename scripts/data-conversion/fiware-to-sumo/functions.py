@@ -57,6 +57,9 @@ def convert_FIWARE_route_to_SUMO_line(originalFIWAREroute, originalSUMOline):
     for item in data:
 
         # ---------------------------------------------------------------------
+
+        # TRANSPORTATION TYPE MAPPING
+
         # Extract the transportation type from the source data
         transportation_type_number = item['transportationType']['value']
 
@@ -67,6 +70,31 @@ def convert_FIWARE_route_to_SUMO_line(originalFIWAREroute, originalSUMOline):
         type = type_mapping.get(transportation_type_number, "No data available")
         # ---------------------------------------------------------------------
 
+        # ROUTE COLOR MAPPING
+
+        # Extract the routeColor from the source data
+        route_color_hex = item['routeColor']['value']
+
+        # Check if the routeColor is None
+        if route_color_hex is None:
+            route_color = "No data available"
+        else:
+            # Check if the routeColor is in the format '#rrggbb'
+            if route_color_hex.startswith('#'):
+                # Remove the '#' from the start of the string
+                route_color_hex = route_color_hex[1:]
+
+                # Split the string into separate pairs of hexadecimal digits
+                r, g, b = route_color_hex[:2], route_color_hex[2:4], route_color_hex[4:]
+
+                # Convert each pair of hexadecimal digits to an integer
+                route_color = '{},{},{}'.format(int(r, 16), int(g, 16), int(b, 16))
+            else:
+                # Sometimes the color is in the format 'colorName'
+                route_color = route_color_hex
+
+        # ---------------------------------------------------------------------
+
         # Create a new ptLine XML element and set its attributes
         ptLine = ET.SubElement(root, "ptLine", {
             "id": item['routeCode']['value'],
@@ -75,7 +103,7 @@ def convert_FIWARE_route_to_SUMO_line(originalFIWAREroute, originalSUMOline):
             "type": type,
             "vClass": vClass,
             "period": "PENDIENTE",
-            "color": "PENDIENTE",
+            "color": route_color,
             "completeness": "PENDIENTE" 
         })
 
