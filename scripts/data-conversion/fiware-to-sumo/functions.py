@@ -1,6 +1,7 @@
 import xmltodict
 import json
 import xml.etree.ElementTree as ET
+from xml.dom import minidom
 
 # Global variables
 
@@ -63,16 +64,35 @@ def convert_FIWARE_route_to_SUMO_line(originalFIWAREroute, originalSUMOline):
         for segment in item['routeSegments']['value']:
             # Check if segment is a dictionary
             if isinstance(segment, dict):
-                for stop in segment['refPublicTransportStops']:
-                    busStop = ET.SubElement(ptLine, "busStop", {
-                        "id": stop.split(':')[-1],
-                        "name": segment['segmentName']
-                    })
+                # Take only the first stop
+                stop = segment['refPublicTransportStops'][0]
+                # Split the segment name by '-' and take the first part
+                first_name = segment['segmentName'].split('-')[0].strip()
+                busStop = ET.SubElement(ptLine, "busStop", {
+                    "id": stop.split(':')[-1],
+                    "name": first_name
+                })
             else:
                 # If segment is not a dictionary, print it out
                 print(f"Unexpected segment: {segment}")
 
     # Create an ElementTree object and write it to a file
     tree = ET.ElementTree(root)
-    tree.write(originalSUMOline)
+    # tree.write(originalSUMOline, xml_declaration=True, encoding='UTF-8')
+
+    # Convert the ElementTree to a string
+    xml_string = ET.tostring(root, encoding='utf-8')
+
+    # Parse the string with minidom
+    dom = minidom.parseString(xml_string)
+
+    # Use toprettyxml to format the XML
+    pretty_xml = dom.toprettyxml(indent="  ")
+
+    # Add the encoding to the XML declaration
+    pretty_xml = pretty_xml.replace('<?xml version="1.0" ?>', '<?xml version="1.0" encoding="UTF-8"?>')
+
+    # Write the formatted XML to a file
+    with open(originalSUMOline, 'w', encoding='utf-8') as f:
+        f.write(pretty_xml)
     
