@@ -1,4 +1,3 @@
-import xmltodict
 import json
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
@@ -90,7 +89,7 @@ def convert_FIWARE_route_to_SUMO_line(originalFIWAREroute, originalSUMOline):
                 # Convert each pair of hexadecimal digits to an integer
                 route_color = '{},{},{}'.format(int(r, 16), int(g, 16), int(b, 16))
             else:
-                # Sometimes the color is in the format 'colorName'
+                # If the routeColor is not in the format '#rrggbb', use it as is
                 route_color = route_color_hex
 
         # ---------------------------------------------------------------------
@@ -106,13 +105,6 @@ def convert_FIWARE_route_to_SUMO_line(originalFIWAREroute, originalSUMOline):
             "color": route_color,
             "completeness": "PENDIENTE" 
         })
-
-        # Create a route child element and set its attributes
-        '''
-        route = ET.SubElement(ptLine, "route", {
-            "edges": " ".join(segment['refPublicTransportStops'] for segment in item['routeSegments']['value'])
-        })
-        '''
 
         # Create a busStop child element for each stop in the route segments
         for segment in item['routeSegments']['value']:
