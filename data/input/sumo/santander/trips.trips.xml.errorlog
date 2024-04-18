@@ -1,0 +1,41 @@
+Warning: Unequal lengths of bidi lane ':33638060_1_0' and lane ':33638060_0_0' (30.83 != 4.50).
+Warning: At actuated tlLogic 'cluster_2029774389_2815510990_2815510992', linkIndex 9 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_2029774389_2815510990_2815510992', linkIndex 10 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_26403811_290360378_3089552737_694413892_#3more', actuated phase 0 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_26403811_290360378_3089552737_694413892_#3more', linkIndex 1 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_26403811_290360378_3089552737_694413892_#3more', linkIndex 2 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_26403811_290360378_3089552737_694413892_#3more', linkIndex 18 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_273427300_273427304_7704742624_7704742629_#1more', actuated phase 2 has no controlling detector.
+Warning: Program '0' at tlLogic 'joinedS_2830899603_283658818_cluster_262798965_8567547677_8567547684' is incompatible with logic at junction 'cluster_262798965_8567547677_8567547684' (mutual conflict between link indices 3,9 tl indices 7,13 phase 12).
+  To avoid deadlock/collisions, either: rebuild the signal plan with a newer version of netconvert/netedit
+  or rebuild the network with option '--tls.ignore-internal-junction-jam' or include the program when building.
+Warning: At actuated tlLogic 'joinedS_cluster_2375904984_2375904986_2375904990_cluster_2375905019_2375905020_2375905022_2375905023_#2more', actuated phase 6 has no controlling detector.
+Warning: No connection between edge '681356921#2' and edge '4337168' found.
+Warning: Vehicle '27_bus_17:5' has no valid route from edge '681356921#2' to stop edge '4337168'.
+Warning: No connection between edge '681356921#2' and edge '4337168' found.
+Warning: Vehicle '24_bus_17:2' has no valid route from edge '681356921#2' to stop edge '4337168'.
+Warning: No connection between edge '278001738#2' and edge '4337167#1' found.
+Warning: Vehicle '74_bus_15:1' has no valid route from edge '278001738#2' to stop edge '4337167#1'.
+Warning: No connection between edge '681356921#2' and edge '4337168' found.
+Warning: Vehicle '68_bus_17:7' has no valid route from edge '681356921#2' to stop edge '4337168'.
+Warning: No connection between edge '681356921#2' and edge '1193641627' found.
+Warning: Vehicle '66_bus_E2:1' has no valid route from edge '681356921#2' to stop edge '1193641627'.
+Warning: Vehicle '67_bus_17:6' has no valid route from edge '681356921#2' to stop edge '4337168'.
+Warning: Teleporting vehicle '24_bus_17:2'; waited too long (wrong lane), lane='681356921#2_0', time=465.00.
+Warning: Vehicle '24_bus_17:2' ends teleporting on edge '4337168', time=465.00.
+Warning: Teleporting vehicle '22_bus_17:0'; waited too long (jam), lane='4336976#1_0', time=670.00.
+Warning: Vehicle '22_bus_17:0' teleports beyond arrival edge '681356921#2', time=688.00.
+Warning: Teleporting vehicle '27_bus_17:5'; waited too long (wrong lane), lane='681356921#2_0', time=771.00.
+Warning: Vehicle '27_bus_17:5' ends teleporting on edge '4337168', time=771.00.
+Warning: Teleporting vehicle '74_bus_15:1'; waited too long (wrong lane), lane='278001738#2_0', time=874.00.
+Warning: Vehicle '74_bus_15:1' ends teleporting on edge '4337167#1', time=874.00.
+Warning: Teleporting vehicle '23_bus_17:1'; waited too long (jam), lane='4336976#1_0', time=978.00.
+Warning: Vehicle '23_bus_17:1' teleports beyond arrival edge '681356921#2', time=996.00.
+Warning: Teleporting vehicle '66_bus_E2:1'; waited too long (wrong lane), lane='681356921#2_0', time=1076.00.
+Warning: Vehicle '66_bus_E2:1' ends teleporting on edge '1193641627', time=1076.00.
+Warning: Teleporting vehicle '67_bus_17:6'; waited too long (wrong lane), lane='681356921#2_0', time=1381.00.
+Warning: Vehicle '67_bus_17:6' ends teleporting on edge '4337168', time=1381.00.
+Warning: 29 total messages of type: At actuated tlLogic '%', linkIndex % has no controlling detector.
+Warning: 6 total messages of type: No connection between edge '%' and edge '%' found.
+Warning: 6 total messages of type: Teleporting vehicle '%'; waited too long (wrong lane), lane='%', time=%.
+Warning: 6 total messages of type: Vehicle '%' ends teleporting on edge '%', time=%.
