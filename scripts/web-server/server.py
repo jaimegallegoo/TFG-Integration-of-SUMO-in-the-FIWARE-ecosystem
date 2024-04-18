@@ -6,5 +6,9 @@ app = Flask(__name__, static_folder='../web')
 def home():
     return send_from_directory(app.static_folder, 'index.html')
 
+@app.route('/about')
+def about():
+    return send_from_directory(app.static_folder, 'about.html')
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
