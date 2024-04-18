@@ -31,6 +31,14 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
         data = json.load(source_file)
 
     # ---------------------------------------------------------------------
+        
+    # NAME MAPPING
+
+    # Create a valid name for the NGSI-v2 entity
+    name = data['ptLines']['ptLine'][element]['@name']
+    name = name.replace('(', '').replace(')', '')
+
+    # ---------------------------------------------------------------------
 
     # TRANSPORTATION TYPE MAPPING
         
@@ -147,7 +155,7 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
         'type': 'PublicTransportRoute',
         'routeCode': data['ptLines']['ptLine'][element]['@id'],
         'shortRouteCode': line,
-        'name': data['ptLines']['ptLine'][element]['@name'],
+        'name': name,
         'transportationType': transportation_type_number,
         'routeColor': route_color_hex,
         'routeSegments': route_segments
@@ -167,7 +175,7 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
         },
         'name': {
             'type': 'Text',
-            'value': data['ptLines']['ptLine'][element]['@name']
+            'value': name
         },
         'transportationType': {
             'type': 'Number',
@@ -399,39 +407,7 @@ def test_connection():
 # This function posts an entity to the Orion Context Broker
 def post_entity():
     entity = {
-        "id": "urn:ngsi-ld:PublicTransportRoute:madrid:transport:busLine:MD_18061",
-        "type": "PublicTransportRoute",
-        "routeCode": {
-            "type": "Text",
-            "value": "10492086"
-        },
-        "shortRouteCode": {
-            "type": "Text",
-            "value": "MD 18061"
-        },
-        "name": {
-            "type": "Text",
-            "value": "Media Distancia 18061 Madrid-Pr\u00edncipe P\u00edo \u2192 San Sebasti\u00e1n/Donostia"
-        },
-        "transportationType": {
-            "type": "Number",
-            "value": 2
-        },
-        "routeColor": {
-            "type": "Text",
-            "value": "No data available"
-        },
-        "routeSegments": {
-            "type": "StructuredValue",
-            "value": [
-                {
-                    "segmentName": "Pr\u00edncipe P\u00edo",
-                    "refPublicTransportStops": [
-                        "urn:ngsi-ld:PublicTransportStop:madrid:transport:busStop:1493565877"
-                    ]
-                }
-            ]
-        }
+        # Insertar aquí los atributos de la entidad...
     }
     
     url = 'http://localhost:1026/v2/entities'
