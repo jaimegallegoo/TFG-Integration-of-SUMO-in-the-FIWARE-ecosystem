@@ -1,4 +1,5 @@
 import os
+import requests
 import xmltodict
 import json
 
@@ -370,3 +371,17 @@ def convert_SUMO_city(city):
     # Convert the lines and stops from the selected city
     convert_SUMO_line(originalSUMOlineXML, originalFIWAREroute, city)
     convert_SUMO_stop(originalSUMOstopXML, originalFIWAREstop, city)
+
+# ---------------------------------------------------------------------
+
+# This function checks the connection to the Orion Context Broker
+def test_connection():
+    try:
+        response = requests.get('http://localhost:1026/version')
+        if response.status_code == 200:
+            print("Connection successful.")
+            print("Response data:", response.json())
+        else:
+            print(f"Connection failed with status code {response.status_code}.")
+    except requests.exceptions.RequestException as e:
+        print(f"Connection failed with error: {e}")

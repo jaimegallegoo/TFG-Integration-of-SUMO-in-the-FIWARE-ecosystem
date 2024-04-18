@@ -42,6 +42,11 @@ def main():
         convert_SUMO_city(city)
     #python main.py city madrid
 
+    # Con esta orden se puede probar la conexión con el Orion Context Broker
+    elif orden == "test_connection":
+        test_connection()
+    #python main.py test_connection
+
     else:
         print(f"Orden no reconocida: {orden}")
 
