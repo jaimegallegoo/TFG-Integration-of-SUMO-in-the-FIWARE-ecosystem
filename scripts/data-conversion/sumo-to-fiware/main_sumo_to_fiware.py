@@ -36,6 +36,12 @@ def main():
         convert_SUMO_stop(originalSUMOstopXML)
     #python main.py SUMO_stop osm_stops.add.xml
 
+    # Con esta orden se hacen las dos anteriores en una sola
+    elif orden == "city":
+        city = sys.argv[2]
+        convert_SUMO_city(city)
+    #python main.py city madrid
+
     else:
         print(f"Orden no reconocida: {orden}")
 
