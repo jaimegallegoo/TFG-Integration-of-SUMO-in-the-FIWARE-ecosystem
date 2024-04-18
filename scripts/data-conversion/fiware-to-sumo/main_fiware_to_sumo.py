@@ -1,5 +1,5 @@
 import sys
-from functions import *
+from functions_fiware_to_sumo import *
 
 def main():
 

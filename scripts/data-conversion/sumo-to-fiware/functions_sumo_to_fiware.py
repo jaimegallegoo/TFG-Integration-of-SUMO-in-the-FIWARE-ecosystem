@@ -331,3 +331,19 @@ def convert_SUMO_stop(originalSUMOstopXML):
 
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
+# ---------------------------------------------------------------------
+# ---------------------------------------------------------------------
+# ---------------------------------------------------------------------
+# ---------------------------------------------------------------------
+
+# FUNCTIONS FOR THE WEB INTERFACE
+
+# This function converts the lines and stops from the selected city in the application
+def convert_SUMO_city(city):
+    # Define the paths for the SUMO files
+    originalSUMOlineXML = f'../data/input/sumo/{city}/osm_ptlines.xml'
+    originalSUMOstopXML = f'../data/input/sumo/{city}/osm_stops.add.xml'
+
+    # Convert the lines and stops from the selected city
+    convert_SUMO_line(originalSUMOlineXML)
+    convert_SUMO_stop(originalSUMOstopXML)

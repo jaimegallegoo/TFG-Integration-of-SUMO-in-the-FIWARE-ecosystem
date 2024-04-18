@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./scripts/data-conversion/fiware-to-sumo",
+        "./scripts/data-conversion/sumo-to-fiware"
+    ]
+}
