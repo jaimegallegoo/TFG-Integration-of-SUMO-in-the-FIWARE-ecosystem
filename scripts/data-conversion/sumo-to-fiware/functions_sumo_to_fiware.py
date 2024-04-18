@@ -407,9 +407,95 @@ def test_connection():
 # This function posts an entity to the Orion Context Broker
 def post_entity():
     entity = {
-        # Insertar aquí los atributos de la entidad...
-    }
+        "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",
+        "type": "PublicTransportRoute",
+        "source": {
+            "type": "Text",
+            "value": "https://api.smartsantander.eu/"
+        },
+        "dataProvider": {
+            "type": "Text",
+            "value": "http://www.smartsantander.eu/"
+        },
+        "routeCode": {
+            "type": "Text",
+            "value": "5200103000"
+        },
+        "shortRouteCode": {
+            "type": "Text",
+            "value": "N3"
+        },
+        "name": {
+            "type": "Text",
+            "value": "PE\u00d1ACASTILLO-PLAZA DE ITALIA"
+        },
+        "transportationType": {
+            "type": "Number",
+            "value": 3
+        },
+        "routeColor": {
+            "type": "Text",
+            "value": "#ff0000"
+        },
+        "routeTextColor": {
+            "type": "Text",
+            "value": "RED"
+        },
+        "routeSegments": {
+            "type": "StructuredValue",
+            "value": [
+            {
+                "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:1",
+                "refPublicTransportStops": [
+                "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",
+                "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"
+                ]
+            },
+            {
+                "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:2",
+                "refPublicTransportStops": [
+                "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",
+                "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"
+                ]
+            }
+            ]
+        },
+        "schedule": {
+            "type": "StructuredValue",
+            "value": [
+            {
+                "validFrom": "2018-01-24",
+                "validThrough": "2018-05-25",
+                "opens": "09:00",
+                "closes": "23:00"
+            },
+            {
+                "dayOfWeek": "Sunday",
+                "opens": "09:00",
+                "closes": "14:00"
+            }
+            ]
+        }
+        }
     
+    url = 'http://localhost:1026/v2/entities'
+    headers = {'Content-Type': 'application/json'}
+    response = requests.post(url, json=entity, headers=headers)
+    if response.status_code == 201:
+        print("Entity created successfully")
+    else:
+        print("Failed to create entity")
+        print(response.text)
+# ---------------------------------------------------------------------
+
+# This function posts an entity to the Orion Context Broker with a parameter
+def post_entity_parameter(entity):
+    
+    # Open the JSON file
+    with open(entity, 'r', encoding='utf-8') as f:
+        # Load the JSON data from the file
+        entity = json.load(f)
+
     url = 'http://localhost:1026/v2/entities'
     headers = {'Content-Type': 'application/json'}
     response = requests.post(url, json=entity, headers=headers)
