@@ -2,10 +2,6 @@ import os
 import xmltodict
 import json
 
-# Global variables
-
-city = 'santander'
-
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
 
@@ -28,7 +24,7 @@ def convert_xml_to_json(xml_file_path, json_file_path):
 # ---------------------------------------------------------------------
 
 # This function converts a line from a SUMO osm_ptline to a FIWARE PublicTransportRoute
-def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, element):
+def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, city, element):
     # Open the source JSON file and load the data
     with open(originalSUMOline, 'r') as source_file:
         data = json.load(source_file)
@@ -202,7 +198,7 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, ele
 # ---------------------------------------------------------------------
 
 # This function converts a line from a SUMO "osm_ptlines.xml" to a FIWARE PublicTransportRoute
-def convert_SUMO_line(originalSUMOlineXML, originalFIWAREroute):
+def convert_SUMO_line(originalSUMOlineXML, originalFIWAREroute, city):
 
     # Create a temporal JSON file for the SUMO input data
     originalSUMOlineJSON = '../../../data/temporal/originalSUMOlineJSON.json'
@@ -220,13 +216,13 @@ def convert_SUMO_line(originalSUMOlineXML, originalFIWAREroute):
     # Iterate over each element in the "ptLine" list
     for i, ptLine in enumerate(ptLine_list):
         # Call convert_SUMO_line_to_FIWARE_route for each "ptLine"
-        convert_SUMO_line_to_FIWARE_route(originalSUMOlineJSON, originalFIWAREroute, i)
+        convert_SUMO_line_to_FIWARE_route(originalSUMOlineJSON, originalFIWAREroute, city, i)
 
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
 
 # This function converts a stop from a SUMO "osm_stop.xml" to a FIWARE PublicTransportStop
-def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, element):
+def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, city, element):
     # Open the source JSON file and load the data
     with open(originalSUMOstop, 'r') as source_file:
         data = json.load(source_file)
@@ -328,7 +324,7 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, eleme
 # ---------------------------------------------------------------------
 
 # This function converts a stop from a SUMO "osm_stops.add.xml" to a FIWARE PublicTransportStop
-def convert_SUMO_stop(originalSUMOstopXML, originalFIWAREstop):
+def convert_SUMO_stop(originalSUMOstopXML, originalFIWAREstop, city):
 
     # Create a temporal JSON file for the SUMO input data
     originalSUMOstopJSON = '../../../data/temporal/originalSUMOstopJSON.json'
@@ -346,7 +342,7 @@ def convert_SUMO_stop(originalSUMOstopXML, originalFIWAREstop):
     # Iterate over each element in the "busStop" list
     for i, ptLine in enumerate(busStop_list):
         # Call convert_SUMO_line_to_FIWARE_route for each "busStop"
-        convert_SUMO_stop_to_FIWARE_stop(originalSUMOstopJSON, originalFIWAREstop, i)    
+        convert_SUMO_stop_to_FIWARE_stop(originalSUMOstopJSON, originalFIWAREstop, city, i)    
 
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
@@ -372,5 +368,5 @@ def convert_SUMO_city(city):
     originalFIWAREstop = f'{originalFIWAREfolder}/originalFIWAREstop.json'
 
     # Convert the lines and stops from the selected city
-    convert_SUMO_line(originalSUMOlineXML, originalFIWAREroute)
-    convert_SUMO_stop(originalSUMOstopXML, originalFIWAREstop)
+    convert_SUMO_line(originalSUMOlineXML, originalFIWAREroute, city)
+    convert_SUMO_stop(originalSUMOstopXML, originalFIWAREstop, city)
