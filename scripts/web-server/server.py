@@ -1,6 +1,7 @@
 from flask import Flask, send_from_directory, request, redirect, url_for
 import sys
-sys.path.append('../scripts/data-conversion/sumo-to-fiware')
+sys.path.append('/data-conversion/sumo-to-fiware')
+sys.path.append('/data-conversion/fiware-to-sumo')
 from functions_fiware_to_sumo import *
 from functions_sumo_to_fiware import *
 
