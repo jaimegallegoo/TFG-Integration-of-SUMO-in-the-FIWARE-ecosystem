@@ -47,6 +47,11 @@ def main():
         test_connection()
     #python main.py test_connection
 
+    # Con esta orden se puede probar a enviar una entidad al Orion Context Broker
+    elif orden == "send_entity":
+        post_entity()
+    #python main.py send_entity
+
     else:
         print(f"Orden no reconocida: {orden}")
 

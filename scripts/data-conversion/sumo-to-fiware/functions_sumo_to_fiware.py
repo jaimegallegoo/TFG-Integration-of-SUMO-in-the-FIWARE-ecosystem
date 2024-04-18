@@ -95,6 +95,14 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
 
     # ---------------------------------------------------------------------
 
+    # ID MAPPING
+
+    # Create a valid id for the NGSI-v2 entity
+    line_valid = line.replace(' ', '_')
+    id = f'urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{line_valid}'
+
+    # ---------------------------------------------------------------------
+
     # ROUTE SEGMENTS MAPPING
 
     #bus_stops = data['ptLines']['ptLine'][element]['busStop']
@@ -135,7 +143,7 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
 
     # Create a new dictionary in NGSI-v2 (keyvalues) with the converted data
     converted_data = {
-        'id': f'urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{line}', # PENDIENTE. Hay que hacer que en vez de Santander y busLine se pongan los valores correctos.
+        'id': id,
         'type': 'PublicTransportRoute',
         'routeCode': data['ptLines']['ptLine'][element]['@id'],
         'shortRouteCode': line,
@@ -147,7 +155,7 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
 
     # Create a new dictionary in NGSI-v2 (normalized) with the converted data
     converted_data_normalized = {
-        'id': f'urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{line}', # PENDIENTE. Hay que hacer que en vez de Santander y busLine se pongan los valores correctos.
+        'id': id,
         'type': 'PublicTransportRoute',
         'routeCode': {
             'type': 'Text',
@@ -269,7 +277,7 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, city,
 
     # Create a new dictionary in NGSI-v2 (keyvalues) with the converted data
     converted_data = {
-        'id': f'urn:ngsi-ld:PublicTransportStop:{city}:busStop:{id}', # PENDIENTE. Hay que hacer que en vez de Santander y busLine se pongan los valores correctos.
+        'id': f'urn:ngsi-ld:PublicTransportStop:{city}:busStop:{id}',
         'type': 'PublicTransportStop',
         'stopCode': id,
         'name': name,
@@ -279,7 +287,7 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, city,
 
     # Create a new dictionary in NGSI-v2 (normalized) with the converted data
     converted_data_normalized = {
-        'id': f'urn:ngsi-ld:PublicTransportStop:{city}:busStop:{id}', # PENDIENTE. Hay que hacer que en vez de Santander y busLine se pongan los valores correctos.
+        'id': f'urn:ngsi-ld:PublicTransportStop:{city}:busStop:{id}',
         'type': 'PublicTransportStop',
         'stopCode': {
             'type': 'Text',
@@ -385,3 +393,53 @@ def test_connection():
             print(f"Connection failed with status code {response.status_code}.")
     except requests.exceptions.RequestException as e:
         print(f"Connection failed with error: {e}")
+
+# ---------------------------------------------------------------------
+
+# This function posts an entity to the Orion Context Broker
+def post_entity():
+    entity = {
+        "id": "urn:ngsi-ld:PublicTransportRoute:madrid:transport:busLine:MD_18061",
+        "type": "PublicTransportRoute",
+        "routeCode": {
+            "type": "Text",
+            "value": "10492086"
+        },
+        "shortRouteCode": {
+            "type": "Text",
+            "value": "MD 18061"
+        },
+        "name": {
+            "type": "Text",
+            "value": "Media Distancia 18061 Madrid-Pr\u00edncipe P\u00edo \u2192 San Sebasti\u00e1n/Donostia"
+        },
+        "transportationType": {
+            "type": "Number",
+            "value": 2
+        },
+        "routeColor": {
+            "type": "Text",
+            "value": "No data available"
+        },
+        "routeSegments": {
+            "type": "StructuredValue",
+            "value": [
+                {
+                    "segmentName": "Pr\u00edncipe P\u00edo",
+                    "refPublicTransportStops": [
+                        "urn:ngsi-ld:PublicTransportStop:madrid:transport:busStop:1493565877"
+                    ]
+                }
+            ]
+        }
+    }
+    
+    url = 'http://localhost:1026/v2/entities'
+    headers = {'Content-Type': 'application/json'}
+    response = requests.post(url, json=entity, headers=headers)
+    if response.status_code == 201:
+        print("Entity created successfully")
+    else:
+        print("Failed to create entity")
+        print(response.text)
+# ---------------------------------------------------------------------
