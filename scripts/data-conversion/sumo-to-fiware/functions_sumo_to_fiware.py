@@ -106,8 +106,15 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
     # ID MAPPING
 
     # Create a valid id for the NGSI-v2 entity
-    line_valid = line.replace(' ', '_')
-    id = f'urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{line_valid}'
+    id = f'urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{line}'
+    id = id.replace('(', '').replace(')', '').replace(' ', '_')
+
+    # ---------------------------------------------------------------------
+
+    # SHORT ROUTE CODE MAPPING
+
+    # Extract the shortRouteCode from the source data
+    shortRouteCode = line.replace('(', '').replace(')', '').replace(' ', '_')
 
     # ---------------------------------------------------------------------
 
@@ -154,7 +161,7 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
         'id': id,
         'type': 'PublicTransportRoute',
         'routeCode': data['ptLines']['ptLine'][element]['@id'],
-        'shortRouteCode': line,
+        'shortRouteCode': shortRouteCode,
         'name': name,
         'transportationType': transportation_type_number,
         'routeColor': route_color_hex,
@@ -171,7 +178,7 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
         },
         'shortRouteCode': {
             'type': 'Text',
-            'value': line
+            'value': shortRouteCode
         },
         'name': {
             'type': 'Text',
@@ -234,6 +241,9 @@ def convert_SUMO_line(originalSUMOlineXML, originalFIWAREroute, city):
     for i, ptLine in enumerate(ptLine_list):
         # Call convert_SUMO_line_to_FIWARE_route for each "ptLine"
         convert_SUMO_line_to_FIWARE_route(originalSUMOlineJSON, originalFIWAREroute, city, i)
+
+    # Delete the temporal JSON file
+    os.remove(originalSUMOlineJSON)
 
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
@@ -359,7 +369,10 @@ def convert_SUMO_stop(originalSUMOstopXML, originalFIWAREstop, city):
     # Iterate over each element in the "busStop" list
     for i, ptLine in enumerate(busStop_list):
         # Call convert_SUMO_line_to_FIWARE_route for each "busStop"
-        convert_SUMO_stop_to_FIWARE_stop(originalSUMOstopJSON, originalFIWAREstop, city, i)    
+        convert_SUMO_stop_to_FIWARE_stop(originalSUMOstopJSON, originalFIWAREstop, city, i)   
+
+    # Delete the temporal JSON file
+    os.remove(originalSUMOstopJSON) 
 
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
