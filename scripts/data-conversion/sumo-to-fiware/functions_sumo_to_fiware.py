@@ -505,3 +505,25 @@ def post_entity_parameter(entity):
         print("Failed to create entity")
         print(response.text)
 # ---------------------------------------------------------------------
+
+# This function posts many entities to the Orion Context Broker
+def post_entities(entities):
+    
+    # Open the JSON file
+    with open(entities, 'r', encoding='utf-8') as f:
+        # Load the JSON data from the file
+        entities = json.load(f)
+
+    body = {
+        "actionType": "append",
+        "entities": entities
+    }
+
+    url = 'http://localhost:1026/v2/op/update'
+    headers = {'Content-Type': 'application/json'}
+    response = requests.post(url, json=body, headers=headers)
+    if response.status_code == 204:
+        print("Entities created successfully")
+    else:
+        print("Failed to create entities")
+        print(response.text)

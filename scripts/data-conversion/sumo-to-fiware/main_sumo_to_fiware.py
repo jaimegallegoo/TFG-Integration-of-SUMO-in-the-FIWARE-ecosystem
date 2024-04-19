@@ -58,6 +58,12 @@ def main():
         post_entity_parameter(entity)
     #python main_sumo_to_fiware.py send_entity_param example.json
 
+    # Con esta orden se puede probar a enviar varias entidades al Orion Context Broker mediante un parametro
+    elif orden == "send_entities":
+        entities = "originalFIWAREroute.json"
+        post_entities(entities)
+    #python main_sumo_to_fiware.py send_entities
+
     else:
         print(f"Orden no reconocida: {orden}")
 
