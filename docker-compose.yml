@@ -63,7 +63,7 @@ services:
   web-server:
     image: python:3.8
     environment:
-      - ORION_URL=http://orion:${ORION_PORT}
+      - ORION_URL=http://orion-v2:${ORION_PORT}
     volumes:
       - ./scripts/web-server:/app
       - ./web:/web

@@ -401,6 +401,10 @@ def convert_SUMO_city(city):
     convert_SUMO_line(originalSUMOlineXML, originalFIWAREroute, city)
     convert_SUMO_stop(originalSUMOstopXML, originalFIWAREstop, city)
 
+    # POST the entities to the Orion Context Broker
+    post_entities_web(originalFIWAREroute)
+    #post_entities(originalFIWAREstop) FALTA PROBAR MANUALMENTE A SUBIR LAS PARADAS
+
 # ---------------------------------------------------------------------
 
 # This function checks the connection to the Orion Context Broker
@@ -533,6 +537,30 @@ def post_entities(entities):
     }
 
     url = 'http://localhost:1026/v2/op/update'
+    headers = {'Content-Type': 'application/json'}
+    response = requests.post(url, json=body, headers=headers)
+    if response.status_code == 204:
+        print("Entities created successfully")
+    else:
+        print("Failed to create entities")
+        print(response.text)
+
+# This function posts many entities to the Orion Context Broker
+def post_entities_web(entities):
+    
+    # Open the JSON file
+    with open(entities, 'r', encoding='utf-8') as f:
+        # Load the JSON data from the file
+        entities = json.load(f)
+
+    body = {
+        "actionType": "append",
+        "entities": entities
+    }
+
+    # Use the ORION_URL environment variable
+    orion_url = os.getenv('ORION_URL', 'http://localhost:1026')
+    url = f'{orion_url}/v2/op/update'
     headers = {'Content-Type': 'application/json'}
     response = requests.post(url, json=body, headers=headers)
     if response.status_code == 204:
