@@ -68,6 +68,7 @@ services:
       - ./scripts/web-server:/app
       - ./web:/web
       - ./scripts/data-conversion:/data-conversion
+      - ./data:/data
     working_dir: /app
     command: bash -c "pip install -r requirements.txt && python server.py"
     build: ./scripts/web-server

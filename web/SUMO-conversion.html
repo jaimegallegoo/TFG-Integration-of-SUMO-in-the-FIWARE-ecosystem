@@ -11,9 +11,9 @@
     <h1>Elige una ciudad</h1>
     <select class="form-control" id="citySelect">
         <option value="">Selecciona la ciudad</option>
-        <option value="city1">Madrid</option>
-        <option value="city2">Barcelona</option>
-        <option value="city3">Santander</option>
+        <option value="madrid">Madrid</option>
+        <option value="barcelona">Barcelona</option>
+        <option value="santander">Santander</option>
     </select>
     <br>
     <div class="center-div">
@@ -23,8 +23,30 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add a click event listener to the "nextButton"
+            $('#nextButton').click(function () {
+                // Get the selected city from the dropdown menu
+                var city = $('#citySelect').val();
+
+                // Send a POST request to the "/SUMO-conversion" endpoint
+                $.ajax({
+                    url: '/SUMO-conversion',
+                    type: 'POST',
+                    data: JSON.stringify({ city: city }),
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    async: false,
+                    success: function (msg) {
+                        alert('Se han convertido los datos de ' + city + ' a FIWARE correctamente.');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

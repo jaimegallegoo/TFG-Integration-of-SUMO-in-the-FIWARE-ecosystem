@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory, request, redirect, url_for
+from flask import Flask, send_from_directory, request, redirect, url_for, jsonify
 import sys
 sys.path.append('/data-conversion/sumo-to-fiware')
 sys.path.append('/data-conversion/fiware-to-sumo')
@@ -16,8 +16,16 @@ def home():
 @app.route('/SUMO-conversion', methods=['GET', 'POST'])
 def conversion():
     if request.method == 'POST':
-        convert_SUMO_line()
-        return redirect(url_for('city'))
+        # Get the city from the POST request data
+        data = request.get_json()
+        city = data.get('city')
+
+        # Call the function to convert the data
+        result = convert_SUMO_city(city)
+
+        # Return the result as a JSON response
+        return jsonify(result)
+
     return send_from_directory(app.static_folder, 'SUMO-conversion.html')
 
 # Serve the city.html file
