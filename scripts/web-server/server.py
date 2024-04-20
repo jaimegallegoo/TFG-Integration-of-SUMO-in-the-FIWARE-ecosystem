@@ -38,8 +38,8 @@ def conversion():
 @app.route('/cities/<city>')
 def city(city):
     # Fetch data from the Orion Context Broker
-    routes_response = requests.get('http://orion:1026/v2/entities?type=PublicTransportRoute&options=keyValues')
-    stops_response = requests.get('http://orion:1026/v2/entities?type=PublicTransportStop&options=keyValues')
+    routes_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportRoute&options=keyValues&q=address.addressLocality=={city.capitalize()}')
+    stops_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportStop&options=keyValues&q=address.addressLocality=={city.capitalize()}')
 
     # Convert the response to JSON
     routes = routes_response.json()
