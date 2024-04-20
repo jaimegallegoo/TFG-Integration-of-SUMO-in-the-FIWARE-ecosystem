@@ -42,6 +42,7 @@
                     async: false,
                     success: function (msg) {
                         alert('Se han convertido los datos de ' + city + ' a FIWARE correctamente.');
+                        window.location.href = '/cities/' + city;
                     }
                 });
             });
