@@ -11,17 +11,29 @@
 
     <h2>Líneas de autobús</h2>
 
-    <h2>Líneas de tren</h2>
-
-    <h2>Líneas de metro</h2>
-
     <ul>
-        {% for route in routes %}
+        {% for route in bus_routes %}
         <li>{{ route.name }}</li>
         {% endfor %}
     </ul>
 
-    <a href="/" class="btn btn-primary">Back to City</a>
+    <h2>Líneas de tren</h2>
+
+    <ul>
+        {% for route in train_routes %}
+        <li>{{ route.name }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Líneas de metro</h2>
+
+    <ul>
+        {% for route in subway_routes %}
+        <li>{{ route.name }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/" class="btn btn-primary">Volver</a>
 </body>
 
 </html>

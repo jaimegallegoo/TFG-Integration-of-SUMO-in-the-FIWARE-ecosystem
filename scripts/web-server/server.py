@@ -54,11 +54,23 @@ def routes(city):
     # Fetch data from the Orion Context Broker
     routes_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportRoute&options=keyValues&q=address.addressLocality=={city.capitalize()}')
 
-    # Convert the response to JSON
+    # Fetch the bus routes
+    bus_routes_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportRoute&options=keyValues&q=address.addressLocality=={city.capitalize()};transportationType==3')
+
+    # Fetch the train routes
+    train_routes_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportRoute&options=keyValues&q=address.addressLocality=={city.capitalize()};transportationType==2')
+
+    # Fetch the subway routes
+    subway_routes_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportRoute&options=keyValues&q=address.addressLocality=={city.capitalize()};transportationType==1')
+
+    # Convert the responses to JSON
     routes = routes_response.json()
+    bus_routes = bus_routes_response.json()
+    train_routes = train_routes_response.json()
+    subway_routes = subway_routes_response.json()
 
     # Pass the data to the template
-    return render_template('routes.html', city=city, routes=routes)
+    return render_template('routes.html', city=city, routes=routes, bus_routes=bus_routes, train_routes=train_routes, subway_routes=subway_routes)
 
 # Serve the stops.html file
 @app.route('/cities/<city>/stops')
