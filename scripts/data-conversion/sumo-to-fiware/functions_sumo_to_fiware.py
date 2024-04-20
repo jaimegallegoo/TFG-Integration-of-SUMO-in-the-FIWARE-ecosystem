@@ -36,7 +36,7 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
 
     # Create a valid name for the NGSI-v2 entity
     name = data['ptLines']['ptLine'][element]['@name']
-    name = name.replace('(', '').replace(')', '')
+    name = name.replace('(', '').replace(')', '').replace(';', ', ')
 
     # ---------------------------------------------------------------------
 
@@ -292,6 +292,10 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, city,
     # Extract the transportation stop from the source data
     id = data['additional']['busStop'][element]['@id']
 
+    # Create a valid id for the NGSI-v2 entity
+    id = f'urn:ngsi-ld:PublicTransportStop:{city}:busStop:{id}'
+    id = id.replace('(', '').replace(')', '').replace(' ', '_')
+
     # ---------------------------------------------------------------------
         
     # NAME MAPPING
@@ -301,6 +305,9 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, city,
 
     if name is None:
         name = "No data available"
+
+    # Create a valid name for the NGSI-v2 entity
+    name = name.replace('(', '').replace(')', '').replace(';', ', ')
 
     # ---------------------------------------------------------------------
 
@@ -465,7 +472,7 @@ def convert_SUMO_city(city):
 
     # POST the entities to the Orion Context Broker
     post_entities_web(originalFIWAREroute)
-    #post_entities(originalFIWAREstop) FALTA PROBAR MANUALMENTE A SUBIR LAS PARADAS
+    post_entities_web(originalFIWAREstop)
 
 # ---------------------------------------------------------------------
 
