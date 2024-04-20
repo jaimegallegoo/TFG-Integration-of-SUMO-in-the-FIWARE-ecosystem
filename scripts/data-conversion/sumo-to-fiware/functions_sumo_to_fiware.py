@@ -342,7 +342,7 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, city,
     # Check if lines_array exists and is not empty
     if 'lines_array' in locals() and lines_array:
         refPublicTransportRoute = [
-            f'urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{line}' for line in lines_array
+            f'urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{line.replace('(', '').replace(')', '')}' for line in lines_array
         ]
     else:
         refPublicTransportRoute = "No data available"
