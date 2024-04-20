@@ -48,5 +48,29 @@ def city(city):
     # Pass the data to the template
     return render_template('city.html', city=city, routes=routes, stops=stops)
 
+# Serve the routes.html file
+@app.route('/cities/<city>/routes')
+def routes(city):
+    # Fetch data from the Orion Context Broker
+    routes_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportRoute&options=keyValues&q=address.addressLocality=={city.capitalize()}')
+
+    # Convert the response to JSON
+    routes = routes_response.json()
+
+    # Pass the data to the template
+    return render_template('routes.html', city=city, routes=routes)
+
+# Serve the stops.html file
+@app.route('/cities/<city>/stops')
+def stops(city):
+    # Fetch data from the Orion Context Broker
+    stops_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportStop&options=keyValues&q=address.addressLocality=={city.capitalize()}')
+
+    # Convert the response to JSON
+    stops = stops_response.json()
+
+    # Pass the data to the template
+    return render_template('stops.html', city=city, stops=stops)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Routes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <h1>Rutas de transporte en {{ city|capitalize }}</h1>
+
+    <h2>Líneas de autobús</h2>
+
+    <h2>Líneas de tren</h2>
+
+    <h2>Líneas de metro</h2>
+
+    <ul>
+        {% for route in routes %}
+        <li>{{ route.name }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/" class="btn btn-primary">Back to City</a>
+</body>
+
+</html>
