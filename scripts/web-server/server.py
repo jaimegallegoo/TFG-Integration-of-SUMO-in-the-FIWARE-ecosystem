@@ -37,7 +37,16 @@ def conversion():
 # Serve the city.html file
 @app.route('/cities/<city>')
 def city(city):
-    return render_template('city.html', city=city)
+    # Fetch data from the Orion Context Broker
+    routes_response = requests.get('http://orion:1026/v2/entities?type=PublicTransportRoute&options=keyValues')
+    stops_response = requests.get('http://orion:1026/v2/entities?type=PublicTransportStop&options=keyValues')
+
+    # Convert the response to JSON
+    routes = routes_response.json()
+    stops = stops_response.json()
+
+    # Pass the data to the template
+    return render_template('city.html', city=city, routes=routes, stops=stops)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)

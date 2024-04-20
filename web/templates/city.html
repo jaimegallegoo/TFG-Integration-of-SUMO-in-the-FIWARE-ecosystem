@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>City</title>
 </head>
+
 <body>
     <h1>Welcome to {{ city }}</h1>
     <p>This is the page for {{ city }}.</p>
+
+    <h1>{{ city }}</h1>
+
+    <h2>Routes</h2>
+    <ul>
+        {% for route in routes %}
+        <li>{{ route.name }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Stops</h2>
+    <ul>
+        {% for stop in stops %}
+        <li>{{ stop.name }}</li>
+        {% endfor %}
+    </ul>
 </body>
+
 </html>
