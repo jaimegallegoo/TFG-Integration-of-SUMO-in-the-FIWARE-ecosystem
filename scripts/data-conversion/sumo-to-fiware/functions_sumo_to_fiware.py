@@ -40,6 +40,24 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
 
     # ---------------------------------------------------------------------
 
+    # ADDRESS MAPPING
+
+    # Define a mapping from cities to addresses
+    city_mapping = {
+        'madrid': {'locality': 'Madrid', 'region': 'Comunidad de Madrid', 'country': 'España'},
+        'barcelona': {'locality': 'Barcelona', 'region': 'Cataluña', 'country': 'España'},
+        'santander': {'locality': 'Santander', 'region': 'Cantabria', 'country': 'España'},
+        # Add more cities and values as needed
+    }
+
+    # Use the mapping
+    city_values = city_mapping[city]
+    locality = city_values['locality']
+    region = city_values['region']
+    country = city_values['country']
+
+    # ---------------------------------------------------------------------
+
     # TRANSPORTATION TYPE MAPPING
         
     # Define a mapping from transportation types to numbers
@@ -160,6 +178,11 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
     converted_data = {
         'id': id,
         'type': 'PublicTransportRoute',
+        'address': {
+            'addressLocality': locality,
+            'addressRegion': region,
+            'addressCountry': country
+        },
         'routeCode': data['ptLines']['ptLine'][element]['@id'],
         'shortRouteCode': shortRouteCode,
         'name': name,
@@ -172,6 +195,14 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
     converted_data_normalized = {
         'id': id,
         'type': 'PublicTransportRoute',
+        'address': {
+            'type': 'StructuredValue',
+            'value': {
+            'addressLocality': locality,
+            'addressRegion': region,
+            'addressCountry': country
+            }
+        },
         'routeCode': {
             'type': 'Text',
             'value': data['ptLines']['ptLine'][element]['@id']
@@ -273,6 +304,24 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, city,
 
     # ---------------------------------------------------------------------
 
+    # ADDRESS MAPPING
+
+    # Define a mapping from cities to addresses
+    city_mapping = {
+        'madrid': {'locality': 'Madrid', 'region': 'Comunidad de Madrid', 'country': 'España'},
+        'barcelona': {'locality': 'Barcelona', 'region': 'Cataluña', 'country': 'España'},
+        'santander': {'locality': 'Santander', 'region': 'Cantabria', 'country': 'España'},
+        # Add more cities and values as needed
+    }
+
+    # Use the mapping
+    city_values = city_mapping[city]
+    locality = city_values['locality']
+    region = city_values['region']
+    country = city_values['country']
+
+    # ---------------------------------------------------------------------
+
     # LINES MAPPING
 
     # Extract the transportation lines from the source data if present
@@ -297,6 +346,11 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, city,
     converted_data = {
         'id': f'urn:ngsi-ld:PublicTransportStop:{city}:busStop:{id}',
         'type': 'PublicTransportStop',
+        'address': {
+            'addressLocality': locality,
+            'addressRegion': region,
+            'addressCountry': country
+        },
         'stopCode': id,
         'name': name,
         'transportationType': '?',
@@ -307,6 +361,14 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, city,
     converted_data_normalized = {
         'id': f'urn:ngsi-ld:PublicTransportStop:{city}:busStop:{id}',
         'type': 'PublicTransportStop',
+        'address': {
+            'type': 'StructuredValue',
+            'value': {
+            'addressLocality': locality,
+            'addressRegion': region,
+            'addressCountry': country
+            }
+        },
         'stopCode': {
             'type': 'Text',
             'value': id
@@ -424,75 +486,7 @@ def test_connection():
 # This function posts an entity to the Orion Context Broker
 def post_entity():
     entity = {
-        "id": "urn:ngsi-ld:PublicTransportRoute:santander:transport:busLine:N3",
-        "type": "PublicTransportRoute",
-        "source": {
-            "type": "Text",
-            "value": "https://api.smartsantander.eu/"
-        },
-        "dataProvider": {
-            "type": "Text",
-            "value": "http://www.smartsantander.eu/"
-        },
-        "routeCode": {
-            "type": "Text",
-            "value": "5200103000"
-        },
-        "shortRouteCode": {
-            "type": "Text",
-            "value": "N3"
-        },
-        "name": {
-            "type": "Text",
-            "value": "PE\u00d1ACASTILLO-PLAZA DE ITALIA"
-        },
-        "transportationType": {
-            "type": "Number",
-            "value": 3
-        },
-        "routeColor": {
-            "type": "Text",
-            "value": "#ff0000"
-        },
-        "routeTextColor": {
-            "type": "Text",
-            "value": "RED"
-        },
-        "routeSegments": {
-            "type": "StructuredValue",
-            "value": [
-            {
-                "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:1",
-                "refPublicTransportStops": [
-                "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:311",
-                "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:129"
-                ]
-            },
-            {
-                "segmentName": "PE\u00d1ACASTILLO-PLAZA DE ITALIA:2",
-                "refPublicTransportStops": [
-                "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:130",
-                "urn:ngsi-ld:PublicTransportStop:santander:transport:busStop:131"
-                ]
-            }
-            ]
-        },
-        "schedule": {
-            "type": "StructuredValue",
-            "value": [
-            {
-                "validFrom": "2018-01-24",
-                "validThrough": "2018-05-25",
-                "opens": "09:00",
-                "closes": "23:00"
-            },
-            {
-                "dayOfWeek": "Sunday",
-                "opens": "09:00",
-                "closes": "14:00"
-            }
-            ]
-        }
+        # ...
         }
     
     url = 'http://localhost:1026/v2/entities'
