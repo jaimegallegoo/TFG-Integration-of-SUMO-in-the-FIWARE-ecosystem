@@ -3,13 +3,16 @@
 
 <head>
     <title>City</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 
 <body>
-    <h1>Welcome to {{ city }}</h1>
-    <p>This is the page for {{ city }}.</p>
+    <h1>{{ city|capitalize }}</h1>
+    <h2>Datos recopilados del Orion Context Broker</h2>
+    <p style="font-size: large;">Se han encontrado {{ routes|length }} rutas de transporte y {{ stops|length }} paradas.</p>
 
-    <h1>{{ city }}</h1>
+    <a href="/routes" class="btn btn-primary">Ver rutas</a>
+    <a href="/stops" class="btn btn-primary">Ver paradas</a>
 
     <h2>Routes</h2>
     <ul>
