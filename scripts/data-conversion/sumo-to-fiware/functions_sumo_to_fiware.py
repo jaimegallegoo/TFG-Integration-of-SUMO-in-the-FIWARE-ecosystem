@@ -293,8 +293,8 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, city,
     id = data['additional']['busStop'][element]['@id']
 
     # Create a valid id for the NGSI-v2 entity
-    id = f'urn:ngsi-ld:PublicTransportStop:{city}:busStop:{id}'
-    id = id.replace('(', '').replace(')', '').replace(' ', '_')
+    id_fiware = f'urn:ngsi-ld:PublicTransportStop:{city}:busStop:{id}'
+    id_fiware = id_fiware.replace('(', '').replace(')', '').replace(' ', '_')
 
     # ---------------------------------------------------------------------
         
@@ -351,7 +351,7 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, city,
 
     # Create a new dictionary in NGSI-v2 (keyvalues) with the converted data
     converted_data = {
-        'id': f'urn:ngsi-ld:PublicTransportStop:{city}:busStop:{id}',
+        'id': id_fiware,
         'type': 'PublicTransportStop',
         'address': {
             'addressLocality': locality,
@@ -360,13 +360,13 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, city,
         },
         'stopCode': id,
         'name': name,
-        'transportationType': '?',
+        'transportationType': 'PENDIENTE',
         'refPublicTransportRoute': refPublicTransportRoute,
     }
 
     # Create a new dictionary in NGSI-v2 (normalized) with the converted data
     converted_data_normalized = {
-        'id': f'urn:ngsi-ld:PublicTransportStop:{city}:busStop:{id}',
+        'id': id_fiware,
         'type': 'PublicTransportStop',
         'address': {
             'type': 'StructuredValue',
