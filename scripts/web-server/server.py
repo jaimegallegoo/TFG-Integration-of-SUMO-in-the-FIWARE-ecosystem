@@ -84,5 +84,21 @@ def stops(city):
     # Pass the data to the template
     return render_template('stops.html', city=city, stops=stops)
 
+# Serve the routes.html file
+@app.route('/cities/<city>/routes/<shortRouteCode>/<routeCode>')
+def routeDetails(city, routeCode, shortRouteCode):
+    # Fetch data from the Orion Context Broker
+    route_response = requests.get(f'http://orion:1026/v2/entities/urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{shortRouteCode}?q=routeCode=={routeCode}')
+
+    # Fetch the stops for the route
+    #stops_response = requests.get(f'http://orion:1026/v2/entities/urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{shortRouteCode}?q=routeCode=={routeCode}')
+    
+    # Convert the responses to JSON
+    route = route_response.json()
+    #stops = stops_response.json()
+
+    # Pass the data to the template
+    return render_template('routeDetails.html', city=city, route=route)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
