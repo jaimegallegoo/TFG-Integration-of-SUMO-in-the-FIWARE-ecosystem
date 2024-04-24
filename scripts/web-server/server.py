@@ -85,20 +85,25 @@ def stops(city):
     return render_template('stops.html', city=city, stops=stops)
 
 # Serve the routes.html file
-@app.route('/cities/<city>/routes/<shortRouteCode>/<routeCode>')
+@app.route('/cities/<city>/routes/<shortRouteCode>/<routeCode>', methods=['GET', 'DELETE'])
 def routeDetails(city, routeCode, shortRouteCode):
-    # Fetch data from the Orion Context Broker
-    route_response = requests.get(f'http://orion:1026/v2/entities/urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{shortRouteCode}?q=routeCode=={routeCode}')
+    if request.method == 'GET':
+        # Fetch data from the Orion Context Broker
+        route_response = requests.get(f'http://orion:1026/v2/entities/urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{shortRouteCode}?q=routeCode=={routeCode}')
 
-    # Fetch the stops for the route
-    #stops_response = requests.get(f'http://orion:1026/v2/entities/urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{shortRouteCode}?q=routeCode=={routeCode}')
+        # Convert the responses to JSON
+        route = route_response.json()
+
+        # Pass the data to the template
+        return render_template('routeDetails.html', city=city, route=route)
     
-    # Convert the responses to JSON
-    route = route_response.json()
-    #stops = stops_response.json()
+    elif request.method == 'DELETE':
+        # Perform the deletion operation here
+        # For example, you might send a DELETE request to the Orion Context Broker
+        delete_response = requests.delete(f'http://orion:1026/v2/entities/urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{shortRouteCode}')
 
-    # Pass the data to the template
-    return render_template('routeDetails.html', city=city, route=route)
+        # Return a response to indicate that the deletion was successful
+        return jsonify({'message': 'Route deleted successfully'}), 200
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)

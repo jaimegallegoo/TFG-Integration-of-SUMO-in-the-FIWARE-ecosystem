@@ -30,6 +30,28 @@
     </div>
 
     <a href="/cities/{{ city }}/routes" class="btn btn-primary">Volver</a>
+
+    <button class="btn btn-danger" id="deleteButton">Eliminar</button>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        // Add a click event listener to the "deleteButton"
+        $('#deleteButton').click(function () {
+            var city = '{{ city }}';
+            var shortRouteCode = '{{ route.shortRouteCode.value }}';
+            var routeCode = '{{ route.routeCode.value }}';
+
+            // Send a DELETE request
+            $.ajax({
+                url: '/cities/' + city + '/routes/' + shortRouteCode + '/' + routeCode,
+                type: 'DELETE',
+                success: function (result) {
+                    // Redirect to the routes page
+                    window.location.href = '/cities/' + city + '/routes';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
