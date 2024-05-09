@@ -10,7 +10,7 @@ def main():
         originalFIWAREroute = sys.argv[2]
         originalSUMOline = sys.argv[3]
         convert_FIWARE_route_to_SUMO_line(originalFIWAREroute, originalSUMOline)
-    #python main.py FIWARE_to_SUMO originalFIWAREroute.json prueba.xml
+    #python main_fiware_to_sumo.py FIWARE_to_SUMO originalFIWAREroute.json prueba.xml
 
     else:
         print(f"Orden no reconocida: {orden}")
