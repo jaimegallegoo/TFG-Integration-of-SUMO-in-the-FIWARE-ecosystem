@@ -9,11 +9,17 @@
 <body>
     <h1>{{ city|capitalize }}</h1>
     <h2>Datos recopilados del Orion Context Broker</h2>
-    <p style="font-size: large;">Se han encontrado {{ routes|length }} rutas de transporte y {{ stops|length }} paradas.</p>
+    <p style="font-size: large;">Se han encontrado {{ routes|length }} rutas de transporte y {{ stops|length }} paradas.
+    </p>
 
     <a href="/cities/{{ city }}/routes" class="btn btn-primary">Ver rutas</a>
     <a href="/cities/{{ city }}/stops" class="btn btn-primary">Ver paradas</a>
     <a href="/SUMO-conversion" class="btn btn-secondary">Volver</a>
+
+    <h2>Convertir los datos de nuevo a SUMO</h2>
+    <p style="font-size: large;">Si ya has terminado de editar los datos de transporte puedes convertir los datos a SUMO
+        para lanzar una simulación.</p>
+    <button class="btn btn-primary" id="convertToSUMO">Convertir a SUMO</button>
 </body>
 
 </html>
