@@ -1,16 +1,15 @@
+import os
+import requests
+import xmltodict
 import json
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
-
-# Global variables
-
-city = 'santander'
 
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
 
 # This function converts a route from a FIWARE originalFIWAREroute.json to a SUMO line in XML
-def convert_FIWARE_route_to_SUMO_line(originalFIWAREroute, originalSUMOline):
+def convert_FIWARE_route_to_SUMO_line(originalFIWAREroute, originalSUMOline, city):
     # Open the source JSON file and load the data
     with open(originalFIWAREroute, 'r') as source_file:
         data = json.load(source_file)
@@ -142,3 +141,29 @@ def convert_FIWARE_route_to_SUMO_line(originalFIWAREroute, originalSUMOline):
     with open(originalSUMOline, 'w', encoding='utf-8') as f:
         f.write(pretty_xml)
     
+# ---------------------------------------------------------------------
+# ---------------------------------------------------------------------
+# ---------------------------------------------------------------------
+# ---------------------------------------------------------------------
+# ---------------------------------------------------------------------
+# ---------------------------------------------------------------------
+
+# FUNCTIONS FOR THE WEB INTERFACE
+
+# This function converts the lines and stops from the selected city in the application to SUMO
+def convert_FIWARE_city(city):
+    # Create the folder for the SUMO output files
+    modifiedSUMOfolder = f'../../../data/output/sumo/{city}'
+    os.makedirs(modifiedSUMOfolder, exist_ok=True)
+
+    # Define the path for the SUMO input original files
+    originalSUMOfolder = f'../../../data/input/sumo/{city}'
+
+    # Copy the original files to the modified folder
+    os.system(f'cp {originalSUMOfolder}/* {modifiedSUMOfolder}')
+
+    # Delete the files osm_ptlines.xml and osm_stops.add.xml from the modified folder
+    os.system(f'rm {modifiedSUMOfolder}/osm_ptlines.xml')
+    os.system(f'rm {modifiedSUMOfolder}/osm_stops.add.xml')
+
+# ---------------------------------------------------------------------

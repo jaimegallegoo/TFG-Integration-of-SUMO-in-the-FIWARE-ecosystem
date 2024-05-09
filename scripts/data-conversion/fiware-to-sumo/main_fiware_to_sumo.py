@@ -12,6 +12,11 @@ def main():
         convert_FIWARE_route_to_SUMO_line(originalFIWAREroute, originalSUMOline)
     #python main_fiware_to_sumo.py FIWARE_to_SUMO originalFIWAREroute.json prueba.xml
 
+    elif orden == "city":
+        city = sys.argv[2]
+        convert_FIWARE_city(city)
+    #python main_fiware_to_sumo.py city madrid
+
     else:
         print(f"Orden no reconocida: {orden}")
 

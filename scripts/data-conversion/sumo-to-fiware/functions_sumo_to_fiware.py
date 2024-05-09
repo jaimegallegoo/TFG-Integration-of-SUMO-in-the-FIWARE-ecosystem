@@ -452,7 +452,7 @@ def convert_SUMO_stop(originalSUMOstopXML, originalFIWAREstop, city):
 
 # FUNCTIONS FOR THE WEB INTERFACE
 
-# This function converts the lines and stops from the selected city in the application
+# This function converts the lines and stops from the selected city in the application to FIWARE
 def convert_SUMO_city(city):
     # Define the paths for the SUMO input files
     originalSUMOlineXML = f'../../../data/input/sumo/{city}/osm_ptlines.xml'
