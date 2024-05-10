@@ -38,8 +38,8 @@ def conversion():
 @app.route('/cities/<city>')
 def city(city):
     # Fetch data from the Orion Context Broker
-    routes_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportRoute&options=keyValues&q=address.addressLocality=={city.capitalize()}')
-    stops_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportStop&options=keyValues&q=address.addressLocality=={city.capitalize()}')
+    routes_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportRoute&options=keyValues&q=address.addressLocality=={city.capitalize()}&limit=1000')
+    stops_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportStop&options=keyValues&q=address.addressLocality=={city.capitalize()}&limit=1000')
 
     # Convert the response to JSON
     routes = routes_response.json()
@@ -52,16 +52,16 @@ def city(city):
 @app.route('/cities/<city>/routes')
 def routes(city):
     # Fetch data from the Orion Context Broker
-    routes_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportRoute&options=keyValues&q=address.addressLocality=={city.capitalize()}')
+    routes_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportRoute&options=keyValues&q=address.addressLocality=={city.capitalize()}&limit=1000')
 
     # Fetch the bus routes
-    bus_routes_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportRoute&options=keyValues&q=address.addressLocality=={city.capitalize()};transportationType==3')
+    bus_routes_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportRoute&options=keyValues&q=address.addressLocality=={city.capitalize()};transportationType==3&limit=1000')
 
     # Fetch the train routes
-    train_routes_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportRoute&options=keyValues&q=address.addressLocality=={city.capitalize()};transportationType==2')
+    train_routes_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportRoute&options=keyValues&q=address.addressLocality=={city.capitalize()};transportationType==2&limit=1000')
 
     # Fetch the subway routes
-    subway_routes_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportRoute&options=keyValues&q=address.addressLocality=={city.capitalize()};transportationType==1')
+    subway_routes_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportRoute&options=keyValues&q=address.addressLocality=={city.capitalize()};transportationType==1&limit=1000')
 
     # Convert the responses to JSON
     routes = routes_response.json()
@@ -76,7 +76,7 @@ def routes(city):
 @app.route('/cities/<city>/stops')
 def stops(city):
     # Fetch data from the Orion Context Broker
-    stops_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportStop&options=keyValues&q=address.addressLocality=={city.capitalize()}')
+    stops_response = requests.get(f'http://orion:1026/v2/entities/?type=PublicTransportStop&options=keyValues&q=address.addressLocality=={city.capitalize()}&limit=1000')
 
     # Convert the response to JSON
     stops = stops_response.json()
