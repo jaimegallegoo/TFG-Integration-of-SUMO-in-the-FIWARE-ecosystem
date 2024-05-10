@@ -171,8 +171,8 @@ def convert_FIWARE_city(city):
     modifiedFIWAREstop = '../../../data/temporal/modifiedFIWAREstop.json'
 
     # Get the modified files in FIWARE format from the Orion Context Broker
-    routes = get_entity(city, 'PublicTransportRoute')
-    stops = get_entity(city, 'PublicTransportStop')
+    routes = get_entities_web(city, 'PublicTransportRoute')
+    stops = get_entities_web(city, 'PublicTransportStop')
 
     # Write the files to the temporal folder as JSON
     with open(modifiedFIWAREroute, 'w') as file:
@@ -195,8 +195,20 @@ def convert_FIWARE_city(city):
 # ---------------------------------------------------------------------
 
 # This function gets the entities from the Orion Context Broker
-def get_entity(city, type):
+def get_entities(city, type):
     response = requests.get(f'http://localhost:1026/v2/entities/?type={type}&q=address.addressLocality=={city.capitalize()}&limit=1000')
+    if response.status_code == 200:
+        print("Entities retrieved successfully")
+        return response.json()
+    else:
+        print("Failed to retrieve entities")
+        print(response.text)
+
+# This function gets the entities from the Orion Context Broker
+def get_entities_web(city, type):
+    # Use the ORION_URL environment variable
+    orion_url = os.getenv('ORION_URL', 'http://localhost:1026')
+    response = requests.get(f'{orion_url}/v2/entities/?type={type}&q=address.addressLocality=={city.capitalize()}&limit=1000')
     if response.status_code == 200:
         print("Entities retrieved successfully")
         return response.json()
