@@ -140,6 +140,69 @@ def convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines):
     # Write the formatted XML to a file
     with open(osm_ptlines, 'w', encoding='utf-8') as f:
         f.write(pretty_xml)
+
+# ---------------------------------------------------------------------
+# ---------------------------------------------------------------------
+
+# This function converts a stop from a FIWARE modifiedFIWAREstop.json to a SUMO stop in XML
+def convert_FIWARE_stop_to_SUMO_stop(modifiedFIWAREstop, osm_stops):
+    # Open the source JSON file and load the data
+    with open(modifiedFIWAREstop, 'r') as source_file:
+        data = json.load(source_file)
+
+    # ---------------------------------------------------------------------
+
+    # Create the root element
+    root = ET.Element("additional", {"xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", "xsi:noNamespaceSchemaLocation": "http://sumo.dlr.de/xsd/additional_file.xsd"})
+
+    # Iterate over the data
+    for item in data:
+
+        # ---------------------------------------------------------------------
+
+        # LINES MAPPING
+
+        # Extract the lines from the source data
+        lines = item['refPublicTransportRoute']['value']
+
+        # Extract the line codes from the URNs
+        line_codes = [line.split(':')[-1] for line in lines]
+
+        # Join the line codes into a string
+        line_string = ' '.join(line_codes)
+
+        # ---------------------------------------------------------------------
+
+        # Create a new busStop XML element and set its attributes
+        busStop = ET.SubElement(root, "busStop", {
+            "id": item['stopCode']['value'],
+            "name": item['name']['value'],
+            "lane": "PENDIENTE",
+            "startPos": "PENDIENTE",
+            "endPos": "PENDIENTE",
+            "friendlyPos": "PENDIENTE",
+            "lines": line_string
+        })
+
+    # Create an ElementTree object and write it to a file
+    tree = ET.ElementTree(root)
+    # tree.write(originalSUMOline, xml_declaration=True, encoding='UTF-8')
+
+    # Convert the ElementTree to a string
+    xml_string = ET.tostring(root, encoding='utf-8')
+
+    # Parse the string with minidom
+    dom = minidom.parseString(xml_string)
+
+    # Use toprettyxml to format the XML
+    pretty_xml = dom.toprettyxml(indent="  ")
+
+    # Add the encoding to the XML declaration
+    pretty_xml = pretty_xml.replace('<?xml version="1.0" ?>', '<?xml version="1.0" encoding="UTF-8"?>')
+
+    # Write the formatted XML to a file
+    with open(osm_stops, 'w', encoding='utf-8') as f:
+        f.write(pretty_xml)
     
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
@@ -186,7 +249,7 @@ def convert_FIWARE_city(city):
 
     # Convert the routes and stops to SUMO format
     convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines)
-    #convert_FIWARE_stop_to_SUMO_stop(modifiedFIWAREstop, osm_stops)
+    convert_FIWARE_stop_to_SUMO_stop(modifiedFIWAREstop, osm_stops)
 
     # Delete the temporal JSON files
     os.remove(modifiedFIWAREroute) 
