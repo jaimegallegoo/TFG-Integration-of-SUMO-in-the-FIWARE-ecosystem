@@ -9,14 +9,16 @@ def main():
     if orden == "FIWARE_to_SUMO_route":
         modifiedFIWAREroute = sys.argv[2]
         osm_ptlines = sys.argv[3]
-        convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines)
-    #python main_fiware_to_sumo.py FIWARE_to_SUMO_route originalFIWAREroute.json prueba.xml
+        city = sys.argv[4]
+        convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines, city)
+    #python main_fiware_to_sumo.py FIWARE_to_SUMO_route originalFIWAREroute.json prueba.xml madrid
 
     elif orden == "FIWARE_to_SUMO_stop":
         modifiedFIWAREstop = sys.argv[2]
         osm_stops = sys.argv[3]
-        convert_FIWARE_stop_to_SUMO_stop(modifiedFIWAREstop, osm_stops)
-    #python main_fiware_to_sumo.py FIWARE_to_SUMO_stop originalFIWAREstop.json prueba.xml
+        city = sys.argv[4]
+        convert_FIWARE_stop_to_SUMO_stop(modifiedFIWAREstop, osm_stops, city)
+    #python main_fiware_to_sumo.py FIWARE_to_SUMO_stop originalFIWAREstop.json prueba.xml madrid
 
     elif orden == "city":
         city = sys.argv[2]

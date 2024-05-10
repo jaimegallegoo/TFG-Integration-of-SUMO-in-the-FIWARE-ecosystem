@@ -9,7 +9,7 @@ from xml.dom import minidom
 # ---------------------------------------------------------------------
 
 # This function converts a route from a FIWARE modifiedFIWAREroute.json to a SUMO line in XML
-def convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines):
+def convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines, city):
     # Open the source JSON file and load the data
     with open(modifiedFIWAREroute, 'r') as source_file:
         data = json.load(source_file)
@@ -93,6 +93,34 @@ def convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines):
 
         # ---------------------------------------------------------------------
 
+        # MAPPING FOR THE ELEMENTS NOT STORED IN THE FIWARE DATA
+
+        # Open the original SUMO line file and load the data
+        with open(f'../../../data/input/sumo/{city}/osm_ptlines.xml', 'r', encoding='utf-8') as source_file:
+            original_data = xmltodict.parse(source_file.read())
+
+        # Extract the ptLine elements from the original data
+        original_ptLines = original_data['ptLines']['ptLine']
+
+        # Iterate over the original ptLine elements
+        for original_ptLine in original_ptLines:
+            # Check if the id of the original ptLine element matches the id of the current item
+            if original_ptLine['@id'] == item['routeCode']['value']:
+                # Extract the data from the original ptLine element
+
+                # PERIOD MAPPING
+                period = original_ptLine.get('@period', 'No data available')
+
+                # COMPLETENESS MAPPING
+                completeness = original_ptLine.get('@completeness', 'No data available')
+
+                # ROUTE EDGES MAPPING
+                route_edges = original_ptLine['route']['@edges'] if 'route' in original_ptLine else 'No data available'
+
+                break
+
+        # ---------------------------------------------------------------------
+
         # Create a new ptLine XML element and set its attributes
         ptLine = ET.SubElement(root, "ptLine", {
             "id": item['routeCode']['value'],
@@ -100,9 +128,14 @@ def convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines):
             "line": item['shortRouteCode']['value'],
             "type": type,
             "vClass": vClass,
-            "period": "PENDIENTE",
+            "period": period,
             "color": route_color,
-            "completeness": "PENDIENTE" 
+            "completeness": completeness 
+        })
+
+        # Create a route child element for the route edges
+        route = ET.SubElement(ptLine, "route", {
+            "edges": route_edges
         })
 
         # Create a busStop child element for each stop in the route segments
@@ -248,8 +281,8 @@ def convert_FIWARE_city(city):
     osm_stops = f'../../../data/output/sumo/{city}/osm_stops.add.xml'
 
     # Convert the routes and stops to SUMO format
-    convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines)
-    convert_FIWARE_stop_to_SUMO_stop(modifiedFIWAREstop, osm_stops)
+    convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines, city)
+    convert_FIWARE_stop_to_SUMO_stop(modifiedFIWAREstop, osm_stops, city)
 
     # Delete the temporal JSON files
     os.remove(modifiedFIWAREroute) 
