@@ -125,6 +125,22 @@ def stopDetails(city, stopCode):
 
         # Return a response to indicate that the deletion was successful
         return jsonify({'message': 'Stop deleted successfully'}), 200
+    
+# Serve the SUMO-conversion.html file
+@app.route('/FIWARE-conversion', methods=['GET', 'POST'])
+def conversionToSUMO():
+    if request.method == 'POST':
+        # Get the city from the POST request data
+        data = request.get_json()
+        city = data.get('city')
+
+        # Call the function to convert the data
+        result = convert_FIWARE_city(city)
+
+        # Return the result as a JSON response
+        return jsonify(result)
+
+    return send_from_directory(app.static_folder, 'FIWARE-conversion.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
