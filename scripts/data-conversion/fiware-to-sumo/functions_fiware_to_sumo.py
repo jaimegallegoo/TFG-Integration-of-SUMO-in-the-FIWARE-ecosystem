@@ -8,10 +8,10 @@ from xml.dom import minidom
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
 
-# This function converts a route from a FIWARE originalFIWAREroute.json to a SUMO line in XML
-def convert_FIWARE_route_to_SUMO_line(originalFIWAREroute, originalSUMOline, city):
+# This function converts a route from a FIWARE modifiedFIWAREroute.json to a SUMO line in XML
+def convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines):
     # Open the source JSON file and load the data
-    with open(originalFIWAREroute, 'r') as source_file:
+    with open(modifiedFIWAREroute, 'r') as source_file:
         data = json.load(source_file)
 
     # ---------------------------------------------------------------------
@@ -138,7 +138,7 @@ def convert_FIWARE_route_to_SUMO_line(originalFIWAREroute, originalSUMOline, cit
     pretty_xml = pretty_xml.replace('<?xml version="1.0" ?>', '<?xml version="1.0" encoding="UTF-8"?>')
 
     # Write the formatted XML to a file
-    with open(originalSUMOline, 'w', encoding='utf-8') as f:
+    with open(osm_ptlines, 'w', encoding='utf-8') as f:
         f.write(pretty_xml)
     
 # ---------------------------------------------------------------------
@@ -166,4 +166,40 @@ def convert_FIWARE_city(city):
     os.system(f'rm {modifiedSUMOfolder}/osm_ptlines.xml')
     os.system(f'rm {modifiedSUMOfolder}/osm_stops.add.xml')
 
+    # Create temporal JSON files for the FIWARE input data
+    modifiedFIWAREroute = '../../../data/temporal/modifiedFIWAREroute.json'
+    modifiedFIWAREstop = '../../../data/temporal/modifiedFIWAREstop.json'
+
+    # Get the modified files in FIWARE format from the Orion Context Broker
+    routes = get_entity(city, 'PublicTransportRoute')
+    stops = get_entity(city, 'PublicTransportStop')
+
+    # Write the files to the temporal folder as JSON
+    with open(modifiedFIWAREroute, 'w') as file:
+        json.dump(routes, file, indent=4)
+    with open(modifiedFIWAREstop, 'w') as file:
+        json.dump(stops, file, indent=4)
+
+    # Create the files for the SUMO output
+    osm_ptlines = f'../../../data/output/sumo/{city}/osm_ptlines.xml'
+    osm_stops = f'../../../data/output/sumo/{city}/osm_stops.add.xml'
+
+    # Convert the routes and stops to SUMO format
+    convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines)
+    #convert_FIWARE_stop_to_SUMO_stop(modifiedFIWAREstop, osm_stops)
+
+    # Delete the temporal JSON files
+    os.remove(modifiedFIWAREroute) 
+    os.remove(modifiedFIWAREstop)
+
 # ---------------------------------------------------------------------
+
+# This function gets the entities from the Orion Context Broker
+def get_entity(city, type):
+    response = requests.get(f'http://localhost:1026/v2/entities/?type={type}&q=address.addressLocality=={city.capitalize()}&limit=1000')
+    if response.status_code == 200:
+        print("Entities retrieved successfully")
+        return response.json()
+    else:
+        print("Failed to retrieve entities")
+        print(response.text)
