@@ -106,6 +106,7 @@ def convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines, city):
         for original_ptLine in original_ptLines:
             # Check if the id of the original ptLine element matches the id of the current item
             if original_ptLine['@id'] == item['routeCode']['value']:
+
                 # Extract the data from the original ptLine element
 
                 # PERIOD MAPPING
@@ -178,7 +179,7 @@ def convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines, city):
 # ---------------------------------------------------------------------
 
 # This function converts a stop from a FIWARE modifiedFIWAREstop.json to a SUMO stop in XML
-def convert_FIWARE_stop_to_SUMO_stop(modifiedFIWAREstop, osm_stops):
+def convert_FIWARE_stop_to_SUMO_stop(modifiedFIWAREstop, osm_stops, city):
     # Open the source JSON file and load the data
     with open(modifiedFIWAREstop, 'r') as source_file:
         data = json.load(source_file)
@@ -206,16 +207,71 @@ def convert_FIWARE_stop_to_SUMO_stop(modifiedFIWAREstop, osm_stops):
 
         # ---------------------------------------------------------------------
 
+        # MAPPING FOR THE ELEMENTS NOT STORED IN THE FIWARE DATA
+
+        # Open the original SUMO stop file and load the data
+        with open(f'../../../data/input/sumo/{city}/osm_stops.add.xml', 'r', encoding='utf-8') as source_file:
+            original_data = xmltodict.parse(source_file.read())
+
+        # Extract the busStop elements from the original data
+        original_busStops = original_data['additional']['busStop']
+
+        # Iterate over the original busStop elements
+        for original_busStop in original_busStops:
+            # Check if the id of the original busStop element matches the id of the current item
+            if original_busStop['@id'] == item['stopCode']['value']:
+
+                # Extract the data from the original ptLine element
+
+                # LANE MAPPING
+                lane = original_busStop.get('@lane', 'No data available')
+
+                # START POSITION MAPPING
+                startPos = original_busStop.get('@startPos', 'No data available')
+
+                # END POSITION MAPPING
+                endPos = original_busStop.get('@endPos', 'No data available')
+
+                # FRIENDLY POSITION MAPPING
+                friendlyPos = original_busStop.get('@friendlyPos', 'No data available')
+
+                # ACCESS MAPPING
+                access_elements = original_busStop.get('access', [])
+                if isinstance(access_elements, dict):
+                    access_elements = [access_elements]
+                access_lanes = [
+                    {
+                        'lane': access['@lane'],
+                        'pos': access['@pos'],
+                        'length': access['@length'],
+                        'friendlyPos': access['@friendlyPos']
+                    } for access in access_elements] if 'access' in original_busStop else 'No data available'
+
+                break
+
+        # ---------------------------------------------------------------------
+
         # Create a new busStop XML element and set its attributes
         busStop = ET.SubElement(root, "busStop", {
             "id": item['stopCode']['value'],
             "name": item['name']['value'],
-            "lane": "PENDIENTE",
-            "startPos": "PENDIENTE",
-            "endPos": "PENDIENTE",
-            "friendlyPos": "PENDIENTE",
+            "lane": lane,
+            "startPos": startPos,
+            "endPos": endPos,
+            "friendlyPos": friendlyPos,
             "lines": line_string
         })
+
+        # Create an access child element for each access lane
+        if isinstance(access_lanes, list):
+            for access_lane in access_lanes:
+                access = ET.SubElement(busStop, "access", {
+                    "lane": access_lane['lane'],
+                    "pos": access_lane['pos'],
+                    "length": access_lane['length'],
+                    "friendlyPos": access_lane['friendlyPos']
+                })
+
 
     # Create an ElementTree object and write it to a file
     tree = ET.ElementTree(root)
