@@ -314,9 +314,10 @@ def convert_FIWARE_city(city):
     # Copy the original files to the modified folder
     os.system(f'cp {originalSUMOfolder}/* {modifiedSUMOfolder}')
 
-    # Delete the files osm_ptlines.xml and osm_stops.add.xml from the modified folder
+    # Delete the files osm_ptlines.xml, osm_stops.add.xml and osm_pt.rou.xml from the modified folder
     os.system(f'rm {modifiedSUMOfolder}/osm_ptlines.xml')
     os.system(f'rm {modifiedSUMOfolder}/osm_stops.add.xml')
+    os.system(f'rm {modifiedSUMOfolder}/osm_pt.rou.xml')
 
     # Create temporal JSON files for the FIWARE input data
     modifiedFIWAREroute = '../../../data/temporal/modifiedFIWAREroute.json'
@@ -340,6 +341,15 @@ def convert_FIWARE_city(city):
     convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines, city)
     convert_FIWARE_stop_to_SUMO_stop(modifiedFIWAREstop, osm_stops, city)
 
+    # Generate the routes file based on the lines and stops
+    sumo_home = os.getenv('SUMO_HOME') # C:\Program Files (x86)\Eclipse\Sumo
+    osm_net = f'../../../data/output/sumo/{city}/osm.net.xml.gz'
+    stop_infos = f'../../../data/output/sumo/{city}/stopinfos.xml'
+    trips = f'../../../data/output/sumo/{city}/trips.trips.xml'
+    veh_routes = f'../../../data/output/sumo/{city}/vehroutes.xml'
+    osm_routes = f'../../../data/output/sumo/{city}/osm_pt.rou.xml'
+    os.system(f'python "{sumo_home}/tools/ptlines2flows.py" -n {osm_net} -s {osm_stops} -l {osm_ptlines} -i {stop_infos} -t {trips} -r {veh_routes} -o {osm_routes} --ignore-errors --min-stops 0')
+    
     # Delete the temporal JSON files
     os.remove(modifiedFIWAREroute) 
     os.remove(modifiedFIWAREstop)
