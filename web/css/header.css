@@ -1,0 +1,16 @@
+/* HEADER */
+/* Estilos para el encabezado */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #F2F2F2;
+    color: #303840;
+}
+
+/* Logo header */
+.logo-header {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}

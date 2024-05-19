@@ -1,0 +1,22 @@
+/* FOOTER */
+/* Estilos para el pie de página */
+.footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    background-color: #D9D9D9;
+    color: #303840;
+}
+
+.footer p, .footer a {
+    margin: 0 10px;
+}
+
+/* Logo footer */
+.logo-footer {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+}

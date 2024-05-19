@@ -10,11 +10,7 @@
 </head>
 
 <body>
-    <header class="header">
-        <img class="logo-header" src="{{ url_for('static', filename='images/logo_claro_transparente.png') }}"
-            alt="Logo">
-        <h1>Urban Mobility Manager</h1>
-    </header>
+    {% include 'header.html' %}
 
     <main>
         <section>
@@ -41,13 +37,7 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <img class="logo-footer" src="{{ url_for('static', filename='images/logo_claro_transparente.png') }}"
-            alt="Logo">
-        <p>© 2024</p>
-        <a href="/about">Sobre el proyecto</a>
-        <p>Realizado por Jaime Gallego Chillón</p>
-    </footer>
+    {% include 'footer.html' %}
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
