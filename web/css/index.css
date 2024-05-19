@@ -4,7 +4,15 @@
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: #f8f9fa;
+    background-color: #F2F2F2;
+    color: #303840;
+}
+
+/* Logo header */
+.logo-header {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
 }
 
 /* BODY */
@@ -12,6 +20,19 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    color: #303840;
+}
+
+/* MAIN */
+main {
+    flex-grow: 1;
+    background-color: #F2F2F2;
+    padding: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
 }
 
 /* Texto centrado */
@@ -20,10 +41,15 @@ body {
 }
 
 /* Logo grande */
-.logo-grande-icon {
-    width: 150px;
+.logo-grande {
+    width: 400px;
     height: auto;
     margin-right: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
 }
 
 /* FOOTER */
@@ -34,15 +60,16 @@ body {
     justify-content: flex-start;
     align-items: center;
     padding: 10px;
-    background-color: #f8f9fa;
+    background-color: #D9D9D9;
+    color: #303840;
 }
 
 .footer p, .footer a {
     margin: 0 10px;
 }
 
-/* Logo pequeño */
-.logo-icon {
+/* Logo footer */
+.logo-footer {
     width: 50px;
     height: auto;
     margin-right: 20px;
