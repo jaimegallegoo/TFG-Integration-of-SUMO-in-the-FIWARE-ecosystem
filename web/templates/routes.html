@@ -8,6 +8,10 @@
 </head>
 
 <body>
+    <header style="display: flex; align-items: center; padding: 10px; background-color: #f8f9fa;">
+        <img src="{{ url_for('static', filename='images/original_transparente.png') }}" alt="Logo" style="width: 50px; height: 50px;">
+        <h1 style="margin-left: 10px;">Integración del simulador SUMO en el ecosistema FIWARE</h1>
+    </header>
     <h1>Rutas de transporte en {{ city|capitalize }}</h1>
 
     <h2>Líneas de autobús</h2>

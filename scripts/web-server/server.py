@@ -11,7 +11,7 @@ app = Flask(__name__, static_folder='../web', template_folder='../web/templates'
 # Serve the index.html file
 @app.route('/')
 def home():
-    return send_from_directory(app.static_folder, 'index.html')
+    return render_template('index.html')
 
 # Serve any CSS file
 @app.route('/css/<path:path>')
@@ -32,7 +32,7 @@ def conversion():
         # Return the result as a JSON response
         return jsonify(result)
 
-    return send_from_directory(app.static_folder, 'SUMO-conversion.html')
+    return render_template('SUMO-conversion.html')
 
 # Serve the city.html file
 @app.route('/cities/<city>')

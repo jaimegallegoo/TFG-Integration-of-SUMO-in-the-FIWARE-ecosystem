@@ -1,24 +1,44 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* HEADER */
+/* Estilos para el encabezado */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
     background-color: #f8f9fa;
 }
 
-h1 {
-    color: #343a40;
+/* BODY */
+
+/* Texto centrado */
+.center-text {
     text-align: center;
-    padding: 20px 0;
 }
 
-p {
-    color: #6c757d;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+/* Logo grande */
+.logo-grande-icon {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
 }
 
-.btn-primary {
-    display: block;
-    margin: 20px auto;
+/* FOOTER */
+/* Estilos para el pie de página */
+.footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+/* Estilos para los elementos de texto en el pie de página */
+.footer p, .footer a {
+    margin: 0 10px;
+}
+
+/* Logo pequeño */
+.logo-icon {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
 }
