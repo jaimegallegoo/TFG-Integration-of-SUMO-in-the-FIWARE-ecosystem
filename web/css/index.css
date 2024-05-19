@@ -8,6 +8,11 @@
 }
 
 /* BODY */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 /* Texto centrado */
 .center-text {
@@ -24,6 +29,7 @@
 /* FOOTER */
 /* Estilos para el pie de página */
 .footer {
+    margin-top: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -31,7 +37,6 @@
     background-color: #f8f9fa;
 }
 
-/* Estilos para los elementos de texto en el pie de página */
 .footer p, .footer a {
     margin: 0 10px;
 }
