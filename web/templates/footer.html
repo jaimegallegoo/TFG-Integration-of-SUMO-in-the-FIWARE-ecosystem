@@ -4,9 +4,17 @@
 </head>
 
 <footer class="footer">
-    <img class="logo-footer" src="{{ url_for('static', filename='images/logo_claro_transparente.png') }}"
-        alt="Logo">
-    <p>© 2024</p>
-    <a href="/about">Sobre el proyecto</a>
-    <p>Realizado por Jaime Gallego Chillón</p>
+    <div class="left-group">
+        <img class="logo-footer" src="{{ url_for('static', filename='images/logo_claro_transparente.png') }}"
+            alt="Logo">
+        <p>© 2024</p>
+        <a href="/about">Sobre el proyecto</a>
+        <p>Realizado por Jaime Gallego Chillón</p>
+    </div>
+    <div class="right-group">
+        <img class="sumo-footer" src="{{ url_for('static', filename='images/sumo.png') }}"
+            alt="Logo">
+        <img class="fiware-footer" src="{{ url_for('static', filename='images/powered_by_fiware.png') }}"
+            alt="Logo">
+    </div>
 </footer>

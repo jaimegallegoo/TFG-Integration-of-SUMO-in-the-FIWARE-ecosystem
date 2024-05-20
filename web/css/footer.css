@@ -3,7 +3,7 @@
 .footer {
     margin-top: auto;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between; /* Cambiado de flex-start a space-between */
     align-items: center;
     padding: 10px;
     background-color: #D9D9D9;
@@ -19,4 +19,32 @@
     width: 50px;
     height: auto;
     margin-right: 20px;
+}
+
+/* Logo fiware footer */
+.fiware-footer {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Logo sumo footer */
+.sumo-footer {
+    width: 90px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Nuevos estilos para los grupos de elementos */
+.left-group, .right-group {
+    display: flex;
+    align-items: center;
+}
+
+.left-group {
+    justify-content: flex-start;
+}
+
+.right-group {
+    justify-content: flex-end;
 }
