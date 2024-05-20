@@ -13,11 +13,6 @@ main {
     padding: 20px;
 }
 
-h1 {
-    text-align: center;
-    padding: 20px 0;
-}
-
 #citySelect {
     width: 300px;
     margin: 0 auto;
@@ -49,4 +44,11 @@ h1 {
     width: 100%;
     z-index: 9999;
     background: rgba(0,0,0,0.3);
+}
+
+/* Imagen mapa general */
+.mapa-general {
+    width: 500px;
+    height: auto;
+    margin-right: 20px;
 }

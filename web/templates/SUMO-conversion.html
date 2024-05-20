@@ -12,21 +12,35 @@
 
     <main>
         <section>
-            <h1>Elige una ciudad</h1>
-            <select class="form-control" id="citySelect">
-                <option value="">Selecciona la ciudad</option>
-                <option value="madrid">Madrid</option>
-                <option value="barcelona">Barcelona</option>
-                <option value="santander">Santander</option>
-            </select>
-            <br>
-            <div class="center-div">
-                <div class="btn-group" role="group" aria-label="Button group">
-                    <button class="btn btn-primary" id="nextButton">Siguiente</button>
-                    <a href="/" class="btn btn-secondary">Volver</a>
+            <h2>Elige una ciudad</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 style="font-weight: normal;">Antes de comenzar, debes seleccionar una ciudad para la cual deseas
+                        importar datos de
+                        transporte público desde el simulador SUMO a la plataforma FIWARE.</h4>
                 </div>
-                <div class="center-spinner" id="loadingSpinner" style="display: none;">
-                    <div class="spinner-border text-primary"></div>
+                <div class="col-md-6 d-flex flex-column align-items-center text-center">
+                    <img class="mapa-general" src="{{ url_for('static', filename='images/mapa_general.png') }}"
+                        alt="Mapa España">
+                    <select class="form-control" id="citySelect">
+                        <option value="">Selecciona la ciudad</option>
+                        <option value="barcelona">Barcelona</option>
+                        <option value="bilbao">Bilbao</option>
+                        <option value="madrid">Madrid</option>
+                        <option value="malaga">Málaga</option>
+                        <option value="santander">Santander</option>
+                        <option value="sevilla">Sevilla</option>
+                        <option value="valencia">Valencia</option>
+                    </select>
+                    <div class="center-div">
+                        <div class="btn-group" role="group" aria-label="Button group">
+                            <button class="btn btn-primary" id="nextButton">Siguiente</button>
+                            <a href="/" class="btn btn-secondary">Volver</a>
+                        </div>
+                        <div class="center-spinner" id="loadingSpinner" style="display: none;">
+                            <div class="spinner-border text-primary"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
