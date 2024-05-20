@@ -10,23 +10,27 @@
 <body>
     {% include 'header.html' %}
 
-    <h1>Elige una ciudad</h1>
-    <select class="form-control" id="citySelect">
-        <option value="">Selecciona la ciudad</option>
-        <option value="madrid">Madrid</option>
-        <option value="barcelona">Barcelona</option>
-        <option value="santander">Santander</option>
-    </select>
-    <br>
-    <div class="center-div">
-        <div class="btn-group" role="group" aria-label="Button group">
-            <button class="btn btn-primary" id="nextButton">Siguiente</button>
-            <a href="/" class="btn btn-secondary">Volver</a>
-        </div>
-        <div class="center-spinner" id="loadingSpinner" style="display: none;">
-            <div class="spinner-border text-primary"></div>
-        </div>
-    </div>
+    <main>
+        <section>
+            <h1>Elige una ciudad</h1>
+            <select class="form-control" id="citySelect">
+                <option value="">Selecciona la ciudad</option>
+                <option value="madrid">Madrid</option>
+                <option value="barcelona">Barcelona</option>
+                <option value="santander">Santander</option>
+            </select>
+            <br>
+            <div class="center-div">
+                <div class="btn-group" role="group" aria-label="Button group">
+                    <button class="btn btn-primary" id="nextButton">Siguiente</button>
+                    <a href="/" class="btn btn-secondary">Volver</a>
+                </div>
+                <div class="center-spinner" id="loadingSpinner" style="display: none;">
+                    <div class="spinner-border text-primary"></div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     {% include 'footer.html' %}
 

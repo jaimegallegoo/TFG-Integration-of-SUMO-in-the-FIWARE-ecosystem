@@ -1,12 +1,19 @@
+/* BODY */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #303840;
+}
+
+/* MAIN */
+main {
+    flex-grow: 1;
+    background-color: #F2F2F2;
+    padding: 20px;
 }
 
 h1 {
-    color: #343a40;
     text-align: center;
     padding: 20px 0;
 }
