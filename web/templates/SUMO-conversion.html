@@ -2,9 +2,10 @@
 <html>
 
 <head>
-    <title>Conversion</title>
+    <title>Urban Mobility Manager</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo_claro_transparente.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/SUMO-conversion.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/SUMO-conversion.css">
 </head>
 
 <body>
@@ -14,13 +15,13 @@
         <section>
             <h2>Elige una ciudad</h2>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col">
                     <h4 style="font-weight: normal;">Antes de comenzar, debes seleccionar una ciudad para la cual deseas
                         importar datos de
                         transporte público desde el simulador SUMO a la plataforma FIWARE.</h4>
                 </div>
-                <div class="col-md-6 d-flex flex-column align-items-center text-center">
-                    <img class="mapa-general" src="{{ url_for('static', filename='images/mapa_general.png') }}"
+                <div class="col d-flex flex-column align-items-center text-center">
+                    <img class="mapa" src="{{ url_for('static', filename='images/mapa_general.png') }}"
                         alt="Mapa España">
                     <select class="form-control" id="citySelect">
                         <option value="">Selecciona la ciudad</option>

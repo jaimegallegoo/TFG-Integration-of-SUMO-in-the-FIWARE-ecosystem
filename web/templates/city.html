@@ -2,25 +2,47 @@
 <html>
 
 <head>
-    <title>City</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Urban Mobility Manager</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo_claro_transparente.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/city.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
-    <h1>{{ city|capitalize }}</h1>
-    <h2>Datos recopilados del Orion Context Broker</h2>
-    <p style="font-size: large;">Se han encontrado {{ routes|length }} rutas de transporte y {{ stops|length }} paradas.
-    </p>
+    {% include 'header.html' %}
 
-    <a href="/cities/{{ city }}/routes" class="btn btn-primary">Ver rutas</a>
-    <a href="/cities/{{ city }}/stops" class="btn btn-primary">Ver paradas</a>
-    <a href="/SUMO-conversion" class="btn btn-secondary">Volver</a>
+    <main>
+        <section>
+            <h2>{{ city|capitalize }}</h2>
+            <div class="row">
+                <div class="col">
+                    <img class="mapa" src="{{ url_for('static', filename='images/mapa_santander.png') }}"
+                        alt="Mapa España">
+                </div>
+                <div class="col">
+                    <h3>Datos recopilados del Orion Context Broker</h3>
+                    <p style="font-size: large;">Se han encontrado {{ routes|length }} rutas de transporte y {{
+                        stops|length }}
+                        paradas.
+                    </p>
 
-    <h2>Convertir los datos de nuevo a SUMO</h2>
-    <p style="font-size: large;">Si ya has terminado de editar los datos de transporte puedes convertir los datos a SUMO
-        para lanzar una simulación.</p>
-    <input type="hidden" id="citySelect" value="{{ city }}">
-    <button class="btn btn-primary" id="convertToSUMO">Convertir a SUMO</button>
+                    <a href="/cities/{{ city }}/routes" class="btn btn-primary">Ver rutas</a>
+                    <a href="/cities/{{ city }}/stops" class="btn btn-primary">Ver paradas</a>
+                    <a href="/SUMO-conversion" class="btn btn-secondary">Volver</a>
+
+                    <h3>Convertir los datos de nuevo a SUMO</h3>
+                    <p style="font-size: large;">Si ya has terminado de editar los datos de transporte puedes convertir
+                        los
+                        datos a SUMO
+                        para lanzar una simulación.</p>
+                    <input type="hidden" id="citySelect" value="{{ city }}">
+                    <button class="btn btn-primary" id="convertToSUMO">Convertir a SUMO</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {% include 'footer.html' %}
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
