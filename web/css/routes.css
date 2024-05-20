@@ -1,3 +1,18 @@
+/* BODY */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #303840;
+}
+
+/* MAIN */
+main {
+    flex-grow: 1;
+    background-color: #F2F2F2;
+    padding: 20px;
+}
+
 .route-icon {
     width: 30px;
     height: auto;
