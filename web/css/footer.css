@@ -5,7 +5,10 @@
     display: flex;
     justify-content: space-between; /* Cambiado de flex-start a space-between */
     align-items: center;
-    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: #D9D9D9;
     color: #303840;
 }
