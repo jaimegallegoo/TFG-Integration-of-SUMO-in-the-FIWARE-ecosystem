@@ -49,7 +49,11 @@
                         {% endif %}
                         {% endfor %}
                 </div>
+
+                {% if bus_routes|length > 8 %}
                 <button id="showMoreBtnBus" type="button" class="btn btn-secondary">Mostrar más</button>
+                {% endif %}
+
                 <button id="showLessBtnBus" type="button" class="btn btn-secondary" style="display: none;">Mostrar
                     menos</button>
 
@@ -85,7 +89,11 @@
                         {% endif %}
                         {% endfor %}
                 </div>
+
+                {% if train_routes|length > 6 %}
                 <button id="showMoreBtnTrain" type="button" class="btn btn-secondary">Mostrar más</button>
+                {% endif %}
+
                 <button id="showLessBtnTrain" type="button" class="btn btn-secondary" style="display: none;">Mostrar
                     menos</button>
 
@@ -121,9 +129,14 @@
                         {% endif %}
                         {% endfor %}
                 </div>
+
+                {% if subway_routes|length > 8 %}
                 <button id="showMoreBtnSubway" type="button" class="btn btn-secondary">Mostrar más</button>
+                {% endif %}
+
                 <button id="showLessBtnSubway" type="button" class="btn btn-secondary" style="display: none;">Mostrar
                     menos</button>
+
             </div>
         </section>
     </main>
