@@ -19,6 +19,9 @@
             </div>
             <div>
                 <h3>Líneas de autobús</h3>
+                {% if bus_routes|length == 0 %}
+                <p style="font-size: large;">No existen líneas de autobús en {{ city|capitalize }}</p>
+                {% else %}
                 <div class="d-flex flex-wrap">
                     {% for route in bus_routes %}
                     {% if loop.index <= 8 %} <a
@@ -49,6 +52,7 @@
                         {% endif %}
                         {% endfor %}
                 </div>
+                {% endif %}
 
                 {% if bus_routes|length > 8 %}
                 <button id="showMoreBtnBus" type="button" class="btn btn-secondary">Mostrar más</button>
@@ -58,6 +62,9 @@
                     menos</button>
 
                 <h3>Líneas de tren</h3>
+                {% if train_routes|length == 0 %}
+                <p style="font-size: large;">No existen líneas de tren en {{ city|capitalize }}</p>
+                {% else %}
                 <div class="d-flex flex-wrap">
                     {% for route in train_routes %}
                     {% if loop.index <= 6 %} <a
@@ -89,6 +96,7 @@
                         {% endif %}
                         {% endfor %}
                 </div>
+                {% endif %}
 
                 {% if train_routes|length > 6 %}
                 <button id="showMoreBtnTrain" type="button" class="btn btn-secondary">Mostrar más</button>
@@ -98,6 +106,9 @@
                     menos</button>
 
                 <h3>Líneas de metro</h3>
+                {% if subway_routes|length == 0 %}
+                <p style="font-size: large;">No existen líneas de metro en {{ city|capitalize }}</p>
+                {% else %}
                 <div class="d-flex flex-wrap">
                     {% for route in subway_routes %}
                     {% if loop.index <= 8 %} <a
@@ -129,6 +140,7 @@
                         {% endif %}
                         {% endfor %}
                 </div>
+                {% endif %}
 
                 {% if subway_routes|length > 8 %}
                 <button id="showMoreBtnSubway" type="button" class="btn btn-secondary">Mostrar más</button>
