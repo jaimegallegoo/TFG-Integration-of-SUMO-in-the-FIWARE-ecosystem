@@ -10,5 +10,13 @@ body {
 main {
     flex-grow: 1;
     background-color: #F2F2F2;
-    padding: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 20px;
+}
+
+.route-icon {
+    width: 30px;
+    height: auto;
+    margin-right: 20px;
 }

@@ -12,28 +12,65 @@
     {% include 'header.html' %}
 
     <main>
-        <section class="d-flex flex-column align-items-start">
-            <h2>Paradas de transporte en {{ city|capitalize }}</h2>
-            <div>
-                <h3>Paradas</h3>
-                <div class="d-flex flex-wrap">
-                    {% for stop in stops %}
-                    <a href="/cities/{{ city }}/stops/{{ stop.stopCode }}">
-                        <div class="card m-2" style="min-width: 8rem; max-width: 20rem;">
+        <section>
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Paradas de transporte en {{ city|capitalize }}</h2>
+                <a href="/cities/{{ city }}" class="btn btn-primary">Volver</a>
+            </div>
+            <div class="d-flex flex-wrap">
+                {% for stop in stops %}
+                {% if loop.index <= 22 %} <a href="/cities/{{ city }}/stops/{{ stop.stopCode }}">
+                    <div class="card m-2"
+                        style="min-width: 8rem; max-width: 20rem; border-radius: 15px; background-color: #8BBBD9;">
+                        <div class="card-body d-flex align-items-center justify-content-center">
+                            <h5 class="card-title" style="padding-top: 10px; color: white;">{{ stop.name }}</h5>
+                        </div>
+                    </div>
+                    </a>
+                    {% else %}<a href="/cities/{{ city }}/stops/{{ stop.stopCode }}" class="stop-card-hidden"
+                        style="display: none;">
+                        <div class="card m-2"
+                            style="min-width: 8rem; max-width: 20rem; border-radius: 15px; background-color: #8BBBD9;">
                             <div class="card-body d-flex align-items-center justify-content-center">
-                                <h5 class="card-title">{{ stop.name }}</h5>
+                                <h5 class="card-title" style="padding-top: 10px; color: white;">{{ stop.name }}</h5>
                             </div>
                         </div>
                     </a>
+                    {% endif %}
                     {% endfor %}
-                </div>
-            
-                <a href="/cities/{{ city }}" class="btn btn-primary">Volver</a>
             </div>
+
+            {% if stops|length > 8 %}
+            <button id="showMoreBtnStop" type="button" class="btn btn-secondary">Mostrar más</button>
+            {% endif %}
+
+            <button id="showLessBtnStop" type="button" class="btn btn-secondary" style="display: none;">Mostrar
+                menos</button>
+
         </section>
     </main>
 
     {% include 'footer.html' %}
+
+    <script>
+        document.getElementById('showMoreBtnStop').addEventListener('click', function () {
+            var hiddenCards = document.getElementsByClassName('stop-card-hidden');
+            for (var i = 0; i < hiddenCards.length; i++) {
+                hiddenCards[i].style.display = 'block';
+            }
+            this.style.display = 'none';  // hide the "Show more" button after it's clicked
+            document.getElementById('showLessBtnStop').style.display = 'block';  // show the "Show less" button
+        });
+
+        document.getElementById('showLessBtnStop').addEventListener('click', function () {
+            var hiddenCards = document.getElementsByClassName('stop-card-hidden');
+            for (var i = 0; i < hiddenCards.length; i++) {
+                hiddenCards[i].style.display = 'none';
+            }
+            this.style.display = 'none';  // hide the "Show less" button after it's clicked
+            document.getElementById('showMoreBtnStop').style.display = 'block';  // show the "Show more" button
+        });
+    </script>
 </body>
 
 </html>
