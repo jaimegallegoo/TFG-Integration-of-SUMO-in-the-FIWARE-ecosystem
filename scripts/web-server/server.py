@@ -135,7 +135,7 @@ def conversionToSUMO():
         city = data.get('city')
 
         # Call the function to convert the data
-        result = convert_FIWARE_city(city)
+        result = convert_FIWARE_city_web(city)
 
         # Return the result as a JSON response
         return jsonify(result)
