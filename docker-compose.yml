@@ -77,6 +77,19 @@ services:
     networks:
       - default
 
+  # SUMO Server
+  sumo-server:
+    build: ./scripts/sumo-server/
+    networks:
+      - default
+    ports:
+      - 5000:5000
+    volumes:
+      - ./scripts/web-server:/app
+      - ./web:/web
+      - ./scripts/data-conversion:/data-conversion
+      - ./data:/data
+
 networks:
   default:
     labels:
