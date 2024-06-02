@@ -356,6 +356,61 @@ def convert_FIWARE_city(city):
 
 # ---------------------------------------------------------------------
 
+# This function converts the lines and stops from the selected city in the application to SUMO. DESIGNED FOR THE WEB INTERFACE
+def convert_FIWARE_city_web(city):
+    # Create the folder for the SUMO output files
+    modifiedSUMOfolder = f'../../../data/output/sumo/{city}'
+    os.makedirs(modifiedSUMOfolder, exist_ok=True)
+
+    # Define the path for the SUMO input original files
+    originalSUMOfolder = f'../../../data/input/sumo/{city}'
+
+    # Copy the original files to the modified folder
+    os.system(f'cp {originalSUMOfolder}/* {modifiedSUMOfolder}')
+
+    # Delete the files osm_ptlines.xml, osm_stops.add.xml and osm_pt.rou.xml from the modified folder
+    os.system(f'rm {modifiedSUMOfolder}/osm_ptlines.xml')
+    os.system(f'rm {modifiedSUMOfolder}/osm_stops.add.xml')
+    os.system(f'rm {modifiedSUMOfolder}/osm_pt.rou.xml')
+
+    # Create temporal JSON files for the FIWARE input data
+    modifiedFIWAREroute = '../../../data/temporal/modifiedFIWAREroute.json'
+    modifiedFIWAREstop = '../../../data/temporal/modifiedFIWAREstop.json'
+
+    # Get the modified files in FIWARE format from the Orion Context Broker
+    routes = get_entities_web(city, 'PublicTransportRoute')
+    stops = get_entities_web(city, 'PublicTransportStop')
+
+    # Write the files to the temporal folder as JSON
+    with open(modifiedFIWAREroute, 'w') as file:
+        json.dump(routes, file, indent=4)
+    with open(modifiedFIWAREstop, 'w') as file:
+        json.dump(stops, file, indent=4)
+
+    # Create the files for the SUMO output
+    osm_ptlines = f'../../../data/output/sumo/{city}/osm_ptlines.xml'
+    osm_stops = f'../../../data/output/sumo/{city}/osm_stops.add.xml'
+
+    # Convert the routes and stops to SUMO format
+    convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines, city)
+    convert_FIWARE_stop_to_SUMO_stop(modifiedFIWAREstop, osm_stops, city)
+
+    # Generate the routes file based on the lines and stops
+    sumo_home = os.getenv('SUMO_HOME') # C:\Program Files (x86)\Eclipse\Sumo
+    osm_net = f'../../../data/output/sumo/{city}/osm.net.xml.gz'
+    stop_infos = f'../../../data/output/sumo/{city}/stopinfos.xml'
+    trips = f'../../../data/output/sumo/{city}/trips.trips.xml'
+    veh_routes = f'../../../data/output/sumo/{city}/vehroutes.xml'
+    osm_routes = f'../../../data/output/sumo/{city}/osm_pt.rou.xml'
+
+    # CHANGES FOR THE WEB INTERFACE
+    
+    # Delete the temporal JSON files
+    os.remove(modifiedFIWAREroute) 
+    os.remove(modifiedFIWAREstop)
+
+# ---------------------------------------------------------------------
+
 # This function gets the entities from the Orion Context Broker
 def get_entities(city, type):
     response = requests.get(f'http://localhost:1026/v2/entities/?type={type}&q=address.addressLocality=={city.capitalize()}&limit=1000')
