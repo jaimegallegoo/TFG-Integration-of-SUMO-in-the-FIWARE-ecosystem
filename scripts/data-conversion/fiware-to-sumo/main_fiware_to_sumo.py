@@ -31,6 +31,10 @@ def main():
         get_entities(city, type)
     #python main_fiware_to_sumo.py get_entities madrid PublicTransportRoute
 
+    elif orden == "test_sumo-server":
+        test_sumo_server()
+    #python main_fiware_to_sumo.py test_sumo-server
+
     else:
         print(f"Orden no reconocida: {orden}")
 

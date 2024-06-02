@@ -404,10 +404,59 @@ def convert_FIWARE_city_web(city):
     osm_routes = f'../../../data/output/sumo/{city}/osm_pt.rou.xml'
 
     # CHANGES FOR THE WEB INTERFACE
+    # Define the URL of the Flask app in the sumo-server container
+    url = 'http://sumo-server:5000/ptlines2flows'
+
+    # Define the data to send to the Flask app
+    data = {
+        'osm_net': osm_net,
+        'osm_stops': osm_stops,
+        'osm_ptlines': osm_ptlines,
+        'stop_infos': stop_infos,
+        'trips': trips,
+        'veh_routes': veh_routes,
+        'osm_routes': osm_routes,
+    }
+
+    # Make a POST request to the Flask app
+    response = requests.post(url, json=data)
+
+    # Check the response
+    if response.status_code == 200:
+        print('ptlines2flows.py script ran successfully')
+        # Check if the output file exists
+        if os.path.exists(osm_routes):
+            print('Output file was successfully created')
+        else:
+            print('Failed to create output file')
+    else:
+        print('Failed to run ptlines2flows.py script:', response.text)
     
     # Delete the temporal JSON files
     os.remove(modifiedFIWAREroute) 
     os.remove(modifiedFIWAREstop)
+
+# ---------------------------------------------------------------------
+
+def test_sumo_server():
+    url = 'http://localhost:5000/test'  # Use localhost instead of sumo-server
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        print('Connection to sumo-server is successful')
+    else:
+        print('Failed to connect to sumo-server')
+
+# ---------------------------------------------------------------------
+
+def test_sumo_server_web():
+    url = 'http://sumo-server:5000/test'
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        print('Connection to sumo-server is successful')
+    else:
+        print('Failed to connect to sumo-server')
 
 # ---------------------------------------------------------------------
 
