@@ -35,6 +35,12 @@ def main():
         test_sumo_server()
     #python main_fiware_to_sumo.py test_sumo-server
 
+    elif orden == "generate_emissions":
+        city = sys.argv[2]
+        duration = sys.argv[3]
+        generate_emissions(city, duration)
+    #python main_fiware_to_sumo.py generate_emissions madrid 1000
+
     else:
         print(f"Orden no reconocida: {orden}")
 
