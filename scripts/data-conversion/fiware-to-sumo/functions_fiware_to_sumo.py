@@ -5,6 +5,9 @@ import json
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 
+import gzip
+import shutil
+
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
 
@@ -110,7 +113,7 @@ def convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines, city):
                 # Extract the data from the original ptLine element
 
                 # PERIOD MAPPING
-                period = original_ptLine.get('@period', 'No data available')
+                period = original_ptLine.get('@period', '0') # Asuming that default value is '0'. Need to check
 
                 # COMPLETENESS MAPPING
                 completeness = original_ptLine.get('@completeness', 'No data available')
@@ -341,9 +344,14 @@ def convert_FIWARE_city(city):
     convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines, city)
     convert_FIWARE_stop_to_SUMO_stop(modifiedFIWAREstop, osm_stops, city)
 
+    # Extract "osm.net.xml" from "osm.net.xml.gz"
+    with gzip.open(f'{modifiedSUMOfolder}/osm.net.xml.gz', 'rb') as f_in:
+        with open(f'{modifiedSUMOfolder}/osm.net.xml', 'wb') as f_out:
+            shutil.copyfileobj(f_in, f_out)
+
     # Generate the routes file based on the lines and stops
     sumo_home = os.getenv('SUMO_HOME') # C:\Program Files (x86)\Eclipse\Sumo
-    osm_net = f'../../../data/output/sumo/{city}/osm.net.xml.gz'
+    osm_net = f'../../../data/output/sumo/{city}/osm.net.xml'
     stop_infos = f'../../../data/output/sumo/{city}/stopinfos.xml'
     trips = f'../../../data/output/sumo/{city}/trips.trips.xml'
     veh_routes = f'../../../data/output/sumo/{city}/vehroutes.xml'
@@ -395,9 +403,14 @@ def convert_FIWARE_city_web(city):
     convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines, city)
     convert_FIWARE_stop_to_SUMO_stop(modifiedFIWAREstop, osm_stops, city)
 
+    # Extract "osm.net.xml" from "osm.net.xml.gz"
+    with gzip.open(f'{modifiedSUMOfolder}/osm.net.xml.gz', 'rb') as f_in:
+        with open(f'{modifiedSUMOfolder}/osm.net.xml', 'wb') as f_out:
+            shutil.copyfileobj(f_in, f_out)
+
     # Generate the routes file based on the lines and stops
     sumo_home = os.getenv('SUMO_HOME') # C:\Program Files (x86)\Eclipse\Sumo
-    osm_net = f'../../../data/output/sumo/{city}/osm.net.xml.gz'
+    osm_net = f'../../../data/output/sumo/{city}/osm.net.xml'
     stop_infos = f'../../../data/output/sumo/{city}/stopinfos.xml'
     trips = f'../../../data/output/sumo/{city}/trips.trips.xml'
     veh_routes = f'../../../data/output/sumo/{city}/vehroutes.xml'
