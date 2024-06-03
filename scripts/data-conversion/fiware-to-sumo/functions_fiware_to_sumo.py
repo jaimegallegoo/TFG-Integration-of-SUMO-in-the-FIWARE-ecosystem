@@ -113,7 +113,7 @@ def convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines, city):
                 # Extract the data from the original ptLine element
 
                 # PERIOD MAPPING
-                period = original_ptLine.get('@period', 'No data available') # Asuming that default value is '0'. Need to check
+                period = original_ptLine.get('@period', 'No data available')
 
                 # COMPLETENESS MAPPING
                 completeness = original_ptLine.get('@completeness', 'No data available')
@@ -132,13 +132,20 @@ def convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines, city):
             "line": item['shortRouteCode']['value'],
             "type": type,
             "vClass": vClass,
-            "color": route_color,
-            "completeness": completeness 
+            "color": route_color 
         }
+
+        # Only add the "color" attribute if its value is not "No data available"
+        if route_color != "No data available":
+            ptLine_attributes["color"] = route_color
 
         # Only add the "period" attribute if its value is not "No data available"
         if period != "No data available":
             ptLine_attributes["period"] = period
+
+        # Only add the "completeness" attribute if its value is not "No data available"
+        if completeness != "No data available":
+            ptLine_attributes["completeness"] = completeness
 
         ptLine = ET.SubElement(root, "ptLine", ptLine_attributes)
 
