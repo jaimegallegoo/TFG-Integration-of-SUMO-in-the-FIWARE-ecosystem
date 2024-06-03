@@ -18,7 +18,7 @@ def home():
 def send_css(path):
     return send_from_directory(app.static_folder + '/css', path)
 
-# Serve the SUMO-conversion.html file
+# Serve the SUMO-conversion.html file and handle the conversion
 @app.route('/SUMO-conversion', methods=['GET', 'POST'])
 def conversion():
     if request.method == 'POST':
@@ -146,6 +146,25 @@ def conversionToSUMO():
 @app.route('/cities/<city>/simulation', methods=['GET'])
 def simulation(city):
     return render_template('simulation.html', city=city)
+
+# Handle the simulation request
+@app.route('/simulate', methods=['POST'])
+def simulate():
+    # Get the city and the duration from the POST request data
+    data = request.get_json()
+    city = data.get('city')
+    duration = data.get('duration')
+
+    # Call the function to convert the data
+    result = simulate_new_scenario(city)
+
+    # Return the result as a JSON response
+    return jsonify(result)
+
+# Serve the stats.html file
+@app.route('/cities/<city>/stats', methods=['GET'])
+def stats(city):
+    return render_template('stats.html', city=city)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
