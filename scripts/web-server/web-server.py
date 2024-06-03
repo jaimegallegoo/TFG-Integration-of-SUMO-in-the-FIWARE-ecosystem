@@ -156,7 +156,7 @@ def simulate():
     duration = data.get('duration')
 
     # Call the function to convert the data
-    result = simulate_new_scenario(city)
+    result = simulate_new_scenario(city, duration)
 
     # Return the result as a JSON response
     return jsonify(result)

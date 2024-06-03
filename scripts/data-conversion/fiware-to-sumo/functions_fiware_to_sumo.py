@@ -420,6 +420,11 @@ def convert_FIWARE_city_web(city):
         with open(f'{modifiedSUMOfolder}/osm.net.xml', 'wb') as f_out:
             shutil.copyfileobj(f_in, f_out)
 
+    # Extract "osm.poly.xml" from "osm.poly.xml.gz"
+    with gzip.open(f'{modifiedSUMOfolder}/osm.poly.xml.gz', 'rb') as f_in:
+        with open(f'{modifiedSUMOfolder}/osm.poly.xml', 'wb') as f_out:
+            shutil.copyfileobj(f_in, f_out)
+
     # Generate the routes file based on the lines and stops
     sumo_home = os.getenv('SUMO_HOME') # C:\Program Files (x86)\Eclipse\Sumo
     osm_net = f'../../../data/output/sumo/{city}/osm.net.xml'

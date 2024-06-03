@@ -4,7 +4,7 @@
 <head>
     <title>Urban Mobility Manager</title>
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo_claro_transparente.png') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/city.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/simulation.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
@@ -28,6 +28,8 @@
                     <label for="simulationDuration">Duración de la simulación (segundos):</label>
                     <input type="range" class="custom-range" id="simulationDuration" min="500" max="4000" step="100">
                     <span id="durationValue">500</span>
+
+                    <input type="hidden" id="citySelect" value="{{ city }}">
 
                     <button class="btn btn-primary" id="simulate">Simular</button>
                     <a href="/SUMO-conversion" class="btn btn-secondary">Volver</a>
@@ -69,7 +71,7 @@
                         $('#loadingSpinner').hide();
 
                         alert('La simulación para ' + city + ' se ha ejecutado correctamente durante ' + duration + ' segundos.');
-                        window.location.href = '/';
+                        window.location.href = '/cities/' + city + '/stats';
                     }
                 });
             });
