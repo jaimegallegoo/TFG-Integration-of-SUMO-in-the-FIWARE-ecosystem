@@ -41,6 +41,11 @@ def main():
         generate_emissions(city, duration)
     #python main_fiware_to_sumo.py generate_emissions madrid 1000
 
+    elif orden == "generate_emissions_visualization":
+        city = sys.argv[2]
+        generate_emissions_visualization(city)
+    #python main_fiware_to_sumo.py generate_emissions_visualization madrid
+
     else:
         print(f"Orden no reconocida: {orden}")
 

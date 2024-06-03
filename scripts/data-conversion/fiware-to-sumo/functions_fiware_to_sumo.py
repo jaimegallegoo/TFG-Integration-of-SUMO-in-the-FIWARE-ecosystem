@@ -525,3 +525,20 @@ def generate_emissions(city, duration):
     # sumo -c osm.sumocfg --emission-output emissions.xml --use-stop-ended --end 3600
 
 # ---------------------------------------------------------------------
+
+def generate_emissions_visualization(city):
+    # Set the folder for the SUMO output files
+    modifiedSUMOfolder = f'../../../data/output/sumo/{city}'
+
+    # Define the path for the emissions input file
+    emissions = f'../../../data/output/sumo/{city}/emissions.xml'
+
+    # Define the path for the emissions image output file
+    CO2_output = f'../../../data/output/sumo/{city}/CO2_output.png'
+
+    # Run the SUMO visualization tool to plot the emissions
+    sumo_home = os.getenv('SUMO_HOME') # C:\Program Files (x86)\Eclipse\Sumo
+    os.system(f'python "{sumo_home}/tools/visualization/plotXMLAttributes.py" -x time -y CO2 -o {CO2_output} {emissions} -i id')
+    # python $SUMO_HOME/tools/visualization/plotXMLAttributes.py -x time -y CO2 -o CO2_output.png emissions.xml -i id
+
+# ---------------------------------------------------------------------    
