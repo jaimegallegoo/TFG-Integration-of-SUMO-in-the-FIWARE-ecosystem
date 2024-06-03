@@ -526,6 +526,46 @@ def generate_emissions(city, duration):
 
 # ---------------------------------------------------------------------
 
+# This function generates the emissions for the selected simulation. DESIGNED FOR THE WEB INTERFACE
+def generate_emissions_web(city, duration):
+    # Set the folder for the SUMO output files
+    modifiedSUMOfolder = f'../../../data/output/sumo/{city}'
+
+    # Define the path for the SUMO configuration file
+    osm_sumocfg = f'../../../data/output/sumo/{city}/osm.sumocfg'
+
+    # Define the path for the emissions output file
+    emissions = f'../../../data/output/sumo/{city}/emissions.xml'
+
+    # Run the SUMO simulation with the emissions output
+
+    # CHANGES FOR THE WEB INTERFACE
+    # Define the URL of the Flask app in the sumo-server container
+    url = 'http://sumo-server:5000/emissionsSimulation'
+
+    # Define the data to send to the Flask app
+    data = {
+        'osm_sumocfg': osm_sumocfg,
+        'emissions': emissions,
+        'duration': duration
+    }
+
+    # Make a POST request to the Flask app
+    response = requests.post(url, json=data)
+
+    # Check the response
+    if response.status_code == 200:
+        print('Emissions simulation ran successfully')
+        # Check if the output file exists
+        if os.path.exists(emissions):
+            print('Output file was successfully created')
+        else:
+            print('Failed to create output file')
+    else:
+        print('Failed to run the emissions simulation:', response.text)
+
+# ---------------------------------------------------------------------
+
 def generate_emissions_visualization(city):
     # Set the folder for the SUMO output files
     modifiedSUMOfolder = f'../../../data/output/sumo/{city}'

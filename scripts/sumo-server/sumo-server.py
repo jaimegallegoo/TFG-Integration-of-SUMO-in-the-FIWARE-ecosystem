@@ -24,5 +24,22 @@ def ptlines2flows():
 def test_connection():
     return {'message': 'Connection successful'}, 200
 
+@app.route('/emissionsSimulation', methods=['POST'])
+def emissionsSimulation():
+    # Get the input data from the request
+    input_data = request.get_json()
+
+    # Run the emissions simulation with the input data
+    result = subprocess.run(
+        ['sumo', '-c', input_data['osm_sumocfg'], '--emission-output', input_data['emissions'], '--use-stop-ended', '--end', input_data['duration']],
+        stdout=subprocess.PIPE
+    )
+
+    # Check the result
+    if result.returncode == 0:
+        return {'message': 'Emissions simulation ran successfully'}, 200
+    else:
+        return {'message': 'Failed to run emissions simulation ran successfully', 'error': result.stdout.decode()}, 500
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
