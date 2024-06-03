@@ -566,6 +566,7 @@ def generate_emissions_web(city, duration):
 
 # ---------------------------------------------------------------------
 
+# This function generates the emissions visualization for the selected simulation
 def generate_emissions_visualization(city):
     # Set the folder for the SUMO output files
     modifiedSUMOfolder = f'../../../data/output/sumo/{city}'
@@ -582,3 +583,42 @@ def generate_emissions_visualization(city):
     # python $SUMO_HOME/tools/visualization/plotXMLAttributes.py -x time -y CO2 -o CO2_output.png emissions.xml -i id
 
 # ---------------------------------------------------------------------    
+
+# This function generates the emissions visualization for the selected simulation. DESIGNED FOR THE WEB INTERFACE
+def generate_emissions_visualization_web(city):
+    # Set the folder for the SUMO output files
+    modifiedSUMOfolder = f'../../../data/output/sumo/{city}'
+
+    # Define the path for the emissions input file
+    emissions = f'../../../data/output/sumo/{city}/emissions.xml'
+
+    # Define the path for the emissions image output file
+    CO2_output = f'../../../data/output/sumo/{city}/CO2_output.png'
+
+    # Run the SUMO visualization tool to plot the emissions
+
+    # CHANGES FOR THE WEB INTERFACE
+    # Define the URL of the Flask app in the sumo-server container
+    url = 'http://sumo-server:5000/emissionsVisualization'
+
+    # Define the data to send to the Flask app
+    data = {
+        'emissions': emissions,
+        'CO2_output': CO2_output
+    }
+
+    # Make a POST request to the Flask app
+    response = requests.post(url, json=data)
+
+    # Check the response
+    if response.status_code == 200:
+        print('plotXMLAttributes.py script ran successfully')
+        # Check if the output file exists
+        if os.path.exists(CO2_output):
+            print('Output file was successfully created')
+        else:
+            print('Failed to create output file')
+    else:
+        print('Failed to run plotXMLAttributes.py script:', response.text)
+
+# ---------------------------------------------------------------------   

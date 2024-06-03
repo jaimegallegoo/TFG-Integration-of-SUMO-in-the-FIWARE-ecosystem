@@ -39,7 +39,24 @@ def emissionsSimulation():
     if result.returncode == 0:
         return {'message': 'Emissions simulation ran successfully'}, 200
     else:
-        return {'message': 'Failed to run emissions simulation ran successfully', 'error': result.stdout.decode()}, 500
+        return {'message': 'Failed to run emissions simulation', 'error': result.stdout.decode()}, 500
+    
+@app.route('/emissionsVisualization', methods=['POST'])
+def emissionsVisualization():
+    # Get the input data from the request
+    input_data = request.get_json()
+
+    # Run the emissions simulation with the input data
+    result = subprocess.run(
+        ['python3', '/usr/share/sumo/tools/visualization/plotXMLAttributes.py', '-x', 'time', '-y', 'CO2', '-o', input_data['CO2_output'], input_data['emissions'], '-i', 'id'],
+        stdout=subprocess.PIPE
+    )
+
+    # Check the result
+    if result.returncode == 0:
+        return {'message': 'plotXMLAttributes.py script ran successfully'}, 200
+    else:
+        return {'message': 'Failed to run plotXMLAttributes.py script', 'error': result.stdout.decode()}, 500
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
