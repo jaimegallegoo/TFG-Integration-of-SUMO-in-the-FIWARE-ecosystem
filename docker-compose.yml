@@ -70,7 +70,7 @@ services:
       - ./scripts/data-conversion:/data-conversion
       - ./data:/data
     working_dir: /app
-    command: bash -c "pip install -r requirements.txt && python server.py"
+    command: bash -c "pip install -r requirements.txt && python web-server.py"
     build: ./scripts/web-server
     ports:
       - "8000:8000"
