@@ -506,3 +506,22 @@ def get_entities_web(city, type):
     else:
         print("Failed to retrieve entities")
         print(response.text)
+
+# ---------------------------------------------------------------------
+
+# This function generates the emissions for the selected simulation
+def generateEmissions(city, duration):
+    # Set the folder for the SUMO output files
+    modifiedSUMOfolder = f'../../../data/output/sumo/{city}'
+
+    # Define the path for the SUMO configuration file
+    osm_sumocfg = f'../../../data/output/sumo/{city}/osm.sumocfg'
+
+    # Define the path for the emissions output file
+    emissions = f'../../../data/output/sumo/{city}/emissions.xml'
+
+    # Run the SUMO simulation with the emissions output
+    os.system(f'sumo -c {osm_sumocfg} --emission-output {emissions} --use-stop-ended --end {duration}')
+    # sumo -c osm.sumocfg --emission-output emissions.xml --use-stop-ended --end 3600
+
+# ---------------------------------------------------------------------
