@@ -142,5 +142,10 @@ def conversionToSUMO():
 
     return send_from_directory(app.static_folder, 'FIWARE-conversion.html')
 
+# Serve the simulation.html file
+@app.route('/cities/<city>/simulation', methods=['GET'])
+def simulation(city):
+    return render_template('simulation.html', city=city)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
