@@ -622,3 +622,13 @@ def generate_emissions_visualization_web(city):
         print('Failed to run plotXMLAttributes.py script:', response.text)
 
 # ---------------------------------------------------------------------   
+
+# This function launches a simulation for the selected city and creates the emissions visualization
+def simulate_new_scenario(city, duration):
+    # Generate the emissions for the simulation
+    generate_emissions_web(city, duration)
+
+    # Generate the emissions visualization
+    generate_emissions_visualization_web(city)
+
+    return {'message': 'Simulation ran successfully'}
