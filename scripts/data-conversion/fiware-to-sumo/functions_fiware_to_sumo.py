@@ -334,6 +334,12 @@ def convert_FIWARE_city(city):
     os.system(f'rm {modifiedSUMOfolder}/osm_stops.add.xml')
     os.system(f'rm {modifiedSUMOfolder}/osm_pt.rou.xml')
 
+    # Delete the original osm.sumocfg file from the modified folder
+    os.system(f'rm {modifiedSUMOfolder}/osm.sumocfg')
+
+    # Copy the corrected osm.sumocfg file to the modified folder
+    os.system(f'cp ../../../data/input/sumo/simulation_config/osm.sumocfg {modifiedSUMOfolder}')
+
     # Create temporal JSON files for the FIWARE input data
     modifiedFIWAREroute = '../../../data/temporal/modifiedFIWAREroute.json'
     modifiedFIWAREstop = '../../../data/temporal/modifiedFIWAREstop.json'
@@ -359,6 +365,11 @@ def convert_FIWARE_city(city):
     # Extract "osm.net.xml" from "osm.net.xml.gz"
     with gzip.open(f'{modifiedSUMOfolder}/osm.net.xml.gz', 'rb') as f_in:
         with open(f'{modifiedSUMOfolder}/osm.net.xml', 'wb') as f_out:
+            shutil.copyfileobj(f_in, f_out)
+
+    # Extract "osm.poly.xml" from "osm.poly.xml.gz"
+    with gzip.open(f'{modifiedSUMOfolder}/osm.poly.xml.gz', 'rb') as f_in:
+        with open(f'{modifiedSUMOfolder}/osm.poly.xml', 'wb') as f_out:
             shutil.copyfileobj(f_in, f_out)
 
     # Generate the routes file based on the lines and stops
@@ -392,6 +403,12 @@ def convert_FIWARE_city_web(city):
     os.system(f'rm {modifiedSUMOfolder}/osm_ptlines.xml')
     os.system(f'rm {modifiedSUMOfolder}/osm_stops.add.xml')
     os.system(f'rm {modifiedSUMOfolder}/osm_pt.rou.xml')
+
+    # Delete the original osm.sumocfg file from the modified folder
+    os.system(f'rm {modifiedSUMOfolder}/osm.sumocfg')
+
+    # Copy the corrected osm.sumocfg file to the modified folder
+    os.system(f'cp ../../../data/input/sumo/simulation_config/osm.sumocfg {modifiedSUMOfolder}')
 
     # Create temporal JSON files for the FIWARE input data
     modifiedFIWAREroute = '../../../data/temporal/modifiedFIWAREroute.json'
