@@ -132,7 +132,6 @@ def convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines, city):
             "line": item['shortRouteCode']['value'],
             "type": type,
             "vClass": vClass,
-            "color": route_color 
         }
 
         # Only add the "color" attribute if its value is not "No data available"
@@ -149,10 +148,11 @@ def convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines, city):
 
         ptLine = ET.SubElement(root, "ptLine", ptLine_attributes)
 
-        # Create a route child element for the route edges
-        route = ET.SubElement(ptLine, "route", {
+        # Only add the "edges" attribute if its value is not "No data available"
+        if route_edges != "No data available":
+            route = ET.SubElement(ptLine, "route", {
             "edges": route_edges
-        })
+        })        
 
         # Create a busStop child element for each stop in the route segments
         for segment in item['routeSegments']['value']:
@@ -362,15 +362,20 @@ def convert_FIWARE_city(city):
     convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines, city)
     convert_FIWARE_stop_to_SUMO_stop(modifiedFIWAREstop, osm_stops, city)
 
+    # ONLY FOR OLD VERSIONS OF SUMO
+    # ---------------------------------------------------------------------
+
     # Extract "osm.net.xml" from "osm.net.xml.gz"
-    with gzip.open(f'{modifiedSUMOfolder}/osm.net.xml.gz', 'rb') as f_in:
-        with open(f'{modifiedSUMOfolder}/osm.net.xml', 'wb') as f_out:
-            shutil.copyfileobj(f_in, f_out)
+    #with gzip.open(f'{modifiedSUMOfolder}/osm.net.xml.gz', 'rb') as f_in:
+    #    with open(f'{modifiedSUMOfolder}/osm.net.xml', 'wb') as f_out:
+    #        shutil.copyfileobj(f_in, f_out)
 
     # Extract "osm.poly.xml" from "osm.poly.xml.gz"
-    with gzip.open(f'{modifiedSUMOfolder}/osm.poly.xml.gz', 'rb') as f_in:
-        with open(f'{modifiedSUMOfolder}/osm.poly.xml', 'wb') as f_out:
-            shutil.copyfileobj(f_in, f_out)
+    #with gzip.open(f'{modifiedSUMOfolder}/osm.poly.xml.gz', 'rb') as f_in:
+    #    with open(f'{modifiedSUMOfolder}/osm.poly.xml', 'wb') as f_out:
+    #        shutil.copyfileobj(f_in, f_out)
+
+    # ---------------------------------------------------------------------
 
     # Generate the routes file based on the lines and stops
     sumo_home = os.getenv('SUMO_HOME') # C:\Program Files (x86)\Eclipse\Sumo
@@ -405,10 +410,10 @@ def convert_FIWARE_city_web(city):
     os.system(f'rm {modifiedSUMOfolder}/osm_pt.rou.xml')
 
     # Delete the original osm.sumocfg file from the modified folder
-    os.system(f'rm {modifiedSUMOfolder}/osm.sumocfg')
+    #os.system(f'rm {modifiedSUMOfolder}/osm.sumocfg')
 
     # Copy the corrected osm.sumocfg file to the modified folder
-    os.system(f'cp ../../../data/input/sumo/simulation_config/osm.sumocfg {modifiedSUMOfolder}')
+    #os.system(f'cp ../../../data/input/sumo/simulation_config/osm.sumocfg {modifiedSUMOfolder}')
 
     # Create temporal JSON files for the FIWARE input data
     modifiedFIWAREroute = '../../../data/temporal/modifiedFIWAREroute.json'
@@ -432,19 +437,24 @@ def convert_FIWARE_city_web(city):
     convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines, city)
     convert_FIWARE_stop_to_SUMO_stop(modifiedFIWAREstop, osm_stops, city)
 
+    # ONLY FOR OLD VERSIONS OF SUMO
+    # ---------------------------------------------------------------------
+
     # Extract "osm.net.xml" from "osm.net.xml.gz"
-    with gzip.open(f'{modifiedSUMOfolder}/osm.net.xml.gz', 'rb') as f_in:
-        with open(f'{modifiedSUMOfolder}/osm.net.xml', 'wb') as f_out:
-            shutil.copyfileobj(f_in, f_out)
+    #with gzip.open(f'{modifiedSUMOfolder}/osm.net.xml.gz', 'rb') as f_in:
+    #    with open(f'{modifiedSUMOfolder}/osm.net.xml', 'wb') as f_out:
+    #        shutil.copyfileobj(f_in, f_out)
 
     # Extract "osm.poly.xml" from "osm.poly.xml.gz"
-    with gzip.open(f'{modifiedSUMOfolder}/osm.poly.xml.gz', 'rb') as f_in:
-        with open(f'{modifiedSUMOfolder}/osm.poly.xml', 'wb') as f_out:
-            shutil.copyfileobj(f_in, f_out)
+    #with gzip.open(f'{modifiedSUMOfolder}/osm.poly.xml.gz', 'rb') as f_in:
+    #    with open(f'{modifiedSUMOfolder}/osm.poly.xml', 'wb') as f_out:
+    #        shutil.copyfileobj(f_in, f_out)
+
+    # ---------------------------------------------------------------------
 
     # Generate the routes file based on the lines and stops
     sumo_home = os.getenv('SUMO_HOME') # C:\Program Files (x86)\Eclipse\Sumo
-    osm_net = f'../../../data/output/sumo/{city}/osm.net.xml'
+    osm_net = f'../../../data/output/sumo/{city}/osm.net.xml.gz'
     stop_infos = f'../../../data/output/sumo/{city}/stopinfos.xml'
     trips = f'../../../data/output/sumo/{city}/trips.trips.xml'
     veh_routes = f'../../../data/output/sumo/{city}/vehroutes.xml'
