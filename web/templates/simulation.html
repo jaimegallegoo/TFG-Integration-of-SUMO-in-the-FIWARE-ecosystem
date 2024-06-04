@@ -25,9 +25,9 @@
                         city|capitalize }}, primero debemos lanzar una simulación en segundo plano.
                     </p>
 
-                    <label for="simulationDuration">Duración de la simulación (segundos):</label>
+                    <label for="simulationDuration">Duración de la simulación:</label>
+                    <span id="durationValue"></span> segundos
                     <input type="range" class="custom-range" id="simulationDuration" min="500" max="4000" step="100">
-                    <span id="durationValue">500</span>
 
                     <input type="hidden" id="citySelect" value="{{ city }}">
 
