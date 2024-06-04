@@ -7,8 +7,13 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV FLASK_APP sumo-server.py
 ENV FLASK_RUN_HOST 0.0.0.0
 
+# Update and install software-properties-common
+RUN apt-get update && apt-get install -y software-properties-common
+
 # Update and install SUMO and Python
-RUN apt-get update && apt-get install -y \
+RUN add-apt-repository ppa:sumo/stable \
+    && apt-get update \
+    && apt-get install -y \
     sumo \
     sumo-tools \
     sumo-doc \

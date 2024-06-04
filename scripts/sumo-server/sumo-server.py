@@ -31,7 +31,7 @@ def emissionsSimulation():
 
     # Run the emissions simulation with the input data
     result = subprocess.run(
-        ['sumo', '-c', input_data['osm_sumocfg'], '--emission-output', input_data['emissions'], '--end', input_data['duration']],
+        ['sumo', '-c', input_data['osm_sumocfg'], '--emission-output', input_data['emissions'], '--use-stop-ended', '--end', input_data['duration']],
         stdout=subprocess.PIPE
     )
 
@@ -48,7 +48,7 @@ def emissionsVisualization():
 
     # Run the emissions simulation with the input data
     result = subprocess.run(
-        ['python3', '/usr/share/sumo/tools/visualization/plotXMLAttr.py', '-x', 'time', '-y', 'CO2', '-o', input_data['CO2_output'], input_data['emissions'], '-i', 'id'],
+        ['python3', '/usr/share/sumo/tools/visualization/plotXMLAttributes.py', '-x', 'time', '-y', 'CO2', '-o', input_data['CO2_output'], input_data['emissions'], '-i', 'id'],
         stdout=subprocess.PIPE
     )
 
