@@ -663,4 +663,7 @@ def simulate_new_scenario(city, duration):
     # Generate the emissions visualization
     generate_emissions_visualization_web(city)
 
+    # Copy the "CO2_output.png" file to the web-server "static" folder
+    os.system(f'cp ../../../data/output/sumo/{city}/CO2_output.png ../../../web/images/CO2_output_{city}.png')
+
     return {'message': 'Simulation ran successfully'}

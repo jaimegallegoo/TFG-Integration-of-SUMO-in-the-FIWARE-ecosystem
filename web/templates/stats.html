@@ -4,7 +4,7 @@
 <head>
     <title>Urban Mobility Manager</title>
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo_claro_transparente.png') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/city.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stats.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
@@ -17,7 +17,7 @@
             <div class="row">
                 <div class="col">
                     <h3>Emisiones de CO2 de los vehículos</h3>
-                    <img class="emisiones" src="{{ url_for('static', filename='images/mapa_' + city + '.png') }}"
+                    <img class="emisiones" src="{{ url_for('static', filename='images/CO2_output_' + city + '.png') }}"
                         alt="Gráfica de emisiones de los vehículos">
                 </div>
             </div>

@@ -72,6 +72,13 @@
 
                         alert('La simulación para ' + city + ' se ha ejecutado correctamente durante ' + duration + ' segundos.');
                         window.location.href = '/cities/' + city + '/stats';
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        // Hide the spinner
+                        $('#loadingSpinner').hide();
+
+                        // Show an error message
+                        alert('Error: ' + jqXHR.responseJSON.error);
                     }
                 });
             });

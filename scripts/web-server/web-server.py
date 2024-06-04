@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory, request, redirect, url_for, jsonify
+from flask import Flask, send_from_directory, request, redirect, url_for, jsonify, make_response
 from flask import render_template
 import sys
 sys.path.append('/data-conversion/sumo-to-fiware')
@@ -155,8 +155,14 @@ def simulate():
     city = data.get('city')
     duration = data.get('duration')
 
-    # Call the function to convert the data
-    result = simulate_new_scenario(city, duration)
+    if not city or not duration:
+        return make_response(jsonify({"error": "Missing city or duration"}), 400)
+
+    try:
+        # Call the function to convert the data
+        result = simulate_new_scenario(city, duration)
+    except Exception as e:
+        return make_response(jsonify({"error": str(e)}), 500)
 
     # Return the result as a JSON response
     return jsonify(result)
