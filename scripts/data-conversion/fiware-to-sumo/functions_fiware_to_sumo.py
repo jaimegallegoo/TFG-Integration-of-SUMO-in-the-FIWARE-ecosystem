@@ -384,7 +384,7 @@ def convert_FIWARE_city(city):
     trips = f'../../../data/output/sumo/{city}/trips.trips.xml'
     veh_routes = f'../../../data/output/sumo/{city}/vehroutes.xml'
     osm_routes = f'../../../data/output/sumo/{city}/osm_pt.rou.xml'
-    os.system(f'python "{sumo_home}/tools/ptlines2flows.py" -n {osm_net} -s {osm_stops} -l {osm_ptlines} -i {stop_infos} -t {trips} -r {veh_routes} -o {osm_routes} --ignore-errors --min-stops 0')
+    os.system(f'python "{sumo_home}/tools/ptlines2flows.py" -n {osm_net} -s {osm_stops} -l {osm_ptlines} -i {stop_infos} -t {trips} -r {veh_routes} -o {osm_routes} -e 3000 --extend-to-fringe --random-begin --seed 42 --vtype-prefix pt_ --verbose --ignore-errors --min-stops 0')
     
     # Delete the temporal JSON files
     os.remove(modifiedFIWAREroute) 
