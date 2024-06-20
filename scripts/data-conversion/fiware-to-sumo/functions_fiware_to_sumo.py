@@ -267,15 +267,23 @@ def convert_FIWARE_stop_to_SUMO_stop(modifiedFIWAREstop, osm_stops, city):
         # ---------------------------------------------------------------------
 
         # Create a new busStop XML element and set its attributes
-        busStop = ET.SubElement(root, "busStop", {
+        busStop_attributes = {
             "id": item['stopCode']['value'],
-            "name": item['name']['value'],
             "lane": lane,
             "startPos": startPos,
             "endPos": endPos,
             "friendlyPos": friendlyPos,
-            "lines": line_string
-        })
+            "lines": line_string,
+        }
+
+        # Only add the "name" attribute if its value is not "No data available"
+
+        route_name = item['name']['value']
+
+        if route_name != "No data available":
+            busStop_attributes["name"] = route_name
+
+        busStop = ET.SubElement(root, "busStop", busStop_attributes)
 
         # Create an access child element for each access lane
         if isinstance(access_lanes, list):
