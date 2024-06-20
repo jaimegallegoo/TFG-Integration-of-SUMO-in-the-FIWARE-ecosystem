@@ -335,10 +335,10 @@ def convert_FIWARE_city(city):
     os.system(f'rm {modifiedSUMOfolder}/osm_pt.rou.xml')
 
     # Delete the original osm.sumocfg file from the modified folder
-    os.system(f'rm {modifiedSUMOfolder}/osm.sumocfg')
+    #os.system(f'rm {modifiedSUMOfolder}/osm.sumocfg')
 
     # Copy the corrected osm.sumocfg file to the modified folder
-    os.system(f'cp ../../../data/input/sumo/simulation_config/osm.sumocfg {modifiedSUMOfolder}')
+    #os.system(f'cp ../../../data/input/sumo/simulation_config/osm.sumocfg {modifiedSUMOfolder}')
 
     # Create temporal JSON files for the FIWARE input data
     modifiedFIWAREroute = '../../../data/temporal/modifiedFIWAREroute.json'
