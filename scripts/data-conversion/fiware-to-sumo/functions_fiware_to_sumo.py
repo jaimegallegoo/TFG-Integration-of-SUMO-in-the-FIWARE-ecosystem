@@ -379,7 +379,7 @@ def convert_FIWARE_city(city):
 
     # Generate the routes file based on the lines and stops
     sumo_home = os.getenv('SUMO_HOME') # C:\Program Files (x86)\Eclipse\Sumo
-    osm_net = f'../../../data/output/sumo/{city}/osm.net.xml'
+    osm_net = f'../../../data/output/sumo/{city}/osm.net.xml.gz'
     stop_infos = f'../../../data/output/sumo/{city}/stopinfos.xml'
     trips = f'../../../data/output/sumo/{city}/trips.trips.xml'
     veh_routes = f'../../../data/output/sumo/{city}/vehroutes.xml'
