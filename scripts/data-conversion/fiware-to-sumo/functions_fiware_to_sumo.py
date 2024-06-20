@@ -214,11 +214,14 @@ def convert_FIWARE_stop_to_SUMO_stop(modifiedFIWAREstop, osm_stops, city):
         # Extract the lines from the source data
         lines = item['refPublicTransportRoute']['value']
 
-        # Extract the line codes from the URNs
-        line_codes = [line.split(':')[-1] for line in lines]
+        if lines != "No data available":
+            # Extract the line codes from the URNs
+            line_codes = [line.split(':')[-1] for line in lines]
 
-        # Join the line codes into a string
-        line_string = ' '.join(line_codes)
+            # Join the line codes into a string
+            line_string = ' '.join(line_codes)
+        else:
+            line_string = lines
 
         # ---------------------------------------------------------------------
 
@@ -273,16 +276,19 @@ def convert_FIWARE_stop_to_SUMO_stop(modifiedFIWAREstop, osm_stops, city):
             "startPos": startPos,
             "endPos": endPos,
             "friendlyPos": friendlyPos,
-            "lines": line_string,
         }
 
         # Only add the "name" attribute if its value is not "No data available"
-
         route_name = item['name']['value']
 
         if route_name != "No data available":
             busStop_attributes["name"] = route_name
 
+        # Only add the "lines" attribute if its value is not "No data available"
+        if line_string != "No data available":
+            busStop_attributes["lines"] = line_string
+
+        # Create the busStop element
         busStop = ET.SubElement(root, "busStop", busStop_attributes)
 
         # Create an access child element for each access lane
