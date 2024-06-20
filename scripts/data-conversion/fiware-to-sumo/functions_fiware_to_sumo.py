@@ -154,21 +154,23 @@ def convert_FIWARE_route_to_SUMO_line(modifiedFIWAREroute, osm_ptlines, city):
             "edges": route_edges
         })        
 
-        # Create a busStop child element for each stop in the route segments
-        for segment in item['routeSegments']['value']:
-            # Check if segment is a dictionary
-            if isinstance(segment, dict):
-                # Take only the first stop
-                stop = segment['refPublicTransportStops'][0]
-                # Split the segment name by '-' and take the first part
-                first_name = segment['segmentName'].split('-')[0].strip()
-                busStop = ET.SubElement(ptLine, "busStop", {
+        # Check if routeSegments value is not "No data available"
+        if item['routeSegments']['value'] != "No data available":
+            # Create a busStop child element for each stop in the route segments
+            for segment in item['routeSegments']['value']:
+                # Check if segment is a dictionary
+                if isinstance(segment, dict):
+                    # Take only the first stop
+                    stop = segment['refPublicTransportStops'][0]
+                    # Split the segment name by '-' and take the first part
+                    first_name = segment['segmentName'].split('-')[0].strip()
+                    busStop = ET.SubElement(ptLine, "busStop", {
                     "id": stop.split(':')[-1],
                     "name": first_name
-                })
-            else:
-                # If segment is not a dictionary, print it out
-                print(f"Unexpected segment: {segment}")
+                    })
+                else:
+                    # If segment is not a dictionary, print it out
+                    print(f"Unexpected segment: {segment}")
 
     # Create an ElementTree object and write it to a file
     tree = ET.ElementTree(root)
