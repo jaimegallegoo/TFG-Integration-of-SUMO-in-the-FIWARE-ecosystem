@@ -58,9 +58,9 @@
                 // Show the spinner
                 $('#loadingSpinner').show();
 
-                // Send a POST request to the "/simulate" endpoint
+                // Send a POST request to the "/cities/<city>/simulation" endpoint
                 $.ajax({
-                    url: '/simulate',
+                    url: '/cities/' + city + '/simulation',
                     type: 'POST',
                     data: JSON.stringify({ city: city, duration: duration }),
                     contentType: 'application/json; charset=utf-8',

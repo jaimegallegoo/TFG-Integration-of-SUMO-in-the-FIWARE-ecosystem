@@ -142,31 +142,30 @@ def conversionToSUMO():
 
     return send_from_directory(app.static_folder, 'FIWARE-conversion.html')
 
-# Serve the simulation.html file
-@app.route('/cities/<city>/simulation', methods=['GET'])
+# Serve the simulation.html file and handle the simulation
+@app.route('/cities/<city>/simulation', methods=['GET', 'POST'])
 def simulation(city):
-    return render_template('simulation.html', city=city)
+    if request.method == 'POST':
+        # Get the city and the duration from the POST request data
+        data = request.get_json()
+        city = data.get('city')
+        duration = data.get('duration')
 
-# Handle the simulation request
-@app.route('/simulate', methods=['POST'])
-def simulate():
-    # Get the city and the duration from the POST request data
-    data = request.get_json()
-    city = data.get('city')
-    duration = data.get('duration')
+        if not city or not duration:
+            return make_response(jsonify({"error": "Missing city or duration"}), 400)
 
-    if not city or not duration:
-        return make_response(jsonify({"error": "Missing city or duration"}), 400)
+        try:
+            # Call the function to convert the data
+            result = simulate_new_scenario(city, duration)
+        except Exception as e:
+            return make_response(jsonify({"error": str(e)}), 500)
 
-    try:
-        # Call the function to convert the data
-        result = simulate_new_scenario(city, duration)
-    except Exception as e:
-        return make_response(jsonify({"error": str(e)}), 500)
-
-    # Return the result as a JSON response
-    return jsonify(result)
-
+        # Return the result as a JSON response
+        return jsonify(result)
+    
+    elif request.method == 'GET':
+        return render_template('simulation.html', city=city)
+    
 # Serve the stats.html file
 @app.route('/cities/<city>/stats', methods=['GET'])
 def stats(city):
