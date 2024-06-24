@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2024-06-24 12:40:26 by Eclipse SUMO netconvert Version 1.19.0
+<!-- generated on 2024-06-24 12:45:29 by Eclipse SUMO netconvert Version 1.19.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
 
     <input>
@@ -57,611 +57,1092 @@
 -->
 
 <additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
-    <busStop id="-2094266782" name="Rosa-Luxemburg-Platz" lane="-200422335_0" startPos="607.23" endPos="807.23" friendlyPos="true">
-        <access lane="1071007431#0_0" pos="0.00" length="276.11" friendlyPos="1"/>
-        <access lane="1071114546#2_0" pos="308.95" length="145.64" friendlyPos="1"/>
-    </busStop>
-    <busStop id="-27411240" name="Hackescher Markt" lane="-4471817#2_0" startPos="0.00" endPos="158.41" friendlyPos="true">
-        <access lane="1018271757_0" pos="3.59" length="7.40" friendlyPos="1"/>
-        <access lane="377110614_0" pos="0.00" length="15.18" friendlyPos="1"/>
-        <access lane="377110617_0" pos="2.91" length="15.07" friendlyPos="1"/>
-        <access lane="377110621#0_0" pos="0.00" length="9.95" friendlyPos="1"/>
-        <access lane="377110621#1_0" pos="0.00" length="12.94" friendlyPos="1"/>
-    </busStop>
-    <busStop id="-3867910426" name="S Hackescher Markt" lane="-387892378_0" startPos="13.94" endPos="28.94" friendlyPos="true" lines="N42">
-        <access lane="1225719331_0" pos="0.00" length="9.91" friendlyPos="1"/>
-        <access lane="1225719334_0" pos="0.00" length="24.28" friendlyPos="1"/>
-        <access lane="288005046#1_0" pos="21.33" length="15.22" friendlyPos="1"/>
-        <access lane="288005046#2_0" pos="0.00" length="15.05" friendlyPos="1"/>
-        <access lane="288005050#2_0" pos="12.14" length="14.02" friendlyPos="1"/>
-    </busStop>
-    <busStop id="-3869306760" name="Deutsches Theater" lane="-176043807#6_0" startPos="260.49" endPos="275.49" friendlyPos="true" lines="245 147">
-        <access lane="1225644852#0_0" pos="266.40" length="10.93" friendlyPos="1"/>
-        <access lane="1225644853#0_0" pos="0.20" length="12.27" friendlyPos="1"/>
-        <access lane="1225644853#1_0" pos="0.00" length="12.31" friendlyPos="1"/>
-        <access lane="1225644854#0_0" pos="0.67" length="16.03" friendlyPos="1"/>
-        <access lane="1225644854#1_0" pos="2.68" length="11.15" friendlyPos="1"/>
-    </busStop>
-    <busStop id="-3869306761" name="Friedrichstraße/Reinhardtstraße" lane="-1100824590#0_0" startPos="47.16" endPos="62.16" friendlyPos="true" lines="245 147">
-        <access lane="-27628628#1_0" pos="0.00" length="56.39" friendlyPos="1"/>
-        <access lane="1087301095#1_0" pos="76.62" length="11.69" friendlyPos="1"/>
-        <access lane="1232425168#4_0" pos="28.64" length="48.94" friendlyPos="1"/>
-        <access lane="465376251#1_0" pos="0.20" length="57.27" friendlyPos="1"/>
-        <access lane="465376251#2_0" pos="35.86" length="11.32" friendlyPos="1"/>
-    </busStop>
-    <busStop id="-3869306765" name="S+U Friedrichstraße" lane="-4402228_1" startPos="1.54" endPos="16.54" friendlyPos="true" lines="N6 147"/>
-    <busStop id="-3869306773" name="Werderscher Markt" lane="-1127602336_1" startPos="4.04" endPos="19.04" friendlyPos="true" lines="147"/>
-    <busStop id="-4692172068" name="Behrenstraße/Wilhelmstraße" lane="-326116285#4_0" startPos="5.13" endPos="20.13" friendlyPos="true" lines="300">
-        <access lane="1158536779#0_0" pos="69.13" length="188.12" friendlyPos="1"/>
-        <access lane="1228455851#0_0" pos="42.22" length="13.62" friendlyPos="1"/>
-        <access lane="1228768550#4_0" pos="133.81" length="11.96" friendlyPos="1"/>
-        <access lane="195089278_0" pos="22.39" length="198.74" friendlyPos="1"/>
-        <access lane="312192482_0" pos="3.38" length="195.34" friendlyPos="1"/>
-    </busStop>
-    <busStop id="-4961125734" name="Rosa-Luxemburg-Platz" lane="-272795470_0" startPos="378.33" endPos="578.33" friendlyPos="true">
-        <access lane="1071114546#2_0" pos="291.20" length="242.84" friendlyPos="1"/>
-    </busStop>
-    <busStop id="-6744165042" name="U Rotes Rathaus" lane="-534588621#0_0" startPos="32.11" endPos="47.11" friendlyPos="true" lines="N60 200 N65 N2 N8 N40 N42 300">
-        <access lane="1000864517#2_0" pos="53.46" length="29.52" friendlyPos="1"/>
-        <access lane="260138647#0_0" pos="8.97" length="39.65" friendlyPos="1"/>
-        <access lane="375901776#5_0" pos="40.56" length="25.80" friendlyPos="1"/>
-        <access lane="687804451#0_0" pos="57.33" length="20.24" friendlyPos="1"/>
-        <access lane="687804451#1_0" pos="0.00" length="29.17" friendlyPos="1"/>
-    </busStop>
-    <busStop id="-7974928190" name="Museumsinsel" lane="-942849697_0" startPos="65.40" endPos="265.40" friendlyPos="true">
-        <access lane="-4611694#1_0" pos="3.18" length="3.96" friendlyPos="1"/>
-        <access lane="1181092879#2_0" pos="71.43" length="16.50" friendlyPos="1"/>
-        <access lane="1215085513#1_0" pos="0.00" length="19.34" friendlyPos="1"/>
-        <access lane="1215085514#1_0" pos="35.27" length="15.31" friendlyPos="1"/>
-        <access lane="4611694#1_0" pos="22.38" length="8.64" friendlyPos="1"/>
-    </busStop>
-    <busStop id="-8090274121" name="Unter den Linden" lane="-71326270_0" startPos="261.94" endPos="461.94" friendlyPos="true">
-        <access lane="1124928840#0_0" pos="0.00" length="2.81" friendlyPos="1"/>
-        <access lane="1124928840#1_0" pos="0.00" length="3.75" friendlyPos="1"/>
-        <access lane="1158551336#1_0" pos="0.20" length="2.90" friendlyPos="1"/>
-        <access lane="1158551336#2_0" pos="0.00" length="2.24" friendlyPos="1"/>
-        <access lane="1158551336#3_0" pos="0.00" length="3.37" friendlyPos="1"/>
-    </busStop>
-    <busStop id="-8196661137" name="Rotes Rathaus" lane="-942849698#0_0" startPos="0.00" endPos="168.52" friendlyPos="true">
-        <access lane="-628330906_0" pos="0.00" length="23.67" friendlyPos="1"/>
-        <access lane="628330906_0" pos="36.79" length="25.65" friendlyPos="1"/>
-        <access lane="881301601#1_0" pos="13.72" length="25.15" friendlyPos="1"/>
-        <access lane="881301602_0" pos="9.18" length="26.14" friendlyPos="1"/>
-        <access lane="882671343_0" pos="8.54" length="25.90" friendlyPos="1"/>
-    </busStop>
-    <busStop id="-9023382187" name="U Unter den Linden" lane="-1119933622_1" startPos="62.71" endPos="77.71" friendlyPos="true" lines="N6 147"/>
-    <busStop id="10567768924" name="Jüdenstraße" lane="1132678575#1_0" startPos="47.85" endPos="62.85" friendlyPos="true" lines="248 N8">
-        <access lane="1133457737#0_0" pos="0.00" length="7.39" friendlyPos="1"/>
-        <access lane="1133457737#1_0" pos="0.00" length="14.86" friendlyPos="1"/>
-        <access lane="1133457740#0_0" pos="53.42" length="18.02" friendlyPos="1"/>
-        <access lane="1133457740#1_0" pos="0.00" length="18.14" friendlyPos="1"/>
-        <access lane="1133457754#1_0" pos="0.88" length="27.07" friendlyPos="1"/>
-    </busStop>
-    <busStop id="10884008292" name="U Unter den Linden" lane="194069450#0_0" startPos="44.10" endPos="59.10" friendlyPos="true" lines="N6">
-        <access lane="1037130999#4_0" pos="0.20" length="21.39" friendlyPos="1"/>
-        <access lane="1037138981#1_0" pos="0.00" length="19.56" friendlyPos="1"/>
-        <access lane="1158551342#1_0" pos="0.00" length="19.59" friendlyPos="1"/>
-        <access lane="196850626#0_0" pos="6.90" length="16.06" friendlyPos="1"/>
-        <access lane="463898977#5_0" pos="105.89" length="12.16" friendlyPos="1"/>
-    </busStop>
-    <busStop id="11178436224" name="Dorotheenstraße/Friedrichstraße" lane="158023913#1_1" startPos="2.99" endPos="17.99" friendlyPos="true" lines="245"/>
-    <busStop id="11178436225" name="S+U Friedrichstraße" lane="34848160#2_1" startPos="4.04" endPos="19.04" friendlyPos="true" lines="245"/>
-    <busStop id="11732225637" name="S+U Alexanderplatz/Memhardstraße" lane="171826984#2_0" startPos="191.88" endPos="206.88" friendlyPos="true" lines="N8">
-        <access lane="1079045029#3_0" pos="37.90" length="38.49" friendlyPos="1"/>
-        <access lane="312392973_0" pos="40.69" length="58.83" friendlyPos="1"/>
-        <access lane="312392974#4_0" pos="0.24" length="51.32" friendlyPos="1"/>
-        <access lane="312392974#5_0" pos="28.51" length="15.17" friendlyPos="1"/>
-        <access lane="687787219_0" pos="0.73" length="48.31" friendlyPos="1"/>
-    </busStop>
-    <busStop id="11732225639" name="S+U Alexanderplatz/Memhardstraße" lane="171826984#2_0" startPos="206.24" endPos="221.24" friendlyPos="true" lines="N40 N2">
-        <access lane="1079045027#1_0" pos="48.92" length="57.42" friendlyPos="1"/>
-        <access lane="1079045029#2_0" pos="7.51" length="57.44" friendlyPos="1"/>
-        <access lane="1079045029#3_0" pos="23.54" length="38.29" friendlyPos="1"/>
-        <access lane="312392974#5_0" pos="41.63" length="14.15" friendlyPos="1"/>
-        <access lane="687787219_0" pos="7.34" length="67.40" friendlyPos="1"/>
-    </busStop>
-    <busStop id="1267954712" name="Werderscher Markt" lane="1234568395_0" startPos="0.00" endPos="0.10" friendlyPos="true"/>
-    <busStop id="1628877119" name="S+U Alexanderplatz/Dircksenstraße" lane="148452597#4_0" startPos="26.50" endPos="51.50" friendlyPos="true">
-        <access lane="-4790825#2_0" pos="8.24" length="7.69" friendlyPos="1"/>
-        <access lane="1079045031#2_0" pos="2.37" length="69.42" friendlyPos="1"/>
-        <access lane="1079045031#3_0" pos="43.19" length="11.80" friendlyPos="1"/>
-        <access lane="1079045032#0_0" pos="0.20" length="68.25" friendlyPos="1"/>
-        <access lane="1079045032#3_0" pos="0.00" length="65.97" friendlyPos="1"/>
-    </busStop>
-    <busStop id="1633759760" name="S Hackescher Markt" lane="803941122_0" startPos="35.88" endPos="60.88" friendlyPos="true" lines="M4 M5 M6">
-        <access lane="100950875#2_0" pos="34.96" length="13.34" friendlyPos="1"/>
-        <access lane="175506753_0" pos="2.67" length="6.23" friendlyPos="1"/>
-        <access lane="46517262#3_0" pos="26.64" length="14.16" friendlyPos="1"/>
-        <access lane="46517262#4_0" pos="1.69" length="10.06" friendlyPos="1"/>
-        <access lane="46517262#5_0" pos="0.00" length="12.96" friendlyPos="1"/>
-    </busStop>
-    <busStop id="1633759766" name="S Hackescher Markt" lane="421641064_0" startPos="40.18" endPos="65.18" friendlyPos="true" lines="M4 M5 M1 M6">
-        <access lane="1157108519#3_0" pos="16.06" length="10.99" friendlyPos="1"/>
-        <access lane="268940759_0" pos="2.68" length="4.32" friendlyPos="1"/>
-        <access lane="304514893#9_0" pos="5.00" length="2.34" friendlyPos="1"/>
-        <access lane="47986664#2_0" pos="0.20" length="11.34" friendlyPos="1"/>
-        <access lane="47986664#3_0" pos="0.00" length="11.19" friendlyPos="1"/>
-    </busStop>
-    <busStop id="1661927028" name="Monbijouplatz" lane="101699679#13_0" startPos="7.32" endPos="32.32" friendlyPos="true" lines="M5 M1">
-        <access lane="-30721660#3_0" pos="0.00" length="4.71" friendlyPos="1"/>
-        <access lane="-30721660#4_0" pos="19.72" length="7.67" friendlyPos="1"/>
-        <access lane="1085398475#3_0" pos="19.81" length="6.89" friendlyPos="1"/>
-        <access lane="1158979785#4_0" pos="15.50" length="14.44" friendlyPos="1"/>
-        <access lane="4610361#0_0" pos="0.00" length="9.27" friendlyPos="1"/>
-    </busStop>
-    <busStop id="1662153916" name="U Weinmeisterstraße/Gipsstraße" lane="153537606#4_0" startPos="51.51" endPos="76.51" friendlyPos="true" lines="M1">
-        <access lane="1071210930#3_0" pos="0.00" length="113.71" friendlyPos="1"/>
-        <access lane="1071210938#2_0" pos="48.75" length="85.64" friendlyPos="1"/>
-        <access lane="1212138776#0_0" pos="72.52" length="9.08" friendlyPos="1"/>
-        <access lane="1212138776#1_0" pos="0.00" length="89.07" friendlyPos="1"/>
-        <access lane="1212138779#11_0" pos="47.86" length="61.62" friendlyPos="1"/>
-    </busStop>
-    <busStop id="1668497956" name="S Hackescher Markt" lane="153537614#3_0" startPos="0.00" endPos="24.41" friendlyPos="true" lines="M1">
-        <access lane="1071210926#8_0" pos="7.60" length="12.57" friendlyPos="1"/>
-        <access lane="1192158309#1_0" pos="0.20" length="12.62" friendlyPos="1"/>
-        <access lane="59286500#2_0" pos="0.00" length="13.23" friendlyPos="1"/>
-        <access lane="59286500#3_0" pos="0.00" length="14.23" friendlyPos="1"/>
-        <access lane="59286500#4_0" pos="0.00" length="17.16" friendlyPos="1"/>
-    </busStop>
-    <busStop id="1668717159" name="S Oranienburger Straße" lane="143891040#0_0" startPos="261.96" endPos="286.96" friendlyPos="true" lines="M5 M1">
-        <access lane="1088718158#4_0" pos="135.84" length="71.75" friendlyPos="1"/>
-        <access lane="1095407477#2_0" pos="136.59" length="67.08" friendlyPos="1"/>
-        <access lane="1126615536#0_0" pos="0.00" length="66.90" friendlyPos="1"/>
-        <access lane="1126615536#1_0" pos="0.00" length="74.06" friendlyPos="1"/>
-        <access lane="1260677728#1_0" pos="55.88" length="49.40" friendlyPos="1"/>
-    </busStop>
-    <busStop id="1673526976" name="Georgenstraße/Am Kupfergraben" lane="167272512#3_0" startPos="0.00" endPos="5.35" friendlyPos="true" lines="12 M1">
-        <access lane="1088748335#6_0" pos="79.00" length="12.98" friendlyPos="1"/>
-        <access lane="1158585780#0_0" pos="0.00" length="9.54" friendlyPos="1"/>
-        <access lane="1264428813#5_0" pos="0.00" length="12.88" friendlyPos="1"/>
-        <access lane="463829474#0_0" pos="0.20" length="4.05" friendlyPos="1"/>
-        <access lane="463829474#1_0" pos="0.00" length="2.34" friendlyPos="1"/>
-    </busStop>
-    <busStop id="1745157971" name="Hackescher Markt" lane="32590640#1_0" startPos="0.00" endPos="180.72" friendlyPos="true" lines="S5 S7 S3 S9">
-        <access lane="275008387#1_0" pos="26.68" length="8.50" friendlyPos="1"/>
-        <access lane="377110615_0" pos="0.00" length="9.96" friendlyPos="1"/>
-        <access lane="377110617_0" pos="0.00" length="13.04" friendlyPos="1"/>
-        <access lane="377110622#2_0" pos="0.20" length="9.88" friendlyPos="1"/>
-        <access lane="377110622#3_0" pos="0.07" length="6.43" friendlyPos="1"/>
-    </busStop>
-    <busStop id="1823298700" name="S+U Friedrichstraße" lane="195411594#3_0" startPos="40.76" endPos="65.76" friendlyPos="true" lines="12 M1">
-        <access lane="1124928835_0" pos="1.39" length="14.26" friendlyPos="1"/>
-        <access lane="175885742_0" pos="4.78" length="16.77" friendlyPos="1"/>
-        <access lane="175885744_0" pos="5.01" length="19.00" friendlyPos="1"/>
-        <access lane="43185731_0" pos="0.00" length="14.29" friendlyPos="1"/>
-        <access lane="70163730_0" pos="18.09" length="18.84" friendlyPos="1"/>
-    </busStop>
-    <busStop id="1827996414" name="Spandauer Straße/Marienkirche" lane="72157174#1_0" startPos="26.16" endPos="41.16" friendlyPos="true" lines="100 200 N5 N8 N40 N2">
-        <access lane="100113532_0" pos="8.42" length="46.65" friendlyPos="1"/>
-        <access lane="1112464598#1_0" pos="37.50" length="45.37" friendlyPos="1"/>
-        <access lane="171826987#2_0" pos="0.00" length="54.41" friendlyPos="1"/>
-        <access lane="173278835_0" pos="6.28" length="52.35" friendlyPos="1"/>
-        <access lane="312392974#0_0" pos="33.40" length="14.57" friendlyPos="1"/>
-    </busStop>
-    <busStop id="1827996417" name="Spandauer Straße/Marienkirche" lane="195401013#2_0" startPos="245.49" endPos="260.49" friendlyPos="true" lines="N60 100 200 N65 N2 N5 N8 N40">
-        <access lane="1079045029#4_0" pos="26.40" length="17.89" friendlyPos="1"/>
-        <access lane="1112464598#0_0" pos="0.00" length="30.93" friendlyPos="1"/>
-        <access lane="113595955#1_0" pos="32.27" length="30.71" friendlyPos="1"/>
-        <access lane="1212782019#1_0" pos="0.00" length="47.22" friendlyPos="1"/>
-        <access lane="312392974#1_0" pos="27.58" length="40.88" friendlyPos="1"/>
-    </busStop>
-    <busStop id="1862699772" name="S Oranienburger Straße" lane="154321040#5_0" startPos="164.84" endPos="189.84" friendlyPos="true" lines="M5 M1">
-        <access lane="1088718158#4_0" pos="135.84" length="70.72" friendlyPos="1"/>
-        <access lane="1095407477#2_0" pos="136.59" length="63.68" friendlyPos="1"/>
-        <access lane="1126615536#0_0" pos="0.00" length="65.73" friendlyPos="1"/>
-        <access lane="1126615536#1_0" pos="0.00" length="72.73" friendlyPos="1"/>
-        <access lane="1260677728#1_0" pos="55.88" length="48.84" friendlyPos="1"/>
-    </busStop>
-    <busStop id="1930939368" name="Friedrichstraße" lane="237751551_0" startPos="457.74" endPos="657.74" friendlyPos="true" lines="S1 S2 S25 S26">
-        <access lane="194073677#0_0" pos="13.88" length="9.97" friendlyPos="1"/>
-        <access lane="254523892#1_0" pos="3.73" length="8.00" friendlyPos="1"/>
-        <access lane="335043668#1_0" pos="3.40" length="2.85" friendlyPos="1"/>
-        <access lane="335576650#0_0" pos="6.24" length="10.81" friendlyPos="1"/>
-        <access lane="440946436#2_0" pos="2.64" length="9.06" friendlyPos="1"/>
-    </busStop>
-    <busStop id="2094266782" name="Rosa-Luxemburg-Platz" lane="200422335_0" startPos="462.07" endPos="662.07" friendlyPos="true">
-        <access lane="1071007431#0_0" pos="0.00" length="276.11" friendlyPos="1"/>
-        <access lane="1071114546#2_0" pos="308.95" length="145.64" friendlyPos="1"/>
-    </busStop>
-    <busStop id="2175753204" name="Am Kupfergraben" lane="144014228#2_0" startPos="12.02" endPos="37.02" friendlyPos="true" lines="12">
-        <access lane="-122820534#0_0" pos="51.45" length="11.19" friendlyPos="1"/>
-        <access lane="-330840136#1_0" pos="0.31" length="11.64" friendlyPos="1"/>
-        <access lane="-340498976#4_0" pos="0.00" length="9.97" friendlyPos="1"/>
-        <access lane="1119838636#1_0" pos="0.00" length="10.30" friendlyPos="1"/>
-        <access lane="330840136#1_0" pos="0.00" length="14.71" friendlyPos="1"/>
-    </busStop>
-    <busStop id="247600965" name="S+U Friedrichstraße" lane="22820560#1_0" startPos="34.71" endPos="59.71" friendlyPos="true" lines="12">
-        <access lane="1165367691#2_0" pos="0.00" length="36.62" friendlyPos="1"/>
-        <access lane="175885743_0" pos="4.26" length="26.81" friendlyPos="1"/>
-        <access lane="175885745_0" pos="4.43" length="27.47" friendlyPos="1"/>
-        <access lane="465376241#0_0" pos="27.98" length="23.61" friendlyPos="1"/>
-        <access lane="465376242#0_0" pos="47.31" length="15.78" friendlyPos="1"/>
-    </busStop>
-    <busStop id="247603398" name="Am Kupfergraben" lane="144014230#3_0" startPos="30.53" endPos="55.53" friendlyPos="true" lines="M1">
-        <access lane="-1119837993_0" pos="16.56" length="2.44" friendlyPos="1"/>
-        <access lane="-132460632#0_0" pos="25.87" length="36.45" friendlyPos="1"/>
-        <access lane="1119837993_0" pos="43.41" length="5.36" friendlyPos="1"/>
-        <access lane="131765141#2_0" pos="0.00" length="31.85" friendlyPos="1"/>
-        <access lane="463829467#0_0" pos="16.55" length="8.77" friendlyPos="1"/>
-    </busStop>
-    <busStop id="2603331683" name="Berlin Friedrichstraße" lane="25946668#1_0" startPos="0.00" endPos="200.00" friendlyPos="true" lines="RE8 RE2 RE1 RB23 RE7 RB14">
-        <access lane="254523901#1_0" pos="18.65" length="5.45" friendlyPos="1"/>
-        <access lane="274524361#0_0" pos="0.00" length="22.86" friendlyPos="1"/>
-        <access lane="274524381#0_0" pos="2.96" length="23.86" friendlyPos="1"/>
-        <access lane="274524381#1_0" pos="2.42" length="20.29" friendlyPos="1"/>
-        <access lane="335043665#0_0" pos="0.00" length="19.52" friendlyPos="1"/>
-    </busStop>
-    <busStop id="2603331695" name="Friedrichstraße" lane="25946662#2_0" startPos="0.00" endPos="200.00" friendlyPos="true" lines="S5 S7 S3 S9">
-        <access lane="194073677#3_0" pos="11.58" length="15.42" friendlyPos="1"/>
-        <access lane="254523876_0" pos="0.00" length="18.49" friendlyPos="1"/>
-        <access lane="335043665#0_0" pos="1.78" length="19.63" friendlyPos="1"/>
-        <access lane="335043665#1_0" pos="0.20" length="15.91" friendlyPos="1"/>
-        <access lane="335043665#2_0" pos="1.65" length="13.05" friendlyPos="1"/>
-    </busStop>
-    <busStop id="270727260" name="S+U Alexanderplatz/Memhardstraße" lane="625647962_0" startPos="12.60" endPos="27.60" friendlyPos="true" lines="N60 100">
-        <access lane="1071049527_0" pos="0.00" length="40.97" friendlyPos="1"/>
-        <access lane="1071049530_0" pos="0.00" length="13.15" friendlyPos="1"/>
-        <access lane="1113401735#1_0" pos="6.67" length="37.19" friendlyPos="1"/>
-        <access lane="473149640#0_0" pos="105.13" length="13.85" friendlyPos="1"/>
-        <access lane="473149640#1_0" pos="0.00" length="18.09" friendlyPos="1"/>
-    </busStop>
-    <busStop id="271296293" name="Staatsoper" lane="169195795#0_0" startPos="31.31" endPos="46.31" friendlyPos="true" lines="100 N5 300">
-        <access lane="1037130735#3_0" pos="67.17" length="37.78" friendlyPos="1"/>
-        <access lane="205728152#6_0" pos="139.25" length="47.24" friendlyPos="1"/>
-        <access lane="339201236_0" pos="22.92" length="54.62" friendlyPos="1"/>
-        <access lane="442389818#1_0" pos="35.22" length="32.14" friendlyPos="1"/>
-        <access lane="442389818#7_0" pos="39.08" length="5.31" friendlyPos="1"/>
-    </busStop>
-    <busStop id="271373068" name="S+U Brandenburger Tor" lane="1119937599#3_0" startPos="47.19" endPos="62.19" friendlyPos="true" lines="100 N5">
-        <access lane="1171464774#4_0" pos="54.78" length="13.97" friendlyPos="1"/>
-        <access lane="304753158#0_0" pos="0.00" length="50.41" friendlyPos="1"/>
-        <access lane="317859982#2_0" pos="53.71" length="22.53" friendlyPos="1"/>
-        <access lane="915958593#3_0" pos="53.13" length="33.90" friendlyPos="1"/>
-        <access lane="915958593#4_0" pos="138.51" length="16.15" friendlyPos="1"/>
-    </busStop>
-    <busStop id="271884565" name="Memhardstraße" lane="523630412#0_0" startPos="63.31" endPos="78.31" friendlyPos="true">
-        <access lane="1071049505#0_0" pos="22.38" length="18.17" friendlyPos="1"/>
-        <access lane="1071049506_0" pos="0.00" length="33.30" friendlyPos="1"/>
-        <access lane="1071049522#0_0" pos="79.92" length="36.99" friendlyPos="1"/>
-        <access lane="1254735201#0_0" pos="5.02" length="34.61" friendlyPos="1"/>
-        <access lane="1254735201#1_0" pos="18.44" length="6.05" friendlyPos="1"/>
-    </busStop>
-    <busStop id="272408975" name="U Unter den Linden" lane="188386313#1_0" startPos="11.41" endPos="26.41" friendlyPos="true" lines="100 N5 300">
-        <access lane="1124934333#1_0" pos="17.17" length="16.76" friendlyPos="1"/>
-        <access lane="881245039_0" pos="0.00" length="23.47" friendlyPos="1"/>
-        <access lane="882389495#1_0" pos="157.00" length="17.30" friendlyPos="1"/>
-        <access lane="883691541#4_0" pos="0.20" length="23.91" friendlyPos="1"/>
-        <access lane="883691541#5_0" pos="0.20" length="18.80" friendlyPos="1"/>
-    </busStop>
-    <busStop id="27411240" name="Hackescher Markt" lane="4471817#2_0" startPos="0.00" endPos="158.41" friendlyPos="true" lines="S5 S7 S3 S9">
-        <access lane="1018271757_0" pos="3.59" length="7.40" friendlyPos="1"/>
-        <access lane="377110614_0" pos="0.00" length="15.18" friendlyPos="1"/>
-        <access lane="377110617_0" pos="2.91" length="15.07" friendlyPos="1"/>
-        <access lane="377110621#0_0" pos="0.00" length="9.95" friendlyPos="1"/>
-        <access lane="377110621#1_0" pos="0.00" length="12.94" friendlyPos="1"/>
-    </busStop>
-    <busStop id="27412232" name="Friedrichstraße" lane="25946658#2_0" startPos="21.85" endPos="221.85" friendlyPos="true" lines="S5 S7 S3 S9">
-        <access lane="254523886_0" pos="0.00" length="20.32" friendlyPos="1"/>
-        <access lane="254523901#1_0" pos="18.49" length="4.90" friendlyPos="1"/>
-        <access lane="335043665#0_0" pos="0.00" length="14.71" friendlyPos="1"/>
-        <access lane="335043665#1_0" pos="0.00" length="17.79" friendlyPos="1"/>
-        <access lane="335043665#2_0" pos="0.00" length="21.36" friendlyPos="1"/>
-    </busStop>
-    <busStop id="2776873647" name="Berlin Alexanderplatz" lane="32590636#1_0" startPos="404.31" endPos="604.31" friendlyPos="true" lines="RE8 RB23 RE1 RE2 RB14 RE7">
-        <access lane="1079045031#3_0" pos="121.79" length="66.84" friendlyPos="1"/>
-        <access lane="169195791#0_0" pos="68.08" length="35.12" friendlyPos="1"/>
-        <access lane="169195791#1_0" pos="0.00" length="37.47" friendlyPos="1"/>
-        <access lane="304987178#1_0" pos="53.22" length="40.10" friendlyPos="1"/>
-        <access lane="72678525_0" pos="23.30" length="114.71" friendlyPos="1"/>
-    </busStop>
-    <busStop id="2792364395" name="Friedrichstraße" lane="378659153_0" startPos="391.98" endPos="591.98" friendlyPos="true" lines="U6">
-        <access lane="254523888#1_0" pos="0.20" length="19.95" friendlyPos="1"/>
-        <access lane="274513566#0_0" pos="0.48" length="19.26" friendlyPos="1"/>
-        <access lane="274513566#1_0" pos="0.75" length="15.32" friendlyPos="1"/>
-        <access lane="422000253#1_0" pos="21.32" length="19.40" friendlyPos="1"/>
-        <access lane="465376259#1_0" pos="11.07" length="3.54" friendlyPos="1"/>
-    </busStop>
-    <busStop id="2915579612" name="S Hackescher Markt" lane="1225719331_0" startPos="0.00" endPos="0.66" friendlyPos="true"/>
-    <busStop id="2915590925" name="Spandauer Straße/Marienkirche" lane="202157002#2_0" startPos="8.57" endPos="23.57" friendlyPos="true" lines="N42">
-        <access lane="1097921378_0" pos="0.60" length="9.03" friendlyPos="1"/>
-        <access lane="1097921384#4_0" pos="15.60" length="13.47" friendlyPos="1"/>
-        <access lane="1097921384#5_0" pos="0.00" length="14.69" friendlyPos="1"/>
-        <access lane="375901769#2_0" pos="4.54" length="22.83" friendlyPos="1"/>
-        <access lane="473149642_0" pos="6.41" length="11.42" friendlyPos="1"/>
-    </busStop>
-    <busStop id="29221534" name="Memhardstraße" lane="4613308#2_0" startPos="27.05" endPos="42.05" friendlyPos="true">
-        <access lane="1071049505#0_0" pos="0.00" length="30.00" friendlyPos="1"/>
-        <access lane="1071049522#0_0" pos="50.19" length="15.71" friendlyPos="1"/>
-        <access lane="1071049522#1_0" pos="0.00" length="56.13" friendlyPos="1"/>
-        <access lane="1254735201#1_0" pos="42.93" length="27.40" friendlyPos="1"/>
-        <access lane="474687884_0" pos="29.11" length="43.74" friendlyPos="1"/>
-    </busStop>
-    <busStop id="29805120" name="Berlin Friedrichstraße" lane="25946656#1_0" startPos="18.49" endPos="218.49" friendlyPos="true" lines="RE8 RB23 RE1 RE2 RB14 RE7">
-        <access lane="237526578#0_0" pos="33.02" length="14.70" friendlyPos="1"/>
-        <access lane="254339584_0" pos="0.00" length="18.47" friendlyPos="1"/>
-        <access lane="274524378_0" pos="0.00" length="16.02" friendlyPos="1"/>
-        <access lane="274524379#0_0" pos="0.00" length="12.65" friendlyPos="1"/>
-        <access lane="274524379#1_0" pos="0.00" length="16.02" friendlyPos="1"/>
-    </busStop>
-    <busStop id="30731481" name="Spandauer Straße/Marienkirche" lane="1284740821#1_0" startPos="32.90" endPos="57.90" friendlyPos="true" lines="M4 M5 M6">
-        <access lane="-1257266496#1_0" pos="0.00" length="20.54" friendlyPos="1"/>
-        <access lane="1097921384#3_0" pos="21.32" length="28.93" friendlyPos="1"/>
-        <access lane="1097921384#4_0" pos="1.98" length="23.34" friendlyPos="1"/>
-        <access lane="1257266496#0_0" pos="0.24" length="27.85" friendlyPos="1"/>
-        <access lane="1257266496#1_0" pos="2.10" length="18.09" friendlyPos="1"/>
-    </busStop>
-    <busStop id="30731700" name="U Oranienburger Tor" lane="143891040#0_0" startPos="0.00" endPos="25.00" friendlyPos="true" lines="M1">
-        <access lane="374734393_0" pos="124.35" length="13.55" friendlyPos="1"/>
-        <access lane="374734394#0_0" pos="128.27" length="19.76" friendlyPos="1"/>
-        <access lane="374734394#1_0" pos="0.00" length="154.78" friendlyPos="1"/>
-        <access lane="388702039#0_0" pos="0.00" length="37.28" friendlyPos="1"/>
-        <access lane="388702041#7_0" pos="100.42" length="0.00" friendlyPos="1"/>
-    </busStop>
-    <busStop id="3139804550" name="S Hackescher Markt" lane="1225719334_0" startPos="0.00" endPos="0.34" friendlyPos="true"/>
-    <busStop id="365714322" name="Werderscher Markt" lane="1234568396_0" startPos="0.00" endPos="0.11" friendlyPos="true"/>
-    <busStop id="366500581" name="Berlin Friedrichstraße" lane="29384661#1_0" startPos="12.18" endPos="212.18" friendlyPos="true">
-        <access lane="254339569_0" pos="21.28" length="17.57" friendlyPos="1"/>
-        <access lane="254339584_0" pos="0.00" length="19.22" friendlyPos="1"/>
-        <access lane="274524378_0" pos="0.20" length="15.26" friendlyPos="1"/>
-        <access lane="274524379#1_0" pos="0.20" length="15.26" friendlyPos="1"/>
-        <access lane="274524379#2_0" pos="2.23" length="11.67" friendlyPos="1"/>
-    </busStop>
-    <busStop id="366500582" name="Berlin Friedrichstraße" lane="442921389#1_0" startPos="0.00" endPos="200.00" friendlyPos="true">
-        <access lane="274524364#0_0" pos="0.00" length="21.09" friendlyPos="1"/>
-        <access lane="274524378_0" pos="0.20" length="20.36" friendlyPos="1"/>
-        <access lane="274524379#1_0" pos="0.20" length="20.36" friendlyPos="1"/>
-        <access lane="274524379#2_0" pos="2.23" length="14.14" friendlyPos="1"/>
-        <access lane="274524381#0_0" pos="0.00" length="20.12" friendlyPos="1"/>
-    </busStop>
-    <busStop id="3867910417" name="Jüdenstraße" lane="4611726#1_0" startPos="23.76" endPos="38.76" friendlyPos="true" lines="248 N8 300">
-        <access lane="1133457737#0_0" pos="0.00" length="27.51" friendlyPos="1"/>
-        <access lane="1133457753#1_0" pos="54.21" length="18.43" friendlyPos="1"/>
-        <access lane="1133457753#2_0" pos="0.00" length="18.69" friendlyPos="1"/>
-        <access lane="1133457754#0_0" pos="0.20" length="14.98" friendlyPos="1"/>
-        <access lane="1133457754#1_0" pos="0.88" length="6.94" friendlyPos="1"/>
-    </busStop>
-    <busStop id="3867910420" name="U Museumsinsel" lane="61584187#1_0" startPos="15.29" endPos="30.29" friendlyPos="true" lines="100 N5 300">
-        <access lane="-383505780#2_0" pos="5.95" length="8.19" friendlyPos="1"/>
-        <access lane="1048127663#0_0" pos="0.00" length="19.19" friendlyPos="1"/>
-        <access lane="383505780#2_0" pos="10.72" length="11.19" friendlyPos="1"/>
-        <access lane="4773023#0_0" pos="0.00" length="24.83" friendlyPos="1"/>
-        <access lane="4773024#0_0" pos="0.00" length="19.59" friendlyPos="1"/>
-    </busStop>
-    <busStop id="3867910421" name="U Museumsinsel" lane="831694400#0_0" startPos="16.29" endPos="31.29" friendlyPos="true" lines="100 N5 300">
-        <access lane="1056367957#0_0" pos="23.13" length="15.77" friendlyPos="1"/>
-        <access lane="1173723266#20_0" pos="76.10" length="23.30" friendlyPos="1"/>
-        <access lane="1173733854#10_0" pos="21.38" length="23.30" friendlyPos="1"/>
-        <access lane="1173733854#2_0" pos="65.90" length="14.26" friendlyPos="1"/>
-        <access lane="1224670640#1_0" pos="46.67" length="23.64" friendlyPos="1"/>
-    </busStop>
-    <busStop id="3867910422" name="Neumannsgasse" lane="755551646#0_0" startPos="0.00" endPos="0.20" friendlyPos="true">
-        <access lane="-561049084#1_0" pos="0.00" length="7.87" friendlyPos="1"/>
-        <access lane="1199398234#0_0" pos="128.69" length="18.08" friendlyPos="1"/>
-        <access lane="1199398234#1_0" pos="0.00" length="21.50" friendlyPos="1"/>
-        <access lane="1199398235#0_0" pos="136.45" length="15.60" friendlyPos="1"/>
-        <access lane="561049084#1_0" pos="4.11" length="9.46" friendlyPos="1"/>
-    </busStop>
-    <busStop id="3867910423" name="Neumannsgasse" lane="1127597264#1_0" startPos="1.92" endPos="16.92" friendlyPos="true" lines="147">
-        <access lane="-4610607#0_0" pos="2.79" length="32.22" friendlyPos="1"/>
-        <access lane="1199398234#1_0" pos="43.25" length="18.56" friendlyPos="1"/>
-        <access lane="1199398235#1_0" pos="9.92" length="15.73" friendlyPos="1"/>
-        <access lane="4610607#0_0" pos="0.00" length="20.20" friendlyPos="1"/>
-        <access lane="4610607#1_0" pos="0.00" length="26.96" friendlyPos="1"/>
-    </busStop>
-    <busStop id="3867910424" name="Nikolaiviertel" lane="81112790#1_0" startPos="18.49" endPos="33.49" friendlyPos="true">
-        <access lane="1195383153_0" pos="139.70" length="27.78" friendlyPos="1"/>
-        <access lane="137630047_0" pos="59.51" length="28.97" friendlyPos="1"/>
-        <access lane="23851908_0" pos="11.06" length="25.63" friendlyPos="1"/>
-        <access lane="23851922_0" pos="38.01" length="21.99" friendlyPos="1"/>
-        <access lane="780334232#0_0" pos="8.51" length="14.47" friendlyPos="1"/>
-    </busStop>
-    <busStop id="3867910427" name="S Hackescher Markt" lane="370359204#3_0" startPos="46.31" endPos="61.31" friendlyPos="true" lines="N42">
-        <access lane="1225719332_0" pos="0.00" length="18.29" friendlyPos="1"/>
-        <access lane="1225719334_0" pos="0.00" length="10.14" friendlyPos="1"/>
-        <access lane="288005046#2_0" pos="11.58" length="14.60" friendlyPos="1"/>
-        <access lane="288005050#1_0" pos="24.90" length="14.70" friendlyPos="1"/>
-        <access lane="288005050#2_0" pos="0.00" length="14.09" friendlyPos="1"/>
-    </busStop>
-    <busStop id="3867910438" name="Spandauer Straße/Marienkirche" lane="4773465#2_0" startPos="16.59" endPos="31.59" friendlyPos="true" lines="N42">
-        <access lane="1097921385#0_0" pos="0.00" length="20.16" friendlyPos="1"/>
-        <access lane="1132080496_0" pos="0.20" length="19.44" friendlyPos="1"/>
-        <access lane="557076767#2_0" pos="22.26" length="22.86" friendlyPos="1"/>
-        <access lane="561326926#0_0" pos="0.17" length="20.31" friendlyPos="1"/>
-        <access lane="561326926#1_0" pos="5.34" length="12.96" friendlyPos="1"/>
-    </busStop>
-    <busStop id="3867922463" name="U Museumsinsel" lane="383505780#2_0" startPos="1.67" endPos="16.67" friendlyPos="true"/>
-    <busStop id="3867922470" name="Spandauer Straße/Marienkirche" lane="1097921378_0" startPos="0.00" endPos="0.60" friendlyPos="true"/>
-    <busStop id="3867922477" name="S+U Alexanderplatz/Memhardstraße" lane="1071049527_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
-    <busStop id="3869306759" name="Deutsches Theater" lane="176043807#3_0" startPos="24.74" endPos="39.74" friendlyPos="true" lines="245">
-        <access lane="1225644852#0_0" pos="236.85" length="10.91" friendlyPos="1"/>
-        <access lane="1225644853#0_0" pos="0.20" length="52.96" friendlyPos="1"/>
-        <access lane="1225644853#1_0" pos="0.00" length="53.22" friendlyPos="1"/>
-        <access lane="1225644854#0_0" pos="0.67" length="56.96" friendlyPos="1"/>
-        <access lane="1225644854#1_0" pos="32.23" length="11.17" friendlyPos="1"/>
-    </busStop>
-    <busStop id="3869306762" name="Friedrichstraße/Reinhardtstraße" lane="111251382#3_0" startPos="3.55" endPos="18.55" friendlyPos="true" lines="245">
-        <access lane="-27628628#1_0" pos="0.00" length="38.27" friendlyPos="1"/>
-        <access lane="1087301095#1_0" pos="89.44" length="11.70" friendlyPos="1"/>
-        <access lane="1232425168#4_0" pos="31.82" length="35.89" friendlyPos="1"/>
-        <access lane="465376251#1_0" pos="0.20" length="38.66" friendlyPos="1"/>
-        <access lane="465376251#2_0" pos="23.03" length="11.50" friendlyPos="1"/>
-    </busStop>
-    <busStop id="3869306764" name="S+U Friedrichstraße" lane="1151064403_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="245 N6">
-        <access lane="-4402228_0" pos="15.27" length="7.05" friendlyPos="1"/>
-        <access lane="1134014824#3_0" pos="15.39" length="10.92" friendlyPos="1"/>
-        <access lane="304517627#2_0" pos="7.36" length="11.72" friendlyPos="1"/>
-        <access lane="422000254_0" pos="0.00" length="15.88" friendlyPos="1"/>
-        <access lane="465376260#0_0" pos="0.00" length="18.85" friendlyPos="1"/>
-    </busStop>
-    <busStop id="3869306769" name="Friedrichstraße" lane="295376548_0" startPos="91.23" endPos="291.23" friendlyPos="true" lines="U6">
-        <access lane="-4402228_0" pos="22.01" length="22.52" friendlyPos="1"/>
-        <access lane="1134014824#3_0" pos="22.13" length="18.63" friendlyPos="1"/>
-        <access lane="190447768#1_0" pos="0.00" length="18.97" friendlyPos="1"/>
-        <access lane="465376258#1_0" pos="7.83" length="17.33" friendlyPos="1"/>
-        <access lane="516398559_0" pos="106.17" length="14.77" friendlyPos="1"/>
-    </busStop>
-    <busStop id="3869306771" name="U Unter den Linden" lane="461526152#1_0" startPos="48.40" endPos="63.40" friendlyPos="true" lines="100 N5 300">
-        <access lane="1037130999#1_0" pos="47.74" length="15.07" friendlyPos="1"/>
-        <access lane="882389487_0" pos="14.12" length="16.42" friendlyPos="1"/>
-        <access lane="882389488_0" pos="13.82" length="20.32" friendlyPos="1"/>
-        <access lane="882389489_0" pos="13.92" length="11.89" friendlyPos="1"/>
-        <access lane="915958620#1_0" pos="43.29" length="18.46" friendlyPos="1"/>
-    </busStop>
-    <busStop id="3869306774" name="Werderscher Markt" lane="1127602336_1" startPos="19.06" endPos="34.06" friendlyPos="true"/>
-    <busStop id="3870475228" name="Staatsoper" lane="1170522567#0_0" startPos="43.27" endPos="58.27" friendlyPos="true" lines="100 N5 300">
-        <access lane="1171295123#2_0" pos="0.00" length="15.81" friendlyPos="1"/>
-        <access lane="1215085509#1_0" pos="38.27" length="26.86" friendlyPos="1"/>
-        <access lane="1215085509#2_0" pos="7.37" length="19.42" friendlyPos="1"/>
-        <access lane="1215085509#3_0" pos="0.00" length="26.30" friendlyPos="1"/>
-        <access lane="442389818#6_0" pos="7.24" length="23.79" friendlyPos="1"/>
-    </busStop>
-    <busStop id="3918673888" name="U Oranienburger Tor" lane="388702039#3_0" startPos="61.08" endPos="76.08" friendlyPos="true" lines="N6"/>
-    <busStop id="3922258748" name="Universitätsstraße" lane="144014237#3_0" startPos="66.21" endPos="91.21" friendlyPos="true" lines="12">
-        <access lane="-114667396#3_0" pos="0.00" length="51.57" friendlyPos="1"/>
-        <access lane="-340498976#1_0" pos="21.61" length="5.49" friendlyPos="1"/>
-        <access lane="1217720440_0" pos="1.05" length="50.02" friendlyPos="1"/>
-        <access lane="15977422#1_0" pos="86.55" length="40.62" friendlyPos="1"/>
-        <access lane="463829469#1_0" pos="30.77" length="9.84" friendlyPos="1"/>
-    </busStop>
-    <busStop id="3928759794" name="U Oranienburger Tor" lane="388702041#7_0" startPos="89.22" endPos="104.22" friendlyPos="true" lines="N6"/>
-    <busStop id="3980157313" name="Unter den Linden/Glinkastraße" lane="236092221#0_0" startPos="0.00" endPos="8.46" friendlyPos="true">
-        <access lane="-1172037689#0_0" pos="1.82" length="29.69" friendlyPos="1"/>
-        <access lane="1152979769#2_0" pos="44.82" length="25.17" friendlyPos="1"/>
-        <access lane="1158536779#4_0" pos="51.23" length="16.09" friendlyPos="1"/>
-        <access lane="1172037689#0_0" pos="0.00" length="25.14" friendlyPos="1"/>
-        <access lane="915958602#2_0" pos="47.72" length="15.64" friendlyPos="1"/>
-    </busStop>
-    <busStop id="4163212867" name="S+U Alexanderplatz/Memhardstraße" lane="625647962_0" startPos="38.06" endPos="53.06" friendlyPos="true" lines="N60 100 200 N65 N8">
-        <access lane="1071049524#1_0" pos="0.00" length="22.96" friendlyPos="1"/>
-        <access lane="1071049527_0" pos="0.00" length="10.86" friendlyPos="1"/>
-        <access lane="1212782009_0" pos="0.20" length="23.84" friendlyPos="1"/>
-        <access lane="473149640#1_0" pos="15.86" length="14.02" friendlyPos="1"/>
-        <access lane="473149640#2_0" pos="0.00" length="14.80" friendlyPos="1"/>
-    </busStop>
-    <busStop id="4164607294" name="S+U Alexanderplatz/Memhardstraße" lane="1071049530_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
-    <busStop id="4673135647" name="Spandauer Straße/Marienkirche" lane="150394035#1_0" startPos="46.64" endPos="71.64" friendlyPos="true" lines="M4 M5 M6">
-        <access lane="100113532_0" pos="8.42" length="6.85" friendlyPos="1"/>
-        <access lane="1212793336#0_0" pos="0.00" length="19.18" friendlyPos="1"/>
-        <access lane="1212793337#1_0" pos="0.20" length="17.51" friendlyPos="1"/>
-        <access lane="1212793338#1_0" pos="0.20" length="18.04" friendlyPos="1"/>
-        <access lane="171826987#2_0" pos="0.00" length="25.19" friendlyPos="1"/>
-    </busStop>
-    <busStop id="474368351" name="Friedrichstraße" lane="463462759_0" startPos="656.04" endPos="856.04" friendlyPos="true" lines="S1 S2 S25 S26">
-        <access lane="-195105328_0" pos="8.02" length="25.68" friendlyPos="1"/>
-        <access lane="107747047#3_0" pos="45.67" length="19.77" friendlyPos="1"/>
-        <access lane="24243056_0" pos="45.37" length="10.29" friendlyPos="1"/>
-        <access lane="254339581#1_0" pos="0.20" length="28.51" friendlyPos="1"/>
-        <access lane="254339581#2_0" pos="0.95" length="24.12" friendlyPos="1"/>
-    </busStop>
-    <busStop id="4961125734" name="Rosa-Luxemburg-Platz" lane="272795470_0" startPos="683.38" endPos="883.38" friendlyPos="true">
-        <access lane="1071114546#2_0" pos="291.20" length="242.84" friendlyPos="1"/>
-    </busStop>
-    <busStop id="5907113489" name="S+U Alexanderplatz/Memhardstraße" lane="625647962_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="N2 N5 N40">
-        <access lane="1071049530_0" pos="0.00" length="39.48" friendlyPos="1"/>
-        <access lane="1079045032#3_0" pos="0.20" length="69.75" friendlyPos="1"/>
-        <access lane="1113401735#1_0" pos="6.67" length="49.62" friendlyPos="1"/>
-        <access lane="473149640#0_0" pos="84.85" length="14.32" friendlyPos="1"/>
-        <access lane="473149640#1_0" pos="0.00" length="44.04" friendlyPos="1"/>
-    </busStop>
-    <busStop id="5907113496" name="U Weinmeisterstraße" lane="153424828_0" startPos="248.33" endPos="273.33" friendlyPos="true">
-        <access lane="-442921920#0_0" pos="0.00" length="71.73" friendlyPos="1"/>
-        <access lane="-566154992#0_0" pos="0.20" length="72.94" friendlyPos="1"/>
-        <access lane="1071007431#2_0" pos="65.68" length="11.59" friendlyPos="1"/>
-        <access lane="1071210926#21_0" pos="20.48" length="56.36" friendlyPos="1"/>
-        <access lane="1071210938#0_0" pos="0.00" length="70.57" friendlyPos="1"/>
-    </busStop>
-    <busStop id="5907113497" name="U Weinmeisterstraße" lane="153424801#0_0" startPos="227.56" endPos="252.56" friendlyPos="true">
-        <access lane="-442921920#0_0" pos="0.00" length="93.38" friendlyPos="1"/>
-        <access lane="1071007431#2_0" pos="86.26" length="7.69" friendlyPos="1"/>
-        <access lane="1071210926#21_0" pos="23.21" length="85.11" friendlyPos="1"/>
-        <access lane="1071210926#22_0" pos="0.00" length="95.77" friendlyPos="1"/>
-        <access lane="442921920#0_0" pos="0.20" length="95.26" friendlyPos="1"/>
-    </busStop>
-    <busStop id="6682293818" name="U Rotes Rathaus" lane="534588621#0_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="200 N8 N40 N2 N42 300">
-        <access lane="1000864517#2_0" pos="53.46" length="40.15" friendlyPos="1"/>
-        <access lane="260138647#0_0" pos="0.00" length="32.32" friendlyPos="1"/>
-        <access lane="375901776#5_0" pos="50.48" length="25.30" friendlyPos="1"/>
-        <access lane="375901776#6_0" pos="0.00" length="32.23" friendlyPos="1"/>
-        <access lane="687804451#0_0" pos="47.40" length="20.44" friendlyPos="1"/>
-    </busStop>
-    <busStop id="768074068" name="S+U Alexanderplatz/Memhardstraße" lane="171826984#2_0" startPos="222.83" endPos="237.83" friendlyPos="true" lines="100 200 N5">
-        <access lane="1079045027#1_0" pos="48.92" length="44.21" friendlyPos="1"/>
-        <access lane="1079045029#1_0" pos="19.58" length="52.90" friendlyPos="1"/>
-        <access lane="1079045029#2_0" pos="7.51" length="42.11" friendlyPos="1"/>
-        <access lane="1079045029#3_0" pos="6.96" length="38.10" friendlyPos="1"/>
-        <access lane="312392974#5_0" pos="58.21" length="14.20" friendlyPos="1"/>
-    </busStop>
-    <busStop id="7974928190" name="Museumsinsel" lane="942849697_0" startPos="13.26" endPos="213.26" friendlyPos="true" lines="U5">
-        <access lane="-4611694#1_0" pos="3.18" length="3.96" friendlyPos="1"/>
-        <access lane="1181092879#2_0" pos="71.43" length="16.50" friendlyPos="1"/>
-        <access lane="1215085513#1_0" pos="0.00" length="19.34" friendlyPos="1"/>
-        <access lane="1215085514#1_0" pos="35.27" length="15.31" friendlyPos="1"/>
-        <access lane="4611694#1_0" pos="22.38" length="8.64" friendlyPos="1"/>
-    </busStop>
-    <busStop id="7974955393" name="Museumsinsel" lane="942849695_0" startPos="1.74" endPos="201.74" friendlyPos="true" lines="U5">
-        <access lane="1100900061_0" pos="18.63" length="31.92" friendlyPos="1"/>
-        <access lane="1173675376#6_0" pos="91.52" length="7.16" friendlyPos="1"/>
-        <access lane="868590781#0_0" pos="22.98" length="24.43" friendlyPos="1"/>
-        <access lane="868590781#1_0" pos="4.43" length="19.92" friendlyPos="1"/>
-        <access lane="964267490_0" pos="0.00" length="11.37" friendlyPos="1"/>
-    </busStop>
-    <busStop id="8087330616" name="Unter den Linden" lane="942849696_0" startPos="223.86" endPos="423.86" friendlyPos="true" lines="U5">
-        <access lane="1037130999#1_0" pos="48.53" length="17.16" friendlyPos="1"/>
-        <access lane="882389487_0" pos="14.90" length="14.33" friendlyPos="1"/>
-        <access lane="882389488_0" pos="14.60" length="18.22" friendlyPos="1"/>
-        <access lane="882389489_0" pos="14.70" length="9.80" friendlyPos="1"/>
-        <access lane="915958620#1_0" pos="44.07" length="16.36" friendlyPos="1"/>
-    </busStop>
-    <busStop id="8090274121" name="Unter den Linden" lane="71326270_0" startPos="382.94" endPos="582.94" friendlyPos="true" lines="U5">
-        <access lane="1124928840#0_0" pos="0.00" length="2.81" friendlyPos="1"/>
-        <access lane="1124928840#1_0" pos="0.00" length="3.75" friendlyPos="1"/>
-        <access lane="1158551336#1_0" pos="0.20" length="2.90" friendlyPos="1"/>
-        <access lane="1158551336#2_0" pos="0.00" length="2.24" friendlyPos="1"/>
-        <access lane="1158551336#3_0" pos="0.00" length="3.37" friendlyPos="1"/>
-    </busStop>
-    <busStop id="8170769020" name="Unter den Linden" lane="335043673#2_0" startPos="21.21" endPos="221.21" friendlyPos="true" lines="U6">
-        <access lane="194069449#0_0" pos="0.00" length="14.44" friendlyPos="1"/>
-        <access lane="196850626#0_0" pos="59.11" length="19.43" friendlyPos="1"/>
-        <access lane="196850626#1_0" pos="0.00" length="18.35" friendlyPos="1"/>
-        <access lane="463898977#5_0" pos="49.32" length="9.78" friendlyPos="1"/>
-        <access lane="881606908_0" pos="10.70" length="21.65" friendlyPos="1"/>
-    </busStop>
-    <busStop id="8170794617" name="Unter den Linden" lane="295250361_0" startPos="58.69" endPos="258.69" friendlyPos="true" lines="U6">
-        <access lane="1124928841#6_0" pos="0.20" length="18.03" friendlyPos="1"/>
-        <access lane="1158551341#0_0" pos="1.83" length="15.77" friendlyPos="1"/>
-        <access lane="1158551341#1_0" pos="0.00" length="17.39" friendlyPos="1"/>
-        <access lane="915958599#1_0" pos="2.74" length="11.61" friendlyPos="1"/>
-        <access lane="915958611#1_0" pos="3.45" length="13.91" friendlyPos="1"/>
-    </busStop>
-    <busStop id="8196661136" name="Rotes Rathaus" lane="248099628_0" startPos="364.55" endPos="564.55" friendlyPos="true" lines="U5">
-        <access lane="169195164#1_0" pos="17.46" length="25.16" friendlyPos="1"/>
-        <access lane="881301594_0" pos="9.99" length="23.19" friendlyPos="1"/>
-        <access lane="881301603_0" pos="8.24" length="20.57" friendlyPos="1"/>
-        <access lane="882671341_0" pos="8.00" length="13.59" friendlyPos="1"/>
-        <access lane="882671342_0" pos="7.94" length="16.94" friendlyPos="1"/>
-    </busStop>
-    <busStop id="8196661137" name="Rotes Rathaus" lane="942849698#0_0" startPos="0.00" endPos="168.52" friendlyPos="true" lines="U5">
-        <access lane="-628330906_0" pos="0.00" length="23.67" friendlyPos="1"/>
-        <access lane="628330906_0" pos="36.79" length="25.65" friendlyPos="1"/>
-        <access lane="881301601#1_0" pos="13.72" length="25.15" friendlyPos="1"/>
-        <access lane="881301602_0" pos="9.18" length="26.14" friendlyPos="1"/>
-        <access lane="882671343_0" pos="8.54" length="25.90" friendlyPos="1"/>
-    </busStop>
-    <busStop id="963600646" name="Monbijouplatz" lane="143891040#7_0" startPos="9.52" endPos="34.52" friendlyPos="true" lines="M5 M1">
-        <access lane="-1157383114#1_0" pos="4.01" length="37.87" friendlyPos="1"/>
-        <access lane="-1157383114#2_0" pos="0.20" length="41.27" friendlyPos="1"/>
-        <access lane="1157384566#1_0" pos="0.00" length="41.13" friendlyPos="1"/>
-        <access lane="533594855#1_0" pos="24.00" length="15.72" friendlyPos="1"/>
-        <access lane="533594857_0" pos="82.93" length="14.70" friendlyPos="1"/>
-    </busStop>
-    <busStop id="9681836926" name="Berliner Schloss" lane="120675240#1_1" startPos="1.37" endPos="16.37" friendlyPos="true"/>
-    <busStop id="9681836927" name="Berliner Schloss" lane="120675240#1_1" startPos="55.92" endPos="70.92" friendlyPos="true" lines="147"/>
-    <busStop id="986042574" name="U Weinmeisterstraße" lane="72463266_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
-    <busStop id="990017251" name="U Oranienburger Tor" lane="388702047#2_0" startPos="41.84" endPos="66.84" friendlyPos="true" lines="12">
-        <access lane="1070124295#1_0" pos="0.20" length="25.23" friendlyPos="1"/>
-        <access lane="1087301098#1_0" pos="11.51" length="14.79" friendlyPos="1"/>
-        <access lane="374734394#3_0" pos="54.41" length="23.45" friendlyPos="1"/>
-        <access lane="388702039#3_0" pos="54.34" length="0.00" friendlyPos="1"/>
-        <access lane="388702041#2_0" pos="21.82" length="3.84" friendlyPos="1"/>
+    <busStop id="-1493565877" name="Príncipe Pío" lane="-119181079#1_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="1279075084_0" pos="0.00" length="21.03" friendlyPos="1"/>
+        <access lane="1279075085_0" pos="0.00" length="22.70" friendlyPos="1"/>
+        <access lane="1279075086#0_0" pos="0.00" length="24.22" friendlyPos="1"/>
+        <access lane="1279075088#0_0" pos="4.72" length="25.41" friendlyPos="1"/>
+        <access lane="1279075088#1_0" pos="1.98" length="23.16" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-1493565878" name="Príncipe Pío" lane="-156650822_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="1279075085_0" pos="0.00" length="22.30" friendlyPos="1"/>
+        <access lane="1279075086#0_0" pos="0.00" length="20.77" friendlyPos="1"/>
+        <access lane="1279075087_0" pos="0.00" length="18.66" friendlyPos="1"/>
+        <access lane="1279075088#3_0" pos="4.11" length="21.40" friendlyPos="1"/>
+        <access lane="1279075088#4_0" pos="2.46" length="21.33" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-22032372" name="Gran Vía" lane="-695991673#0_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="335819317#8_0" pos="1.24" length="7.71" friendlyPos="1"/>
+        <access lane="695994637_0" pos="1.51" length="8.32" friendlyPos="1"/>
+        <access lane="695994638_0" pos="0.22" length="8.75" friendlyPos="1"/>
+        <access lane="695994639#0_0" pos="7.11" length="8.25" friendlyPos="1"/>
+        <access lane="695994641#0_0" pos="1.07" length="6.79" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-255881693" name="Rubén Darío" lane="-695991673#0_0" startPos="1805.46" endPos="2005.46" friendlyPos="true"/>
+    <busStop id="-25903354" name="Sevilla" lane="-442950301#0_0" startPos="544.46" endPos="744.46" friendlyPos="true">
+        <access lane="1286414025#1_0" pos="10.41" length="2.08" friendlyPos="1"/>
+        <access lane="1286414025#2_0" pos="0.00" length="7.08" friendlyPos="1"/>
+        <access lane="1286414028#1_0" pos="0.20" length="5.90" friendlyPos="1"/>
+        <access lane="391707790#1_0" pos="19.93" length="10.95" friendlyPos="1"/>
+        <access lane="79638493#1_0" pos="10.15" length="5.41" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-25903355" name="Banco de España" lane="-442950301#0_0" startPos="995.21" endPos="1195.21" friendlyPos="true">
+        <access lane="1286420525#2_0" pos="30.88" length="15.86" friendlyPos="1"/>
+        <access lane="1286420527#3_0" pos="32.74" length="23.54" friendlyPos="1"/>
+        <access lane="336635020#6_0" pos="13.71" length="32.20" friendlyPos="1"/>
+        <access lane="336635029_0" pos="62.64" length="1.00" friendlyPos="1"/>
+        <access lane="336635034#13_0" pos="33.08" length="31.66" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-25906279" name="Chueca" lane="-695991673#0_0" startPos="396.49" endPos="596.49" friendlyPos="true">
+        <access lane="4291307#0_0" pos="4.90" length="44.10" friendlyPos="1"/>
+        <access lane="4291307#1_0" pos="25.22" length="24.13" friendlyPos="1"/>
+        <access lane="4291307#2_0" pos="51.62" length="13.66" friendlyPos="1"/>
+        <access lane="7972372#1_0" pos="46.96" length="46.72" friendlyPos="1"/>
+        <access lane="7972372#2_0" pos="4.90" length="44.10" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-25935011" name="San Bernardo" lane="-442950303_0" startPos="1635.98" endPos="1835.98" friendlyPos="true">
+        <access lane="1240524430#0_0" pos="0.00" length="241.53" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-26066629" name="Noviciado" lane="-442950303_0" startPos="2297.33" endPos="2497.33" friendlyPos="true">
+        <access lane="-293712003#0_0" pos="19.17" length="202.30" friendlyPos="1"/>
+        <access lane="-4308074#4_0" pos="0.00" length="46.94" friendlyPos="1"/>
+        <access lane="1240524430#0_0" pos="505.93" length="12.38" friendlyPos="1"/>
+        <access lane="293712003#0_0" pos="0.00" length="201.26" friendlyPos="1"/>
+        <access lane="4308074#3_0" pos="180.86" length="39.14" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-26068173" name="Santo Domingo" lane="-442950303_0" startPos="2700.63" endPos="2900.63" friendlyPos="true">
+        <access lane="409114851#3_0" pos="1.10" length="59.55" friendlyPos="1"/>
+        <access lane="409114851#4_0" pos="0.53" length="58.77" friendlyPos="1"/>
+        <access lane="409114851#5_0" pos="37.38" length="5.23" friendlyPos="1"/>
+        <access lane="409114852#1_0" pos="41.85" length="13.98" friendlyPos="1"/>
+        <access lane="592885351_0" pos="0.00" length="10.92" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-299515114" name="Alvarado" lane="-511288266#0_0" startPos="3501.07" endPos="3701.07" friendlyPos="true"/>
+    <busStop id="-299644680" name="Estrecho" lane="-511288266#0_0" startPos="3995.91" endPos="4195.91" friendlyPos="true"/>
+    <busStop id="-324376827" name="Quevedo" lane="-442950303_0" startPos="1332.47" endPos="1532.47" friendlyPos="true"/>
+    <busStop id="-324391382" name="Ríos Rosas" lane="-511288266#0_0" startPos="2519.57" endPos="2719.57" friendlyPos="true"/>
+    <busStop id="-324391956" name="Iglesia" lane="-511288266#0_0" startPos="1781.73" endPos="1981.73" friendlyPos="true"/>
+    <busStop id="-4405988107" name="Sol" lane="-442950301#0_0" startPos="248.15" endPos="448.15" friendlyPos="true">
+        <access lane="1169291962_0" pos="5.25" length="10.07" friendlyPos="1"/>
+        <access lane="319338109_0" pos="6.48" length="2.61" friendlyPos="1"/>
+        <access lane="549535248_0" pos="0.28" length="4.67" friendlyPos="1"/>
+        <access lane="549535253#3_0" pos="9.46" length="9.58" friendlyPos="1"/>
+        <access lane="549535253#4_0" pos="0.89" length="3.58" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-4405988225" name="Príncipe Pío" lane="-442950334_0" startPos="713.20" endPos="913.20" friendlyPos="true">
+        <access lane="119181067_0" pos="15.12" length="20.18" friendlyPos="1"/>
+        <access lane="119181088_0" pos="13.06" length="37.06" friendlyPos="1"/>
+        <access lane="71233319#2_0" pos="5.64" length="22.39" friendlyPos="1"/>
+        <access lane="71233319#3_0" pos="9.57" length="5.16" friendlyPos="1"/>
+        <access lane="71402049#0_0" pos="0.00" length="36.13" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-4405991654" name="Ópera" lane="-442950303_0" startPos="3110.50" endPos="3310.50" friendlyPos="true">
+        <access lane="1240524439_0" pos="28.45" length="3.10" friendlyPos="1"/>
+        <access lane="1240524440_0" pos="0.00" length="7.01" friendlyPos="1"/>
+        <access lane="320898239#0_0" pos="0.00" length="6.23" friendlyPos="1"/>
+        <access lane="320898241_0" pos="1.20" length="1.34" friendlyPos="1"/>
+        <access lane="866662396_0" pos="5.95" length="12.41" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5299216970" name="Valdecarros" lane="-548531500_0" startPos="55.17" endPos="255.17" friendlyPos="true"/>
+    <busStop id="-5299216972" name="Las Suertes" lane="-548531500_0" startPos="767.39" endPos="967.39" friendlyPos="true"/>
+    <busStop id="-5299216977" name="La Gavia" lane="-548531500_0" startPos="2077.28" endPos="2277.28" friendlyPos="true"/>
+    <busStop id="-5299216982" name="Congosto" lane="-548531500_0" startPos="2758.72" endPos="2958.72" friendlyPos="true"/>
+    <busStop id="-5299216985" name="Villa de Vallecas" lane="-548531500_0" startPos="3605.91" endPos="3805.91" friendlyPos="true"/>
+    <busStop id="-5299216987" name="Sierra de Guadalupe" lane="-548531500_0" startPos="4094.10" endPos="4294.10" friendlyPos="true"/>
+    <busStop id="-5299216997" name="Miguel Hernández" lane="-548531500_0" startPos="5586.22" endPos="5786.22" friendlyPos="true"/>
+    <busStop id="-5299217000" name="Alto del Arenal" lane="-548531500_0" startPos="6131.86" endPos="6331.86" friendlyPos="true"/>
+    <busStop id="-5299217006" name="Buenos Aires" lane="-548531500_0" startPos="6848.06" endPos="7048.06" friendlyPos="true"/>
+    <busStop id="-5299217008" name="Portazgo" lane="-548531500_0" startPos="7339.67" endPos="7539.67" friendlyPos="true"/>
+    <busStop id="-5299217010" name="Nueva Numancia" lane="-548531500_0" startPos="7914.41" endPos="8114.41" friendlyPos="true"/>
+    <busStop id="-5299217011" name="Puente de Vallecas" lane="-548531500_0" startPos="8342.47" endPos="8542.47" friendlyPos="true"/>
+    <busStop id="-5299217013" name="Pacífico" lane="-548531500_0" startPos="9096.01" endPos="9296.01" friendlyPos="true"/>
+    <busStop id="-5299217017" name="Menéndez Pelayo" lane="-548531500_0" startPos="9588.29" endPos="9788.29" friendlyPos="true"/>
+    <busStop id="-5299219122" name="Atocha" lane="-548531500_0" startPos="10288.44" endPos="10488.44" friendlyPos="true"/>
+    <busStop id="-5299219127" name="Estación del Arte" lane="-548531500_0" startPos="10603.05" endPos="10803.05" friendlyPos="true">
+        <access lane="262951801#5_0" pos="125.46" length="200.54" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5299219130" name="Antón Martín" lane="-548531500_0" startPos="11361.44" endPos="11561.44" friendlyPos="true">
+        <access lane="-423232043_0" pos="0.00" length="14.86" friendlyPos="1"/>
+        <access lane="319620192_0" pos="0.00" length="47.59" friendlyPos="1"/>
+        <access lane="423232043_0" pos="27.07" length="12.91" friendlyPos="1"/>
+        <access lane="4328795#2_0" pos="33.62" length="18.72" friendlyPos="1"/>
+        <access lane="48345480#0_0" pos="5.84" length="1.20" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5299219185" name="Tirso de Molina" lane="-548531500_0" startPos="11799.49" endPos="11999.49" friendlyPos="true">
+        <access lane="1109771619_0" pos="30.63" length="27.52" friendlyPos="1"/>
+        <access lane="1176321083_0" pos="39.12" length="3.23" friendlyPos="1"/>
+        <access lane="1176321084_0" pos="0.00" length="30.85" friendlyPos="1"/>
+        <access lane="1176321086_0" pos="0.00" length="31.93" friendlyPos="1"/>
+        <access lane="1176321087_0" pos="38.88" length="7.11" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5299219187" name="Sol" lane="-548531500_0" startPos="12472.12" endPos="12672.12" friendlyPos="true">
+        <access lane="1000017580#3_0" pos="6.69" length="14.82" friendlyPos="1"/>
+        <access lane="1000017580#4_0" pos="0.76" length="8.99" friendlyPos="1"/>
+        <access lane="1169291963#1_0" pos="12.11" length="0.49" friendlyPos="1"/>
+        <access lane="1285653608#0_0" pos="11.15" length="0.98" friendlyPos="1"/>
+        <access lane="1285653608#1_0" pos="0.00" length="16.26" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5299219188" name="Gran Vía" lane="-548531500_0" startPos="12727.00" endPos="12927.00" friendlyPos="true">
+        <access lane="334102282#9_0" pos="5.52" length="2.73" friendlyPos="1"/>
+        <access lane="695993032#1_0" pos="0.00" length="6.34" friendlyPos="1"/>
+        <access lane="695993045#1_0" pos="0.20" length="5.18" friendlyPos="1"/>
+        <access lane="695994125#0_0" pos="0.82" length="1.98" friendlyPos="1"/>
+        <access lane="695994634_0" pos="3.82" length="6.66" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5299219189" name="Tribunal" lane="-548531514#0_0" startPos="584.33" endPos="784.33" friendlyPos="true"/>
+    <busStop id="-5299219190" name="Bilbao" lane="-548531514#0_0" startPos="1051.24" endPos="1251.24" friendlyPos="true"/>
+    <busStop id="-5299219193" name="Iglesia" lane="-548531514#0_0" startPos="1780.38" endPos="1980.38" friendlyPos="true"/>
+    <busStop id="-5299219194" name="Ríos Rosas" lane="-548531514#0_0" startPos="2517.85" endPos="2717.85" friendlyPos="true"/>
+    <busStop id="-5299219195" name="Cuatro Caminos" lane="-548531514#0_0" startPos="3017.67" endPos="3217.67" friendlyPos="true"/>
+    <busStop id="-5299219197" name="Alvarado" lane="-548531514#0_0" startPos="3500.32" endPos="3700.32" friendlyPos="true"/>
+    <busStop id="-5299219209" name="Estrecho" lane="-548531514#0_0" startPos="3995.65" endPos="4195.65" friendlyPos="true"/>
+    <busStop id="-5299314584" name="Tribunal" lane="-511288266#0_0" startPos="585.44" endPos="785.44" friendlyPos="true"/>
+    <busStop id="-5299314586" name="Bilbao" lane="-511288266#0_0" startPos="1050.96" endPos="1250.96" friendlyPos="true"/>
+    <busStop id="-5299314589" name="Cuatro Caminos" lane="-511288266#0_0" startPos="3019.53" endPos="3219.53" friendlyPos="true"/>
+    <busStop id="-5303043466" name="Gran Vía" lane="-695991674#0_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="335819317#8_0" pos="1.30" length="0.60" friendlyPos="1"/>
+        <access lane="695994637_0" pos="4.96" length="5.98" friendlyPos="1"/>
+        <access lane="695994639#0_0" pos="5.51" length="1.56" friendlyPos="1"/>
+        <access lane="865912093_0" pos="0.00" length="6.86" friendlyPos="1"/>
+        <access lane="865912094_0" pos="1.60" length="6.95" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5303043472" name="Chueca" lane="-695991674#0_0" startPos="402.26" endPos="602.26" friendlyPos="true">
+        <access lane="4291307#0_0" pos="11.50" length="42.89" friendlyPos="1"/>
+        <access lane="4291307#1_0" pos="24.94" length="14.17" friendlyPos="1"/>
+        <access lane="4291307#2_0" pos="52.29" length="23.59" friendlyPos="1"/>
+        <access lane="7972372#2_0" pos="11.50" length="42.89" friendlyPos="1"/>
+        <access lane="7972372#3_0" pos="0.00" length="44.70" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5303043473" name="Alonso Martínez" lane="-695991674#0_0" startPos="966.37" endPos="1166.37" friendlyPos="true"/>
+    <busStop id="-5303127355" name="Alonso Martínez" lane="-695991673#0_0" startPos="961.96" endPos="1161.96" friendlyPos="true"/>
+    <busStop id="-5303271992" name="Cuatro Caminos" lane="-442950303_0" startPos="0.00" endPos="200.00" friendlyPos="true"/>
+    <busStop id="-5303271994" name="Canal" lane="-442950303_0" startPos="639.68" endPos="839.68" friendlyPos="true"/>
+    <busStop id="-5303272075" name="Sol" lane="-548990702_0" startPos="382.97" endPos="582.97" friendlyPos="true">
+        <access lane="1169291962_0" pos="5.25" length="10.69" friendlyPos="1"/>
+        <access lane="319338109_0" pos="5.70" length="6.42" friendlyPos="1"/>
+        <access lane="549535248_0" pos="0.00" length="6.75" friendlyPos="1"/>
+        <access lane="549535253#3_0" pos="9.46" length="9.37" friendlyPos="1"/>
+        <access lane="549535253#4_0" pos="1.21" length="0.38" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5303272231" name="Sevilla" lane="-548990702_0" startPos="679.56" endPos="879.56" friendlyPos="true">
+        <access lane="1286414025#1_0" pos="10.41" length="2.91" friendlyPos="1"/>
+        <access lane="1286414025#2_0" pos="0.00" length="6.21" friendlyPos="1"/>
+        <access lane="1286414026#1_0" pos="16.19" length="8.22" friendlyPos="1"/>
+        <access lane="1286414028#1_0" pos="0.20" length="2.14" friendlyPos="1"/>
+        <access lane="79638493#1_0" pos="10.85" length="9.69" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5303272236" name="Banco de España" lane="-548990702_0" startPos="1130.31" endPos="1330.31" friendlyPos="true">
+        <access lane="1286420525#2_0" pos="30.58" length="20.25" friendlyPos="1"/>
+        <access lane="1286420527#3_0" pos="32.43" length="19.16" friendlyPos="1"/>
+        <access lane="1286420527#6_0" pos="82.16" length="34.75" friendlyPos="1"/>
+        <access lane="336635029_0" pos="62.34" length="5.39" friendlyPos="1"/>
+        <access lane="336635034#13_0" pos="32.72" length="27.28" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5304749213" name="Ópera" lane="549151323_0" startPos="0.00" endPos="124.53" friendlyPos="true">
+        <access lane="-31053377#1_0" pos="27.44" length="10.93" friendlyPos="1"/>
+        <access lane="-7726325_0" pos="0.00" length="23.10" friendlyPos="1"/>
+        <access lane="31053377#1_0" pos="8.49" length="2.23" friendlyPos="1"/>
+        <access lane="345305595#10_0" pos="25.95" length="3.47" friendlyPos="1"/>
+        <access lane="7726325_0" pos="43.17" length="15.77" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5305486978" name="Príncipe Pío" lane="-1054025305_0" startPos="16.05" endPos="216.05" friendlyPos="true">
+        <access lane="1240317913#0_0" pos="19.93" length="22.80" friendlyPos="1"/>
+        <access lane="1240317913#1_0" pos="0.00" length="36.45" friendlyPos="1"/>
+        <access lane="1252080880_0" pos="0.00" length="41.25" friendlyPos="1"/>
+        <access lane="1252080881_0" pos="13.31" length="23.80" friendlyPos="1"/>
+        <access lane="1252080884#1_0" pos="12.61" length="33.74" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5970506955" name="Gran Vía - Hortaleza" lane="-32597088_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="002">
+        <access lane="335825755#2_0" pos="116.67" length="13.46" friendlyPos="1"/>
+        <access lane="335825755#3_0" pos="0.00" length="36.16" friendlyPos="1"/>
+        <access lane="336633763_0" pos="0.00" length="39.65" friendlyPos="1"/>
+        <access lane="865912095#1_0" pos="110.58" length="12.12" friendlyPos="1"/>
+        <access lane="865912095#2_0" pos="0.00" length="37.60" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-8423356513" lane="-82567675#2_0" startPos="9.06" endPos="24.06" friendlyPos="true" lines="26 32 6">
+        <access lane="1275083958#0_0" pos="84.18" length="36.69" friendlyPos="1"/>
+        <access lane="148898247#1_0" pos="25.24" length="33.34" friendlyPos="1"/>
+        <access lane="320668248_0" pos="6.55" length="37.39" friendlyPos="1"/>
+        <access lane="320668249_0" pos="19.92" length="18.50" friendlyPos="1"/>
+        <access lane="7972551#3_0" pos="36.66" length="31.46" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-8473691223" lane="-31000487_1" startPos="11.05" endPos="26.05" friendlyPos="true" lines="C1 41"/>
+    <busStop id="-9727929637" name="Príncipe Pío" lane="-119181155_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="1279075084_0" pos="0.00" length="23.09" friendlyPos="1"/>
+        <access lane="1279075085_0" pos="0.00" length="19.66" friendlyPos="1"/>
+        <access lane="1279075086#0_0" pos="0.00" length="20.53" friendlyPos="1"/>
+        <access lane="1279075088#1_0" pos="6.16" length="22.32" friendlyPos="1"/>
+        <access lane="1279075088#2_0" pos="0.00" length="23.09" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-9727929638" name="Príncipe Pío" lane="-119181131_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="1279075085_0" pos="0.00" length="19.80" friendlyPos="1"/>
+        <access lane="1279075086#0_0" pos="0.00" length="18.99" friendlyPos="1"/>
+        <access lane="1279075087_0" pos="0.00" length="21.03" friendlyPos="1"/>
+        <access lane="1279075088#2_0" pos="0.20" length="22.36" friendlyPos="1"/>
+        <access lane="1279075088#3_0" pos="0.16" length="21.73" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1152699021" name="Sol" lane="1037434519_0" startPos="129.31" endPos="329.31" friendlyPos="true" lines="C-3 R-1 C-4">
+        <access lane="1000016480#3_0" pos="31.93" length="33.95" friendlyPos="1"/>
+        <access lane="1000017580#7_0" pos="10.39" length="27.56" friendlyPos="1"/>
+        <access lane="554359459_0" pos="20.79" length="30.91" friendlyPos="1"/>
+        <access lane="5930472#0_0" pos="3.03" length="30.18" friendlyPos="1"/>
+        <access lane="687458372#0_0" pos="0.00" length="36.57" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1437056478" lane="7732075_1" startPos="37.86" endPos="52.86" friendlyPos="true" lines="18 23"/>
+    <busStop id="1439703616" name="Jardines de Sabatini" lane="4308590#3_1" startPos="27.49" endPos="42.49" friendlyPos="true" lines="25 39"/>
+    <busStop id="1493565877" name="Príncipe Pío" lane="119181079#1_0" startPos="169.96" endPos="369.96" friendlyPos="true">
+        <access lane="1279075084_0" pos="0.00" length="21.03" friendlyPos="1"/>
+        <access lane="1279075085_0" pos="0.00" length="22.70" friendlyPos="1"/>
+        <access lane="1279075086#0_0" pos="0.00" length="24.22" friendlyPos="1"/>
+        <access lane="1279075088#0_0" pos="4.72" length="25.41" friendlyPos="1"/>
+        <access lane="1279075088#1_0" pos="1.98" length="23.16" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1493565878" name="Príncipe Pío" lane="156650822_0" startPos="278.46" endPos="478.46" friendlyPos="true">
+        <access lane="1279075085_0" pos="0.00" length="22.30" friendlyPos="1"/>
+        <access lane="1279075086#0_0" pos="0.00" length="20.77" friendlyPos="1"/>
+        <access lane="1279075087_0" pos="0.00" length="18.66" friendlyPos="1"/>
+        <access lane="1279075088#3_0" pos="4.11" length="21.40" friendlyPos="1"/>
+        <access lane="1279075088#4_0" pos="2.46" length="21.33" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1493565879" name="Príncipe Pío" lane="571079929_0" startPos="787.52" endPos="987.52" friendlyPos="true">
+        <access lane="1279075086#0_0" pos="0.00" length="30.11" friendlyPos="1"/>
+        <access lane="1279075087_0" pos="0.00" length="19.64" friendlyPos="1"/>
+        <access lane="1279075088#3_0" pos="4.31" length="24.37" friendlyPos="1"/>
+        <access lane="1279075088#4_0" pos="2.46" length="18.04" friendlyPos="1"/>
+        <access lane="344003635_0" pos="89.94" length="28.63" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1493715148" lane="7732078_0" startPos="7.23" endPos="22.23" friendlyPos="true" lines="32 65 6"/>
+    <busStop id="21722690" name="Lago" lane="1054025299_0" startPos="0.00" endPos="200.00" friendlyPos="true"/>
+    <busStop id="21759678" name="Sol" lane="443618649_0" startPos="980.82" endPos="1180.82" friendlyPos="true" lines="L3">
+        <access lane="1169291963#0_0" pos="51.44" length="22.82" friendlyPos="1"/>
+        <access lane="549535251#1_0" pos="17.30" length="1.43" friendlyPos="1"/>
+        <access lane="549535251#2_0" pos="0.00" length="21.22" friendlyPos="1"/>
+        <access lane="549535253#1_0" pos="10.70" length="18.44" friendlyPos="1"/>
+        <access lane="549535253#2_0" pos="0.03" length="16.95" friendlyPos="1"/>
+    </busStop>
+    <busStop id="21759690" name="La Latina" lane="695991673#2_0" startPos="1484.48" endPos="1684.48" friendlyPos="true">
+        <access lane="-398751337#2_0" pos="36.33" length="8.71" friendlyPos="1"/>
+        <access lane="319636961_0" pos="6.83" length="25.77" friendlyPos="1"/>
+        <access lane="398751337#1_0" pos="42.34" length="5.39" friendlyPos="1"/>
+        <access lane="4328605#0_0" pos="56.53" length="56.37" friendlyPos="1"/>
+        <access lane="4328605#1_0" pos="0.00" length="58.54" friendlyPos="1"/>
+    </busStop>
+    <busStop id="21956103" name="Lavapiés" lane="443618649_0" startPos="1973.38" endPos="2173.38" friendlyPos="true" lines="L3">
+        <access lane="-4350172#0_0" pos="348.30" length="127.57" friendlyPos="1"/>
+        <access lane="355153823#0_0" pos="0.00" length="91.86" friendlyPos="1"/>
+        <access lane="4328770#2_0" pos="274.41" length="96.17" friendlyPos="1"/>
+        <access lane="4350172#0_0" pos="124.11" length="118.87" friendlyPos="1"/>
+        <access lane="7972698#4_0" pos="88.95" length="329.50" friendlyPos="1"/>
+    </busStop>
+    <busStop id="21964104" name="Callao" lane="443618649_0" startPos="549.57" endPos="749.57" friendlyPos="true" lines="L3">
+        <access lane="202214510#6_0" pos="0.72" length="22.52" friendlyPos="1"/>
+        <access lane="320895852_0" pos="0.00" length="20.01" friendlyPos="1"/>
+        <access lane="320895859_0" pos="1.48" length="18.54" friendlyPos="1"/>
+        <access lane="332069618#1_0" pos="0.00" length="22.68" friendlyPos="1"/>
+        <access lane="380472819#4_0" pos="18.33" length="22.19" friendlyPos="1"/>
+    </busStop>
+    <busStop id="21968139" lane="813598084_0" startPos="41.00" endPos="56.00" friendlyPos="true" lines="15 5 N25">
+        <access lane="1288890364#0_0" pos="8.37" length="11.14" friendlyPos="1"/>
+        <access lane="1289077475#0_0" pos="93.55" length="7.61" friendlyPos="1"/>
+        <access lane="1289077475#1_0" pos="42.24" length="23.12" friendlyPos="1"/>
+        <access lane="1289077481_0" pos="0.00" length="23.30" friendlyPos="1"/>
+        <access lane="391707139#0_0" pos="0.00" length="22.62" friendlyPos="1"/>
+    </busStop>
+    <busStop id="21990715" name="Tribunal" lane="1054025299_0" startPos="3278.78" endPos="3478.78" friendlyPos="true"/>
+    <busStop id="22032372" name="Gran Vía" lane="695991675_0" startPos="1878.93" endPos="2078.93" friendlyPos="true">
+        <access lane="335819317#8_0" pos="1.24" length="7.71" friendlyPos="1"/>
+        <access lane="695994637_0" pos="1.51" length="8.32" friendlyPos="1"/>
+        <access lane="695994638_0" pos="0.22" length="8.75" friendlyPos="1"/>
+        <access lane="695994639#0_0" pos="7.11" length="8.25" friendlyPos="1"/>
+        <access lane="695994641#0_0" pos="1.07" length="6.79" friendlyPos="1"/>
+    </busStop>
+    <busStop id="2472773304" lane="554359457_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="133">
+        <access lane="409114851#3_0" pos="1.10" length="62.13" friendlyPos="1"/>
+        <access lane="409114851#4_0" pos="2.59" length="60.88" friendlyPos="1"/>
+        <access lane="409114851#5_0" pos="37.94" length="8.86" friendlyPos="1"/>
+        <access lane="409114852#1_0" pos="41.27" length="10.36" friendlyPos="1"/>
+        <access lane="592885351_0" pos="0.00" length="7.60" friendlyPos="1"/>
+    </busStop>
+    <busStop id="2480979094" lane="4346298#0_0" startPos="0.00" endPos="0.20" friendlyPos="true" lines="N20 N21">
+        <access lane="240352173_0" pos="0.00" length="0.00" friendlyPos="1"/>
+        <access lane="391709028#1_0" pos="0.29" length="3.63" friendlyPos="1"/>
+        <access lane="431767937#1_0" pos="0.20" length="5.08" friendlyPos="1"/>
+        <access lane="431767937#2_0" pos="0.00" length="5.07" friendlyPos="1"/>
+        <access lane="909140490_0" pos="0.54" length="0.00" friendlyPos="1"/>
+    </busStop>
+    <busStop id="2480979095" lane="131431688#0_0" startPos="6.31" endPos="21.31" friendlyPos="true">
+        <access lane="391709028#0_0" pos="19.84" length="26.58" friendlyPos="1"/>
+        <access lane="391709028#1_0" pos="48.87" length="13.80" friendlyPos="1"/>
+        <access lane="431767936#0_0" pos="17.26" length="20.89" friendlyPos="1"/>
+        <access lane="431767936#1_0" pos="0.00" length="21.13" friendlyPos="1"/>
+        <access lane="431767937#0_0" pos="0.00" length="23.39" friendlyPos="1"/>
+    </busStop>
+    <busStop id="2506473215" lane="302579018#0_0" startPos="0.00" endPos="14.90" friendlyPos="true" lines="51 52 53"/>
+    <busStop id="255881693" name="Rubén Darío" lane="695991675_0" startPos="73.47" endPos="273.47" friendlyPos="true"/>
+    <busStop id="25903354" name="Sevilla" lane="442950300_0" startPos="519.29" endPos="719.29" friendlyPos="true">
+        <access lane="1286414025#1_0" pos="10.41" length="2.08" friendlyPos="1"/>
+        <access lane="1286414025#2_0" pos="0.00" length="7.08" friendlyPos="1"/>
+        <access lane="1286414028#1_0" pos="0.20" length="5.90" friendlyPos="1"/>
+        <access lane="391707790#1_0" pos="19.93" length="10.95" friendlyPos="1"/>
+        <access lane="79638493#1_0" pos="10.15" length="5.41" friendlyPos="1"/>
+    </busStop>
+    <busStop id="25903355" name="Banco de España" lane="442950300_0" startPos="68.54" endPos="268.54" friendlyPos="true">
+        <access lane="1286420525#2_0" pos="30.88" length="15.86" friendlyPos="1"/>
+        <access lane="1286420527#3_0" pos="32.74" length="23.54" friendlyPos="1"/>
+        <access lane="336635020#6_0" pos="13.71" length="32.20" friendlyPos="1"/>
+        <access lane="336635029_0" pos="62.64" length="1.00" friendlyPos="1"/>
+        <access lane="336635034#13_0" pos="33.08" length="31.66" friendlyPos="1"/>
+    </busStop>
+    <busStop id="25906010" name="Príncipe Pío" lane="1054025299_0" startPos="1541.82" endPos="1741.82" friendlyPos="true">
+        <access lane="119181120#3_0" pos="49.21" length="29.45" friendlyPos="1"/>
+        <access lane="1240317913#0_0" pos="5.58" length="23.09" friendlyPos="1"/>
+        <access lane="1240317913#1_0" pos="0.00" length="55.04" friendlyPos="1"/>
+        <access lane="1252080881_0" pos="14.09" length="45.30" friendlyPos="1"/>
+        <access lane="1252080884#1_0" pos="12.87" length="12.21" friendlyPos="1"/>
+    </busStop>
+    <busStop id="25906011" name="Plaza de España" lane="1054025299_0" startPos="2437.77" endPos="2637.77" friendlyPos="true">
+        <access lane="-7732105_0" pos="0.00" length="123.14" friendlyPos="1"/>
+        <access lane="409111728#1_0" pos="46.43" length="199.47" friendlyPos="1"/>
+        <access lane="453626027#1_0" pos="131.01" length="164.07" friendlyPos="1"/>
+        <access lane="7732105_0" pos="133.58" length="123.29" friendlyPos="1"/>
+        <access lane="80429290#0_0" pos="0.00" length="203.31" friendlyPos="1"/>
+    </busStop>
+    <busStop id="25906012" name="Alonso Martínez" lane="1054025299_0" startPos="3668.07" endPos="3868.07" friendlyPos="true"/>
+    <busStop id="25906279" name="Chueca" lane="695991675_0" startPos="1482.44" endPos="1682.44" friendlyPos="true">
+        <access lane="4291307#0_0" pos="4.90" length="44.10" friendlyPos="1"/>
+        <access lane="4291307#1_0" pos="25.22" length="24.13" friendlyPos="1"/>
+        <access lane="4291307#2_0" pos="51.62" length="13.66" friendlyPos="1"/>
+        <access lane="7972372#1_0" pos="46.96" length="46.72" friendlyPos="1"/>
+        <access lane="7972372#2_0" pos="4.90" length="44.10" friendlyPos="1"/>
+    </busStop>
+    <busStop id="25906411" lane="651543114#1_0" startPos="0.00" endPos="15.00" friendlyPos="true">
+        <access lane="-4616510#0_0" pos="0.15" length="8.02" friendlyPos="1"/>
+        <access lane="1286633551#1_0" pos="0.59" length="12.78" friendlyPos="1"/>
+        <access lane="1287136457#6_0" pos="9.07" length="9.45" friendlyPos="1"/>
+        <access lane="336633765#4_0" pos="8.98" length="13.50" friendlyPos="1"/>
+        <access lane="865912095#3_0" pos="94.03" length="14.22" friendlyPos="1"/>
+    </busStop>
+    <busStop id="25935011" name="San Bernardo" lane="442950301#1_0" startPos="1549.82" endPos="1749.82" friendlyPos="true">
+        <access lane="1240524430#0_0" pos="0.00" length="241.53" friendlyPos="1"/>
+    </busStop>
+    <busStop id="26066629" name="Noviciado" lane="442950301#1_0" startPos="888.48" endPos="1088.48" friendlyPos="true">
+        <access lane="-293712003#0_0" pos="19.17" length="202.30" friendlyPos="1"/>
+        <access lane="-4308074#4_0" pos="0.00" length="46.94" friendlyPos="1"/>
+        <access lane="1240524430#0_0" pos="505.93" length="12.38" friendlyPos="1"/>
+        <access lane="293712003#0_0" pos="0.00" length="201.26" friendlyPos="1"/>
+        <access lane="4308074#3_0" pos="180.86" length="39.14" friendlyPos="1"/>
+    </busStop>
+    <busStop id="26068173" name="Santo Domingo" lane="442950301#1_0" startPos="485.18" endPos="685.18" friendlyPos="true">
+        <access lane="409114851#3_0" pos="1.10" length="59.55" friendlyPos="1"/>
+        <access lane="409114851#4_0" pos="0.53" length="58.77" friendlyPos="1"/>
+        <access lane="409114851#5_0" pos="37.38" length="5.23" friendlyPos="1"/>
+        <access lane="409114852#1_0" pos="41.85" length="13.98" friendlyPos="1"/>
+        <access lane="592885351_0" pos="0.00" length="10.92" friendlyPos="1"/>
+    </busStop>
+    <busStop id="26080642" name="Príncipe Pío Vía 1" lane="1067764157_0" startPos="0.00" endPos="45.20" friendlyPos="true" lines="C-1 C-10">
+        <access lane="1279075084_0" pos="0.00" length="69.07" friendlyPos="1"/>
+        <access lane="1279075085_0" pos="0.00" length="74.89" friendlyPos="1"/>
+        <access lane="1279075086#0_0" pos="0.00" length="76.21" friendlyPos="1"/>
+        <access lane="1279075088#0_0" pos="0.00" length="68.49" friendlyPos="1"/>
+        <access lane="1279075088#1_0" pos="0.00" length="73.09" friendlyPos="1"/>
+    </busStop>
+    <busStop id="26080702" lane="31000689#2_1" startPos="35.78" endPos="50.78" friendlyPos="true"/>
+    <busStop id="26340396" name="Tirso de Molina" lane="511288266#2_0" startPos="925.57" endPos="1125.57" friendlyPos="true" lines="L1">
+        <access lane="1109771619_0" pos="30.63" length="27.53" friendlyPos="1"/>
+        <access lane="1176321083_0" pos="39.07" length="6.81" friendlyPos="1"/>
+        <access lane="1176321084_0" pos="0.00" length="31.51" friendlyPos="1"/>
+        <access lane="1176321086_0" pos="0.00" length="31.38" friendlyPos="1"/>
+        <access lane="1176321087_0" pos="38.84" length="3.52" friendlyPos="1"/>
+    </busStop>
+    <busStop id="26340397" name="Antón Martín" lane="511288266#2_0" startPos="1365.92" endPos="1565.92" friendlyPos="true" lines="L1">
+        <access lane="-423232043_0" pos="0.00" length="12.55" friendlyPos="1"/>
+        <access lane="319620192_0" pos="0.00" length="45.18" friendlyPos="1"/>
+        <access lane="423232043_0" pos="27.07" length="14.72" friendlyPos="1"/>
+        <access lane="4328795#2_0" pos="35.09" length="13.02" friendlyPos="1"/>
+        <access lane="48345480#0_0" pos="4.67" length="7.05" friendlyPos="1"/>
+    </busStop>
+    <busStop id="26494720" name="Estación del Arte" lane="511288266#2_0" startPos="2125.88" endPos="2325.88" friendlyPos="true" lines="L1">
+        <access lane="262951801#5_0" pos="125.46" length="199.95" friendlyPos="1"/>
+    </busStop>
+    <busStop id="26494721" name="Atocha" lane="511288266#2_0" startPos="2439.52" endPos="2639.52" friendlyPos="true" lines="L1"/>
+    <busStop id="2673249151" name="Alcalá - Gran Vía" lane="46098088#1_0" startPos="19.24" endPos="34.24" friendlyPos="true" lines="9">
+        <access lane="1287136457#4_0" pos="86.96" length="7.10" friendlyPos="1"/>
+        <access lane="1287136457#8_0" pos="73.30" length="27.66" friendlyPos="1"/>
+        <access lane="1288890366#2_0" pos="156.97" length="18.77" friendlyPos="1"/>
+        <access lane="1288890373#2_0" pos="83.27" length="27.74" friendlyPos="1"/>
+        <access lane="336633765#2_0" pos="83.79" length="17.58" friendlyPos="1"/>
+    </busStop>
+    <busStop id="299515114" name="Alvarado" lane="511288266#0_0" startPos="513.76" endPos="713.76" friendlyPos="true" lines="L1"/>
+    <busStop id="299644680" name="Estrecho" lane="511288266#0_0" startPos="18.92" endPos="218.92" friendlyPos="true" lines="L1"/>
+    <busStop id="3068279551" lane="302579020#0_0" startPos="0.00" endPos="8.23" friendlyPos="true" lines="146 1 2 74 N16 N17"/>
+    <busStop id="323387579" name="Portazgo" lane="511288266#2_0" startPos="5390.23" endPos="5590.23" friendlyPos="true" lines="L1"/>
+    <busStop id="323400134" name="Nueva Numancia" lane="511288266#2_0" startPos="4814.98" endPos="5014.98" friendlyPos="true" lines="L1"/>
+    <busStop id="323403727" name="Puente de Vallecas" lane="511288266#2_0" startPos="4386.63" endPos="4586.63" friendlyPos="true" lines="L1"/>
+    <busStop id="323411634" name="Menéndez Pelayo" lane="511288266#2_0" startPos="3140.18" endPos="3340.18" friendlyPos="true" lines="L1"/>
+    <busStop id="324376827" name="Quevedo" lane="442950301#1_0" startPos="1853.34" endPos="2053.34" friendlyPos="true"/>
+    <busStop id="324391382" name="Ríos Rosas" lane="511288266#0_0" startPos="1495.26" endPos="1695.26" friendlyPos="true" lines="L1"/>
+    <busStop id="324391956" name="Iglesia" lane="511288266#0_0" startPos="2233.10" endPos="2433.10" friendlyPos="true" lines="L1"/>
+    <busStop id="324398584" name="Buenos Aires" lane="511288266#2_0" startPos="5875.86" endPos="6075.86" friendlyPos="true" lines="L1"/>
+    <busStop id="330235642" name="Miguel Hernández" lane="511288266#2_0" startPos="7141.57" endPos="7341.57" friendlyPos="true" lines="L1"/>
+    <busStop id="330235720" name="Alto del Arenal" lane="511288266#2_0" startPos="6594.73" endPos="6794.73" friendlyPos="true" lines="L1"/>
+    <busStop id="330236023" name="Sierra de Guadalupe" lane="511288266#2_0" startPos="8636.62" endPos="8836.62" friendlyPos="true" lines="L1"/>
+    <busStop id="330236828" name="Congosto" lane="511288266#2_0" startPos="9971.03" endPos="10171.03" friendlyPos="true" lines="L1"/>
+    <busStop id="330236831" name="Villa de Vallecas" lane="511288266#2_0" startPos="9124.16" endPos="9324.16" friendlyPos="true" lines="L1"/>
+    <busStop id="330237676" name="La Gavia" lane="511288266#2_0" startPos="10646.92" endPos="10846.92" friendlyPos="true" lines="L1"/>
+    <busStop id="330238286" name="Valdecarros" lane="511288266#2_0" startPos="12574.43" endPos="12774.43" friendlyPos="true" lines="L1"/>
+    <busStop id="330238287" name="Las Suertes" lane="511288266#2_0" startPos="11959.59" endPos="12159.59" friendlyPos="true" lines="L1"/>
+    <busStop id="339242703" name="Sevilla - Pza. Canalejas" lane="30676408_0" startPos="0.00" endPos="12.64" friendlyPos="true" lines="52 53">
+        <access lane="-4328790#7_0" pos="0.00" length="38.97" friendlyPos="1"/>
+        <access lane="1289077475#0_0" pos="41.08" length="6.25" friendlyPos="1"/>
+        <access lane="1289077475#1_0" pos="87.94" length="20.46" friendlyPos="1"/>
+        <access lane="1289077481_0" pos="28.88" length="10.58" friendlyPos="1"/>
+        <access lane="30676545#1_0" pos="98.55" length="21.83" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3428239936" lane="269291945#2_1" startPos="4.00" endPos="19.00" friendlyPos="true" lines="146 75"/>
+    <busStop id="3448829498" lane="71808949#3_1" startPos="17.35" endPos="32.35" friendlyPos="true"/>
+    <busStop id="3656060239" lane="4328790#1_1" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="3656088313" lane="31262349#1_0" startPos="4.23" endPos="19.23" friendlyPos="true">
+        <access lane="1176321087_0" pos="0.00" length="19.65" friendlyPos="1"/>
+        <access lane="1176321088_0" pos="0.00" length="16.39" friendlyPos="1"/>
+        <access lane="1176321089#0_0" pos="0.00" length="17.17" friendlyPos="1"/>
+        <access lane="1176321089#1_0" pos="0.20" length="22.06" friendlyPos="1"/>
+        <access lane="856810041_0" pos="8.12" length="14.99" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3660257614" name="Sol" lane="695991680_0" startPos="1393.68" endPos="1593.68" friendlyPos="true" lines="C-4 R-1 C-3">
+        <access lane="1000017580#7_0" pos="14.36" length="24.50" friendlyPos="1"/>
+        <access lane="554359459_0" pos="20.79" length="24.88" friendlyPos="1"/>
+        <access lane="5930472#0_0" pos="1.67" length="24.66" friendlyPos="1"/>
+        <access lane="5930472#1_0" pos="0.00" length="36.26" friendlyPos="1"/>
+        <access lane="687458372#0_0" pos="0.00" length="33.53" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4405988107" name="Sol" lane="442950300_0" startPos="815.60" endPos="1015.60" friendlyPos="true">
+        <access lane="1169291962_0" pos="5.25" length="10.07" friendlyPos="1"/>
+        <access lane="319338109_0" pos="6.48" length="2.61" friendlyPos="1"/>
+        <access lane="549535248_0" pos="0.28" length="4.67" friendlyPos="1"/>
+        <access lane="549535253#3_0" pos="9.46" length="9.58" friendlyPos="1"/>
+        <access lane="549535253#4_0" pos="0.89" length="3.58" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4405988225" name="Príncipe Pío" lane="442950334_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="119181067_0" pos="15.12" length="20.18" friendlyPos="1"/>
+        <access lane="119181088_0" pos="13.06" length="37.06" friendlyPos="1"/>
+        <access lane="71233319#2_0" pos="5.64" length="22.39" friendlyPos="1"/>
+        <access lane="71233319#3_0" pos="9.57" length="5.16" friendlyPos="1"/>
+        <access lane="71402049#0_0" pos="0.00" length="36.13" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4405991654" name="Ópera" lane="442950301#1_0" startPos="75.31" endPos="275.31" friendlyPos="true">
+        <access lane="1240524439_0" pos="28.45" length="3.10" friendlyPos="1"/>
+        <access lane="1240524440_0" pos="0.00" length="7.01" friendlyPos="1"/>
+        <access lane="320898239#0_0" pos="0.00" length="6.23" friendlyPos="1"/>
+        <access lane="320898241_0" pos="1.20" length="1.34" friendlyPos="1"/>
+        <access lane="866662396_0" pos="5.95" length="12.41" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5006352930" lane="1057894241#0_0" startPos="34.98" endPos="49.98" friendlyPos="true" lines="150">
+        <access lane="1288890363#4_0" pos="6.78" length="6.90" friendlyPos="1"/>
+        <access lane="1288890363#5_0" pos="0.00" length="13.39" friendlyPos="1"/>
+        <access lane="1288890373#5_0" pos="196.82" length="12.08" friendlyPos="1"/>
+        <access lane="391707139#0_0" pos="210.94" length="7.99" friendlyPos="1"/>
+        <access lane="391707139#1_0" pos="0.00" length="12.80" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5299216970" name="Valdecarros" lane="548531514#2_0" startPos="12671.83" endPos="12871.83" friendlyPos="true"/>
+    <busStop id="5299216972" name="Las Suertes" lane="548531514#2_0" startPos="11959.61" endPos="12159.61" friendlyPos="true"/>
+    <busStop id="5299216977" name="La Gavia" lane="548531514#2_0" startPos="10649.72" endPos="10849.72" friendlyPos="true"/>
+    <busStop id="5299216982" name="Congosto" lane="548531514#2_0" startPos="9968.28" endPos="10168.28" friendlyPos="true"/>
+    <busStop id="5299216985" name="Villa de Vallecas" lane="548531514#2_0" startPos="9121.09" endPos="9321.09" friendlyPos="true"/>
+    <busStop id="5299216987" name="Sierra de Guadalupe" lane="548531514#2_0" startPos="8632.90" endPos="8832.90" friendlyPos="true"/>
+    <busStop id="5299216997" name="Miguel Hernández" lane="548531514#2_0" startPos="7140.78" endPos="7340.78" friendlyPos="true"/>
+    <busStop id="5299217000" name="Alto del Arenal" lane="548531514#2_0" startPos="6595.14" endPos="6795.14" friendlyPos="true"/>
+    <busStop id="5299217006" name="Buenos Aires" lane="548531514#2_0" startPos="5878.94" endPos="6078.94" friendlyPos="true"/>
+    <busStop id="5299217008" name="Portazgo" lane="548531514#2_0" startPos="5387.33" endPos="5587.33" friendlyPos="true"/>
+    <busStop id="5299217010" name="Nueva Numancia" lane="548531514#2_0" startPos="4812.59" endPos="5012.59" friendlyPos="true"/>
+    <busStop id="5299217011" name="Puente de Vallecas" lane="548531514#2_0" startPos="4384.54" endPos="4584.54" friendlyPos="true"/>
+    <busStop id="5299217013" name="Pacífico" lane="548531514#2_0" startPos="3630.99" endPos="3830.99" friendlyPos="true"/>
+    <busStop id="5299217017" name="Menéndez Pelayo" lane="548531514#2_0" startPos="3138.71" endPos="3338.71" friendlyPos="true"/>
+    <busStop id="5299219122" name="Atocha" lane="548531514#2_0" startPos="2438.57" endPos="2638.57" friendlyPos="true"/>
+    <busStop id="5299219127" name="Estación del Arte" lane="548531514#2_0" startPos="2123.95" endPos="2323.95" friendlyPos="true">
+        <access lane="262951801#5_0" pos="125.46" length="200.54" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5299219130" name="Antón Martín" lane="548531514#2_0" startPos="1365.56" endPos="1565.56" friendlyPos="true">
+        <access lane="-423232043_0" pos="0.00" length="14.86" friendlyPos="1"/>
+        <access lane="319620192_0" pos="0.00" length="47.59" friendlyPos="1"/>
+        <access lane="423232043_0" pos="27.07" length="12.91" friendlyPos="1"/>
+        <access lane="4328795#2_0" pos="33.62" length="18.72" friendlyPos="1"/>
+        <access lane="48345480#0_0" pos="5.84" length="1.20" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5299219185" name="Tirso de Molina" lane="548531514#2_0" startPos="927.51" endPos="1127.51" friendlyPos="true">
+        <access lane="1109771619_0" pos="30.63" length="27.52" friendlyPos="1"/>
+        <access lane="1176321083_0" pos="39.12" length="3.23" friendlyPos="1"/>
+        <access lane="1176321084_0" pos="0.00" length="30.85" friendlyPos="1"/>
+        <access lane="1176321086_0" pos="0.00" length="31.93" friendlyPos="1"/>
+        <access lane="1176321087_0" pos="38.88" length="7.11" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5299219187" name="Sol" lane="548531514#2_0" startPos="254.88" endPos="454.88" friendlyPos="true">
+        <access lane="1000017580#3_0" pos="6.69" length="14.82" friendlyPos="1"/>
+        <access lane="1000017580#4_0" pos="0.76" length="8.99" friendlyPos="1"/>
+        <access lane="1169291963#1_0" pos="12.11" length="0.49" friendlyPos="1"/>
+        <access lane="1285653608#0_0" pos="11.15" length="0.98" friendlyPos="1"/>
+        <access lane="1285653608#1_0" pos="0.00" length="16.26" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5299219188" name="Gran Vía" lane="548531514#2_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="334102282#9_0" pos="5.52" length="2.73" friendlyPos="1"/>
+        <access lane="695993032#1_0" pos="0.00" length="6.34" friendlyPos="1"/>
+        <access lane="695993045#1_0" pos="0.20" length="5.18" friendlyPos="1"/>
+        <access lane="695994125#0_0" pos="0.82" length="1.98" friendlyPos="1"/>
+        <access lane="695994634_0" pos="3.82" length="6.66" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5299219189" name="Tribunal" lane="548531514#0_0" startPos="3430.45" endPos="3630.45" friendlyPos="true"/>
+    <busStop id="5299219190" name="Bilbao" lane="548531514#0_0" startPos="2963.54" endPos="3163.54" friendlyPos="true"/>
+    <busStop id="5299219193" name="Iglesia" lane="548531514#0_0" startPos="2234.40" endPos="2434.40" friendlyPos="true"/>
+    <busStop id="5299219194" name="Ríos Rosas" lane="548531514#0_0" startPos="1496.94" endPos="1696.94" friendlyPos="true"/>
+    <busStop id="5299219195" name="Cuatro Caminos" lane="548531514#0_0" startPos="997.11" endPos="1197.11" friendlyPos="true"/>
+    <busStop id="5299219197" name="Alvarado" lane="548531514#0_0" startPos="514.46" endPos="714.46" friendlyPos="true"/>
+    <busStop id="5299219209" name="Estrecho" lane="548531514#0_0" startPos="19.13" endPos="219.13" friendlyPos="true"/>
+    <busStop id="5299314574" name="Pacífico" lane="511288266#2_0" startPos="3725.87" endPos="3925.87" friendlyPos="true" lines="L1"/>
+    <busStop id="5299314580" name="Sol" lane="511288266#2_0" startPos="255.25" endPos="455.25" friendlyPos="true" lines="L1">
+        <access lane="1000017580#3_0" pos="6.69" length="17.19" friendlyPos="1"/>
+        <access lane="1000017580#4_0" pos="3.37" length="7.00" friendlyPos="1"/>
+        <access lane="1169291963#1_0" pos="13.10" length="3.65" friendlyPos="1"/>
+        <access lane="1285653608#0_0" pos="10.39" length="3.26" friendlyPos="1"/>
+        <access lane="1285653608#1_0" pos="0.00" length="17.49" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5299314582" name="Gran Vía" lane="511288266#2_0" startPos="0.00" endPos="200.00" friendlyPos="true" lines="L1">
+        <access lane="334102282#9_0" pos="9.00" length="0.30" friendlyPos="1"/>
+        <access lane="335819317#7_0" pos="11.61" length="6.48" friendlyPos="1"/>
+        <access lane="695993045#1_0" pos="0.20" length="5.83" friendlyPos="1"/>
+        <access lane="695993045#2_0" pos="0.00" length="1.56" friendlyPos="1"/>
+        <access lane="695994125#0_0" pos="0.00" length="3.74" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5299314584" name="Tribunal" lane="511288266#0_0" startPos="3429.38" endPos="3629.38" friendlyPos="true" lines="L1"/>
+    <busStop id="5299314586" name="Bilbao" lane="511288266#0_0" startPos="2963.86" endPos="3163.86" friendlyPos="true" lines="L1"/>
+    <busStop id="5299314589" name="Cuatro Caminos" lane="511288266#0_0" startPos="995.30" endPos="1195.30" friendlyPos="true" lines="L1"/>
+    <busStop id="5303043432" name="La Latina" lane="695991674#2_0" startPos="1479.87" endPos="1679.87" friendlyPos="true" lines="L5">
+        <access lane="-398751337#2_0" pos="36.11" length="2.47" friendlyPos="1"/>
+        <access lane="319636961_0" pos="6.83" length="28.68" friendlyPos="1"/>
+        <access lane="398751337#1_0" pos="42.56" length="11.63" friendlyPos="1"/>
+        <access lane="4328605#0_0" pos="53.24" length="52.54" friendlyPos="1"/>
+        <access lane="4328605#1_0" pos="0.00" length="56.70" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5303043465" name="Callao" lane="695991674#2_0" startPos="247.04" endPos="447.04" friendlyPos="true" lines="L5">
+        <access lane="1003795546#1_0" pos="12.82" length="10.46" friendlyPos="1"/>
+        <access lane="320895853_0" pos="0.00" length="20.94" friendlyPos="1"/>
+        <access lane="548899584#0_0" pos="2.11" length="25.48" friendlyPos="1"/>
+        <access lane="548899585#0_0" pos="1.19" length="29.06" friendlyPos="1"/>
+        <access lane="548899585#1_0" pos="0.00" length="30.25" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5303043466" name="Gran Vía" lane="695991676_0" startPos="1440.29" endPos="1640.29" friendlyPos="true" lines="L5">
+        <access lane="335819317#8_0" pos="1.30" length="0.60" friendlyPos="1"/>
+        <access lane="695994637_0" pos="4.96" length="5.98" friendlyPos="1"/>
+        <access lane="695994639#0_0" pos="5.51" length="1.56" friendlyPos="1"/>
+        <access lane="865912093_0" pos="0.00" length="6.86" friendlyPos="1"/>
+        <access lane="865912094_0" pos="1.60" length="6.95" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5303043472" name="Chueca" lane="695991676_0" startPos="1038.02" endPos="1238.02" friendlyPos="true" lines="L5">
+        <access lane="4291307#0_0" pos="11.50" length="42.89" friendlyPos="1"/>
+        <access lane="4291307#1_0" pos="24.94" length="14.17" friendlyPos="1"/>
+        <access lane="4291307#2_0" pos="52.29" length="23.59" friendlyPos="1"/>
+        <access lane="7972372#2_0" pos="11.50" length="42.89" friendlyPos="1"/>
+        <access lane="7972372#3_0" pos="0.00" length="44.70" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5303043473" name="Alonso Martínez" lane="695991676_0" startPos="473.91" endPos="673.91" friendlyPos="true" lines="L5"/>
+    <busStop id="5303127349" name="Ópera" lane="695991673#2_0" startPos="737.40" endPos="937.40" friendlyPos="true">
+        <access lane="-31053377#1_0" pos="4.14" length="18.02" friendlyPos="1"/>
+        <access lane="1057755387_0" pos="51.84" length="8.23" friendlyPos="1"/>
+        <access lane="1240524439_0" pos="32.77" length="18.34" friendlyPos="1"/>
+        <access lane="1240524440_0" pos="0.40" length="21.94" friendlyPos="1"/>
+        <access lane="320898238#0_0" pos="0.00" length="18.92" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5303127350" name="Ópera" lane="695991674#2_0" startPos="731.30" endPos="931.30" friendlyPos="true" lines="L5">
+        <access lane="1057755387_0" pos="53.89" length="2.35" friendlyPos="1"/>
+        <access lane="1240524439_0" pos="32.77" length="11.76" friendlyPos="1"/>
+        <access lane="1240524440_0" pos="0.40" length="15.30" friendlyPos="1"/>
+        <access lane="320898238#0_0" pos="0.00" length="13.26" friendlyPos="1"/>
+        <access lane="320898241_0" pos="5.35" length="16.02" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5303127353" name="Callao" lane="695991673#2_0" startPos="249.24" endPos="449.24" friendlyPos="true">
+        <access lane="1003795546#1_0" pos="12.72" length="16.22" friendlyPos="1"/>
+        <access lane="202214510#6_0" pos="23.26" length="31.76" friendlyPos="1"/>
+        <access lane="320895853_0" pos="0.00" length="26.67" friendlyPos="1"/>
+        <access lane="548899584#0_0" pos="0.00" length="29.23" friendlyPos="1"/>
+        <access lane="548899585#0_0" pos="1.19" length="30.69" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5303127355" name="Alonso Martínez" lane="695991675_0" startPos="916.98" endPos="1116.98" friendlyPos="true"/>
+    <busStop id="5303173542" name="Plaza de España" lane="443618649_0" startPos="0.00" endPos="200.00" friendlyPos="true" lines="L3">
+        <access lane="-4487131#0_0" pos="0.20" length="120.83" friendlyPos="1"/>
+        <access lane="-4487131#1_0" pos="51.29" length="130.01" friendlyPos="1"/>
+        <access lane="27540826#0_0" pos="53.38" length="2.23" friendlyPos="1"/>
+        <access lane="4334161_0" pos="0.00" length="95.35" friendlyPos="1"/>
+        <access lane="4487131#0_0" pos="0.00" length="128.49" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5303173603" name="Lavapiés" lane="548977485#2_0" startPos="869.76" endPos="1069.76" friendlyPos="true" lines="L3">
+        <access lane="-4350172#0_0" pos="348.46" length="124.26" friendlyPos="1"/>
+        <access lane="355153823#0_0" pos="0.00" length="93.64" friendlyPos="1"/>
+        <access lane="4328770#2_0" pos="274.41" length="96.51" friendlyPos="1"/>
+        <access lane="4350172#0_0" pos="123.96" length="115.56" friendlyPos="1"/>
+        <access lane="7972698#4_0" pos="88.95" length="332.77" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5303173605" name="Sol" lane="548977485#1_0" startPos="37.20" endPos="237.20" friendlyPos="true" lines="L3">
+        <access lane="1169291963#0_0" pos="49.44" length="22.29" friendlyPos="1"/>
+        <access lane="549535251#1_0" pos="17.80" length="1.51" friendlyPos="1"/>
+        <access lane="549535251#2_0" pos="0.00" length="20.50" friendlyPos="1"/>
+        <access lane="549535253#1_0" pos="10.70" length="17.08" friendlyPos="1"/>
+        <access lane="549535253#2_0" pos="0.00" length="16.92" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5303173607" name="Plaza de España" lane="548977485#0_0" startPos="0.00" endPos="200.00" friendlyPos="true" lines="L3">
+        <access lane="-4487131#0_0" pos="0.20" length="119.65" friendlyPos="1"/>
+        <access lane="-4487131#1_0" pos="51.29" length="129.68" friendlyPos="1"/>
+        <access lane="27540826#0_0" pos="53.35" length="6.94" friendlyPos="1"/>
+        <access lane="4334161_0" pos="0.00" length="95.15" friendlyPos="1"/>
+        <access lane="4487131#0_0" pos="0.00" length="127.24" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5303271992" name="Cuatro Caminos" lane="442950301#1_0" startPos="3185.81" endPos="3385.81" friendlyPos="true"/>
+    <busStop id="5303271994" name="Canal" lane="442950301#1_0" startPos="2546.13" endPos="2746.13" friendlyPos="true"/>
+    <busStop id="5303272068" name="Ópera" lane="548990710_0" startPos="0.00" endPos="200.00" friendlyPos="true" lines="L2">
+        <access lane="1057755387_0" pos="55.08" length="10.98" friendlyPos="1"/>
+        <access lane="1240524439_0" pos="30.91" length="0.62" friendlyPos="1"/>
+        <access lane="1240524440_0" pos="0.00" length="4.80" friendlyPos="1"/>
+        <access lane="320898239#0_0" pos="0.00" length="10.53" friendlyPos="1"/>
+        <access lane="320898241_0" pos="3.68" length="3.76" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5303272075" name="Sol" lane="548990703_0" startPos="815.84" endPos="1015.84" friendlyPos="true" lines="L2">
+        <access lane="1169291962_0" pos="5.25" length="10.69" friendlyPos="1"/>
+        <access lane="319338109_0" pos="5.70" length="6.42" friendlyPos="1"/>
+        <access lane="549535248_0" pos="0.00" length="6.75" friendlyPos="1"/>
+        <access lane="549535253#3_0" pos="9.46" length="9.37" friendlyPos="1"/>
+        <access lane="549535253#4_0" pos="1.21" length="0.38" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5303272231" name="Sevilla" lane="548990703_0" startPos="519.25" endPos="719.25" friendlyPos="true" lines="L2">
+        <access lane="1286414025#1_0" pos="10.41" length="2.91" friendlyPos="1"/>
+        <access lane="1286414025#2_0" pos="0.00" length="6.21" friendlyPos="1"/>
+        <access lane="1286414026#1_0" pos="16.19" length="8.22" friendlyPos="1"/>
+        <access lane="1286414028#1_0" pos="0.20" length="2.14" friendlyPos="1"/>
+        <access lane="79638493#1_0" pos="10.85" length="9.69" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5303272236" name="Banco de España" lane="548990703_0" startPos="68.51" endPos="268.51" friendlyPos="true" lines="L2">
+        <access lane="1286420525#2_0" pos="30.58" length="20.25" friendlyPos="1"/>
+        <access lane="1286420527#3_0" pos="32.43" length="19.16" friendlyPos="1"/>
+        <access lane="1286420527#6_0" pos="82.16" length="34.75" friendlyPos="1"/>
+        <access lane="336635029_0" pos="62.34" length="5.39" friendlyPos="1"/>
+        <access lane="336635034#13_0" pos="32.72" length="27.28" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5303272239" name="Cuatro Caminos" lane="548990710_0" startPos="3063.47" endPos="3263.47" friendlyPos="true" lines="L2"/>
+    <busStop id="5303272243" name="Canal" lane="548990710_0" startPos="2422.51" endPos="2622.51" friendlyPos="true" lines="L2"/>
+    <busStop id="5303272244" name="Quevedo" lane="548990710_0" startPos="1731.10" endPos="1931.10" friendlyPos="true" lines="L2"/>
+    <busStop id="5303272246" name="San Bernardo" lane="548990710_0" startPos="1427.35" endPos="1627.35" friendlyPos="true" lines="L2">
+        <access lane="1240524430#0_0" pos="0.00" length="240.12" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5303272248" name="Noviciado" lane="548990710_0" startPos="764.38" endPos="964.38" friendlyPos="true" lines="L2">
+        <access lane="-293712003#0_0" pos="19.17" length="201.69" friendlyPos="1"/>
+        <access lane="-4308074#4_0" pos="0.00" length="46.69" friendlyPos="1"/>
+        <access lane="1240524430#0_0" pos="506.10" length="4.77" friendlyPos="1"/>
+        <access lane="293712003#0_0" pos="0.00" length="199.94" friendlyPos="1"/>
+        <access lane="4308074#3_0" pos="180.86" length="39.07" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5303272249" name="Santo Domingo" lane="548990710_0" startPos="360.74" endPos="560.74" friendlyPos="true" lines="L2">
+        <access lane="409114851#5_0" pos="39.70" length="12.54" friendlyPos="1"/>
+        <access lane="409114852#1_0" pos="39.47" length="6.72" friendlyPos="1"/>
+        <access lane="549532292_0" pos="0.20" length="63.19" friendlyPos="1"/>
+        <access lane="549532293#1_0" pos="0.00" length="64.10" friendlyPos="1"/>
+        <access lane="592885351_0" pos="0.00" length="6.28" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5304749213" name="Ópera" lane="549151324_0" startPos="0.00" endPos="124.53" friendlyPos="true" lines="R">
+        <access lane="-31053377#1_0" pos="27.44" length="10.93" friendlyPos="1"/>
+        <access lane="-7726325_0" pos="0.00" length="23.10" friendlyPos="1"/>
+        <access lane="31053377#1_0" pos="8.49" length="2.23" friendlyPos="1"/>
+        <access lane="345305595#10_0" pos="25.95" length="3.47" friendlyPos="1"/>
+        <access lane="7726325_0" pos="43.17" length="15.77" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5304749535" name="Príncipe Pío" lane="549151325_0" startPos="0.00" endPos="200.00" friendlyPos="true" lines="R">
+        <access lane="119181067_0" pos="15.12" length="20.51" friendlyPos="1"/>
+        <access lane="119181088_0" pos="13.06" length="35.70" friendlyPos="1"/>
+        <access lane="71233319#2_0" pos="5.64" length="23.32" friendlyPos="1"/>
+        <access lane="71233319#3_0" pos="10.46" length="2.68" friendlyPos="1"/>
+        <access lane="71402049#0_0" pos="0.00" length="37.47" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5305486978" name="Príncipe Pío" lane="1054025302_0" startPos="1203.47" endPos="1403.47" friendlyPos="true">
+        <access lane="1240317913#0_0" pos="19.93" length="22.80" friendlyPos="1"/>
+        <access lane="1240317913#1_0" pos="0.00" length="36.45" friendlyPos="1"/>
+        <access lane="1252080880_0" pos="0.00" length="41.25" friendlyPos="1"/>
+        <access lane="1252080881_0" pos="13.31" length="23.80" friendlyPos="1"/>
+        <access lane="1252080884#1_0" pos="12.61" length="33.74" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5305487011" name="Príncipe Pío" lane="1054025306#1_0" startPos="0.00" endPos="142.64" friendlyPos="true" lines="L6">
+        <access lane="119181120#3_0" pos="49.21" length="38.70" friendlyPos="1"/>
+        <access lane="1240317913#0_0" pos="16.06" length="23.13" friendlyPos="1"/>
+        <access lane="1240317913#1_0" pos="0.00" length="41.32" friendlyPos="1"/>
+        <access lane="1252080881_0" pos="13.69" length="29.58" friendlyPos="1"/>
+        <access lane="1252080884#1_0" pos="12.85" length="27.94" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5310093877" name="Tribunal" lane="1054025304_0" startPos="1758.22" endPos="1958.22" friendlyPos="true" lines="L10"/>
+    <busStop id="5310093878" name="Plaza de España" lane="1054025304_0" startPos="919.37" endPos="1119.37" friendlyPos="true" lines="L10">
+        <access lane="-7732105_0" pos="0.00" length="128.02" friendlyPos="1"/>
+        <access lane="409111728#1_0" pos="49.42" length="203.82" friendlyPos="1"/>
+        <access lane="453626027#1_0" pos="133.94" length="168.49" friendlyPos="1"/>
+        <access lane="7732105_0" pos="133.58" length="128.08" friendlyPos="1"/>
+        <access lane="80429290#0_0" pos="0.00" length="209.01" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5310093880" name="Príncipe Pío" lane="1054025304_0" startPos="5.92" endPos="205.92" friendlyPos="true" lines="L10">
+        <access lane="1240317913#0_0" pos="30.31" length="24.05" friendlyPos="1"/>
+        <access lane="1240317913#1_0" pos="0.00" length="27.27" friendlyPos="1"/>
+        <access lane="1252080879_0" pos="0.00" length="46.75" friendlyPos="1"/>
+        <access lane="1252080880_0" pos="0.00" length="34.07" friendlyPos="1"/>
+        <access lane="1252080881_0" pos="13.72" length="8.18" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5321927322" lane="269291945#2_1" startPos="20.33" endPos="35.33" friendlyPos="true" lines="147"/>
+    <busStop id="5342725021" lane="44288719#1_0" startPos="3.77" endPos="18.77" friendlyPos="true" lines="34"/>
+    <busStop id="5342725022" lane="907553665_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="17">
+        <access lane="-130468269#2_0" pos="11.51" length="56.12" friendlyPos="1"/>
+        <access lane="7732075_0" pos="82.91" length="68.72" friendlyPos="1"/>
+        <access lane="902239491_0" pos="0.16" length="66.34" friendlyPos="1"/>
+        <access lane="902239492#0_0" pos="0.00" length="66.64" friendlyPos="1"/>
+        <access lane="902239492#1_0" pos="0.00" length="76.41" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5350038443" lane="554357604#0_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="26">
+        <access lane="1176321083_0" pos="8.63" length="17.47" friendlyPos="1"/>
+        <access lane="1176321085_0" pos="2.34" length="22.02" friendlyPos="1"/>
+        <access lane="1176321087_0" pos="8.46" length="7.46" friendlyPos="1"/>
+        <access lane="1176321088_0" pos="2.54" length="15.11" friendlyPos="1"/>
+        <access lane="1176321089#0_0" pos="0.00" length="23.54" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5350055328" lane="554359457_0" startPos="22.28" endPos="37.28" friendlyPos="true" lines="44">
+        <access lane="409114851#5_0" pos="73.49" length="9.92" friendlyPos="1"/>
+        <access lane="409114852#0_0" pos="11.93" length="18.96" friendlyPos="1"/>
+        <access lane="409114852#1_0" pos="5.70" length="10.08" friendlyPos="1"/>
+        <access lane="549532292_0" pos="0.20" length="15.21" friendlyPos="1"/>
+        <access lane="549532293#1_0" pos="0.00" length="14.27" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5350055329" lane="32597086#1_0" startPos="17.99" endPos="32.99" friendlyPos="true">
+        <access lane="127937401_0" pos="0.66" length="43.68" friendlyPos="1"/>
+        <access lane="202214510#1_0" pos="25.75" length="16.09" friendlyPos="1"/>
+        <access lane="409114851#2_0" pos="36.16" length="21.71" friendlyPos="1"/>
+        <access lane="651531209#1_0" pos="0.00" length="43.85" friendlyPos="1"/>
+        <access lane="7732067#1_0" pos="0.00" length="40.21" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5351138575" lane="651525544#0_1" startPos="22.59" endPos="37.59" friendlyPos="true"/>
+    <busStop id="5351138581" lane="41699477#1_1" startPos="40.05" endPos="55.05" friendlyPos="true" lines="35"/>
+    <busStop id="5385241327" lane="4328840_0" startPos="15.31" endPos="30.31" friendlyPos="true">
+        <access lane="1286633551#2_0" pos="35.35" length="5.06" friendlyPos="1"/>
+        <access lane="1286633551#4_0" pos="79.08" length="24.05" friendlyPos="1"/>
+        <access lane="1286843486#2_0" pos="57.27" length="41.32" friendlyPos="1"/>
+        <access lane="1288890366#4_0" pos="44.99" length="42.53" friendlyPos="1"/>
+        <access lane="336635020#12_0" pos="57.00" length="17.45" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5385241352" lane="419119406#0_0" startPos="20.32" endPos="35.32" friendlyPos="true">
+        <access lane="335825755#3_0" pos="0.20" length="44.71" friendlyPos="1"/>
+        <access lane="335825755#4_0" pos="24.50" length="12.86" friendlyPos="1"/>
+        <access lane="336633763_0" pos="0.00" length="44.24" friendlyPos="1"/>
+        <access lane="865912095#1_0" pos="117.17" length="68.83" friendlyPos="1"/>
+        <access lane="865912095#2_0" pos="28.10" length="12.42" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5385241353" lane="936883629_0" startPos="6.29" endPos="21.29" friendlyPos="true">
+        <access lane="-688424906#3_0" pos="0.00" length="37.58" friendlyPos="1"/>
+        <access lane="202214510#11_0" pos="35.92" length="15.67" friendlyPos="1"/>
+        <access lane="334102282#3_0" pos="29.06" length="37.19" friendlyPos="1"/>
+        <access lane="334102282#4_0" pos="10.82" length="16.17" friendlyPos="1"/>
+        <access lane="7732072#1_0" pos="0.00" length="36.71" friendlyPos="1"/>
+    </busStop>
+    <busStop id="562734686" lane="44288719#1_0" startPos="10.99" endPos="25.99" friendlyPos="true" lines="N12 N15 10"/>
+    <busStop id="5960796494" name="Alcalá - Círculo de Bellas Artes" lane="4346299#0_0" startPos="18.15" endPos="33.15" friendlyPos="true">
+        <access lane="1286414016#1_0" pos="0.20" length="21.80" friendlyPos="1"/>
+        <access lane="1286414018_0" pos="21.44" length="10.61" friendlyPos="1"/>
+        <access lane="1286633550#2_0" pos="9.65" length="16.60" friendlyPos="1"/>
+        <access lane="1286843486#1_0" pos="19.61" length="12.81" friendlyPos="1"/>
+        <access lane="1286843486#2_0" pos="31.95" length="7.37" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5960796495" name="Metro Sevilla" lane="43759793#3_0" startPos="36.28" endPos="51.28" friendlyPos="true">
+        <access lane="1287136457#4_0" pos="53.16" length="16.15" friendlyPos="1"/>
+        <access lane="1288890366#2_0" pos="123.47" length="5.05" friendlyPos="1"/>
+        <access lane="1288890373#2_0" pos="49.95" length="13.06" friendlyPos="1"/>
+        <access lane="1288890373#5_0" pos="117.80" length="27.27" friendlyPos="1"/>
+        <access lane="336635034#1_0" pos="45.22" length="23.88" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5960802785" name="Alcalá - Gran Vía" lane="46098088#1_0" startPos="70.39" endPos="85.39" friendlyPos="true">
+        <access lane="1287136457#4_0" pos="33.39" length="6.92" friendlyPos="1"/>
+        <access lane="1287136457#8_0" pos="124.44" length="23.45" friendlyPos="1"/>
+        <access lane="1288890366#2_0" pos="105.84" length="18.52" friendlyPos="1"/>
+        <access lane="1288890373#2_0" pos="32.15" length="26.03" friendlyPos="1"/>
+        <access lane="336633765#2_0" pos="32.65" length="16.90" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5963987038" name="San Bernardo - Mqués. de Leganés" lane="293712003#3_1" startPos="0.80" endPos="15.80" friendlyPos="true"/>
+    <busStop id="5970484989" name="Bailén - Yeseros" lane="1137958509_0" startPos="19.66" endPos="34.66" friendlyPos="true">
+        <access lane="-4519461_0" pos="6.92" length="42.46" friendlyPos="1"/>
+        <access lane="-686216025_0" pos="3.90" length="28.69" friendlyPos="1"/>
+        <access lane="-7732904#2_0" pos="0.00" length="43.76" friendlyPos="1"/>
+        <access lane="686216025_0" pos="0.00" length="30.82" friendlyPos="1"/>
+        <access lane="7642936_0" pos="35.17" length="35.05" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5970484990" name="Bailén - Yeseros" lane="1137958526#0_0" startPos="16.90" endPos="31.90" friendlyPos="true" lines="3">
+        <access lane="-4519461_0" pos="6.92" length="42.34" friendlyPos="1"/>
+        <access lane="-686216025_0" pos="3.90" length="31.58" friendlyPos="1"/>
+        <access lane="-7732904#2_0" pos="0.00" length="49.56" friendlyPos="1"/>
+        <access lane="686216025_0" pos="0.00" length="36.69" friendlyPos="1"/>
+        <access lane="7642936_0" pos="31.81" length="28.51" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5970484991" name="Bailén - Mayor" lane="1137958527_0" startPos="172.31" endPos="187.31" friendlyPos="true">
+        <access lane="29001514#1_0" pos="19.99" length="45.33" friendlyPos="1"/>
+        <access lane="387421983_0" pos="160.14" length="18.16" friendlyPos="1"/>
+        <access lane="387848381_0" pos="161.20" length="12.09" friendlyPos="1"/>
+        <access lane="387848384#1_0" pos="0.00" length="47.16" friendlyPos="1"/>
+        <access lane="417376739#0_0" pos="22.26" length="25.71" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5970484992" name="Bailén - Mayor" lane="7726329#0_0" startPos="4.75" endPos="19.75" friendlyPos="true">
+        <access lane="387421983_0" pos="173.83" length="9.04" friendlyPos="1"/>
+        <access lane="387421987#1_0" pos="0.00" length="27.53" friendlyPos="1"/>
+        <access lane="387848381_0" pos="174.79" length="21.56" friendlyPos="1"/>
+        <access lane="388101145#1_0" pos="3.10" length="28.53" friendlyPos="1"/>
+        <access lane="417376739#0_0" pos="7.55" length="30.01" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5970484993" name="Pza. España - Cta. San Vicente" lane="4334161_1" startPos="71.25" endPos="86.25" friendlyPos="true"/>
+    <busStop id="5970484994" name="San Bernardo - La Estrella" lane="293712003#4_1" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="5970506953" name="Hortaleza - Gravina" lane="4487679#7_0" startPos="0.00" endPos="15.00" friendlyPos="true">
+        <access lane="174851639#0_0" pos="223.07" length="88.63" friendlyPos="1"/>
+        <access lane="174851639#1_0" pos="0.00" length="92.14" friendlyPos="1"/>
+        <access lane="4291307#2_0" pos="74.64" length="171.22" friendlyPos="1"/>
+        <access lane="7972372#0_0" pos="0.00" length="21.27" friendlyPos="1"/>
+        <access lane="7972372#1_0" pos="0.00" length="98.64" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5970506954" name="Hortaleza - Infantas" lane="4487679#3_0" startPos="36.34" endPos="51.34" friendlyPos="true">
+        <access lane="1202035038_0" pos="0.60" length="92.90" friendlyPos="1"/>
+        <access lane="310880355#2_0" pos="41.93" length="93.13" friendlyPos="1"/>
+        <access lane="310880355#4_0" pos="251.34" length="108.88" friendlyPos="1"/>
+        <access lane="77339401#0_0" pos="0.00" length="76.52" friendlyPos="1"/>
+        <access lane="865923366#2_0" pos="112.68" length="100.90" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5970506956" name="Cedaceros - Zorrilla" lane="43759728#0_0" startPos="21.79" endPos="36.79" friendlyPos="true">
+        <access lane="-90210746#0_0" pos="140.42" length="74.40" friendlyPos="1"/>
+        <access lane="1288890363#4_0" pos="6.78" length="145.51" friendlyPos="1"/>
+        <access lane="391707139#0_0" pos="126.74" length="17.78" friendlyPos="1"/>
+        <access lane="7971489#1_0" pos="145.00" length="104.53" friendlyPos="1"/>
+        <access lane="90210746#0_0" pos="0.00" length="66.72" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5970506958" name="Mayor Nº 21" lane="31261528#1_0" startPos="37.08" endPos="52.08" friendlyPos="true">
+        <access lane="116821934_0" pos="0.00" length="70.78" friendlyPos="1"/>
+        <access lane="17252048_0" pos="0.00" length="17.95" friendlyPos="1"/>
+        <access lane="343971959_0" pos="0.00" length="75.57" friendlyPos="1"/>
+        <access lane="41602116_0" pos="0.00" length="61.06" friendlyPos="1"/>
+        <access lane="895321694_0" pos="41.26" length="26.69" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5970506959" name="Mayor - Ayuntamiento de Madrid" lane="355939669#5_0" startPos="7.71" endPos="22.71" friendlyPos="true">
+        <access lane="4319472_0" pos="12.20" length="45.53" friendlyPos="1"/>
+        <access lane="702055266#0_0" pos="0.00" length="72.57" friendlyPos="1"/>
+        <access lane="702055266#2_0" pos="34.77" length="54.69" friendlyPos="1"/>
+        <access lane="702055266#3_0" pos="16.32" length="29.93" friendlyPos="1"/>
+        <access lane="702055267_0" pos="27.06" length="84.31" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5970506960" name="Pza. San Francisco - Bailén" lane="7732896_0" startPos="11.80" endPos="26.80" friendlyPos="true" lines="148">
+        <access lane="431520794#1_0" pos="0.20" length="35.06" friendlyPos="1"/>
+        <access lane="431520794#2_0" pos="0.20" length="31.15" friendlyPos="1"/>
+        <access lane="446534757#0_0" pos="0.00" length="46.34" friendlyPos="1"/>
+        <access lane="446534759#1_0" pos="3.20" length="41.96" friendlyPos="1"/>
+        <access lane="890382806_0" pos="7.11" length="37.03" friendlyPos="1"/>
+    </busStop>
+    <busStop id="6115513403" lane="32044942#1_0" startPos="11.32" endPos="26.32" friendlyPos="true">
+        <access lane="380211170#7_0" pos="13.31" length="35.61" friendlyPos="1"/>
+        <access lane="380211179_0" pos="0.00" length="42.22" friendlyPos="1"/>
+        <access lane="4522049#0_0" pos="5.20" length="30.36" friendlyPos="1"/>
+        <access lane="477289187#1_0" pos="22.61" length="35.61" friendlyPos="1"/>
+        <access lane="652285631_0" pos="146.03" length="6.56" friendlyPos="1"/>
+    </busStop>
+    <busStop id="7537651754" lane="417019353_0" startPos="0.00" endPos="6.78" friendlyPos="true">
+        <access lane="-806032532_0" pos="0.70" length="15.46" friendlyPos="1"/>
+        <access lane="-806032533_0" pos="0.00" length="19.12" friendlyPos="1"/>
+        <access lane="1288890363#2_0" pos="65.43" length="5.86" friendlyPos="1"/>
+        <access lane="1288890363#3_0" pos="0.00" length="21.28" friendlyPos="1"/>
+        <access lane="336633765#1_0" pos="23.18" length="19.40" friendlyPos="1"/>
+    </busStop>
+    <busStop id="7559826150" name="Alonso Martínez" lane="1054025304_0" startPos="2146.74" endPos="2346.74" friendlyPos="true" lines="L10"/>
+    <busStop id="7954956494" name="Pirámides" lane="1073094830_0" startPos="0.00" endPos="200.00" friendlyPos="true" lines="C-10 C-1"/>
+    <busStop id="8235796741" lane="4308590#3_1" startPos="27.41" endPos="42.41" friendlyPos="true" lines="25 39"/>
+    <busStop id="8235796757" lane="936883629_0" startPos="0.00" endPos="15.00" friendlyPos="true">
+        <access lane="-688424906#3_0" pos="0.00" length="28.35" friendlyPos="1"/>
+        <access lane="202214510#11_0" pos="45.17" length="15.69" friendlyPos="1"/>
+        <access lane="202214510#12_0" pos="0.00" length="34.08" friendlyPos="1"/>
+        <access lane="334102282#4_0" pos="20.07" length="16.23" friendlyPos="1"/>
+        <access lane="688424906#3_0" pos="75.63" length="32.97" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8235796758" lane="885687791_0" startPos="0.00" endPos="0.20" friendlyPos="true" lines="9 N18 N19 203">
+        <access lane="112538790#1_0" pos="7.04" length="8.90" friendlyPos="1"/>
+        <access lane="302579018#1_0" pos="0.20" length="13.32" friendlyPos="1"/>
+        <access lane="302579019#1_0" pos="0.81" length="11.43" friendlyPos="1"/>
+        <access lane="391709024#2_0" pos="3.10" length="9.65" friendlyPos="1"/>
+        <access lane="749311666#5_0" pos="0.20" length="14.20" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8235796763" lane="4308591_1" startPos="61.76" endPos="76.76" friendlyPos="true" lines="46 75 N18 N19 N20"/>
+    <busStop id="8272206383" lane="293722999_1" startPos="119.60" endPos="134.60" friendlyPos="true" lines="138 25 33 39 62"/>
+    <busStop id="8272206384" lane="71808949#0_1" startPos="0.00" endPos="5.15" friendlyPos="true"/>
+    <busStop id="8272206405" lane="71808941_1" startPos="46.67" endPos="61.67" friendlyPos="true" lines="25 39"/>
+    <busStop id="8422641935" lane="4518854#0_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="8422641940" lane="398751337#1_1" startPos="29.83" endPos="44.83" friendlyPos="true"/>
+    <busStop id="8422641941" lane="4346292#0_1" startPos="94.96" endPos="109.96" friendlyPos="true" lines="17 18 23 35 N26"/>
+    <busStop id="8423213265" lane="302579019#0_0" startPos="0.00" endPos="9.18" friendlyPos="true" lines="15 20"/>
+    <busStop id="8423356483" lane="4346292#0_1" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="8423356485" lane="262951801#2_1" startPos="9.12" endPos="24.12" friendlyPos="true"/>
+    <busStop id="8423356486" lane="66835311#0_1" startPos="0.00" endPos="11.30" friendlyPos="true"/>
+    <busStop id="8423356487" lane="398751337#1_1" startPos="63.74" endPos="78.74" friendlyPos="true"/>
+    <busStop id="8423356496" lane="128089326_0" startPos="17.53" endPos="32.53" friendlyPos="true" lines="N10 N13 N14 N26"/>
+    <busStop id="8423356511" lane="686213116#0_1" startPos="18.20" endPos="33.20" friendlyPos="true"/>
+    <busStop id="8423406934" lane="82567675#3_0" startPos="15.25" endPos="30.25" friendlyPos="true">
+        <access lane="-7972551#5_0" pos="0.00" length="41.14" friendlyPos="1"/>
+        <access lane="174811786#0_0" pos="9.10" length="92.28" friendlyPos="1"/>
+        <access lane="320668249_0" pos="19.92" length="91.67" friendlyPos="1"/>
+        <access lane="39348542_0" pos="141.47" length="66.37" friendlyPos="1"/>
+        <access lane="7972551#3_0" pos="36.66" length="49.13" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8423406935" lane="48345480#0_1" startPos="26.04" endPos="41.04" friendlyPos="true"/>
+    <busStop id="8423406948" lane="4328790#6_1" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="8423406949" lane="686216023_1" startPos="47.50" endPos="62.50" friendlyPos="true" lines="M1"/>
+    <busStop id="8423406952" lane="41699477#1_1" startPos="29.45" endPos="44.45" friendlyPos="true"/>
+    <busStop id="8423406955" lane="423231391#6_1" startPos="21.77" endPos="36.77" friendlyPos="true"/>
+    <busStop id="8423406956" lane="4328770#0_0" startPos="17.15" endPos="32.15" friendlyPos="true"/>
+    <busStop id="8423406957" lane="29230555#0_1" startPos="6.55" endPos="21.55" friendlyPos="true"/>
+    <busStop id="8423406959" lane="7643038_1" startPos="75.41" endPos="90.41" friendlyPos="true"/>
+    <busStop id="8423406960" lane="4328770#2_0" startPos="99.06" endPos="114.06" friendlyPos="true"/>
+    <busStop id="8423406961" lane="30676403#0_0" startPos="22.53" endPos="37.53" friendlyPos="true">
+        <access lane="-4328790#5_0" pos="0.00" length="63.74" friendlyPos="1"/>
+        <access lane="-4328790#7_0" pos="17.75" length="43.00" friendlyPos="1"/>
+        <access lane="4328790#5_0" pos="41.77" length="59.24" friendlyPos="1"/>
+        <access lane="4328790#6_0" pos="23.61" length="35.20" friendlyPos="1"/>
+        <access lane="7712488_0" pos="0.00" length="64.47" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8423406967" lane="40933501#0_0" startPos="42.03" endPos="57.03" friendlyPos="true" lines="31 50 65">
+        <access lane="102154846#0_0" pos="49.60" length="25.78" friendlyPos="1"/>
+        <access lane="361273673#0_0" pos="85.10" length="16.17" friendlyPos="1"/>
+        <access lane="380218496#0_0" pos="38.90" length="18.87" friendlyPos="1"/>
+        <access lane="380218499#0_0" pos="33.82" length="30.68" friendlyPos="1"/>
+        <access lane="513981681#1_0" pos="0.00" length="33.31" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8423406969" lane="7732076#0_0" startPos="0.00" endPos="4.47" friendlyPos="true">
+        <access lane="380211170#17_0" pos="0.20" length="11.08" friendlyPos="1"/>
+        <access lane="380211170#18_0" pos="0.00" length="10.75" friendlyPos="1"/>
+        <access lane="444331991#2_0" pos="2.15" length="11.47" friendlyPos="1"/>
+        <access lane="477289187#13_0" pos="27.36" length="15.39" friendlyPos="1"/>
+        <access lane="477289187#1_0" pos="0.00" length="15.14" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8423406970" lane="31309326#4_1" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="8423406976" lane="32480293#6_0" startPos="74.57" endPos="89.57" friendlyPos="true">
+        <access lane="-7648756_0" pos="0.00" length="135.46" friendlyPos="1"/>
+        <access lane="-81295320#5_0" pos="650.98" length="108.65" friendlyPos="1"/>
+        <access lane="130757789_0" pos="72.01" length="150.94" friendlyPos="1"/>
+        <access lane="7648756_0" pos="145.41" length="127.67" friendlyPos="1"/>
+        <access lane="81295320#5_0" pos="82.32" length="105.65" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8423406977" lane="32480293#1_0" startPos="68.16" endPos="83.16" friendlyPos="true" lines="36">
+        <access lane="-7648766#0_0" pos="0.00" length="37.17" friendlyPos="1"/>
+        <access lane="-7648766#1_0" pos="83.39" length="34.97" friendlyPos="1"/>
+        <access lane="380218499#1_0" pos="100.50" length="7.77" friendlyPos="1"/>
+        <access lane="7648766#0_0" pos="142.48" length="44.59" friendlyPos="1"/>
+        <access lane="7648766#1_0" pos="0.12" length="42.77" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8423406978" lane="44885764#1_0" startPos="34.93" endPos="49.93" friendlyPos="true">
+        <access lane="198530630_0" pos="0.00" length="22.65" friendlyPos="1"/>
+        <access lane="380217061#1_0" pos="25.93" length="24.90" friendlyPos="1"/>
+        <access lane="380217061#2_0" pos="9.36" length="11.66" friendlyPos="1"/>
+        <access lane="4347929_0" pos="0.00" length="22.69" friendlyPos="1"/>
+        <access lane="548794182#1_0" pos="172.02" length="11.34" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8423406979" lane="49016411#0_1" startPos="0.00" endPos="12.61" friendlyPos="true"/>
+    <busStop id="8423406980" lane="31309326#3_1" startPos="6.20" endPos="21.20" friendlyPos="true"/>
+    <busStop id="8423406982" lane="32480293#4_0" startPos="16.54" endPos="31.54" friendlyPos="true">
+        <access lane="-7648759#0_0" pos="59.22" length="7.24" friendlyPos="1"/>
+        <access lane="205120460#0_0" pos="0.00" length="49.58" friendlyPos="1"/>
+        <access lane="205120460#1_0" pos="0.00" length="51.76" friendlyPos="1"/>
+        <access lane="205120467_0" pos="57.15" length="44.69" friendlyPos="1"/>
+        <access lane="7648759#0_0" pos="0.00" length="18.73" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8423406988" lane="1275419913#1_1" startPos="0.00" endPos="5.54" friendlyPos="true" lines="50"/>
+    <busStop id="8427149774" lane="40933501#0_0" startPos="13.37" endPos="28.37" friendlyPos="true">
+        <access lane="102154846#0_0" pos="20.95" length="25.93" friendlyPos="1"/>
+        <access lane="361273673#0_0" pos="56.44" length="16.14" friendlyPos="1"/>
+        <access lane="380218496#0_0" pos="10.24" length="18.74" friendlyPos="1"/>
+        <access lane="380218499#0_0" pos="62.48" length="30.24" friendlyPos="1"/>
+        <access lane="979396015#0_0" pos="23.85" length="50.69" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8427149777" lane="907553665_0" startPos="18.99" endPos="33.99" friendlyPos="true" lines="31">
+        <access lane="380211179_0" pos="0.00" length="41.81" friendlyPos="1"/>
+        <access lane="902239490#2_0" pos="0.00" length="42.44" friendlyPos="1"/>
+        <access lane="902239491_0" pos="0.98" length="21.69" friendlyPos="1"/>
+        <access lane="902239492#0_0" pos="0.00" length="21.69" friendlyPos="1"/>
+        <access lane="902239492#1_0" pos="0.00" length="31.68" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8429132476" lane="4328803#1_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="8429132477" lane="4308074#0_1" startPos="10.47" endPos="25.47" friendlyPos="true"/>
+    <busStop id="8429132478" lane="4308074#3_1" startPos="146.44" endPos="161.44" friendlyPos="true"/>
+    <busStop id="8429132480" lane="4308074#3_1" startPos="5.81" endPos="20.81" friendlyPos="true"/>
+    <busStop id="8429132485" lane="4328802#5_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="8429132486" lane="651613048#0_0" startPos="25.85" endPos="40.85" friendlyPos="true">
+        <access lane="202214510#14_0" pos="8.13" length="17.24" friendlyPos="1"/>
+        <access lane="334102282#7_0" pos="9.42" length="14.64" friendlyPos="1"/>
+        <access lane="695993040#0_0" pos="0.00" length="14.12" friendlyPos="1"/>
+        <access lane="695993055#0_0" pos="14.32" length="10.06" friendlyPos="1"/>
+        <access lane="695993055#1_0" pos="0.00" length="14.89" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8429132487" lane="32865959#0_0" startPos="11.49" endPos="26.49" friendlyPos="true">
+        <access lane="310880355#4_0" pos="15.18" length="209.15" friendlyPos="1"/>
+        <access lane="4328802#5_0" pos="186.24" length="115.20" friendlyPos="1"/>
+        <access lane="4328803#0_0" pos="19.08" length="28.83" friendlyPos="1"/>
+        <access lane="865923366#0_0" pos="0.00" length="223.04" friendlyPos="1"/>
+        <access lane="865923366#1_0" pos="0.00" length="223.43" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8433060765" lane="911013768_1" startPos="155.99" endPos="170.99" friendlyPos="true"/>
+    <busStop id="8433060766" lane="243991597_0" startPos="21.91" endPos="36.91" friendlyPos="true" lines="14 27 34 37 45 N10 N11 N12 N13 N14 N15 N9 10 N25"/>
+    <busStop id="8433060811" lane="262951801#5_1" startPos="96.84" endPos="111.84" friendlyPos="true"/>
+    <busStop id="8436098481" lane="46098088#1_0" startPos="89.22" endPos="104.22" friendlyPos="true" lines="46">
+        <access lane="1287133854#0_0" pos="0.20" length="22.99" friendlyPos="1"/>
+        <access lane="1287136457#4_0" pos="12.90" length="6.74" friendlyPos="1"/>
+        <access lane="1287136457#8_0" pos="144.95" length="21.75" friendlyPos="1"/>
+        <access lane="1288890366#2_0" pos="88.22" length="18.84" friendlyPos="1"/>
+        <access lane="336633765#2_0" pos="12.15" length="16.66" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8440470083" lane="7732894#1_0" startPos="8.93" endPos="23.93" friendlyPos="true" lines="60">
+        <access lane="-7732892_0" pos="0.00" length="41.28" friendlyPos="1"/>
+        <access lane="-7732906#1_0" pos="0.00" length="54.88" friendlyPos="1"/>
+        <access lane="7732892_0" pos="96.13" length="33.76" friendlyPos="1"/>
+        <access lane="7732906#0_0" pos="49.62" length="48.29" friendlyPos="1"/>
+        <access lane="7732906#1_0" pos="0.20" length="47.13" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8440470099" lane="4346292#6_1" startPos="14.13" endPos="29.13" friendlyPos="true"/>
+    <busStop id="8440634349" lane="1260545323#1_0" startPos="120.91" endPos="135.91" friendlyPos="true" lines="14 27 37 45"/>
+    <busStop id="8440634409" lane="269291945#2_1" startPos="41.84" endPos="56.84" friendlyPos="true" lines="148"/>
+    <busStop id="8473661010" lane="7648767#2_0" startPos="22.27" endPos="37.27" friendlyPos="true">
+        <access lane="-81295320#3_0" pos="0.00" length="60.12" friendlyPos="1"/>
+        <access lane="-81295320#5_0" pos="700.77" length="11.34" friendlyPos="1"/>
+        <access lane="130757789_0" pos="76.48" length="53.63" friendlyPos="1"/>
+        <access lane="81295320#3_0" pos="73.33" length="57.64" friendlyPos="1"/>
+        <access lane="81295320#5_0" pos="32.46" length="8.34" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8473661012" lane="7732093#0_1" startPos="32.93" endPos="47.93" friendlyPos="true"/>
+    <busStop id="8473691225" lane="31000487_1" startPos="11.38" endPos="26.38" friendlyPos="true" lines="41"/>
+    <busStop id="9104252079" lane="984759713#1_0" startPos="30.04" endPos="45.04" friendlyPos="true" lines="51">
+        <access lane="1287136457#1_0" pos="0.00" length="63.07" friendlyPos="1"/>
+        <access lane="1287136457#8_0" pos="239.99" length="61.22" friendlyPos="1"/>
+        <access lane="336633764#1_0" pos="257.24" length="7.34" friendlyPos="1"/>
+        <access lane="336633764#2_0" pos="0.00" length="62.48" friendlyPos="1"/>
+        <access lane="925454152_0" pos="41.26" length="6.59" friendlyPos="1"/>
+    </busStop>
+    <busStop id="9307495431" lane="542325013#1_0" startPos="0.64" endPos="15.64" friendlyPos="true" lines="500">
+        <access lane="1005996782_0" pos="25.30" length="48.45" friendlyPos="1"/>
+        <access lane="136832111#2_0" pos="27.93" length="16.91" friendlyPos="1"/>
+        <access lane="27540826#0_0" pos="206.03" length="41.95" friendlyPos="1"/>
+        <access lane="4334161_0" pos="97.34" length="20.66" friendlyPos="1"/>
+        <access lane="82552699_0" pos="4.87" length="11.16" friendlyPos="1"/>
+    </busStop>
+    <busStop id="9666807257" name="Callao" lane="548977485#0_0" startPos="550.58" endPos="750.58" friendlyPos="true" lines="L3">
+        <access lane="320895852_0" pos="0.00" length="24.13" friendlyPos="1"/>
+        <access lane="320895859_0" pos="2.22" length="23.12" friendlyPos="1"/>
+        <access lane="332069618#1_0" pos="0.00" length="17.98" friendlyPos="1"/>
+        <access lane="380472819#1_0" pos="0.00" length="22.08" friendlyPos="1"/>
+        <access lane="380472819#4_0" pos="18.79" length="17.52" friendlyPos="1"/>
+    </busStop>
+    <busStop id="9727929637" name="Príncipe Pío" lane="119181155_0" startPos="169.95" endPos="369.95" friendlyPos="true">
+        <access lane="1279075084_0" pos="0.00" length="23.09" friendlyPos="1"/>
+        <access lane="1279075085_0" pos="0.00" length="19.66" friendlyPos="1"/>
+        <access lane="1279075086#0_0" pos="0.00" length="20.53" friendlyPos="1"/>
+        <access lane="1279075088#1_0" pos="6.16" length="22.32" friendlyPos="1"/>
+        <access lane="1279075088#2_0" pos="0.00" length="23.09" friendlyPos="1"/>
+    </busStop>
+    <busStop id="9727929638" name="Príncipe Pío" lane="119181131_0" startPos="200.57" endPos="400.57" friendlyPos="true">
+        <access lane="1279075085_0" pos="0.00" length="19.80" friendlyPos="1"/>
+        <access lane="1279075086#0_0" pos="0.00" length="18.99" friendlyPos="1"/>
+        <access lane="1279075087_0" pos="0.00" length="21.03" friendlyPos="1"/>
+        <access lane="1279075088#2_0" pos="0.20" length="22.36" friendlyPos="1"/>
+        <access lane="1279075088#3_0" pos="0.16" length="21.73" friendlyPos="1"/>
     </busStop>
 </additional>

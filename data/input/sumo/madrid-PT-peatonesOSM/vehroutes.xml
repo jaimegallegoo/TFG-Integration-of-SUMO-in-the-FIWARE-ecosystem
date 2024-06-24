@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2024-06-24 12:40:28 by Eclipse SUMO sumo Version 1.19.0
+<!-- generated on 2024-06-24 12:45:33 by Eclipse SUMO sumo Version 1.19.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
-        <net-file value="C:\Users\Jaime\Sumo\2024-06-24-12-40-15\osm.net.xml.gz"/>
-        <route-files value="C:\Users\Jaime\Sumo\2024-06-24-12-40-15\trips.trips.xml"/>
-        <additional-files value="C:\Users\Jaime\Sumo\2024-06-24-12-40-15\osm_stops.add.xml"/>
+        <net-file value="C:\Users\Jaime\Sumo\2024-06-24-12-45-20\osm.net.xml.gz"/>
+        <route-files value="C:\Users\Jaime\Sumo\2024-06-24-12-45-20\trips.trips.xml"/>
+        <additional-files value="C:\Users\Jaime\Sumo\2024-06-24-12-45-20\osm_stops.add.xml"/>
     </input>
 
     <output>
-        <vehroute-output value="C:\Users\Jaime\Sumo\2024-06-24-12-40-15\vehroutes.xml"/>
-        <stop-output value="C:\Users\Jaime\Sumo\2024-06-24-12-40-15\stopinfos.xml"/>
+        <vehroute-output value="C:\Users\Jaime\Sumo\2024-06-24-12-45-20\vehroutes.xml"/>
+        <stop-output value="C:\Users\Jaime\Sumo\2024-06-24-12-45-20\stopinfos.xml"/>
     </output>
 
     <time>
@@ -28,7 +28,7 @@
 
     <report>
         <aggregate-warnings value="5"/>
-        <error-log value="C:\Users\Jaime\Sumo\2024-06-24-12-40-15\trips.trips.xml.errorlog"/>
+        <error-log value="C:\Users\Jaime\Sumo\2024-06-24-12-45-20\trips.trips.xml.errorlog"/>
         <no-step-log value="true"/>
     </report>
 
@@ -36,419 +36,728 @@
 -->
 
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
-    <vehicle id="9_light_rail_S1:0" type="pt_light_rail" depart="58.00" departLane="0" arrival="161.00">
-        <route edges="463462759"/>
-        <stop busStop="474368351" duration="30.00"/>
+    <vehicle id="10_bus_146:0" type="pt_bus" depart="34.00" departLane="1" arrival="81.00">
+        <route edges="269291945#2"/>
+        <stop busStop="3428239936" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="10_light_rail_S1:1" type="pt_light_rail" depart="60.00" departLane="0" arrival="163.00">
-        <route edges="237751551"/>
-        <stop busStop="1930939368" duration="30.00"/>
+    <vehicle id="0_train_MD_18061:0" type="pt_train" depart="0.00" departLane="0" arrival="90.00">
+        <route edges="119181079#0 119181079#1"/>
+        <stop busStop="1493565877" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="1_train_RE8:0" type="pt_train" depart="15.00" departLane="0" arrival="212.00">
-        <route edges="72984396 32590644#1 32590651#1 32590900#1 25946666 1135947857 25946668#1 421021565#1"/>
-        <stop busStop="2603331683" duration="30.00"/>
+    <vehicle id="7_bus_133:1" type="pt_bus" depart="19.00" departLane="1" arrival="94.00">
+        <route edges="651525544#0 651525544#1 104799919#0 839411286#0 839411286#1 30993228#1 30993228#2"/>
     </vehicle>
 
-    <vehicle id="4_train_RE2:0" type="pt_train" depart="48.00" departLane="0" arrival="290.00">
-        <route edges="72984396 32590644#1 32590651#1 32590900#1 25946666 1135947857 25946668#1 421021565#1"/>
-        <stop busStop="2603331683" duration="30.00"/>
+    <vehicle id="6_bus_133:0" type="pt_bus" depart="17.00" departLane="0" arrival="108.00">
+        <route edges="554359457 239499978#1 -82280716#1 -82280716#0 7642939#0 7642939#1 7642939#2 7642939#3 7642939#4 7642939#5 7642939#6 7642939#7 -651525544#1 -651525544#0"/>
+        <stop busStop="2472773304" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="2_train_RE8:1" type="pt_train" depart="15.00" departLane="0" arrival="301.00">
-        <route edges="25386365#0 25386365#1 442921387#0 442921387#1 25946656#1 25946673#1 25946674#1 25946676 32590898#1 32590890#1 32590636#1"/>
-        <stop busStop="29805120" duration="30.00"/>
-        <stop busStop="2776873647" duration="30.00"/>
+    <vehicle id="21_bus_15:1" type="pt_bus" depart="66.00" departLane="0" arrival="108.00">
+        <route edges="813598084"/>
+        <stop busStop="21968139" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="13_tram_M4:0" type="pt_tram" depart="102.00" departLane="0" arrival="309.00">
-        <route edges="1051100385#0 1051100385#1 1051100385#3 1051100385#4 1051100386 150394035#1 150394035#4 1284740822#0 1284740822#1 1284740822#2 1052827282#0 1052827282#3 10597134#1 421641064"/>
-        <stop busStop="4673135647" duration="30.00"/>
-        <stop busStop="1633759766" duration="30.00"/>
+    <vehicle id="2_train_RE_18009:0" type="pt_train" depart="33.00" departLane="0" arrival="157.00">
+        <route edges="119181079#0 119181079#1"/>
+        <stop busStop="1493565877" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="14_tram_M4:1" type="pt_tram" depart="119.00" departLane="0" arrival="348.00">
-        <route edges="1051100385#0 1051100385#1 1051100385#3 1051100385#4 1051100386 150394035#1 150394035#4 1284740822#0 1284740822#1 1284740822#2 1052827282#0 1052827282#3 10597134#1 421641064"/>
-        <stop busStop="4673135647" duration="30.00"/>
-        <stop busStop="1633759766" duration="30.00"/>
+    <vehicle id="9_bus_138:1" type="pt_bus" depart="28.00" departLane="1" arrival="162.00">
+        <route edges="4334161 4308021#0 43410327#0 71808951 4308590#0 4308590#3 4308590#4 71808941 31000689#0 31000689#2 31000689#3"/>
     </vehicle>
 
-    <vehicle id="22_light_rail_S5:1" type="pt_light_rail" depart="139.00" departLane="0" arrival="354.00">
-        <route edges="4471823#0 4471823#1 4471823#2 4471823#3 25946658#1 25946658#2 196844848 -25946685#1 -195397542 25946681 25946682#1 25946682#2 32590902#1 32590894#1 32590894#2 4471817#1 4471817#2 4471817#3 32590638#1 32590645 32590647#0 32590647#1 32590494#1 32590496#1"/>
-        <stop busStop="27412232" duration="30.00"/>
-        <stop busStop="27411240" duration="30.00"/>
+    <vehicle id="12_bus_147:0" type="pt_bus" depart="41.00" departLane="2" arrival="176.00">
+        <route edges="293712003#0 293712003#1 293712003#3 293712003#4 30993228#1 30993228#2 554359457 239499978#1 45757393 4487153 31053391 269291945#0 269291945#1 269291945#2"/>
     </vehicle>
 
-    <vehicle id="6_train_RE1:1" type="pt_train" depart="81.00" departLane="0" arrival="370.00">
-        <route edges="72984396 32590644#1 32590651#1 32590900#1 25946666 1135947857 25946668#1 421021565#1"/>
-        <stop busStop="2603331683" duration="30.00"/>
+    <vehicle id="19_bus_150:1" type="pt_bus" depart="60.00" departLane="0" arrival="177.00">
+        <route edges="907102748#0 907102748#1 131443348#0 4349010 511895636 1260545323#0 1260545323#1 1260545324 7971496#0 7971496#2 7971496#3 7971496#4 43759728#0 43759728#2 1057894241#0"/>
+        <stop busStop="5006352930" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="3_train_RB23:0" type="pt_train" depart="48.00" departLane="0" arrival="409.00">
-        <route edges="25386365#0 25386365#1 442921387#0 442921387#1 25946656#1 25946673#1 25946674#1 25946676 32590898#1 32590890#1 32590636#1"/>
-        <stop busStop="29805120" duration="30.00"/>
-        <stop busStop="2776873647" duration="30.00"/>
+    <vehicle id="8_bus_138:0" type="pt_bus" depart="27.00" departLane="1" arrival="210.00">
+        <route edges="293722999 293723002#0 4308591 31000691#0 71808949#0 71808949#1 71808949#3 4308022 44535822 44535820 542325013#0 542325013#1"/>
+        <stop busStop="8272206383" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="39_bus_248:0" type="pt_bus" depart="253.00" departLane="0" arrival="412.00">
-        <route edges="309479676 4611726#1 1132678576#0 819027709 1133457733 81112790#0 81112790#1 23851930"/>
-        <stop busStop="3867910417" duration="30.00"/>
+    <vehicle id="18_bus_150:0" type="pt_bus" depart="58.00" departLane="0" arrival="214.00">
+        <route edges="1057894241#0 626418867#1 43759793#0 43759793#1 43759793#2 43759793#3 431767100#0 431767100#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
+        <stop busStop="5006352930" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="40_bus_248:1" type="pt_bus" depart="275.00" departLane="2" arrival="419.00">
-        <route edges="11549897 1195383177 23851922 82654055 1133457765#0 1132678575#1 1133457766"/>
-        <stop busStop="10567768924" duration="30.00"/>
+    <vehicle id="3_train_MD_18063:0" type="pt_train" depart="66.00" departLane="0" arrival="224.00">
+        <route edges="119181079#0 119181079#1"/>
+        <stop busStop="1493565877" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="29_tram_M6:0" type="pt_tram" depart="173.00" departLane="0" arrival="426.00">
-        <route edges="1051100385#0 1051100385#1 1051100385#3 1051100385#4 1051100386 150394035#1 150394035#4 1284740822#0 1284740822#1 1284740822#2 1052827282#0 1052827282#3 10597134#1 421641064"/>
-        <stop busStop="4673135647" duration="30.00"/>
-        <stop busStop="1633759766" duration="30.00"/>
+    <vehicle id="13_bus_147:1" type="pt_bus" depart="72.00" departLane="1" arrival="226.00">
+        <route edges="269291945#2 -335713716#0 -269291945#1 -269291945#0 45757392 -239499978#1 -239499978#0 -30993228#2 -30993228#1 -293712003#4 -293712003#3 -293712003#2 -293712003#0"/>
+        <stop busStop="5321927322" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="43_light_rail_S2:0" type="pt_light_rail" depart="326.00" departLane="0" arrival="429.00">
-        <route edges="463462759"/>
-        <stop busStop="474368351" duration="30.00"/>
+    <vehicle id="43_bus_33:0" type="pt_bus" depart="158.00" departLane="1" arrival="228.00">
+        <route edges="293722999 293723002#0 44535825#0"/>
+        <stop busStop="8272206383" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="19_tram_12:0" type="pt_tram" depart="133.00" departLane="0" arrival="434.00">
-        <route edges="388702047#0 388702047#2 93584120#2 93584120#3 93584120#4 93584120#5 195411601#4 195411601#3 195411601#2 195411601#0 22820560#1 22820560#2 22820560#3 22820560#4 144014237#3 144014228#0 144014228#1 144014228#2"/>
-        <stop busStop="990017251" duration="30.00"/>
-        <stop busStop="247600965" duration="30.00"/>
-        <stop busStop="3922258748" duration="30.00"/>
-        <stop busStop="2175753204" duration="30.00"/>
+    <vehicle id="25_bus_18:1" type="pt_bus" depart="98.00" departLane="1" arrival="244.00">
+        <route edges="4346292#0 4346292#6 909029029#1 -130468268#1 -690824245 -398751337#3 -398751337#2 -398751337#0 -41699453#1 41699477#1 7732075"/>
+        <stop busStop="8422641941" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="44_light_rail_S2:1" type="pt_light_rail" depart="331.00" departLane="0" arrival="434.00">
-        <route edges="237751551"/>
-        <stop busStop="1930939368" duration="30.00"/>
+    <vehicle id="22_bus_17:0" type="pt_bus" depart="77.00" departLane="1" arrival="256.00">
+        <route edges="4346292#0 4346292#6 909029029#1 -130468268#1 -690824245 -398751337#3 -398751337#2 -398751337#0 -41699453#1 41699477#1 7732075 1275422412"/>
+        <stop busStop="8422641941" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="21_light_rail_S5:0" type="pt_light_rail" depart="137.00" departLane="0" arrival="443.00">
-        <route edges="72984388 32590498#1 32590501#1 32590648 32590649#0 32590649#1 32590649#2 32590640#1 32590640#2 32590653#1 32590904#1 25946685#1 25946685#2 25946678 25946662#1 25946662#2 29384521#1 29384522#1 29384522#2 29384522#3"/>
-        <stop busStop="1745157971" duration="30.00"/>
-        <stop busStop="2603331695" duration="30.00"/>
+    <vehicle id="20_bus_15:0" type="pt_bus" depart="65.00" departLane="0" arrival="288.00">
+        <route edges="302579019#0 302579019#1 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 243990688#0 168404659 663316135 46098088#0 46098088#1 908546756#1 417019353 511241905#0 7971500 813598084"/>
+        <stop busStop="8423213265" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="24_light_rail_S7:1" type="pt_light_rail" depart="158.00" departLane="0" arrival="445.00">
-        <route edges="4471823#0 4471823#1 4471823#2 4471823#3 25946658#1 25946658#2 196844848 -25946685#1 -195397542 25946681 25946682#1 25946682#2 32590902#1 32590894#1 32590894#2 4471817#1 4471817#2 4471817#3 32590638#1 32590645 32590647#0 32590647#1 32590494#1 32590496#1"/>
-        <stop busStop="27412232" duration="30.00"/>
-        <stop busStop="27411240" duration="30.00"/>
+    <vehicle id="5_subway_L10:1" type="pt_subway" depart="15.00" departLane="0" arrival="293.00">
+        <route edges="1054025304"/>
+        <stop busStop="5310093880" duration="30.00"/>
+        <stop busStop="5310093878" duration="30.00"/>
+        <stop busStop="5310093877" duration="30.00"/>
+        <stop busStop="7559826150" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="15_tram_M4:2" type="pt_tram" depart="125.00" departLane="0" arrival="457.00">
-        <route edges="803941122 23960874#3 1284740820 1284740821#1 1284740821#2 144014234#0 144014234#2 167523653#0 167523653#1 167523653#2 22962554#1 150394036 1051100384"/>
-        <stop busStop="1633759760" duration="30.00"/>
-        <stop busStop="30731481" duration="30.00"/>
+    <vehicle id="48_bus_36:0" type="pt_bus" depart="165.00" departLane="0" arrival="297.00">
+        <route edges="40933501#0 40933501#1 32480293#1 32480293#2 32480293#3 32480293#4 32480293#5 32480293#6"/>
+        <stop busStop="8423406977" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="16_tram_M4:3" type="pt_tram" depart="132.00" departLane="0" arrival="462.00">
-        <route edges="803941122 23960874#3 1284740820 1284740821#1 1284740821#2 144014234#0 144014234#2 167523653#0 167523653#1 167523653#2 22962554#1 150394036 1051100384"/>
-        <stop busStop="1633759760" duration="30.00"/>
-        <stop busStop="30731481" duration="30.00"/>
+    <vehicle id="55_bus_44:0" type="pt_bus" depart="189.00" departLane="0" arrival="298.00">
+        <route edges="554359457 239499978#1 -82280716#1 -82280716#0 7642939#0 7642939#1 7642939#2 7642939#3 7642939#4 7642939#5 7642939#6 7642939#7 -651525544#1 -651525544#0"/>
+        <stop busStop="5350055328" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="35_bus_245:1" type="pt_bus" depart="222.00" departLane="0" arrival="462.00">
-        <route edges="-176043807#6 -176043807#0 -176043806#2 -176043806#0 -1100824590#1 -1100824590#0 -111251382#3 -111251382#2 541295978#1 1097921784#1 -541295974#0 -222328410 34848160#2"/>
-        <stop busStop="-3869306760" duration="30.00"/>
-        <stop busStop="-3869306761" duration="30.00"/>
-        <stop busStop="11178436225" duration="30.00"/>
+    <vehicle id="23_bus_17:1" type="pt_bus" depart="91.00" departLane="0" arrival="304.00">
+        <route edges="907553665 4263086#0 41699453#1 398751337#0 398751337#1 398751337#3 690824245 130468268#1 -909029029#2 -909029029#0 -4346292#4"/>
+        <stop busStop="5342725022" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="49_light_rail_S25:0" type="pt_light_rail" depart="365.00" departLane="0" arrival="477.00">
-        <route edges="463462759"/>
-        <stop busStop="474368351" duration="30.00"/>
+    <vehicle id="70_bus_5:1" type="pt_bus" depart="262.00" departLane="0" arrival="304.00">
+        <route edges="813598084"/>
+        <stop busStop="21968139" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="12_bus_200:1" type="pt_bus" depart="98.00" departLane="2" arrival="479.00">
-        <route edges="11549897 1195383177 23851922 82654055 1133457765#0 606078065#1 1112054538 61583424#1 534588621#0 534588621#1 284493291#0 72157174#1 171826984#2 195401006 1113401735#1"/>
-        <stop busStop="6682293818" duration="30.00"/>
-        <stop busStop="1827996414" duration="30.00"/>
-        <stop busStop="768074068" duration="30.00"/>
+    <vehicle id="24_bus_18:0" type="pt_bus" depart="93.00" departLane="1" arrival="307.00">
+        <route edges="7732075 1275422412 907553665 4263086#0 41699453#1 398751337#0 398751337#1 398751337#3 690824245 130468268#1 -909029029#2 -909029029#0 -4346292#4"/>
+        <stop busStop="1437056478" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="50_light_rail_S25:1" type="pt_light_rail" depart="371.00" departLane="0" arrival="482.00">
-        <route edges="237751551"/>
-        <stop busStop="1930939368" duration="30.00"/>
+    <vehicle id="31_bus_25:0" type="pt_bus" depart="126.00" departLane="1" arrival="309.00">
+        <route edges="293722999 293723002#0 4308591 31000691#0 71808949#0 71808949#1 71808949#3 4308022 44535822 44535820 542325013#0 542325013#1"/>
+        <stop busStop="8272206383" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="56_subway_U2:0" type="pt_subway" depart="393.00" departLane="0" arrival="497.00">
-        <route edges="200422335"/>
-        <stop busStop="2094266782" duration="30.00"/>
+    <vehicle id="47_bus_35:1" type="pt_bus" depart="160.00" departLane="1" arrival="314.00">
+        <route edges="41699477#1 41699518#0 31262320#1 4328609 4328605#0 4328605#1 398751337#3 690824245 130468268#1 -909029029#2 -909029029#0 -4346292#4"/>
+        <stop busStop="5351138581" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="20_tram_12:1" type="pt_tram" depart="136.00" departLane="0" arrival="507.00">
-        <route edges="144014228#2 207364192#1 207364192#2 207364192#3 207364192#4 207364192#5 168254756#1 167272512#0 167272512#1 167272512#2 167272512#3 167272512#4 167272512#7 167272512#8 167272512#9 167272512#10 195411594#1 195411594#2 195411594#3 195411594#4 165409971#4 165409971#3 165409971#2 165409971#1 165409971#0 388702049#1 388702049#2 1044592562#0 1044592562#2"/>
-        <stop busStop="2175753204" duration="30.00"/>
-        <stop busStop="1673526976" duration="30.00"/>
-        <stop busStop="1823298700" duration="30.00"/>
+    <vehicle id="46_bus_35:0" type="pt_bus" depart="160.00" departLane="1" arrival="316.00">
+        <route edges="4346292#0 4346292#6 909029029#1 -130468268#1 -690824245 -398751337#3 -398751337#2 -398751337#0 -41699453#1 41699477#1"/>
+        <stop busStop="8422641941" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="57_subway_U2:1" type="pt_subway" depart="406.00" departLane="0" arrival="510.00">
-        <route edges="272795470"/>
-        <stop busStop="4961125734" duration="30.00"/>
+    <vehicle id="56_bus_44:1" type="pt_bus" depart="194.00" departLane="1" arrival="317.00">
+        <route edges="651525544#0 651525544#1 104799919#0 839411286#0 839411286#1 30993228#1 30993228#2 554359457"/>
     </vehicle>
 
-    <vehicle id="23_light_rail_S7:0" type="pt_light_rail" depart="152.00" departLane="0" arrival="511.00">
-        <route edges="72984388 32590498#1 32590501#1 32590648 32590649#0 32590649#1 32590649#2 32590640#1 32590640#2 32590653#1 32590904#1 25946685#1 25946685#2 25946678 25946662#1 25946662#2 29384521#1 29384522#1 29384522#2 29384522#3"/>
-        <stop busStop="1745157971" duration="30.00"/>
-        <stop busStop="2603331695" duration="30.00"/>
+    <vehicle id="34_bus_26:1" type="pt_bus" depart="131.00" departLane="0" arrival="321.00">
+        <route edges="554357604#0 70955584#0 70955584#1 70955584#2 4328769 423638485 686213118#0 423232043 48345480#0 48345480#2 1275083958#0 82567675#0 82567675#3"/>
+        <stop busStop="5350038443" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="5_train_RE1:0" type="pt_train" depart="81.00" departLane="0" arrival="517.00">
-        <route edges="25386365#0 25386365#1 442921387#0 442921387#1 25946656#1 25946673#1 25946674#1 25946676 32590898#1 32590890#1 32590636#1"/>
-        <stop busStop="29805120" duration="30.00"/>
-        <stop busStop="2776873647" duration="30.00"/>
+    <vehicle id="29_bus_23:0" type="pt_bus" depart="120.00" departLane="1" arrival="325.00">
+        <route edges="4346292#0 4346292#6 909029029#1 -130468268#1 -690824245 -398751337#3 -398751337#2 -398751337#0 -41699453#1 41699477#1 7732075"/>
+        <stop busStop="8422641941" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="11_bus_200:0" type="pt_bus" depart="93.00" departLane="0" arrival="533.00">
-        <route edges="625647962 415280722 195401013#2 171826985#2 606078072#1 -534588621#1 -534588621#0 606078071#0 61583423#1 -751595930 82654059#0 82654059#1 819027709 1133457733 81112790#0 81112790#1 23851930"/>
-        <stop busStop="4163212867" duration="30.00"/>
-        <stop busStop="1827996417" duration="30.00"/>
-        <stop busStop="-6744165042" duration="30.00"/>
+    <vehicle id="1_train_C-4:0" type="pt_train" depart="3.00" departLane="0" arrival="334.00">
+        <route edges="695991680 695991678"/>
+        <stop busStop="3660257614" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="61_light_rail_S2:2" type="pt_light_rail" depart="437.00" departLane="0" arrival="540.00">
-        <route edges="463462759"/>
-        <stop busStop="474368351" duration="30.00"/>
+    <vehicle id="72_bus_60:1" type="pt_bus" depart="275.00" departLane="1" arrival="344.00">
+        <route edges="4346292#0 4346292#6"/>
+        <stop busStop="8440470099" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="62_light_rail_S2:3" type="pt_light_rail" depart="437.00" departLane="0" arrival="540.00">
-        <route edges="237751551"/>
-        <stop busStop="1930939368" duration="30.00"/>
+    <vehicle id="32_bus_25:1" type="pt_bus" depart="127.00" departLane="1" arrival="361.00">
+        <route edges="4334161 4308021#0 43410327#0 71808951 4308590#0 4308590#3 4308590#4 71808941 31000689#0 31000689#2 31000689#3"/>
+        <stop busStop="8235796741" duration="30.00"/>
+        <stop busStop="1439703616" duration="30.00"/>
+        <stop busStop="8272206405" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="30_tram_M6:1" type="pt_tram" depart="188.00" departLane="0" arrival="545.00">
-        <route edges="803941122 23960874#3 1284740820 1284740821#1 1284740821#2 144014234#0 144014234#2 167523653#0 167523653#1 167523653#2 22962554#1 150394036 1051100384"/>
-        <stop busStop="1633759760" duration="30.00"/>
-        <stop busStop="30731481" duration="30.00"/>
+    <vehicle id="39_bus_31:0" type="pt_bus" depart="139.00" departLane="0" arrival="367.00">
+        <route edges="40933501#0 40933501#1 45316487#0 45316487#1 44885764#1 44885764#2 44885764#3 44885764#4 44885764#5 44885764#6 689780380 31309326#0 31309326#2 31309326#3 31309326#4 7972312#0 7972312#1 7972312#2 7972312#3 7972312#4 7972312#5 -49016411#1 -168406442#2 7732076#0 7732076#1 41699477#1 7732075 1275422412 907553665"/>
+        <stop busStop="8423406967" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="58_subway_U6:0" type="pt_subway" depart="410.00" departLane="0" arrival="551.00">
-        <route edges="295250361 295250353#1 295250353#2 295376548"/>
-        <stop busStop="8170794617" duration="30.00"/>
-        <stop busStop="3869306769" duration="30.00"/>
+    <vehicle id="71_bus_60:0" type="pt_bus" depart="272.00" departLane="0" arrival="367.00">
+        <route edges="7732894#0 7732894#1 7732894#3 896274305 5927085#0 5927797#1 5927797#2 -131451861 130468268#1 -909029029#2 -909029029#0"/>
+        <stop busStop="8440470083" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="59_subway_U6:1" type="pt_subway" depart="418.00" departLane="0" arrival="567.00">
-        <route edges="378659153 335043673#0 335043673#1 335043673#2 387125527 295255789"/>
-        <stop busStop="2792364395" duration="30.00"/>
-        <stop busStop="8170769020" duration="30.00"/>
+    <vehicle id="40_bus_31:1" type="pt_bus" depart="147.00" departLane="0" arrival="369.00">
+        <route edges="907553665 4519456#2 168406442#1 49016411#0 -7972312#5 -7972312#4 -7972312#3 -7972312#2 -7972312#1 -7972312#0 -31309326#4 -31309326#3 -31309326#2 -31309326#1 -689780380 -44885764#6 -44885764#5 -44885764#4 -44885764#3 -44885764#2 -44885764#1 -45316487#2 -45316487#0 -40933501#1 -40933501#0"/>
+        <stop busStop="8427149777" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="46_light_rail_S3:1" type="pt_light_rail" depart="346.00" departLane="0" arrival="578.00">
-        <routeDistribution>
-            <route replacedOnEdge="25946658#1" replacedOnIndex="4" reason="railSignal:11426127274_0" replacedAtTime="378.00" probability="0" edges="4471823#0 4471823#1 4471823#2 4471823#3 25946658#1 25946658#2 196844848 -25946685#1 -195397542 25946681 25946682#1 25946682#2 32590902#1 32590894#1 32590894#2 4471817#1 4471817#2 4471817#3 32590638#1 32590645 32590647#0 32590647#1 32590494#1 32590496#1"/>
-            <route edges="4471823#0 4471823#1 4471823#2 4471823#3 25946658#1 25946658#2 4471818#1 25946681 25946682#1 25946682#2 32590902#1 32590894#1 32590894#2 4471817#1 4471817#2 4471817#3 32590638#1 32590645 32590647#0 32590647#1 32590494#1 32590496#1"/>
-        </routeDistribution>
-        <stop busStop="27412232" duration="30.00"/>
-        <stop busStop="27411240" duration="30.00"/>
+    <vehicle id="52_bus_39:1" type="pt_bus" depart="184.00" departLane="1" arrival="375.00">
+        <route edges="293722999 293723002#0 4308591 31000691#0 71808949#0 71808949#1 71808949#3 4308022 44535822 44535820 542325013#0 542325013#1"/>
+        <stop busStop="8272206383" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="45_light_rail_S3:0" type="pt_light_rail" depart="334.00" departLane="0" arrival="579.00">
-        <route edges="72984388 32590498#1 32590501#1 32590648 32590649#0 32590649#1 32590649#2 32590640#1 32590640#2 32590653#1 32590904#1 25946685#1 25946685#2 25946678 25946662#1 25946662#2 29384521#1 29384522#1 29384522#2 29384522#3"/>
-        <stop busStop="1745157971" duration="30.00"/>
-        <stop busStop="2603331695" duration="30.00"/>
+    <vehicle id="88_bus_M1:1" type="pt_bus" depart="335.00" departLane="0" arrival="378.00">
+        <route edges="813598084"/>
+        <stop busStop="21968139" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="41_subway_U5:0" type="pt_subway" depart="303.00" departLane="0" arrival="582.00">
-        <route edges="248099627 942849696 942849695 248099628"/>
-        <stop busStop="8087330616" duration="30.00"/>
-        <stop busStop="7974955393" duration="30.00"/>
-        <stop busStop="8196661136" duration="30.00"/>
+    <vehicle id="30_bus_23:1" type="pt_bus" depart="125.00" departLane="1" arrival="380.00">
+        <route edges="7732075 1275422412 907553665 4263086#0 41699453#1 398751337#0 398751337#1 398751337#3 690824245 130468268#1 -909029029#2 -909029029#0 -4346292#4"/>
+        <stop busStop="1437056478" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="42_subway_U5:1" type="pt_subway" depart="321.00" departLane="0" arrival="596.00">
-        <route edges="-199425795 942849698#0 942849698#1 942849697 71326270"/>
-        <stop busStop="8196661137" duration="30.00"/>
-        <stop busStop="7974928190" duration="30.00"/>
-        <stop busStop="8090274121" duration="30.00"/>
+    <vehicle id="41_bus_32:0" type="pt_bus" depart="157.00" departLane="0" arrival="383.00">
+        <route edges="7732078 70955486 1275422405 1275422411#0 1275422411#1 31262334#0 31262349#1 554357604#0 70955584#0 70955584#1 70955584#2 4328769 423638485 686213118#0 423232043 48345480#0 48345480#2 1275083958#0 82567675#0 82567675#3"/>
+        <stop busStop="1493715148" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="34_bus_245:0" type="pt_bus" depart="218.00" departLane="1" arrival="611.00">
-        <route edges="1151064405#1 1151064407#2 195105329 1134013286 -292429063#2 -292429063#1 -292429063#0 -1151064411 1123106516 1123106898#1 158023913#1 158023913#3 22972195#2 465376239 465376255#2 190447767 190447766#1 1151064403 1151064402#0 465376254#0 465376254#3 222328410 -6228081#1 30720544#0 30720544#1 42103020#0 42103020#2 111251382#1 111251382#3 1100889498 1100824590#1 176043806#0 176043806#2 176043807#0 176043807#3"/>
-        <stop busStop="11178436224" duration="30.00"/>
-        <stop busStop="3869306764" duration="30.00"/>
-        <stop busStop="3869306762" duration="30.00"/>
-        <stop busStop="3869306759" duration="30.00"/>
+    <vehicle id="15_bus_148:1" type="pt_bus" depart="52.00" departLane="0" arrival="392.00">
+        <route edges="7732896 1137958525#0 1137958525#1 1137958526#0 387848379#1 1137958527 4264184#0 4264184#1 4264184#2 355939668 355939669#0 355939669#1 355939669#2 355939669#3 355939669#4 355939669#5 107467881#0 71634922#0 71634922#1 71634922#2 4518851#0 4518851#1 435012914#1 7971925#0 7971925#1 31021779#0 31021779#3 31021779#4 31021779#5 17760812#2 17760808 79483259#1 79483259#2 767647778#0 443396463 269291945#0 269291945#1 269291945#2"/>
+        <stop busStop="5970506960" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="8_bus_100:1" type="pt_bus" depart="55.00" departLane="0" arrival="615.00">
-        <route edges="1125871417 1125871619#1 1125871619#2 1125871619#3 1125871619#4 236092221#0 236092221#1 342968607#1 1170522572#0 461526152#1 1126234503#0 1126237668#1 1079495669#1 340498982#0 1170522567#0 251884680#0 251884680#1 1126246695#1 339201217 1126244314#0 1126244314#1 54048862#2 831694400#0 831694400#1 23013165 4611698 202156994#0 72157174#1 171826984#2 195401006 1113401735#1"/>
-        <stop busStop="3869306771" duration="30.00"/>
-        <stop busStop="3870475228" duration="30.00"/>
-        <stop busStop="3867910421" duration="30.00"/>
-        <stop busStop="1827996414" duration="30.00"/>
-        <stop busStop="768074068" duration="30.00"/>
+    <vehicle id="64_bus_51:1" type="pt_bus" depart="237.00" departLane="0" arrival="416.00">
+        <route edges="984759713#1 7642926#1 7642926#2 335825753#2 1287224511#0 -651543114#1 804457302 46098085#0 46098085#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
+        <stop busStop="9104252079" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="7_bus_100:0" type="pt_bus" depart="52.00" departLane="0" arrival="621.00">
-        <route edges="625647962 415280722 195401013#2 171826985#2 24913519#1 1144362247 541763975 4067932 339201219 541763974 61584187#1 15971197 4611699#0 4611699#1 1149417521#1 169195795#0 169195795#1 1217865061#0 1113726463 1077923225#0 882389494#1 340498988#0 188386313#1 1119935327#1 1119935543#0 1119936840#1 1119937599#1 1119937599#2 1119937599#3"/>
-        <stop busStop="270727260" duration="30.00"/>
-        <stop busStop="4163212867" duration="30.00"/>
-        <stop busStop="1827996417" duration="30.00"/>
-        <stop busStop="3867910420" duration="30.00"/>
-        <stop busStop="271296293" duration="30.00"/>
-        <stop busStop="272408975" duration="30.00"/>
-        <stop busStop="271373068" duration="30.00"/>
+    <vehicle id="66_bus_52:1" type="pt_bus" depart="253.00" departLane="0" arrival="416.00">
+        <route edges="30676408 31261348#0 31261348#1 43759728#0 43759728#2 1057894241#0 626418867#1 43759793#0 43759793#1 43759793#2 43759793#3 431767100#0 431767100#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
+        <stop busStop="339242703" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="18_tram_M5:1" type="pt_tram" depart="132.00" departLane="0" arrival="629.00">
-        <route edges="143891040#0 143891040#2 143891040#4 143891040#5 143891040#6 143891040#7 101699676#1 101699676#2 101699676#4 101699676#13 30721656#0 30721656#1 30721656#2 30721656#3 30721656#4 421641065#0 421641065#1 421641065#2 1053166657 30123145#1 30123145#2 30123145#3 803941122 23960874#3 1284740820 1284740821#1 1284740821#2 144014234#0 144014234#2 167523653#0 167523653#1 167523653#2 22962554#1 150394036 1051100384"/>
-        <stop busStop="1668717159" duration="30.00"/>
-        <stop busStop="963600646" duration="30.00"/>
-        <stop busStop="1633759760" duration="30.00"/>
-        <stop busStop="30731481" duration="30.00"/>
+    <vehicle id="14_bus_148:0" type="pt_bus" depart="78.00" departLane="1" arrival="422.00">
+        <route edges="269291945#2 -335713716#0 -269291945#1 -269291945#0 335717550 4487153 335717551#0 7971933 17760817 7971930 31021778#0 31021778#1 31021779#5 17760812#2 7971935 7971921#0 7971922 31053363#0 -107467881#0 -107467873#0 -355939669#4 -355939669#3 -355939669#2 -355939669#1 -355939669#0 -355939668 -4264184#2 -4264184#1 -4264184#0 7726329#0 4519460#0 1137958509 686216025 388098819#0 388098819#1 1137958510 7732898"/>
+        <stop busStop="8440634409" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="63_train_RB23:1" type="pt_train" depart="441.00" departLane="0" arrival="638.00">
-        <route edges="72984396 32590644#1 32590651#1 32590900#1 25946666 1135947857 25946668#1 421021565#1"/>
-        <stop busStop="2603331683" duration="30.00"/>
+    <vehicle id="11_bus_146:1" type="pt_bus" depart="38.00" departLane="0" arrival="424.00">
+        <route edges="302579020#0 302579020#1 885687791 907102747 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 4328840 651543114#1 -419119406#1 -419119406#0 -32597088 43410312#0 43410312#1 651613048#0 423000381 936883629 155551743#0 155551743#1 155551743#2 1238944954 651533184#0 -335713716#0"/>
+        <stop busStop="3068279551" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="47_light_rail_S9:0" type="pt_light_rail" depart="353.00" departLane="0" arrival="647.00">
-        <route edges="72984388 32590498#1 32590501#1 32590648 32590649#0 32590649#1 32590649#2 32590640#1 32590640#2 32590653#1 32590904#1 25946685#1 25946685#2 25946678 25946662#1 25946662#2 29384521#1 29384522#1 29384522#2 29384522#3"/>
-        <stop busStop="1745157971" duration="30.00"/>
-        <stop busStop="2603331695" duration="30.00"/>
+    <vehicle id="42_bus_32:1" type="pt_bus" depart="158.00" departLane="0" arrival="433.00">
+        <route edges="-1275083956#1 -82567675#2 -320668245#1 4328795#0 4328795#1 4328795#2 686213116#0 423231391#0 423231391#2 423231391#4 423231391#5 423231391#6 685983423 7732078"/>
+        <stop busStop="-8423356513" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="75_light_rail_S26:0" type="pt_light_rail" depart="561.00" departLane="0" arrival="664.00">
-        <route edges="237751551"/>
-        <stop busStop="1930939368" duration="30.00"/>
+    <vehicle id="51_bus_39:0" type="pt_bus" depart="179.00" departLane="1" arrival="434.00">
+        <route edges="4334161 4308021#0 43410327#0 71808951 4308590#0 4308590#3 4308590#4 71808941 31000689#0 31000689#2 31000689#3"/>
+        <stop busStop="8235796741" duration="30.00"/>
+        <stop busStop="1439703616" duration="30.00"/>
+        <stop busStop="8272206405" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="76_light_rail_S26:1" type="pt_light_rail" depart="565.00" departLane="0" arrival="668.00">
-        <route edges="463462759"/>
-        <stop busStop="474368351" duration="30.00"/>
+    <vehicle id="33_bus_26:0" type="pt_bus" depart="131.00" departLane="0" arrival="440.00">
+        <route edges="-1275083956#1 -82567675#2 -320668245#1 4328795#0 4328795#1 4328795#2 686213116#0 423231391#0 423231391#2 423231391#4 423231391#5 423231391#6 685983423 7732078 70955486 1275422405 1275422411#0 1275422411#1 31262334#0 31262349#1"/>
+        <stop busStop="-8423356513" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="48_light_rail_S9:1" type="pt_light_rail" depart="362.00" departLane="0" arrival="669.00">
-        <routeDistribution>
-            <route replacedOnEdge="25946658#1" replacedOnIndex="4" reason="railSignal:11426127274_0" replacedAtTime="464.00" probability="0" edges="4471823#0 4471823#1 4471823#2 4471823#3 25946658#1 25946658#2 196844848 -25946685#1 -195397542 25946681 25946682#1 25946682#2 32590902#1 32590894#1 32590894#2 4471817#1 4471817#2 4471817#3 32590638#1 32590645 32590647#0 32590647#1 32590494#1 32590496#1"/>
-            <route edges="4471823#0 4471823#1 4471823#2 4471823#3 25946658#1 25946658#2 4471818#1 25946681 25946682#1 25946682#2 32590902#1 32590894#1 32590894#2 4471817#1 4471817#2 4471817#3 32590638#1 32590645 32590647#0 32590647#1 32590494#1 32590496#1"/>
-        </routeDistribution>
-        <stop busStop="27412232" duration="30.00"/>
-        <stop busStop="27411240" duration="30.00"/>
+    <vehicle id="54_bus_3:1" type="pt_bus" depart="188.00" departLane="2" arrival="460.00">
+        <route edges="293712003#0 293712003#1 293712003#3 293712003#4 30993228#1 30993228#2 554359457 239499978#1 45757393 4487153 335717551#0 7971933 17760817 7971930 31021778#0 31021778#1 31021779#5 17760812#2 7971935 7971921#0 7971922 31053363#0 -107467881#0 -107467873#0 -355939669#4 -355939669#3 -355939669#2 -355939669#1 -355939669#0 -355939668 -4264184#2 -4264184#1 -4264184#0 7726329#0 4519460#0 1137958509 686216025 388098819#0 388098819#1 1137958510 7732898"/>
     </vehicle>
 
-    <vehicle id="55_train_RE2:1" type="pt_train" depart="389.00" departLane="0" arrival="675.00">
-        <route edges="25386365#0 25386365#1 442921387#0 442921387#1 25946656#1 25946673#1 25946674#1 25946676 32590898#1 32590890#1 32590636#1"/>
-        <stop busStop="29805120" duration="30.00"/>
-        <stop busStop="2776873647" duration="30.00"/>
+    <vehicle id="74_bus_62:1" type="pt_bus" depart="291.00" departLane="1" arrival="481.00">
+        <route edges="293722999 293723002#0 4308591 31000691#0 71808949#0 71808949#1 71808949#3 4308022 44535822 673102680 26631682"/>
+        <stop busStop="8272206383" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="64_train_RE7:0" type="pt_train" depart="474.00" departLane="0" arrival="716.00">
-        <route edges="72984396 32590644#1 32590651#1 32590900#1 25946666 1135947857 25946668#1 421021565#1"/>
-        <stop busStop="2603331683" duration="30.00"/>
+    <vehicle id="78_bus_6:1" type="pt_bus" depart="310.00" departLane="0" arrival="487.00">
+        <route edges="-1275083956#1 -82567675#2 -320668245#1 4328795#0 4328795#1 4328795#2 686213116#0 423231391#0 423231391#2 423231391#4 423231391#5 423231391#6 685983423 7732078"/>
+        <stop busStop="-8423356513" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="68_tram_M5:2" type="pt_tram" depart="497.00" departLane="0" arrival="716.00">
-        <route edges="1051100385#0 1051100385#1 1051100385#3 1051100385#4 1051100386 150394035#1 150394035#4 1284740822#0 1284740822#1 1284740822#2 1052827282#0 1052827282#3 10597134#1 421641064"/>
-        <stop busStop="4673135647" duration="30.00"/>
-        <stop busStop="1633759766" duration="30.00"/>
+    <vehicle id="38_bus_2:1" type="pt_bus" depart="137.00" departLane="1" arrival="492.00">
+        <route edges="651525544#0 651525544#1 104799919#0 839411286#0 839411286#1 32597086#0 32597086#1 699385225 519453589 490391710#0 490391710#1 490391709#0 -1238944954 -155551743#2 -155551743#1 -155551743#0 -936883629 -423000381 -651613048#0 -43410312#1 -43410312#0 32597088 419119406#0 419119406#1 -651543114#1 804457302 46098085#0 46098085#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
     </vehicle>
 
-    <vehicle id="67_train_RB14:0" type="pt_train" depart="485.00" departLane="0" arrival="771.00">
-        <route edges="25386365#0 25386365#1 442921387#0 442921387#1 25946656#1 25946673#1 25946674#1 25946676 32590898#1 32590890#1 32590636#1"/>
-        <stop busStop="29805120" duration="30.00"/>
-        <stop busStop="2776873647" duration="30.00"/>
+    <vehicle id="63_bus_51:0" type="pt_bus" depart="228.00" departLane="0" arrival="492.00">
+        <route edges="302579018#0 302579018#1 907102747 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 243990688#0 168404659 663316135 46098088#0 46098088#1 908546756#1 417019353 984759713#1"/>
+        <stop busStop="2506473215" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="17_tram_M5:0" type="pt_tram" depart="131.00" departLane="0" arrival="775.00">
-        <route edges="1051100385#0 1051100385#1 1051100385#3 1051100385#4 1051100386 150394035#1 150394035#4 1284740822#0 1284740822#1 1284740822#2 1052827282#0 1052827282#3 10597134#1 421641064 30721657#1 30721657#2 30721657#3 1210499523 46140385 46140379#0 46140379#1 46140379#2 46140393 101699679#0 101699679#1 101699679#2 101699679#4 101699679#12 101699679#13 1044592563#1 1044592563#2 154321040#2 154321040#3 154321040#4 154321040#5"/>
-        <stop busStop="4673135647" duration="30.00"/>
-        <stop busStop="1633759766" duration="30.00"/>
-        <stop busStop="1661927028" duration="30.00"/>
-        <stop busStop="1862699772" duration="30.00"/>
+    <vehicle id="26_bus_1:0" type="pt_bus" depart="102.00" departLane="1" arrival="494.00">
+        <route edges="651525544#0 651525544#1 104799919#0 839411286#0 839411286#1 32597086#0 32597086#1 699385225 519453589 490391710#0 490391710#1 490391709#0 -1238944954 -155551743#2 -155551743#1 -155551743#0 -936883629 -423000381 -651613048#0 -43410312#1 -43410312#0 32597088 419119406#0 419119406#1 -651543114#1 804457302 46098085#0 46098085#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
     </vehicle>
 
-    <vehicle id="69_tram_M5:3" type="pt_tram" depart="505.00" departLane="0" arrival="789.00">
-        <route edges="803941122 23960874#3 1284740820 1284740821#1 1284740821#2 144014234#0 144014234#2 167523653#0 167523653#1 167523653#2 22962554#1 150394036 1051100384"/>
-        <stop busStop="1633759760" duration="30.00"/>
-        <stop busStop="30731481" duration="30.00"/>
+    <vehicle id="68_bus_53:1" type="pt_bus" depart="290.00" departLane="0" arrival="494.00">
+        <route edges="30676408 31261348#0 31261348#1 43759728#0 43759728#2 1057894241#0 626418867#1 43759793#0 43759793#1 43759793#2 43759793#3 431767100#0 431767100#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
+        <stop busStop="339242703" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="72_train_RB14:1" type="pt_train" depart="525.00" departLane="0" arrival="796.00">
-        <route edges="72984396 32590644#1 32590651#1 32590900#1 25946666 1135947857 25946668#1 421021565#1"/>
-        <stop busStop="2603331683" duration="30.00"/>
+    <vehicle id="122_bus_20:0" type="pt_bus" depart="475.00" departLane="0" arrival="519.00">
+        <route edges="813598084"/>
+        <stop busStop="21968139" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="77_train_RE7:1" type="pt_train" depart="574.00" departLane="0" arrival="860.00">
-        <route edges="25386365#0 25386365#1 442921387#0 442921387#1 25946656#1 25946673#1 25946674#1 25946676 32590898#1 32590890#1 32590636#1"/>
-        <stop busStop="29805120" duration="30.00"/>
-        <stop busStop="2776873647" duration="30.00"/>
+    <vehicle id="67_bus_53:0" type="pt_bus" depart="308.00" departLane="0" arrival="543.00">
+        <route edges="302579018#0 302579018#1 907102747 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 243990688#0 168404659 663316135 46098088#0 46098088#1 908546756#1 417019353 511241905#0 7971500 813598084 7971499"/>
+        <stop busStop="2506473215" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="74_bus_147:1" type="pt_bus" depart="548.00" departLane="0" arrival="1043.00">
-        <route edges="1127597264#1 1127596842#2 120675240#1 120675240#3 120675240#4 1263204721 -8008608 -4611696#5 -4611696#4 -4611696#3 -23755950#1 -1127602336 -66071366#4 4773029#0 4773029#1 4773029#2 4773029#3 4773029#4 28251222#0 28251222#1 1171295120#1 169195795#0 169195795#1 1217865061#0 1113726463 1077923225#0 882389494#1 340498988#0 169999355#1 -11483007#2 22972195#2 465376239 465376255#2 190447767 190447766#1 1151064403 1151064402#0 465376254#0 465376254#3 222328410 -6228081#1 30720544#0 30720544#1 42103020#0 42103020#2 111251382#1 111251382#3 1100889498 1100824590#1 176043806#0 176043806#2 176043807#0 176043807#3"/>
-        <stop busStop="3867910423" duration="30.00"/>
-        <stop busStop="9681836927" duration="30.00"/>
-        <stop busStop="-3869306773" duration="30.00"/>
+    <vehicle id="65_bus_52:0" type="pt_bus" depart="268.00" departLane="0" arrival="545.00">
+        <route edges="302579018#0 302579018#1 907102747 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 243990688#0 168404659 663316135 46098088#0 46098088#1 908546756#1 417019353 511241905#0 7971500 813598084 7971499"/>
+        <stop busStop="2506473215" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="78_bus_300:0" type="pt_bus" depart="583.00" departLane="0" arrival="1079.00">
-        <route edges="309479676 4611726#1 1132678576#0 606078065#1 1112054538 61583424#1 534588621#0 534588621#1 284493291#0 24913519#1 1144362247 541763975 4067932 339201219 541763974 61584187#1 15971197 4611699#0 4611699#1 1149417521#1 169195795#0 169195795#1 1217865061#0 1113726463 1077923225#0 882389494#1 340498988#0 188386313#1 1119935327#1 1119935543#0 24913267#1 24913267#3 326116286#0 4402014#3 326116285#4"/>
-        <stop busStop="3867910417" duration="30.00"/>
-        <stop busStop="6682293818" duration="30.00"/>
-        <stop busStop="3867910420" duration="30.00"/>
-        <stop busStop="271296293" duration="30.00"/>
-        <stop busStop="272408975" duration="30.00"/>
+    <vehicle id="62_bus_50:1" type="pt_bus" depart="227.00" departLane="1" arrival="547.00">
+        <route edges="1275419913#1 34095411#1 34095411#2 66833793#0 66833793#1 66833793#2 66833793#3 32044942#0 32044942#1 4519456#2 168406442#1 49016411#0 -7972312#5 -7972312#4 -7972312#3 -7972312#2 -7972312#1 -7972312#0 -31309326#4 -31309326#3 -31309326#2 -31309326#1 -689780380 -44885764#6 -44885764#5 -44885764#4 -44885764#3 -44885764#2 -44885764#1 -45316487#2 -45316487#0 32480293#1 32480293#2 32480293#3 32480293#4 32480293#5 32480293#6"/>
+        <stop busStop="8423406988" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="79_bus_300:1" type="pt_bus" depart="593.00" departLane="0" arrival="1102.00">
-        <route edges="-326116285#4 -4402014#3 -326116286#1 -24913267#3 -24913267#2 342968607#1 1170522572#0 461526152#1 1126234503#0 1126237668#1 1079495669#1 340498982#0 1170522567#0 251884680#0 251884680#1 1126246695#1 339201217 1126244314#0 1126244314#1 54048862#2 831694400#0 831694400#1 23013165 4611698 202156994#0 606078072#1 -534588621#1 -534588621#0 606078071#0 61583423#1 -751595930 82654059#0 82654059#1 1132678575#1 1133457766"/>
-        <stop busStop="-4692172068" duration="30.00"/>
-        <stop busStop="3869306771" duration="30.00"/>
-        <stop busStop="3870475228" duration="30.00"/>
-        <stop busStop="3867910421" duration="30.00"/>
-        <stop busStop="-6744165042" duration="30.00"/>
+    <vehicle id="16_bus_14:0" type="pt_bus" depart="54.00" departLane="1" arrival="552.00">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597 243991596#1 911013768"/>
+        <stop busStop="8433060766" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="73_bus_147:0" type="pt_bus" depart="535.00" departLane="0" arrival="1116.00">
-        <route edges="-176043807#6 -176043807#0 -176043806#2 -176043806#0 -1100824590#1 -1100824590#0 -111251382#3 -111251382#2 541295978#1 1097921784#1 -541295974#0 -222328410 -465376254#3 -465376254#2 -1151064402#1 -4402228 190447768#1 195411602#0 195411602#1 465376240#0 195411604 11483007#0 -1119933622 461526152#1 1126234503#0 1126237668#1 1079495669#1 340498982#0 1170522567#0 251884680#0 251884680#1 -4611694#1 -1126465845 -1126465703#0 -1159156576#1 -1159156576#0 4611696#4 4611696#5 8008608 -1263204721 -120675240#4 -120675240#3 -120675240#2 -43156728#1 -1127596842#0 -1127597264#0 -755551646#0"/>
-        <stop busStop="-3869306760" duration="30.00"/>
-        <stop busStop="-3869306761" duration="30.00"/>
-        <stop busStop="-3869306765" duration="30.00"/>
-        <stop busStop="-9023382187" duration="30.00"/>
+    <vehicle id="132_train_C-7:0" type="pt_train" depart="522.00" departLane="0" arrival="553.00">
+        <route edges="1067764157"/>
+        <stop busStop="26080642" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="25_tram_M1:0" type="pt_tram" depart="160.00" departLane="0" arrival="1198.00">
-        <route edges="144014230#3 207364191#1 207364191#2 144014242#1 167272512#0 167272512#1 167272512#2 167272512#3 167272512#4 167272512#7 167272512#8 167272512#9 167272512#10 195411594#1 195411594#2 195411594#3 143891040#0 143891040#2 143891040#4 143891040#5 143891040#6 143891040#7 101699676#1 101699676#2 101699676#4 101699676#13 30721656#0 30721656#1 30721656#2 30721656#3 30721656#4 421641065#0 421641065#1 421641065#2 28341062#0 28341062#1 421641064 30721657#1 30721657#2 30721657#3 46140383#0 46140383#1 46140383#2 143931935#0 143931935#1 153537606#1 153537606#2 153537606#3 153537606#4"/>
-        <stop busStop="247603398" duration="30.00"/>
-        <stop busStop="1673526976" duration="30.00"/>
-        <stop busStop="1823298700" duration="30.00"/>
-        <stop busStop="30731700" duration="30.00"/>
-        <stop busStop="1668717159" duration="30.00"/>
-        <stop busStop="963600646" duration="30.00"/>
-        <stop busStop="1633759766" duration="30.00"/>
-        <stop busStop="1662153916" duration="30.00"/>
+    <vehicle id="35_bus_27:0" type="pt_bus" depart="132.00" departLane="1" arrival="557.00">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597 243991596#1 911013768"/>
+        <stop busStop="8433060766" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="26_tram_M1:1" type="pt_tram" depart="167.00" departLane="0" arrival="1503.00">
-        <route edges="144014230#3 207364191#1 207364191#2 144014242#1 167272512#0 167272512#1 167272512#2 167272512#3 167272512#4 167272512#7 167272512#8 167272512#9 167272512#10 195411594#1 195411594#2 195411594#3 143891040#0 143891040#2 143891040#4 143891040#5 143891040#6 143891040#7 101699676#1 101699676#2 101699676#4 101699676#13 30721656#0 30721656#1 30721656#2 30721656#3 30721656#4 421641065#0 421641065#1 421641065#2 28341062#0 28341062#1 421641064 30721657#1 30721657#2 30721657#3 46140383#0 46140383#1 46140383#2 143931935#0 143931935#1 153537606#1 153537606#2 153537606#3 153537606#4"/>
-        <stop busStop="247603398" duration="30.00"/>
-        <stop busStop="1673526976" duration="30.00"/>
-        <stop busStop="1823298700" duration="30.00"/>
-        <stop busStop="30731700" duration="30.00"/>
-        <stop busStop="1668717159" duration="30.00"/>
-        <stop busStop="963600646" duration="30.00"/>
-        <stop busStop="1633759766" duration="30.00"/>
-        <stop busStop="1662153916" duration="30.00"/>
+    <vehicle id="84_bus_9:1" type="pt_bus" depart="323.00" departLane="0" arrival="559.00">
+        <route edges="46098088#1 908546756#1 417019353 511241905#0 7971500 813598084 1289077480 7726294 43759728#2 1057894241#0 626418867#1 43759793#0 43759793#1 43759793#2 43759793#3 431767100#0 431767100#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
+        <stop busStop="2673249151" duration="30.00"/>
     </vehicle>
 
-    <vehicle id="27_tram_M1:2" type="pt_tram" depart="165.00" departLane="0" arrival="1550.00">
-        <route edges="153537614#0 153537614#3 101699679#13 154321040#5 144014230#3"/>
-        <stop busStop="1668497956" duration="30.00"/>
-        <stop busStop="1661927028" duration="30.00"/>
-        <stop busStop="1862699772" duration="30.00"/>
+    <vehicle id="73_bus_62:0" type="pt_bus" depart="285.00" departLane="0" arrival="571.00">
+        <route edges="43410331 26631680#1 388101134 7726328 7648762#0 7648762#1 49016394 7732088 7732086 -7732089#0 26674010#0 26674010#1 685984978#0 31000487 1184617809 7648767#1 7648767#2"/>
     </vehicle>
 
-    <vehicle id="28_tram_M1:3" type="pt_tram" depart="172.00" departLane="0" arrival="1894.00">
-        <route edges="153537614#0 153537614#3 101699679#13 154321040#5 144014230#3"/>
-        <stop busStop="1668497956" duration="30.00"/>
-        <stop busStop="1661927028" duration="30.00"/>
-        <stop busStop="1862699772" duration="30.00"/>
+    <vehicle id="77_bus_6:0" type="pt_bus" depart="339.00" departLane="0" arrival="572.00">
+        <route edges="7732078 70955486 1275422405 1275422411#0 1275422411#1 31262334#0 31262349#1 554357604#0 70955584#0 70955584#1 70955584#2 4328769 423638485 686213118#0 423232043 48345480#0 48345480#2 1275083958#0 82567675#0 82567675#3"/>
+        <stop busStop="1493715148" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="61_bus_50:0" type="pt_bus" depart="227.00" departLane="0" arrival="578.00">
+        <route edges="40933501#0 40933501#1 45316487#0 45316487#1 44885764#1 44885764#2 44885764#3 44885764#4 44885764#5 44885764#6 689780380 31309326#0 31309326#2 31309326#3 31309326#4 7972312#0 7972312#1 7972312#2 7972312#3 7972312#4 7972312#5 -49016411#1 -168406442#2 7732076#0 7732076#1 41699477#1 41699518#0 31262349#1 554357604#0 7642979#0 7642979#2 556954611#0 7732078 4519453 406007906 1275419913#0 1275419913#1"/>
+        <stop busStop="8423406967" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="119_bus_41:0" type="pt_bus" depart="459.00" departLane="2" arrival="579.00">
+        <route edges="40933501#0 40933501#1 45316487#0 102154798 410664153 31000487 1184617809"/>
+        <stop busStop="8473691225" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="83_bus_9:0" type="pt_bus" depart="353.00" departLane="0" arrival="580.00">
+        <route edges="302579020#0 302579020#1 885687791 907102747 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 243990688#0 168404659 663316135 46098088#0 46098088#1"/>
+        <stop busStop="8235796758" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="17_bus_14:1" type="pt_bus" depart="55.00" departLane="0" arrival="589.00">
+        <route edges="907102748#0 907102748#1 131443348#0 4349010 511895636 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 908214774 30674611 686214706#0 686214706#1 686214706#2 686214706#3 686214705 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <stop busStop="8440634349" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="36_bus_27:1" type="pt_bus" depart="133.00" departLane="0" arrival="589.00">
+        <route edges="907102748#0 907102748#1 131443348#0 4349010 511895636 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 908214774 30674611 686214706#0 686214706#1 686214706#2 686214706#3 686214705 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <stop busStop="8440634349" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="44_bus_34:0" type="pt_bus" depart="159.00" departLane="0" arrival="592.00">
+        <route edges="44288719#1 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 908214774 30674611 686214706#0 686214706#1 686214706#2 686214706#3 686214705 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <stop busStop="5342725021" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="129_subway_L6:0" type="pt_subway" depart="508.00" departLane="0" arrival="609.00">
+        <route edges="1054025302"/>
+        <stop busStop="5305486978" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="27_bus_1:1" type="pt_bus" depart="107.00" departLane="0" arrival="612.00">
+        <route edges="302579020#0 302579020#1 885687791 907102747 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 4328840 651543114#1 -419119406#1 -419119406#0 -32597088 43410312#0 43410312#1 651613048#0 423000381 936883629 155551743#0 155551743#1 155551743#2 1238944954 651533184#0 -490391710#1 -490391710#0 -519453589 -699385225 -32597086#1 -32597086#0 -839411286#3 -839411286#0 -104799919#1 -651525544#1 -651525544#0"/>
+        <stop busStop="3068279551" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="86_bus_C2:0" type="pt_bus" depart="329.00" departLane="1" arrival="617.00">
+        <route edges="4334161 4308021#0 43410327#0 26631680#1 388101134 7726328 7648762#0 7648762#1 49016394 7732088 7732086 -7732089#0 26674010#0 26674010#1 685984978#0 31000487 1184617809 130757787#2 1010800836"/>
+    </vehicle>
+
+    <vehicle id="75_bus_65:0" type="pt_bus" depart="300.00" departLane="0" arrival="619.00">
+        <route edges="7732078 70955486 1275422405 1275422409 31262321#0 31262321#1 31262321#2 1275422412 907553665 4519456#2 168406442#1 49016411#0 -7972312#5 -7972312#4 -7972312#3 -7972312#2 -7972312#1 -7972312#0 -31309326#4 -31309326#3 -31309326#2 -31309326#1 -689780380 -44885764#6 -44885764#5 -44885764#4 -44885764#3 -44885764#2 -44885764#1 -45316487#2 -45316487#0 -40933501#1 -40933501#0"/>
+        <stop busStop="1493715148" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="118_train_C-1:0" type="pt_train" depart="457.00" departLane="0" arrival="624.00">
+        <route edges="1067764157 28998741 1058216793#0 1058216793#1 571606404"/>
+        <stop busStop="26080642" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="137_subway_R:0" type="pt_subway" depart="527.00" departLane="0" arrival="645.00">
+        <route edges="549151323 -442950334"/>
+        <stop busStop="-5304749213" duration="30.00"/>
+        <stop busStop="-4405988225" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="134_train_C-7:1" type="pt_train" depart="525.00" departLane="0" arrival="646.00">
+        <route edges="571079929"/>
+        <stop busStop="1493565879" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="85_bus_C1:0" type="pt_bus" depart="326.00" departLane="1" arrival="653.00">
+        <route edges="7648748 -1184617809 -31000487 -685984978#1 -26674010#1 -26674010#0 7732089#0 689777341 26673998 355939670 -49016394 -7648762#1 -7648762#0 7726327 627773366 4319471 43410332#0 44535820 542325013#0 542325013#1"/>
+        <stop busStop="-8473691223" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="76_bus_65:1" type="pt_bus" depart="303.00" departLane="0" arrival="663.00">
+        <route edges="40933501#0 40933501#1 45316487#0 45316487#1 44885764#1 44885764#2 44885764#3 44885764#4 44885764#5 44885764#6 689780380 31309326#0 31309326#2 31309326#3 31309326#4 7972312#0 7972312#1 7972312#2 7972312#3 7972312#4 7972312#5 -49016411#1 -168406442#2 7732076#0 7732076#1 41699477#1 41699518#0 31262349#1 554357604#0 7642979#0 7642979#2 556954611#0 7732078"/>
+        <stop busStop="8423406967" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="145_subway_L6:1" type="pt_subway" depart="568.00" departLane="0" arrival="664.00">
+        <route edges="1054025301 1054025306#1"/>
+        <stop busStop="5305487011" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="126_bus_500:0" type="pt_bus" depart="497.00" departLane="1" arrival="679.00">
+        <route edges="293722999 293723002#0 4308591 31000691#0 71808949#0 71808949#1 71808949#3 4308022 44535822 44535820 542325013#0 542325013#1"/>
+        <stop busStop="9307495431" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="37_bus_2:0" type="pt_bus" depart="143.00" departLane="0" arrival="685.00">
+        <route edges="302579020#0 302579020#1 885687791 907102747 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 4328840 651543114#1 -419119406#1 -419119406#0 -32597088 43410312#0 43410312#1 651613048#0 423000381 936883629 155551743#0 155551743#1 155551743#2 1238944954 651533184#0 -490391710#1 -490391710#0 -519453589 -699385225 -32597086#1 -32597086#0 -839411286#3 -839411286#0 -104799919#1 -651525544#1 -651525544#0"/>
+        <stop busStop="3068279551" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="80_bus_74:1" type="pt_bus" depart="318.00" departLane="1" arrival="693.00">
+        <route edges="651525544#0 651525544#1 104799919#0 839411286#0 839411286#1 32597086#0 32597086#1 699385225 519453589 490391710#0 490391710#1 490391709#0 -1238944954 -155551743#2 -155551743#1 -155551743#0 -936883629 -423000381 -651613048#0 -43410312#1 -43410312#0 32597088 419119406#0 419119406#1 -651543114#1 804457302 46098085#0 46098085#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
+    </vehicle>
+
+    <vehicle id="144_subway_R:1" type="pt_subway" depart="578.00" departLane="0" arrival="702.00">
+        <route edges="549151325 549151324"/>
+        <stop busStop="5304749535" duration="30.00"/>
+        <stop busStop="5304749213" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="82_bus_75:1" type="pt_bus" depart="322.00" departLane="1" arrival="708.00">
+        <route edges="4308591 31000691#0 71808949#0 71808949#1 71808949#3 4308022 26631680#1 388101134 7726328 4264184#0 4264184#1 4264184#2 355939668 355939669#0 355939669#1 355939669#2 355939669#3 355939669#4 355939669#5 107467881#0 71634922#0 71634922#1 71634922#2 4518851#0 4518851#1 435012914#1 7971925#0 7971925#1 31021779#0 31021779#3 31021779#4 31021779#5 17760812#2 17760808 79483259#1 79483259#2 767647778#0 443396463 269291945#0 269291945#1 269291945#2"/>
+        <stop busStop="8235796763" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="53_bus_3:0" type="pt_bus" depart="187.00" departLane="0" arrival="716.00">
+        <route edges="7732896 1137958525#0 1137958525#1 1137958526#0 387848379#1 1137958527 4264184#0 4264184#1 4264184#2 355939668 355939669#0 355939669#1 355939669#2 355939669#3 355939669#4 355939669#5 107467881#0 71634922#0 71634922#1 71634922#2 4518851#0 4518851#1 435012914#1 7971925#0 7971925#1 31021779#0 31021779#3 31021779#4 31021779#5 17760812#2 17760808 79483259#1 79483259#2 767647778#0 443396463 269291945#0 269291945#1 269291945#2 490391709#0 -1238944954 -155551743#2 -155551743#1 -155551743#0 -936883629 -423000381 -651613048#0 -43410312#1 -43410312#0 4487679#1 4487679#2 4487679#3 4487679#4 4487679#5 4487679#6 4487679#7"/>
+        <stop busStop="5970484990" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="87_bus_M1:0" type="pt_bus" depart="331.00" departLane="1" arrival="731.00">
+        <route edges="686216023 4328608 4328607 -41699453#1 41699477#1 41699518#0 31262349#1 554357604#0 7642979#0 7642979#2 43626132 102865404#0 102865404#1 4328790#1 4328790#2 4328790#3 4328790#4 4328790#5 4328790#6 31261348#0 31261348#1 43759728#0 43759728#2 1057894241#0 626418867#1 1286414023 43759788 417019353 511241905#0 7971500 813598084"/>
+        <stop busStop="8423406949" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="133_train_C-10:1" type="pt_train" depart="553.00" departLane="0" arrival="748.00">
+        <route edges="101623396 1067764157 28998741 1058216793#0 1058216793#1 571606404"/>
+        <stop busStop="26080642" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="69_bus_5:0" type="pt_bus" depart="260.00" departLane="0" arrival="757.00">
+        <route edges="907102748#0 907102748#1 4346298#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 243990688#0 168404659 663316135 46098088#0 46098088#1 908546756#1 417019353 511241905#0 7971500 813598084"/>
+        <stop busStop="21968139" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="81_bus_75:0" type="pt_bus" depart="321.00" departLane="1" arrival="757.00">
+        <route edges="269291945#2 -335713716#0 -269291945#1 -269291945#0 335717550 4487153 335717551#0 7971933 17760817 7971930 31021778#0 31021778#1 31021779#5 17760812#2 7971935 7971921#0 7971922 31053363#0 -107467881#0 -107467873#0 -355939669#4 -355939669#3 -355939669#2 -355939669#1 -355939669#0 -355939668 -4264184#2 -4264184#1 -4264184#0 7726327 627773366 4319471 43410332#0 43410327#0 71808951 4308590#0 4308590#3 4308590#4 71808941 31000689#0 31000689#2 31000689#3"/>
+        <stop busStop="3428239936" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="60_bus_46:1" type="pt_bus" depart="222.00" departLane="0" arrival="758.00">
+        <route edges="46098088#1 908546756#1 417019353 511241905#0 7971500 813598084 7971499 30676408 30676403#0 30676403#1 30676403#2 29485945#0 29485945#1 29487193#1 29486859#1 423231391#4 423231391#5 423231391#6 685983423 7732078 70955486 1275422405 1275422409 31262321#0 31262321#1 31262321#2 1275422412 907553665 4519456#2 168406442#1 49016411#0 7973718#0 7973718#1 7973718#2 7973718#3 7973718#4 7973718#5 31234179#0 31234179#1 31234179#2 31234179#5 31234179#7 31234179#8 79483258#0 -355939668 -4264184#2 -4264184#1 -4264184#0 7726327 627773366 4319471 43410332#0 43410327#0 71808951 4308590#0 4308590#3 4308590#4 71808941 31000689#0 31000689#2 31000689#3"/>
+        <stop busStop="8436098481" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="45_bus_34:1" type="pt_bus" depart="160.00" departLane="1" arrival="799.00">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597 243991596#1 911013768"/>
+        <stop busStop="8433060766" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="130_subway_L3:0" type="pt_subway" depart="516.00" departLane="0" arrival="799.00">
+        <route edges="443618649"/>
+        <stop busStop="5303173542" duration="30.00"/>
+        <stop busStop="21964104" duration="30.00"/>
+        <stop busStop="21759678" duration="30.00"/>
+        <stop busStop="21956103" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="148_bus_20:1" type="pt_bus" depart="582.00" departLane="0" arrival="799.00">
+        <route edges="302579019#0 302579019#1 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 243990688#0 168404659 663316135 46098088#0 46098088#1 908546756#1 417019353 511241905#0 7971500 813598084"/>
+        <stop busStop="8423213265" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="50_bus_37:1" type="pt_bus" depart="173.00" departLane="1" arrival="803.00">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597 243991596#1 911013768"/>
+        <stop busStop="8433060766" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="89_bus_002:0" type="pt_bus" depart="336.00" departLane="0" arrival="812.00">
+        <route edges="4328803#0 4328803#1 4328803#2 32865074#0 936883629 155551743#0 155551743#1 155551743#2 1238944954 651533184#0 -335713716#0 -269291945#1 -269291945#0 335717550 4487153 335717551#0 7971933 17760817 7971930 31021778#0 31021778#1 31021779#5 17760812#2 7971935 7971921#0 7971922 31053363#0 686215410 7988350 49016413 41600137#0 41600137#1 49016408#0 49016408#1 49016408#2 -168406442#2 7732076#0 7732076#1 41699453#1 398751337#0 398751337#1 398751337#3 690824245 130468268#1 -909029029#2 -909029029#0 -4346292#4"/>
+    </vehicle>
+
+    <vehicle id="131_train_C-10:0" type="pt_train" depart="517.00" departLane="0" arrival="825.00">
+        <route edges="1073094830 571079929 741727698"/>
+        <stop busStop="7954956494" duration="30.00"/>
+        <stop busStop="1493565879" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="49_bus_37:0" type="pt_bus" depart="166.00" departLane="0" arrival="828.00">
+        <route edges="907102748#0 907102748#1 131443348#0 4349010 511895636 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 908214774 30674611 686214706#0 686214706#1 686214706#2 686214706#3 686214705 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <stop busStop="8440634349" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="79_bus_74:0" type="pt_bus" depart="317.00" departLane="0" arrival="828.00">
+        <route edges="302579020#0 302579020#1 885687791 907102747 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 4328840 651543114#1 -419119406#1 -419119406#0 -32597088 43410312#0 43410312#1 651613048#0 423000381 936883629 155551743#0 155551743#1 155551743#2 1238944954 651533184#0 -490391710#1 -490391710#0 -519453589 -699385225 -32597086#1 -32597086#0 -839411286#3 -839411286#0 -104799919#1 -651525544#1 -651525544#0"/>
+        <stop busStop="3068279551" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="97_bus_N13:0" type="pt_bus" depart="376.00" departLane="0" arrival="828.00">
+        <route edges="128089326 686214706#0 686214706#1 686214706#2 686214706#3 686214705 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <stop busStop="8423356496" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="127_train_R-1:0" type="pt_train" depart="498.00" departLane="0" arrival="829.00">
+        <route edges="695991680 695991678"/>
+        <stop busStop="3660257614" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="146_train_C-1:1" type="pt_train" depart="596.00" departLane="0" arrival="836.00">
+        <route edges="1073094830 571079929"/>
+        <stop busStop="7954956494" duration="30.00"/>
+        <stop busStop="1493565879" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="59_bus_46:0" type="pt_bus" depart="218.00" departLane="1" arrival="844.00">
+        <route edges="4308591 31000691#0 71808949#0 71808949#1 71808949#3 4308022 26631680#1 388101134 7726328 4264184#0 4264184#1 4264184#2 355939668 355939669#0 355939669#1 355939669#2 355939669#3 355939669#4 355939669#5 107467881#0 71634922#0 71634922#1 71634922#2 4518851#0 4518851#1 435012914#1 7971925#0 7971925#1 31021779#0 31021779#3 31021779#4 31021779#5 17760812#2 17760808 79483259#1 79483259#2 767647778#0 443396463 269291945#0 269291945#1 269291945#2 490391709#0 -1238944954 -155551743#2 -155551743#1 -155551743#0 -936883629 -423000381 -651613048#0 -43410312#1 -43410312#0 32597088 419119406#0 419119406#1 -651543114#1 804457302 4328843 663316135 46098088#0 46098088#1"/>
+        <stop busStop="8235796763" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="125_bus_41:1" type="pt_bus" depart="485.00" departLane="1" arrival="851.00">
+        <route edges="-1184617809 -31000487 44535825#0"/>
+        <stop busStop="-8473691223" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="139_train_C-3:1" type="pt_train" depart="538.00" departLane="0" arrival="869.00">
+        <route edges="1037434521 1037434519"/>
+        <stop busStop="1152699021" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="128_train_C-3:0" type="pt_train" depart="531.00" departLane="0" arrival="896.00">
+        <route edges="695991680 695991678"/>
+        <stop busStop="3660257614" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="147_train_R-1:1" type="pt_train" depart="574.00" departLane="0" arrival="936.00">
+        <route edges="1037434521 1037434519"/>
+        <stop busStop="1152699021" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="153_train_C-4:3" type="pt_train" depart="598.00" departLane="0" arrival="963.00">
+        <route edges="695991680 695991678"/>
+        <stop busStop="3660257614" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="141_subway_L5:1" type="pt_subway" depart="548.00" departLane="0" arrival="976.00">
+        <route edges="695991676 695991674#1 695991674#2"/>
+        <stop busStop="5303043473" duration="30.00"/>
+        <stop busStop="5303043472" duration="30.00"/>
+        <stop busStop="5303043466" duration="30.00"/>
+        <stop busStop="5303043465" duration="30.00"/>
+        <stop busStop="5303127350" duration="30.00"/>
+        <stop busStop="5303043432" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="151_train_C-4:1" type="pt_train" depart="607.00" departLane="0" arrival="1003.00">
+        <route edges="1037434521 1037434519"/>
+        <stop busStop="1152699021" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="99_bus_N14:0" type="pt_bus" depart="383.00" departLane="0" arrival="1044.00">
+        <route edges="128089326 686214706#0 686214706#1 686214706#2 686214706#3 686214705 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <stop busStop="8423356496" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="58_bus_45:1" type="pt_bus" depart="204.00" departLane="0" arrival="1045.00">
+        <route edges="907102748#0 907102748#1 131443348#0 4349010 511895636 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 908214774 30674611 686214706#0 686214706#1 686214706#2 686214706#3 686214705 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <stop busStop="8440634349" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="120_bus_10:0" type="pt_bus" depart="465.00" departLane="0" arrival="1047.00">
+        <route edges="44288719#1 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 908214774 30674611 686214706#0 686214706#1 686214706#2 686214706#3 686214705 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <stop busStop="562734686" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="152_train_C-4:2" type="pt_train" depart="640.00" departLane="0" arrival="1070.00">
+        <route edges="1037434521 1037434519"/>
+        <stop busStop="1152699021" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="90_bus_002:1" type="pt_bus" depart="346.00" departLane="1" arrival="1103.00">
+        <route edges="4346292#0 4346292#6 909029029#1 -130468268#1 -690824245 -398751337#3 -398751337#2 -398751337#0 -41699453#1 41699477#1 41699518#0 31262349#1 554357604#0 7642979#0 7642979#2 43626132 102865404#0 102865404#1 4328790#1 4328790#2 4328790#3 4328790#4 4328790#5 4328790#6 31261348#0 31261348#1 43759728#0 43759728#2 1057894241#0 626418867#1 1286414023 43759788 417019353 984759713#1 7642926#1 7642926#2 7642926#3 -32597088 43410312#0 43410312#1 651613048#0 423000381 936883629 155551743#0 155551743#1 7971563#0 7971563#1 82552704 7971564#0 7971564#1 596974337 32865959#1 4308074#0 4308074#1 4308074#2 4308074#3"/>
+        <stop busStop="-5970506955" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="121_bus_10:1" type="pt_bus" depart="467.00" departLane="2" arrival="1124.00">
+        <route edges="562027283 243991597 44288719#1"/>
+        <stop busStop="8433060766" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="98_bus_N13:1" type="pt_bus" depart="381.00" departLane="1" arrival="1171.00">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597"/>
+        <stop busStop="8433060766" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="135_subway_L2:0" type="pt_subway" depart="525.00" departLane="0" arrival="1171.00">
+        <route edges="-442950303 -442950301#0"/>
+        <stop busStop="-5303271992" duration="30.00"/>
+        <stop busStop="-5303271994" duration="30.00"/>
+        <stop busStop="-324376827" duration="30.00"/>
+        <stop busStop="-25935011" duration="30.00"/>
+        <stop busStop="-26066629" duration="30.00"/>
+        <stop busStop="-26068173" duration="30.00"/>
+        <stop busStop="-4405991654" duration="30.00"/>
+        <stop busStop="-4405988107" duration="30.00"/>
+        <stop busStop="-25903354" duration="30.00"/>
+        <stop busStop="-25903355" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="57_bus_45:0" type="pt_bus" depart="201.00" departLane="1" arrival="1197.00">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597 243991596#1 911013768"/>
+        <stop busStop="8433060766" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="143_subway_L2:1" type="pt_subway" depart="561.00" departLane="0" arrival="1199.00">
+        <route edges="548990703 548990710"/>
+        <stop busStop="5303272236" duration="30.00"/>
+        <stop busStop="5303272231" duration="30.00"/>
+        <stop busStop="5303272075" duration="30.00"/>
+        <stop busStop="5303272068" duration="30.00"/>
+        <stop busStop="5303272249" duration="30.00"/>
+        <stop busStop="5303272248" duration="30.00"/>
+        <stop busStop="5303272246" duration="30.00"/>
+        <stop busStop="5303272244" duration="30.00"/>
+        <stop busStop="5303272243" duration="30.00"/>
+        <stop busStop="5303272239" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="100_bus_N14:1" type="pt_bus" depart="386.00" departLane="1" arrival="1209.00">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597"/>
+        <stop busStop="8433060766" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="117_bus_203:0" type="pt_bus" depart="456.00" departLane="0" arrival="1230.00">
+        <route edges="302579020#0 302579020#1 885687791 907102747 762216476#0 194159907#0 242547870 511895636 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 908214774 30674611 686214706#0 686214706#1 686214706#2 686214706#3 686214705 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <stop busStop="8235796758" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="142_subway_L3:1" type="pt_subway" depart="557.00" departLane="0" arrival="1756.00">
+        <route edges="548977485#2 548977485#1 548977485#0 548977485#0"/>
+        <stop busStop="5303173603" duration="30.00"/>
+        <stop busStop="5303173605" duration="30.00"/>
+        <stop busStop="9666807257" duration="30.00"/>
+        <stop busStop="5303173607" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="4_subway_L10:0" type="pt_subway" depart="15.00" departLane="0" arrival="2175.00">
+        <route edges="1054025299 1054025299 1054025299 1054025299 1054025299"/>
+        <stop busStop="25906012" duration="30.00"/>
+        <stop busStop="21990715" duration="30.00"/>
+        <stop busStop="25906011" duration="30.00"/>
+        <stop busStop="25906010" duration="30.00"/>
+        <stop busStop="21722690" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="138_subway_L1:0" type="pt_subway" depart="535.00" departLane="0" arrival="2432.00">
+        <route edges="511288266#0 511288266#1 511288266#2"/>
+        <stop busStop="299644680" duration="30.00"/>
+        <stop busStop="299515114" duration="30.00"/>
+        <stop busStop="5299314589" duration="30.00"/>
+        <stop busStop="324391382" duration="30.00"/>
+        <stop busStop="324391956" duration="30.00"/>
+        <stop busStop="5299314586" duration="30.00"/>
+        <stop busStop="5299314584" duration="30.00"/>
+        <stop busStop="5299314582" duration="30.00"/>
+        <stop busStop="5299314580" duration="30.00"/>
+        <stop busStop="26340396" duration="30.00"/>
+        <stop busStop="26340397" duration="30.00"/>
+        <stop busStop="26494720" duration="30.00"/>
+        <stop busStop="26494721" duration="30.00"/>
+        <stop busStop="323411634" duration="30.00"/>
+        <stop busStop="5299314574" duration="30.00"/>
+        <stop busStop="323403727" duration="30.00"/>
+        <stop busStop="323400134" duration="30.00"/>
+        <stop busStop="323387579" duration="30.00"/>
+        <stop busStop="324398584" duration="30.00"/>
+        <stop busStop="330235720" duration="30.00"/>
+        <stop busStop="330235642" duration="30.00"/>
+        <stop busStop="330236023" duration="30.00"/>
+        <stop busStop="330236831" duration="30.00"/>
+        <stop busStop="330236828" duration="30.00"/>
+        <stop busStop="330237676" duration="30.00"/>
+        <stop busStop="330238287" duration="30.00"/>
+        <stop busStop="330238286" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="140_subway_L1:1" type="pt_subway" depart="547.00" departLane="0" arrival="2457.00">
+        <route edges="-548531500 -548531514#1 -548531514#0"/>
+        <stop busStop="-5299216970" duration="30.00"/>
+        <stop busStop="-5299216972" duration="30.00"/>
+        <stop busStop="-5299216977" duration="30.00"/>
+        <stop busStop="-5299216982" duration="30.00"/>
+        <stop busStop="-5299216985" duration="30.00"/>
+        <stop busStop="-5299216987" duration="30.00"/>
+        <stop busStop="-5299216997" duration="30.00"/>
+        <stop busStop="-5299217000" duration="30.00"/>
+        <stop busStop="-5299217006" duration="30.00"/>
+        <stop busStop="-5299217008" duration="30.00"/>
+        <stop busStop="-5299217010" duration="30.00"/>
+        <stop busStop="-5299217011" duration="30.00"/>
+        <stop busStop="-5299217013" duration="30.00"/>
+        <stop busStop="-5299217017" duration="30.00"/>
+        <stop busStop="-5299219122" duration="30.00"/>
+        <stop busStop="-5299219127" duration="30.00"/>
+        <stop busStop="-5299219130" duration="30.00"/>
+        <stop busStop="-5299219185" duration="30.00"/>
+        <stop busStop="-5299219187" duration="30.00"/>
+        <stop busStop="-5299219188" duration="30.00"/>
+        <stop busStop="-5299219189" duration="30.00"/>
+        <stop busStop="-5299219190" duration="30.00"/>
+        <stop busStop="-5299219193" duration="30.00"/>
+        <stop busStop="-5299219194" duration="30.00"/>
+        <stop busStop="-5299219195" duration="30.00"/>
+        <stop busStop="-5299219197" duration="30.00"/>
+        <stop busStop="-5299219209" duration="30.00"/>
+    </vehicle>
+
+    <vehicle id="136_subway_L5:0" type="pt_subway" depart="526.00" departLane="0" arrival="2799.00">
+        <route edges="695991673#2 695991673#2 695991673#2 695991675 695991673#1 548531514#1 548531514#2 -548531500 -548531514#1 -695991673#1 -695991673#0 695991675 695991673#1 548531514#1 548531514#2 -548531500 -548531514#1 -695991673#1 -695991673#0 695991675 695991673#1 548531514#1 548531514#2 -548531500 -548531514#1 -695991673#1 -695991673#0 695991675"/>
+        <stop busStop="21759690" duration="30.00"/>
+        <stop busStop="5303127349" duration="30.00"/>
+        <stop busStop="5303127353" duration="30.00"/>
+        <stop busStop="25906279" duration="30.00"/>
+        <stop busStop="255881693" duration="30.00"/>
     </vehicle>
 
 </routes>
