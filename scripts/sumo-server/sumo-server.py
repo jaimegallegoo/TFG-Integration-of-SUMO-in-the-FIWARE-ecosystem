@@ -1,3 +1,4 @@
+import logging
 from flask import Flask, request
 import subprocess
 
@@ -8,19 +9,39 @@ def ptlines2flows():
     # Get the input data from the request
     input_data = request.get_json()
 
-    # Run the ptlines2flows.py script with the input data
-    result = subprocess.run(
-        ['python3', '/usr/share/sumo/tools/ptlines2flows.py', '-n', input_data['osm_net'],
-        '-s', input_data['osm_stops'], '-l', input_data['osm_ptlines'], '-i', input_data['stop_infos'],
-        '-t', input_data['trips'], '-r', input_data['veh_routes'], '-o', input_data['osm_routes'],
-        '--ignore-errors', '--min-stops', '0', '-e', '4000', '--extend-to-fringe', '--random-begin',
-        '--seed', '42', '--vtype-prefix', 'pt_', '--verbose'], stdout=subprocess.PIPE)
+    # Define the command as a list to avoid shell injection
+    command = [
+        'python3', '/usr/share/sumo/tools/ptlines2flows.py', 
+        '-n', input_data['osm_net'],
+        '-s', input_data['osm_stops'], 
+        '-l', input_data['osm_ptlines'], 
+        '-i', input_data['stop_infos'],
+        '-t', input_data['trips'], 
+        '-r', input_data['veh_routes'], 
+        '-o', input_data['osm_routes'],
+        '--ignore-errors', '--min-stops', '0', 
+        '-e', '4000', '--extend-to-fringe', '--random-begin',
+        '--seed', '42', '--vtype-prefix', 'pt_', '--verbose'
+    ]
 
-    # Check the result
+    # Run the ptlines2flows.py script with the input data
+    result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+    # Log stdout and stderr
+    logging.info(f'STDOUT: {result.stdout.decode()}')
+    logging.error(f'STDERR: {result.stderr.decode()}')
+
+    # Check the result and return appropriate response
     if result.returncode == 0:
-        return {'message': 'ptlines2flows.py script ran successfully'}, 200
+        return {
+            'message': 'ptlines2flows.py script ran successfully',
+            'output': result.stdout.decode()
+        }, 200
     else:
-        return {'message': 'Failed to run ptlines2flows.py script', 'error': result.stdout.decode()}, 500
+        return {
+            'message': 'Failed to run ptlines2flows.py script',
+            'error': result.stderr.decode()
+        }, 500
     
 @app.route('/test', methods=['GET'])
 def test_connection():
