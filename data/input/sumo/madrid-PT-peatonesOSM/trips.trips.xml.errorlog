@@ -1,0 +1,33 @@
+Warning: At actuated tlLogic 'cluster_10173804193_10561486885_10567768857_10567768859_#7more', actuated phase 3 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_10173804193_10561486885_10567768857_10567768859_#7more', linkIndex 25 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_10173804193_10561486885_10567768857_10567768859_#7more', linkIndex 26 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_10173804193_10561486885_10567768857_10567768859_#7more', linkIndex 27 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_10173804193_10561486885_10567768857_10567768859_#7more', linkIndex 28 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_10314479343_10567752800_10567768926_10567768930_#2more', actuated phase 2 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_10314479343_10567752800_10567768926_10567768930_#2more', linkIndex 7 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_160503146_1633759809_27411250_311264850_#8more', actuated phase 7 has no controlling detector.
+Warning: Program '0' at tlLogic 'joinedS_cluster_10761998985_10761998986_10761998988_10761998990_#4more_cluster_10761998992_10761998994_10761998995_10761998996_#2more_cluster_3918855386_9830554041' is incompatible with logic at junction 'cluster_10761998985_10761998986_10761998988_10761998990_#4more' (mutual conflict between link indices 0,8 tl indices 0,8 phase 0).
+  To avoid deadlock/collisions, either: rebuild the signal plan with a newer version of netconvert/netedit
+  or rebuild the network with option '--tls.ignore-internal-junction-jam' or include the program when building.
+Warning: busStop '1673526976' on lane '167272512#3_0' is too short for vehicle '20_tram_12:1'.
+Warning: No connection between edge '154321040#5' and edge '144014230#3' found.
+Warning: No route for vehicle '28_tram_M1:3' found.
+Warning: No connection between edge '154321040#5' and edge '144014230#3' found.
+Warning: No route for vehicle '27_tram_M1:2' found.
+Warning: No connection between edge '195411594#3' and edge '143891040#0' found.
+Warning: Vehicle '26_tram_M1:1' has no valid route from edge '195411594#3' to stop edge '143891040#0'.
+Warning: No connection between edge '195411594#3' and edge '143891040#0' found.
+Warning: Vehicle '25_tram_M1:0' has no valid route from edge '195411594#3' to stop edge '143891040#0'.
+Warning: Teleporting vehicle '27_tram_M1:2'; waited too long (wrong lane), lane='153537614#0_0', time=503.00.
+Warning: Vehicle '27_tram_M1:2' ends teleporting on edge '153537614#3', time=503.00.
+Warning: Teleporting vehicle '25_tram_M1:0'; waited too long (wrong lane), lane='195411594#3_0', time=709.00.
+Warning: Vehicle '25_tram_M1:0' ends teleporting on edge '143891040#0', time=709.00.
+Warning: Teleporting vehicle '28_tram_M1:3'; waited too long (wrong lane), lane='153537614#0_0', time=812.00.
+Warning: Teleporting vehicle '27_tram_M1:2'; waited too long (wrong lane), lane='153537614#3_0', time=835.00.
+Warning: Vehicle '27_tram_M1:2' ends teleporting on edge '101699679#13', time=835.00.
+Warning: Vehicle '28_tram_M1:3' ends teleporting on edge '153537614#3', time=835.00.
+Warning: Teleporting vehicle '26_tram_M1:1'; waited too long (wrong lane), lane='195411594#3_0', time=1050.00.
+Warning: Vehicle '26_tram_M1:1' ends teleporting on edge '143891040#0', time=1050.00.
+Warning: 25 total messages of type: At actuated tlLogic '%', linkIndex % has no controlling detector.
+Warning: 10 total messages of type: Teleporting vehicle '%'; waited too long (wrong lane), lane='%', time=%.
+Warning: 10 total messages of type: Vehicle '%' ends teleporting on edge '%', time=%.
