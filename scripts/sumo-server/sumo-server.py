@@ -13,7 +13,7 @@ def ptlines2flows():
         ['python3', '/usr/share/sumo/tools/ptlines2flows.py', '-n', input_data['osm_net'],
         '-s', input_data['osm_stops'], '-l', input_data['osm_ptlines'], '-i', input_data['stop_infos'],
         '-t', input_data['trips'], '-r', input_data['veh_routes'], '-o', input_data['osm_routes'],
-        '--ignore-errors', '--min-stops', '0', '-e', '3000', '--extend-to-fringe', '--random-begin',
+        '--ignore-errors', '--min-stops', '0', '-e', '4000', '--extend-to-fringe', '--random-begin',
         '--seed', '42', '--vtype-prefix', 'pt_', '--verbose'], stdout=subprocess.PIPE)
 
     # Check the result
