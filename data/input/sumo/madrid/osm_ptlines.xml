@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-06-25 11:33:36 by Eclipse SUMO netconvert Version 1.19.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="${SUMO_HOME}/data/typemap/osmNetconvert.typ.xml,${SUMO_HOME}/data/typemap/osmNetconvertAerialway.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml.gz"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml.gz"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <junctions>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+    </junctions>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+    </railway>
+
+</configuration>
+-->
+
+<ptLines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/ptlines_file.xsd">
+    <ptLine id="10492086" name="Media Distancia 18061 Madrid-Príncipe Pío → San Sebastián/Donostia" line="MD 18061" type="train" vClass="rail" completeness="0.04">
+        <route edges="119181079#0 119181079#1"/>
+        <busStop id="1493565877" name="Príncipe Pío"/>
+    </ptLine>
+    <ptLine id="11332" name="Tren C-4a: Parla → Atocha → Sol → Chamartín → Cantoblanco → Alcobendas - S.S. de los Reyes" line="C-4" type="train" vClass="rail" color="0,40,156" completeness="0.07">
+        <route edges="695991680 695991678"/>
+        <busStop id="3660257614" name="Sol"/>
+    </ptLine>
+    <ptLine id="14348661" name="Regional Exprés 18009 Madrid-Príncipe Pío → Vitoria-Gasteiz" line="RE 18009" type="train" vClass="rail" completeness="0.05">
+        <route edges="119181079#0 119181079#1"/>
+        <busStop id="1493565877" name="Príncipe Pío"/>
+    </ptLine>
+    <ptLine id="14348662" name="Media Distancia 18063 Madrid-Príncipe Pío → San Sebastián/Donostia" line="MD 18063" type="train" vClass="rail" completeness="0.03">
+        <route edges="119181079#0 119181079#1"/>
+        <busStop id="1493565877" name="Príncipe Pío"/>
+    </ptLine>
+    <ptLine id="14614365" name="Línea 10: Tres Olivos-Puerta del Sur" line="L10" type="subway" vClass="rail_urban" period="360" color="1,83,150" completeness="0.24">
+        <route edges="1054025299"/>
+        <busStop id="25906012" name="Alonso Martínez"/>
+        <busStop id="21990715" name="Tribunal"/>
+        <busStop id="25906011" name="Plaza de España"/>
+        <busStop id="25906010" name="Príncipe Pío"/>
+        <busStop id="21722690" name="Lago"/>
+    </ptLine>
+    <ptLine id="14614366" name="Línea 10: Puerta del Sur-Tres Olivos" line="L10" type="subway" vClass="rail_urban" period="360" color="1,83,150" completeness="0.19">
+        <route edges="1054025304"/>
+        <busStop id="5310093880" name="Príncipe Pío"/>
+        <busStop id="5310093878" name="Plaza de España"/>
+        <busStop id="5310093877" name="Tribunal"/>
+        <busStop id="7559826150" name="Alonso Martínez"/>
+    </ptLine>
+    <ptLine id="1760554" name="Bus 133: Plaza de Callao → Mirasierra" line="133" type="bus" vClass="bus" period="360" color="0,114,206" completeness="0.01">
+        <route edges="554359457 239499978#1 45757393 4487153 31053391 269291945#0 269291945#1 269291945#2 -490391710#1 -490391710#0 -519453589 -699385225 -32597086#1 -32597086#0 -839411286#3 -839411286#0 -651525544#0"/>
+        <busStop id="2472773304" name=""/>
+    </ptLine>
+    <ptLine id="1760555" name="Bus 133: Mirasierra → Plaza de Callao" line="133" type="bus" vClass="bus" period="360" color="0,114,206" completeness="0.00">
+        <route edges="651525544#0 104799919#0 839411286#1 30993228#1 30993228#2"/>
+    </ptLine>
+    <ptLine id="1760564" name="Bus 138: Colonia San Ignacio de Loyola → Plaza de Cristo Rey" line="138" type="bus" vClass="bus" color="0,114,206" completeness="0.01">
+        <route edges="293722999 293723002#0 4308591 31000691#0 71808949#0 71808949#1 71808949#3 44535822 44535820 542325013#0 542325013#1"/>
+        <busStop id="8272206383" name=""/>
+    </ptLine>
+    <ptLine id="1760565" name="Bus 138: Plaza de Cristo Rey → Colonia San Ignacio de Loyola" line="138" type="bus" vClass="bus" color="0,114,206" completeness="0.00">
+        <route edges="4334161 43410327#0 71808951 4308590#0 4308590#3 4308590#4 71808941 31000689#0 31000689#2 31000689#3"/>
+    </ptLine>
+    <ptLine id="1760580" name="Bus 146: Plaza del Callao → Los Molinos" line="146" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="-335713716#0 -269291945#1 -269291945#0 45757392 -239499978#1 -239499978#0 -30993228#2 -30993228#1 32597086#0 32597086#1 699385225 519453589 490391710#0 490391710#1 490391709#0 -1238944954 -155551743#2 -155551743#1 -155551743#0 -936883629 -423000381 -651613048#0 -43410312#1 -43410312#0 32597088 419119406#0 419119406#1 -651543114#1 804457302 46098085#0 46098085#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
+        <busStop id="3428239936" name=""/>
+    </ptLine>
+    <ptLine id="1760581" name="Bus 146: Los Molinos → Plaza del Callao" line="146" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="302579020#0 302579020#1 885687791 907102747 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 4328840 651543114#1 -419119406#1 -419119406#0 -32597088 43410312#0 43410312#1 651613048#0 423000381 936883629 155551743#0 155551743#1 155551743#2 1238944954 651533184#0 -335713716#0"/>
+        <busStop id="3068279551" name=""/>
+    </ptLine>
+    <ptLine id="1760582" name="Bus 147: Barrio Del Pilar → Plaza del Callao" line="147" type="bus" vClass="bus" color="0,114,206" completeness="0.00">
+        <route edges="293712003#0 293712003#1 293712003#3 293712003#4 30993228#1 30993228#2 554359457 239499978#1 45757393 4487153 31053391 269291945#0 269291945#1 269291945#2"/>
+    </ptLine>
+    <ptLine id="1760583" name="Bus 147: Plaza del Callao → Barrio Del Pilar" line="147" type="bus" vClass="bus" color="0,114,206" completeness="0.01">
+        <route edges="269291945#2 -490391710#1 -490391710#0 -519453589 -699385225 -32597086#1 -32597086#0 -293712003#4 -293712003#3 -293712003#2 -293712003#0"/>
+        <busStop id="5321927322" name=""/>
+    </ptLine>
+    <ptLine id="1760584" name="Bus 148: Plaza del Callao → Puente Vallecas" line="148" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="269291945#2 -490391710#1 -490391710#0 -519453589 -699385225 -32597086#1 -32597086#0 -839411286#3 -839411286#0 -651525544#0 4334161 43410327#0 26631680#1 388101134 7726328 7726329#0 4519460#0 1137958509 686216025 388098819#0 388098819#1 1137958510 7732898"/>
+        <busStop id="8440634409" name=""/>
+    </ptLine>
+    <ptLine id="1760585" name="Bus 148: Puente Vallecas → Plaza del Callao" line="148" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="7732896 1137958525#0 1137958525#1 1137958526#0 387848379#1 1137958527 7726327 627773366 4319471 43410332#0 44535820 542325013#0 542325013#1 651525544#0 104799919#0 839411286#1 30993228#1 30993228#2 554359457 239499978#1 45757393 4487153 31053391 269291945#0 269291945#1 269291945#2"/>
+        <busStop id="5970506960" name="Pza. San Francisco - Bailén"/>
+    </ptLine>
+    <ptLine id="1760588" name="Bus 14: Plaza del Conde De Casal → Avenida de Pío XII" line="14" type="bus" vClass="bus" color="0,114,206" completeness="0.01">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597 243991596#0 243991596#1 911013768"/>
+        <busStop id="8433060766" name=""/>
+    </ptLine>
+    <ptLine id="1760589" name="Bus 14: Avenida de Pío XII → Plaza del Conde De Casal" line="14" type="bus" vClass="bus" color="0,114,206" completeness="0.01">
+        <route edges="907102748#0 907102748#1 131443348#0 4349010 511895636 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 908214773 128089326 262951800 686214706#0 686214706#1 686214706#2 686214706#3 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <busStop id="8440634349" name=""/>
+    </ptLine>
+    <ptLine id="1760590" name="Bus 150: Puerta del Sol-Sevilla → Colonia Virgen del Cortijo" line="150" type="bus" vClass="bus" color="0,114,206" completeness="0.01">
+        <route edges="1057894241#0 626418867#1 43759793#0 43759793#1 43759793#2 43759793#3 431767100#0 431767100#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
+        <busStop id="5006352930" name=""/>
+    </ptLine>
+    <ptLine id="1760591" name="Bus 150: Colonia Virgen del Cortijo → Puerta del Sol-Sevilla" line="150" type="bus" vClass="bus" color="0,114,206" completeness="0.01">
+        <route edges="907102748#0 907102748#1 4346298#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 243990688#0 168404659 663316135 46098088#0 46098088#1 908546756#1 417019353 511241905#0 7971500 813598084 7971499 30676408 31261348#0 31261348#1 43759728#0 43759728#2 1057894241#0"/>
+        <busStop id="5006352930" name=""/>
+    </ptLine>
+    <ptLine id="1760602" name="Bus 15: La Elipa → Puerta del Sol-Sevilla" line="15" type="bus" vClass="bus" color="0,114,206" completeness="0.03">
+        <route edges="302579019#0 302579019#1 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 243990688#0 168404659 663316135 46098088#0 46098088#1 908546756#1 417019353 511241905#0 7971500 813598084"/>
+        <busStop id="8423213265" name=""/>
+    </ptLine>
+    <ptLine id="1760603" name="Bus 15: Sol → La Elipa" line="15" type="bus" vClass="bus" color="0,114,206" completeness="0.03">
+        <route edges="7971499 30676408 31261348#0 31261348#1 43759728#0 43759728#2 1057894241#0 626418867#1 43759793#0 43759793#1 43759793#2 43759793#3 431767100#0 431767100#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
+        <busStop id="21968139" name=""/>
+    </ptLine>
+    <ptLine id="1760624" name="Bus 17: Colonia Parque Europa → Plaza Mayor" line="17" type="bus" vClass="bus" color="0,114,206" completeness="0.01">
+        <route edges="4346292#0 4346292#6 909029029#1 -130468268#1 -690824245 -398751337#3 -398751337#2 -398751337#0 -41699453#2 -41699453#1 41699477#1 7732075 1275422412"/>
+        <busStop id="8422641941" name=""/>
+    </ptLine>
+    <ptLine id="1760625" name="Bus 17: Plaza Mayor → Colonia Parque Europa" line="17" type="bus" vClass="bus" color="0,114,206" completeness="0.01">
+        <route edges="907553665 4263086#0 41699453#1 41699453#2 398751337#0 398751337#1 398751337#3 690824245 130468268#1 -909029029#2 -909029029#0 -4346292#4"/>
+        <busStop id="5342725022" name=""/>
+    </ptLine>
+    <ptLine id="1760626" name="Bus 18: Plaza Mayor → Villaverde Cruce" line="18" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="7732075 1275422412 907553665 4263086#0 41699453#1 41699453#2 398751337#0 398751337#1 398751337#3 690824245 130468268#1 -909029029#2 -909029029#0 -4346292#4"/>
+        <busStop id="1437056478" name=""/>
+    </ptLine>
+    <ptLine id="1760627" name="Bus 18: Villaverde Cruce → Plaza Mayor" line="18" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="4346292#0 4346292#6 909029029#1 -130468268#1 -690824245 -398751337#3 -398751337#2 -398751337#0 -41699453#2 -41699453#1 41699477#1 7732075"/>
+        <busStop id="8422641941" name=""/>
+    </ptLine>
+    <ptLine id="1760630" name="Bus 1: Plaza de Cristo Rey → Prosperidad" line="1" type="bus" vClass="bus" color="0,114,206" completeness="0.00">
+        <route edges="651525544#0 104799919#0 839411286#1 32597086#0 32597086#1 699385225 519453589 490391710#0 490391710#1 490391709#0 -1238944954 -155551743#2 -155551743#1 -155551743#0 -936883629 -423000381 -651613048#0 -43410312#1 -43410312#0 32597088 419119406#0 419119406#1 -651543114#1 804457302 46098085#0 46098085#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
+    </ptLine>
+    <ptLine id="1760631" name="Bus 1: Prosperidad → Plaza de Cristo Rey" line="1" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="302579020#0 302579020#1 885687791 907102747 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 4328840 651543114#1 -419119406#1 -419119406#0 -32597088 43410312#0 43410312#1 651613048#0 423000381 936883629 155551743#0 155551743#1 155551743#2 1238944954 651533184#0 -490391710#1 -490391710#0 -519453589 -699385225 -32597086#1 -32597086#0 -839411286#3 -839411286#0 -651525544#0"/>
+        <busStop id="3068279551" name=""/>
+    </ptLine>
+    <ptLine id="1760641" name="Bus 21: Pintor Rosales → El Salvador" line="21" type="bus" vClass="bus" color="0,114,206" completeness="0.00"/>
+    <ptLine id="1760644" name="Bus 23: Villaverde Cruce → Plaza Mayor" line="23" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="4346292#0 4346292#6 909029029#1 -130468268#1 -690824245 -398751337#3 -398751337#2 -398751337#0 -41699453#2 -41699453#1 41699477#1 7732075"/>
+        <busStop id="8422641941" name=""/>
+    </ptLine>
+    <ptLine id="1760645" name="Bus 23: Plaza Mayor → Villaverde Cruce" line="23" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="7732075 1275422412 907553665 4263086#0 41699453#1 41699453#2 398751337#0 398751337#1 398751337#3 690824245 130468268#1 -909029029#2 -909029029#0 -4346292#4"/>
+        <busStop id="1437056478" name=""/>
+    </ptLine>
+    <ptLine id="1760650" name="Bus 25: Casa de Campo → Plaza de España (Reyes)" line="25" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="293722999 293723002#0 4308591 31000691#0 71808949#0 71808949#1 71808949#3 44535822 44535820 542325013#0 542325013#1"/>
+        <busStop id="8272206383" name=""/>
+    </ptLine>
+    <ptLine id="1760651" name="Bus 25: Plaza de España (Reyes) → Casa de Campo" line="25" type="bus" vClass="bus" color="0,114,206" completeness="0.05">
+        <route edges="4334161 43410327#0 71808951 4308590#0 4308590#3 4308590#4 71808941 31000689#0 31000689#2 31000689#3"/>
+        <busStop id="8235796741" name=""/>
+        <busStop id="1439703616" name="Jardines de Sabatini"/>
+        <busStop id="8272206405" name=""/>
+    </ptLine>
+    <ptLine id="1760652" name="Bus 26: Diego de León → Plaza de Tirso de Molina" line="26" type="bus" vClass="bus" color="0,114,206" completeness="0.03">
+        <route edges="-1275083956#1 -82567675#2 -320668245#1 4328795#0 4328795#1 4328795#2 686213116#0 423231391#0 423231391#4 423231391#5 423231391#6 685983423 7732078 70955486 1275422405 1275422411#0 1275422411#1 31262334#0 31262349#1"/>
+        <busStop id="-8423356513" name=""/>
+    </ptLine>
+    <ptLine id="1760653" name="Bus 26: Plaza de Tirso de Molina → Diego de León" line="26" type="bus" vClass="bus" color="0,114,206" completeness="0.03">
+        <route edges="554357604#0 70955584#0 70955584#1 70955584#2 4328769 423638485 686213118#0 423232043 48345480#0 48345480#2 1275083958#0 82567675#0 82567675#3"/>
+        <busStop id="5350038443" name=""/>
+    </ptLine>
+    <ptLine id="1760654" name="Bus 27: Embajadores → Plaza Castilla" line="27" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597 243991596#0 243991596#1 911013768"/>
+        <busStop id="8433060766" name=""/>
+    </ptLine>
+    <ptLine id="1760655" name="Bus 27: Plaza Castilla → Embajadores" line="27" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="907102748#0 907102748#1 131443348#0 4349010 511895636 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 908214773 128089326 262951800 686214706#0 686214706#1 686214706#2 686214706#3 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <busStop id="8440634349" name=""/>
+    </ptLine>
+    <ptLine id="1760660" name="Bus 2: Plaza de Manuel Becerra → Avenida de Reina Victoria" line="2" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="302579020#0 302579020#1 885687791 907102747 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 4328840 651543114#1 -419119406#1 -419119406#0 -32597088 43410312#0 43410312#1 651613048#0 423000381 936883629 155551743#0 155551743#1 155551743#2 1238944954 651533184#0 -490391710#1 -490391710#0 -519453589 -699385225 -32597086#1 -32597086#0 -839411286#3 -839411286#0 -651525544#0"/>
+        <busStop id="3068279551" name=""/>
+    </ptLine>
+    <ptLine id="1760661" name="Bus 2: Avenida de Reina Victoria → Plaza de Manuel Becerra" line="2" type="bus" vClass="bus" color="0,114,206" completeness="0.00">
+        <route edges="651525544#0 104799919#0 839411286#1 32597086#0 32597086#1 699385225 519453589 490391710#0 490391710#1 490391709#0 -1238944954 -155551743#2 -155551743#1 -155551743#0 -936883629 -423000381 -651613048#0 -43410312#1 -43410312#0 32597088 419119406#0 419119406#1 -651543114#1 804457302 46098085#0 46098085#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
+    </ptLine>
+    <ptLine id="1760666" name="Bus 31: Aluche → Plaza Mayor" line="31" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="40933501#0 40933501#1 45316487#0 45316487#1 44885764#1 44885764#2 44885764#3 44885764#4 44885764#5 44885764#6 689780380 31309326#0 31309326#2 31309326#3 31309326#4 7972312#0 7972312#1 7972312#2 7972312#3 7972312#4 -49016411#1 -168406442#2 7732076#0 7732076#1 41699477#1 7732075 1275422412 907553665"/>
+        <busStop id="8423406967" name=""/>
+    </ptLine>
+    <ptLine id="1760667" name="Bus 31: Plaza Mayor → Aluche" line="31" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="907553665 4519456#2 168406442#1 49016411#0 -7972312#4 -7972312#3 -7972312#2 -7972312#1 -7972312#0 -31309326#4 -31309326#3 -31309326#2 -31309326#1 -689780380 -44885764#6 -44885764#5 -44885764#4 -44885764#3 -44885764#2 -44885764#1 -45316487#2 -45316487#0 -40933501#1 -40933501#0"/>
+        <busStop id="8427149777" name=""/>
+    </ptLine>
+    <ptLine id="1760668" name="Bus 32: Plaza de Jacinto Benavente → Pavones" line="32" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="7732078 70955486 1275422405 1275422411#0 1275422411#1 31262334#0 31262349#1 554357604#0 70955584#0 70955584#1 70955584#2 4328769 423638485 686213118#0 423232043 48345480#0 48345480#2 1275083958#0 82567675#0 82567675#3"/>
+        <busStop id="1493715148" name=""/>
+    </ptLine>
+    <ptLine id="1760669" name="Bus 32: Pavones → Plaza de Jacinto Benavente" line="32" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="-1275083956#1 -82567675#2 -320668245#1 4328795#0 4328795#1 4328795#2 686213116#0 423231391#0 423231391#4 423231391#5 423231391#6 685983423 7732078"/>
+        <busStop id="-8423356513" name=""/>
+    </ptLine>
+    <ptLine id="1760670" name="Bus 33: Casa de Campo → Príncipe Pío" line="33" type="bus" vClass="bus" color="0,114,206" completeness="0.03">
+        <route edges="293722999 293723002#0 44535825#0"/>
+        <busStop id="8272206383" name=""/>
+    </ptLine>
+    <ptLine id="1760672" name="Bus 34: Plaza de Cibeles → Las Águilas" line="34" type="bus" vClass="bus" color="0,114,206" completeness="0.01">
+        <route edges="44288719#1 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 908214773 128089326 262951800 686214706#0 686214706#1 686214706#2 686214706#3 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <busStop id="5342725021" name=""/>
+    </ptLine>
+    <ptLine id="1760673" name="Bus 34: Las Águilas → Plaza de Cibeles" line="34" type="bus" vClass="bus" color="0,114,206" completeness="0.01">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597 243991596#0 243991596#1 911013768"/>
+        <busStop id="8433060766" name=""/>
+    </ptLine>
+    <ptLine id="1760674" name="Bus 35: Carabanchel Alto → Plaza Mayor" line="35" type="bus" vClass="bus" color="0,114,206" completeness="0.01">
+        <route edges="4346292#0 4346292#6 909029029#1 -130468268#1 -690824245 -398751337#3 -398751337#2 -398751337#0 -41699453#2 -41699453#1 41699477#1"/>
+        <busStop id="8422641941" name=""/>
+    </ptLine>
+    <ptLine id="1760675" name="Bus 35: Plaza Mayor → Carabanchel Alto" line="35" type="bus" vClass="bus" color="0,114,206" completeness="0.01">
+        <route edges="41699477#1 7732075 1275422412 907553665 4263086#0 41699453#1 41699453#2 398751337#0 398751337#1 398751337#3 690824245 130468268#1 -909029029#2 -909029029#0 -4346292#4"/>
+        <busStop id="5351138581" name=""/>
+    </ptLine>
+    <ptLine id="1760677" name="Bus 36: Campamento → Atocha" line="36" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="40933501#0 40933501#1 32480293#1 32480293#2 32480293#3 32480293#4 32480293#5 32480293#6"/>
+        <busStop id="8423406977" name=""/>
+    </ptLine>
+    <ptLine id="1760678" name="Bus 37: Cuatro Caminos → Puente de Vallecas" line="37" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="907102748#0 907102748#1 131443348#0 4349010 511895636 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 908214773 128089326 262951800 686214706#0 686214706#1 686214706#2 686214706#3 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <busStop id="8440634349" name=""/>
+    </ptLine>
+    <ptLine id="1760679" name="Bus 37: Puente de Vallecas → Cuatro Caminos" line="37" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597 243991596#0 243991596#1 911013768"/>
+        <busStop id="8433060766" name=""/>
+    </ptLine>
+    <ptLine id="1760682" name="Bus 39: Plaza de España → Colonia San Ignacio de Lozoya" line="39" type="bus" vClass="bus" color="0,114,206" completeness="0.05">
+        <route edges="4334161 43410327#0 71808951 4308590#0 4308590#3 4308590#4 71808941 31000689#0 31000689#2 31000689#3"/>
+        <busStop id="8235796741" name=""/>
+        <busStop id="1439703616" name="Jardines de Sabatini"/>
+        <busStop id="8272206405" name=""/>
+    </ptLine>
+    <ptLine id="1760683" name="Bus 39: Colonia San Ignacio de Lozoya → Plaza de España" line="39" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="293722999 293723002#0 4308591 31000691#0 71808949#0 71808949#1 71808949#3 44535822 44535820 542325013#0 542325013#1"/>
+        <busStop id="8272206383" name=""/>
+    </ptLine>
+    <ptLine id="1760684" name="Bus 3: Puerta Toledo → San Amaro" line="3" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="7732896 1137958525#0 1137958525#1 1137958526#0 387848379#1 1137958527 7726327 627773366 4319471 43410332#0 1008751312 542325013#0 542325013#1 651525544#0 104799919#0 839411286#1 32597086#0 32597086#1 699385225 519453589 490391710#0 490391710#1 490391709#0 -1238944954 -155551743#2 -155551743#1 -155551743#0 -936883629 -423000381 -651613048#0 -43410312#1 -43410312#0 32597088 419119406#0 419119406#1 -651543114#1 804457302 4328843 663316135 46098088#0 46098088#1 908546756#1 417019353 984759713#1 7642926#1 7642926#2 7642926#3 -32597088 4487679#1 4487679#2 4487679#3 4487679#4 4487679#5 4487679#6 4487679#7"/>
+        <busStop id="5970484990" name="Bailén - Yeseros"/>
+    </ptLine>
+    <ptLine id="1760685" name="Bus 3: San Amaro → Puerta Toledo" line="3" type="bus" vClass="bus" color="0,114,206" completeness="0.00">
+        <route edges="293712003#0 293712003#1 293712003#3 293712003#4 -839411286#3 -839411286#0 -651525544#0 4334161 43410327#0 26631680#1 388101134 7726328 7726329#0 4519460#0 1137958509 686216025 388098819#0 388098819#1 1137958510 7732898"/>
+    </ptLine>
+    <ptLine id="1760694" name="Bus 44: Plaza de Callao → Marqués de Viana" line="44" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="554359457 239499978#1 45757393 4487153 31053391 269291945#0 269291945#1 269291945#2 -490391710#1 -490391710#0 -519453589 -699385225 -32597086#1 -32597086#0 -839411286#3 -839411286#0 -651525544#0"/>
+        <busStop id="5350055328" name=""/>
+    </ptLine>
+    <ptLine id="1760695" name="Bus 44: Marqués de Viana → Plaza de Callao" line="44" type="bus" vClass="bus" color="0,114,206" completeness="0.00">
+        <route edges="651525544#0 104799919#0 839411286#1 30993228#1 30993228#2 554359457"/>
+    </ptLine>
+    <ptLine id="1760696" name="Bus 45: Legazpi → Reina Victoria" line="45" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597 243991596#0 243991596#1 911013768"/>
+        <busStop id="8433060766" name=""/>
+    </ptLine>
+    <ptLine id="1760697" name="Bus 45: Reina Victoria → Legazpi" line="45" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="907102748#0 907102748#1 131443348#0 4349010 511895636 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 908214773 128089326 262951800 686214706#0 686214706#1 686214706#2 686214706#3 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <busStop id="8440634349" name=""/>
+    </ptLine>
+    <ptLine id="1760698" name="Bus 46: Moncloa → Sevilla" line="46" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="4308591 31000691#0 71808949#0 71808949#1 71808949#3 44535822 44535820 542325013#0 542325013#1 651525544#0 104799919#0 839411286#1 32597086#0 32597086#1 699385225 519453589 490391710#0 490391710#1 490391709#0 -1238944954 -155551743#2 -155551743#1 -155551743#0 -936883629 -423000381 -651613048#0 -43410312#1 -43410312#0 32597088 419119406#0 419119406#1 -651543114#1 804457302 4328843 663316135 46098088#0 46098088#1"/>
+        <busStop id="8235796763" name=""/>
+    </ptLine>
+    <ptLine id="1760699" name="Bus 46: Sevilla → Moncloa" line="46" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="46098088#1 908546756#1 417019353 984759713#1 7642926#1 7642926#2 7642926#3 -32597088 43410312#0 43410312#1 651613048#0 423000381 936883629 155551743#0 155551743#1 155551743#2 1238944954 651533184#0 -490391710#1 -490391710#0 -519453589 -699385225 -32597086#1 -32597086#0 -839411286#3 -839411286#0 -651525544#0 4334161 43410327#0 71808951 4308590#0 4308590#3 4308590#4 71808941 31000689#0 31000689#2 31000689#3"/>
+        <busStop id="8436098481" name=""/>
+    </ptLine>
+    <ptLine id="1760708" name="Bus 50: Avenida Manzanares → Plaza Mayor" line="50" type="bus" vClass="bus" color="0,114,206" completeness="0.04">
+        <route edges="40933501#0 40933501#1 45316487#0 45316487#1 44885764#1 44885764#2 44885764#3 44885764#4 44885764#5 44885764#6 689780380 31309326#0 31309326#2 31309326#3 31309326#4 7972312#0 7972312#1 7972312#2 7972312#3 7972312#4 -49016411#1 -168406442#2 7732076#0 7732076#1 41699477#1 41699518#0 31262349#1 554357604#0 7642979#0 7642979#2 556954611#0 66835311#0 429530691#0 4519453 406007906 1275419913#0 1275419913#1"/>
+        <busStop id="8423406967" name=""/>
+    </ptLine>
+    <ptLine id="1760709" name="Bus 50: Plaza Mayor → Avenida Manzanares" line="50" type="bus" vClass="bus" color="0,114,206" completeness="0.04">
+        <route edges="1275419913#1 34095411#0 34095411#1 34095411#2 66833793#0 66833793#1 66833793#2 66833793#3 32044942#0 32044942#1 4519456#2 168406442#1 49016411#0 -7972312#4 -7972312#3 -7972312#2 -7972312#1 -7972312#0 -31309326#4 -31309326#3 -31309326#2 -31309326#1 -689780380 -44885764#6 -44885764#5 -44885764#4 -44885764#3 -44885764#2 -44885764#1 -45316487#2 -45316487#0 32480293#1 32480293#2 32480293#3 32480293#4 32480293#5 32480293#6"/>
+        <busStop id="8423406988" name=""/>
+    </ptLine>
+    <ptLine id="1760710" name="Bus 51: Plaza del Perú → Puerta del Sol" line="51" type="bus" vClass="bus" color="0,114,206" completeness="0.03">
+        <route edges="302579018#0 302579018#1 907102747 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 243990688#0 168404659 663316135 46098088#0 46098088#1 908546756#1 417019353 984759713#1"/>
+        <busStop id="2506473215" name=""/>
+    </ptLine>
+    <ptLine id="1760711" name="Bus 51: Puerta del Sol → Plaza del Perú" line="51" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="984759713#1 7642926#1 7642926#2 7642926#3 419119406#0 419119406#1 -651543114#1 804457302 46098085#0 46098085#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
+        <busStop id="9104252079" name=""/>
+    </ptLine>
+    <ptLine id="1760712" name="Bus 52: Santamarca → Sol" line="52" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="302579018#0 302579018#1 907102747 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 243990688#0 168404659 663316135 46098088#0 46098088#1 908546756#1 417019353 511241905#0 7971500 813598084 7971499"/>
+        <busStop id="2506473215" name=""/>
+    </ptLine>
+    <ptLine id="1760713" name="Bus 52: Sol → Santamarca" line="52" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="30676408 31261348#0 31261348#1 43759728#0 43759728#2 1057894241#0 626418867#1 43759793#0 43759793#1 43759793#2 43759793#3 431767100#0 431767100#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
+        <busStop id="339242703" name="Sevilla - Pza. Canalejas"/>
+    </ptLine>
+    <ptLine id="1760714" name="Bus 53: Arturo Soria → Puerta del Sol-Sevilla" line="53" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="302579018#0 302579018#1 907102747 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 243990688#0 168404659 663316135 46098088#0 46098088#1 908546756#1 417019353 511241905#0 7971500 813598084 7971499"/>
+        <busStop id="2506473215" name=""/>
+    </ptLine>
+    <ptLine id="1760715" name="Bus 53: Puerta del Sol-Sevilla → Arturo Soria" line="53" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="30676408 31261348#0 31261348#1 43759728#0 43759728#2 1057894241#0 626418867#1 43759793#0 43759793#1 43759793#2 43759793#3 431767100#0 431767100#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
+        <busStop id="339242703" name="Sevilla - Pza. Canalejas"/>
+    </ptLine>
+    <ptLine id="1760728" name="Bus 5: Estación de Chamartin → Puerta del Sol-Sevilla" line="5" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="907102748#0 907102748#1 4346298#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 243990688#0 168404659 663316135 46098088#0 46098088#1 908546756#1 417019353 511241905#0 7971500 813598084"/>
+        <busStop id="21968139" name=""/>
+    </ptLine>
+    <ptLine id="1760729" name="Bus 5: Puertal del Sol-Sevilla → Estación de Chamartín" line="5" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="7971499 30676408 31261348#0 31261348#1 43759728#0 43759728#2 1057894241#0 626418867#1 43759793#0 43759793#1 43759793#2 43759793#3 431767100#0 431767100#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
+        <busStop id="21968139" name=""/>
+    </ptLine>
+    <ptLine id="1760730" name="Bus 60: Orcasitas → Plaza Cebada" line="60" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="7732894#0 7732894#1 7732894#3 896274305 5927085#0 5927797#1 5927797#2 -131451861 130468268#1 -909029029#2 -909029029#0"/>
+        <busStop id="8440470083" name=""/>
+    </ptLine>
+    <ptLine id="1760731" name="Bus 60: Plaza Cebada → Orcasitas" line="60" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="4346292#0 4346292#6"/>
+        <busStop id="8440470099" name=""/>
+    </ptLine>
+    <ptLine id="1760734" name="Bus 62: Cristo Rey → Los Puertos" line="62" type="bus" vClass="bus" color="0,114,206" completeness="0.00">
+        <route edges="43410331 71808951 4308590#0 4308590#3 4308590#4 71808941 31000689#0 31000689#2 31000689#3 7732093#0 7732093#2 691794842 26674010#0 26674010#1 685984978#0 31000487 1184617809 7648767#1 7648767#2"/>
+    </ptLine>
+    <ptLine id="1760735" name="Bus 62: Los Puertos → Cristo Rey" line="62" type="bus" vClass="bus" color="0,114,206" completeness="0.01">
+        <route edges="293722999 293723002#0 4308591 31000691#0 71808949#0 71808949#1 71808949#3 26631681#0 673102680 26631682"/>
+        <busStop id="8272206383" name=""/>
+    </ptLine>
+    <ptLine id="1760740" name="Bus 65: Plaza de Jacinto Benavente → Colonia Gran Capitán" line="65" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="7732078 70955486 1275422405 1275422409 31262321#0 31262321#1 31262321#2 1275422412 907553665 4519456#2 168406442#1 49016411#0 -7972312#4 -7972312#3 -7972312#2 -7972312#1 -7972312#0 -31309326#4 -31309326#3 -31309326#2 -31309326#1 -689780380 -44885764#6 -44885764#5 -44885764#4 -44885764#3 -44885764#2 -44885764#1 -45316487#2 -45316487#0 -40933501#1 -40933501#0"/>
+        <busStop id="1493715148" name=""/>
+    </ptLine>
+    <ptLine id="1760741" name="Bus 65: Colonia Gran Capitán → Plaza de Jacinto Benavente" line="65" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="40933501#0 40933501#1 45316487#0 45316487#1 44885764#1 44885764#2 44885764#3 44885764#4 44885764#5 44885764#6 689780380 31309326#0 31309326#2 31309326#3 31309326#4 7972312#0 7972312#1 7972312#2 7972312#3 7972312#4 -49016411#1 -168406442#2 7732076#0 7732076#1 41699477#1 41699518#0 31262349#1 554357604#0 7642979#0 7642979#2 556954611#0 7732078"/>
+        <busStop id="8423406967" name=""/>
+    </ptLine>
+    <ptLine id="1760746" name="Bus 6: Benavente → Orcasitas" line="6" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="7732078 70955486 1275422405 1275422411#0 1275422411#1 31262334#0 31262349#1 554357604#0 70955584#0 70955584#1 70955584#2 4328769 423638485 686213118#0 423232043 48345480#0 48345480#2 1275083958#0 82567675#0 82567675#3"/>
+        <busStop id="1493715148" name=""/>
+    </ptLine>
+    <ptLine id="1760747" name="Bus 6: Orcasitas → Benavente" line="6" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="-1275083956#1 -82567675#2 -320668245#1 4328795#0 4328795#1 4328795#2 686213116#0 423231391#0 423231391#4 423231391#5 423231391#6 685983423 7732078"/>
+        <busStop id="-8423356513" name=""/>
+    </ptLine>
+    <ptLine id="1760756" name="Bus 74: Parque de las Avenidas → Paseo del Pintor Rosales" line="74" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="302579020#0 302579020#1 885687791 907102747 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 4328840 651543114#1 -419119406#1 -419119406#0 -32597088 43410312#0 43410312#1 651613048#0 423000381 936883629 155551743#0 155551743#1 155551743#2 1238944954 651533184#0 -490391710#1 -490391710#0 -519453589 -699385225 -32597086#1 -32597086#0 -839411286#3 -839411286#0 -651525544#0"/>
+        <busStop id="3068279551" name=""/>
+    </ptLine>
+    <ptLine id="1760757" name="Bus 74: Paseo del Pintor Rosales → Parque de las Avenidas" line="74" type="bus" vClass="bus" color="0,114,206" completeness="0.00">
+        <route edges="651525544#0 104799919#0 839411286#1 32597086#0 32597086#1 699385225 519453589 490391710#0 490391710#1 490391709#0 -1238944954 -155551743#2 -155551743#1 -155551743#0 -936883629 -423000381 -651613048#0 -43410312#1 -43410312#0 32597088 419119406#0 419119406#1 -651543114#1 804457302 46098085#0 46098085#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
+    </ptLine>
+    <ptLine id="1760758" name="Bus 75: Plaza de Callao → Colonia Manzanares" line="75" type="bus" vClass="bus" color="0,114,206" completeness="0.03">
+        <route edges="269291945#2 -490391710#1 -490391710#0 -519453589 -699385225 -32597086#1 -32597086#0 -839411286#3 -839411286#0 -651525544#0 4334161 43410327#0 71808951 4308590#0 4308590#3 4308590#4 71808941 31000689#0 31000689#2 31000689#3"/>
+        <busStop id="3428239936" name=""/>
+    </ptLine>
+    <ptLine id="1760759" name="Bus 75: Colonia Manzanares → Plaza de Callao" line="75" type="bus" vClass="bus" color="0,114,206" completeness="0.04">
+        <route edges="4308591 31000691#0 71808949#0 71808949#1 71808949#3 44535822 44535820 542325013#0 542325013#1 651525544#0 104799919#0 839411286#1 30993228#1 30993228#2 554359457 239499978#1 45757393 4487153 31053391 269291945#0 269291945#1 269291945#2"/>
+        <busStop id="8235796763" name=""/>
+    </ptLine>
+    <ptLine id="1760784" name="Bus 9: Hortaleza → Sevilla" line="9" type="bus" vClass="bus" color="0,114,206" completeness="0.01">
+        <route edges="302579020#0 302579020#1 885687791 907102747 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 243990688#0 168404659 663316135 46098088#0 46098088#1"/>
+        <busStop id="8235796758" name=""/>
+    </ptLine>
+    <ptLine id="1760785" name="Bus 9: Sevilla → Hortaleza" line="9" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="46098088#1 908546756#1 417019353 511241905#0 7971500 813598084 7971499 30676408 31261348#0 31261348#1 43759728#0 43759728#2 1057894241#0 626418867#1 43759793#0 43759793#1 43759793#2 43759793#3 431767100#0 431767100#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
+        <busStop id="2673249151" name="Alcalá - Gran Vía"/>
+    </ptLine>
+    <ptLine id="1760788" name="Bus C1: Circular 1" line="C1" type="bus" vClass="bus" color="0,114,206" completeness="0.01">
+        <route edges="7648748 -1184617809 -31000487 -685984978#1 -45316487#2 -45316487#0 -40933501#1 -40933501#0 293722999 293723002#0 4308591 31000691#0 71808949#0 71808949#1 71808949#3 44535822 44535820 542325013#0 542325013#1"/>
+        <busStop id="-8473691223" name=""/>
+    </ptLine>
+    <ptLine id="1760790" name="Bus C2: Circular 2" line="C2" type="bus" vClass="bus" color="0,114,206" completeness="0.00">
+        <route edges="4334161 43410327#0 71808951 4308590#0 4308590#3 4308590#4 71808941 31000689#0 31000689#2 31000689#3 7732093#0 7732093#2 691794842 26674010#0 26674010#1 685984978#0 31000487 1184617809 130757787#2 1010800836"/>
+    </ptLine>
+    <ptLine id="1760834" name="Bus M1: Glorieta de Embajadores → Puerta del Sol-Sevilla" line="M1" type="bus" vClass="bus" color="0,114,206" completeness="0.05">
+        <route edges="686216023 4328608 4328607 -41699453#2 -41699453#1 41699477#1 41699518#0 31262349#1 554357604#0 7642979#0 7642979#2 43626132 102865404#0 102865404#1 4328790#1 4328790#2 4328790#3 4328790#4 4328790#5 4328790#6 31261348#0 31261348#1 43759728#0 43759728#2 1057894241#0 626418867#1 1286414023 43759788 417019353 511241905#0 7971500 813598084"/>
+        <busStop id="8423406949" name=""/>
+    </ptLine>
+    <ptLine id="1760835" name="Bus M1: Puerta del Sol-Sevilla → Glorieta de Embajadores" line="M1" type="bus" vClass="bus" color="0,114,206" completeness="0.05">
+        <route edges="7971499 30676408 30676403#0 30676403#1 30676403#2 29230555#0 29230555#1 423231390 7643038 423231391#0 423231391#4 423231391#5 423231391#6 685983423 7732078 70955486 1275422405 1275422411#0 1275422411#1 31262334#0 31262349#1 554357604#0 70955584#0 70955584#1 70955584#2 4328769 4328770#0 4328770#1 4328770#2"/>
+        <busStop id="21968139" name=""/>
+    </ptLine>
+    <ptLine id="1760836" name="Bus 002: Argüelles → Puerta de Toledo" line="002" type="bus" vClass="bus" color="0,114,206" completeness="0.00">
+        <route edges="4328803#0 4328803#1 4328803#2 32865074#0 -423000381 -651613048#0 -43410312#1 -43410312#0 32597088 419119406#0 419119406#1 -651543114#1 804457302 4328843 663316135 46098088#0 46098088#1 908546756#1 417019353 511241905#0 7971500 813598084 7971499 30676408 30676403#0 30676403#1 30676403#2 29230555#0 29230555#1 423231390 7643038 423231391#0 423231391#4 423231391#5 423231391#6 685983423 66835311#0 70955486 1275422405 1275422409 31262321#0 31262321#1 31262321#2 1275422412 907553665 4263086#0 41699453#1 41699453#2 398751337#0 398751337#1 398751337#3 690824245 130468268#1 -909029029#2 -909029029#0 -4346292#4"/>
+    </ptLine>
+    <ptLine id="1760837" name="Bus 002: Puerta de Toledo → Argüelles" line="002" type="bus" vClass="bus" color="0,114,206" completeness="0.03">
+        <route edges="4346292#0 4346292#6 909029029#1 -130468268#1 -690824245 -398751337#3 -398751337#2 -398751337#0 -41699453#2 -41699453#1 41699477#1 41699518#0 31262349#1 554357604#0 7642979#0 7642979#2 556954611#0 79638499 4328790#1 4328790#2 4328790#3 4328790#4 4328790#5 4328790#6 31261348#0 31261348#1 43759728#0 43759728#2 1057894241#0 626418867#1 1286414023 43759788 417019353 984759713#1 7642926#1 7642926#2 7642926#3 -32597088 43410312#0 43410312#1 651613048#0 4328802#1 4328802#2 4328802#3 4328802#4 4328802#5 32865959#0 32865959#1 4308074#0 4308074#1 4308074#2 4308074#3"/>
+        <busStop id="-5970506955" name="Gran Vía - Hortaleza"/>
+    </ptLine>
+    <ptLine id="1760838" name="Bus N10: Cibeles → Palomeras" line="N10" type="bus" vClass="bus" nightService="only" color="black" completeness="0.02">
+        <route edges="131443347#0 131443348#0 4349010 511895636 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 908214773 128089326 262951800 686214706#0 686214706#1 686214706#2 686214706#3 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <busStop id="8423356496" name=""/>
+    </ptLine>
+    <ptLine id="1760839" name="Bus N10: Palomeras → Cibeles" line="N10" type="bus" vClass="bus" nightService="only" color="black" completeness="0.03">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597 243991596#0 243991596#1 911013768"/>
+        <busStop id="8433060766" name=""/>
+    </ptLine>
+    <ptLine id="1760840" name="Bus N11: Plaza de Cibeles → Madrid Sur" line="N11" type="bus" vClass="bus" nightService="only" color="black" completeness="0.02">
+        <route edges="131443347#0 131443348#0 4349010 511895636 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 908214773 128089326 262951800 686214706#0 686214706#1 686214706#2 686214706#3 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <busStop id="8433060765" name=""/>
+    </ptLine>
+    <ptLine id="1760841" name="Bus N11: Madrid Sur → Plaza de Cibeles" line="N11" type="bus" vClass="bus" nightService="only" color="black" completeness="0.02">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597 243991596#0 243991596#1 911013768"/>
+        <busStop id="8433060766" name=""/>
+    </ptLine>
+    <ptLine id="1760842" name="Bus N12: Cibeles → Los Rosales" line="N12" type="bus" vClass="bus" nightService="only" color="black" completeness="0.01">
+        <route edges="44288719#1 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 908214773 128089326 262951800 686214706#0 686214706#1 686214706#2 686214706#3 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <busStop id="562734686" name=""/>
+    </ptLine>
+    <ptLine id="1760843" name="Bus N12: Los Rosales → Cibeles" line="N12" type="bus" vClass="bus" nightService="only" color="black" completeness="0.01">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597 243991596#0 243991596#1 911013768 44288719#0 44288719#1"/>
+        <busStop id="8433060766" name=""/>
+    </ptLine>
+    <ptLine id="1760844" name="Bus N13: Plaza de Cibeles → Colonia San Cristobal de los Ángeles" line="N13" type="bus" vClass="bus" color="black" completeness="0.03">
+        <route edges="128089326 262951800 686214706#0 686214706#1 686214706#2 686214706#3 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <busStop id="8423356496" name=""/>
+    </ptLine>
+    <ptLine id="1760845" name="Bus N13: Colonia San Cristobal de los Ángeles → Plaza de Cibeles" line="N13" type="bus" vClass="bus" color="black" completeness="0.02">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597"/>
+        <busStop id="8433060766" name=""/>
+    </ptLine>
+    <ptLine id="1760846" name="Bus N14: Cibeles → Villaverde Alto" line="N14" type="bus" vClass="bus" color="black" completeness="0.02">
+        <route edges="128089326 262951800 686214706#0 686214706#1 686214706#2 686214706#3 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <busStop id="8423356496" name=""/>
+    </ptLine>
+    <ptLine id="1760847" name="Bus N14: Villaverde Alto → Cibeles" line="N14" type="bus" vClass="bus" color="black" completeness="0.01">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597"/>
+        <busStop id="8433060766" name=""/>
+    </ptLine>
+    <ptLine id="1760848" name="Bus N15: Plaza de Cibeles → Orcasur" line="N15" type="bus" vClass="bus" nightService="only" color="black" completeness="0.02">
+        <route edges="44288719#1 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 908214773 128089326 262951800 686214706#0 686214706#1 686214706#2 686214706#3 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <busStop id="562734686" name=""/>
+    </ptLine>
+    <ptLine id="1760849" name="Bus N15: Orcasur → Plaza de Cibeles" line="N15" type="bus" vClass="bus" nightService="only" color="black" completeness="0.02">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597 243991596#0 243991596#1 911013768 44288719#0 44288719#1"/>
+        <busStop id="8433060766" name=""/>
+    </ptLine>
+    <ptLine id="1760850" name="Bus N16: Plaza de Cibeles → Avenida de La Peseta" line="N16" type="bus" vClass="bus" nightService="only" color="black" completeness="0.02">
+        <route edges="302579020#0 302579020#1 885687791 907102747 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 4328840 651543114#1 -419119406#1 -419119406#0 -32597088 43410312#0 43410312#1 651613048#0 423000381 936883629 155551743#0 155551743#1 155551743#2 1238944954 651533184#0 -490391710#1 -490391710#0 -519453589 -699385225 -32597086#1 -32597086#0 -839411286#3 -839411286#0 -651525544#0 4334161 43410327#0 71808951 4308590#0 4308590#3 4308590#4 71808941 31000689#0 31000689#2 31000689#3 7732093#0 7732093#2 691794842 26674010#0 26674010#1 685984978#0 31000487 1184617809 130757787#2 1010800836"/>
+        <busStop id="3068279551" name=""/>
+    </ptLine>
+    <ptLine id="1760851" name="Bus N16: Avenida de La Peseta → Plaza de Cibeles" line="N16" type="bus" vClass="bus" nightService="only" color="black" completeness="0.02">
+        <route edges="7648748 -1184617809 -31000487 -685984978#1 -45316487#2 -45316487#0 -40933501#1 -40933501#0 293722999 293723002#0 4308591 31000691#0 71808949#0 71808949#1 71808949#3 44535822 44535820 542325013#0 542325013#1 651525544#0 104799919#0 839411286#1 32597086#0 32597086#1 699385225 519453589 490391710#0 490391710#1 490391709#0 -1238944954 -155551743#2 -155551743#1 -155551743#0 -936883629 -423000381 -651613048#0 -43410312#1 -43410312#0 32597088 419119406#0 419119406#1 -651543114#1 804457302 46098085#0 46098085#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
+        <busStop id="3068279551" name=""/>
+    </ptLine>
+    <ptLine id="1760852" name="Bus N17: Carabanchel Alto → Plaza de Cibeles" line="N17" type="bus" vClass="bus" nightService="only" color="black" completeness="0.03">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 302580242#1 302580241#0 243991596#0 243991596#1 911013768"/>
+        <busStop id="3068279551" name=""/>
+    </ptLine>
+    <ptLine id="1760853" name="Bus N17: Plaza de Cibeles → Carabanchel Alto" line="N17" type="bus" vClass="bus" nightService="only" color="black" completeness="0.02">
+        <route edges="302579020#0 302579020#1 885687791 907102747 762216476#0 194159907#0 242547870 511895636 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 908214773 128089326 262951800 686214706#0 686214706#1 686214706#2 686214706#3 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <busStop id="3068279551" name=""/>
+    </ptLine>
+    <ptLine id="1760854" name="Bus N18: Aluche → Cibeles" line="N18" type="bus" vClass="bus" nightService="only" color="black" completeness="0.02">
+        <route edges="293722999 293723002#0 4308591 31000691#0 71808949#0 71808949#1 71808949#3 44535822 44535820 542325013#0 542325013#1 651525544#0 104799919#0 839411286#1 32597086#0 32597086#1 699385225 519453589 490391710#0 490391710#1 490391709#0 -1238944954 -155551743#2 -155551743#1 -155551743#0 -936883629 -423000381 -651613048#0 -43410312#1 -43410312#0 32597088 419119406#0 419119406#1 -651543114#1 804457302 46098085#0 46098085#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0 302579020#0 302579020#1 885687791"/>
+        <busStop id="8235796763" name=""/>
+    </ptLine>
+    <ptLine id="1760855" name="Bus N18: Cibeles → Aluche" line="N18" type="bus" vClass="bus" nightService="only" color="black" completeness="0.02">
+        <route edges="885687791 907102747 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 4328840 651543114#1 -419119406#1 -419119406#0 -32597088 43410312#0 43410312#1 651613048#0 423000381 936883629 155551743#0 155551743#1 155551743#2 1238944954 651533184#0 -490391710#1 -490391710#0 -519453589 -699385225 -32597086#1 -32597086#0 -839411286#3 -839411286#0 -651525544#0 4334161 43410327#0 71808951 4308590#0 4308590#3 4308590#4 71808941 31000689#0 31000689#2 31000689#3"/>
+        <busStop id="8235796758" name=""/>
+    </ptLine>
+    <ptLine id="1760856" name="Bus N19: Plaza de Cibeles → Colonia San Ignacio de Loyola" line="N19" type="bus" vClass="bus" nightService="only" color="black" completeness="0.02">
+        <route edges="885687791 907102747 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 4328840 651543114#1 -419119406#1 -419119406#0 -32597088 43410312#0 43410312#1 651613048#0 423000381 936883629 155551743#0 155551743#1 155551743#2 1238944954 651533184#0 -490391710#1 -490391710#0 -519453589 -699385225 -32597086#1 -32597086#0 -839411286#3 -839411286#0 -651525544#0 4334161 43410327#0 71808951 4308590#0 4308590#3 4308590#4 71808941 31000689#0 31000689#2 31000689#3"/>
+        <busStop id="8235796758" name=""/>
+    </ptLine>
+    <ptLine id="1760857" name="Bus N19: Colonia San Ignacio de Loyola → Plaza de Cibeles" line="N19" type="bus" vClass="bus" nightService="only" color="black" completeness="0.01">
+        <route edges="293722999 293723002#0 4308591 31000691#0 71808949#0 71808949#1 71808949#3 44535822 44535820 542325013#0 542325013#1 651525544#0 104799919#0 839411286#1 32597086#0 32597086#1 699385225 519453589 490391710#0 490391710#1 490391709#0 -1238944954 -155551743#2 -155551743#1 -155551743#0 -936883629 -423000381 -651613048#0 -43410312#1 -43410312#0 32597088 419119406#0 419119406#1 -651543114#1 804457302 46098085#0 46098085#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0 302579020#0 302579020#1 885687791"/>
+        <busStop id="8235796763" name=""/>
+    </ptLine>
+    <ptLine id="1760860" name="Bus N20: Pitis → Plaza de Cibeles" line="N20" type="bus" vClass="bus" nightService="only" color="black" completeness="0.01">
+        <route edges="4308591 31000691#0 71808949#0 71808949#1 71808949#3 44535822 44535820 542325013#0 542325013#1 651525544#0 104799919#0 839411286#1 32597086#0 32597086#1 699385225 519453589 490391710#0 490391710#1 490391709#0 -1238944954 -155551743#2 -155551743#1 -155551743#0 -936883629 -423000381 -651613048#0 -43410312#1 -43410312#0 32597088 419119406#0 419119406#1 -651543114#1 804457302 46098085#0 46098085#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547870 240352175 909140490"/>
+        <busStop id="8235796763" name=""/>
+    </ptLine>
+    <ptLine id="1760861" name="Bus N20: Plaza de Cibeles → Pitis" line="N20" type="bus" vClass="bus" nightService="only" color="black" completeness="0.01">
+        <route edges="131443347#0 4346298#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 4328840 651543114#1 -419119406#1 -419119406#0 -32597088 43410312#0 43410312#1 651613048#0 423000381 936883629 155551743#0 155551743#1 155551743#2 1238944954 651533184#0 -490391710#1 -490391710#0 -519453589 -699385225 -32597086#1 -32597086#0 -839411286#3 -839411286#0 -651525544#0 4334161 43410327#0 71808951 4308590#0 4308590#3 4308590#4 71808941 31000689#0 31000689#2 31000689#3"/>
+        <busStop id="2480979094" name=""/>
+    </ptLine>
+    <ptLine id="1760862" name="Bus N21: Arroyo del Fresno → Plaza de Cibeles" line="N21" type="bus" vClass="bus" nightService="only" color="35,31,32" completeness="0.00">
+        <route edges="651525544#0 104799919#0 839411286#1 32597086#0 32597086#1 699385225 519453589 490391710#0 490391710#1 490391709#0 -1238944954 -155551743#2 -155551743#1 -155551743#0 -936883629 -423000381 -651613048#0 -43410312#1 -43410312#0 32597088 419119406#0 419119406#1 -651543114#1 804457302 46098085#0 46098085#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547870 240352175 909140490"/>
+    </ptLine>
+    <ptLine id="1760863" name="Bus N21: Plaza de Cibeles → Arroyo del Fresno" line="N21" type="bus" vClass="bus" nightService="only" color="35,31,32" completeness="0.01">
+        <route edges="131443347#0 4346298#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 4328840 651543114#1 -419119406#1 -419119406#0 -32597088 43410312#0 43410312#1 651613048#0 423000381 936883629 155551743#0 155551743#1 155551743#2 1238944954 651533184#0 -490391710#1 -490391710#0 -519453589 -699385225 -32597086#1 -32597086#0 -839411286#3 -839411286#0 -651525544#0"/>
+        <busStop id="2480979094" name=""/>
+    </ptLine>
+    <ptLine id="1760884" name="Bus N9: Plaza de Cibeles → Ensanche Vallecas" line="N9" type="bus" vClass="bus" nightService="only" color="black" completeness="0.02">
+        <route edges="131443347#0 131443348#0 4349010 511895636 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 908214773 128089326 262951800 686214706#0 686214706#1 686214706#2 686214706#3 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <busStop id="8433060765" name=""/>
+    </ptLine>
+    <ptLine id="1760885" name="Bus N9: Ensanche Vallecas → Plaza de Cibeles" line="N9" type="bus" vClass="bus" nightService="only" color="black" completeness="0.01">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597 243991596#0 243991596#1 911013768"/>
+        <busStop id="8433060766" name=""/>
+    </ptLine>
+    <ptLine id="1770507" name="Bus 203: Exprés Aeropuerto (Aeropuerto → Atocha)" line="203" type="bus" vClass="bus" color="0,114,206" completeness="0.08">
+        <route edges="302579020#0 302579020#1 885687791 907102747 762216476#0 194159907#0 242547870 511895636 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 262951802#0 30674611 686214706#0 686214706#1 686214706#2 686214706#3 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <busStop id="8235796758" name=""/>
+    </ptLine>
+    <ptLine id="2054271" name="Tren C-1: Príncipe Pío → Atocha → Chamartín → Aeropuerto T4" line="C-1" type="train" vClass="rail" color="0,154,213" completeness="0.09">
+        <route edges="1067764157 28998741 1058216793#0 1058216793#1 571606404"/>
+        <busStop id="26080642" name="Príncipe Pío Vía 1"/>
+    </ptLine>
+    <ptLine id="2390660" name="Bus 41: Colonia del Manzanares → Atocha" line="41" type="bus" vClass="bus" color="0,114,206" completeness="0.03">
+        <route edges="40933501#0 40933501#1 45316487#0 45316487#1 685984978#0 31000487 1184617809"/>
+        <busStop id="8473691225" name=""/>
+    </ptLine>
+    <ptLine id="2393172" name="Bus 10: Plaza de Cibeles → Palomeras" line="10" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="44288719#1 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 908214773 128089326 262951800 686214706#0 686214706#1 686214706#2 686214706#3 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <busStop id="562734686" name=""/>
+    </ptLine>
+    <ptLine id="2393173" name="Bus 10: Palomeras → Plaza de Cibeles" line="10" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597 243991596#0 243991596#1 911013768 44288719#0 44288719#1"/>
+        <busStop id="8433060766" name=""/>
+    </ptLine>
+    <ptLine id="326483" name="Bus 20: Puerta del Sol → Pavones" line="20" type="bus" vClass="bus" color="0,114,206" completeness="0.01">
+        <route edges="7971499 30676408 31261348#0 31261348#1 43759728#0 43759728#2 1057894241#0 626418867#1 43759793#0 43759793#1 43759793#2 43759793#3 431767100#0 431767100#1 4346299#0 4346299#1 4346299#4 4346299#5 321307747 242547871 131431688#0"/>
+        <busStop id="21968139" name=""/>
+    </ptLine>
+    <ptLine id="3291936" name="Bus N25: Villa de Vallecas → Alonso Martínez" line="N25" type="bus" vClass="bus" nightService="only" color="black" completeness="0.02">
+        <route edges="562027283 562027284#1 302580240#0 302580240#1 243991597 243991596#0 243991596#1 911013768"/>
+        <busStop id="8433060766" name=""/>
+    </ptLine>
+    <ptLine id="3291937" name="Bus N25: Alonso Martínez → Villa de Vallecas" line="N25" type="bus" vClass="bus" nightService="only" color="black" completeness="0.02">
+        <route edges="907102748#0 907102748#1 4346298#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 243990688#0 168404659 663316135 46098088#0 46098088#1 908546756#1 417019353 511241905#0 7971500 813598084 7971499 30676408 31261348#0 31261348#1 155872373#1 155872373#2 155872373#3 1082989165#0 1082989165#1 1082989165#2 30674933#0 30674933#1 30674933#2 322777597 128089326 262951800 686214706#0 686214706#1 686214706#2 686214706#3 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5"/>
+        <busStop id="21968139" name=""/>
+    </ptLine>
+    <ptLine id="334739" name="Bus 41: Atocha → Colonia del Manzanares" line="41" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="-1184617809 -31000487 -685984978#1 -45316487#2 -45316487#0 -40933501#1 -40933501#0 293722999 293723002#0 44535825#0"/>
+        <busStop id="-8473691223" name=""/>
+    </ptLine>
+    <ptLine id="4176237" name="Bus 500: Glorieta de los Cármenes → Plaza de España" line="500" type="bus" vClass="bus" color="74,183,71" completeness="0.17">
+        <route edges="293722999 293723002#0 4308591 31000691#0 71808949#0 71808949#1 71808949#3 44535822 44535820 542325013#0 542325013#1"/>
+        <busStop id="9307495431" name=""/>
+    </ptLine>
+    <ptLine id="454761" name="R-1" line="R-1" type="train" vClass="rail" completeness="0.08">
+        <route edges="695991680 695991678"/>
+        <busStop id="3660257614" name="Sol"/>
+    </ptLine>
+    <ptLine id="5382814" name="Tren C-3: Aranjuez → Atocha → Sol → Chamartín" line="C-3" type="train" vClass="rail" color="139,3,155" completeness="0.08">
+        <route edges="695991680 695991678"/>
+        <busStop id="3660257614" name="Sol"/>
+    </ptLine>
+    <ptLine id="56791" name="Línea 6: Andén 2" line="L6" type="subway" vClass="rail_urban" period="360" color="147,147,147" completeness="0.03">
+        <route edges="-1054025305"/>
+        <busStop id="5305486978" name="Príncipe Pío"/>
+    </ptLine>
+    <ptLine id="57356" name="Línea 3: Moncloa-Villaverde Alto" line="L3" type="subway" vClass="rail_urban" period="300" color="255,223,0" completeness="0.22">
+        <route edges="443618649"/>
+        <busStop id="5303173542" name="Plaza de España"/>
+        <busStop id="21964104" name="Callao"/>
+        <busStop id="21759678" name="Sol"/>
+        <busStop id="21956103" name="Lavapiés"/>
+    </ptLine>
+    <ptLine id="57747" name="Tren C-10: Aeropuerto T4 → Chamartín → Atocha → Príncipe Pío → Villalba" line="C-10" type="train" vClass="rail" period="900" color="143,190,0" completeness="0.10">
+        <route edges="1073094830 571079929 741727698"/>
+        <busStop id="7954956494" name="Pirámides"/>
+        <busStop id="1493565879" name="Príncipe Pío"/>
+    </ptLine>
+    <ptLine id="57748" name="Tren C-7: Alcalá de Henares → Atocha → Chamartín → Príncipe Pío" line="C-7" type="train" vClass="rail" period="1800" color="222,1,24" completeness="0.04">
+        <busStop id="26080642" name="Príncipe Pío Vía 1"/>
+    </ptLine>
+    <ptLine id="6076993" name="Tren C-10: Villalba → Príncipe Pío → Atocha → Chamartín → Aeropuerto T4" line="C-10" type="train" vClass="rail" period="900" color="143,190,0" completeness="0.05">
+        <route edges="101623396 1067764157 28998741 1058216793#0 1058216793#1 571606404"/>
+        <busStop id="26080642" name="Príncipe Pío Vía 1"/>
+    </ptLine>
+    <ptLine id="6076994" name="Tren C-7: Príncipe Pío → Chamartín → Atocha → Alcalá de Henares" line="C-7" type="train" vClass="rail" period="1800" color="222,1,24" completeness="0.04">
+        <busStop id="1493565879" name="Príncipe Pío"/>
+    </ptLine>
+    <ptLine id="61833" name="Línea 2: Cuatro Caminos → Las Rosas" line="L2" type="subway" vClass="rail_urban" period="300" color="251,15,12" completeness="0.50">
+        <route edges="-442950303 -442950301#0"/>
+        <busStop id="-5303271992" name="Cuatro Caminos"/>
+        <busStop id="-5303271994" name="Canal"/>
+        <busStop id="-324376827" name="Quevedo"/>
+        <busStop id="-25935011" name="San Bernardo"/>
+        <busStop id="-26066629" name="Noviciado"/>
+        <busStop id="-26068173" name="Santo Domingo"/>
+        <busStop id="-4405991654" name="Ópera"/>
+        <busStop id="-4405988107" name="Sol"/>
+        <busStop id="-25903354" name="Sevilla"/>
+        <busStop id="-25903355" name="Banco de España"/>
+    </ptLine>
+    <ptLine id="61834" name="Línea 5: Casa de Campo-Alameda de Osuna" line="L5" type="subway" vClass="rail_urban" period="360" color="150,191,13" completeness="0.23">
+        <route edges="695991673#2 -695991673#1 -695991673#0"/>
+        <busStop id="21759690" name="La Latina"/>
+        <busStop id="5303127349" name="Ópera"/>
+        <busStop id="5303127353" name="Callao"/>
+        <busStop id="22032372" name="Gran Vía"/>
+        <busStop id="25906279" name="Chueca"/>
+        <busStop id="5303127355" name="Alonso Martínez"/>
+        <busStop id="255881693" name="Rubén Darío"/>
+    </ptLine>
+    <ptLine id="61836" name="Línea Ramal: Ópera-Príncipe Pío" line="R" type="subway" vClass="rail_urban" period="360" color="white" completeness="1.00">
+        <route edges="549151323 -442950334"/>
+        <busStop id="-5304749213" name="Ópera"/>
+        <busStop id="-4405988225" name="Príncipe Pío"/>
+    </ptLine>
+    <ptLine id="62146" name="Línea 1: Pinar de Chamartín-Valdecarros" line="L1" type="subway" vClass="rail_urban" period="300" color="103,192,221" completeness="0.82">
+        <route edges="511288266#0 511288266#1 511288266#2"/>
+        <busStop id="299644680" name="Estrecho"/>
+        <busStop id="299515114" name="Alvarado"/>
+        <busStop id="5299314589" name="Cuatro Caminos"/>
+        <busStop id="324391382" name="Ríos Rosas"/>
+        <busStop id="324391956" name="Iglesia"/>
+        <busStop id="5299314586" name="Bilbao"/>
+        <busStop id="5299314584" name="Tribunal"/>
+        <busStop id="5299314582" name="Gran Vía"/>
+        <busStop id="5299314580" name="Sol"/>
+        <busStop id="26340396" name="Tirso de Molina"/>
+        <busStop id="26340397" name="Antón Martín"/>
+        <busStop id="26494720" name="Estación del Arte"/>
+        <busStop id="26494721" name="Atocha"/>
+        <busStop id="323411634" name="Menéndez Pelayo"/>
+        <busStop id="5299314574" name="Pacífico"/>
+        <busStop id="323403727" name="Puente de Vallecas"/>
+        <busStop id="323400134" name="Nueva Numancia"/>
+        <busStop id="323387579" name="Portazgo"/>
+        <busStop id="324398584" name="Buenos Aires"/>
+        <busStop id="330235720" name="Alto del Arenal"/>
+        <busStop id="330235642" name="Miguel Hernández"/>
+        <busStop id="330236023" name="Sierra de Guadalupe"/>
+        <busStop id="330236831" name="Villa de Vallecas"/>
+        <busStop id="330236828" name="Congosto"/>
+        <busStop id="330237676" name="La Gavia"/>
+        <busStop id="330238287" name="Las Suertes"/>
+        <busStop id="330238286" name="Valdecarros"/>
+    </ptLine>
+    <ptLine id="62936" name="Tren C-3: Chamartín → Sol → Atocha → Aranjuez" line="C-3" type="train" vClass="rail" color="139,3,155" completeness="0.08">
+        <route edges="1037434521 1037434519"/>
+        <busStop id="1152699021" name="Sol"/>
+    </ptLine>
+    <ptLine id="7831480" name="Línea 1: Valdecarros-Pinar de Chamartín" line="L1" type="subway" vClass="rail_urban" period="300" color="103,192,221" completeness="0.82">
+        <route edges="-548531500 -548531514#1 -548531514#0"/>
+        <busStop id="-5299216970" name="Valdecarros"/>
+        <busStop id="-5299216972" name="Las Suertes"/>
+        <busStop id="-5299216977" name="La Gavia"/>
+        <busStop id="-5299216982" name="Congosto"/>
+        <busStop id="-5299216985" name="Villa de Vallecas"/>
+        <busStop id="-5299216987" name="Sierra de Guadalupe"/>
+        <busStop id="-5299216997" name="Miguel Hernández"/>
+        <busStop id="-5299217000" name="Alto del Arenal"/>
+        <busStop id="-5299217006" name="Buenos Aires"/>
+        <busStop id="-5299217008" name="Portazgo"/>
+        <busStop id="-5299217010" name="Nueva Numancia"/>
+        <busStop id="-5299217011" name="Puente de Vallecas"/>
+        <busStop id="-5299217013" name="Pacífico"/>
+        <busStop id="-5299217017" name="Menéndez Pelayo"/>
+        <busStop id="-5299219122" name="Atocha"/>
+        <busStop id="-5299219127" name="Estación del Arte"/>
+        <busStop id="-5299219130" name="Antón Martín"/>
+        <busStop id="-5299219185" name="Tirso de Molina"/>
+        <busStop id="-5299219187" name="Sol"/>
+        <busStop id="-5299219188" name="Gran Vía"/>
+        <busStop id="-5299219189" name="Tribunal"/>
+        <busStop id="-5299219190" name="Bilbao"/>
+        <busStop id="-5299219193" name="Iglesia"/>
+        <busStop id="-5299219194" name="Ríos Rosas"/>
+        <busStop id="-5299219195" name="Cuatro Caminos"/>
+        <busStop id="-5299219197" name="Alvarado"/>
+        <busStop id="-5299219209" name="Estrecho"/>
+    </ptLine>
+    <ptLine id="7838613" name="Línea 5: Alameda de Osuna-Casa de Campo" line="L5" type="subway" vClass="rail_urban" period="360" color="150,191,13" completeness="0.20">
+        <route edges="695991676 695991674#1 695991674#2"/>
+        <busStop id="5303043473" name="Alonso Martínez"/>
+        <busStop id="5303043472" name="Chueca"/>
+        <busStop id="5303043466" name="Gran Vía"/>
+        <busStop id="5303043465" name="Callao"/>
+        <busStop id="5303127350" name="Ópera"/>
+        <busStop id="5303043432" name="La Latina"/>
+    </ptLine>
+    <ptLine id="7838837" name="Línea 3: Villaverde Alto-Moncloa" line="L3" type="subway" vClass="rail_urban" period="300" color="255,223,0" completeness="0.22">
+        <route edges="548977485#0 548977485#1 548977485#2"/>
+        <busStop id="5303173603" name="Lavapiés"/>
+        <busStop id="5303173605" name="Sol"/>
+        <busStop id="9666807257" name="Callao"/>
+        <busStop id="5303173607" name="Plaza de España"/>
+    </ptLine>
+    <ptLine id="7838962" name="Línea 2: Las Rosas → Cuatro Caminos" line="L2" type="subway" vClass="rail_urban" period="300" color="251,15,12" completeness="0.50">
+        <route edges="548990703 548990710"/>
+        <busStop id="5303272236" name="Banco de España"/>
+        <busStop id="5303272231" name="Sevilla"/>
+        <busStop id="5303272075" name="Sol"/>
+        <busStop id="5303272068" name="Ópera"/>
+        <busStop id="5303272249" name="Santo Domingo"/>
+        <busStop id="5303272248" name="Noviciado"/>
+        <busStop id="5303272246" name="San Bernardo"/>
+        <busStop id="5303272244" name="Quevedo"/>
+        <busStop id="5303272243" name="Canal"/>
+        <busStop id="5303272239" name="Cuatro Caminos"/>
+    </ptLine>
+    <ptLine id="7840746" name="Línea Ramal: Príncipe Pío-Ópera" line="R" type="subway" vClass="rail_urban" period="360" color="white" completeness="1.00">
+        <route edges="549151325 549151324"/>
+        <busStop id="5304749535" name="Príncipe Pío"/>
+        <busStop id="5304749213" name="Ópera"/>
+    </ptLine>
+    <ptLine id="7842093" name="Línea 6: Andén 1" line="L6" type="subway" vClass="rail_urban" period="360" color="147,147,147" completeness="0.03">
+        <route edges="1054025301 1054025306#1"/>
+        <busStop id="5305487011" name="Príncipe Pío"/>
+    </ptLine>
+    <ptLine id="7871904" name="Tren C-1: Aeropuerto T4 → Chamartín → Atocha → Príncipe Pío" line="C-1" type="train" vClass="rail" color="0,154,213" completeness="0.18">
+        <route edges="1073094830 571079929"/>
+        <busStop id="7954956494" name="Pirámides"/>
+        <busStop id="1493565879" name="Príncipe Pío"/>
+    </ptLine>
+    <ptLine id="7879440" name="R-1" line="R-1" type="train" vClass="rail" completeness="0.07">
+        <route edges="1037434521 1037434519"/>
+        <busStop id="1152699021" name="Sol"/>
+    </ptLine>
+    <ptLine id="7953890" name="Bus 20: Pavones → Puerta del Sol" line="20" type="bus" vClass="bus" color="0,114,206" completeness="0.02">
+        <route edges="302579019#0 302579019#1 762216476#0 112538828#0 112538828#1 112538828#2 112538828#3 112538828#6 243990688#0 168404659 663316135 46098088#0 46098088#1 908546756#1 417019353 511241905#0 7971500 813598084"/>
+        <busStop id="8423213265" name=""/>
+    </ptLine>
+    <ptLine id="9169199" name="Bus N26: Aluche → Alonso Martínez" line="N26" type="bus" vClass="bus" nightService="only" color="black" completeness="0.02">
+        <route edges="4346292#0 4346292#6 909029029#1 -130468268#1 -690824245 -398751337#3 -398751337#2 -398751337#0 -41699453#2 -41699453#1 41699477#1 41699518#0 31262349#1 554357604#0 70955584#0 70955584#1 70955584#2 4328769 423638485 686213118#0 423232043 48345480#0 48345480#2 1275083958#0 82567675#0 82567675#3 562027283 562027284#1 302580240#0 302580240#1 302580242#1 302580241#0 243991596#0 243991596#1 911013768"/>
+        <busStop id="8422641941" name=""/>
+    </ptLine>
+    <ptLine id="9169200" name="Bus N26: Alonso Martínez → Aluche" line="N26" type="bus" vClass="bus" nightService="only" color="black" completeness="0.02">
+        <route edges="907102748#0 907102748#1 131443348#0 4349010 511895636 1260545323#0 1260545323#1 1260545324 44288721#1 44288721#2 908214773 128089326 262951800 686214706#0 686214706#1 686214706#2 686214706#3 262951801#0 262951801#1 262951801#2 262951801#3 262951801#5 -1275083956#1 -82567675#2 -320668245#1 4328795#0 4328795#1 4328795#2 686213116#0 423231391#0 423231391#4 423231391#5 423231391#6 685983423 7732078 429530691#0 4519453 406007906 1275419913#0 1275419913#1 34095411#0 34095411#1 34095411#2 66833793#0 66833793#1 66833793#2 66833793#3 32044942#0 32044942#1 4263086#0 41699453#1 41699453#2 398751337#0 398751337#1 398751337#3 690824245 130468268#1 -909029029#2 -909029029#0 -4346292#4"/>
+        <busStop id="8423356496" name=""/>
+    </ptLine>
+    <ptLine id="9174510" name="Tren C-4a: Alcobendas - S.S. de los Reyes → Cantoblanco → Chamartín → Sol → Atocha → Parla" line="C-4" type="train" vClass="rail" color="0,40,156" completeness="0.07">
+        <route edges="1037434521 1037434519"/>
+        <busStop id="1152699021" name="Sol"/>
+    </ptLine>
+    <ptLine id="9174511" name="Tren C-4b: Colmenar Viejo → Cantoblanco → Chamartín → Sol → Atocha → Parla" line="C-4" type="train" vClass="rail" color="0,40,156" completeness="0.07">
+        <route edges="1037434521 1037434519"/>
+        <busStop id="1152699021" name="Sol"/>
+    </ptLine>
+    <ptLine id="9174512" name="Tren C-4b: Parla → Atocha → Sol → Chamartín → Cantoblanco → Colmenar Viejo" line="C-4" type="train" vClass="rail" color="0,40,156" completeness="0.07">
+        <route edges="695991680 695991678"/>
+        <busStop id="3660257614" name="Sol"/>
+    </ptLine>
+</ptLines>

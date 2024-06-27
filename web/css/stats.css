@@ -1,0 +1,23 @@
+/* BODY */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #303840;
+}
+
+/* MAIN */
+main {
+    flex-grow: 1;
+    background-color: #F2F2F2;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 20px;
+}
+
+/* Imagen gráfica emisiones */
+.emisiones {
+    height: 500px;
+    width: auto;
+    margin-right: 20px;
+}

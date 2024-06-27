@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Urban Mobility Manager</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo_claro_transparente.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stats.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    {% include 'header.html' %}
+
+    <main>
+        <section>
+            <h2>Datos de la simulación en {{ city|capitalize }}</h2>
+            <div class="row">
+                <div class="col">
+                    <h3>Emisiones de CO2 de los vehículos</h3>
+                    <img class="emisiones" src="{{ url_for('static', filename='images/CO2_output_' + city + '.png') }}"
+                        alt="Gráfica de emisiones de los vehículos">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {% include 'footer.html' %}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Urban Mobility Manager</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo_claro_transparente.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/routes.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    {% include 'header.html' %}
+
+    <main>
+        <section>
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Rutas de transporte en {{ city|capitalize }}</h2>
+                <a href="/cities/{{ city }}" class="btn btn-primary">Volver</a>
+            </div>
+            <div>
+                <h3>Líneas de autobús</h3>
+                {% if bus_routes|length == 0 %}
+                <p style="font-size: large;">No existen líneas de autobús en {{ city|capitalize }}</p>
+                {% else %}
+                <div class="d-flex flex-wrap">
+                    {% for route in bus_routes %}
+                    {% if loop.index <= 8 %} <a
+                        href="/cities/{{ city }}/routes/{{ route.shortRouteCode }}/{{ route.routeCode }}">
+                        <div class="card m-2"
+                            style="min-width: 8rem; max-width: 20rem; border-radius: 15px; background-color: #8BBBD9;">
+                            <div class="card-body d-flex align-items-center justify-content-center">
+                                <img class="route-icon" src="{{ url_for('static', filename='images/bus.png') }}"
+                                    alt="Bus Icon">
+                                <h5 class="card-title" style="padding-top: 10px; color: white;">{{ route.shortRouteCode
+                                    }}</h5>
+                            </div>
+                        </div>
+                        </a>
+                        {% else %}
+                        <a href="/cities/{{ city }}/routes/{{ route.shortRouteCode }}/{{ route.routeCode }}"
+                            class="bus-card-hidden" style="display: none;">
+                            <div class="card m-2"
+                                style="min-width: 8rem; max-width: 20rem; border-radius: 15px; background-color: #8BBBD9;">
+                                <div class="card-body d-flex align-items-center justify-content-center">
+                                    <img class="route-icon" src="{{ url_for('static', filename='images/bus.png') }}"
+                                        alt="Bus Icon">
+                                    <h5 class="card-title" style="padding-top: 10px; color: white;">{{
+                                        route.shortRouteCode }}</h5>
+                                </div>
+                            </div>
+                        </a>
+                        {% endif %}
+                        {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if bus_routes|length > 8 %}
+                <button id="showMoreBtnBus" type="button" class="btn btn-secondary">Mostrar más</button>
+                {% endif %}
+
+                <button id="showLessBtnBus" type="button" class="btn btn-secondary" style="display: none;">Mostrar
+                    menos</button>
+
+                <h3>Líneas de tren</h3>
+                {% if train_routes|length == 0 %}
+                <p style="font-size: large;">No existen líneas de tren en {{ city|capitalize }}</p>
+                {% else %}
+                <div class="d-flex flex-wrap">
+                    {% for route in train_routes %}
+                    {% if loop.index <= 6 %} <a
+                        href="/cities/{{ city }}/routes/{{ route.shortRouteCode }}/{{ route.routeCode }}">
+                        <div class="card m-2"
+                            style="min-width: 8rem; max-width: 20rem; border-radius: 15px; background-color: #8BBBD9;">
+                            <div class="card-body d-flex align-items-center justify-content-center">
+                                <img class="route-icon" src="{{ url_for('static', filename='images/train.png') }}"
+                                    alt="Train Icon">
+                                <h5 class="card-title" style="padding-top: 10px; color: white;">{{ route.shortRouteCode
+                                    }}</h5>
+                            </div>
+                        </div>
+                        </a>
+                        {% else %}
+                        <a href="/cities/{{ city }}/routes/{{ route.shortRouteCode }}/{{ route.routeCode }}"
+                            class="train-card-hidden" style="display: none;">
+                            <div class="card m-2"
+                                style="min-width: 8rem; max-width: 20rem; border-radius: 15px; background-color: #8BBBD9;">
+                                <div class="card-body d-flex align-items-center justify-content-center">
+                                    <img class="route-icon" src="{{ url_for('static', filename='images/train.png') }}"
+                                        alt="Train Icon">
+                                    <h5 class="card-title" style="padding-top: 10px; color: white;">{{
+                                        route.shortRouteCode
+                                        }}</h5>
+                                </div>
+                            </div>
+                        </a>
+                        {% endif %}
+                        {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if train_routes|length > 6 %}
+                <button id="showMoreBtnTrain" type="button" class="btn btn-secondary">Mostrar más</button>
+                {% endif %}
+
+                <button id="showLessBtnTrain" type="button" class="btn btn-secondary" style="display: none;">Mostrar
+                    menos</button>
+
+                <h3>Líneas de metro</h3>
+                {% if subway_routes|length == 0 %}
+                <p style="font-size: large;">No existen líneas de metro en {{ city|capitalize }}</p>
+                {% else %}
+                <div class="d-flex flex-wrap">
+                    {% for route in subway_routes %}
+                    {% if loop.index <= 8 %} <a
+                        href="/cities/{{ city }}/routes/{{ route.shortRouteCode }}/{{ route.routeCode }}">
+                        <div class="card m-2"
+                            style="min-width: 8rem; max-width: 20rem; border-radius: 15px; background-color: #8BBBD9;">
+                            <div class="card-body d-flex align-items-center justify-content-center">
+                                <img class="route-icon" src="{{ url_for('static', filename='images/subway.png') }}"
+                                    alt="Subway Icon">
+                                <h5 class="card-title" style="padding-top: 10px; color: white;">{{ route.shortRouteCode
+                                    }}</h5>
+                            </div>
+                        </div>
+                        </a>
+                        {% else %}
+                        <a href="/cities/{{ city }}/routes/{{ route.shortRouteCode }}/{{ route.routeCode }}"
+                            class="subway-card-hidden" style="display: none;">
+                            <div class="card m-2"
+                                style="min-width: 8rem; max-width: 20rem; border-radius: 15px; background-color: #8BBBD9;">
+                                <div class="card-body d-flex align-items-center justify-content-center">
+                                    <img class="route-icon" src="{{ url_for('static', filename='images/subway.png') }}"
+                                        alt="Subway Icon">
+                                    <h5 class="card-title" style="padding-top: 10px; color: white;">{{
+                                        route.shortRouteCode
+                                        }}</h5>
+                                </div>
+                            </div>
+                        </a>
+                        {% endif %}
+                        {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if subway_routes|length > 8 %}
+                <button id="showMoreBtnSubway" type="button" class="btn btn-secondary">Mostrar más</button>
+                {% endif %}
+
+                <button id="showLessBtnSubway" type="button" class="btn btn-secondary" style="display: none;">Mostrar
+                    menos</button>
+
+            </div>
+        </section>
+    </main>
+
+    {% include 'footer.html' %}
+
+    <script>
+        document.getElementById('showMoreBtnBus').addEventListener('click', function () {
+            var hiddenCards = document.getElementsByClassName('bus-card-hidden');
+            for (var i = 0; i < hiddenCards.length; i++) {
+                hiddenCards[i].style.display = 'block';
+            }
+            this.style.display = 'none';  // hide the "Show more" button after it's clicked
+            document.getElementById('showLessBtnBus').style.display = 'block';  // show the "Show less" button
+        });
+
+        document.getElementById('showLessBtnBus').addEventListener('click', function () {
+            var hiddenCards = document.getElementsByClassName('bus-card-hidden');
+            for (var i = 0; i < hiddenCards.length; i++) {
+                hiddenCards[i].style.display = 'none';
+            }
+            this.style.display = 'none';  // hide the "Show less" button after it's clicked
+            document.getElementById('showMoreBtnBus').style.display = 'block';  // show the "Show more" button
+        });
+
+        document.getElementById('showMoreBtnTrain').addEventListener('click', function () {
+            var hiddenCards = document.getElementsByClassName('train-card-hidden');
+            for (var i = 0; i < hiddenCards.length; i++) {
+                hiddenCards[i].style.display = 'block';
+            }
+            this.style.display = 'none';  // hide the "Show more" button after it's clicked
+            document.getElementById('showLessBtnTrain').style.display = 'block';  // show the "Show less" button
+        });
+
+        document.getElementById('showLessBtnTrain').addEventListener('click', function () {
+            var hiddenCards = document.getElementsByClassName('train-card-hidden');
+            for (var i = 0; i < hiddenCards.length; i++) {
+                hiddenCards[i].style.display = 'none';
+            }
+            this.style.display = 'none';  // hide the "Show less" button after it's clicked
+            document.getElementById('showMoreBtnTrain').style.display = 'block';  // show the "Show more" button
+        });
+
+        document.getElementById('showMoreBtnSubway').addEventListener('click', function () {
+            var hiddenCards = document.getElementsByClassName('subway-card-hidden');
+            for (var i = 0; i < hiddenCards.length; i++) {
+                hiddenCards[i].style.display = 'block';
+            }
+            this.style.display = 'none';  // hide the "Show more" button after it's clicked
+            document.getElementById('showLessBtnSubway').style.display = 'block';  // show the "Show less" button
+        });
+
+        document.getElementById('showLessBtnSubway').addEventListener('click', function () {
+            var hiddenCards = document.getElementsByClassName('subway-card-hidden');
+            for (var i = 0; i < hiddenCards.length; i++) {
+                hiddenCards[i].style.display = 'none';
+            }
+            this.style.display = 'none';  // hide the "Show less" button after it's clicked
+            document.getElementById('showMoreBtnSubway').style.display = 'block';  // show the "Show more" button
+        });
+    </script>
+</body>
+
+</html>

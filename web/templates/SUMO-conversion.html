@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Urban Mobility Manager</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo_claro_transparente.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/SUMO-conversion.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    {% include 'header.html' %}
+
+    <main>
+        <section>
+            <h2>Elige una ciudad</h2>
+            <div class="row">
+                <div class="col">
+                    <h4 style="font-weight: normal;">Antes de comenzar, debes seleccionar una ciudad para la cual deseas
+                        importar datos de
+                        transporte público desde el simulador SUMO a la plataforma FIWARE.</h4>
+                </div>
+                <div class="col d-flex flex-column align-items-center text-center">
+                    <img class="mapa" src="{{ url_for('static', filename='images/mapa_general.png') }}"
+                        alt="Mapa España">
+                    <select class="form-control" id="citySelect">
+                        <option value="">Selecciona la ciudad</option>
+                        <option value="barcelona">Barcelona</option>
+                        <option value="bilbao">Bilbao</option>
+                        <option value="madrid">Madrid</option>
+                        <option value="malaga">Málaga</option>
+                        <option value="santander">Santander</option>
+                        <option value="sevilla">Sevilla</option>
+                        <option value="valencia">Valencia</option>
+                    </select>
+                    <div class="center-div">
+                        <div class="btn-group" role="group" aria-label="Button group">
+                            <button class="btn btn-primary" id="nextButton">Siguiente</button>
+                            <a href="/" class="btn btn-secondary">Volver</a>
+                        </div>
+                        <div class="center-spinner" id="loadingSpinner" style="display: none;">
+                            <div class="spinner-border text-primary"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {% include 'footer.html' %}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add a click event listener to the "nextButton"
+            $('#nextButton').click(function () {
+                // Get the selected city from the dropdown menu
+                var city = $('#citySelect').val();
+
+                // Show the spinner
+                $('#loadingSpinner').show();
+
+                // Send a POST request to the "/SUMO-conversion" endpoint
+                $.ajax({
+                    url: '/SUMO-conversion',
+                    type: 'POST',
+                    data: JSON.stringify({ city: city }),
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
+                    async: true,
+                    success: function (msg) {
+                        // Hide the spinner
+                        $('#loadingSpinner').hide();
+
+                        alert('Se han convertido los datos de ' + city + ' a FIWARE correctamente.');
+                        window.location.href = '/cities/' + city;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

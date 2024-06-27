@@ -1,0 +1,53 @@
+/* FOOTER */
+/* Estilos para el pie de página */
+.footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between; /* Cambiado de flex-start a space-between */
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #D9D9D9;
+    color: #303840;
+}
+
+.footer p, .footer a {
+    margin: 0 10px;
+}
+
+/* Logo footer */
+.logo-footer {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Logo fiware footer */
+.fiware-footer {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Logo sumo footer */
+.sumo-footer {
+    width: 90px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Nuevos estilos para los grupos de elementos */
+.left-group, .right-group {
+    display: flex;
+    align-items: center;
+}
+
+.left-group {
+    justify-content: flex-start;
+}
+
+.right-group {
+    justify-content: flex-end;
+}
