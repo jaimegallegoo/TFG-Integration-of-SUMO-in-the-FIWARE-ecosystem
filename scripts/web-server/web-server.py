@@ -150,13 +150,14 @@ def simulation(city):
         data = request.get_json()
         city = data.get('city')
         duration = data.get('duration')
+        personFlow = data.get('personFlow')
 
         if not city or not duration:
             return make_response(jsonify({"error": "Missing city or duration"}), 400)
 
         try:
             # Call the function to convert the data
-            result = simulate_new_scenario(city, duration)
+            result = simulate_new_scenario(city, duration, personFlow)
         except Exception as e:
             return make_response(jsonify({"error": str(e)}), 500)
 

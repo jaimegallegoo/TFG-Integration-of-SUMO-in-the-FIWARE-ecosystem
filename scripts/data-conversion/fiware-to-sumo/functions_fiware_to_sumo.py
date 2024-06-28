@@ -764,11 +764,109 @@ def generate_arrival_visualization_web(city):
 
 # --------------------------------------------------------------------- 
 
+# This function generates a person flow for the selected simulation. DESIGNED FOR THE WEB INTERFACE
+def generate_person_flow_web(city, duration):
+    # Set the folder for the SUMO output files
+    modifiedSUMOfolder = f'../../../data/output/sumo/{city}'
+
+    # Define the path for the network input file
+    osm_net = f'../../../data/output/sumo/{city}/osm.net.xml.gz'
+
+    # Define the path for the stops input file
+    osm_stops = f'../../../data/output/sumo/{city}/osm_stops.add.xml'
+
+    # Define the path for the public transport routes input file
+    osm_pt_rou = f'../../../data/output/sumo/{city}/osm_pt.rou.xml'
+
+    # Define the path for the person trips output file
+    osm_pedestrian_trips = f'../../../data/output/sumo/{city}/osm.pedestrian.trips.xml'
+
+    # Define the path for the person routes output file
+    osm_pedestrian_rou = f'../../../data/output/sumo/{city}/osm.pedestrian.rou.xml'
+
+    # Run the SUMO simulation with the emissions output
+
+    # CHANGES FOR THE WEB INTERFACE
+    # Define the URL of the Flask app in the sumo-server container
+    url = 'http://sumo-server:5000/personFlow'
+
+    # Define the data to send to the Flask app
+    data = {
+        'osm_net': osm_net,
+        'osm_stops': osm_stops,
+        'osm_pt_rou': osm_pt_rou,
+        'osm_pedestrian_trips': osm_pedestrian_trips,
+        'osm_pedestrian_rou': osm_pedestrian_rou,
+        'duration': duration
+    }
+
+    # Make a POST request to the Flask app
+    response = requests.post(url, json=data)
+
+    # Check the response
+    if response.status_code == 200:
+        print('Emissions simulation ran successfully')
+        # Check if the output file exists
+        if os.path.exists(osm_pedestrian_rou):
+            print('Output file was successfully created')
+        else:
+            print('Failed to create output file')
+    else:
+        print('Failed to run the emissions simulation:', response.text)
+
+# ---------------------------------------------------------------------
+
+# This function generates the persons loaded visualization for the selected simulation. DESIGNED FOR THE WEB INTERFACE
+def generate_persons_loaded_visualization_web(city):
+    # Set the folder for the SUMO output files
+    modifiedSUMOfolder = f'../../../data/output/sumo/{city}'
+
+    # Define the path for the stop input file
+    stop = f'../../../data/output/sumo/{city}/stop.xml'
+
+    # Define the path for the persons loaded image output file
+    persons_loaded = f'../../../data/output/sumo/{city}/persons_loaded.png'
+
+    # Run the SUMO visualization tool to plot the trajectories
+
+    # CHANGES FOR THE WEB INTERFACE
+    # Define the URL of the Flask app in the sumo-server container
+    url = 'http://sumo-server:5000/personsLoadedVisualization'
+
+    # Define the data to send to the Flask app
+    data = {
+        'stop': stop,
+        'persons_loaded': persons_loaded
+    }
+
+    # Make a POST request to the Flask app
+    response = requests.post(url, json=data)
+
+    # Check the response
+    if response.status_code == 200:
+        print('plotXMLAttributes.py script ran successfully')
+        # Check if the output file exists
+        if os.path.exists(persons_loaded):
+            print('Output file was successfully created')
+        else:
+            print('Failed to create output file')
+    else:
+        print('Failed to run plotXMLAttributes.py script:', response.text)
+
+# --------------------------------------------------------------------- 
+
 # This function launches a simulation for the selected city and creates the emissions visualization
-def simulate_new_scenario(city, duration):
+def simulate_new_scenario(city, duration, personFlow):
     # Generate the simulation
     generate_simulation_web(city, duration)
 
+    # If personFlow is True, generate the person flow visualization
+    if personFlow:
+        generate_person_flow_web(city, duration)
+        generate_persons_loaded_visualization_web(city)
+        
+        # Copy the "persons_loaded.png" file to the web-server "static" folder
+        os.system(f'cp ../../../data/output/sumo/{city}/persons_loaded.png ../../../web/images/persons_loaded_{city}.png')
     # Generate the emissions visualization
     generate_emissions_visualization_web(city)
 
