@@ -17,8 +17,22 @@
             <div class="row">
                 <div class="col">
                     <h3>Emisiones de CO2 de los vehículos</h3>
-                    <img class="emisiones" src="{{ url_for('static', filename='images/CO2_output_' + city + '.png') }}"
+                    <img class="graficas" src="{{ url_for('static', filename='images/CO2_output_' + city + '.png') }}"
                         alt="Gráfica de emisiones de los vehículos">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3>Trayectorias de los vehículos</h3>
+                    <img class="graficas" src="{{ url_for('static', filename='images/trajectories_' + city + '.png') }}"
+                        alt="Gráfica de trayectorias de los vehículos">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3>Tiempos de llegada de los vehículos</h3>
+                    <img class="graficas" src="{{ url_for('static', filename='images/arrival_' + city + '.png') }}"
+                        alt="Gráfica de tiempos de llegada de los vehículos">
                 </div>
             </div>
         </section>
