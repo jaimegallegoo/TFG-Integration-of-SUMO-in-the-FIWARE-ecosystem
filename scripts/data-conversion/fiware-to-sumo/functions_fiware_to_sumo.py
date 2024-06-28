@@ -351,10 +351,10 @@ def convert_FIWARE_city(city):
     os.system(f'rm {modifiedSUMOfolder}/osm_pt.rou.xml')
 
     # Delete the original osm.sumocfg file from the modified folder
-    os.system(f'rm {modifiedSUMOfolder}/osm.sumocfg')
+    #os.system(f'rm {modifiedSUMOfolder}/osm.sumocfg')
 
     # Copy the corrected osm.sumocfg file to the modified folder
-    os.system(f'cp ../../../data/input/sumo/simulation_config/osm.sumocfg {modifiedSUMOfolder}')
+    #os.system(f'cp ../../../data/input/sumo/simulation_config/osm.sumocfg {modifiedSUMOfolder}')
 
     # Create temporal JSON files for the FIWARE input data
     modifiedFIWAREroute = '../../../data/temporal/modifiedFIWAREroute.json'
@@ -400,7 +400,7 @@ def convert_FIWARE_city(city):
     trips = f'../../../data/output/sumo/{city}/trips.trips.xml'
     veh_routes = f'../../../data/output/sumo/{city}/vehroutes.xml'
     osm_routes = f'../../../data/output/sumo/{city}/osm_pt.rou.xml'
-    os.system(f'python "{sumo_home}/tools/ptlines2flows.py" -n {osm_net} -s {osm_stops} -l {osm_ptlines} -i {stop_infos} -t {trips} -r {veh_routes} -o {osm_routes} -e 4000 --extend-to-fringe --random-begin --seed 42 --vtype-prefix pt_ --verbose --ignore-errors --min-stops 0')
+    os.system(f'python ../../../data/ptlines2flows.py -n {osm_net} -s {osm_stops} -l {osm_ptlines} -i {stop_infos} -t {trips} -r {veh_routes} -o {osm_routes} -e 4000 --extend-to-fringe --random-begin --seed 42 --vtype-prefix pt_ --verbose --ignore-errors --min-stops 0')
     
     # Delete the temporal JSON files
     os.remove(modifiedFIWAREroute) 
@@ -867,6 +867,7 @@ def simulate_new_scenario(city, duration, personFlow):
         
         # Copy the "persons_loaded.png" file to the web-server "static" folder
         os.system(f'cp ../../../data/output/sumo/{city}/persons_loaded.png ../../../web/images/persons_loaded_{city}.png')
+    
     # Generate the emissions visualization
     generate_emissions_visualization_web(city)
 
