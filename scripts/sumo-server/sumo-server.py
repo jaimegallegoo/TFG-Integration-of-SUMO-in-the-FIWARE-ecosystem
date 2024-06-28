@@ -19,9 +19,14 @@ def ptlines2flows():
         '-t', input_data['trips'], 
         '-r', input_data['veh_routes'], 
         '-o', input_data['osm_routes'],
-        '--ignore-errors', '--min-stops', '0', 
-        '-e', '4000', '--extend-to-fringe', '--random-begin',
-        '--seed', '42', '--vtype-prefix', 'pt_', '--verbose'
+        '-e', '4000',
+        '--extend-to-fringe',
+        '--random-begin',
+        '--seed', '42',
+        '--vtype-prefix', 'pt_',
+        '--verbose',
+        '--ignore-errors',
+        '--min-stops', '0'
     ]
 
     # Run the ptlines2flows.py script with the input data
@@ -47,17 +52,17 @@ def ptlines2flows():
 def test_connection():
     return {'message': 'Connection successful'}, 200
 
-@app.route('/emissionsSimulation', methods=['POST'])
+@app.route('/simulation', methods=['POST'])
 def emissionsSimulation():
     # Get the input data from the request
     input_data = request.get_json()
 
     # Run the emissions simulation with the input data
     result = subprocess.run(
-        ['sumo', '-c', input_data['osm_sumocfg'], '--emission-output', input_data['emissions'], '--use-stop-ended', '--end', input_data['duration']],
+        ['sumo', '-c', input_data['osm_sumocfg'], '--emission-output', input_data['emissions'], '--stop-output', input_data['stop'], '--fcd-output', input_data['fcd'], '--use-stop-ended', '--end', input_data['duration']],
         stdout=subprocess.PIPE
     )
-
+    
     # Check the result
     if result.returncode == 0:
         return {'message': 'Emissions simulation ran successfully'}, 200
@@ -72,6 +77,40 @@ def emissionsVisualization():
     # Run the emissions simulation with the input data
     result = subprocess.run(
         ['python3', '/usr/share/sumo/tools/visualization/plotXMLAttributes.py', '-x', 'time', '-y', 'CO2', '-o', input_data['CO2_output'], input_data['emissions'], '-i', 'id'],
+        stdout=subprocess.PIPE
+    )
+
+    # Check the result
+    if result.returncode == 0:
+        return {'message': 'plotXMLAttributes.py script ran successfully'}, 200
+    else:
+        return {'message': 'Failed to run plotXMLAttributes.py script', 'error': result.stdout.decode()}, 500
+    
+@app.route('/trajectoriesVisualization', methods=['POST'])
+def trajectoriesVisualization():
+    # Get the input data from the request
+    input_data = request.get_json()
+
+    # Run the emissions simulation with the input data
+    result = subprocess.run(
+        ['python3', '/usr/share/sumo/tools/visualization/plotXMLAttributes.py', '-x', 'x', '-y', 'y', '-o', input_data['trajectories'], input_data['fcd'], '--scatterplot'],
+        stdout=subprocess.PIPE
+    )
+
+    # Check the result
+    if result.returncode == 0:
+        return {'message': 'plotXMLAttributes.py script ran successfully'}, 200
+    else:
+        return {'message': 'Failed to run plotXMLAttributes.py script', 'error': result.stdout.decode()}, 500
+    
+@app.route('/arrivalVisualization', methods=['POST'])
+def arrivalVisualization():
+    # Get the input data from the request
+    input_data = request.get_json()
+
+    # Run the emissions simulation with the input data
+    result = subprocess.run(
+        ['python3', '/usr/share/sumo/tools/visualization/plotXMLAttributes.py', '-x', 'depart', '-y', 'arrival', '-o', input_data['arrival'], input_data['vehroutes'], '--scatterplot'],
         stdout=subprocess.PIPE
     )
 

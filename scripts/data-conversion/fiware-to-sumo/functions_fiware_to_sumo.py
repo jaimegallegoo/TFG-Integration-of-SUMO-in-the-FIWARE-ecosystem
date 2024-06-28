@@ -426,10 +426,10 @@ def convert_FIWARE_city_web(city):
     os.system(f'rm {modifiedSUMOfolder}/osm_pt.rou.xml')
 
     # Delete the original osm.sumocfg file from the modified folder
-    os.system(f'rm {modifiedSUMOfolder}/osm.sumocfg')
+    #os.system(f'rm {modifiedSUMOfolder}/osm.sumocfg')
 
     # Copy the corrected osm.sumocfg file to the modified folder
-    os.system(f'cp ../../../data/input/sumo/simulation_config/osm.sumocfg {modifiedSUMOfolder}')
+    #os.system(f'cp ../../../data/input/sumo/simulation_config/osm.sumocfg {modifiedSUMOfolder}')
 
     # Create temporal JSON files for the FIWARE input data
     modifiedFIWAREroute = '../../../data/temporal/modifiedFIWAREroute.json'
@@ -568,14 +568,21 @@ def generate_emissions(city, duration):
     # Define the path for the emissions output file
     emissions = f'../../../data/output/sumo/{city}/emissions.xml'
 
+    # Define the path for the stop output file
+    stop = f'../../../data/output/sumo/{city}/stop.xml'
+
+    # Define the path for the fcd output file
+    fcd = f'../../../data/output/sumo/{city}/fcd.xml'
+
     # Run the SUMO simulation with the emissions output
-    os.system(f'sumo -c {osm_sumocfg} --emission-output {emissions} --use-stop-ended --end {duration}')
+    os.system(f'sumo -c {osm_sumocfg} --emission-output {emissions} --stop-output {stop} --fcd-output {fcd} --use-stop-ended --end {duration}')
     # sumo -c osm.sumocfg --emission-output emissions.xml --use-stop-ended --end 3600
+    # sumo -c osm.sumocfg --emission-output emissions.xml --stop-output stop.xml --fcd-output fcd.xml --use-stop-ended --end 4000
 
 # ---------------------------------------------------------------------
 
 # This function generates the emissions for the selected simulation. DESIGNED FOR THE WEB INTERFACE
-def generate_emissions_web(city, duration):
+def generate_simulation_web(city, duration):
     # Set the folder for the SUMO output files
     modifiedSUMOfolder = f'../../../data/output/sumo/{city}'
 
@@ -585,17 +592,25 @@ def generate_emissions_web(city, duration):
     # Define the path for the emissions output file
     emissions = f'../../../data/output/sumo/{city}/emissions.xml'
 
+    # Define the path for the stop output file
+    stop = f'../../../data/output/sumo/{city}/stop.xml'
+
+    # Define the path for the fcd output file
+    fcd = f'../../../data/output/sumo/{city}/fcd.xml'
+
     # Run the SUMO simulation with the emissions output
 
     # CHANGES FOR THE WEB INTERFACE
     # Define the URL of the Flask app in the sumo-server container
-    url = 'http://sumo-server:5000/emissionsSimulation'
+    url = 'http://sumo-server:5000/simulation'
 
     # Define the data to send to the Flask app
     data = {
         'osm_sumocfg': osm_sumocfg,
         'emissions': emissions,
-        'duration': duration
+        'duration': duration,
+        'stop': stop,
+        'fcd': fcd
     }
 
     # Make a POST request to the Flask app
@@ -671,15 +686,105 @@ def generate_emissions_visualization_web(city):
 
 # ---------------------------------------------------------------------   
 
+# This function generates the trajectories visualization for the selected simulation. DESIGNED FOR THE WEB INTERFACE
+def generate_trajectories_visualization_web(city):
+    # Set the folder for the SUMO output files
+    modifiedSUMOfolder = f'../../../data/output/sumo/{city}'
+
+    # Define the path for the fcd input file
+    fcd = f'../../../data/output/sumo/{city}/fcd.xml'
+
+    # Define the path for the trajectories image output file
+    trajectories = f'../../../data/output/sumo/{city}/trajectories.png'
+
+    # Run the SUMO visualization tool to plot the trajectories
+
+    # CHANGES FOR THE WEB INTERFACE
+    # Define the URL of the Flask app in the sumo-server container
+    url = 'http://sumo-server:5000/trajectoriesVisualization'
+
+    # Define the data to send to the Flask app
+    data = {
+        'fcd': fcd,
+        'trajectories': trajectories
+    }
+
+    # Make a POST request to the Flask app
+    response = requests.post(url, json=data)
+
+    # Check the response
+    if response.status_code == 200:
+        print('plotXMLAttributes.py script ran successfully')
+        # Check if the output file exists
+        if os.path.exists(trajectories):
+            print('Output file was successfully created')
+        else:
+            print('Failed to create output file')
+    else:
+        print('Failed to run plotXMLAttributes.py script:', response.text)
+
+# ---------------------------------------------------------------------   
+
+# This function generates the arrival visualization for the selected simulation. DESIGNED FOR THE WEB INTERFACE
+def generate_arrival_visualization_web(city):
+    # Set the folder for the SUMO output files
+    modifiedSUMOfolder = f'../../../data/output/sumo/{city}'
+
+    # Define the path for the vehroutes input file
+    vehroutes = f'../../../data/output/sumo/{city}/vehroutes.xml'
+
+    # Define the path for the arrival image output file
+    arrival = f'../../../data/output/sumo/{city}/arrival.png'
+
+    # Run the SUMO visualization tool to plot the trajectories
+
+    # CHANGES FOR THE WEB INTERFACE
+    # Define the URL of the Flask app in the sumo-server container
+    url = 'http://sumo-server:5000/arrivalVisualization'
+
+    # Define the data to send to the Flask app
+    data = {
+        'vehroutes': vehroutes,
+        'arrival': arrival
+    }
+
+    # Make a POST request to the Flask app
+    response = requests.post(url, json=data)
+
+    # Check the response
+    if response.status_code == 200:
+        print('plotXMLAttributes.py script ran successfully')
+        # Check if the output file exists
+        if os.path.exists(arrival):
+            print('Output file was successfully created')
+        else:
+            print('Failed to create output file')
+    else:
+        print('Failed to run plotXMLAttributes.py script:', response.text)
+
+# --------------------------------------------------------------------- 
+
 # This function launches a simulation for the selected city and creates the emissions visualization
 def simulate_new_scenario(city, duration):
-    # Generate the emissions for the simulation
-    generate_emissions_web(city, duration)
+    # Generate the simulation
+    generate_simulation_web(city, duration)
 
     # Generate the emissions visualization
     generate_emissions_visualization_web(city)
 
+    # Generate the trajectories visualization
+    generate_trajectories_visualization_web(city)
+
+    # Generate the arrival visualization
+    generate_arrival_visualization_web(city)
+
     # Copy the "CO2_output.png" file to the web-server "static" folder
     os.system(f'cp ../../../data/output/sumo/{city}/CO2_output.png ../../../web/images/CO2_output_{city}.png')
+
+    # Copy the "trajectories.png" file to the web-server "static" folder
+    os.system(f'cp ../../../data/output/sumo/{city}/trajectories.png ../../../web/images/trajectories_{city}.png')
+
+    # Copy the "arrival.png" file to the web-server "static" folder
+    os.system(f'cp ../../../data/output/sumo/{city}/arrival.png ../../../web/images/arrival_{city}.png')
 
     return {'message': 'Simulation ran successfully'}
