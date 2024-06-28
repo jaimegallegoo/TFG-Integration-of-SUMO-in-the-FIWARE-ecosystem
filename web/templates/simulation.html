@@ -5,7 +5,7 @@
     <title>Urban Mobility Manager</title>
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo_claro_transparente.png') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/simulation.css') }}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -20,19 +20,29 @@
                         alt="Mapa España">
                 </div>
                 <div class="col">
-                    <h3>Generar una simulación</h3>
-                    <p style="font-size: large;">Para poder visualizar estadísticas sobre el transporte en {{
-                        city|capitalize }}, primero debemos lanzar una simulación en segundo plano.
+                    <h3 class="mb-3">Generar una simulación</h3> <!-- Added margin-bottom -->
+                    <p class="mb-3" style="font-size: large;">Para poder visualizar estadísticas sobre el transporte en
+                        {{ city|capitalize }}, primero debemos lanzar una simulación en segundo plano.
                     </p>
 
-                    <label for="simulationDuration">Duración de la simulación:</label>
-                    <span id="durationValue"></span> segundos
-                    <input type="range" class="custom-range" id="simulationDuration" min="500" max="4000" step="100">
+                    <div class="mb-3"> <!-- Wrapper div for simulation duration with margin-bottom -->
+                        <label for="simulationDuration" class="form-label">Duración de la simulación:</label>
+                        <span id="durationValue"></span> segundos
+                        <input type="range" class="form-range" id="simulationDuration" min="500" max="4000" step="100">
+                        <!-- Changed class to form-range for Bootstrap 5 -->
+                    </div>
+
+                    <div class="form-check form-switch mb-3"> <!-- Added margin-bottom -->
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Flujo de personas</label>
+                        <input class="form-check-input ml-custom" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    </div>
 
                     <input type="hidden" id="citySelect" value="{{ city }}">
 
-                    <button class="btn btn-primary" id="simulate">Simular</button>
-                    <a href="/SUMO-conversion" class="btn btn-secondary">Volver</a>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start"> <!-- Flex container for buttons -->
+                        <button class="btn btn-primary me-2" id="simulate">Simular</button> <!-- Added margin-right -->
+                        <a href="/SUMO-conversion" class="btn btn-secondary">Volver</a>
+                    </div>
                 </div>
                 <div class="center-spinner" id="loadingSpinner" style="display: none;">
                     <div class="spinner-border text-primary"></div>
