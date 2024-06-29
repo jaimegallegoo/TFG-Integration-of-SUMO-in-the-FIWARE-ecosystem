@@ -866,7 +866,7 @@ def simulate_new_scenario(city, duration, personFlow):
         generate_persons_loaded_visualization_web(city)
         
         # Copy the "persons_loaded.png" file to the web-server "static" folder
-        os.system(f'cp ../../../data/output/sumo/{city}/persons_loaded.png ../../../web/images/persons_loaded_{city}.png')
+        os.system(f'cp ../../../data/output/sumo/{city}/persons_loaded.png ../../../web/images/simulation/persons_loaded_{city}.png')
     
     # Generate the emissions visualization
     generate_emissions_visualization_web(city)
@@ -878,12 +878,12 @@ def simulate_new_scenario(city, duration, personFlow):
     generate_arrival_visualization_web(city)
 
     # Copy the "CO2_output.png" file to the web-server "static" folder
-    os.system(f'cp ../../../data/output/sumo/{city}/CO2_output.png ../../../web/images/CO2_output_{city}.png')
+    os.system(f'cp ../../../data/output/sumo/{city}/CO2_output.png ../../../web/images/simulation/CO2_output_{city}.png')
 
     # Copy the "trajectories.png" file to the web-server "static" folder
-    os.system(f'cp ../../../data/output/sumo/{city}/trajectories.png ../../../web/images/trajectories_{city}.png')
+    os.system(f'cp ../../../data/output/sumo/{city}/trajectories.png ../../../web/images/simulation/trajectories_{city}.png')
 
     # Copy the "arrival.png" file to the web-server "static" folder
-    os.system(f'cp ../../../data/output/sumo/{city}/arrival.png ../../../web/images/arrival_{city}.png')
+    os.system(f'cp ../../../data/output/sumo/{city}/arrival.png ../../../web/images/simulation/arrival_{city}.png')
 
     return {'message': 'Simulation ran successfully'}
