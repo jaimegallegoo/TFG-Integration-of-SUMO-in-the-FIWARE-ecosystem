@@ -18,3 +18,9 @@ main {
 .btn {
     margin-right: 10px;
 }
+
+.color-display {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
