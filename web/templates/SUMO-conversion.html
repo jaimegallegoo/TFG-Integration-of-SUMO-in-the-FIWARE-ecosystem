@@ -16,9 +16,15 @@
             <h2>Elige una ciudad</h2>
             <div class="row">
                 <div class="col">
-                    <h4 style="font-weight: normal;">Antes de comenzar, debes seleccionar una ciudad para la cual deseas
+                    <h4 class="top-margin normal-text">Antes de comenzar, debes seleccionar una ciudad para la cual
+                        deseas
                         importar datos de
                         transporte público desde el simulador SUMO a la plataforma FIWARE.</h4>
+                    <h4 class="normal-text">Estos datos han sido previamente generados desde el OSM Web Wizard
+                        que, a través de los mapas proporcionados por OpenStreetMaps, crea una colección con los
+                        ficheros de configuración necesarios para lanzar una simulación en SUMO.</h4>
+                    <h4 class="normal-text">Se ofrece una selección de ciudades en España con los sistemas de transporte
+                        público más desarrollados.</h4>
                 </div>
                 <div class="col d-flex flex-column align-items-center text-center">
                     <img class="mapa" src="{{ url_for('static', filename='images/mapa_general.png') }}"

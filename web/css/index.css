@@ -40,3 +40,7 @@ main {
 .top-margin {
     margin-top: 20px;
 }
+
+.normal-text {
+    font-weight: normal;
+}
