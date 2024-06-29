@@ -36,3 +36,7 @@ main {
     display: flex;
     justify-content: center;
 }
+
+.top-margin {
+    margin-top: 20px;
+}
