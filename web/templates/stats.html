@@ -16,7 +16,7 @@
             <h2>Datos de la simulación en {{ city|capitalize }}</h2>
             <div class="row">
                 <div class="col">
-                    <h3 class="top-margin">Emisiones de CO2 de los vehículos</h3>
+                    <h3>Emisiones de CO2 de los vehículos</h3>
                     <img class="graficas" src="{{ url_for('static', filename='images/CO2_output_' + city + '.png') }}"
                         alt="Gráfica de emisiones de los vehículos">
                 </div>
@@ -35,6 +35,16 @@
                         alt="Gráfica de tiempos de llegada de los vehículos">
                 </div>
             </div>
+            {% if persons_loaded %}
+            <div class="row">
+                <div class="col">
+                    <h3 class="top-margin">Afluencia en cada línea de metro</h3>
+                    <img class="graficas"
+                        src="{{ url_for('static', filename='images/persons_loaded_' + city + '.png') }}"
+                        alt="Gráfica de afluencia en cada línea de metro">
+                </div>
+            </div>
+            {% endif %}
         </section>
     </main>
 

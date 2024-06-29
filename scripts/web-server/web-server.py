@@ -1,6 +1,6 @@
 from flask import Flask, send_from_directory, request, redirect, url_for, jsonify, make_response
 from flask import render_template
-import sys
+import sys, os
 sys.path.append('/data-conversion/sumo-to-fiware')
 sys.path.append('/data-conversion/fiware-to-sumo')
 from functions_fiware_to_sumo import *
@@ -170,7 +170,12 @@ def simulation(city):
 # Serve the stats.html file
 @app.route('/cities/<city>/stats', methods=['GET'])
 def stats(city):
-    return render_template('stats.html', city=city)
+    # Construct the path for the image file
+    image_path = os.path.join(app.static_folder, 'images', f'persons_loaded_{city}.png')
+    # Check if the image file exists
+    persons_loaded = os.path.exists(image_path)
+    # Render the template with the additional variable
+    return render_template('stats.html', city=city, persons_loaded=persons_loaded)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
