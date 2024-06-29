@@ -557,8 +557,8 @@ def get_entities_web(city, type):
 
 # ---------------------------------------------------------------------
 
-# This function generates the emissions for the selected simulation
-def generate_emissions(city, duration):
+# This function generates the simulation for the selected scenario
+def generate_simulation(city, duration):
     # Set the folder for the SUMO output files
     modifiedSUMOfolder = f'../../../data/output/sumo/{city}'
 

@@ -35,11 +35,11 @@ def main():
         test_sumo_server()
     #python main_fiware_to_sumo.py test_sumo-server
 
-    elif orden == "generate_emissions":
+    elif orden == "generate_simulation":
         city = sys.argv[2]
         duration = sys.argv[3]
-        generate_emissions(city, duration)
-    #python main_fiware_to_sumo.py generate_emissions madrid 1000
+        generate_simulation(city, duration)
+    #python main_fiware_to_sumo.py generate_simulation madrid 1000
 
     elif orden == "generate_emissions_visualization":
         city = sys.argv[2]
