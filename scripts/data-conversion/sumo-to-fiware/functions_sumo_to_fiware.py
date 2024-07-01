@@ -36,7 +36,8 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
 
     # Create a valid name for the NGSI-v2 entity
     name = data['ptLines']['ptLine'][element]['@name']
-    name = name.replace('(', '').replace(')', '').replace(';', ', ').replace('=', '').replace('>', '→').replace('<', '←')
+    name = name.replace('(', '').replace(')', '').replace(';', ', ').replace('=', '-')\
+        .replace('>', '').replace('<', '').replace('"', '').replace("'", '')
 
     # ---------------------------------------------------------------------
 
@@ -124,6 +125,9 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
 
     # Extract the transportation line from the source data
     line = data['ptLines']['ptLine'][element]['@line']
+    line = line.replace('(', '').replace(')', '').replace(' ', '_').replace(';', ', ')\
+        .replace('=', '-').replace('>', '').replace('<', '').replace('"', '')\
+        .replace("'", '').replace(':', '').replace('→', '-').replace('ñ', 'n')
 
     # ---------------------------------------------------------------------
 
@@ -131,14 +135,15 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
 
     # Create a valid id for the NGSI-v2 entity
     id = f'urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{line}'
-    id = id.replace('(', '').replace(')', '').replace(' ', '_')
 
     # ---------------------------------------------------------------------
 
     # SHORT ROUTE CODE MAPPING
 
     # Extract the shortRouteCode from the source data
-    shortRouteCode = line.replace('(', '').replace(')', '').replace(' ', '_')
+    shortRouteCode = line.replace('(', '').replace(')', '').replace(' ', '_').replace(';', ', ')\
+        .replace('=', '-').replace('>', '').replace('<', '').replace('"', '').replace("'", '')\
+        .replace(':', '').replace('→', '-')
 
     # ---------------------------------------------------------------------
 
@@ -157,8 +162,11 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
 
         # Check if there is only one element in bus_stops
         if len(bus_stops) == 1:
+            # Build and clean segmentName
+            segment_name = bus_stops[0]['@name'].replace('(', '').replace(')', '').replace(';', ', ')\
+                .replace('=', '-').replace('>', '').replace('<', '').replace('"', '').replace("'", '')
             segment = {
-                'segmentName': bus_stops[0]['@name'],
+                'segmentName': segment_name,
                 'refPublicTransportStops': [
                     f'urn:ngsi-ld:PublicTransportStop:{city}:transport:busStop:' + bus_stops[0]['@id']
                 ]
@@ -167,8 +175,12 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
 
         else:
             for i in range(len(bus_stops) - 1):
+                # Build and clean segmentName
+                segment_name = (bus_stops[i]['@name'] + ' - ' + bus_stops[i+1]['@name']).replace('(', '')\
+                    .replace(')', '').replace(';', ', ').replace('=', '-').replace('>', '').replace('<', '')\
+                    .replace('"', '').replace("'", '')
                 segment = {
-                    'segmentName': bus_stops[i]['@name'] + ' - ' + bus_stops[i+1]['@name'],
+                    'segmentName': segment_name,
                     'refPublicTransportStops': [
                         f'urn:ngsi-ld:PublicTransportStop:{city}:transport:busStop:' + bus_stops[i]['@id'],
                         f'urn:ngsi-ld:PublicTransportStop:{city}:transport:busStop:' + bus_stops[i+1]['@id']
@@ -313,7 +325,8 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, city,
         name = "No data available"
 
     # Create a valid name for the NGSI-v2 entity
-    name = name.replace('(', '').replace(')', '').replace(';', ', ').replace('=', '').replace('>', '→').replace('<', '←')
+    name = name.replace('(', '').replace(')', '').replace(';', ', ').replace('=', '-')\
+        .replace('>', '').replace('<', '').replace('"', '').replace("'", '')
 
     # ---------------------------------------------------------------------
 
@@ -349,10 +362,16 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, city,
         # Split the string into separate values
         lines_array = lines.split()
 
+    def filter_line(line):
+        # Perform replacements to clean the line string
+        return line.replace('(', '').replace(')', '')\
+            .replace(';', ', ').replace('=', '-').replace('>', '')\
+            .replace('<', '').replace('"', '').replace("'", '')
+
     # Check if lines_array exists and is not empty
     if 'lines_array' in locals() and lines_array:
         refPublicTransportRoute = [
-            f'urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{line.replace("(", "").replace(")", "")}' for line in lines_array
+            f'urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{filter_line(line)}' for line in lines_array
         ]
     else:
         refPublicTransportRoute = "No data available"
