@@ -36,7 +36,7 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
 
     # Create a valid name for the NGSI-v2 entity
     name = data['ptLines']['ptLine'][element]['@name']
-    name = name.replace('(', '').replace(')', '').replace(';', ', ')
+    name = name.replace('(', '').replace(')', '').replace(';', ', ').replace('=', '').replace('>', '→').replace('<', '←')
 
     # ---------------------------------------------------------------------
 
@@ -313,7 +313,7 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, city,
         name = "No data available"
 
     # Create a valid name for the NGSI-v2 entity
-    name = name.replace('(', '').replace(')', '').replace(';', ', ')
+    name = name.replace('(', '').replace(')', '').replace(';', ', ').replace('=', '').replace('>', '→').replace('<', '←')
 
     # ---------------------------------------------------------------------
 
