@@ -36,9 +36,13 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
     # NAME MAPPING
 
     # Create a valid name for the NGSI-v2 entity
-    name = data['ptLines']['ptLine'][element]['@name']
-    name = name.replace('(', '').replace(')', '').replace(';', ', ').replace('=', '-')\
-        .replace('>', '').replace('<', '').replace('"', '').replace("'", '')
+    try:
+        name = data['ptLines']['ptLine'][element]['@name']
+    except KeyError:
+        name = "No data available"
+    else:
+        name = name.replace('(', '').replace(')', '').replace(';', ', ').replace('=', '-')\
+            .replace('>', '').replace('<', '').replace('"', '').replace("'", '')
 
     # ---------------------------------------------------------------------
 
