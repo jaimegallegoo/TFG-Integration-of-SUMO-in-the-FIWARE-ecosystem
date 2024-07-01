@@ -25,6 +25,15 @@ def convert_xml_to_json(xml_file_path, json_file_path):
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
 
+# This function converts unicode characters to ASCII characters
+def unicode_to_ascii(input_str):
+        normalized = unicodedata.normalize('NFKD', input_str)
+        ascii_encoded = normalized.encode('ascii', 'ignore')
+        return ascii_encoded.decode('ascii')
+
+# ---------------------------------------------------------------------ç
+# ---------------------------------------------------------------------
+
 # This function converts a line from a SUMO osm_ptline to a FIWARE PublicTransportRoute
 def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, city, element):
     # Open the source JSON file and load the data
@@ -137,11 +146,6 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
     # ---------------------------------------------------------------------
 
     # ID MAPPING
-
-    def unicode_to_ascii(input_str):
-        normalized = unicodedata.normalize('NFKD', input_str)
-        ascii_encoded = normalized.encode('ascii', 'ignore')
-        return ascii_encoded.decode('ascii')
 
     # Assuming 'city' and 'line' are defined earlier in your code and may contain Unicode characters
     city_ascii = unicode_to_ascii(city)
@@ -324,9 +328,15 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, city,
     # Extract the transportation stop from the source data
     id = data['additional']['busStop'][element]['@id']
 
+    id = id.replace('(', '').replace(')', '').replace(' ', '_').replace(';', ', ')\
+        .replace('=', '-').replace('>', '').replace('<', '').replace('"', '')\
+        .replace("'", '').replace(':', '').replace('→', '-').replace('ñ', 'n')
+    
+    city_ascii = unicode_to_ascii(city)
+    id_ascii = unicode_to_ascii(id)
+
     # Create a valid id for the NGSI-v2 entity
-    id_fiware = f'urn:ngsi-ld:PublicTransportStop:{city}:busStop:{id}'
-    id_fiware = id_fiware.replace('(', '').replace(')', '').replace(' ', '_')
+    id_fiware = f'urn:ngsi-ld:PublicTransportStop:{city_ascii}:busStop:{id_ascii}'
 
     # ---------------------------------------------------------------------
         
