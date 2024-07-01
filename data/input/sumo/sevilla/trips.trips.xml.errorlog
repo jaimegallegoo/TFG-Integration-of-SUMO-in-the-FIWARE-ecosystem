@@ -1,0 +1,16 @@
+Warning: At actuated tlLogic 'cluster_1409949830_1409949861_1409949904_1424619460_#2more', linkIndex 36 has no controlling detector.
+Warning: At actuated tlLogic 'cluster_1409949830_1409949861_1409949904_1424619460_#2more', linkIndex 37 has no controlling detector.
+Warning: At actuated tlLogic 'joinedS_196525204_198285128', linkIndex 4 has no controlling detector.
+Warning: At actuated tlLogic 'joinedS_196525204_198285128', linkIndex 5 has no controlling detector.
+Warning: No connection between edge '19124158#0' and edge '331354694#2' found.
+Warning: No route for vehicle '9_bus_40:1' found.
+Warning: No connection between edge '19124158#0' and edge '331354694#2' found.
+Warning: No route for vehicle '10_bus_41:1' found.
+Warning: Teleporting vehicle '9_bus_40:1'; waited too long (wrong lane), lane='19124158#0_0', time=772.00.
+Warning: Vehicle '9_bus_40:1' ends teleporting on edge '19124158#0', time=772.00.
+Warning: Teleporting vehicle '9_bus_40:1'; waited too long (wrong lane), lane='19124158#0_1', time=1079.00.
+Warning: Teleporting vehicle '10_bus_41:1'; waited too long (wrong lane), lane='19124158#0_0', time=1079.00.
+Warning: Vehicle '9_bus_40:1' ends teleporting on edge '331354694#2', time=1079.00.
+Warning: Vehicle '10_bus_41:1' ends teleporting on edge '19124158#0', time=1079.00.
+Warning: Teleporting vehicle '10_bus_41:1'; waited too long (wrong lane), lane='19124158#0_0', time=1387.00.
+Warning: Vehicle '10_bus_41:1' ends teleporting on edge '331354694#2', time=1387.00.

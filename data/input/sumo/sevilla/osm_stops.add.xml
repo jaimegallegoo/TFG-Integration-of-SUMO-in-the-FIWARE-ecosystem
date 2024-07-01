@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-07-01 13:09:04 by Eclipse SUMO netconvert Version 1.19.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="${SUMO_HOME}/data/typemap/osmNetconvert.typ.xml,${SUMO_HOME}/data/typemap/osmNetconvertAerialway.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml.gz"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml.gz"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <junctions>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+    </junctions>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+    </railway>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <busStop id="-244054578" name="Plaza Nueva" lane="-222105704#0_0" startPos="25.88" endPos="50.88" friendlyPos="true">
+        <access lane="760265072#1_0" pos="23.45" length="16.26" friendlyPos="1"/>
+        <access lane="760265075#3_0" pos="7.07" length="38.89" friendlyPos="1"/>
+        <access lane="760265078#2_0" pos="23.43" length="22.74" friendlyPos="1"/>
+        <access lane="760265081#0_0" pos="28.47" length="14.31" friendlyPos="1"/>
+        <access lane="760265082#2_0" pos="18.44" length="31.91" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-8305729276" name="Paseo de Colón (Plaza de Toros)" lane="-331354694#2_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="21"/>
+    <busStop id="2310802465" name="Plaza Nueva" lane="222105692#2_0" startPos="28.22" endPos="53.22" friendlyPos="true">
+        <access lane="760265072#1_0" pos="23.61" length="21.23" friendlyPos="1"/>
+        <access lane="760265075#3_0" pos="3.75" length="39.12" friendlyPos="1"/>
+        <access lane="760265078#2_0" pos="23.59" length="17.76" friendlyPos="1"/>
+        <access lane="760265081#0_0" pos="28.32" length="9.33" friendlyPos="1"/>
+        <access lane="760265082#2_0" pos="18.29" length="26.93" friendlyPos="1"/>
+    </busStop>
+    <busStop id="244054578" name="Plaza Nueva" lane="222105696_0" startPos="4.94" endPos="29.94" friendlyPos="true" lines="T1">
+        <access lane="760265072#1_0" pos="23.45" length="16.26" friendlyPos="1"/>
+        <access lane="760265075#3_0" pos="7.07" length="38.89" friendlyPos="1"/>
+        <access lane="760265078#2_0" pos="23.43" length="22.74" friendlyPos="1"/>
+        <access lane="760265081#0_0" pos="28.47" length="14.31" friendlyPos="1"/>
+        <access lane="760265082#2_0" pos="18.44" length="31.91" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3817781607" lane="976693854#1_0" startPos="9.49" endPos="24.49" friendlyPos="true"/>
+    <busStop id="3830561331" lane="331354689#0_0" startPos="5.20" endPos="20.20" friendlyPos="true"/>
+    <busStop id="3832911925" lane="976693852_0" startPos="0.00" endPos="10.87" friendlyPos="true"/>
+    <busStop id="6329569392" name="Mq. de Paradas" lane="19124158#0_0" startPos="34.19" endPos="49.19" friendlyPos="true" lines="40 EA 41"/>
+    <busStop id="8278543244" name="Reyes Catolicos" lane="18978590#4_0" startPos="3.52" endPos="18.52" friendlyPos="true" lines="43"/>
+    <busStop id="8278543284" name="Arjona (Puente de Triana)" lane="814351068#0_0" startPos="91.04" endPos="106.04" friendlyPos="true" lines="C4 3 21"/>
+    <busStop id="8294328495" name="Mq. de Paradas" lane="19124158#0_0" startPos="40.22" endPos="55.22" friendlyPos="true" lines="21 3"/>
+</additional>
