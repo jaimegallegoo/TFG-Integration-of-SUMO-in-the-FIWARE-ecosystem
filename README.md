@@ -41,12 +41,20 @@ Para cerrar la aplicación y detener todos los contenedores, se ejecuta el sigui
 
 Este proyecto hace uso de varias tecnologías clave, incluyendo:
 
-- **[SUMO](https://www.eclipse.org/sumo/)** - Simulador de tráfico de vehículos utilizado para la creación de escenarios de movilidad urbana.<br>
-  <img src="/web/images/sumo.png" alt="SUMO" width="100"/>
-- **[FIWARE](https://www.fiware.org/)** - Plataforma utilizada para la integración y gestión de datos del simulador.<br>
-  <img src="/web/images/fiware.png" alt="FIWARE" width="100"/>
-- **[Docker](https://www.docker.com/)** - Herramienta utilizada para la contenerización y despliegue de la aplicación.<br>
-  <img src="/web/images/docker.png" alt="Docker" width="100"/>
+- **[SUMO](https://www.eclipse.org/sumo/)** - Simulador de tráfico de vehículos utilizado para la creación de escenarios de movilidad urbana.
+  <br><br>
+  <p align="center">
+    <img src="/web/images/sumo.png" alt="SUMO" width="200" style="margin-top: 10px;"/>
+  </p>
+  <br><br>
+- **[FIWARE](https://www.fiware.org/)** - Plataforma utilizada para la integración y gestión de datos del simulador.<br><br>
+  <p align="center">
+    <img src="/web/images/fiware.png" alt="FIWARE" width="200" style="margin-top: 10px;"/>
+  </p>
+- **[Docker](https://www.docker.com/)** - Herramienta utilizada para la contenerización y despliegue de la aplicación.<br><br>
+  <p align="center">
+    <img src="/web/images/docker.png" alt="Docker" width="200" style="margin-top: 10px;"/>
+  </p>
 
 ## Acerca del Proyecto
 
