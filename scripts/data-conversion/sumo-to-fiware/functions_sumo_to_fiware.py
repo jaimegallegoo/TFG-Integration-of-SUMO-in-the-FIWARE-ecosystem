@@ -2,6 +2,7 @@ import os
 import requests
 import xmltodict
 import json
+import unicodedata
 
 # ---------------------------------------------------------------------
 # ---------------------------------------------------------------------
@@ -133,8 +134,17 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
 
     # ID MAPPING
 
-    # Create a valid id for the NGSI-v2 entity
-    id = f'urn:ngsi-ld:PublicTransportRoute:{city}:transport:busLine:{line}'
+    def unicode_to_ascii(input_str):
+        normalized = unicodedata.normalize('NFKD', input_str)
+        ascii_encoded = normalized.encode('ascii', 'ignore')
+        return ascii_encoded.decode('ascii')
+
+    # Assuming 'city' and 'line' are defined earlier in your code and may contain Unicode characters
+    city_ascii = unicode_to_ascii(city)
+    line_ascii = unicode_to_ascii(line)
+
+    # Create a valid id for the NGSI-v2 entity with ASCII-encoded city and line
+    id = f'urn:ngsi-ld:PublicTransportRoute:{city_ascii}:transport:busLine:{line_ascii}'
 
     # ---------------------------------------------------------------------
 
