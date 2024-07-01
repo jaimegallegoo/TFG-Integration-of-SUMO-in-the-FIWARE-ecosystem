@@ -47,6 +47,10 @@ def convert_SUMO_line_to_FIWARE_route(originalSUMOline, originalFIWAREroute, cit
         'madrid': {'locality': 'Madrid', 'region': 'Comunidad de Madrid', 'country': 'España'},
         'barcelona': {'locality': 'Barcelona', 'region': 'Cataluña', 'country': 'España'},
         'santander': {'locality': 'Santander', 'region': 'Cantabria', 'country': 'España'},
+        'málaga': {'locality': 'Málaga', 'region': 'Andalucía', 'country': 'España'},
+        'bilbao': {'locality': 'Bilbao', 'region': 'País Vasco', 'country': 'España'},
+        'sevilla': {'locality': 'Sevilla', 'region': 'Andalucía', 'country': 'España'},
+        'valencia': {'locality': 'Valencia', 'region': 'Comunidad Valenciana', 'country': 'España'},
         # Add more cities and values as needed
     }
 
@@ -320,6 +324,10 @@ def convert_SUMO_stop_to_FIWARE_stop(originalSUMOstop, originalFIWAREstop, city,
         'madrid': {'locality': 'Madrid', 'region': 'Comunidad de Madrid', 'country': 'España'},
         'barcelona': {'locality': 'Barcelona', 'region': 'Cataluña', 'country': 'España'},
         'santander': {'locality': 'Santander', 'region': 'Cantabria', 'country': 'España'},
+        'málaga': {'locality': 'Málaga', 'region': 'Andalucía', 'country': 'España'},
+        'bilbao': {'locality': 'Bilbao', 'region': 'País Vasco', 'country': 'España'},
+        'sevilla': {'locality': 'Sevilla', 'region': 'Andalucía', 'country': 'España'},
+        'valencia': {'locality': 'Valencia', 'region': 'Comunidad Valenciana', 'country': 'España'},
         # Add more cities and values as needed
     }
 
