@@ -14,3 +14,13 @@ main {
     padding-right: 60px;
     padding-bottom: 20px;
 }
+
+.btn {
+    margin-right: 10px;
+}
+
+.color-display {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}

@@ -34,3 +34,19 @@ main {
     z-index: 9999;
     background: rgba(0,0,0,0.3);
 }
+
+/* Switch flujo de personas */
+.form-check {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -20px;
+}
+
+#flexSwitchCheckDefault {
+    margin-left: 10px;
+}
+
+/* Botón de simular */
+#simulate {
+    margin-right: 10px;
+}

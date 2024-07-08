@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2024-04-18 17:39:26.737797 by $Id: ptlines2flows.py v1_3_1+0313-ccb31df3eb jakob.erdmann@dlr.de 2019-09-02 13:26:32 +0200 $ v1_19_0+0000-baa66a0f364
+<!-- generated on 2024-07-01 21:01:41.831320 by $Id: ptlines2flows.py v1_3_1+0313-ccb31df3eb jakob.erdmann@dlr.de 2019-09-02 13:26:32 +0200 $ v1_19_0+0000-baa66a0f364
 <configuration>
-    <net-file value="C:\Users\Jaime\Sumo\2024-04-18-17-37-51\osm.net.xml.gz"/>
-    <ptlines-file value="C:\Users\Jaime\Sumo\2024-04-18-17-37-51\osm_ptlines.xml"/>
-    <ptstops-file value="C:\Users\Jaime\Sumo\2024-04-18-17-37-51\osm_stops.add.xml"/>
-    <output-file value="C:\Users\Jaime\Sumo\2024-04-18-17-37-51\osm_pt.rou.xml"/>
-    <stopinfos-file value="C:\Users\Jaime\Sumo\2024-04-18-17-37-51\stopinfos.xml"/>
-    <routes-file value="C:\Users\Jaime\Sumo\2024-04-18-17-37-51\vehroutes.xml"/>
-    <trips-file value="C:\Users\Jaime\Sumo\2024-04-18-17-37-51\trips.trips.xml"/>
+    <net-file value="C:\Users\Jaime\Sumo\2024-07-01-21-01-21\osm.net.xml.gz"/>
+    <ptlines-file value="C:\Users\Jaime\Sumo\2024-07-01-21-01-21\osm_ptlines.xml"/>
+    <ptstops-file value="C:\Users\Jaime\Sumo\2024-07-01-21-01-21\osm_stops.add.xml"/>
+    <output-file value="C:\Users\Jaime\Sumo\2024-07-01-21-01-21\osm_pt.rou.xml"/>
+    <stopinfos-file value="C:\Users\Jaime\Sumo\2024-07-01-21-01-21\stopinfos.xml"/>
+    <routes-file value="C:\Users\Jaime\Sumo\2024-07-01-21-01-21\vehroutes.xml"/>
+    <trips-file value="C:\Users\Jaime\Sumo\2024-07-01-21-01-21\trips.trips.xml"/>
+    <end value="4000.0"/>
     <min-stops value="0"/>
     <extend-to-fringe value="True"/>
     <random-begin value="True"/>
@@ -31,280 +32,67 @@
     <vType id="pt_share_taxi" vClass="taxi" speedFactor="0.95"/>
     <vType id="pt_aerialway" vClass="rail_urban" length="2.5" width="2" personCapacity="4"/>
     <vType id="pt_ferry" vClass="ship"/>
-    <trip id="0_bus_N1131:0" type="pt_bus" depart="0.0" departLane="best" from="1000249404" to="22650940#2">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="1_bus_N1131:1" type="pt_bus" depart="1.0" departLane="best" from="540057569" to="1000038393">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="2_train_S2:0" type="pt_train" depart="2.0" departLane="best" from="866397101" to="38915350">
+    <trip id="0_train_S2:0" type="pt_train" depart="0.0" departLane="best" from="866397101" to="867668775">
         <stop busStop="8087619815" duration="30"/>
-        <stop busStop="255406917" duration="30"/>
-        <stop busStop="802777749" duration="30"/>
-        <stop busStop="255406869" duration="30"/>
-        <stop busStop="255406873" duration="30"/>
-        <stop busStop="259649936" duration="30"/>
-        <stop busStop="259649938" duration="30"/>
-        <stop busStop="417330037" duration="30"/>
     </trip>
-    <trip id="3_bus_N721:0" type="pt_bus" depart="3.0" departLane="best" from="540057569" to="1000038393">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="4_bus_N721:1" type="pt_bus" depart="4.0" departLane="best" from="1000249404" to="22650940#2">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="5_bus_N61:0" type="pt_bus" depart="5.0" departLane="best" from="519375847#1" to="308378769">
+    <trip id="1_bus_N61:0" type="pt_bus" depart="3.0" departLane="best" from="519375847#1" to="295263589#4">
         <stop busStop="5726021529" duration="30"/>
-        <stop busStop="-8214234942" duration="30"/>
     </trip>
-    <trip id="6_train_R17:0" type="pt_train" depart="6.0" departLane="best" from="217122022" to="267004206">
+    <trip id="2_train_R17:0" type="pt_train" depart="6.0" departLane="best" from="217122022" to="217122022">
         <stop busStop="7215417855" duration="30"/>
-        <stop busStop="4743352986" duration="30"/>
-        <stop busStop="1305698291" duration="30"/>
     </trip>
-    <trip id="7_train_R17:1" type="pt_train" depart="11.0" departLane="best" from="267004208" to="772812648">
-        <stop busStop="1305698373" duration="30"/>
-        <stop busStop="4743352987" duration="30"/>
+    <trip id="3_train_R17:1" type="pt_train" depart="11.0" departLane="best" from="216952581" to="216952581">
         <stop busStop="7215417857" duration="30"/>
     </trip>
-    <trip id="8_bus_N41:0" type="pt_bus" depart="14.0" departLane="best" from="542956873" to="22650940#2">
+    <trip id="4_bus_N41:0" type="pt_bus" depart="15.0" departLane="best" from="542956873" to="243591204#3">
         <stop busStop="1966472090" duration="30"/>
     </trip>
-    <trip id="9_bus_X95:0" type="pt_bus" depart="14.0" departLane="best" from="545715327#0" to="542956873">
-        <stop busStop="5760480289" duration="30"/>
+    <trip id="5_bus_X95:0" type="pt_bus" depart="15.0" departLane="best" from="532696001#0" to="542956873">
+        <stop busStop="5760480286" duration="30"/>
     </trip>
-    <trip id="10_bus_N41:1" type="pt_bus" depart="15.0" departLane="best" from="545715327#0" to="542956873">
-        <stop busStop="3460264088" duration="30"/>
+    <trip id="6_bus_N41:1" type="pt_bus" depart="17.0" departLane="best" from="532696001#0" to="542956873">
         <stop busStop="1966472090" duration="30"/>
     </trip>
-    <trip id="11_bus_100:0" type="pt_bus" depart="15.0" departLane="best" from="126304603#2" to="126304603#2">
+    <trip id="7_bus_100:0" type="pt_bus" depart="19.0" departLane="best" from="126304603#2" to="126304603#2">
         <stop busStop="823781719" duration="30"/>
-        <stop busStop="-5375631706" duration="30"/>
-        <stop busStop="823781710" duration="30"/>
-        <stop busStop="30914313" duration="30"/>
-        <stop busStop="5165491486" duration="30"/>
     </trip>
-    <trip id="12_bus_101:0" type="pt_bus" depart="17.0" departLane="best" from="295263590" to="545937949#0">
-        <stop busStop="-5375631706" duration="30"/>
-        <stop busStop="-5375631705" duration="30"/>
+    <trip id="8_bus_101:0" type="pt_bus" depart="27.0" departLane="best" from="295263590" to="545937949#0">
+        <stop busStop="5375631708" duration="30"/>
     </trip>
-    <trip id="13_bus_1728:0" type="pt_bus" depart="19.0" departLane="best" from="1000249404" to="4746993#2">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="14_bus_1728:1" type="pt_bus" depart="27.0" departLane="best" from="-4746993#2" to="1000038393">
-        <stop busStop="-1191150240" duration="30"/>
-    </trip>
-    <trip id="15_bus_N1135:0" type="pt_bus" depart="28.0" departLane="best" from="-4746993#2" to="1000038393">
-        <stop busStop="-1191150240" duration="30"/>
-    </trip>
-    <trip id="16_bus_N1135:1" type="pt_bus" depart="30.0" departLane="best" from="1000249404" to="4746993#2">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="17_bus_N717:0" type="pt_bus" depart="34.0" departLane="best" from="-4746993#2" to="1000038393">
-        <stop busStop="-1191150240" duration="30"/>
-    </trip>
-    <trip id="18_bus_N717:1" type="pt_bus" depart="34.0" departLane="best" from="1000249404" to="4746993#2">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="19_bus_N727:0" type="pt_bus" depart="35.0" departLane="best" from="540057569" to="1000038393">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="20_bus_N727:1" type="pt_bus" depart="38.0" departLane="best" from="1000249404" to="22650940#2">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="21_bus_N707:0" type="pt_bus" depart="41.0" departLane="best" from="-4746993#2" to="1000038393">
-        <stop busStop="-1191150240" duration="30"/>
-    </trip>
-    <trip id="22_bus_N707:1" type="pt_bus" depart="41.0" departLane="best" from="1000249404" to="4746993#2">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="23_bus_N781:0" type="pt_bus" depart="42.0" departLane="best" from="-4746993#2" to="1000038393">
-        <stop busStop="-1191150240" duration="30"/>
-    </trip>
-    <trip id="24_train_34:0" type="pt_train" depart="42.0" departLane="best" from="267004208" to="772812648">
-        <stop busStop="1305698373" duration="30"/>
-        <stop busStop="4743352987" duration="30"/>
+    <trip id="9_train_34:0" type="pt_train" depart="28.0" departLane="best" from="216952581" to="216952581">
         <stop busStop="7215417857" duration="30"/>
     </trip>
-    <trip id="25_train_34:1" type="pt_train" depart="43.0" departLane="best" from="217122022" to="267004206">
+    <trip id="10_train_34:1" type="pt_train" depart="34.0" departLane="best" from="217122022" to="217122022">
         <stop busStop="7215417855" duration="30"/>
-        <stop busStop="4743352986" duration="30"/>
-        <stop busStop="1305698291" duration="30"/>
     </trip>
-    <trip id="26_bus_N781:1" type="pt_bus" depart="43.0" departLane="best" from="1000249404" to="4746993#2">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="27_train_R1:0" type="pt_train" depart="45.0" departLane="best" from="-481374955#1" to="38962089">
-        <stop busStop="3888388695" duration="30"/>
+    <trip id="11_train_R1:0" type="pt_train" depart="38.0" departLane="best" from="385483999" to="810841348#1">
         <stop busStop="3888388697" duration="30"/>
-        <stop busStop="-1305698325" duration="30"/>
     </trip>
-    <trip id="28_bus_X70:0" type="pt_bus" depart="47.0" departLane="best" from="770048769#0" to="22650940#2">
-        <stop busStop="1966516541" duration="30"/>
-    </trip>
-    <trip id="29_bus_X70:1" type="pt_bus" depart="48.0" departLane="best" from="545715327#0" to="4750707#2">
-        <stop busStop="8032746332" duration="30"/>
-    </trip>
-    <trip id="30_bus_X30:0" type="pt_bus" depart="51.0" departLane="best" from="254329359#1" to="-544243183">
-        <stop busStop="8033328937" duration="30"/>
-    </trip>
-    <trip id="31_bus_X43:0" type="pt_bus" depart="52.0" departLane="best" from="862748475" to="-544243183">
-        <stop busStop="8037346270" duration="30"/>
-    </trip>
-    <trip id="32_bus_X43:1" type="pt_bus" depart="54.0" departLane="best" from="-863629113" to="862748475">
-        <stop busStop="8037346270" duration="30"/>
-    </trip>
-    <trip id="33_bus_X79:0" type="pt_bus" depart="55.0" departLane="best" from="254329359#1" to="-544243183">
-        <stop busStop="-5341631257" duration="30"/>
-    </trip>
-    <trip id="34_bus_X80:0" type="pt_bus" depart="55.0" departLane="best" from="770048769#0" to="22650940#2">
-        <stop busStop="1966516541" duration="30"/>
-    </trip>
-    <trip id="35_bus_X80:1" type="pt_bus" depart="58.0" departLane="best" from="545715327#0" to="4750707#2">
-        <stop busStop="8032746332" duration="30"/>
-    </trip>
-    <trip id="36_bus_X86:0" type="pt_bus" depart="58.0" departLane="best" from="545715327#0" to="4750707#2">
-        <stop busStop="8032746332" duration="30"/>
-    </trip>
-    <trip id="37_bus_X86:1" type="pt_bus" depart="59.0" departLane="best" from="770048769#0" to="22650940#2">
-        <stop busStop="1966516541" duration="30"/>
-    </trip>
-    <trip id="38_bus_X95:1" type="pt_bus" depart="60.0" departLane="best" from="542956873" to="22650940#2">
+    <trip id="12_bus_X95:1" type="pt_bus" depart="41.0" departLane="best" from="542956873" to="243591204#3">
         <stop busStop="8634928230" duration="30"/>
     </trip>
-    <trip id="39_bus_X97:0" type="pt_bus" depart="61.0" departLane="best" from="-863629113" to="-544243183">
-        <stop busStop="-5341631256" duration="30"/>
+    <trip id="13_bus_141:0" type="pt_bus" depart="47.0" departLane="best" from="237506930#0" to="246638748#2">
+        <stop busStop="8097436670" duration="30"/>
     </trip>
-    <trip id="40_train_9736:0" type="pt_train" depart="64.0" departLane="best" from="772266514#2" to="810833109#1">
-        <stop busStop="1118408124" duration="30"/>
-    </trip>
-    <trip id="41_train_9743:0" type="pt_train" depart="64.0" departLane="best" from="772266517#0" to="772266517#0">
-        <stop busStop="1118396324" duration="30"/>
-    </trip>
-    <trip id="42_train_9704:0" type="pt_train" depart="65.0" departLane="best" from="772266514#2" to="810833109#1">
-        <stop busStop="1118408124" duration="30"/>
-    </trip>
-    <trip id="43_train_9713:0" type="pt_train" depart="65.0" departLane="best" from="772266517#0" to="772266517#0">
-        <stop busStop="1118396324" duration="30"/>
-    </trip>
-    <trip id="44_bus_L72:0" type="pt_bus" depart="66.0" departLane="best" from="916317130" to="22650940#2">
-        <stop busStop="8066147073" duration="30"/>
-    </trip>
-    <trip id="45_bus_L72:1" type="pt_bus" depart="69.0" departLane="best" from="545715327#0" to="448563710">
-        <stop busStop="8032746332" duration="30"/>
-    </trip>
-    <trip id="46_bus_141:0" type="pt_bus" depart="69.0" departLane="best" from="145565059#1" to="868707435#1">
-        <stop busStop="8097353540" duration="30"/>
-    </trip>
-    <trip id="47_bus_141:1" type="pt_bus" depart="71.0" departLane="best" from="868707435#1" to="145565059#1">
-        <stop busStop="8097353538" duration="30"/>
-    </trip>
-    <trip id="48_bus_X84:0" type="pt_bus" depart="72.0" departLane="best" from="-863629113" to="-544243183">
-        <stop busStop="-5341631256" duration="30"/>
-    </trip>
-    <trip id="49_bus_X79:1" type="pt_bus" depart="76.0" departLane="best" from="544243184#0" to="254329359#1">
-        <stop busStop="5343770280" duration="30"/>
-    </trip>
-    <trip id="50_bus_X1:0" type="pt_bus" depart="76.0" departLane="best" from="1186706639#1" to="984712370">
-        <stop busStop="2193415468" duration="30"/>
-    </trip>
-    <trip id="51_train_AVE:0" type="pt_train" depart="77.0" departLane="best" from="772266520#2" to="772266520#2">
-        <stop busStop="1118396324@13280819" duration="30"/>
-    </trip>
-    <trip id="52_train_Ouigo:0" type="pt_train" depart="79.0" departLane="best" from="656070998" to="772266511">
-        <stop busStop="1305698370" duration="30"/>
-    </trip>
-    <trip id="53_train_Ouigo:1" type="pt_train" depart="80.0" departLane="best" from="656070998" to="772266511">
-        <stop busStop="1305698370" duration="30"/>
-    </trip>
-    <trip id="54_train_Ouigo:2" type="pt_train" depart="88.0" departLane="best" from="656070998" to="772266511">
-        <stop busStop="1305698370" duration="30"/>
-    </trip>
-    <trip id="55_train_Ouigo:3" type="pt_train" depart="91.0" departLane="best" from="772266511" to="772266511">
-        <stop busStop="1305698370" duration="30"/>
-    </trip>
-    <trip id="56_train_Ouigo:4" type="pt_train" depart="92.0" departLane="best" from="772266511" to="772266511">
-        <stop busStop="1305698370" duration="30"/>
-    </trip>
-    <trip id="57_train_Ouigo:5" type="pt_train" depart="92.0" departLane="best" from="772266511" to="772266511">
-        <stop busStop="1305698370" duration="30"/>
-    </trip>
-    <trip id="58_train_AVE:1" type="pt_train" depart="93.0" departLane="best" from="656070998" to="772266514#2">
-        <stop busStop="1118408124@13431684" duration="30"/>
-    </trip>
-    <trip id="59_train_AVE:2" type="pt_train" depart="94.0" departLane="best" from="772266520#2" to="772266520#2">
-        <stop busStop="1118396324@13280819" duration="30"/>
-    </trip>
-    <trip id="60_bus_Bus:_Barcelona_=_Guimerà:0" type="pt_bus" depart="94.0" departLane="best" from="352482723" to="-544243183">
-        <stop busStop="539147490" duration="30"/>
-    </trip>
-    <trip id="61_train_Iryo:0" type="pt_train" depart="98.0" departLane="best" from="656070998" to="772266520#2">
-        <stop busStop="1118396324@13280819" duration="30"/>
-    </trip>
-    <trip id="62_train_Iryo:1" type="pt_train" depart="99.0" departLane="best" from="772266520#2" to="772266520#2">
-        <stop busStop="1118396324@13280819" duration="30"/>
-    </trip>
-    <trip id="63_train_Iryo:2" type="pt_train" depart="102.0" departLane="best" from="656070998" to="772266520#2">
-        <stop busStop="1118396324@13280819" duration="30"/>
-    </trip>
-    <trip id="64_train_Iryo:3" type="pt_train" depart="107.0" departLane="best" from="772266520#2" to="772266520#2">
-        <stop busStop="1118396324@13280819" duration="30"/>
-    </trip>
-    <trip id="65_train_R16:0" type="pt_train" depart="107.0" departLane="best" from="217122022" to="267004206">
+    <trip id="14_train_R16:0" type="pt_train" depart="51.0" departLane="best" from="217122022" to="217122022">
         <stop busStop="7215417855" duration="30"/>
-        <stop busStop="4743352986" duration="30"/>
-        <stop busStop="1305698291" duration="30"/>
     </trip>
-    <trip id="66_train_Iryo:4" type="pt_train" depart="111.0" departLane="best" from="772266520#2" to="772266520#2">
-        <stop busStop="1118396324@13280819" duration="30"/>
+    <trip id="15_train_S1:0" type="pt_train" depart="52.0" departLane="best" from="866397102#0" to="866397102#0">
+        <stop busStop="8087619814" duration="30"/>
     </trip>
-    <trip id="67_train_Iryo:5" type="pt_train" depart="114.0" departLane="best" from="656070998" to="772266520#2">
-        <stop busStop="1118396324@13280819" duration="30"/>
+    <trip id="16_bus_N20:0" type="pt_bus" depart="54.0" departLane="best" from="519375847#1" to="243591204#3">
+        <stop busStop="2989714853" duration="30"/>
     </trip>
-    <trip id="68_bus_89:0" type="pt_bus" depart="114.0" departLane="best" from="867009429" to="880513895#9">
-        <stop busStop="5609791818" duration="30"/>
+    <trip id="17_bus_N20:1" type="pt_bus" depart="55.0" departLane="best" from="532696001#0" to="237522644#2">
+        <stop busStop="1474608404" duration="30"/>
     </trip>
-    <trip id="69_bus_89:1" type="pt_bus" depart="115.0" departLane="best" from="185961564#0" to="880513897#9">
-        <stop busStop="5603009324" duration="30"/>
+    <trip id="18_bus_N4:0" type="pt_bus" depart="58.0" departLane="best" from="519375847#1" to="295263589#4">
+        <stop busStop="9788442646" duration="30"/>
     </trip>
-    <trip id="70_train_S1:0" type="pt_train" depart="119.0" departLane="best" from="866419086" to="-866397102#0">
-        <stop busStop="8075665237" duration="30"/>
-        <stop busStop="3398928369" duration="30"/>
-        <stop busStop="3398928366" duration="30"/>
-        <stop busStop="3398928326" duration="30"/>
-        <stop busStop="3398928343" duration="30"/>
-        <stop busStop="3398928311" duration="30"/>
-        <stop busStop="3398928337" duration="30"/>
-        <stop busStop="-8087619814" duration="30"/>
+    <trip id="19_bus_N4:1" type="pt_bus" depart="60.0" departLane="best" from="126301387#0" to="20475905#2">
+        <stop busStop="5609793224" duration="30"/>
     </trip>
-    <trip id="71_bus_X83:0" type="pt_bus" depart="120.0" departLane="best" from="-863629113" to="-544243183">
-        <stop busStop="-5341631256" duration="30"/>
-    </trip>
-    <trip id="72_bus_N20:0" type="pt_bus" depart="122.0" departLane="best" from="511211614#2" to="22650940#2">
-        <stop busStop="3706371090" duration="30"/>
-    </trip>
-    <trip id="73_bus_N20:1" type="pt_bus" depart="122.0" departLane="best" from="545715327#0" to="511211614#2">
-        <stop busStop="3460264088" duration="30"/>
-    </trip>
-    <trip id="74_bus_N4:0" type="pt_bus" depart="125.0" departLane="best" from="251684607#0" to="-36725973">
-        <stop busStop="5264363335" duration="30"/>
-    </trip>
-    <trip id="75_bus_LN_102_Olot_-_Amer_-_Barcelona:0" type="pt_bus" depart="126.0" departLane="best" from="1000249404" to="889215507#2">
-        <stop busStop="11158611551" duration="30"/>
-    </trip>
-    <trip id="76_bus_LN_102_Barcelona_-_Amer_-_Olot:0" type="pt_bus" depart="126.0" departLane="best" from="-1245668409" to="1000038393">
-        <stop busStop="-11573383354" duration="30"/>
-    </trip>
-    <trip id="77_bus_Bus:_Guimerà_=_Barcelona:0" type="pt_bus" depart="127.0" departLane="best" from="34054326#0" to="922121752#1">
-        <stop busStop="539147490@1744556" duration="30"/>
-    </trip>
-    <trip id="78_bus_123:0" type="pt_bus" depart="127.0" departLane="best" from="-32429563#2" to="-139259333#1">
-        <stop busStop="-8168365826" duration="30"/>
-    </trip>
-    <trip id="79_bus_N4:1" type="pt_bus" depart="128.0" departLane="best" from="486756071" to="140001510#11">
-        <stop busStop="-8220384277" duration="30"/>
-    </trip>
-    <trip id="80_subway_L3:0" type="pt_subway" depart="128.0" departLane="best" from="38912601#0" to="549712748#1">
+    <trip id="20_subway_L3:0" type="pt_subway" depart="65.0" departLane="best" from="38912601#0" to="38912601#3">
         <stop busStop="3699659475" duration="30"/>
         <stop busStop="462259779" duration="30"/>
         <stop busStop="1238021418" duration="30"/>
@@ -324,48 +112,21 @@
         <stop busStop="1043786437" duration="30"/>
         <stop busStop="2526271760" duration="30"/>
         <stop busStop="5310050887" duration="30"/>
-        <stop busStop="462206272" duration="30"/>
-        <stop busStop="1479334838" duration="30"/>
-        <stop busStop="191777835" duration="30"/>
-        <stop busStop="191777837" duration="30"/>
-        <stop busStop="290020517" duration="30"/>
-        <stop busStop="191777840" duration="30"/>
-        <stop busStop="251543380" duration="30"/>
     </trip>
-    <trip id="81_subway_L4:0" type="pt_subway" depart="131.0" departLane="best" from="871431261" to="332591364#1">
-        <stop busStop="3397396371" duration="30"/>
-        <stop busStop="3397396370" duration="30"/>
-        <stop busStop="3397396392" duration="30"/>
-        <stop busStop="3397396663" duration="30"/>
-        <stop busStop="3397396646" duration="30"/>
-        <stop busStop="3397396621" duration="30"/>
-        <stop busStop="3397396372" duration="30"/>
-        <stop busStop="3397396381" duration="30"/>
+    <trip id="21_subway_L4:0" type="pt_subway" depart="66.0" departLane="best" from="871431262" to="871431262">
         <stop busStop="3397396367" duration="30"/>
         <stop busStop="3397396612" duration="30"/>
         <stop busStop="3397396674" duration="30"/>
         <stop busStop="3397396637" duration="30"/>
-        <stop busStop="3397396603" duration="30"/>
-        <stop busStop="3397396681" duration="30"/>
-        <stop busStop="3397396613" duration="30"/>
-        <stop busStop="3397396359" duration="30"/>
-        <stop busStop="3397396607" duration="30"/>
-        <stop busStop="3397396624" duration="30"/>
     </trip>
-    <trip id="82_subway_L2:0" type="pt_subway" depart="131.0" departLane="best" from="549603120#0" to="549603120#2">
+    <trip id="22_subway_L2:0" type="pt_subway" depart="72.0" departLane="best" from="549603120" to="549603120">
         <stop busStop="3397396636" duration="30"/>
         <stop busStop="3397396654" duration="30"/>
         <stop busStop="3397396672" duration="30"/>
         <stop busStop="5314633543" duration="30"/>
         <stop busStop="3397396665" duration="30"/>
-        <stop busStop="3397396630" duration="30"/>
-        <stop busStop="3397396652" duration="30"/>
-        <stop busStop="3397396594" duration="30"/>
     </trip>
-    <trip id="83_subway_L1:0" type="pt_subway" depart="132.0" departLane="best" from="812545729" to="810841346#1">
-        <stop busStop="463164959" duration="30"/>
-        <stop busStop="1417675799" duration="30"/>
-        <stop busStop="463164955" duration="30"/>
+    <trip id="23_subway_L1:0" type="pt_subway" depart="77.0" departLane="best" from="810841346" to="810841346">
         <stop busStop="1417675798" duration="30"/>
         <stop busStop="463164954" duration="30"/>
         <stop busStop="463164953" duration="30"/>
@@ -376,304 +137,70 @@
         <stop busStop="463164950" duration="30"/>
         <stop busStop="462685387" duration="30"/>
     </trip>
-    <trip id="84_subway_L8:0" type="pt_subway" depart="132.0" departLane="best" from="1177980248" to="1177980248">
-        <stop busStop="3377296749" duration="30"/>
-    </trip>
-    <trip id="85_subway_L5:0" type="pt_subway" depart="133.0" departLane="best" from="550291370#0" to="550291366#1">
-        <stop busStop="463213866" duration="30"/>
-        <stop busStop="463164956" duration="30"/>
-        <stop busStop="3120082942" duration="30"/>
-        <stop busStop="463213865" duration="30"/>
-        <stop busStop="3139686771" duration="30"/>
-        <stop busStop="3397396388" duration="30"/>
-        <stop busStop="3371097296" duration="30"/>
-        <stop busStop="462295964" duration="30"/>
-        <stop busStop="463213863" duration="30"/>
-    </trip>
-    <trip id="86_train_R14:0" type="pt_train" depart="133.0" departLane="best" from="217122022" to="267004206">
+    <trip id="24_train_R14:0" type="pt_train" depart="91.0" departLane="best" from="217122022" to="217122022">
         <stop busStop="7215417855" duration="30"/>
-        <stop busStop="4743352986" duration="30"/>
-        <stop busStop="1305698291" duration="30"/>
     </trip>
-    <trip id="87_subway_L6:0" type="pt_subway" depart="134.0" departLane="best" from="-867668763" to="38915350">
-        <stop busStop="-3673333976" duration="30"/>
-        <stop busStop="255406917" duration="30"/>
-        <stop busStop="802777749" duration="30"/>
-        <stop busStop="255406869" duration="30"/>
-        <stop busStop="255406873" duration="30"/>
-        <stop busStop="259649936" duration="30"/>
-        <stop busStop="259649938" duration="30"/>
-        <stop busStop="417330037" duration="30"/>
+    <trip id="25_subway_L6:0" type="pt_subway" depart="93.0" departLane="best" from="363139234" to="363139234">
+        <stop busStop="3673333976" duration="30"/>
     </trip>
-    <trip id="88_subway_L7:0" type="pt_subway" depart="136.0" departLane="best" from="867668762" to="363164188#1">
+    <trip id="26_subway_L7:0" type="pt_subway" depart="98.0" departLane="best" from="867668762" to="867668775">
         <stop busStop="3673333977" duration="30"/>
-        <stop busStop="255406917" duration="30"/>
-        <stop busStop="3398928312" duration="30"/>
-        <stop busStop="3398928333" duration="30"/>
-        <stop busStop="259650072" duration="30"/>
-        <stop busStop="259650081" duration="30"/>
     </trip>
-    <trip id="89_train_R1:1" type="pt_train" depart="136.0" departLane="best" from="754813645" to="481374954#1">
-        <stop busStop="1305698377" duration="30"/>
+    <trip id="27_train_R1:1" type="pt_train" depart="102.0" departLane="best" from="810224247" to="385539466#1">
         <stop busStop="3141961384" duration="30"/>
-        <stop busStop="429766634" duration="30"/>
     </trip>
-    <trip id="90_train_R2:0" type="pt_train" depart="137.0" departLane="best" from="267004208" to="276960808">
-        <stop busStop="1305698373" duration="30"/>
-        <stop busStop="4743352987" duration="30"/>
-    </trip>
-    <trip id="91_train_R4:0" type="pt_train" depart="137.0" departLane="best" from="754813645" to="-385539469">
-        <stop busStop="1305698377" duration="30"/>
+    <trip id="28_train_R4:0" type="pt_train" depart="107.0" departLane="best" from="810224247" to="385539466#1">
         <stop busStop="3141961384" duration="30"/>
-        <stop busStop="429766634" duration="30"/>
     </trip>
-    <trip id="92_train_R2Sud:0" type="pt_train" depart="138.0" departLane="best" from="267004208" to="772812648">
-        <stop busStop="1305698373" duration="30"/>
-        <stop busStop="4743352987" duration="30"/>
+    <trip id="29_train_R2Sud:0" type="pt_train" depart="119.0" departLane="best" from="216952581" to="216952581">
         <stop busStop="7215417857" duration="30"/>
     </trip>
-    <trip id="93_train_R2Nord:0" type="pt_train" depart="139.0" departLane="best" from="385539472" to="267004206">
-        <stop busStop="4743352986" duration="30"/>
-        <stop busStop="1305698291" duration="30"/>
-    </trip>
-    <trip id="94_bus_B20:0" type="pt_bus" depart="141.0" departLane="best" from="466765995#0" to="511211614#2">
-        <stop busStop="5597374300" duration="30"/>
-    </trip>
-    <trip id="95_train_R12:0" type="pt_train" depart="142.0" departLane="best" from="754813645" to="-385539469">
-        <stop busStop="1305698377" duration="30"/>
+    <trip id="30_train_R12:0" type="pt_train" depart="120.0" departLane="best" from="810224247" to="385539466#1">
         <stop busStop="3141961384" duration="30"/>
-        <stop busStop="429766634" duration="30"/>
     </trip>
-    <trip id="96_bus_L0101:0" type="pt_bus" depart="143.0" departLane="best" from="34054326#0" to="4746993#2">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="97_train_S3:0" type="pt_train" depart="147.0" departLane="best" from="1177980248" to="1177980248">
-        <stop busStop="3377296749" duration="30"/>
-    </trip>
-    <trip id="98_bus_N51:0" type="pt_bus" depart="147.0" departLane="best" from="545715327#0" to="542956873">
-        <stop busStop="3460264088" duration="30"/>
-    </trip>
-    <trip id="99_train_R16:1" type="pt_train" depart="149.0" departLane="best" from="267004208" to="772812648">
-        <stop busStop="1305698373" duration="30"/>
-        <stop busStop="4743352987" duration="30"/>
+    <trip id="31_train_R16:1" type="pt_train" depart="125.0" departLane="best" from="216952581" to="216952581">
         <stop busStop="7215417857" duration="30"/>
     </trip>
-    <trip id="100_bus_V7:0" type="pt_bus" depart="149.0" departLane="best" from="853255412#6" to="918377538">
-        <stop busStop="7959328712" duration="30"/>
+    <trip id="32_bus_7:0" type="pt_bus" depart="126.0" departLane="best" from="449991617#0" to="237522644#2">
+        <stop busStop="5274072653" duration="30"/>
     </trip>
-    <trip id="101_bus_V7:1" type="pt_bus" depart="149.0" departLane="best" from="123616988" to="853255412#6">
-        <stop busStop="8194685209" duration="30"/>
-    </trip>
-    <trip id="102_train_AVE:3" type="pt_train" depart="152.0" departLane="best" from="656070998" to="772266514#2">
-        <stop busStop="1118408124@13431684" duration="30"/>
-    </trip>
-    <trip id="103_bus_7:0" type="pt_bus" depart="157.0" departLane="best" from="34054326#0" to="310929467#1">
-        <stop busStop="5343770281" duration="30"/>
-    </trip>
-    <trip id="104_bus_27:0" type="pt_bus" depart="157.0" departLane="best" from="180403384#2" to="-36725973">
-        <stop busStop="2508645446" duration="30"/>
-    </trip>
-    <trip id="105_bus_39:0" type="pt_bus" depart="158.0" departLane="best" from="653349598#1" to="831182072#1">
+    <trip id="33_bus_39:0" type="pt_bus" depart="127.0" departLane="best" from="68506233#0" to="20475905#2">
         <stop busStop="6123166500" duration="30"/>
     </trip>
-    <trip id="106_bus_62:0" type="pt_bus" depart="158.0" departLane="best" from="94765579#0" to="238179136#1">
-        <stop busStop="8279041072" duration="30"/>
+    <trip id="34_bus_H16:0" type="pt_bus" depart="131.0" departLane="best" from="519375847#1" to="246638748#2">
+        <stop busStop="2989714854" duration="30"/>
     </trip>
-    <trip id="107_bus_115:0" type="pt_bus" depart="158.0" departLane="best" from="831157579#0" to="30761362#1">
-        <stop busStop="7760665318" duration="30"/>
+    <trip id="35_bus_H12:0" type="pt_bus" depart="131.0" departLane="best" from="1110435370#0" to="545747635#2">
+        <stop busStop="5274384898" duration="30"/>
     </trip>
-    <trip id="108_bus_46:0" type="pt_bus" depart="159.0" departLane="best" from="770048769#0" to="22650940#2">
-        <stop busStop="1966516541" duration="30"/>
+    <trip id="36_bus_D20:0" type="pt_bus" depart="132.0" departLane="best" from="359739475#0" to="-4079513#0">
+        <stop busStop="2610196515" duration="30"/>
     </trip>
-    <trip id="109_bus_H8:0" type="pt_bus" depart="159.0" departLane="best" from="251684607#0" to="450020890">
-        <stop busStop="5264363335" duration="30"/>
+    <trip id="37_bus_67:0" type="pt_bus" depart="132.0" departLane="best" from="449991617#0" to="126304603#2">
+        <stop busStop="8214234925" duration="30"/>
     </trip>
-    <trip id="110_bus_H16:0" type="pt_bus" depart="159.0" departLane="best" from="237927190#0" to="22650940#2">
-        <stop busStop="8206342477" duration="30"/>
+    <trip id="38_bus_X1:0" type="pt_bus" depart="133.0" departLane="best" from="532696001#0" to="316789524#1">
+        <stop busStop="1474608404" duration="30"/>
     </trip>
-    <trip id="111_bus_H12:0" type="pt_bus" depart="159.0" departLane="best" from="1079083285#0" to="22650940#2">
-        <stop busStop="10044468938" duration="30"/>
-        <stop busStop="8072606812" duration="30"/>
-    </trip>
-    <trip id="112_bus_7:1" type="pt_bus" depart="160.0" departLane="best" from="45944519#0" to="-544243183">
-        <stop busStop="8072634461" duration="30"/>
-    </trip>
-    <trip id="113_bus_D20:0" type="pt_bus" depart="160.0" departLane="best" from="1081172040#1" to="-45185735#13">
-        <stop busStop="5318776513" duration="30"/>
-    </trip>
-    <trip id="114_bus_H8:1" type="pt_bus" depart="160.0" departLane="best" from="-450020890" to="140001510#11">
-        <stop busStop="-5259830245" duration="30"/>
-    </trip>
-    <trip id="115_bus_H6:0" type="pt_bus" depart="160.0" departLane="best" from="543400540#0" to="541711519#1">
-        <stop busStop="5253055691" duration="30"/>
-    </trip>
-    <trip id="116_bus_33:0" type="pt_bus" depart="163.0" departLane="best" from="34054326#0" to="601634007#9">
-        <stop busStop="5343770281" duration="30"/>
-    </trip>
-    <trip id="117_bus_67:0" type="pt_bus" depart="165.0" departLane="best" from="34054326#0" to="126304603#2">
-        <stop busStop="5343770281" duration="30"/>
-    </trip>
-    <trip id="118_bus_39:1" type="pt_bus" depart="166.0" departLane="best" from="1264838278#0" to="653349598#1">
-        <stop busStop="8259972654" duration="30"/>
-    </trip>
-    <trip id="119_bus_H6:1" type="pt_bus" depart="166.0" departLane="best" from="36725973" to="208616306">
-        <stop busStop="5249411005" duration="30"/>
-    </trip>
-    <trip id="120_bus_70:0" type="pt_bus" depart="167.0" departLane="best" from="308379372#1" to="45185732#4">
-        <stop busStop="8286917379" duration="30"/>
-    </trip>
-    <trip id="121_bus_34:2" type="pt_bus" depart="167.0" departLane="best" from="237912796#0" to="208616306">
-        <stop busStop="2573396945" duration="30"/>
-        <stop busStop="1361887280" duration="30"/>
-        <stop busStop="983361247" duration="30"/>
-        <stop busStop="2573351864" duration="30"/>
-        <stop busStop="2573351868" duration="30"/>
-    </trip>
-    <trip id="122_bus_X1:1" type="pt_bus" depart="173.0" departLane="best" from="984712370" to="1186706639#1">
-        <stop busStop="8097436674" duration="30"/>
-    </trip>
-    <trip id="123_bus_N40:0" type="pt_bus" depart="177.0" departLane="best" from="542956873" to="542956873">
+    <trip id="39_bus_N40:0" type="pt_bus" depart="134.0" departLane="best" from="542956873" to="542956873">
         <stop busStop="1966472090" duration="30"/>
     </trip>
-    <trip id="124_train_R15:0" type="pt_train" depart="178.0" departLane="best" from="267004208" to="772812648">
-        <stop busStop="1305698373" duration="30"/>
-        <stop busStop="4743352987" duration="30"/>
+    <trip id="40_train_R15:0" type="pt_train" depart="136.0" departLane="best" from="216952581" to="216952581">
         <stop busStop="7215417857" duration="30"/>
     </trip>
-    <trip id="125_bus_N81:0" type="pt_bus" depart="179.0" departLane="best" from="295263589#0" to="1000038393">
-        <stop busStop="3092785220" duration="30"/>
-    </trip>
-    <trip id="126_bus_68:0" type="pt_bus" depart="179.0" departLane="best" from="238324877#1" to="308378769">
-        <stop busStop="2510905949" duration="30"/>
-    </trip>
-    <trip id="127_bus_68:1" type="pt_bus" depart="179.0" departLane="best" from="-308378769" to="238324877#1">
-        <stop busStop="-8199176443" duration="30"/>
-    </trip>
-    <trip id="128_bus_65:0" type="pt_bus" depart="180.0" departLane="best" from="770048769#0" to="22650940#2">
-        <stop busStop="1966516541" duration="30"/>
-    </trip>
-    <trip id="129_bus_e11.1:0" type="pt_bus" depart="180.0" departLane="best" from="1000249404" to="542956873">
+    <trip id="41_bus_e11.1:0" type="pt_bus" depart="137.0" departLane="best" from="519375848#0" to="542956873">
         <stop busStop="1966472090" duration="30"/>
     </trip>
-    <trip id="130_bus_e11.1:1" type="pt_bus" depart="183.0" departLane="best" from="542956873" to="1000038393">
+    <trip id="42_bus_e11.1:1" type="pt_bus" depart="138.0" departLane="best" from="542956873" to="237522644#2">
         <stop busStop="1966472090" duration="30"/>
     </trip>
-    <trip id="131_bus_e11.2:0" type="pt_bus" depart="184.0" departLane="best" from="1000249404" to="542956873">
+    <trip id="43_bus_e11.2:0" type="pt_bus" depart="139.0" departLane="best" from="519375848#0" to="542956873">
         <stop busStop="1966472090" duration="30"/>
     </trip>
-    <trip id="132_bus_e11.2:1" type="pt_bus" depart="184.0" departLane="best" from="542956873" to="1000038393">
+    <trip id="44_bus_e11.2:1" type="pt_bus" depart="147.0" departLane="best" from="542956873" to="237522644#2">
         <stop busStop="1966472090" duration="30"/>
     </trip>
-    <trip id="133_tram_T4:0" type="pt_tram" depart="185.0" departLane="best" from="332345198" to="332345199#25">
-        <stop busStop="3394604141" duration="30"/>
-        <stop busStop="3394604179" duration="30"/>
-        <stop busStop="3394604164" duration="30"/>
-        <stop busStop="3394604129" duration="30"/>
-        <stop busStop="3394604154" duration="30"/>
-        <stop busStop="3394604132" duration="30"/>
-        <stop busStop="3394604168" duration="30"/>
-        <stop busStop="3394604150" duration="30"/>
-        <stop busStop="3394604176" duration="30"/>
-    </trip>
-    <trip id="134_tram_T4:1" type="pt_tram" depart="187.0" departLane="best" from="332345200#0" to="332345188#34">
-        <stop busStop="3394604137" duration="30"/>
-        <stop busStop="3394604153" duration="30"/>
-        <stop busStop="3394604143" duration="30"/>
-        <stop busStop="3394604177" duration="30"/>
-        <stop busStop="3394604151" duration="30"/>
-        <stop busStop="3394604169" duration="30"/>
-        <stop busStop="3394604133" duration="30"/>
-        <stop busStop="3394604155" duration="30"/>
-        <stop busStop="3394604128" duration="30"/>
-        <stop busStop="3394604165" duration="30"/>
-        <stop busStop="3394604178" duration="30"/>
-        <stop busStop="3394604140" duration="30"/>
-    </trip>
-    <trip id="135_tram_T5:0" type="pt_tram" depart="188.0" departLane="best" from="1204050254" to="332345205#5">
-        <stop busStop="3394604154" duration="30"/>
-        <stop busStop="3394604160" duration="30"/>
-    </trip>
-    <trip id="136_tram_T5:1" type="pt_tram" depart="188.0" departLane="best" from="-332345205#5" to="1188038976#1">
-        <stop busStop="3394604161" duration="30"/>
-        <stop busStop="3394604155" duration="30"/>
-    </trip>
-    <trip id="137_tram_T6:0" type="pt_tram" depart="188.0" departLane="best" from="-332345205#5" to="1188038976#1">
-        <stop busStop="3394604161" duration="30"/>
-        <stop busStop="3394604155" duration="30"/>
-    </trip>
-    <trip id="138_tram_T6:1" type="pt_tram" depart="189.0" departLane="best" from="1204050254" to="332345205#5">
-        <stop busStop="3394604154" duration="30"/>
-        <stop busStop="3394604160" duration="30"/>
-    </trip>
-    <trip id="139_tram_T1:0" type="pt_tram" depart="189.0" departLane="best" from="332413953#0" to="332413953#26">
-        <stop busStop="3395373892" duration="30"/>
-        <stop busStop="3395373883" duration="30"/>
-        <stop busStop="3395374212" duration="30"/>
-        <stop busStop="3395374205" duration="30"/>
-        <stop busStop="3395374207" duration="30"/>
-        <stop busStop="3395374199" duration="30"/>
-        <stop busStop="3395374203" duration="30"/>
-        <stop busStop="3395374197" duration="30"/>
-        <stop busStop="3395374193" duration="30"/>
-    </trip>
-    <trip id="140_tram_T1:1" type="pt_tram" depart="194.0" departLane="best" from="332413952" to="405215272#26">
-        <stop busStop="3395374194" duration="30"/>
-        <stop busStop="3395374198" duration="30"/>
-        <stop busStop="3395374204" duration="30"/>
-        <stop busStop="3395374200" duration="30"/>
-        <stop busStop="3395374208" duration="30"/>
-        <stop busStop="3395374206" duration="30"/>
-        <stop busStop="3395374211" duration="30"/>
-        <stop busStop="3395373884" duration="30"/>
-        <stop busStop="3395373891" duration="30"/>
-    </trip>
-    <trip id="141_tram_T2:0" type="pt_tram" depart="196.0" departLane="best" from="332413952" to="405215272#26">
-        <stop busStop="3395374194" duration="30"/>
-        <stop busStop="3395374198" duration="30"/>
-        <stop busStop="3395374204" duration="30"/>
-        <stop busStop="3395374200" duration="30"/>
-        <stop busStop="3395374208" duration="30"/>
-        <stop busStop="3395374206" duration="30"/>
-        <stop busStop="3395374211" duration="30"/>
-        <stop busStop="3395373884" duration="30"/>
-        <stop busStop="3395373891" duration="30"/>
-    </trip>
-    <trip id="142_tram_T2:1" type="pt_tram" depart="198.0" departLane="best" from="332413953#0" to="332413953#26">
-        <stop busStop="3395373892" duration="30"/>
-        <stop busStop="3395373883" duration="30"/>
-        <stop busStop="3395374212" duration="30"/>
-        <stop busStop="3395374205" duration="30"/>
-        <stop busStop="3395374207" duration="30"/>
-        <stop busStop="3395374199" duration="30"/>
-        <stop busStop="3395374203" duration="30"/>
-        <stop busStop="3395374197" duration="30"/>
-        <stop busStop="3395374193" duration="30"/>
-    </trip>
-    <trip id="143_tram_T3:0" type="pt_tram" depart="199.0" departLane="best" from="332413952" to="405215272#26">
-        <stop busStop="3395374194" duration="30"/>
-        <stop busStop="3395374198" duration="30"/>
-        <stop busStop="3395374204" duration="30"/>
-        <stop busStop="3395374200" duration="30"/>
-        <stop busStop="3395374208" duration="30"/>
-        <stop busStop="3395374206" duration="30"/>
-        <stop busStop="3395374211" duration="30"/>
-        <stop busStop="3395373884" duration="30"/>
-        <stop busStop="3395373891" duration="30"/>
-    </trip>
-    <trip id="144_tram_T3:1" type="pt_tram" depart="201.0" departLane="best" from="332413953#0" to="332413953#26">
-        <stop busStop="3395373892" duration="30"/>
-        <stop busStop="3395373883" duration="30"/>
-        <stop busStop="3395374212" duration="30"/>
-        <stop busStop="3395374205" duration="30"/>
-        <stop busStop="3395374207" duration="30"/>
-        <stop busStop="3395374199" duration="30"/>
-        <stop busStop="3395374203" duration="30"/>
-        <stop busStop="3395374197" duration="30"/>
-        <stop busStop="3395374193" duration="30"/>
-    </trip>
-    <trip id="145_subway_L2:1" type="pt_subway" depart="202.0" departLane="best" from="550192960" to="447856553#1">
-        <stop busStop="462295966" duration="30"/>
-        <stop busStop="3397396651" duration="30"/>
+    <trip id="45_subway_L2:1" type="pt_subway" depart="157.0" departLane="best" from="447856553" to="447856553">
         <stop busStop="462295962" duration="30"/>
         <stop busStop="462295955" duration="30"/>
         <stop busStop="5314633722" duration="30"/>
@@ -681,29 +208,13 @@
         <stop busStop="462295947" duration="30"/>
         <stop busStop="3699659474" duration="30"/>
     </trip>
-    <trip id="146_subway_L4:1" type="pt_subway" depart="203.0" departLane="best" from="454749367" to="866378044#4">
-        <stop busStop="462256429" duration="30"/>
-        <stop busStop="462256426" duration="30"/>
-        <stop busStop="462256424" duration="30"/>
-        <stop busStop="462256423" duration="30"/>
-        <stop busStop="462256421" duration="30"/>
-        <stop busStop="462256419" duration="30"/>
+    <trip id="46_subway_L4:1" type="pt_subway" depart="158.0" departLane="best" from="866378042#0" to="866393905#1">
         <stop busStop="462256418" duration="30"/>
         <stop busStop="462256414" duration="30"/>
         <stop busStop="462256413" duration="30"/>
         <stop busStop="462256384" duration="30"/>
-        <stop busStop="462256394" duration="30"/>
-        <stop busStop="462256396" duration="30"/>
-        <stop busStop="462256397" duration="30"/>
-        <stop busStop="462256399" duration="30"/>
-        <stop busStop="987167201" duration="30"/>
-        <stop busStop="462256402" duration="30"/>
-        <stop busStop="462256406" duration="30"/>
-        <stop busStop="462256407" duration="30"/>
     </trip>
-    <trip id="147_subway_L1:1" type="pt_subway" depart="204.0" departLane="best" from="1150213190" to="812545733#6">
-        <stop busStop="3397396604" duration="30"/>
-        <stop busStop="3397396627" duration="30"/>
+    <trip id="47_subway_L1:1" type="pt_subway" depart="158.0" departLane="best" from="810841352#0" to="810841352#1">
         <stop busStop="3397396360" duration="30"/>
         <stop busStop="4449876855" duration="30"/>
         <stop busStop="3397396380" duration="30"/>
@@ -711,18 +222,8 @@
         <stop busStop="3397396673" duration="30"/>
         <stop busStop="3397396649" duration="30"/>
         <stop busStop="3397396596" duration="30"/>
-        <stop busStop="3397396611" duration="30"/>
-        <stop busStop="3397396642" duration="30"/>
-        <stop busStop="3397396628" duration="30"/>
     </trip>
-    <trip id="148_subway_L3:1" type="pt_subway" depart="218.0" departLane="best" from="549712749#0" to="332758526#3">
-        <stop busStop="3398928364" duration="30"/>
-        <stop busStop="3398928328" duration="30"/>
-        <stop busStop="3398928323" duration="30"/>
-        <stop busStop="3398928368" duration="30"/>
-        <stop busStop="3398928335" duration="30"/>
-        <stop busStop="3398928348" duration="30"/>
-        <stop busStop="3398928353" duration="30"/>
+    <trip id="48_subway_L3:1" type="pt_subway" depart="159.0" departLane="best" from="332758526#0" to="332758526#1">
         <stop busStop="5310050767" duration="30"/>
         <stop busStop="3398928336" duration="30"/>
         <stop busStop="3398928329" duration="30"/>
@@ -743,807 +244,324 @@
         <stop busStop="3398928341" duration="30"/>
         <stop busStop="3398928355" duration="30"/>
     </trip>
-    <trip id="149_subway_L5:1" type="pt_subway" depart="218.0" departLane="best" from="550291358" to="550291367#1">
-        <stop busStop="3398928346" duration="30"/>
-        <stop busStop="3398928342" duration="30"/>
-        <stop busStop="3398928361" duration="30"/>
-        <stop busStop="3398928296" duration="30"/>
-        <stop busStop="3398928314" duration="30"/>
-        <stop busStop="3398928301" duration="30"/>
-        <stop busStop="3398928300" duration="30"/>
-        <stop busStop="3398928334" duration="30"/>
-        <stop busStop="3398923277" duration="30"/>
-    </trip>
-    <trip id="150_subway_L6:1" type="pt_subway" depart="221.0" departLane="best" from="866419086" to="363139234">
-        <stop busStop="8075665237" duration="30"/>
-        <stop busStop="3398928369" duration="30"/>
-        <stop busStop="3398928366" duration="30"/>
-        <stop busStop="3398928326" duration="30"/>
-        <stop busStop="3398928343" duration="30"/>
-        <stop busStop="3398928311" duration="30"/>
-        <stop busStop="3398928337" duration="30"/>
+    <trip id="49_subway_L6:1" type="pt_subway" depart="160.0" departLane="best" from="867668776" to="363139234">
         <stop busStop="3673333976" duration="30"/>
     </trip>
-    <trip id="151_subway_L8:1" type="pt_subway" depart="222.0" departLane="best" from="1177980249" to="1177980249">
-        <stop busStop="3398928332" duration="30"/>
+    <trip id="50_bus_H12:1" type="pt_bus" depart="160.0" departLane="best" from="532696001#0" to="237522644#2">
+        <stop busStop="5760480286" duration="30"/>
     </trip>
-    <trip id="152_bus_H12:1" type="pt_bus" depart="227.0" departLane="best" from="545715327#0" to="288840915#1">
-        <stop busStop="3460264088" duration="30"/>
-    </trip>
-    <trip id="153_bus_H10:0" type="pt_bus" depart="227.0" departLane="best" from="652024041#1" to="601634007#9">
-        <stop busStop="8193604498" duration="30"/>
-    </trip>
-    <trip id="154_bus_H10:1" type="pt_bus" depart="227.0" departLane="best" from="237912796#0" to="652024041#1">
-        <stop busStop="2573396945" duration="30"/>
-    </trip>
-    <trip id="155_train_S1:1" type="pt_train" depart="228.0" departLane="best" from="866397102#0" to="38915350">
+    <trip id="51_train_S1:1" type="pt_train" depart="160.0" departLane="best" from="866397102#0" to="867668775">
         <stop busStop="8087619814" duration="30"/>
-        <stop busStop="255406917" duration="30"/>
-        <stop busStop="802777749" duration="30"/>
-        <stop busStop="255406873" duration="30"/>
-        <stop busStop="417330037" duration="30"/>
     </trip>
-    <trip id="156_subway_L7:1" type="pt_subway" depart="231.0" departLane="best" from="363164188#1" to="-867668758">
-        <stop busStop="3398928365" duration="30"/>
-        <stop busStop="3398928339" duration="30"/>
-        <stop busStop="259650063" duration="30"/>
-        <stop busStop="1899907352" duration="30"/>
-        <stop busStop="3398928337" duration="30"/>
-        <stop busStop="-3673333977" duration="30"/>
+    <trip id="52_subway_L7:1" type="pt_subway" depart="165.0" departLane="best" from="867668762" to="867668762">
+        <stop busStop="3673333977" duration="30"/>
     </trip>
-    <trip id="157_train_S2:1" type="pt_train" depart="237.0" departLane="best" from="866419086" to="-866397101">
-        <stop busStop="8075665237" duration="30"/>
-        <stop busStop="3398928369" duration="30"/>
-        <stop busStop="3398928366" duration="30"/>
-        <stop busStop="3398928326" duration="30"/>
-        <stop busStop="3398928343" duration="30"/>
-        <stop busStop="3398928311" duration="30"/>
-        <stop busStop="3398928337" duration="30"/>
-        <stop busStop="-8087619815" duration="30"/>
+    <trip id="53_train_S2:1" type="pt_train" depart="166.0" departLane="best" from="866397101" to="866397101">
+        <stop busStop="8087619815" duration="30"/>
     </trip>
-    <trip id="158_train_S3:1" type="pt_train" depart="237.0" departLane="best" from="1177980249" to="1177980249">
-        <stop busStop="3398928332" duration="30"/>
-    </trip>
-    <trip id="159_train_S8:0" type="pt_train" depart="239.0" departLane="best" from="1177980248" to="1177980248">
-        <stop busStop="3377296749" duration="30"/>
-    </trip>
-    <trip id="160_train_S8:1" type="pt_train" depart="239.0" departLane="best" from="1177980249" to="1177980249">
-        <stop busStop="3398928332" duration="30"/>
-    </trip>
-    <trip id="161_train_S4:0" type="pt_train" depart="240.0" departLane="best" from="1177980249" to="1177980249">
-        <stop busStop="3398928332" duration="30"/>
-    </trip>
-    <trip id="162_train_S4:1" type="pt_train" depart="241.0" departLane="best" from="1177980248" to="1177980248">
-        <stop busStop="3377296749" duration="30"/>
-    </trip>
-    <trip id="163_train_R6:0" type="pt_train" depart="241.0" departLane="best" from="1177980248" to="1177980248">
-        <stop busStop="3377296749" duration="30"/>
-    </trip>
-    <trip id="164_train_R6:1" type="pt_train" depart="243.0" departLane="best" from="1177980249" to="1177980249">
-        <stop busStop="3398928332" duration="30"/>
-    </trip>
-    <trip id="165_train_R60:0" type="pt_train" depart="245.0" departLane="best" from="1177980248" to="1177980248">
-        <stop busStop="3377296749" duration="30"/>
-    </trip>
-    <trip id="166_train_R60:1" type="pt_train" depart="251.0" departLane="best" from="1177980249" to="1177980249">
-        <stop busStop="3398928332" duration="30"/>
-    </trip>
-    <trip id="167_train_R5:0" type="pt_train" depart="252.0" departLane="best" from="1177980248" to="1177980248">
-        <stop busStop="3377296749" duration="30"/>
-    </trip>
-    <trip id="168_train_R5:1" type="pt_train" depart="253.0" departLane="best" from="1177980249" to="1177980249">
-        <stop busStop="3398928332" duration="30"/>
-    </trip>
-    <trip id="169_train_R50:0" type="pt_train" depart="253.0" departLane="best" from="1177980248" to="1177980248">
-        <stop busStop="3377296749" duration="30"/>
-    </trip>
-    <trip id="170_train_R50:1" type="pt_train" depart="253.0" departLane="best" from="1177980249" to="1177980249">
-        <stop busStop="3398928332" duration="30"/>
-    </trip>
-    <trip id="171_bus_C6:0" type="pt_bus" depart="253.0" departLane="best" from="542956873" to="1000038393">
+    <trip id="54_bus_C6:0" type="pt_bus" depart="173.0" departLane="best" from="542956873" to="237522644#2">
         <stop busStop="1966472090" duration="30"/>
     </trip>
-    <trip id="172_train_R2Sud:1" type="pt_train" depart="253.0" departLane="best" from="217122022" to="267004206">
+    <trip id="55_train_R2Sud:1" type="pt_train" depart="179.0" departLane="best" from="217122022" to="217122022">
         <stop busStop="7215417855" duration="30"/>
-        <stop busStop="4743352986" duration="30"/>
-        <stop busStop="1305698291" duration="30"/>
     </trip>
-    <trip id="173_train_R2Nord:1" type="pt_train" depart="254.0" departLane="best" from="267004208" to="276960808">
-        <stop busStop="1305698373" duration="30"/>
-        <stop busStop="4743352987" duration="30"/>
-    </trip>
-    <trip id="174_train_R2:1" type="pt_train" depart="254.0" departLane="best" from="385539472" to="267004206">
-        <stop busStop="4743352986" duration="30"/>
-        <stop busStop="1305698291" duration="30"/>
-    </trip>
-    <trip id="175_train_R3:0" type="pt_train" depart="256.0" departLane="best" from="385539467" to="38962089">
-        <stop busStop="3888388695" duration="30"/>
+    <trip id="56_train_R3:0" type="pt_train" depart="184.0" departLane="best" from="385483999" to="810841348#1">
         <stop busStop="3888388697" duration="30"/>
-        <stop busStop="-1305698325" duration="30"/>
     </trip>
-    <trip id="176_train_R3:1" type="pt_train" depart="258.0" departLane="best" from="754813645" to="-385539469">
-        <stop busStop="1305698377" duration="30"/>
+    <trip id="57_train_R3:1" type="pt_train" depart="187.0" departLane="best" from="810224247" to="385539466#1">
         <stop busStop="3141961384" duration="30"/>
-        <stop busStop="429766634" duration="30"/>
     </trip>
-    <trip id="177_train_R4:1" type="pt_train" depart="260.0" departLane="best" from="385539467" to="38962089">
-        <stop busStop="3888388695" duration="30"/>
+    <trip id="58_train_R4:1" type="pt_train" depart="188.0" departLane="best" from="385483999" to="810841348#1">
         <stop busStop="3888388697" duration="30"/>
-        <stop busStop="-1305698325" duration="30"/>
     </trip>
-    <trip id="178_train_RG1:0" type="pt_train" depart="260.0" departLane="best" from="754813645" to="481374954#1">
-        <stop busStop="1305698377" duration="30"/>
+    <trip id="59_train_RG1:0" type="pt_train" depart="189.0" departLane="best" from="810224247" to="385539466#1">
         <stop busStop="3141961384" duration="30"/>
-        <stop busStop="429766634" duration="30"/>
     </trip>
-    <trip id="179_train_R16:2" type="pt_train" depart="262.0" departLane="best" from="217122022" to="267004206">
+    <trip id="60_train_R16:2" type="pt_train" depart="194.0" departLane="best" from="217122022" to="217122022">
         <stop busStop="7215417855" duration="30"/>
-        <stop busStop="4743352986" duration="30"/>
-        <stop busStop="1305698291" duration="30"/>
     </trip>
-    <trip id="180_train_R16:3" type="pt_train" depart="265.0" departLane="best" from="267004208" to="772812648">
-        <stop busStop="1305698373" duration="30"/>
-        <stop busStop="4743352987" duration="30"/>
+    <trip id="61_train_R16:3" type="pt_train" depart="201.0" departLane="best" from="216952581" to="216952581">
         <stop busStop="7215417857" duration="30"/>
     </trip>
-    <trip id="181_train_R11:0" type="pt_train" depart="269.0" departLane="best" from="772266502#1" to="276960808">
-        <stop busStop="1305698373" duration="30"/>
-        <stop busStop="4743352987" duration="30"/>
-    </trip>
-    <trip id="182_train_R11:1" type="pt_train" depart="272.0" departLane="best" from="385539472" to="772558506">
-        <stop busStop="4743352986" duration="30"/>
-        <stop busStop="1305698291" duration="30"/>
-    </trip>
-    <trip id="183_train_R12:1" type="pt_train" depart="273.0" departLane="best" from="385539467" to="38962089">
-        <stop busStop="3888388695" duration="30"/>
+    <trip id="62_train_R12:1" type="pt_train" depart="202.0" departLane="best" from="385483999" to="810841348#1">
         <stop busStop="3888388697" duration="30"/>
-        <stop busStop="-1305698325" duration="30"/>
     </trip>
-    <trip id="184_train_R13:0" type="pt_train" depart="274.0" departLane="best" from="217122022" to="267004206">
+    <trip id="63_train_R13:0" type="pt_train" depart="204.0" departLane="best" from="217122022" to="217122022">
         <stop busStop="7215417855" duration="30"/>
-        <stop busStop="4743352986" duration="30"/>
-        <stop busStop="1305698291" duration="30"/>
     </trip>
-    <trip id="185_train_R13:1" type="pt_train" depart="275.0" departLane="best" from="267004208" to="772812648">
-        <stop busStop="1305698373" duration="30"/>
-        <stop busStop="4743352987" duration="30"/>
+    <trip id="64_train_R13:1" type="pt_train" depart="218.0" departLane="best" from="216952581" to="216952581">
         <stop busStop="7215417857" duration="30"/>
     </trip>
-    <trip id="186_train_R14:1" type="pt_train" depart="276.0" departLane="best" from="267004208" to="772812648">
-        <stop busStop="1305698373" duration="30"/>
-        <stop busStop="4743352987" duration="30"/>
+    <trip id="65_train_R14:1" type="pt_train" depart="222.0" departLane="best" from="216952581" to="216952581">
         <stop busStop="7215417857" duration="30"/>
     </trip>
-    <trip id="187_train_R15:1" type="pt_train" depart="280.0" departLane="best" from="217122022" to="267004206">
+    <trip id="66_train_R15:1" type="pt_train" depart="227.0" departLane="best" from="217122022" to="217122022">
         <stop busStop="7215417855" duration="30"/>
-        <stop busStop="4743352986" duration="30"/>
-        <stop busStop="1305698291" duration="30"/>
     </trip>
-    <trip id="188_bus_H16:1" type="pt_bus" depart="283.0" departLane="best" from="545715327#0" to="547440870#4">
-        <stop busStop="3460264088" duration="30"/>
+    <trip id="67_bus_H16:1" type="pt_bus" depart="227.0" departLane="best" from="591631503#0" to="237787045#0">
+        <stop busStop="5603006495" duration="30"/>
     </trip>
-    <trip id="189_train_Alvia_00664:0" type="pt_train" depart="285.0" departLane="best" from="772266518#0" to="656070993">
-        <stop busStop="1305698297" duration="30"/>
+    <trip id="68_bus_D20:1" type="pt_bus" depart="228.0" departLane="best" from="4079513#0" to="291731094#6">
+        <stop busStop="5609791814" duration="30"/>
     </trip>
-    <trip id="190_train_Alvia_00661:0" type="pt_train" depart="291.0" departLane="best" from="656070998" to="772266520#2">
-        <stop busStop="1118396324@13280819" duration="30"/>
+    <trip id="69_bus_N0:0" type="pt_bus" depart="237.0" departLane="best" from="283764984#0" to="-4079513#0">
     </trip>
-    <trip id="191_train_Alvia_00626:0" type="pt_train" depart="291.0" departLane="best" from="772266518#0" to="656070993">
-        <stop busStop="1305698297" duration="30"/>
+    <trip id="70_bus_N0:1" type="pt_bus" depart="239.0" departLane="best" from="4079513#0" to="293858825">
+        <stop busStop="5609791813" duration="30"/>
     </trip>
-    <trip id="192_train_Alvia_00621:0" type="pt_train" depart="293.0" departLane="best" from="656070998" to="772266520#2">
-        <stop busStop="1118396324@13280819" duration="30"/>
+    <trip id="71_bus_N1:0" type="pt_bus" depart="253.0" departLane="best" from="532696001#0" to="237522644#2">
+        <stop busStop="5760480286" duration="30"/>
     </trip>
-    <trip id="193_train_Alvia_00530:_Barcelona_Sants_-_Irun:0" type="pt_train" depart="300.0" departLane="best" from="772266518#0" to="656070993">
-        <stop busStop="1305698297" duration="30"/>
+    <trip id="72_bus_N1:1" type="pt_bus" depart="253.0" departLane="best" from="1110435370#0" to="545747635#2">
+        <stop busStop="5274384898" duration="30"/>
     </trip>
-    <trip id="194_bus_VAC-099:0" type="pt_bus" depart="301.0" departLane="best" from="544243184#0" to="4746993#2">
-        <stop busStop="1191150240" duration="30"/>
+    <trip id="73_bus_N2:0" type="pt_bus" depart="253.0" departLane="best" from="532696001#0" to="237522644#2">
+        <stop busStop="5760480286" duration="30"/>
     </trip>
-    <trip id="195_bus_D20:1" type="pt_bus" depart="303.0" departLane="best" from="45185735#0" to="1081172040#1">
-        <stop busStop="5760480296" duration="30"/>
+    <trip id="74_bus_N2:1" type="pt_bus" depart="260.0" departLane="best" from="1110435370#0" to="545747635#2">
+        <stop busStop="5274384898" duration="30"/>
     </trip>
-    <trip id="196_bus_N0:0" type="pt_bus" depart="305.0" departLane="best" from="4079520#2" to="4079520#2">
-        <stop busStop="21638918" duration="30"/>
+    <trip id="75_bus_N3:0" type="pt_bus" depart="262.0" departLane="best" from="1112801410#0" to="237522644#2">
+        <stop busStop="8210119843" duration="30"/>
     </trip>
-    <trip id="197_bus_N0:1" type="pt_bus" depart="306.0" departLane="best" from="4079520#2" to="4079520#2">
-        <stop busStop="8371290346" duration="30"/>
+    <trip id="76_bus_N3:1" type="pt_bus" depart="272.0" departLane="best" from="1110435370#0" to="491295302#7">
+        <stop busStop="5274384898" duration="30"/>
     </trip>
-    <trip id="198_bus_N1:0" type="pt_bus" depart="310.0" departLane="best" from="545715327#0" to="550090167#4">
-        <stop busStop="3460264088" duration="30"/>
-    </trip>
-    <trip id="199_bus_N1:1" type="pt_bus" depart="313.0" departLane="best" from="251684604#0" to="22650940#2">
-        <stop busStop="8230779955" duration="30"/>
-    </trip>
-    <trip id="200_bus_N2:0" type="pt_bus" depart="317.0" departLane="best" from="45185735#0" to="288840915#1">
-        <stop busStop="5760480296" duration="30"/>
-    </trip>
-    <trip id="201_bus_N2:1" type="pt_bus" depart="318.0" departLane="best" from="1079083285#0" to="-45185735#13">
-        <stop busStop="10044468938" duration="30"/>
-        <stop busStop="8072606812" duration="30"/>
-    </trip>
-    <trip id="202_bus_N3:0" type="pt_bus" depart="321.0" departLane="best" from="239293914#0" to="238179136#1">
-        <stop busStop="8264714828" duration="30"/>
-    </trip>
-    <trip id="203_bus_N3:1" type="pt_bus" depart="321.0" departLane="best" from="263405133#0" to="-239293914#2">
-        <stop busStop="8272191680" duration="30"/>
-    </trip>
-    <trip id="204_bus_N5:0" type="pt_bus" depart="322.0" departLane="best" from="295263590" to="-44868702#6">
+    <trip id="77_bus_N5:0" type="pt_bus" depart="275.0" departLane="best" from="295263590" to="295263589#4">
         <stop busStop="5603009322" duration="30"/>
     </trip>
-    <trip id="205_bus_N5:1" type="pt_bus" depart="323.0" departLane="best" from="44868702#0" to="295263590">
-        <stop busStop="8214234933" duration="30"/>
+    <trip id="78_bus_N5:1" type="pt_bus" depart="285.0" departLane="best" from="449991617#0" to="295263590">
+        <stop busStop="8214234925" duration="30"/>
     </trip>
-    <trip id="206_bus_N6:0" type="pt_bus" depart="323.0" departLane="best" from="-918466819" to="237790225#2">
-        <stop busStop="-5609793234" duration="30"/>
+    <trip id="79_bus_N6:0" type="pt_bus" depart="291.0" departLane="best" from="126301387#0" to="293858825">
+        <stop busStop="5609793224" duration="30"/>
     </trip>
-    <trip id="207_bus_N6:1" type="pt_bus" depart="323.0" departLane="best" from="47123761#0" to="831182072#1">
-        <stop busStop="5375859510" duration="30"/>
+    <trip id="80_bus_N6:1" type="pt_bus" depart="300.0" departLane="best" from="283764984#0" to="295263589#4">
+        <stop busStop="5603006497" duration="30"/>
     </trip>
-    <trip id="208_bus_N7:0" type="pt_bus" depart="325.0" departLane="best" from="543400540#0" to="310929467#1">
-        <stop busStop="5253055691" duration="30"/>
+    <trip id="81_bus_N7:0" type="pt_bus" depart="303.0" departLane="best" from="449991617#0" to="295263589#4">
+        <stop busStop="8214234925" duration="30"/>
     </trip>
-    <trip id="209_bus_N7:1" type="pt_bus" depart="326.0" departLane="best" from="45944519#0" to="208616306">
-        <stop busStop="8072634461" duration="30"/>
-    </trip>
-    <trip id="210_bus_N8:0" type="pt_bus" depart="327.0" departLane="best" from="139259333#0" to="547440870#4">
-        <stop busStop="8168365849" duration="30"/>
-    </trip>
-    <trip id="211_bus_N8:1" type="pt_bus" depart="328.0" departLane="best" from="450369489#0" to="-139259333#1">
-        <stop busStop="5726021533" duration="30"/>
-    </trip>
-    <trip id="212_bus_N9:0" type="pt_bus" depart="329.0" departLane="best" from="1228808793#5" to="601634007#9">
-        <stop busStop="8210106347" duration="30"/>
-    </trip>
-    <trip id="213_bus_N9:1" type="pt_bus" depart="330.0" departLane="best" from="237912796#0" to="1228808793#5">
-        <stop busStop="2573396945" duration="30"/>
-    </trip>
-    <trip id="214_bus_N11:0" type="pt_bus" depart="331.0" departLane="best" from="126304603#2" to="440740424#1">
-        <stop busStop="5711282950" duration="30"/>
-    </trip>
-    <trip id="215_bus_N11:1" type="pt_bus" depart="331.0" departLane="best" from="450369489#0" to="8380812#2">
-        <stop busStop="5726021533" duration="30"/>
-    </trip>
-    <trip id="216_bus_N12:0" type="pt_bus" depart="331.0" departLane="best" from="237790227#1" to="237790227#1">
-        <stop busStop="6129339633" duration="30"/>
-    </trip>
-    <trip id="217_bus_N12:1" type="pt_bus" depart="333.0" departLane="best" from="34054326#0" to="237790227#1">
-        <stop busStop="5343770281" duration="30"/>
-    </trip>
-    <trip id="218_bus_N13:0" type="pt_bus" depart="334.0" departLane="best" from="511211614#2" to="22650940#2">
-        <stop busStop="3706371090" duration="30"/>
-    </trip>
-    <trip id="219_bus_N13:1" type="pt_bus" depart="336.0" departLane="best" from="545715327#0" to="511211614#2">
-        <stop busStop="3460264088" duration="30"/>
-        <stop busStop="5760480289" duration="30"/>
-    </trip>
-    <trip id="220_bus_N14:0" type="pt_bus" depart="342.0" departLane="best" from="542956873" to="-45185735#13">
-        <stop busStop="8634928230" duration="30"/>
-        <stop busStop="5609793223" duration="30"/>
-    </trip>
-    <trip id="221_bus_N14:1" type="pt_bus" depart="345.0" departLane="best" from="45185735#0" to="542956873">
-        <stop busStop="5760480296" duration="30"/>
-    </trip>
-    <trip id="222_bus_D40:0" type="pt_bus" depart="346.0" departLane="best" from="853255409#1" to="541711519#1">
-        <stop busStop="7959265888" duration="30"/>
-    </trip>
-    <trip id="223_bus_N15:0" type="pt_bus" depart="347.0" departLane="best" from="74070542#0" to="22650940#2">
-        <stop busStop="5643828726" duration="30"/>
-    </trip>
-    <trip id="224_bus_N15:1" type="pt_bus" depart="349.0" departLane="best" from="545715327#0" to="237790227#1">
-        <stop busStop="3460264088" duration="30"/>
-    </trip>
-    <trip id="225_bus_N16:0" type="pt_bus" depart="350.0" departLane="best" from="542956873" to="22650940#2">
-        <stop busStop="8634928230" duration="30"/>
-        <stop busStop="5609793223" duration="30"/>
-    </trip>
-    <trip id="226_bus_N16:1" type="pt_bus" depart="350.0" departLane="best" from="545715327#0" to="542956873">
-        <stop busStop="3460264088" duration="30"/>
-    </trip>
-    <trip id="227_bus_N17:0" type="pt_bus" depart="350.0" departLane="best" from="126304603#2" to="22650940#2">
-        <stop busStop="5711282950" duration="30"/>
-    </trip>
-    <trip id="228_bus_N17:1" type="pt_bus" depart="352.0" departLane="best" from="545715327#0" to="126304603#2">
-        <stop busStop="3460264088" duration="30"/>
-    </trip>
-    <trip id="229_bus_N18:0" type="pt_bus" depart="353.0" departLane="best" from="126304603#2" to="22650940#2">
-        <stop busStop="8425080822" duration="30"/>
-    </trip>
-    <trip id="230_bus_N18:1" type="pt_bus" depart="356.0" departLane="best" from="545715327#0" to="126304603#2">
-        <stop busStop="3460264088" duration="30"/>
-    </trip>
-    <trip id="231_bus_N28:0" type="pt_bus" depart="357.0" departLane="best" from="45185735#0" to="237790225#2">
-        <stop busStop="5760480296" duration="30"/>
-    </trip>
-    <trip id="232_bus_N28:1" type="pt_bus" depart="362.0" departLane="best" from="47123761#0" to="-45185735#13">
-        <stop busStop="-5643828728" duration="30"/>
-    </trip>
-    <trip id="233_bus_D40:1" type="pt_bus" depart="362.0" departLane="best" from="36725973" to="853255409#1">
-        <stop busStop="5249411005" duration="30"/>
-    </trip>
-    <trip id="234_bus_H4:0" type="pt_bus" depart="363.0" departLane="best" from="139259333#0" to="32429563#1">
-        <stop busStop="8168365849" duration="30"/>
-    </trip>
-    <trip id="235_bus_H4:1" type="pt_bus" depart="365.0" departLane="best" from="-32429563#2" to="-139259333#1">
-        <stop busStop="-8168365826" duration="30"/>
-    </trip>
-    <trip id="236_bus_H14:0" type="pt_bus" depart="365.0" departLane="best" from="881656434" to="440740424#1">
-        <stop busStop="8199235071" duration="30"/>
-    </trip>
-    <trip id="237_bus_H14:1" type="pt_bus" depart="367.0" departLane="best" from="450369489#0" to="881656434">
-        <stop busStop="5726021533" duration="30"/>
-    </trip>
-    <trip id="238_bus_V3:0" type="pt_bus" depart="369.0" departLane="best" from="543400540#0" to="208616306">
-        <stop busStop="5253055691" duration="30"/>
-    </trip>
-    <trip id="239_bus_V5:0" type="pt_bus" depart="371.0" departLane="best" from="831157579#0" to="450020890">
-        <stop busStop="7760665318" duration="30"/>
-    </trip>
-    <trip id="240_bus_V5:1" type="pt_bus" depart="371.0" departLane="best" from="-450020890" to="4751581#4">
-        <stop busStop="8193559507" duration="30"/>
-    </trip>
-    <trip id="241_bus_V11:0" type="pt_bus" depart="372.0" departLane="best" from="185961564#0" to="882153783">
-        <stop busStop="5603009324" duration="30"/>
-    </trip>
-    <trip id="242_bus_V11:1" type="pt_bus" depart="376.0" departLane="best" from="882153783" to="880513895#9">
-        <stop busStop="8203768655" duration="30"/>
-    </trip>
-    <trip id="243_bus_V13:0" type="pt_bus" depart="378.0" departLane="best" from="882828677" to="32429563#1">
-        <stop busStop="8210106348" duration="30"/>
-    </trip>
-    <trip id="244_bus_V13:1" type="pt_bus" depart="380.0" departLane="best" from="-32429563#2" to="882828677">
-        <stop busStop="-8168365826" duration="30"/>
-        <stop busStop="8210192674" duration="30"/>
-    </trip>
-    <trip id="245_bus_V15:0" type="pt_bus" depart="381.0" departLane="best" from="-902517725#4" to="-44868702#6">
-        <stop busStop="-1401485267" duration="30"/>
-    </trip>
-    <trip id="246_bus_V15:1" type="pt_bus" depart="382.0" departLane="best" from="44868702#0" to="902517725#2">
-        <stop busStop="8214234933" duration="30"/>
-    </trip>
-    <trip id="247_bus_B20:1" type="pt_bus" depart="383.0" departLane="best" from="511211614#2" to="237927198#1">
-        <stop busStop="3706371090" duration="30"/>
-    </trip>
-    <trip id="248_bus_V17:0" type="pt_bus" depart="383.0" departLane="best" from="-126715484#0" to="-36725973">
-        <stop busStop="-1404018064" duration="30"/>
-    </trip>
-    <trip id="249_bus_V17:1" type="pt_bus" depart="383.0" departLane="best" from="486756071" to="126715484#1">
-        <stop busStop="-8220384277" duration="30"/>
-    </trip>
-    <trip id="250_bus_V21:0" type="pt_bus" depart="384.0" departLane="best" from="74070542#0" to="294798017#5">
-        <stop busStop="5643828726" duration="30"/>
-    </trip>
-    <trip id="251_bus_V21:1" type="pt_bus" depart="384.0" departLane="best" from="251684604#0" to="237790227#1">
-        <stop busStop="8230779955" duration="30"/>
-    </trip>
-    <trip id="252_bus_V27:0" type="pt_bus" depart="388.0" departLane="best" from="74070542#0" to="547440870#4">
-        <stop busStop="5643828726" duration="30"/>
-    </trip>
-    <trip id="253_bus_V27:1" type="pt_bus" depart="389.0" departLane="best" from="237927190#0" to="237790227#1">
-        <stop busStop="8206342477" duration="30"/>
-    </trip>
-    <trip id="254_bus_13:0" type="pt_bus" depart="389.0" departLane="best" from="238326399#1" to="532279581#0">
-        <stop busStop="3107615730" duration="30"/>
-    </trip>
-    <trip id="255_bus_13:1" type="pt_bus" depart="392.0" departLane="best" from="770048769#0" to="238326399#1">
-        <stop busStop="8228181023" duration="30"/>
-    </trip>
-    <trip id="256_bus_19:0" type="pt_bus" depart="393.0" departLane="best" from="-126301387#1" to="550090167#4">
-        <stop busStop="-5760480311" duration="30"/>
-    </trip>
-    <trip id="257_bus_19:1" type="pt_bus" depart="398.0" departLane="best" from="251684604#0" to="-126301387#1">
-        <stop busStop="8230779955" duration="30"/>
-    </trip>
-    <trip id="258_bus_23:0" type="pt_bus" depart="398.0" departLane="best" from="770048769#0" to="887560129">
-        <stop busStop="8228181023" duration="30"/>
-    </trip>
-    <trip id="259_bus_23:1" type="pt_bus" depart="401.0" departLane="best" from="887560129" to="532279581#0">
-        <stop busStop="1193548729" duration="30"/>
-    </trip>
-    <trip id="260_bus_22:0" type="pt_bus" depart="402.0" departLane="best" from="519375847#1" to="-36725973">
-        <stop busStop="8248379225" duration="30"/>
-    </trip>
-    <trip id="261_bus_22:1" type="pt_bus" depart="403.0" departLane="best" from="486756071" to="519375847#1">
-        <stop busStop="-8220384277" duration="30"/>
-    </trip>
-    <trip id="262_bus_21:0" type="pt_bus" depart="404.0" departLane="best" from="185961564#0" to="881656434">
-        <stop busStop="5603009324" duration="30"/>
-    </trip>
-    <trip id="263_bus_21:1" type="pt_bus" depart="405.0" departLane="best" from="881656434" to="880513895#9">
-        <stop busStop="7802014400" duration="30"/>
-    </trip>
-    <trip id="264_bus_24:0" type="pt_bus" depart="406.0" departLane="best" from="8380812#2" to="541711519#1">
-        <stop busStop="2989714853" duration="30"/>
-    </trip>
-    <trip id="265_bus_24:1" type="pt_bus" depart="406.0" departLane="best" from="36725973" to="8380812#2">
-        <stop busStop="5249411005" duration="30"/>
-    </trip>
-    <trip id="266_bus_47:0" type="pt_bus" depart="409.0" departLane="best" from="237790227#1" to="237790227#1">
-        <stop busStop="6129339633" duration="30"/>
-    </trip>
-    <trip id="267_bus_47:1" type="pt_bus" depart="410.0" departLane="best" from="251684607#0" to="237790227#1">
-        <stop busStop="5264363335" duration="30"/>
-    </trip>
-    <trip id="268_bus_54:0" type="pt_bus" depart="418.0" departLane="best" from="239293914#0" to="134198192#2">
-        <stop busStop="8264714828" duration="30"/>
-    </trip>
-    <trip id="269_bus_54:1" type="pt_bus" depart="422.0" departLane="best" from="134198192#2" to="-239293914#2">
-        <stop busStop="8264543925" duration="30"/>
-    </trip>
-    <trip id="270_bus_55:0" type="pt_bus" depart="422.0" departLane="best" from="591263081#0" to="653349598#1">
-        <stop busStop="8267370673" duration="30"/>
-    </trip>
-    <trip id="271_bus_55:1" type="pt_bus" depart="425.0" departLane="best" from="653349598#1" to="4750707#2">
+    <trip id="82_bus_N7:1" type="pt_bus" depart="305.0" departLane="best" from="68506233#0" to="491295302#7">
         <stop busStop="6123166500" duration="30"/>
     </trip>
-    <trip id="272_bus_59:0" type="pt_bus" depart="429.0" departLane="best" from="-450020890" to="547440870#4">
-        <stop busStop="-5259830245" duration="30"/>
+    <trip id="83_bus_N8:0" type="pt_bus" depart="310.0" departLane="best" from="1112801410#0" to="293858825">
+        <stop busStop="8210119843" duration="30"/>
     </trip>
-    <trip id="273_bus_59:1" type="pt_bus" depart="430.0" departLane="best" from="237927190#0" to="450020890">
-        <stop busStop="8206342477" duration="30"/>
+    <trip id="84_bus_N8:1" type="pt_bus" depart="317.0" departLane="best" from="283764984#0" to="491295302#7">
+        <stop busStop="5603006497" duration="30"/>
     </trip>
-    <trip id="274_bus_63:0" type="pt_bus" depart="431.0" departLane="best" from="237522641#1" to="-544243183">
-        <stop busStop="8274427613" duration="30"/>
+    <trip id="85_bus_N9:0" type="pt_bus" depart="318.0" departLane="best" from="905380775" to="237522644#2">
+        <stop busStop="8372241999" duration="30"/>
     </trip>
-    <trip id="275_bus_63:1" type="pt_bus" depart="431.0" departLane="best" from="34054326#0" to="237522641#1">
-        <stop busStop="5343770281" duration="30"/>
+    <trip id="86_bus_N9:1" type="pt_bus" depart="321.0" departLane="best" from="449991617#0" to="905380775">
+        <stop busStop="8214234925" duration="30"/>
     </trip>
-    <trip id="276_bus_78:0" type="pt_bus" depart="431.0" departLane="best" from="309246597" to="-544243183">
-        <stop busStop="8291643087" duration="30"/>
-    </trip>
-    <trip id="277_bus_78:1" type="pt_bus" depart="432.0" departLane="best" from="34054326#0" to="309246597">
-        <stop busStop="5343770281" duration="30"/>
-    </trip>
-    <trip id="278_bus_L95:0" type="pt_bus" depart="437.0" departLane="best" from="542956873" to="22650940#2">
-        <stop busStop="8634928230" duration="30"/>
-    </trip>
-    <trip id="279_bus_L95:1" type="pt_bus" depart="437.0" departLane="best" from="545715327#0" to="542956873">
-        <stop busStop="5760480289" duration="30"/>
-    </trip>
-    <trip id="280_bus_150:0" type="pt_bus" depart="437.0" departLane="best" from="448563711" to="4750707#2">
-        <stop busStop="1193548784" duration="30"/>
-    </trip>
-    <trip id="281_bus_150:1" type="pt_bus" depart="437.0" departLane="best" from="770048769#0" to="448563711">
-        <stop busStop="1193548784" duration="30"/>
-    </trip>
-    <trip id="282_bus_79:0" type="pt_bus" depart="437.0" departLane="best" from="770048769#0" to="22650940#2">
-        <stop busStop="1966516541" duration="30"/>
-    </trip>
-    <trip id="283_bus_91:0" type="pt_bus" depart="441.0" departLane="best" from="545715327#0" to="238326399#1">
-        <stop busStop="3460264088" duration="30"/>
-    </trip>
-    <trip id="284_bus_91:1" type="pt_bus" depart="441.0" departLane="best" from="238326399#1" to="22650940#2">
-        <stop busStop="9989923318" duration="30"/>
-    </trip>
-    <trip id="285_bus_116:0" type="pt_bus" depart="444.0" departLane="best" from="1264832639#0" to="208568868#2">
-        <stop busStop="8319115754" duration="30"/>
-    </trip>
-    <trip id="286_bus_116:1" type="pt_bus" depart="445.0" departLane="best" from="208568868#2" to="-36725973">
-        <stop busStop="8319115775" duration="30"/>
-    </trip>
-    <trip id="287_bus_6:0" type="pt_bus" depart="448.0" departLane="best" from="466765995#0" to="208616306">
-        <stop busStop="5597374300" duration="30"/>
-    </trip>
-    <trip id="288_bus_6:1" type="pt_bus" depart="451.0" departLane="best" from="34054326#0" to="237787030#1">
-        <stop busStop="5343770281" duration="30"/>
-    </trip>
-    <trip id="289_bus_109:0" type="pt_bus" depart="456.0" departLane="best" from="552422735#2" to="22650940#2">
-        <stop busStop="8311005618" duration="30"/>
-    </trip>
-    <trip id="290_bus_109:1" type="pt_bus" depart="457.0" departLane="best" from="545715327#0" to="552422735#2">
-        <stop busStop="3460264088" duration="30"/>
-    </trip>
-    <trip id="291_bus_114:0" type="pt_bus" depart="459.0" departLane="best" from="555536624" to="831182072#1">
-        <stop busStop="7760901425" duration="30"/>
-    </trip>
-    <trip id="292_bus_114:1" type="pt_bus" depart="462.0" departLane="best" from="1119928790" to="555536624">
-        <stop busStop="7761529486" duration="30"/>
-    </trip>
-    <trip id="293_bus_120:0" type="pt_bus" depart="465.0" departLane="best" from="238326399#0" to="546184104#2">
-        <stop busStop="8228181025" duration="30"/>
-    </trip>
-    <trip id="294_bus_120:1" type="pt_bus" depart="467.0" departLane="best" from="546184104#2" to="238326399#1">
-        <stop busStop="5609793286" duration="30"/>
-    </trip>
-    <trip id="295_bus_33:1" type="pt_bus" depart="468.0" departLane="best" from="237912796#0" to="-544243183">
-        <stop busStop="2573396945" duration="30"/>
-    </trip>
-    <trip id="296_bus_121:0" type="pt_bus" depart="470.0" departLane="best" from="237529472#1" to="552124691#3">
-        <stop busStop="2536484166" duration="30"/>
-    </trip>
-    <trip id="297_bus_121:1" type="pt_bus" depart="470.0" departLane="best" from="261716933#0" to="237529472#1">
-        <stop busStop="8330812747" duration="30"/>
-    </trip>
-    <trip id="298_bus_34:3" type="pt_bus" depart="472.0" departLane="best" from="34054326#0" to="601634007#9">
-        <stop busStop="5343770281" duration="30"/>
-    </trip>
-    <trip id="299_bus_27:1" type="pt_bus" depart="475.0" departLane="best" from="486756071" to="180403384#2">
-        <stop busStop="-8220384277" duration="30"/>
-    </trip>
-    <trip id="300_bus_70:1" type="pt_bus" depart="477.0" departLane="best" from="45185732#4" to="45185732#4">
-        <stop busStop="8286917383" duration="30"/>
-    </trip>
-    <trip id="301_bus_131:0" type="pt_bus" depart="477.0" departLane="best" from="35172602#0" to="554918726#1">
-        <stop busStop="8355024726" duration="30"/>
-    </trip>
-    <trip id="302_bus_131:1" type="pt_bus" depart="481.0" departLane="best" from="34874441#0" to="-44868702#6">
-        <stop busStop="412549133" duration="30"/>
-    </trip>
-    <trip id="303_bus_136:0" type="pt_bus" depart="483.0" departLane="best" from="74070542#1" to="237927198#1">
-        <stop busStop="9909713990" duration="30"/>
-        <stop busStop="5609895905" duration="30"/>
-    </trip>
-    <trip id="304_bus_136:1" type="pt_bus" depart="484.0" departLane="best" from="466765995#0" to="237790227#1">
-        <stop busStop="5597374300" duration="30"/>
-    </trip>
-    <trip id="305_bus_115:1" type="pt_bus" depart="484.0" departLane="best" from="30761362#1" to="4751581#4">
-        <stop busStop="2508645431" duration="30"/>
-    </trip>
-    <trip id="306_bus_192:0" type="pt_bus" depart="485.0" departLane="best" from="466765994#0" to="238179136#1">
-        <stop busStop="8235149668" duration="30"/>
-    </trip>
-    <trip id="307_bus_87:0" type="pt_bus" depart="486.0" departLane="best" from="36725973" to="555536622#2">
-        <stop busStop="5249411005" duration="30"/>
-    </trip>
-    <trip id="308_bus_87:1" type="pt_bus" depart="486.0" departLane="best" from="555536622#2" to="-36725973">
-        <stop busStop="5485540840" duration="30"/>
-    </trip>
-    <trip id="309_bus_88:0" type="pt_bus" depart="489.0" departLane="best" from="867009429" to="880513895#9">
-        <stop busStop="192328375" duration="30"/>
-    </trip>
-    <trip id="310_bus_67:1" type="pt_bus" depart="490.0" departLane="best" from="126304603#2" to="-544243183">
+    <trip id="87_bus_N11:0" type="pt_bus" depart="322.0" departLane="best" from="126304603#2" to="237787045#0">
         <stop busStop="5711282950" duration="30"/>
     </trip>
-    <trip id="311_bus_88:1" type="pt_bus" depart="497.0" departLane="best" from="185961564#0" to="880513897#9">
-        <stop busStop="5603009324" duration="30"/>
+    <trip id="88_bus_N11:1" type="pt_bus" depart="323.0" departLane="best" from="519375847#1" to="8380812#2">
+        <stop busStop="2989714854" duration="30"/>
     </trip>
-    <trip id="312_bus_CJ:0" type="pt_bus" depart="498.0" departLane="best" from="180008493#0" to="22650940#2">
-        <stop busStop="2508645445" duration="30"/>
+    <trip id="89_bus_N12:0" type="pt_bus" depart="323.0" departLane="best" from="359739475#0" to="545747635#2">
+        <stop busStop="2610196515" duration="30"/>
     </trip>
-    <trip id="313_bus_CJ:1" type="pt_bus" depart="500.0" departLane="best" from="545715327#0" to="556602236#1">
-        <stop busStop="3460264088" duration="30"/>
+    <trip id="90_bus_N12:1" type="pt_bus" depart="326.0" departLane="best" from="532696001#0" to="291731094#6">
+        <stop busStop="5760480286" duration="30"/>
     </trip>
-    <trip id="314_bus_165:0" type="pt_bus" depart="500.0" departLane="best" from="770048769#0" to="22650940#2">
-        <stop busStop="1966516541" duration="30"/>
+    <trip id="91_bus_N13:0" type="pt_bus" depart="329.0" departLane="best" from="519375847#1" to="545747635#2">
+        <stop busStop="2989714853" duration="30"/>
     </trip>
-    <trip id="315_bus_VAC-099:1" type="pt_bus" depart="501.0" departLane="best" from="-4746993#2" to="-544243183">
-        <stop busStop="-1191150240" duration="30"/>
+    <trip id="92_bus_N13:1" type="pt_bus" depart="331.0" departLane="best" from="532696001#0" to="237522644#2">
+        <stop busStop="5760480286" duration="30"/>
     </trip>
-    <trip id="316_bus_M14:0" type="pt_bus" depart="505.0" departLane="best" from="-863629113" to="-864123947#0">
-        <stop busStop="-8050203730" duration="30"/>
+    <trip id="93_bus_N14:0" type="pt_bus" depart="334.0" departLane="best" from="542956873" to="243591204#3">
+        <stop busStop="8634928230" duration="30"/>
+        <stop busStop="5609793223" duration="30"/>
     </trip>
-    <trip id="317_bus_M14:1" type="pt_bus" depart="507.0" departLane="best" from="-864123947#0" to="-544243183">
-        <stop busStop="-8050203730" duration="30"/>
+    <trip id="94_bus_N14:1" type="pt_bus" depart="336.0" departLane="best" from="532696001#0" to="542956873">
+        <stop busStop="5760480286" duration="30"/>
     </trip>
-    <trip id="318_bus_L70:0" type="pt_bus" depart="508.0" departLane="best" from="916317130" to="22650940#2">
-        <stop busStop="4538123333" duration="30"/>
+    <trip id="95_bus_N15:0" type="pt_bus" depart="346.0" departLane="best" from="519375847#1" to="545747635#2">
+        <stop busStop="2989714853" duration="30"/>
     </trip>
-    <trip id="319_bus_L70:1" type="pt_bus" depart="508.0" departLane="best" from="545715327#0" to="448563710">
-        <stop busStop="8032746332" duration="30"/>
+    <trip id="96_bus_N15:1" type="pt_bus" depart="350.0" departLane="best" from="532696001#0" to="237787045#0">
+        <stop busStop="5760480286" duration="30"/>
     </trip>
-    <trip id="320_bus_L80:0" type="pt_bus" depart="509.0" departLane="best" from="916317130" to="22650940#2">
-        <stop busStop="8510721103" duration="30"/>
-        <stop busStop="1966516541" duration="30"/>
+    <trip id="97_bus_N16:0" type="pt_bus" depart="352.0" departLane="best" from="542956873" to="243591204#3">
+        <stop busStop="8634928230" duration="30"/>
+        <stop busStop="5609793223" duration="30"/>
     </trip>
-    <trip id="321_bus_L80:1" type="pt_bus" depart="511.0" departLane="best" from="545715327#0" to="448563710">
-        <stop busStop="8032746332" duration="30"/>
+    <trip id="98_bus_N16:1" type="pt_bus" depart="353.0" departLane="best" from="532696001#0" to="542956873">
+        <stop busStop="5760480286" duration="30"/>
     </trip>
-    <trip id="322_bus_L86:0" type="pt_bus" depart="515.0" departLane="best" from="916317130" to="22650940#2">
-        <stop busStop="8075109615" duration="30"/>
+    <trip id="99_bus_N17:0" type="pt_bus" depart="362.0" departLane="best" from="126304603#2" to="545747635#2">
+        <stop busStop="5711282950" duration="30"/>
     </trip>
-    <trip id="323_bus_L86:1" type="pt_bus" depart="515.0" departLane="best" from="545715327#0" to="448563710">
-        <stop busStop="8032746332" duration="30"/>
+    <trip id="100_bus_N17:1" type="pt_bus" depart="365.0" departLane="best" from="532696001#0" to="126304603#2">
+        <stop busStop="5760480286" duration="30"/>
     </trip>
-    <trip id="324_bus_L94:0" type="pt_bus" depart="516.0" departLane="best" from="352482723" to="22650940#2">
-        <stop busStop="8560788704" duration="30"/>
+    <trip id="101_bus_N18:0" type="pt_bus" depart="365.0" departLane="best" from="126304603#2" to="545747635#2">
+        <stop busStop="8425080822" duration="30"/>
     </trip>
-    <trip id="325_bus_L94:1" type="pt_bus" depart="516.0" departLane="best" from="545715327#0" to="352482723">
-        <stop busStop="10836696130" duration="30"/>
+    <trip id="102_bus_N18:1" type="pt_bus" depart="371.0" departLane="best" from="532696001#0" to="126304603#2">
+        <stop busStop="5760480286" duration="30"/>
     </trip>
-    <trip id="326_bus_L97:0" type="pt_bus" depart="516.0" departLane="best" from="-863629113" to="-544243183">
-        <stop busStop="-5341631256" duration="30"/>
+    <trip id="103_bus_N28:0" type="pt_bus" depart="376.0" departLane="best" from="532696001#0" to="291731094#6">
+        <stop busStop="5760480286" duration="30"/>
     </trip>
-    <trip id="327_bus_A2:0" type="pt_bus" depart="517.0" departLane="best" from="545715327#0" to="20045639#2">
-        <stop busStop="3460264088" duration="30"/>
+    <trip id="104_bus_N28:1" type="pt_bus" depart="381.0" departLane="best" from="359739475#0" to="545747635#2">
+        <stop busStop="2610196515" duration="30"/>
     </trip>
-    <trip id="328_bus_A1:0" type="pt_bus" depart="517.0" departLane="best" from="545715327#0" to="1106220054">
-        <stop busStop="3460264088" duration="30"/>
+    <trip id="105_bus_H14:0" type="pt_bus" depart="383.0" departLane="best" from="4079513#0" to="237787045#0">
     </trip>
-    <trip id="329_bus_X30:1" type="pt_bus" depart="518.0" departLane="best" from="544243184#0" to="254329359#1">
-        <stop busStop="5343770280" duration="30"/>
+    <trip id="106_bus_H14:1" type="pt_bus" depart="383.0" departLane="best" from="134547872#0" to="-4079513#0">
+        <stop busStop="8143303452" duration="30"/>
     </trip>
-    <trip id="330_bus_N81:1" type="pt_bus" depart="518.0" departLane="best" from="1000249404" to="519375847#1">
+    <trip id="107_bus_V11:0" type="pt_bus" depart="383.0" departLane="best" from="237649293#0" to="237655878#0">
+    </trip>
+    <trip id="108_bus_V11:1" type="pt_bus" depart="384.0" departLane="best" from="237506930#0" to="246638748#2">
+        <stop busStop="8097436670" duration="30"/>
+    </trip>
+    <trip id="109_bus_V13:0" type="pt_bus" depart="388.0" departLane="best" from="126304603#2" to="491295302#7">
+        <stop busStop="5711282950" duration="30"/>
+        <stop busStop="5609793223" duration="30"/>
+    </trip>
+    <trip id="110_bus_V13:1" type="pt_bus" depart="389.0" departLane="best" from="1112801410#0" to="126304603#2">
+        <stop busStop="8210119843" duration="30"/>
+    </trip>
+    <trip id="111_bus_V15:0" type="pt_bus" depart="389.0" departLane="best" from="359739475#0" to="295263589#4">
+        <stop busStop="2610196515" duration="30"/>
+    </trip>
+    <trip id="112_bus_V15:1" type="pt_bus" depart="393.0" departLane="best" from="449991617#0" to="291731094#6">
+        <stop busStop="8214234925" duration="30"/>
+    </trip>
+    <trip id="113_bus_B20:0" type="pt_bus" depart="406.0" departLane="best" from="546184103#0" to="237787045#0">
+        <stop busStop="5278388752" duration="30"/>
+    </trip>
+    <trip id="114_bus_V17:0" type="pt_bus" depart="409.0" departLane="best" from="-4752296#6" to="237787045#0">
+        <stop busStop="-30317892" duration="30"/>
+    </trip>
+    <trip id="115_bus_V17:1" type="pt_bus" depart="410.0" departLane="best" from="519375848#0" to="4752296#6">
+        <stop busStop="8220384273" duration="30"/>
+    </trip>
+    <trip id="116_bus_19:0" type="pt_bus" depart="418.0" departLane="best" from="-126301387#1" to="-126301387#1">
+        <stop busStop="-5760480311" duration="30"/>
+    </trip>
+    <trip id="117_bus_19:1" type="pt_bus" depart="422.0" departLane="best" from="519375847#1" to="-126301387#1">
+        <stop busStop="-5760480311" duration="30"/>
+    </trip>
+    <trip id="118_bus_22:0" type="pt_bus" depart="432.0" departLane="best" from="519375847#1" to="295263589#4">
+        <stop busStop="8248379225" duration="30"/>
+    </trip>
+    <trip id="119_bus_22:1" type="pt_bus" depart="437.0" departLane="best" from="519375848#0" to="519375847#1">
+        <stop busStop="8248379225" duration="30"/>
+    </trip>
+    <trip id="122_bus_24:0" type="pt_bus" depart="441.0" departLane="best" from="8380812#2" to="237522644#2">
+        <stop busStop="2989714853" duration="30"/>
+    </trip>
+    <trip id="123_bus_24:1" type="pt_bus" depart="456.0" departLane="best" from="295268540#0" to="8380812#2">
+        <stop busStop="2989714853" duration="30"/>
+    </trip>
+    <trip id="124_bus_47:0" type="pt_bus" depart="457.0" departLane="best" from="359739475#0" to="237787045#0">
+        <stop busStop="2610196515" duration="30"/>
+    </trip>
+    <trip id="125_bus_47:1" type="pt_bus" depart="459.0" departLane="best" from="519375848#0" to="291731094#6">
+        <stop busStop="8220384273" duration="30"/>
+    </trip>
+    <trip id="126_bus_54:0" type="pt_bus" depart="465.0" departLane="best" from="1112801410#0" to="546148432#2">
+        <stop busStop="8210119843" duration="30"/>
+    </trip>
+    <trip id="127_bus_54:1" type="pt_bus" depart="467.0" departLane="best" from="1110435370#0" to="491295302#7">
+        <stop busStop="5274384898" duration="30"/>
+    </trip>
+    <trip id="128_bus_55:0" type="pt_bus" depart="475.0" departLane="best" from="591631503#0" to="20475905#2">
+        <stop busStop="5603006495" duration="30"/>
+    </trip>
+    <trip id="129_bus_55:1" type="pt_bus" depart="483.0" departLane="best" from="68506233#0" to="246638748#2">
+        <stop busStop="6123166500" duration="30"/>
+    </trip>
+    <trip id="130_bus_59:0" type="pt_bus" depart="484.0" departLane="best" from="532696001#0" to="291731094#6">
+        <stop busStop="5760480286" duration="30"/>
+    </trip>
+    <trip id="131_bus_59:1" type="pt_bus" depart="485.0" departLane="best" from="359739475#0" to="545747635#2">
+        <stop busStop="2610196515" duration="30"/>
+    </trip>
+    <trip id="132_bus_63:0" type="pt_bus" depart="497.0" departLane="best" from="237522641#1" to="491295302#7">
+        <stop busStop="8274427613" duration="30"/>
+    </trip>
+    <trip id="133_bus_63:1" type="pt_bus" depart="498.0" departLane="best" from="449991617#0" to="237522641#1">
+        <stop busStop="8214234925" duration="30"/>
+    </trip>
+    <trip id="134_bus_L95:0" type="pt_bus" depart="505.0" departLane="best" from="542956873" to="243591204#3">
+        <stop busStop="8634928230" duration="30"/>
+    </trip>
+    <trip id="135_bus_L95:1" type="pt_bus" depart="508.0" departLane="best" from="532696001#0" to="542956873">
+        <stop busStop="5760480286" duration="30"/>
+    </trip>
+    <trip id="136_bus_120:0" type="pt_bus" depart="516.0" departLane="best" from="591631503#0" to="237787045#0">
+        <stop busStop="5603006495" duration="30"/>
+    </trip>
+    <trip id="137_bus_120:1" type="pt_bus" depart="517.0" departLane="best" from="22658522#0" to="246638748#2">
+        <stop busStop="8328305429" duration="30"/>
+    </trip>
+    <trip id="138_bus_121:0" type="pt_bus" depart="522.0" departLane="best" from="237529472#1" to="246638748#2">
+        <stop busStop="2536484166" duration="30"/>
+    </trip>
+    <trip id="139_bus_121:1" type="pt_bus" depart="523.0" departLane="best" from="237649293#0" to="237529472#1">
+    </trip>
+    <trip id="140_bus_67:1" type="pt_bus" depart="525.0" departLane="best" from="126304603#2" to="491295302#7">
+        <stop busStop="5711282950" duration="30"/>
+    </trip>
+    <trip id="141_bus_A2:0" type="pt_bus" depart="525.0" departLane="best" from="532696001#0" to="20045639#2">
+        <stop busStop="1474608404" duration="30"/>
+    </trip>
+    <trip id="142_bus_A1:0" type="pt_bus" depart="526.0" departLane="best" from="532696001#0" to="1106220054">
+        <stop busStop="1474608404" duration="30"/>
+    </trip>
+    <trip id="143_bus_N81:0" type="pt_bus" depart="527.0" departLane="best" from="519375848#0" to="519375847#1">
         <stop busStop="5364626633" duration="30"/>
     </trip>
-    <trip id="331_train_S9:0" type="pt_train" depart="518.0" departLane="best" from="1177980249" to="1177980249">
-        <stop busStop="3398928332" duration="30"/>
-    </trip>
-    <trip id="332_train_S9:1" type="pt_train" depart="522.0" departLane="best" from="1177980248" to="1177980248">
-        <stop busStop="3377296749" duration="30"/>
-    </trip>
-    <trip id="333_bus_e6:0" type="pt_bus" depart="523.0" departLane="best" from="544243184#0" to="922121752#1">
-        <stop busStop="539147490@1744556" duration="30"/>
-    </trip>
-    <trip id="334_bus_e6:1" type="pt_bus" depart="523.0" departLane="best" from="352482723" to="-544243183">
-        <stop busStop="539147490" duration="30"/>
-    </trip>
-    <trip id="335_bus_e8:0" type="pt_bus" depart="525.0" departLane="best" from="544243184#0" to="570088936#2">
-        <stop busStop="5341631256" duration="30"/>
-    </trip>
-    <trip id="336_bus_e8:1" type="pt_bus" depart="525.0" departLane="best" from="570088936#2" to="-544243183">
-        <stop busStop="5481419769" duration="30"/>
-    </trip>
-    <trip id="337_bus_e9:0" type="pt_bus" depart="526.0" departLane="best" from="263405133#0" to="23191707#2">
-        <stop busStop="9785242333" duration="30"/>
-    </trip>
-    <trip id="338_bus_e9:1" type="pt_bus" depart="527.0" departLane="best" from="23191707#2" to="238179136#1">
-        <stop busStop="9785242333" duration="30"/>
-    </trip>
-    <trip id="339_bus_C6:1" type="pt_bus" depart="527.0" departLane="best" from="1000249404" to="542956873">
+    <trip id="144_bus_C6:1" type="pt_bus" depart="535.0" departLane="best" from="519375848#0" to="542956873">
         <stop busStop="1966472090" duration="30"/>
     </trip>
-    <trip id="340_bus_e12:0" type="pt_bus" depart="528.0" departLane="best" from="263405133#0" to="4746993#2">
-        <stop busStop="5504997127" duration="30"/>
-    </trip>
-    <trip id="341_bus_e12:1" type="pt_bus" depart="528.0" departLane="best" from="-4746993#2" to="601634007#9">
-        <stop busStop="-1191150240" duration="30"/>
-        <stop busStop="5504997127" duration="30"/>
-    </trip>
-    <trip id="342_bus_e14:0" type="pt_bus" depart="529.0" departLane="best" from="542956873" to="22650940#2">
+    <trip id="145_bus_e14:0" type="pt_bus" depart="538.0" departLane="best" from="542956873" to="243591204#3">
         <stop busStop="5249075077" duration="30"/>
     </trip>
-    <trip id="343_bus_e14:1" type="pt_bus" depart="530.0" departLane="best" from="545715327#0" to="542956873">
-        <stop busStop="3460264088" duration="30"/>
+    <trip id="146_bus_e14:1" type="pt_bus" depart="547.0" departLane="best" from="532696001#0" to="542956873">
+        <stop busStop="1474608404" duration="30"/>
     </trip>
-    <trip id="344_bus_e15.1:0" type="pt_bus" depart="534.0" departLane="best" from="545715327#0" to="542956873">
-        <stop busStop="3460264088" duration="30"/>
+    <trip id="147_bus_e15.1:0" type="pt_bus" depart="548.0" departLane="best" from="532696001#0" to="542956873">
+        <stop busStop="1474608404" duration="30"/>
     </trip>
-    <trip id="345_bus_e15.1:1" type="pt_bus" depart="535.0" departLane="best" from="542956873" to="22650940#2">
+    <trip id="148_bus_e15.1:1" type="pt_bus" depart="557.0" departLane="best" from="542956873" to="243591204#3">
         <stop busStop="5249075077" duration="30"/>
     </trip>
-    <trip id="346_bus_e15.2:0" type="pt_bus" depart="538.0" departLane="best" from="544243184#0" to="538722959">
-        <stop busStop="5341631256" duration="30"/>
+    <trip id="149_bus_e16:0" type="pt_bus" depart="561.0" departLane="best" from="532696001#0" to="542956873">
+        <stop busStop="1474608404" duration="30"/>
     </trip>
-    <trip id="347_bus_e15.2:1" type="pt_bus" depart="539.0" departLane="best" from="538722959" to="-544243183">
-        <stop busStop="823781710" duration="30"/>
-        <stop busStop="-5341631257" duration="30"/>
-    </trip>
-    <trip id="348_bus_e16:0" type="pt_bus" depart="539.0" departLane="best" from="545715327#0" to="542956873">
-        <stop busStop="3460264088" duration="30"/>
-    </trip>
-    <trip id="349_bus_e16:1" type="pt_bus" depart="541.0" departLane="best" from="542956873" to="22650940#2">
+    <trip id="150_bus_e16:1" type="pt_bus" depart="565.0" departLane="best" from="542956873" to="243591204#3">
         <stop busStop="5249075077" duration="30"/>
     </trip>
-    <trip id="350_bus_e17:0" type="pt_bus" depart="542.0" departLane="best" from="544243184#0" to="4746244#1">
-        <stop busStop="5341631256" duration="30"/>
-    </trip>
-    <trip id="351_bus_e17:1" type="pt_bus" depart="543.0" departLane="best" from="4746244#1" to="-544243183">
-        <stop busStop="5584069358" duration="30"/>
-    </trip>
-    <trip id="352_bus_e18:0" type="pt_bus" depart="543.0" departLane="best" from="544243184#0" to="570088936#2">
-        <stop busStop="5341631256" duration="30"/>
-    </trip>
-    <trip id="353_bus_e18:1" type="pt_bus" depart="547.0" departLane="best" from="570088936#2" to="-544243183">
-        <stop busStop="5481419769" duration="30"/>
-    </trip>
-    <trip id="354_bus_e19:0" type="pt_bus" depart="548.0" departLane="best" from="1000249404" to="584532229">
-        <stop busStop="3459957431" duration="30"/>
-    </trip>
-    <trip id="355_bus_e19:1" type="pt_bus" depart="553.0" departLane="best" from="584532229" to="1000038393">
-        <stop busStop="5587042746" duration="30"/>
-    </trip>
-    <trip id="356_bus_e20:0" type="pt_bus" depart="555.0" departLane="best" from="544243184#0" to="4746244#1">
-        <stop busStop="5341631256" duration="30"/>
-    </trip>
-    <trip id="357_bus_e20:1" type="pt_bus" depart="555.0" departLane="best" from="4746244#1" to="-544243183">
-        <stop busStop="5584069358" duration="30"/>
-    </trip>
-    <trip id="358_bus_D50:0" type="pt_bus" depart="557.0" departLane="best" from="906750214" to="601634007#9">
+    <trip id="151_bus_D50:0" type="pt_bus" depart="568.0" departLane="best" from="237649293#0" to="-126301387#1">
         <stop busStop="8180094958" duration="30"/>
     </trip>
-    <trip id="359_bus_D50:1" type="pt_bus" depart="557.0" departLane="best" from="237912796#0" to="906750214">
-        <stop busStop="2573396945" duration="30"/>
+    <trip id="152_bus_D50:1" type="pt_bus" depart="572.0" departLane="best" from="519375847#1" to="246638748#2">
+        <stop busStop="2989714854" duration="30"/>
     </trip>
-    <trip id="360_bus_V9:0" type="pt_bus" depart="558.0" departLane="best" from="881640722#0" to="44868697#13">
-        <stop busStop="8199176462" duration="30"/>
-    </trip>
-    <trip id="361_bus_V9:1" type="pt_bus" depart="559.0" departLane="best" from="-308378769" to="246638751#1">
-        <stop busStop="-8199176443" duration="30"/>
-    </trip>
-    <trip id="362_bus_52:0" type="pt_bus" depart="560.0" departLane="best" from="519375847#1" to="-45185735#13">
+    <trip id="155_bus_52:0" type="pt_bus" depart="583.0" departLane="best" from="519375847#1" to="545747635#2">
         <stop busStop="5364626633" duration="30"/>
     </trip>
-    <trip id="363_bus_52:1" type="pt_bus" depart="561.0" departLane="best" from="45185735#0" to="519375847#1">
-        <stop busStop="5760480296" duration="30"/>
+    <trip id="156_bus_52:1" type="pt_bus" depart="593.0" departLane="best" from="532696001#0" to="519375847#1">
+        <stop busStop="5760480286" duration="30"/>
     </trip>
-    <trip id="364_bus_V25:0" type="pt_bus" depart="561.0" departLane="best" from="440773128#0" to="238179136#1">
-        <stop busStop="8279041075" duration="30"/>
+    <trip id="157_bus_V19:0" type="pt_bus" depart="597.0" departLane="best" from="359739475#0" to="237787045#0">
+        <stop busStop="2610196515" duration="30"/>
     </trip>
-    <trip id="365_bus_V25:1" type="pt_bus" depart="563.0" departLane="best" from="94765579#0" to="440740425#1">
-        <stop busStop="8279041072" duration="30"/>
+    <trip id="158_bus_V19:1" type="pt_bus" depart="597.0" departLane="best" from="546184103#0" to="291731094#6">
+        <stop busStop="5278388752" duration="30"/>
     </trip>
-    <trip id="366_bus_V19:0" type="pt_bus" depart="563.0" departLane="best" from="-902517725#4" to="918466819">
-        <stop busStop="-1401485267" duration="30"/>
-    </trip>
-    <trip id="367_bus_V19:1" type="pt_bus" depart="564.0" departLane="best" from="-918466819" to="902517725#2">
-        <stop busStop="-5609793234" duration="30"/>
-    </trip>
-    <trip id="368_bus_V23:0" type="pt_bus" depart="565.0" departLane="best" from="466765994#0" to="651533778#4">
-        <stop busStop="8235149669" duration="30"/>
-    </trip>
-    <trip id="369_bus_V23:1" type="pt_bus" depart="568.0" departLane="best" from="237912796#0" to="237927199#13">
-        <stop busStop="2573396945" duration="30"/>
-    </trip>
-    <trip id="370_bus_B24:0" type="pt_bus" depart="572.0" departLane="best" from="1017861008#0" to="601634007#9">
-        <stop busStop="6321098317" duration="30"/>
-    </trip>
-    <trip id="371_bus_B24:1" type="pt_bus" depart="574.0" departLane="best" from="237912796#0" to="549538006#2">
-        <stop busStop="2573396945" duration="30"/>
-    </trip>
-    <trip id="372_bus_B25:0" type="pt_bus" depart="574.0" departLane="best" from="466765995#0" to="511211614#2">
-        <stop busStop="5597374300" duration="30"/>
-    </trip>
-    <trip id="373_bus_B25:1" type="pt_bus" depart="576.0" departLane="best" from="511211614#2" to="237927198#1">
-        <stop busStop="3706371090" duration="30"/>
-    </trip>
-    <trip id="374_bus_N740:0" type="pt_bus" depart="577.0" departLane="best" from="-4746993#2" to="1000038393">
-        <stop busStop="-1191150240" duration="30"/>
-    </trip>
-    <trip id="375_bus_N740:1" type="pt_bus" depart="580.0" departLane="best" from="1000249404" to="4746993#2">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="376_bus_N728:0" type="pt_bus" depart="581.0" departLane="best" from="-4746993#2" to="1000038393">
-        <stop busStop="-1191150240" duration="30"/>
-    </trip>
-    <trip id="377_bus_N728:1" type="pt_bus" depart="581.0" departLane="best" from="1000249404" to="4746993#2">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="378_bus_721:0" type="pt_bus" depart="582.0" departLane="best" from="1000249404" to="4746993#2">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="379_bus_721:1" type="pt_bus" depart="582.0" departLane="best" from="-4746993#2" to="1000038393">
-        <stop busStop="-1191150240" duration="30"/>
-    </trip>
-    <trip id="380_bus_728:0" type="pt_bus" depart="583.0" departLane="best" from="-4746993#2" to="1000038393">
-        <stop busStop="-1191150240" duration="30"/>
-    </trip>
-    <trip id="381_bus_728:1" type="pt_bus" depart="585.0" departLane="best" from="1000249404" to="4746993#2">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="382_bus_1721:0" type="pt_bus" depart="588.0" departLane="best" from="-4746993#2" to="1000038393">
-        <stop busStop="-1191150240" duration="30"/>
-    </trip>
-    <trip id="383_bus_1721:1" type="pt_bus" depart="590.0" departLane="best" from="1000249404" to="4746993#2">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="384_bus_N758:0" type="pt_bus" depart="591.0" departLane="best" from="1000249404" to="4746993#2">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="385_bus_N758:1" type="pt_bus" depart="592.0" departLane="best" from="-4746993#2" to="1000038393">
-        <stop busStop="-1191150240" duration="30"/>
-    </trip>
-    <trip id="386_bus_N708:0" type="pt_bus" depart="593.0" departLane="best" from="1000249404" to="4746993#2">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="387_bus_N708:1" type="pt_bus" depart="597.0" departLane="best" from="-4746993#2" to="1000038393">
-        <stop busStop="-1191150240" duration="30"/>
-    </trip>
-    <trip id="388_bus_788:0" type="pt_bus" depart="597.0" departLane="best" from="1000249404" to="4746993#2">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="389_bus_788:1" type="pt_bus" depart="597.0" departLane="best" from="-4746993#2" to="1000038393">
-        <stop busStop="-1191150240" duration="30"/>
-    </trip>
-    <trip id="390_bus_N788:0" type="pt_bus" depart="597.0" departLane="best" from="1000249404" to="22650940#2">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="391_bus_N788:1" type="pt_bus" depart="598.0" departLane="best" from="540057569" to="1000038393">
-        <stop busStop="1191150240" duration="30"/>
-    </trip>
-    <trip id="392_bus_N1720:0" type="pt_bus" depart="599.0" departLane="best" from="-4746993#2" to="1000038393">
-        <stop busStop="-1191150240" duration="30"/>
-    </trip>
-    <trip id="393_bus_N1720:1" type="pt_bus" depart="599.0" departLane="best" from="1000249404" to="4746993#2">
-        <stop busStop="1191150240" duration="30"/>
+    <trip id="159_bus_B25:0" type="pt_bus" depart="598.0" departLane="best" from="546184103#0" to="237787045#0">
+        <stop busStop="5278388752" duration="30"/>
     </trip>
 </routes>

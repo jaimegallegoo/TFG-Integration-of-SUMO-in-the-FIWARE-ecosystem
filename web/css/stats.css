@@ -16,8 +16,12 @@ main {
 }
 
 /* Imagen gráfica emisiones */
-.emisiones {
+.graficas {
     height: 500px;
     width: auto;
     margin-right: 20px;
+}
+
+.top-margin {
+    margin-top: 20px;
 }

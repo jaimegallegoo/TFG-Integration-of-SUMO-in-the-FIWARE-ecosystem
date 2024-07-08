@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-07-01 13:02:50 by Eclipse SUMO netconvert Version 1.19.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="${SUMO_HOME}/data/typemap/osmNetconvert.typ.xml,${SUMO_HOME}/data/typemap/osmNetconvertAerialway.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml.gz"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml.gz"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <junctions>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+    </junctions>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+    </railway>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <busStop id="-10765517126" name="Guadalmedina" lane="256045745_0" startPos="840.16" endPos="1040.16" friendlyPos="true">
+        <access lane="191173976#0_0" pos="137.12" length="391.40" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-10858781452" name="La Isla" lane="-436582153#1_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="373389056#4_0" pos="7.22" length="1.48" friendlyPos="1"/>
+        <access lane="443365309_0" pos="1.07" length="5.80" friendlyPos="1"/>
+        <access lane="443375805#0_0" pos="3.20" length="11.02" friendlyPos="1"/>
+        <access lane="58610493#0_0" pos="0.00" length="11.68" friendlyPos="1"/>
+        <access lane="58610493#1_0" pos="0.00" length="12.35" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-1625341615" name="La Unión" lane="-504224086#0_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="359365606#2_0" pos="58.22" length="20.21" friendlyPos="1"/>
+        <access lane="359507075#3_0" pos="13.30" length="16.17" friendlyPos="1"/>
+        <access lane="443379100#1_0" pos="31.82" length="11.78" friendlyPos="1"/>
+        <access lane="675882655#0_0" pos="3.87" length="9.20" friendlyPos="1"/>
+        <access lane="787068685_0" pos="23.85" length="16.83" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-1956972634" name="Málaga María Zambrano" lane="-400333424_0" startPos="285.60" endPos="485.60" friendlyPos="true">
+        <access lane="-1187539569_0" pos="110.02" length="115.16" friendlyPos="1"/>
+        <access lane="-329451091#0_0" pos="158.94" length="74.35" friendlyPos="1"/>
+        <access lane="329451091#0_0" pos="82.80" length="69.55" friendlyPos="1"/>
+        <access lane="764152297#2_0" pos="123.11" length="108.45" friendlyPos="1"/>
+        <access lane="83613148#2_0" pos="0.00" length="151.17" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-1956972636" name="Málaga María Zambrano" lane="-400333426#0_0" startPos="285.56" endPos="485.56" friendlyPos="true">
+        <access lane="-1187539569_0" pos="110.02" length="106.38" friendlyPos="1"/>
+        <access lane="-329451091#0_0" pos="159.30" length="91.37" friendlyPos="1"/>
+        <access lane="329451091#0_0" pos="82.44" length="86.57" friendlyPos="1"/>
+        <access lane="764152297#2_0" pos="123.11" length="99.86" friendlyPos="1"/>
+        <access lane="83613148#1_0" pos="63.03" length="160.05" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-1956972639" name="Málaga María Zambrano" lane="-185127050#0_0" startPos="329.15" endPos="529.15" friendlyPos="true">
+        <access lane="-1187539569_0" pos="110.02" length="103.62" friendlyPos="1"/>
+        <access lane="-329451091#0_0" pos="159.48" length="97.90" friendlyPos="1"/>
+        <access lane="329451091#0_0" pos="82.26" length="93.10" friendlyPos="1"/>
+        <access lane="764152297#2_0" pos="123.11" length="97.21" friendlyPos="1"/>
+        <access lane="83613148#1_0" pos="63.03" length="163.55" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-1956972641" name="Málaga María Zambrano" lane="-185127048_0" startPos="335.72" endPos="535.72" friendlyPos="true">
+        <access lane="-1187539569_0" pos="110.02" length="95.72" friendlyPos="1"/>
+        <access lane="-329451091#0_0" pos="159.46" length="121.51" friendlyPos="1"/>
+        <access lane="1187542130_0" pos="43.07" length="146.25" friendlyPos="1"/>
+        <access lane="329451091#0_0" pos="82.28" length="116.71" friendlyPos="1"/>
+        <access lane="764152297#2_0" pos="123.11" length="89.98" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-2608380462" name="Málaga María Zambrano" lane="-75307993#0_0" startPos="335.23" endPos="535.23" friendlyPos="true">
+        <access lane="-1187539569_0" pos="110.02" length="96.72" friendlyPos="1"/>
+        <access lane="-329451091#0_0" pos="158.38" length="112.06" friendlyPos="1"/>
+        <access lane="1187542130_0" pos="43.07" length="153.39" friendlyPos="1"/>
+        <access lane="329451091#0_0" pos="83.37" length="107.26" friendlyPos="1"/>
+        <access lane="764152297#2_0" pos="123.11" length="90.65" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-2609573405" name="Atarazanas" lane="256045745_0" startPos="1422.06" endPos="1622.06" friendlyPos="true"/>
+    <busStop id="-3762485517" name="La Luz - La Paz" lane="-436582153#0_0" startPos="1271.48" endPos="1471.48" friendlyPos="true"/>
+    <busStop id="-3762485520" name="Puerta Blanca" lane="-436582153#0_0" startPos="1846.40" endPos="2046.40" friendlyPos="true"/>
+    <busStop id="-4214996399" name="Málaga, Andén 23" lane="-585068911_0" startPos="0.00" endPos="0.20" friendlyPos="true" lines="N1158"/>
+    <busStop id="-4344674995" name="Palacio de los Deportes" lane="-436582153#0_0" startPos="2615.56" endPos="2815.56" friendlyPos="true"/>
+    <busStop id="-4408155456" name="Barbarela" lane="-504224086#1_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="360312280#1_0" pos="0.48" length="11.65" friendlyPos="1"/>
+        <access lane="443193724_0" pos="23.25" length="4.34" friendlyPos="1"/>
+        <access lane="634232387#0_0" pos="0.00" length="4.85" friendlyPos="1"/>
+        <access lane="77609182#1_0" pos="105.91" length="11.65" friendlyPos="1"/>
+        <access lane="77609182#2_0" pos="0.00" length="14.14" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-4408159190" name="Carranque" lane="-504224086#2_0" startPos="0.00" endPos="200.00" friendlyPos="true"/>
+    <busStop id="-4409535923" name="Princesa - Huelin" lane="-436582153#0_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="1214537352#1_0" pos="0.00" length="26.69" friendlyPos="1"/>
+        <access lane="1214537354#1_0" pos="25.41" length="17.74" friendlyPos="1"/>
+        <access lane="32257968#1_0" pos="19.89" length="17.55" friendlyPos="1"/>
+        <access lane="357734820_0" pos="28.83" length="1.47" friendlyPos="1"/>
+        <access lane="443366162#1_0" pos="20.60" length="4.66" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-4409558424" name="El Torcal" lane="-436582153#0_0" startPos="618.91" endPos="818.91" friendlyPos="true">
+        <access lane="-282232823#1_0" pos="0.00" length="106.68" friendlyPos="1"/>
+        <access lane="282232823#1_0" pos="59.58" length="110.90" friendlyPos="1"/>
+        <access lane="99190310#0_0" pos="51.42" length="149.90" friendlyPos="1"/>
+        <access lane="99190310#1_0" pos="0.00" length="150.05" friendlyPos="1"/>
+        <access lane="99190345_0" pos="65.22" length="132.26" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5417047630" name="Corregidor Francisco de Molina - Corazones" lane="-99017523#0_0" startPos="7.77" endPos="22.77" friendlyPos="true" lines="31"/>
+    <busStop id="-6018008455" name="El Perchel" lane="-638553633_0" startPos="418.40" endPos="618.40" friendlyPos="true">
+        <access lane="1187542127_0" pos="22.48" length="13.52" friendlyPos="1"/>
+        <access lane="280430700#0_0" pos="0.00" length="39.99" friendlyPos="1"/>
+        <access lane="358086113#0_0" pos="0.00" length="39.97" friendlyPos="1"/>
+        <access lane="35916356#4_0" pos="18.84" length="7.67" friendlyPos="1"/>
+        <access lane="443191933#1_0" pos="63.37" length="21.35" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-6018008476" name="Guadalmedina" lane="-638553633_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="191173976#0_0" pos="140.79" length="400.01" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-7567516122" name="Victoria Kent" lane="-61653013_0" startPos="292.97" endPos="492.97" friendlyPos="true">
+        <access lane="-345038285_0" pos="31.27" length="64.73" friendlyPos="1"/>
+        <access lane="-456403897#0_0" pos="54.39" length="114.39" friendlyPos="1"/>
+        <access lane="-99009683#1_0" pos="0.00" length="113.32" friendlyPos="1"/>
+        <access lane="345038285_0" pos="0.00" length="65.61" friendlyPos="1"/>
+        <access lane="99009683#0_0" pos="170.19" length="117.77" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-7571619023" name="Málaga María Zambrano" lane="-43512951_0" startPos="194.47" endPos="394.47" friendlyPos="true">
+        <access lane="-329451091#0_0" pos="166.51" length="9.38" friendlyPos="1"/>
+        <access lane="329451091#0_0" pos="75.23" length="4.58" friendlyPos="1"/>
+        <access lane="360340117#1_0" pos="59.28" length="115.13" friendlyPos="1"/>
+        <access lane="374410134#0_0" pos="0.00" length="120.62" friendlyPos="1"/>
+        <access lane="83613148#2_0" pos="0.00" length="118.35" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-7571619025" name="Málaga Centro - Alameda" lane="-835577328_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="184109464_0" pos="148.53" length="186.01" friendlyPos="1"/>
+        <access lane="184109465#0_0" pos="159.15" length="184.49" friendlyPos="1"/>
+        <access lane="191173976#0_0" pos="17.95" length="5.13" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-8568996859" name="El Perchel" lane="295033903_0" startPos="1108.22" endPos="1308.22" friendlyPos="true">
+        <access lane="1187542127_0" pos="22.51" length="8.93" friendlyPos="1"/>
+        <access lane="280430700#0_0" pos="0.00" length="41.42" friendlyPos="1"/>
+        <access lane="358086113#0_0" pos="0.00" length="41.11" friendlyPos="1"/>
+        <access lane="35916356#4_0" pos="18.83" length="12.25" friendlyPos="1"/>
+        <access lane="443191933#1_0" pos="63.35" length="25.93" friendlyPos="1"/>
+    </busStop>
+    <busStop id="10236258587" lane="862827151#1_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="VJA-019"/>
+    <busStop id="10765517126" name="Guadalmedina" lane="295033903_0" startPos="581.90" endPos="781.90" friendlyPos="true" lines="L1">
+        <access lane="191173976#0_0" pos="137.12" length="391.40" friendlyPos="1"/>
+    </busStop>
+    <busStop id="10858781452" name="La Isla" lane="436582153#1_0" startPos="400.97" endPos="600.97" friendlyPos="true" lines="L2">
+        <access lane="373389056#4_0" pos="7.22" length="1.48" friendlyPos="1"/>
+        <access lane="443365309_0" pos="1.07" length="5.80" friendlyPos="1"/>
+        <access lane="443375805#0_0" pos="3.20" length="11.02" friendlyPos="1"/>
+        <access lane="58610493#0_0" pos="0.00" length="11.68" friendlyPos="1"/>
+        <access lane="58610493#1_0" pos="0.00" length="12.35" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1145442066" name="Avenida de Europa - Barriada El Torcal" lane="360464237_0" startPos="15.98" endPos="30.98" friendlyPos="true" lines="1"/>
+    <busStop id="1625341615" name="La Unión" lane="504224086#0_0" startPos="140.62" endPos="340.62" friendlyPos="true" lines="L1">
+        <access lane="359365606#2_0" pos="58.22" length="20.21" friendlyPos="1"/>
+        <access lane="359507075#3_0" pos="13.30" length="16.17" friendlyPos="1"/>
+        <access lane="443379100#1_0" pos="31.82" length="11.78" friendlyPos="1"/>
+        <access lane="675882655#0_0" pos="3.87" length="9.20" friendlyPos="1"/>
+        <access lane="787068685_0" pos="23.85" length="16.83" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1956972629" name="Málaga María Zambrano" lane="185127045_0" startPos="154.87" endPos="354.87" friendlyPos="true">
+        <access lane="-1187539569_0" pos="110.02" length="134.75" friendlyPos="1"/>
+        <access lane="-329451091#0_0" pos="158.44" length="44.26" friendlyPos="1"/>
+        <access lane="329451091#0_0" pos="83.31" length="39.46" friendlyPos="1"/>
+        <access lane="764152297#2_0" pos="123.11" length="127.99" friendlyPos="1"/>
+        <access lane="83613148#2_0" pos="0.00" length="138.56" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1956972632" name="Málaga María Zambrano" lane="185127043_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="-1187539569_0" pos="110.02" length="129.80" friendlyPos="1"/>
+        <access lane="-329451091#0_0" pos="158.84" length="51.73" friendlyPos="1"/>
+        <access lane="329451091#0_0" pos="82.91" length="46.93" friendlyPos="1"/>
+        <access lane="764152297#2_0" pos="123.11" length="123.04" friendlyPos="1"/>
+        <access lane="83613148#2_0" pos="0.00" length="140.82" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1956972634" name="Málaga María Zambrano" lane="185127049_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="-1187539569_0" pos="110.02" length="115.16" friendlyPos="1"/>
+        <access lane="-329451091#0_0" pos="158.94" length="74.35" friendlyPos="1"/>
+        <access lane="329451091#0_0" pos="82.80" length="69.55" friendlyPos="1"/>
+        <access lane="764152297#2_0" pos="123.11" length="108.45" friendlyPos="1"/>
+        <access lane="83613148#2_0" pos="0.00" length="151.17" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1956972636" name="Málaga María Zambrano" lane="185127047_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="-1187539569_0" pos="110.02" length="106.38" friendlyPos="1"/>
+        <access lane="-329451091#0_0" pos="159.30" length="91.37" friendlyPos="1"/>
+        <access lane="329451091#0_0" pos="82.44" length="86.57" friendlyPos="1"/>
+        <access lane="764152297#2_0" pos="123.11" length="99.86" friendlyPos="1"/>
+        <access lane="83613148#1_0" pos="63.03" length="160.05" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1956972639" name="Málaga María Zambrano" lane="400333425_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="-1187539569_0" pos="110.02" length="103.62" friendlyPos="1"/>
+        <access lane="-329451091#0_0" pos="159.48" length="97.90" friendlyPos="1"/>
+        <access lane="329451091#0_0" pos="82.26" length="93.10" friendlyPos="1"/>
+        <access lane="764152297#2_0" pos="123.11" length="97.21" friendlyPos="1"/>
+        <access lane="83613148#1_0" pos="63.03" length="163.55" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1956972641" name="Málaga María Zambrano" lane="400333417_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="-1187539569_0" pos="110.02" length="95.72" friendlyPos="1"/>
+        <access lane="-329451091#0_0" pos="159.46" length="121.51" friendlyPos="1"/>
+        <access lane="1187542130_0" pos="43.07" length="146.25" friendlyPos="1"/>
+        <access lane="329451091#0_0" pos="82.28" length="116.71" friendlyPos="1"/>
+        <access lane="764152297#2_0" pos="123.11" length="89.98" friendlyPos="1"/>
+    </busStop>
+    <busStop id="2011638587" name="Camino de San Rafael - EMT" lane="23161419#2_0" startPos="14.11" endPos="29.11" friendlyPos="true"/>
+    <busStop id="2011638590" name="Camino de San Rafael - Santa Isabel" lane="358089863#0_0" startPos="11.10" endPos="26.10" friendlyPos="true"/>
+    <busStop id="2011638592" name="Camino de San Rafael - El Copo" lane="99000839#0_0" startPos="159.15" endPos="174.15" friendlyPos="true" lines="20"/>
+    <busStop id="2011638595" name="Camino de San Rafael - EMT" lane="110058627#3_0" startPos="2.77" endPos="17.77" friendlyPos="true"/>
+    <busStop id="2011648609" name="Camino de San Rafael - Santa Julia" lane="359353544#0_0" startPos="0.00" endPos="8.73" friendlyPos="true"/>
+    <busStop id="2011648613" name="Ingeniero Garnica" lane="360478618#0_0" startPos="11.88" endPos="26.88" friendlyPos="true"/>
+    <busStop id="2011648615" name="Plaza de Toros Vieja" lane="360475990#0_0" startPos="67.88" endPos="82.88" friendlyPos="true" lines="27 20 7"/>
+    <busStop id="2011648621" name="La Unión - Los Planetas" lane="359507076#4_0" startPos="24.33" endPos="39.33" friendlyPos="true"/>
+    <busStop id="2011648622" name="Avenida Explanada de la Estación - Estación FFCC" lane="372818284#1_0" startPos="17.32" endPos="32.32" friendlyPos="true" lines="C2"/>
+    <busStop id="2011648625" name="Avenida Explanada de la Estación - Estación FFCC" lane="358055211#2_0" startPos="48.45" endPos="63.45" friendlyPos="true"/>
+    <busStop id="2011648626" name="Paseo de los Tilos - Calatrava" lane="375043050#0_0" startPos="1.86" endPos="16.86" friendlyPos="true" lines="19 4 N3"/>
+    <busStop id="2011648628" name="Camino de San Rafael" lane="374541213_0" startPos="0.00" endPos="5.52" friendlyPos="true"/>
+    <busStop id="2011648629" name="Cuarteles - Eslava" lane="190525290#0_0" startPos="38.54" endPos="53.54" friendlyPos="true"/>
+    <busStop id="2011648630" name="La Unión - La Concepción" lane="344515363#2_0" startPos="0.05" endPos="15.05" friendlyPos="true"/>
+    <busStop id="2011648631" name="Camino de San Rafael - Colegio" lane="99000862#6_0" startPos="9.57" endPos="24.57" friendlyPos="true"/>
+    <busStop id="2011648632" name="Camino de San Rafael - La Asunción" lane="896209494#4_0" startPos="7.46" endPos="22.46" friendlyPos="true"/>
+    <busStop id="2020721438" name="Málaga María Zambrano" lane="191501885_0" startPos="221.44" endPos="421.44" friendlyPos="true">
+        <access lane="-1187539569_0" pos="110.02" length="119.56" friendlyPos="1"/>
+        <access lane="-329451091#0_0" pos="158.86" length="67.05" friendlyPos="1"/>
+        <access lane="329451091#0_0" pos="82.89" length="62.25" friendlyPos="1"/>
+        <access lane="764152297#2_0" pos="123.11" length="112.81" friendlyPos="1"/>
+        <access lane="83613148#2_0" pos="0.00" length="147.60" friendlyPos="1"/>
+    </busStop>
+    <busStop id="250325330" name="Paseo de los Tilos - Cruz de Humilladero" lane="191099604#0_0" startPos="3.34" endPos="18.34" friendlyPos="true"/>
+    <busStop id="2608380462" name="Málaga María Zambrano" lane="400333419_0" startPos="0.00" endPos="200.00" friendlyPos="true" lines="AVE AVANT">
+        <access lane="-1187539569_0" pos="110.02" length="96.72" friendlyPos="1"/>
+        <access lane="-329451091#0_0" pos="158.38" length="112.06" friendlyPos="1"/>
+        <access lane="1187542130_0" pos="43.07" length="153.39" friendlyPos="1"/>
+        <access lane="329451091#0_0" pos="83.37" length="107.26" friendlyPos="1"/>
+        <access lane="764152297#2_0" pos="123.11" length="90.65" friendlyPos="1"/>
+    </busStop>
+    <busStop id="2609573405" name="Atarazanas" lane="295033903_0" startPos="0.00" endPos="200.00" friendlyPos="true" lines="L1"/>
+    <busStop id="2845457213" lane="538537997#0_0" startPos="0.00" endPos="9.44" friendlyPos="true" lines="M-161"/>
+    <busStop id="3387630241" name="Héroe de Sostoa - Estación" lane="374410146#1_0" startPos="9.60" endPos="24.60" friendlyPos="true"/>
+    <busStop id="3637280807" name="Avenida Ortega y Gasset - Cruz de Humilladero" lane="190429167#0_0" startPos="80.65" endPos="95.65" friendlyPos="true"/>
+    <busStop id="3638702934" name="Avenida Ortega y Gasset - Barriada El Carmen" lane="190429172#6_0" startPos="21.86" endPos="36.86" friendlyPos="true"/>
+    <busStop id="3638702937" name="Avenida Ortega y Gasset - La Rosa" lane="534872273#1_0" startPos="21.29" endPos="36.29" friendlyPos="true"/>
+    <busStop id="3638702938" name="Avenida Ortega y Gasset - La Rosa" lane="358303730#1_0" startPos="131.96" endPos="146.96" friendlyPos="true"/>
+    <busStop id="3638702944" name="Avenida Ortega y Gasset - Santa Cristina" lane="23161437#0_0" startPos="46.10" endPos="61.10" friendlyPos="true" lines="19 22 4 N3"/>
+    <busStop id="3638702945" name="Avenida Ortega y Gasset - Santa Julia" lane="359353516#0_0" startPos="80.78" endPos="95.78" friendlyPos="true"/>
+    <busStop id="3638702947" name="Avenida Ortega y Gasset - Tiro de Pichón" lane="534872271#1_0" startPos="105.00" endPos="120.00" friendlyPos="true"/>
+    <busStop id="3638702949" name="Avenida Ortega y Gasset - Tiro de Pichón" lane="23161437#3_0" startPos="102.35" endPos="117.35" friendlyPos="true"/>
+    <busStop id="3638806163" name="Avenida Ortega y Gasset - Barriada El Carmen" lane="1184835531#4_0" startPos="2.10" endPos="17.10" friendlyPos="true"/>
+    <busStop id="3638806165" name="Cruz del Humilladero" lane="23161432_0" startPos="4.63" endPos="19.63" friendlyPos="true"/>
+    <busStop id="3638806167" name="Avenida Ortega y Gasset - Santa Julia" lane="372800311_0" startPos="24.93" endPos="39.93" friendlyPos="true"/>
+    <busStop id="3638806169" name="Avenida Ortega y Gasset" lane="1184835531#0_0" startPos="21.91" endPos="36.91" friendlyPos="true"/>
+    <busStop id="3638806173" name="La Unión - Edisson" lane="359284805#1_0" startPos="37.18" endPos="52.18" friendlyPos="true"/>
+    <busStop id="3638806175" name="La Unión - Santa Marta" lane="357818511#1_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="3638806177" name="Paseo de los Tilos - Plaza de la Solidaridad" lane="357190808#1_0" startPos="23.73" endPos="38.73" friendlyPos="true"/>
+    <busStop id="3653805809" name="Camino de San Rafael - Ceramistas" lane="99000862#0_0" startPos="4.95" endPos="19.95" friendlyPos="true"/>
+    <busStop id="3674747255" name="Cuarteles - Perchel" lane="191173976#0_0" startPos="31.28" endPos="46.28" friendlyPos="true" lines="1 N1 3 C1 91 5 9 10"/>
+    <busStop id="3727279216" name="Avenida de Europa - Barriada Dos Hermanas" lane="256535418#2_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="3727279220" name="Héroe de Sostoa - La Isla" lane="373389048_0" startPos="9.10" endPos="24.10" friendlyPos="true"/>
+    <busStop id="3727279222" name="Héroe de Sostoa - Obras Públicas" lane="360339436#1_0" startPos="4.80" endPos="19.80" friendlyPos="true"/>
+    <busStop id="3736380518" name="Avenida de Europa - Barriada El Torcal" lane="360464219#1_0" startPos="9.27" endPos="24.27" friendlyPos="true"/>
+    <busStop id="3754070337" name="Avenida Juan XXIII - Barbarela" lane="360312280#1_0" startPos="31.72" endPos="46.72" friendlyPos="true"/>
+    <busStop id="3754070340" name="Avenida Juan XXIII - Barbarela" lane="77609182#1_0" startPos="11.46" endPos="26.46" friendlyPos="true" lines="N2 15"/>
+    <busStop id="3754070341" name="Avenida Juan XXIII - Bodegueros" lane="190524657#0_0" startPos="36.34" endPos="51.34" friendlyPos="true"/>
+    <busStop id="3754070343" name="Avenida Juan XXIII - Camino de San Rafael" lane="205029946#2_0" startPos="40.37" endPos="55.37" friendlyPos="true"/>
+    <busStop id="3754070344" name="Avenida Juan XXIII - La Unión" lane="372798459#0_0" startPos="14.93" endPos="29.93" friendlyPos="true"/>
+    <busStop id="3762406328" name="Salitre - Jacinto Verdaguer" lane="358036176#0_0" startPos="40.04" endPos="55.04" friendlyPos="true"/>
+    <busStop id="3762406329" name="Salitre - Pasillo del Matadero" lane="184109465#0_0" startPos="129.07" endPos="144.07" friendlyPos="true"/>
+    <busStop id="3762423032" name="Ayala - Jardín de la Abadía" lane="369466771#1_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="3762423033" name="Ayala - Los Arcos" lane="360475978#2_0" startPos="11.40" endPos="26.40" friendlyPos="true"/>
+    <busStop id="3762423034" name="La Hoz - Mercado de Huelin" lane="343436007#0_0" startPos="6.14" endPos="21.14" friendlyPos="true" lines="A 7"/>
+    <busStop id="3762438179" name="Avenida Juan XXIII - Princesa" lane="331543439_0" startPos="33.35" endPos="48.35" friendlyPos="true"/>
+    <busStop id="3762438180" name="Orellana Toledano - San Patricio" lane="23161423#0_0" startPos="56.54" endPos="71.54" friendlyPos="true" lines="15"/>
+    <busStop id="3762438183" name="Paseo de Antonio Machado - Ingeniero Garnica" lane="23051293#1_0" startPos="85.10" endPos="100.10" friendlyPos="true" lines="40"/>
+    <busStop id="3762438185" name="Paseo de Antonio Machado - Tomás Echeverría" lane="373879399#1_0" startPos="2.87" endPos="17.87" friendlyPos="true"/>
+    <busStop id="3762485517" name="La Luz - La Paz" lane="436582153#0_0" startPos="1344.08" endPos="1544.08" friendlyPos="true" lines="L2"/>
+    <busStop id="3762485520" name="Puerta Blanca" lane="436582153#0_0" startPos="769.15" endPos="969.15" friendlyPos="true" lines="L2"/>
+    <busStop id="3788852332" name="Avenida de la Paloma - Barriada Girón" lane="343446214#0_0" startPos="35.10" endPos="50.10" friendlyPos="true"/>
+    <busStop id="3788852333" name="Avenida de la Paloma - Barriada Girón" lane="190824293_0" startPos="59.58" endPos="74.58" friendlyPos="true" lines="N1 3 31 27 5 9 10"/>
+    <busStop id="3794235132" name="Avenida de la Paloma" lane="99009671#3_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="420365408" name="Héroe de Sostoa - Jardín de la Abadía" lane="373389054#2_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="4214995779" name="Andén 1" lane="585068929_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214995780" name="Andén 11" lane="585068916_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214995781" name="Andén 12" lane="585068902_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214995783" name="Andén 13" lane="585068903_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214995785" name="Andén 15" lane="585068905_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214995787" name="Andén 16" lane="585068906_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214995788" name="Andén 17" lane="585068907_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996389" name="Andén 18" lane="585068932_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996390" name="Andén 19" lane="585068908_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996392" name="Andén 2" lane="585068928_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996393" name="Andén 20" lane="585068931_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996395" name="Andén 21" lane="585068910_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996397" name="Andén 22" lane="585068944_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996399" name="Málaga, Andén 23" lane="585068911_0" startPos="0.00" endPos="0.20" friendlyPos="true" lines="N1158"/>
+    <busStop id="4214996401" name="Andén 24" lane="585068945_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996403" name="Andén 25" lane="585068912_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996405" name="Andén 26" lane="585068946_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996407" name="Andén 27" lane="585068914_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996409" name="Andén 28" lane="585068947_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996411" name="Andén 29" lane="585068915_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996412" name="Andén 3" lane="585068927_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996413" name="Andén 30" lane="862827151#1_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="A"/>
+    <busStop id="4214996414" name="Andén 31" lane="585068933_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996415" name="Andén 32" lane="585068935_0" startPos="0.00" endPos="3.66" friendlyPos="true"/>
+    <busStop id="4214996417" name="Andén 33" lane="585068937_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996419" name="Andén 34" lane="585068938_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996421" name="Andén 35" lane="585068940_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996423" name="Andén 36" lane="585068941#0_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996424" name="Andén 37" lane="585068936_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996425" name="Andén 38" lane="585068942_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996426" name="Andén 39" lane="585068943_0" startPos="0.00" endPos="0.20" friendlyPos="true" lines="VJA-O80 "/>
+    <busStop id="4214996427" name="Andén 4" lane="585068925_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996428" name="Andén 5" lane="585068923_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996429" name="Andén 6" lane="585068922_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996430" name="Andén 7" lane="585068920_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996431" name="Andén 8" lane="585068919_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996432" name="Andén 9" lane="585068918_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4214996433" name="Andén 14" lane="585068904_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="4344674995" name="Palacio de los Deportes" lane="436582153#0_0" startPos="0.00" endPos="200.00" friendlyPos="true" lines="L2"/>
+    <busStop id="4408155456" name="Barbarela" lane="504224086#1_0" startPos="555.85" endPos="755.85" friendlyPos="true" lines="L1">
+        <access lane="360312280#1_0" pos="0.48" length="11.65" friendlyPos="1"/>
+        <access lane="443193724_0" pos="23.25" length="4.34" friendlyPos="1"/>
+        <access lane="634232387#0_0" pos="0.00" length="4.85" friendlyPos="1"/>
+        <access lane="77609182#1_0" pos="105.91" length="11.65" friendlyPos="1"/>
+        <access lane="77609182#2_0" pos="0.00" length="14.14" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4408159190" name="Carranque" lane="504224086#2_0" startPos="718.00" endPos="918.00" friendlyPos="true" lines="L1"/>
+    <busStop id="4409535923" name="Princesa - Huelin" lane="436582153#0_0" startPos="2615.56" endPos="2815.56" friendlyPos="true" lines="L2">
+        <access lane="1214537352#1_0" pos="0.00" length="26.69" friendlyPos="1"/>
+        <access lane="1214537354#1_0" pos="25.41" length="17.74" friendlyPos="1"/>
+        <access lane="32257968#1_0" pos="19.89" length="17.55" friendlyPos="1"/>
+        <access lane="357734820_0" pos="28.83" length="1.47" friendlyPos="1"/>
+        <access lane="443366162#1_0" pos="20.60" length="4.66" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4409558424" name="El Torcal" lane="436582153#0_0" startPos="1996.64" endPos="2196.64" friendlyPos="true" lines="L2">
+        <access lane="-282232823#1_0" pos="0.00" length="106.68" friendlyPos="1"/>
+        <access lane="282232823#1_0" pos="59.58" length="110.90" friendlyPos="1"/>
+        <access lane="99190310#0_0" pos="51.42" length="149.90" friendlyPos="1"/>
+        <access lane="99190310#1_0" pos="0.00" length="150.05" friendlyPos="1"/>
+        <access lane="99190345_0" pos="65.22" length="132.26" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5143505345" name="Ayala - Iglesia" lane="369466755#0_0" startPos="94.34" endPos="109.34" friendlyPos="true"/>
+    <busStop id="5182617755" name="Héroe de Sostoa - Barriada Girón" lane="360339429_0" startPos="14.34" endPos="29.34" friendlyPos="true"/>
+    <busStop id="5313513891" name="Avenida Europa" lane="358844251#1_0" startPos="16.19" endPos="31.19" friendlyPos="true"/>
+    <busStop id="5348742176" name="Paseo de Antonio Machado - Ingeniero Garnica" lane="1031928919#2_0" startPos="23.01" endPos="38.01" friendlyPos="true"/>
+    <busStop id="5348742178" name="Paseo de Antonio Machado - Tomás Echeverría" lane="373879411#2_0" startPos="34.60" endPos="49.60" friendlyPos="true" lines="40"/>
+    <busStop id="5395411782" name="Isla Cristina" lane="570001640#1_0" startPos="24.72" endPos="39.72" friendlyPos="true" lines="22"/>
+    <busStop id="5395421470" name="Isla Cristina - 25 años de Paz" lane="1183634186#5_0" startPos="4.35" endPos="19.35" friendlyPos="true"/>
+    <busStop id="5417218232" name="Corregidor Francisco de Molina - Corazones" lane="99017523#1_0" startPos="42.34" endPos="57.34" friendlyPos="true"/>
+    <busStop id="5417218235" name="Corregidor Antonio de Bobadilla - Instituto" lane="98885180#0_0" startPos="54.74" endPos="69.74" friendlyPos="true"/>
+    <busStop id="6018008455" name="El Perchel" lane="694231732_0" startPos="315.10" endPos="515.10" friendlyPos="true" lines="L2">
+        <access lane="1187542127_0" pos="22.48" length="13.52" friendlyPos="1"/>
+        <access lane="280430700#0_0" pos="0.00" length="39.99" friendlyPos="1"/>
+        <access lane="358086113#0_0" pos="0.00" length="39.97" friendlyPos="1"/>
+        <access lane="35916356#4_0" pos="18.84" length="7.67" friendlyPos="1"/>
+        <access lane="443191933#1_0" pos="63.37" length="21.35" friendlyPos="1"/>
+    </busStop>
+    <busStop id="6018008476" name="Guadalmedina" lane="694231732_0" startPos="733.50" endPos="933.50" friendlyPos="true" lines="L2">
+        <access lane="191173976#0_0" pos="140.79" length="400.01" friendlyPos="1"/>
+    </busStop>
+    <busStop id="6535024545" name="Victoria Kent" lane="400333427_0" startPos="1443.28" endPos="1643.28" friendlyPos="true" lines="C-1 C-2">
+        <access lane="-297041688_0" pos="0.00" length="118.03" friendlyPos="1"/>
+        <access lane="-345038285_0" pos="31.27" length="66.37" friendlyPos="1"/>
+        <access lane="-456403897#0_0" pos="54.39" length="116.02" friendlyPos="1"/>
+        <access lane="-99009683#1_0" pos="0.00" length="116.83" friendlyPos="1"/>
+        <access lane="345038285_0" pos="0.00" length="67.96" friendlyPos="1"/>
+    </busStop>
+    <busStop id="7567516122" name="Victoria Kent" lane="-43512951_0" startPos="2457.02" endPos="2657.02" friendlyPos="true">
+        <access lane="-345038285_0" pos="31.27" length="64.73" friendlyPos="1"/>
+        <access lane="-456403897#0_0" pos="54.39" length="114.39" friendlyPos="1"/>
+        <access lane="-99009683#1_0" pos="0.00" length="113.32" friendlyPos="1"/>
+        <access lane="345038285_0" pos="0.00" length="65.61" friendlyPos="1"/>
+        <access lane="99009683#0_0" pos="170.19" length="117.77" friendlyPos="1"/>
+    </busStop>
+    <busStop id="7571619023" name="Málaga María Zambrano" lane="-61653013_0" startPos="2555.53" endPos="2755.53" friendlyPos="true" lines="C-1 C-2">
+        <access lane="-329451091#0_0" pos="166.51" length="9.38" friendlyPos="1"/>
+        <access lane="329451091#0_0" pos="75.23" length="4.58" friendlyPos="1"/>
+        <access lane="360340117#1_0" pos="59.28" length="115.13" friendlyPos="1"/>
+        <access lane="374410134#0_0" pos="0.00" length="120.62" friendlyPos="1"/>
+        <access lane="83613148#2_0" pos="0.00" length="118.35" friendlyPos="1"/>
+    </busStop>
+    <busStop id="7571619025" name="Málaga Centro - Alameda" lane="835577328_0" startPos="251.79" endPos="451.79" friendlyPos="true" lines="C-1 C-2">
+        <access lane="184109464_0" pos="148.53" length="186.01" friendlyPos="1"/>
+        <access lane="184109465#0_0" pos="159.15" length="184.49" friendlyPos="1"/>
+        <access lane="191173976#0_0" pos="17.95" length="5.13" friendlyPos="1"/>
+    </busStop>
+    <busStop id="7772624491" lane="374410146#1_0" startPos="29.94" endPos="44.94" friendlyPos="true" lines="M-113"/>
+    <busStop id="7775297888" name="Avenida Explanada de la Estación - Estación FFCC" lane="372818284#1_0" startPos="14.75" endPos="29.75" friendlyPos="true" lines="92 91"/>
+    <busStop id="8568996859" name="El Perchel" lane="256045745_0" startPos="313.85" endPos="513.85" friendlyPos="true" lines="L1">
+        <access lane="1187542127_0" pos="22.51" length="8.93" friendlyPos="1"/>
+        <access lane="280430700#0_0" pos="0.00" length="41.42" friendlyPos="1"/>
+        <access lane="358086113#0_0" pos="0.00" length="41.11" friendlyPos="1"/>
+        <access lane="35916356#4_0" pos="18.83" length="12.25" friendlyPos="1"/>
+        <access lane="443191933#1_0" pos="63.35" length="25.93" friendlyPos="1"/>
+    </busStop>
+    <busStop id="8660674227" lane="360475978#2_0" startPos="14.42" endPos="29.42" friendlyPos="true" lines="M-113"/>
+    <busStop id="8729823632" name="Héroe de Sostoa - Estación" lane="374410146#1_0" startPos="34.83" endPos="49.83" friendlyPos="true"/>
+</additional>

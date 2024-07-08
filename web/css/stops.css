@@ -20,3 +20,10 @@ main {
     height: auto;
     margin-right: 20px;
 }
+
+/* Botones mostrar más y mostrar menos */
+.margin-vertical {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 8px;
+}

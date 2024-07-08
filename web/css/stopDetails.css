@@ -14,3 +14,8 @@ main {
     padding-right: 60px;
     padding-bottom: 20px;
 }
+
+.btn {
+    margin-top: 10px;
+    margin-right: 10px;
+}

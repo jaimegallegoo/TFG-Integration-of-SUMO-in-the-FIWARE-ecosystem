@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-07-01 13:09:06.038839 by osmWebWizard.py v1_19_0+0000-baa66a0f364
+<configuration>
+    <net-file value="C:\Users\Jaime\Sumo\2024-07-01-13-08-57\osm.net.xml.gz"/>
+    <ptlines-file value="C:\Users\Jaime\Sumo\2024-07-01-13-08-57\osm_ptlines.xml"/>
+    <ptstops-file value="C:\Users\Jaime\Sumo\2024-07-01-13-08-57\osm_stops.add.xml"/>
+    <output-file value="C:\Users\Jaime\Sumo\2024-07-01-13-08-57\osm_pt.rou.xml"/>
+    <stopinfos-file value="C:\Users\Jaime\Sumo\2024-07-01-13-08-57\stopinfos.xml"/>
+    <routes-file value="C:\Users\Jaime\Sumo\2024-07-01-13-08-57\vehroutes.xml"/>
+    <trips-file value="C:\Users\Jaime\Sumo\2024-07-01-13-08-57\trips.trips.xml"/>
+    <end value="4000.0"/>
+    <min-stops value="0"/>
+    <extend-to-fringe value="True"/>
+    <random-begin value="True"/>
+    <seed value="42"/>
+    <ignore-errors value="True"/>
+    <vtype-prefix value="pt_"/>
+    <verbose value="True"/>
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="pt_bus" vClass="bus"/>
+    <vType id="pt_tram" vClass="tram"/>
+    <vType id="pt_train" vClass="rail"/>
+    <vType id="pt_subway" vClass="rail_urban"/>
+    <vType id="pt_light_rail" vClass="rail_urban"/>
+    <vType id="pt_monorail" vClass="rail_urban"/>
+    <vType id="pt_trolleybus" vClass="bus"/>
+    <vType id="pt_minibus" vClass="bus"/>
+    <vType id="pt_share_taxi" vClass="taxi"/>
+    <vType id="pt_aerialway" vClass="rail_urban" length="2.5" width="2" personCapacity="4"/>
+    <vType id="pt_ferry" vClass="ship"/>
+    <route id="pt_bus_43:0" edges="18978590#0 18978590#1 18978590#4 19124158#0 238193527#0 238193527#1 238193527#4 239210559#0 239210559#1" >
+        <stop busStop="8278543244" duration="20" until="45.0"/> <!-- Reyes Catolicos -->
+    </route>
+    <route id="pt_bus_C4:0" edges="814351068#0 19748798#1 639625555#1 1160125534#0 1160125533 331354694#0 331354694#1 331354694#2" >
+        <stop busStop="8278543284" duration="20" until="48.0"/> <!-- Arjona (Puente de Triana) -->
+    </route>
+    <route id="pt_bus_40:0" edges="-331354694#2 -331354694#1 -331354694#0 -1160125533 -1160125534#1 127353237#0 127353237#1 18978590#0 18978590#1 18978590#4 19124158#0" >
+        <stop busStop="6329569392" duration="20" until="158.0"/> <!-- Mq. de Paradas -->
+    </route>
+    <route id="pt_bus_3:0" edges="814351068#0 19748798#1 639625555#1 1160125534#0 1160125533 331354694#0 331354694#1 331354694#2" >
+        <stop busStop="8278543284" duration="20" until="46.0"/> <!-- Arjona (Puente de Triana) -->
+    </route>
+    <route id="pt_bus_EA:0" color="yellow" edges="-331354694#2 -331354694#1 -331354694#0 -1160125533 -1160125534#1 127353237#0 127353237#1 18978590#0 18978590#1 18978590#4 19124158#0 238193527#0 238193527#1 238193527#4 239210559#0 239210559#1" >
+        <stop busStop="6329569392" duration="20" until="123.0"/> <!-- Mq. de Paradas -->
+    </route>
+    <route id="pt_bus_41:0" edges="-331354694#2 -331354694#1 -331354694#0 -1160125533 -1160125534#1 127353237#0 127353237#1 18978590#0 18978590#1 18978590#4 19124158#0" >
+        <stop busStop="6329569392" duration="20" until="155.0"/> <!-- Mq. de Paradas -->
+    </route>
+    <route id="pt_bus_21:1" edges="814351068#0 19748798#1 639625555#1 1160125534#0 1160125533 331354694#0 331354694#1 331354694#2" >
+        <stop busStop="8278543284" duration="20" until="47.0"/> <!-- Arjona (Puente de Triana) -->
+    </route>
+    <route id="pt_bus_21:0" edges="-331354694#2 -331354694#1 -331354694#0 -1160125533 -1160125534#1 127353237#0 127353237#1 18978590#0 18978590#1 18978590#4 19124158#0 238193527#0 238193527#1 238193527#4 239210559#0 239210559#1" >
+        <stop busStop="-8305729276" duration="20" until="35.0"/> <!-- Paseo de Colón (Plaza de Toros) -->
+        <stop busStop="8294328495" duration="20" until="170.0"/> <!-- Mq. de Paradas -->
+    </route>
+    <route id="pt_bus_3:1" edges="-331354694#2 -331354694#1 -331354694#0 -1160125533 -1160125534#1 127353237#0 127353237#1 18978590#0 18978590#1 18978590#4 19124158#0 238193527#0 238193527#1 238193527#4 239210559#0 239210559#1" >
+        <stop busStop="8294328495" duration="20" until="153.0"/> <!-- Mq. de Paradas -->
+    </route>
+    <route id="pt_tram_T1:0" edges="18615546 222105696 222105704#1 222105704#2 222105700#0 222105700#1 -222105700#1 -222105700#0 -222105704#2 -222105704#1 -222105704#0 -18615546" >
+        <stop busStop="244054578" duration="20" until="44.0"/> <!-- Plaza Nueva -->
+    </route>
+    <route id="pt_bus_40:1" edges="19124158#0 19124158#0 331354694#2" >
+        <stop busStop="6329569392" duration="20" until="54.0"/> <!-- Mq. de Paradas -->
+    </route>
+    <route id="pt_bus_41:1" edges="19124158#0 19124158#0 331354694#2" >
+        <stop busStop="6329569392" duration="20" until="56.0"/> <!-- Mq. de Paradas -->
+    </route>
+    <flow id="pt_bus_43:0" type="pt_bus" route="pt_bus_43:0" begin="17.0" end="4017.0" period="600" line="43:0" >
+        <param key="name" value="43 Reyes Catolicos - El Tardon"/>
+        <param key="completeness" value="0.04"/>
+    </flow>
+    <flow id="pt_bus_C4:0" type="pt_bus" route="pt_bus_C4:0" begin="15.0" end="4015.0" period="600" line="C4:0" >
+        <param key="name" value="C4 Circular Interior 2"/>
+        <param key="completeness" value="0.03"/>
+    </flow>
+    <flow id="pt_bus_40:0" type="pt_bus" route="pt_bus_40:0" begin="52.0" end="4052.0" period="600" line="40:0" >
+        <param key="name" value="40 Triana - Marqués de Paradas"/>
+        <param key="completeness" value="0.05"/>
+    </flow>
+    <flow id="pt_bus_3:0" type="pt_bus" route="pt_bus_3:0" begin="165.0" end="4165.0" period="600" line="3:0" >
+        <param key="completeness" value="0.01"/>
+    </flow>
+    <flow id="pt_bus_EA:0" type="pt_bus" route="pt_bus_EA:0" begin="131.0" end="4131.0" period="600" line="EA:0" >
+        <param key="name" value="EA - Aeropuerto - Plaza de Armas"/>
+        <param key="completeness" value="0.05"/>
+    </flow>
+    <flow id="pt_bus_41:0" type="pt_bus" route="pt_bus_41:0" begin="137.0" end="4137.0" period="600" line="41:0" >
+        <param key="name" value="41 Tablada - Mq. de Paradas"/>
+        <param key="completeness" value="0.03"/>
+    </flow>
+    <flow id="pt_bus_21:1" type="pt_bus" route="pt_bus_21:1" begin="303.0" end="4303.0" period="600" line="21:1" >
+        <param key="name" value="21 Plaza de Armas - Polígono San Pablo"/>
+        <param key="completeness" value="0.03"/>
+    </flow>
+    <flow id="pt_bus_21:0" type="pt_bus" route="pt_bus_21:0" begin="253.0" end="4253.0" period="600" line="21:0" >
+        <param key="name" value="21 Polígono San Pablo - Plaza de Armas"/>
+        <param key="completeness" value="0.05"/>
+    </flow>
+    <flow id="pt_bus_3:1" type="pt_bus" route="pt_bus_3:1" begin="383.0" end="4383.0" period="600" line="3:1" >
+        <param key="name" value="03 Bellavista-S. Jeronimo-Pino Montano"/>
+        <param key="completeness" value="0.01"/>
+    </flow>
+    <flow id="pt_tram_T1:0" type="pt_tram" route="pt_tram_T1:0" begin="535.0" end="4535.0" period="600" line="T1:0" >
+        <param key="name" value="Pza. Nueva - S. Bernardo"/>
+        <param key="completeness" value="0.10"/>
+    </flow>
+    <flow id="pt_bus_40:1" type="pt_bus" route="pt_bus_40:1" begin="406.0" end="4406.0" period="600" line="40:1" >
+        <param key="name" value="40 Marqués de Paradas - Triana"/>
+        <param key="completeness" value="0.05"/>
+    </flow>
+    <flow id="pt_bus_41:1" type="pt_bus" route="pt_bus_41:1" begin="441.0" end="4441.0" period="600" line="41:1" >
+        <param key="name" value="41 Mq. de Paradas - Tablada"/>
+        <param key="completeness" value="0.03"/>
+    </flow>
+</routes>

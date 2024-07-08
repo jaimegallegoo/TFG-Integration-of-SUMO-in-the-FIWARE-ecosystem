@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-07-01 13:07:07 by Eclipse SUMO netconvert Version 1.19.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="${SUMO_HOME}/data/typemap/osmNetconvert.typ.xml,${SUMO_HOME}/data/typemap/osmNetconvertAerialway.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml.gz"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml.gz"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <junctions>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+    </junctions>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+    </railway>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <busStop id="-126738958" name="Àngel Guimerà" lane="-822279165#1_0" startPos="0.00" endPos="107.07" friendlyPos="true">
+        <access lane="1169322554#0_0" pos="21.04" length="23.14" friendlyPos="1"/>
+        <access lane="1279639777#1_0" pos="43.41" length="31.74" friendlyPos="1"/>
+        <access lane="41397536_0" pos="0.00" length="34.08" friendlyPos="1"/>
+        <access lane="821794864#1_0" pos="1.50" length="43.79" friendlyPos="1"/>
+        <access lane="821794866#0_0" pos="0.00" length="40.90" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-1334394371" name="Russafa" lane="-320501846#0_0" startPos="548.70" endPos="573.70" friendlyPos="true">
+        <access lane="115600564#6_0" pos="15.52" length="17.81" friendlyPos="1"/>
+        <access lane="12403428#0_0" pos="0.20" length="38.23" friendlyPos="1"/>
+        <access lane="12403428#1_0" pos="0.20" length="31.72" friendlyPos="1"/>
+        <access lane="52092230#1_0" pos="21.21" length="8.13" friendlyPos="1"/>
+        <access lane="715820520_0" pos="18.77" length="37.27" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-137045354" name="Campanar" lane="-822279165#2_0" startPos="178.41" endPos="378.41" friendlyPos="true">
+        <access lane="391907283#2_0" pos="1405.47" length="1073.56" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-137045360" name="Túria" lane="-822279165#2_0" startPos="843.00" endPos="1043.00" friendlyPos="true">
+        <access lane="1014282474_0" pos="0.00" length="185.99" friendlyPos="1"/>
+        <access lane="391907283#2_0" pos="1419.96" length="76.93" friendlyPos="1"/>
+        <access lane="4758625#0_0" pos="0.00" length="158.54" friendlyPos="1"/>
+        <access lane="52361626_0" pos="257.46" length="184.65" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-3300258624" name="Túria" lane="-822279164#2_0" startPos="2240.77" endPos="2440.77" friendlyPos="true">
+        <access lane="1014282474_0" pos="0.00" length="181.16" friendlyPos="1"/>
+        <access lane="391907283#2_0" pos="1422.59" length="72.30" friendlyPos="1"/>
+        <access lane="4758625#0_0" pos="0.00" length="156.94" friendlyPos="1"/>
+        <access lane="52361626_0" pos="257.46" length="180.56" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-3300258625" name="Campanar" lane="-822279164#2_0" startPos="1572.68" endPos="1772.68" friendlyPos="true">
+        <access lane="391907283#2_0" pos="1410.23" length="1074.17" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-3300258626" name="Beniferri" lane="-822279164#2_0" startPos="640.61" endPos="840.61" friendlyPos="true"/>
+    <busStop id="-3420403038" name="Amado Granell-Montolivet" lane="-320501846#0_0" startPos="1217.56" endPos="1242.56" friendlyPos="true"/>
+    <busStop id="-3420403041" name="Russafa" lane="-386784998_0" startPos="1118.95" endPos="1143.95" friendlyPos="true">
+        <access lane="115600564#6_0" pos="11.76" length="10.69" friendlyPos="1"/>
+        <access lane="12403428#1_0" pos="0.20" length="37.45" friendlyPos="1"/>
+        <access lane="52092230#1_0" pos="24.96" length="15.26" friendlyPos="1"/>
+        <access lane="715820520_0" pos="18.09" length="28.26" friendlyPos="1"/>
+        <access lane="715820521_0" pos="6.79" length="32.51" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-3973025540" name="València - Estació del Nord" lane="-10157856_0" startPos="318.03" endPos="518.03" friendlyPos="true">
+        <access lane="815882447#1_0" pos="0.20" length="84.38" friendlyPos="1"/>
+        <access lane="815882448#0_0" pos="10.74" length="78.88" friendlyPos="1"/>
+        <access lane="815882451#0_0" pos="11.82" length="78.49" friendlyPos="1"/>
+        <access lane="824514066#2_0" pos="88.05" length="42.35" friendlyPos="1"/>
+        <access lane="824514067#3_0" pos="100.11" length="82.51" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-3973025541" name="València - Estació del Nord" lane="-10157797_0" startPos="352.32" endPos="552.32" friendlyPos="true">
+        <access lane="815882447#1_0" pos="0.20" length="78.41" friendlyPos="1"/>
+        <access lane="815882448#0_0" pos="10.74" length="73.11" friendlyPos="1"/>
+        <access lane="815882451#0_0" pos="11.82" length="72.71" friendlyPos="1"/>
+        <access lane="824514066#2_0" pos="88.19" length="48.31" friendlyPos="1"/>
+        <access lane="824514067#3_0" pos="100.11" length="85.76" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-3973025542" name="València - Estació del Nord" lane="-748874044_0" startPos="387.10" endPos="587.10" friendlyPos="true">
+        <access lane="815882447#0_0" pos="10.01" length="79.80" friendlyPos="1"/>
+        <access lane="815882447#1_0" pos="0.20" length="66.39" friendlyPos="1"/>
+        <access lane="815882448#0_0" pos="10.74" length="61.42" friendlyPos="1"/>
+        <access lane="815882451#0_0" pos="11.82" length="61.32" friendlyPos="1"/>
+        <access lane="824514066#2_0" pos="88.84" length="60.30" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-3973025543" name="València - Estació del Nord" lane="-748874043_0" startPos="392.03" endPos="592.03" friendlyPos="true">
+        <access lane="815882447#0_0" pos="10.01" length="73.96" friendlyPos="1"/>
+        <access lane="815882447#1_0" pos="0.20" length="60.54" friendlyPos="1"/>
+        <access lane="815882448#0_0" pos="10.74" length="55.87" friendlyPos="1"/>
+        <access lane="815882451#0_0" pos="11.82" length="55.79" friendlyPos="1"/>
+        <access lane="824514066#2_0" pos="88.99" length="66.15" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-3973025544" name="València - Estació del Nord" lane="-748874041#0_0" startPos="91.76" endPos="291.76" friendlyPos="true">
+        <access lane="815882447#0_0" pos="10.01" length="62.11" friendlyPos="1"/>
+        <access lane="815882447#1_0" pos="0.20" length="48.68" friendlyPos="1"/>
+        <access lane="815882448#0_0" pos="10.74" length="44.81" friendlyPos="1"/>
+        <access lane="815882451#0_0" pos="11.82" length="44.86" friendlyPos="1"/>
+        <access lane="824514066#2_0" pos="89.34" length="78.00" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-3973025545" name="València - Estació del Nord" lane="-400819790_0" startPos="85.42" endPos="285.42" friendlyPos="true">
+        <access lane="1125514524#0_0" pos="0.00" length="72.71" friendlyPos="1"/>
+        <access lane="815882447#0_0" pos="10.01" length="55.56" friendlyPos="1"/>
+        <access lane="815882447#1_0" pos="0.20" length="42.14" friendlyPos="1"/>
+        <access lane="815882448#0_0" pos="10.74" length="39.17" friendlyPos="1"/>
+        <access lane="815882451#0_0" pos="11.82" length="38.81" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-3973025546" name="València - Nord" lane="-41051601_0" startPos="57.72" endPos="257.72" friendlyPos="true">
+        <access lane="398679405#0_0" pos="0.00" length="36.44" friendlyPos="1"/>
+        <access lane="398679405#1_0" pos="0.00" length="54.50" friendlyPos="1"/>
+        <access lane="5098782#1_0" pos="82.11" length="58.72" friendlyPos="1"/>
+        <access lane="5098782#2_0" pos="1.22" length="55.97" friendlyPos="1"/>
+        <access lane="824514061#0_0" pos="0.00" length="54.85" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-3973025547" name="València - Nord" lane="-10157901_0" startPos="58.08" endPos="258.08" friendlyPos="true">
+        <access lane="398679405#0_0" pos="0.00" length="31.82" friendlyPos="1"/>
+        <access lane="398679405#1_0" pos="0.00" length="49.31" friendlyPos="1"/>
+        <access lane="5098782#1_0" pos="82.11" length="53.58" friendlyPos="1"/>
+        <access lane="5098782#2_0" pos="1.22" length="51.25" friendlyPos="1"/>
+        <access lane="824514061#0_0" pos="0.00" length="49.83" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-3973025548" name="València - Estació del Nord" lane="-10157206_0" startPos="0.00" endPos="165.53" friendlyPos="true">
+        <access lane="1125514527#6_0" pos="64.49" length="68.78" friendlyPos="1"/>
+        <access lane="1125514527#7_0" pos="0.00" length="68.61" friendlyPos="1"/>
+        <access lane="1225247281_0" pos="0.00" length="68.68" friendlyPos="1"/>
+        <access lane="1225247282#2_0" pos="101.11" length="69.12" friendlyPos="1"/>
+        <access lane="401223128#0_0" pos="42.15" length="51.47" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-3973025549" name="València - Estació del Nord" lane="10157197_0" startPos="123.05" endPos="323.05" friendlyPos="true">
+        <access lane="1125514527#6_0" pos="64.49" length="63.03" friendlyPos="1"/>
+        <access lane="1125514527#7_0" pos="0.00" length="62.85" friendlyPos="1"/>
+        <access lane="1225247281_0" pos="0.00" length="62.93" friendlyPos="1"/>
+        <access lane="1225247282#2_0" pos="101.11" length="63.36" friendlyPos="1"/>
+        <access lane="401223128#0_0" pos="42.95" length="45.82" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-474683327" name="Plaça Espanya" lane="-822279165#0_0" startPos="289.67" endPos="489.67" friendlyPos="true">
+        <access lane="191617373#2_0" pos="65.22" length="20.78" friendlyPos="1"/>
+        <access lane="211248470#1_0" pos="40.16" length="33.20" friendlyPos="1"/>
+        <access lane="723853547#0_0" pos="21.17" length="35.18" friendlyPos="1"/>
+        <access lane="723853547#1_0" pos="0.00" length="35.87" friendlyPos="1"/>
+        <access lane="723853548#0_0" pos="20.96" length="2.97" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-9759469603" name="Alacant" lane="-1068225426_0" startPos="0.87" endPos="25.87" friendlyPos="true">
+        <access lane="5098778#0_0" pos="6.54" length="22.35" friendlyPos="1"/>
+        <access lane="5098782#2_0" pos="17.70" length="27.38" friendlyPos="1"/>
+        <access lane="824514066#0_0" pos="0.00" length="14.76" friendlyPos="1"/>
+        <access lane="824514066#1_0" pos="0.00" length="23.45" friendlyPos="1"/>
+        <access lane="824514069#0_0" pos="0.00" length="24.26" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-9759522716" name="Alacant" lane="320501846#1_0" startPos="420.47" endPos="445.47" friendlyPos="true">
+        <access lane="5098778#0_0" pos="8.29" length="16.99" friendlyPos="1"/>
+        <access lane="824514057#2_0" pos="24.20" length="22.45" friendlyPos="1"/>
+        <access lane="824514066#0_0" pos="0.00" length="9.20" friendlyPos="1"/>
+        <access lane="824514066#1_0" pos="0.00" length="20.41" friendlyPos="1"/>
+        <access lane="824514069#0_0" pos="0.00" length="20.15" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-9759531876" name="Amado Granell-Montolivet" lane="-386784998_0" startPos="450.23" endPos="475.23" friendlyPos="true"/>
+    <busStop id="100937003" name="Alameda" lane="11697495_0" startPos="939.99" endPos="1139.99" friendlyPos="true" lines="3 9">
+        <access lane="10503661_0" pos="78.96" length="2.33" friendlyPos="1"/>
+        <access lane="20855254#2_0" pos="78.98" length="21.01" friendlyPos="1"/>
+        <access lane="27260924_0" pos="78.88" length="28.41" friendlyPos="1"/>
+        <access lane="32431117#0_0" pos="42.55" length="3.98" friendlyPos="1"/>
+        <access lane="391907283#5_0" pos="25.39" length="19.09" friendlyPos="1"/>
+    </busStop>
+    <busStop id="100946872" name="Aragó" lane="377367121#0_0" startPos="1670.65" endPos="1870.65" friendlyPos="true" lines="7 5"/>
+    <busStop id="104667516" name="Facultats Manuel Broseta" lane="11697495_0" startPos="257.66" endPos="457.66" friendlyPos="true" lines="3 9"/>
+    <busStop id="104667613" name="Colón" lane="328402046_0" startPos="250.72" endPos="450.72" friendlyPos="true" lines="7 3 5 9">
+        <access lane="624442652#1_0" pos="14.45" length="4.38" friendlyPos="1"/>
+        <access lane="728153671#2_0" pos="14.21" length="24.58" friendlyPos="1"/>
+        <access lane="728153676#3_0" pos="14.35" length="4.02" friendlyPos="1"/>
+        <access lane="728153678_0" pos="0.00" length="24.35" friendlyPos="1"/>
+        <access lane="833818521#2_0" pos="0.23" length="25.34" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1145573720" name="Mislata" lane="323321229#2_0" startPos="2285.25" endPos="2485.25" friendlyPos="true" lines="3 5 9"/>
+    <busStop id="126738929" name="Xàtiva" lane="322224864#0_0" startPos="68.55" endPos="268.55" friendlyPos="true" lines="3 5 9">
+        <access lane="5073109#7_0" pos="6.46" length="24.44" friendlyPos="1"/>
+        <access lane="5073109#8_0" pos="0.04" length="22.14" friendlyPos="1"/>
+        <access lane="760824780#4_0" pos="18.45" length="15.94" friendlyPos="1"/>
+        <access lane="760849969_0" pos="6.58" length="25.25" friendlyPos="1"/>
+        <access lane="760849970_0" pos="2.00" length="23.61" friendlyPos="1"/>
+    </busStop>
+    <busStop id="126738958" name="Àngel Guimerà" lane="822279165#1_0" startPos="0.00" endPos="107.07" friendlyPos="true">
+        <access lane="1169322554#0_0" pos="21.04" length="23.14" friendlyPos="1"/>
+        <access lane="1279639777#1_0" pos="43.41" length="31.74" friendlyPos="1"/>
+        <access lane="41397536_0" pos="0.00" length="34.08" friendlyPos="1"/>
+        <access lane="821794864#1_0" pos="1.50" length="43.79" friendlyPos="1"/>
+        <access lane="821794866#0_0" pos="0.00" length="40.90" friendlyPos="1"/>
+    </busStop>
+    <busStop id="129946697" name="Avinguda del Cid" lane="323321229#2_0" startPos="425.03" endPos="625.03" friendlyPos="true" lines="3 5 9"/>
+    <busStop id="129946955" name="Nou d&apos;Octubre" lane="323321229#2_0" startPos="1322.09" endPos="1522.09" friendlyPos="true" lines="3 5 9"/>
+    <busStop id="1334394371" name="Russafa" lane="320501846#0_0" startPos="1118.76" endPos="1143.76" friendlyPos="true" lines="10">
+        <access lane="115600564#6_0" pos="15.52" length="17.81" friendlyPos="1"/>
+        <access lane="12403428#0_0" pos="0.20" length="38.23" friendlyPos="1"/>
+        <access lane="12403428#1_0" pos="0.20" length="31.72" friendlyPos="1"/>
+        <access lane="52092230#1_0" pos="21.21" length="8.13" friendlyPos="1"/>
+        <access lane="715820520_0" pos="18.77" length="37.27" friendlyPos="1"/>
+    </busStop>
+    <busStop id="137045354" name="Campanar" lane="822279165#2_0" startPos="1516.73" endPos="1716.73" friendlyPos="true">
+        <access lane="391907283#2_0" pos="1405.47" length="1073.56" friendlyPos="1"/>
+    </busStop>
+    <busStop id="137045360" name="Túria" lane="822279165#2_0" startPos="852.14" endPos="1052.14" friendlyPos="true">
+        <access lane="1014282474_0" pos="0.00" length="185.99" friendlyPos="1"/>
+        <access lane="391907283#2_0" pos="1419.96" length="76.93" friendlyPos="1"/>
+        <access lane="4758625#0_0" pos="0.00" length="158.54" friendlyPos="1"/>
+        <access lane="52361626_0" pos="257.46" length="184.65" friendlyPos="1"/>
+    </busStop>
+    <busStop id="2420238762" name="Facultats Manuel Broseta" lane="233678857#1_0" startPos="722.27" endPos="922.27" friendlyPos="true" lines="3 9"/>
+    <busStop id="260594756" name="Amistat" lane="377367121#0_0" startPos="1133.51" endPos="1333.51" friendlyPos="true" lines="7 5"/>
+    <busStop id="260601661" name="Ayora" lane="377367121#0_0" startPos="307.89" endPos="507.89" friendlyPos="true" lines="7 5"/>
+    <busStop id="2674971391" name="Estación del Norte a Estación Joaquín Sorolla" lane="1003466036#0_0" startPos="3.34" endPos="18.34" friendlyPos="true" lines="Bus entre estaciones Valencia Norte y Joaquín Sorolla"/>
+    <busStop id="316591398" name="Mislata Almassil" lane="323321229#2_0" startPos="2745.76" endPos="2945.76" friendlyPos="true" lines="3 5 9"/>
+    <busStop id="3286032162" name="Alameda" lane="377367122#1_0" startPos="0.00" endPos="200.00" friendlyPos="true" lines="7 5">
+        <access lane="10503661_0" pos="80.13" length="24.38" friendlyPos="1"/>
+        <access lane="20855254#2_0" pos="77.92" length="1.05" friendlyPos="1"/>
+        <access lane="27260924_0" pos="77.83" length="6.35" friendlyPos="1"/>
+        <access lane="32431117#0_0" pos="27.84" length="2.31" friendlyPos="1"/>
+        <access lane="391907283#5_0" pos="39.79" length="14.30" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3288743173" name="Colón" lane="330506085#0_0" startPos="451.88" endPos="651.88" friendlyPos="true" lines="5 3 7 9">
+        <access lane="624442652#1_0" pos="16.05" length="9.87" friendlyPos="1"/>
+        <access lane="728153671#2_0" pos="12.89" length="10.27" friendlyPos="1"/>
+        <access lane="728153676#3_0" pos="15.83" length="18.30" friendlyPos="1"/>
+        <access lane="813239304#2_0" pos="0.00" length="27.84" friendlyPos="1"/>
+        <access lane="833818521#1_0" pos="0.20" length="27.85" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3289974569" name="Xàtiva" lane="328525628#1_0" startPos="1905.03" endPos="2105.03" friendlyPos="true" lines="5 3 9">
+        <access lane="5073109#7_0" pos="6.46" length="26.51" friendlyPos="1"/>
+        <access lane="5073109#8_0" pos="0.00" length="25.59" friendlyPos="1"/>
+        <access lane="648541875#3_0" pos="7.36" length="25.61" friendlyPos="1"/>
+        <access lane="760824780#4_0" pos="15.17" length="15.57" friendlyPos="1"/>
+        <access lane="760849970_0" pos="2.00" length="26.16" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3290266973" name="Aragó" lane="377367122#1_0" startPos="796.22" endPos="996.22" friendlyPos="true" lines="5 7"/>
+    <busStop id="3290266975" name="Amistat" lane="377367122#1_0" startPos="1420.08" endPos="1620.08" friendlyPos="true" lines="5 7"/>
+    <busStop id="3290266999" name="Ayora" lane="377367122#1_0" startPos="2240.50" endPos="2440.50" friendlyPos="true" lines="5 7"/>
+    <busStop id="3292250673" name="Bailén" lane="330506672_0" startPos="195.19" endPos="395.19" friendlyPos="true" lines="7">
+        <access lane="-816141594_0" pos="25.18" length="13.84" friendlyPos="1"/>
+        <access lane="1125514527#8_0" pos="28.68" length="4.10" friendlyPos="1"/>
+        <access lane="1225247282#0_0" pos="14.79" length="8.20" friendlyPos="1"/>
+        <access lane="816141593#1_0" pos="0.00" length="30.55" friendlyPos="1"/>
+        <access lane="816141594_0" pos="12.61" length="8.94" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3298673412" name="Àngel Guimerà" lane="322224864#0_0" startPos="916.75" endPos="1116.75" friendlyPos="true" lines="3 5 9">
+        <access lane="1279639771#2_0" pos="90.52" length="28.16" friendlyPos="1"/>
+        <access lane="1279639771#3_0" pos="3.28" length="22.48" friendlyPos="1"/>
+        <access lane="1279639778#0_0" pos="0.00" length="25.23" friendlyPos="1"/>
+        <access lane="41397537#0_0" pos="47.96" length="21.89" friendlyPos="1"/>
+        <access lane="41397537#1_0" pos="7.13" length="8.35" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3299338336" name="Avinguda del Cid" lane="328525628#1_0" startPos="33.59" endPos="233.59" friendlyPos="true" lines="5 3 9"/>
+    <busStop id="3299338356" name="Nou d&apos;Octubre" lane="328525628#0_0" startPos="1596.68" endPos="1796.68" friendlyPos="true" lines="5 3 9"/>
+    <busStop id="3299339264" name="Mislata" lane="328525628#0_0" startPos="819.10" endPos="1019.10" friendlyPos="true" lines="5 3 9"/>
+    <busStop id="3299339267" name="Mislata Almassil" lane="328525628#0_0" startPos="172.36" endPos="372.36" friendlyPos="true" lines="5 3 9"/>
+    <busStop id="3300258617" name="Àngel Guimerà" lane="822279164#1_0" startPos="0.00" endPos="115.39" friendlyPos="true" lines="2 1">
+        <access lane="1169322554#0_0" pos="21.25" length="28.33" friendlyPos="1"/>
+        <access lane="1279639777#1_0" pos="43.15" length="36.93" friendlyPos="1"/>
+        <access lane="41397536_0" pos="0.00" length="29.30" friendlyPos="1"/>
+        <access lane="821794864#1_0" pos="1.50" length="38.88" friendlyPos="1"/>
+        <access lane="821794866#0_0" pos="0.00" length="35.91" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3300258624" name="Túria" lane="822279164#2_0" startPos="844.02" endPos="1044.02" friendlyPos="true" lines="2 1">
+        <access lane="1014282474_0" pos="0.00" length="181.16" friendlyPos="1"/>
+        <access lane="391907283#2_0" pos="1422.59" length="72.30" friendlyPos="1"/>
+        <access lane="4758625#0_0" pos="0.00" length="156.94" friendlyPos="1"/>
+        <access lane="52361626_0" pos="257.46" length="180.56" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3300258625" name="Campanar" lane="822279164#2_0" startPos="1512.11" endPos="1712.11" friendlyPos="true" lines="2 1">
+        <access lane="391907283#2_0" pos="1410.23" length="1074.17" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3300258626" name="Beniferri" lane="822279164#2_0" startPos="2444.18" endPos="2644.18" friendlyPos="true" lines="2 1"/>
+    <busStop id="3348096580" name="Plaça Espanya" lane="822279164#0_0" startPos="0.00" endPos="200.00" friendlyPos="true" lines="2 1">
+        <access lane="191617373#2_0" pos="64.81" length="28.23" friendlyPos="1"/>
+        <access lane="211248470#1_0" pos="40.71" length="25.76" friendlyPos="1"/>
+        <access lane="723853547#0_0" pos="21.17" length="36.82" friendlyPos="1"/>
+        <access lane="723853547#1_0" pos="0.28" length="35.97" friendlyPos="1"/>
+        <access lane="723853548#0_0" pos="21.44" length="4.47" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3352213321" name="Alameda" lane="233678857#1_0" startPos="37.56" endPos="237.56" friendlyPos="true" lines="3 9">
+        <access lane="10503661_0" pos="79.25" length="7.00" friendlyPos="1"/>
+        <access lane="20855254#2_0" pos="78.71" length="16.34" friendlyPos="1"/>
+        <access lane="27260924_0" pos="78.61" length="23.74" friendlyPos="1"/>
+        <access lane="32431117#0_0" pos="39.43" length="3.55" friendlyPos="1"/>
+        <access lane="391907283#5_0" pos="28.46" length="18.14" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3352213376" name="Àngel Guimerà" lane="328525628#1_0" startPos="1059.08" endPos="1259.08" friendlyPos="true" lines="5 3 9">
+        <access lane="1279639771#2_0" pos="90.52" length="13.90" friendlyPos="1"/>
+        <access lane="1279639771#3_0" pos="3.21" length="6.26" friendlyPos="1"/>
+        <access lane="1279639778#0_0" pos="0.00" length="12.93" friendlyPos="1"/>
+        <access lane="13470112#1_0" pos="89.30" length="19.13" friendlyPos="1"/>
+        <access lane="41397537#1_0" pos="6.99" length="7.86" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3420403038" name="Amado Granell-Montolivet" lane="320501846#0_0" startPos="449.90" endPos="474.90" friendlyPos="true" lines="10"/>
+    <busStop id="3420403041" name="Russafa" lane="-1068225426_0" startPos="997.54" endPos="1022.54" friendlyPos="true" lines="10">
+        <access lane="115600564#6_0" pos="11.76" length="10.69" friendlyPos="1"/>
+        <access lane="12403428#1_0" pos="0.20" length="37.45" friendlyPos="1"/>
+        <access lane="52092230#1_0" pos="24.96" length="15.26" friendlyPos="1"/>
+        <access lane="715820520_0" pos="18.09" length="28.26" friendlyPos="1"/>
+        <access lane="715820521_0" pos="6.79" length="32.51" friendlyPos="1"/>
+    </busStop>
+    <busStop id="357913578" name="Bailén" lane="11353724_0" startPos="444.62" endPos="644.62" friendlyPos="true" lines="7">
+        <access lane="-816141594_0" pos="26.21" length="28.30" friendlyPos="1"/>
+        <access lane="1125514527#8_0" pos="27.64" length="11.97" friendlyPos="1"/>
+        <access lane="1225247282#0_0" pos="15.16" length="7.93" friendlyPos="1"/>
+        <access lane="721295135#0_0" pos="0.00" length="28.01" friendlyPos="1"/>
+        <access lane="816141594_0" pos="10.46" length="23.48" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3973025540" name="València - Estació del Nord" lane="1028342656_0" startPos="0.00" endPos="200.00" friendlyPos="true" lines="C-6 L-50 ER-02">
+        <access lane="815882447#1_0" pos="0.20" length="84.38" friendlyPos="1"/>
+        <access lane="815882448#0_0" pos="10.74" length="78.88" friendlyPos="1"/>
+        <access lane="815882451#0_0" pos="11.82" length="78.49" friendlyPos="1"/>
+        <access lane="824514066#2_0" pos="88.05" length="42.35" friendlyPos="1"/>
+        <access lane="824514067#3_0" pos="100.11" length="82.51" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3973025541" name="València - Estació del Nord" lane="1028342655_0" startPos="0.00" endPos="200.00" friendlyPos="true" lines="C-3">
+        <access lane="815882447#1_0" pos="0.20" length="78.41" friendlyPos="1"/>
+        <access lane="815882448#0_0" pos="10.74" length="73.11" friendlyPos="1"/>
+        <access lane="815882451#0_0" pos="11.82" length="72.71" friendlyPos="1"/>
+        <access lane="824514066#2_0" pos="88.19" length="48.31" friendlyPos="1"/>
+        <access lane="824514067#3_0" pos="100.11" length="85.76" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3973025542" name="València - Estació del Nord" lane="1028342654_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="815882447#0_0" pos="10.01" length="79.80" friendlyPos="1"/>
+        <access lane="815882447#1_0" pos="0.20" length="66.39" friendlyPos="1"/>
+        <access lane="815882448#0_0" pos="10.74" length="61.42" friendlyPos="1"/>
+        <access lane="815882451#0_0" pos="11.82" length="61.32" friendlyPos="1"/>
+        <access lane="824514066#2_0" pos="88.84" length="60.30" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3973025543" name="València - Estació del Nord" lane="1028342653_0" startPos="0.00" endPos="200.00" friendlyPos="true" lines="C-1">
+        <access lane="815882447#0_0" pos="10.01" length="73.96" friendlyPos="1"/>
+        <access lane="815882447#1_0" pos="0.20" length="60.54" friendlyPos="1"/>
+        <access lane="815882448#0_0" pos="10.74" length="55.87" friendlyPos="1"/>
+        <access lane="815882451#0_0" pos="11.82" length="55.79" friendlyPos="1"/>
+        <access lane="824514066#2_0" pos="88.99" length="66.15" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3973025544" name="València - Estació del Nord" lane="1028342658_0" startPos="0.00" endPos="200.00" friendlyPos="true" lines="C-1">
+        <access lane="815882447#0_0" pos="10.01" length="62.11" friendlyPos="1"/>
+        <access lane="815882447#1_0" pos="0.20" length="48.68" friendlyPos="1"/>
+        <access lane="815882448#0_0" pos="10.74" length="44.81" friendlyPos="1"/>
+        <access lane="815882451#0_0" pos="11.82" length="44.86" friendlyPos="1"/>
+        <access lane="824514066#2_0" pos="89.34" length="78.00" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3973025545" name="València - Estació del Nord" lane="400819790_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="1125514524#0_0" pos="0.00" length="72.71" friendlyPos="1"/>
+        <access lane="815882447#0_0" pos="10.01" length="55.56" friendlyPos="1"/>
+        <access lane="815882447#1_0" pos="0.20" length="42.14" friendlyPos="1"/>
+        <access lane="815882448#0_0" pos="10.74" length="39.17" friendlyPos="1"/>
+        <access lane="815882451#0_0" pos="11.82" length="38.81" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3973025546" name="València - Nord" lane="41051601_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="398679405#0_0" pos="0.00" length="36.44" friendlyPos="1"/>
+        <access lane="398679405#1_0" pos="0.00" length="54.50" friendlyPos="1"/>
+        <access lane="5098782#1_0" pos="82.11" length="58.72" friendlyPos="1"/>
+        <access lane="5098782#2_0" pos="1.22" length="55.97" friendlyPos="1"/>
+        <access lane="824514061#0_0" pos="0.00" length="54.85" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3973025547" name="València - Nord" lane="10157901_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="398679405#0_0" pos="0.00" length="31.82" friendlyPos="1"/>
+        <access lane="398679405#1_0" pos="0.00" length="49.31" friendlyPos="1"/>
+        <access lane="5098782#1_0" pos="82.11" length="53.58" friendlyPos="1"/>
+        <access lane="5098782#2_0" pos="1.22" length="51.25" friendlyPos="1"/>
+        <access lane="824514061#0_0" pos="0.00" length="49.83" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3973025548" name="València - Estació del Nord" lane="10157206_0" startPos="0.00" endPos="165.53" friendlyPos="true">
+        <access lane="1125514527#6_0" pos="64.49" length="68.78" friendlyPos="1"/>
+        <access lane="1125514527#7_0" pos="0.00" length="68.61" friendlyPos="1"/>
+        <access lane="1225247281_0" pos="0.00" length="68.68" friendlyPos="1"/>
+        <access lane="1225247282#2_0" pos="101.11" length="69.12" friendlyPos="1"/>
+        <access lane="401223128#0_0" pos="42.15" length="51.47" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3973025549" name="València - Estació del Nord" lane="10157176_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="1125514527#6_0" pos="64.49" length="63.03" friendlyPos="1"/>
+        <access lane="1125514527#7_0" pos="0.00" length="62.85" friendlyPos="1"/>
+        <access lane="1225247281_0" pos="0.00" length="62.93" friendlyPos="1"/>
+        <access lane="1225247282#2_0" pos="101.11" length="63.36" friendlyPos="1"/>
+        <access lane="401223128#0_0" pos="42.95" length="45.82" friendlyPos="1"/>
+    </busStop>
+    <busStop id="474683327" name="Plaça Espanya" lane="822279165#0_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="191617373#2_0" pos="65.22" length="20.78" friendlyPos="1"/>
+        <access lane="211248470#1_0" pos="40.16" length="33.20" friendlyPos="1"/>
+        <access lane="723853547#0_0" pos="21.17" length="35.18" friendlyPos="1"/>
+        <access lane="723853547#1_0" pos="0.00" length="35.87" friendlyPos="1"/>
+        <access lane="723853548#0_0" pos="20.96" length="2.97" friendlyPos="1"/>
+    </busStop>
+    <busStop id="9759469603" name="Alacant" lane="-386784998_0" startPos="2115.62" endPos="2140.62" friendlyPos="true">
+        <access lane="5098778#0_0" pos="6.54" length="22.35" friendlyPos="1"/>
+        <access lane="5098782#2_0" pos="17.70" length="27.38" friendlyPos="1"/>
+        <access lane="824514066#0_0" pos="0.00" length="14.76" friendlyPos="1"/>
+        <access lane="824514066#1_0" pos="0.00" length="23.45" friendlyPos="1"/>
+        <access lane="824514069#0_0" pos="0.00" length="24.26" friendlyPos="1"/>
+    </busStop>
+    <busStop id="9759522716" name="Alacant" lane="1068225427_0" startPos="1.10" endPos="26.10" friendlyPos="true">
+        <access lane="5098778#0_0" pos="8.29" length="16.99" friendlyPos="1"/>
+        <access lane="824514057#2_0" pos="24.20" length="22.45" friendlyPos="1"/>
+        <access lane="824514066#0_0" pos="0.00" length="9.20" friendlyPos="1"/>
+        <access lane="824514066#1_0" pos="0.00" length="20.41" friendlyPos="1"/>
+        <access lane="824514069#0_0" pos="0.00" length="20.15" friendlyPos="1"/>
+    </busStop>
+    <busStop id="9759531876" name="Amado Granell-Montolivet" lane="-1068225426_0" startPos="1666.26" endPos="1691.26" friendlyPos="true" lines="10"/>
+</additional>

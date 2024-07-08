@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-07-01 13:07:07 by Eclipse SUMO netconvert Version 1.19.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="${SUMO_HOME}/data/typemap/osmNetconvert.typ.xml,${SUMO_HOME}/data/typemap/osmNetconvertAerialway.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml.gz"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml.gz"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <junctions>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+    </junctions>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+    </railway>
+
+</configuration>
+-->
+
+<ptLines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/ptlines_file.xsd">
+    <ptLine id="10090321" name="C-2: Moixent =&gt; València-Nord" line="C-2" type="train" vClass="rail" color="250,183,0" completeness="0.06">
+        <route edges="10157206"/>
+        <busStop id="3973025548" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="10090426" name="C-3: València-Nord =&gt; Utiel" line="C-3" type="train" vClass="rail" color="135,0,153" completeness="0.06">
+        <route edges="1028342655"/>
+        <busStop id="3973025541" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="14166106" name="Línia 10: Alacant =&gt; Natzaret" line="10" type="tram" vClass="tram" color="179,203,109" completeness="0.38">
+        <route edges="-1068225426"/>
+        <busStop id="-9759469603" name="Alacant"/>
+        <busStop id="3420403041" name="Russafa"/>
+        <busStop id="9759531876" name="Amado Granell-Montolivet"/>
+    </ptLine>
+    <ptLine id="14166107" name="Línia 10: Natzaret =&gt; Alacant" line="10" type="tram" vClass="tram" color="179,203,109" completeness="0.38">
+        <route edges="320501846#0 320501846#1"/>
+        <busStop id="3420403038" name="Amado Granell-Montolivet"/>
+        <busStop id="1334394371" name="Russafa"/>
+        <busStop id="-9759522716" name="Alacant"/>
+    </ptLine>
+    <ptLine id="14235301" name="Línia 10: Ciutat Arts i Ciències - Justícia =&gt; Alacant" line="10" type="tram" vClass="tram" color="179,203,109" completeness="0.60">
+        <route edges="320501846#0 320501846#1"/>
+        <busStop id="3420403038" name="Amado Granell-Montolivet"/>
+        <busStop id="1334394371" name="Russafa"/>
+        <busStop id="-9759522716" name="Alacant"/>
+    </ptLine>
+    <ptLine id="14235302" name="Línia 10: Alacant =&gt; Ciutat Arts i Ciències - Justícia" line="10" type="tram" vClass="tram" color="179,203,109" completeness="0.60">
+        <route edges="-1068225426"/>
+        <busStop id="-9759469603" name="Alacant"/>
+        <busStop id="3420403041" name="Russafa"/>
+        <busStop id="9759531876" name="Amado Granell-Montolivet"/>
+    </ptLine>
+    <ptLine id="16661412" name="C-1: Platja i Grau de Gandia =&gt; València - Nord" line="C-1" type="train" vClass="rail" color="0,154,213" completeness="0.09">
+        <route edges="-748874044"/>
+        <busStop id="3973025542" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="16705283" name="C-3: València-Nord =&gt; Buñol" line="C-3" type="train" vClass="rail" color="135,0,153" completeness="0.10">
+        <route edges="1028342655"/>
+        <busStop id="3973025541" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="16705284" name="C-3: Buñol =&gt; València - Nord" line="C-3" type="train" vClass="rail" color="135,0,153" completeness="0.10">
+        <route edges="-10157797"/>
+        <busStop id="3973025541" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="16707356" name="CIVIS C-1: València - Nord =&gt; Gandia" line="C-1" type="train" vClass="rail" color="0,154,213" completeness="0.17">
+        <route edges="1028342653"/>
+        <busStop id="3973025543" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="16707357" name="CIVIS C-1: Gandia =&gt; València - Nord" line="C-1" type="train" vClass="rail" color="0,154,213" completeness="0.17">
+        <route edges="-748874044"/>
+        <busStop id="3973025542" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="16740331" name="CIVIS C-6: València-Nord =&gt; Castelló de la Plana" line="C-6" type="train" vClass="rail" color="0,45,154" completeness="0.12">
+        <route edges="1028342656"/>
+        <busStop id="3973025540" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="16740332" name="CIVIS C-6: Castelló de la Plana =&gt; València-Nord" line="C-6" type="train" vClass="rail" color="0,45,154" completeness="0.12">
+        <route edges="-10157856"/>
+        <busStop id="3973025540" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="16794668" name="L-50: València - Estació del Nord =&gt; Tortosa" line="L-50" type="train" vClass="rail" color="128,0,128" completeness="0.04">
+        <route edges="1028342656"/>
+        <busStop id="3973025540" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="16794785" name="ER-02: Vinarós =&gt; València-Nord" line="ER-02" type="train" vClass="rail" color="195,64,63" completeness="0.04">
+        <route edges="-10157856"/>
+        <busStop id="3973025540" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="16795873" name="L-50: Tortosa =&gt; València - Estació del Nord" line="L-50" type="train" vClass="rail" color="128,0,128" completeness="0.06">
+        <route edges="-10157856"/>
+        <busStop id="3973025540" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="16795874" name="ER-02: València-Nord =&gt; Vinarós" line="ER-02" type="train" vClass="rail" color="195,64,63" completeness="0.04">
+        <route edges="1028342656"/>
+        <busStop id="3973025540" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="16795899" name="ER24: València-Nord =&gt; Alcoi" line="ER24" type="train" vClass="rail" completeness="0.08">
+        <route edges="10157206"/>
+        <busStop id="3973025548" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="16795900" name="ER24: Alcoi =&gt; València-Nord" line="ER24" type="train" vClass="rail" completeness="0.08">
+        <route edges="10157206"/>
+        <busStop id="3973025548" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="16801769" name="Alacant Terminal =&gt; València - Estació del Nord" line="Alacant Terminal =&gt; València - Estació del Nord" type="train" vClass="rail" period="9300" completeness="0.17">
+        <route edges="10157206"/>
+        <busStop id="3973025548" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="16837028" name="C-2: València-Nord =&gt; Xàtiva" line="C-2" type="train" vClass="rail" color="250,183,0" completeness="0.08">
+        <route edges="10157206"/>
+        <busStop id="3973025548" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="16837029" name="C-2: Xàtiva =&gt; València-Nord" line="C-2" type="train" vClass="rail" color="250,183,0" completeness="0.08">
+        <route edges="10157206"/>
+        <busStop id="3973025548" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="16945412" name="L-50: Tortosa =&gt; València - Estació del Nord" line="L-50" type="train" vClass="rail" color="128,0,128" completeness="0.07">
+        <route edges="-10157856"/>
+        <busStop id="3973025540" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="16945629" name="L-50: València - Estació del Nord =&gt; Tortosa" line="L-50" type="train" vClass="rail" color="128,0,128" completeness="0.07">
+        <route edges="1028342656"/>
+        <busStop id="3973025540" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="16947106" name="València - Estació del Nord =&gt; Alacant Terminal" line="València - Estació del Nord =&gt; Alacant Terminal" type="train" vClass="rail" completeness="0.17">
+        <route edges="10157206"/>
+        <busStop id="3973025548" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="2184632" name="C-6: València-Nord =&gt; Castelló de la Plana" line="C-6" type="train" vClass="rail" color="0,45,154" completeness="0.05">
+        <route edges="1028342656"/>
+        <busStop id="3973025540" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="253334" name="C-3: Utiel =&gt; València - Nord" line="C-3" type="train" vClass="rail" color="135,0,153" completeness="0.06">
+        <route edges="-10157797"/>
+        <busStop id="3973025541" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="254510" name="C-5: València - Nord =&gt; Caudiel" line="C-5" type="train" vClass="rail" color="0,149,59" completeness="0.08">
+        <route edges="41051601"/>
+        <busStop id="3973025546" name="València - Nord"/>
+    </ptLine>
+    <ptLine id="254779" name="C-2: València-Nord =&gt; Moixent" line="C-2" type="train" vClass="rail" color="250,183,0" completeness="0.06">
+        <route edges="10157206"/>
+        <busStop id="3973025548" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="5616613" name="Línia 7: Marítim =&gt; Torrent Avinguda" line="7" type="subway" vClass="rail_urban" color="242,140,0" completeness="0.38">
+        <route edges="377367121#0 377367121#1 377367121#3 377367121#4 328402046 11353724"/>
+        <busStop id="260601661" name="Ayora"/>
+        <busStop id="260594756" name="Amistat"/>
+        <busStop id="100946872" name="Aragó"/>
+        <busStop id="3286032162" name="Alameda"/>
+        <busStop id="104667613" name="Colón"/>
+        <busStop id="357913578" name="Bailén"/>
+    </ptLine>
+    <ptLine id="5622154" name="Línia 5: Aeroport =&gt; Marítim" line="5" type="subway" vClass="rail_urban" color="0,152,112" completeness="0.61">
+        <route edges="328525628#0 328525628#1 330506085#0 377367122#0 377367122#1"/>
+        <busStop id="3299339267" name="Mislata Almassil"/>
+        <busStop id="3299339264" name="Mislata"/>
+        <busStop id="3299338356" name="Nou d&apos;Octubre"/>
+        <busStop id="3299338336" name="Avinguda del Cid"/>
+        <busStop id="3352213376" name="Àngel Guimerà"/>
+        <busStop id="3289974569" name="Xàtiva"/>
+        <busStop id="3288743173" name="Colón"/>
+        <busStop id="3286032162" name="Alameda"/>
+        <busStop id="3290266973" name="Aragó"/>
+        <busStop id="3290266975" name="Amistat"/>
+        <busStop id="3290266999" name="Ayora"/>
+    </ptLine>
+    <ptLine id="5622180" name="Línia 2: Torrent Avinguda =&gt; Llíria" line="2" type="subway" vClass="rail_urban" color="231,0,149" completeness="0.15">
+        <route edges="323234391 822279162 822279164#0 822279164#1 822279164#2"/>
+        <busStop id="3348096580" name="Plaça Espanya"/>
+        <busStop id="3300258617" name="Àngel Guimerà"/>
+        <busStop id="3300258624" name="Túria"/>
+        <busStop id="3300258625" name="Campanar"/>
+        <busStop id="3300258626" name="Beniferri"/>
+    </ptLine>
+    <ptLine id="5622354" name="Línia 1: Castelló =&gt; Bétera" line="1" type="subway" vClass="rail_urban" color="253,198,0" completeness="0.12">
+        <route edges="323234391 822279162 822279164#0 822279164#1 822279164#2"/>
+        <busStop id="3348096580" name="Plaça Espanya"/>
+        <busStop id="3300258617" name="Àngel Guimerà"/>
+        <busStop id="3300258624" name="Túria"/>
+        <busStop id="3300258625" name="Campanar"/>
+        <busStop id="3300258626" name="Beniferri"/>
+    </ptLine>
+    <ptLine id="5622355" name="Línia 3: Aeroport =&gt; Rafelbunyol" line="3" type="subway" vClass="rail_urban" color="221,5,43" completeness="0.33">
+        <route edges="328525628#0 328525628#1 330506085#0 233678857#0 233678857#1"/>
+        <busStop id="3299339267" name="Mislata Almassil"/>
+        <busStop id="3299339264" name="Mislata"/>
+        <busStop id="3299338356" name="Nou d&apos;Octubre"/>
+        <busStop id="3299338336" name="Avinguda del Cid"/>
+        <busStop id="3352213376" name="Àngel Guimerà"/>
+        <busStop id="3289974569" name="Xàtiva"/>
+        <busStop id="3288743173" name="Colón"/>
+        <busStop id="3352213321" name="Alameda"/>
+        <busStop id="2420238762" name="Facultats Manuel Broseta"/>
+    </ptLine>
+    <ptLine id="5622924" name="Línia 1: Bétera =&gt; Castelló" line="1" type="subway" vClass="rail_urban" color="253,198,0" completeness="0.10">
+        <route edges="-822279165#2 -822279165#1 -822279165#0 -822279163 -23776427"/>
+        <busStop id="-137045354" name="Campanar"/>
+        <busStop id="-137045360" name="Túria"/>
+        <busStop id="-126738958" name="Àngel Guimerà"/>
+        <busStop id="-474683327" name="Plaça Espanya"/>
+    </ptLine>
+    <ptLine id="5625922" name="Línia 2: Llíria =&gt; Torrent Avinguda" line="2" type="subway" vClass="rail_urban" color="231,0,149" completeness="0.12">
+        <route edges="-822279165#2 -822279165#1 -822279165#0 -822279163 -23776427"/>
+        <busStop id="-137045354" name="Campanar"/>
+        <busStop id="-137045360" name="Túria"/>
+        <busStop id="-126738958" name="Àngel Guimerà"/>
+        <busStop id="-474683327" name="Plaça Espanya"/>
+    </ptLine>
+    <ptLine id="5625981" name="Línia 3: Rafelbunyol =&gt; Aeroport" line="3" type="subway" vClass="rail_urban" color="221,5,43" completeness="0.33">
+        <route edges="11697495 328402046 322224864#0 323321229#1 323321229#2"/>
+        <busStop id="104667516" name="Facultats Manuel Broseta"/>
+        <busStop id="100937003" name="Alameda"/>
+        <busStop id="104667613" name="Colón"/>
+        <busStop id="126738929" name="Xàtiva"/>
+        <busStop id="3298673412" name="Àngel Guimerà"/>
+        <busStop id="129946697" name="Avinguda del Cid"/>
+        <busStop id="129946955" name="Nou d&apos;Octubre"/>
+        <busStop id="1145573720" name="Mislata"/>
+        <busStop id="316591398" name="Mislata Almassil"/>
+    </ptLine>
+    <ptLine id="5626066" name="Línia 5: Marítim =&gt; Aeroport" line="5" type="subway" vClass="rail_urban" color="0,152,112" completeness="0.61">
+        <route edges="377367121#0 377367121#1 377367121#3 377367121#4 328402046 322224864#0 323321229#1 323321229#2"/>
+        <busStop id="260601661" name="Ayora"/>
+        <busStop id="260594756" name="Amistat"/>
+        <busStop id="100946872" name="Aragó"/>
+        <busStop id="3286032162" name="Alameda"/>
+        <busStop id="104667613" name="Colón"/>
+        <busStop id="126738929" name="Xàtiva"/>
+        <busStop id="3298673412" name="Àngel Guimerà"/>
+        <busStop id="129946697" name="Avinguda del Cid"/>
+        <busStop id="129946955" name="Nou d&apos;Octubre"/>
+        <busStop id="1145573720" name="Mislata"/>
+        <busStop id="316591398" name="Mislata Almassil"/>
+    </ptLine>
+    <ptLine id="5626067" name="Línia 7: Torrent Avinguda =&gt; Marítim" line="7" type="subway" vClass="rail_urban" color="242,140,0" completeness="0.38">
+        <route edges="330506672 330506085#0 377367122#0 377367122#1"/>
+        <busStop id="3292250673" name="Bailén"/>
+        <busStop id="3288743173" name="Colón"/>
+        <busStop id="3286032162" name="Alameda"/>
+        <busStop id="3290266973" name="Aragó"/>
+        <busStop id="3290266975" name="Amistat"/>
+        <busStop id="3290266999" name="Ayora"/>
+    </ptLine>
+    <ptLine id="5626068" name="Línia 9: Alboraia Peris Aragó =&gt; Riba-roja de Túria" line="9" type="subway" vClass="rail_urban" color="183,129,79" completeness="0.39">
+        <route edges="11697495 328402046 322224864#0 323321229#1 323321229#2"/>
+        <busStop id="104667516" name="Facultats Manuel Broseta"/>
+        <busStop id="100937003" name="Alameda"/>
+        <busStop id="104667613" name="Colón"/>
+        <busStop id="126738929" name="Xàtiva"/>
+        <busStop id="3298673412" name="Àngel Guimerà"/>
+        <busStop id="129946697" name="Avinguda del Cid"/>
+        <busStop id="129946955" name="Nou d&apos;Octubre"/>
+        <busStop id="1145573720" name="Mislata"/>
+        <busStop id="316591398" name="Mislata Almassil"/>
+    </ptLine>
+    <ptLine id="5626069" name="Línia 9: Riba-roja de Túria =&gt; Alboraya-Peris Aragó" line="9" type="subway" vClass="rail_urban" color="183,129,79" completeness="0.39">
+        <route edges="328525628#0 328525628#1 330506085#0 233678857#0 233678857#1"/>
+        <busStop id="3299339267" name="Mislata Almassil"/>
+        <busStop id="3299339264" name="Mislata"/>
+        <busStop id="3299338356" name="Nou d&apos;Octubre"/>
+        <busStop id="3299338336" name="Avinguda del Cid"/>
+        <busStop id="3352213376" name="Àngel Guimerà"/>
+        <busStop id="3289974569" name="Xàtiva"/>
+        <busStop id="3288743173" name="Colón"/>
+        <busStop id="3352213321" name="Alameda"/>
+        <busStop id="2420238762" name="Facultats Manuel Broseta"/>
+    </ptLine>
+    <ptLine id="6015646" name="C-1: València - Nord =&gt; Gandia" line="C-1" type="train" vClass="rail" color="0,154,213" completeness="0.08">
+        <route edges="1028342653"/>
+        <busStop id="3973025543" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="6016095" name="C-1: Gandia =&gt; València - Nord" line="C-1" type="train" vClass="rail" color="0,154,213" completeness="0.08">
+        <route edges="-748874044"/>
+        <busStop id="3973025542" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="6076452" name="C-1: València - Nord =&gt; Platja i Grau de Gandia" line="C-1" type="train" vClass="rail" color="0,154,213" completeness="0.09">
+        <route edges="1028342658 748874041#1"/>
+        <busStop id="3973025544" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="7922619" name="Bus entre estaciones Valencia Norte y Joaquín Sorolla" line="Bus entre estaciones Valencia Norte y Joaquín Sorolla" type="bus" vClass="bus" completeness="0.25">
+        <route edges="1003466036#0 1003466036#1 261880277#1 261880278"/>
+        <busStop id="2674971391" name="Estación del Norte a Estación Joaquín Sorolla"/>
+    </ptLine>
+    <ptLine id="9812238" name="C-6: Castelló de la Plana =&gt; València-Nord" line="C-6" type="train" vClass="rail" color="0,45,154" completeness="0.05">
+        <route edges="-10157856"/>
+        <busStop id="3973025540" name="València - Estació del Nord"/>
+    </ptLine>
+    <ptLine id="9846961" name="C-5: Caudiel =&gt; València - Nord" line="C-5" type="train" vClass="rail" color="0,149,59" completeness="0.08">
+        <route edges="41051601"/>
+        <busStop id="3973025546" name="València - Nord"/>
+    </ptLine>
+</ptLines>

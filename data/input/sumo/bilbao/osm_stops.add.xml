@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-07-01 13:08:05 by Eclipse SUMO netconvert Version 1.19.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="${SUMO_HOME}/data/typemap/osmNetconvert.typ.xml,${SUMO_HOME}/data/typemap/osmNetconvertAerialway.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml.gz"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml.gz"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <junctions>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+    </junctions>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+    </railway>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <busStop id="-3271221736" name="Indautxu" lane="-262052936#3_0" startPos="6.42" endPos="206.42" friendlyPos="true">
+        <access lane="448047545_0" pos="0.00" length="1.71" friendlyPos="1"/>
+        <access lane="592141508#1_0" pos="46.38" length="4.86" friendlyPos="1"/>
+        <access lane="628997828#3_0" pos="53.14" length="5.19" friendlyPos="1"/>
+        <access lane="862809052#0_0" pos="0.20" length="4.43" friendlyPos="1"/>
+        <access lane="862809052#1_0" pos="0.00" length="1.46" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-4411849558" name="Moyua" lane="-262052936#2_0" startPos="6.14" endPos="206.14" friendlyPos="true">
+        <access lane="-1208711554_0" pos="101.23" length="8.26" friendlyPos="1"/>
+        <access lane="-41578898#5_0" pos="0.00" length="8.86" friendlyPos="1"/>
+        <access lane="1208711554_0" pos="0.00" length="10.04" friendlyPos="1"/>
+        <access lane="41578898#5_0" pos="52.68" length="10.54" friendlyPos="1"/>
+        <access lane="418997501#2_0" pos="0.00" length="7.49" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-4432846368" name="Guggenheim" lane="-445947753#0_0" startPos="6.14" endPos="31.14" friendlyPos="true">
+        <access lane="174088368#0_0" pos="0.15" length="34.94" friendlyPos="1"/>
+        <access lane="174088368#2_0" pos="0.00" length="35.57" friendlyPos="1"/>
+        <access lane="41902261#1_0" pos="141.71" length="10.01" friendlyPos="1"/>
+        <access lane="637085328#0_0" pos="16.44" length="40.87" friendlyPos="1"/>
+        <access lane="637085328#1_0" pos="20.15" length="15.11" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-4432854208" name="Abandoibarra" lane="-445947753#3_0" startPos="133.88" endPos="158.88" friendlyPos="true">
+        <access lane="1208781882#1_0" pos="22.70" length="25.97" friendlyPos="1"/>
+        <access lane="1208781882#2_0" pos="0.00" length="24.79" friendlyPos="1"/>
+        <access lane="1208782016#1_0" pos="13.87" length="10.05" friendlyPos="1"/>
+        <access lane="1208782274#8_0" pos="46.92" length="23.96" friendlyPos="1"/>
+        <access lane="948481858_0" pos="14.47" length="13.94" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-4432868864" name="Sabino Arana" lane="-1026672489#2_0" startPos="86.07" endPos="111.07" friendlyPos="true">
+        <access lane="1262290394#1_0" pos="68.69" length="12.07" friendlyPos="1"/>
+        <access lane="499104846#0_0" pos="48.01" length="26.57" friendlyPos="1"/>
+        <access lane="499104846#1_0" pos="10.77" length="11.98" friendlyPos="1"/>
+        <access lane="569403520#1_0" pos="0.20" length="20.08" friendlyPos="1"/>
+        <access lane="569403520#2_0" pos="0.00" length="20.36" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-4432868865" name="Sabino Arana" lane="-1026672488#2_0" startPos="87.08" endPos="112.08" friendlyPos="true">
+        <access lane="1262290394#1_0" pos="68.69" length="8.47" friendlyPos="1"/>
+        <access lane="499104846#0_0" pos="48.01" length="29.28" friendlyPos="1"/>
+        <access lane="499104846#1_0" pos="11.09" length="16.04" friendlyPos="1"/>
+        <access lane="569403520#1_0" pos="0.00" length="20.75" friendlyPos="1"/>
+        <access lane="569403520#2_0" pos="0.00" length="22.29" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-4641951440" name="Bilbao Abando" lane="-469939538_0" startPos="0.00" endPos="181.68" friendlyPos="true">
+        <access lane="469939786#0_0" pos="9.62" length="13.91" friendlyPos="1"/>
+        <access lane="469939786#1_0" pos="4.01" length="3.30" friendlyPos="1"/>
+        <access lane="469939786#2_0" pos="0.00" length="25.16" friendlyPos="1"/>
+        <access lane="496284682_0" pos="0.00" length="12.57" friendlyPos="1"/>
+        <access lane="496284683_0" pos="0.00" length="22.63" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-4813215918" name="Indautxu" lane="-448200753#2_0" startPos="8.75" endPos="208.75" friendlyPos="true">
+        <access lane="448047535_0" pos="0.00" length="2.89" friendlyPos="1"/>
+        <access lane="592141508#1_0" pos="46.38" length="4.69" friendlyPos="1"/>
+        <access lane="628997828#3_0" pos="52.59" length="0.25" friendlyPos="1"/>
+        <access lane="862809052#0_0" pos="0.00" length="0.30" friendlyPos="1"/>
+        <access lane="862809054_0" pos="0.20" length="5.24" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-4813216425" name="Moyua" lane="-448200753#2_0" startPos="763.39" endPos="963.39" friendlyPos="true">
+        <access lane="-1208711554_0" pos="101.23" length="11.00" friendlyPos="1"/>
+        <access lane="-41578898#5_0" pos="0.00" length="7.76" friendlyPos="1"/>
+        <access lane="1208711554_0" pos="0.00" length="10.34" friendlyPos="1"/>
+        <access lane="41578898#5_0" pos="52.68" length="6.80" friendlyPos="1"/>
+        <access lane="418997501#1_0" pos="68.46" length="9.50" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-4904228447" name="Gran Vía 79 (Ecuador)" lane="-359617710_0" startPos="98.61" endPos="113.61" friendlyPos="true" lines="A3414"/>
+    <busStop id="-5020348125" name="La Casilla" lane="-628872388#0_0" startPos="1.87" endPos="26.87" friendlyPos="true">
+        <access lane="1219360158#1_0" pos="0.20" length="40.31" friendlyPos="1"/>
+        <access lane="149668397#1_0" pos="10.68" length="28.32" friendlyPos="1"/>
+        <access lane="149668397#2_0" pos="7.74" length="13.84" friendlyPos="1"/>
+        <access lane="35134164_0" pos="0.00" length="26.42" friendlyPos="1"/>
+        <access lane="85681697#3_0" pos="24.03" length="9.19" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-517795570" name="Museo plaza" lane="-41867850_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="A2153 A3223"/>
+    <busStop id="-5359690881" name="Pío Baroja" lane="-445937112#0_0" startPos="0.04" endPos="25.04" friendlyPos="true">
+        <access lane="1018373280#0_0" pos="0.00" length="23.83" friendlyPos="1"/>
+        <access lane="28463164#4_0" pos="28.94" length="20.29" friendlyPos="1"/>
+        <access lane="28463164#5_0" pos="0.00" length="17.78" friendlyPos="1"/>
+        <access lane="432389959#7_0" pos="13.18" length="6.99" friendlyPos="1"/>
+        <access lane="8481762#9_0" pos="12.98" length="18.01" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5359690882" name="Pío Baroja" lane="-445937962#0_0" startPos="265.23" endPos="290.23" friendlyPos="true">
+        <access lane="22876233_0" pos="72.45" length="20.22" friendlyPos="1"/>
+        <access lane="28463164#4_0" pos="28.94" length="16.48" friendlyPos="1"/>
+        <access lane="28463164#5_0" pos="0.00" length="12.50" friendlyPos="1"/>
+        <access lane="432389959#7_0" pos="12.71" length="12.22" friendlyPos="1"/>
+        <access lane="8481762#9_0" pos="12.53" length="23.24" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5476063792" name="San Mamés" lane="-1026672485#3_0" startPos="0.70" endPos="25.70" friendlyPos="true">
+        <access lane="573653242#0_0" pos="73.18" length="7.58" friendlyPos="1"/>
+        <access lane="886328980_0" pos="0.00" length="6.56" friendlyPos="1"/>
+        <access lane="886328981_0" pos="0.00" length="4.79" friendlyPos="1"/>
+        <access lane="886328982#1_0" pos="0.00" length="0.74" friendlyPos="1"/>
+        <access lane="886328988_0" pos="0.00" length="1.37" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5476063807" name="Ospitalea/Hospital" lane="-1026672473_0" startPos="1.00" endPos="26.00" friendlyPos="true">
+        <access lane="-66902829#1_0" pos="21.99" length="14.75" friendlyPos="1"/>
+        <access lane="1018546544#0_0" pos="0.78" length="37.14" friendlyPos="1"/>
+        <access lane="1018546544#1_0" pos="0.00" length="37.21" friendlyPos="1"/>
+        <access lane="66902829#1_0" pos="22.99" length="9.95" friendlyPos="1"/>
+        <access lane="769620782#4_0" pos="22.10" length="11.84" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5476063808" name="Ospitalea/Hospital" lane="-1026672471#0_0" startPos="9.13" endPos="34.13" friendlyPos="true">
+        <access lane="-66902829#1_0" pos="22.28" length="18.84" friendlyPos="1"/>
+        <access lane="1018546543#3_0" pos="0.00" length="37.03" friendlyPos="1"/>
+        <access lane="1018546544#1_0" pos="0.20" length="37.57" friendlyPos="1"/>
+        <access lane="66902829#1_0" pos="22.70" length="14.04" friendlyPos="1"/>
+        <access lane="769620782#4_0" pos="22.34" length="7.75" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5476063814" name="Basurto" lane="-1026649196#2_0" startPos="1.76" endPos="26.76" friendlyPos="true">
+        <access lane="148008508#1_0" pos="34.28" length="10.06" friendlyPos="1"/>
+        <access lane="569401810#2_0" pos="23.92" length="8.58" friendlyPos="1"/>
+        <access lane="569401810#3_0" pos="1.13" length="5.91" friendlyPos="1"/>
+        <access lane="809516286#4_0" pos="32.56" length="2.25" friendlyPos="1"/>
+        <access lane="809516286#5_0" pos="0.00" length="2.25" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5476076764" name="Euskalduna" lane="-1026672495#0_0" startPos="5.95" endPos="30.95" friendlyPos="true">
+        <access lane="41902259#2_0" pos="18.34" length="16.74" friendlyPos="1"/>
+        <access lane="637085329#1_0" pos="147.19" length="12.01" friendlyPos="1"/>
+        <access lane="644961379#4_0" pos="15.00" length="32.31" friendlyPos="1"/>
+        <access lane="904392213#1_0" pos="1.90" length="31.84" friendlyPos="1"/>
+        <access lane="904392213#3_0" pos="0.00" length="32.73" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5478168779" name="Uribitarte" lane="-445937112#2_0" startPos="5.39" endPos="30.39" friendlyPos="true">
+        <access lane="1179982172#1_0" pos="17.25" length="25.52" friendlyPos="1"/>
+        <access lane="174297155_0" pos="66.81" length="29.32" friendlyPos="1"/>
+        <access lane="28463164#8_0" pos="18.61" length="17.44" friendlyPos="1"/>
+        <access lane="432389959#5_0" pos="17.67" length="5.95" friendlyPos="1"/>
+        <access lane="8481762#5_0" pos="17.73" length="18.51" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-582031670" name="Uribitarte" lane="-445937962#1_0" startPos="81.59" endPos="106.59" friendlyPos="true">
+        <access lane="1018375902#0_0" pos="0.00" length="32.21" friendlyPos="1"/>
+        <access lane="1179982172#1_0" pos="16.97" length="20.25" friendlyPos="1"/>
+        <access lane="28463164#8_0" pos="18.28" length="12.17" friendlyPos="1"/>
+        <access lane="432389959#5_0" pos="18.01" length="11.22" friendlyPos="1"/>
+        <access lane="8481762#5_0" pos="18.30" length="23.74" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-582037358" name="Abandoibarra" lane="-445938970#3_0" startPos="133.59" endPos="158.59" friendlyPos="true">
+        <access lane="1208781882#1_0" pos="22.70" length="24.85" friendlyPos="1"/>
+        <access lane="1208781882#2_0" pos="0.00" length="20.25" friendlyPos="1"/>
+        <access lane="1208782016#1_0" pos="12.50" length="15.27" friendlyPos="1"/>
+        <access lane="171882519_0" pos="0.00" length="22.41" friendlyPos="1"/>
+        <access lane="948481858_0" pos="13.10" length="19.17" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-582037359" name="Guggenheim" lane="-445938970#0_0" startPos="6.25" endPos="31.25" friendlyPos="true">
+        <access lane="174088368#0_0" pos="0.15" length="33.79" friendlyPos="1"/>
+        <access lane="174088368#2_0" pos="0.00" length="32.23" friendlyPos="1"/>
+        <access lane="41902261#1_0" pos="143.18" length="15.26" friendlyPos="1"/>
+        <access lane="637085328#0_0" pos="16.44" length="37.01" friendlyPos="1"/>
+        <access lane="637085328#1_0" pos="18.67" length="9.87" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-582138782" name="San Mamés" lane="-1026672484#3_0" startPos="0.58" endPos="25.58" friendlyPos="true">
+        <access lane="573653262#1_0" pos="22.04" length="9.57" friendlyPos="1"/>
+        <access lane="886328980_0" pos="0.00" length="10.22" friendlyPos="1"/>
+        <access lane="886328981_0" pos="0.00" length="9.13" friendlyPos="1"/>
+        <access lane="886328982#1_0" pos="0.20" length="4.94" friendlyPos="1"/>
+        <access lane="886328988_0" pos="0.00" length="5.11" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-582138784" name="Euskalduna" lane="-1026672496#0_0" startPos="6.15" endPos="31.15" friendlyPos="true">
+        <access lane="41902259#2_0" pos="18.55" length="12.18" friendlyPos="1"/>
+        <access lane="637085329#1_0" pos="147.00" length="16.57" friendlyPos="1"/>
+        <access lane="644961379#4_0" pos="15.32" length="27.76" friendlyPos="1"/>
+        <access lane="904392213#1_0" pos="1.90" length="33.08" friendlyPos="1"/>
+        <access lane="904392213#3_0" pos="0.00" length="32.05" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-582149252" name="Abando" lane="-555533279#2_0" startPos="7.47" endPos="32.47" friendlyPos="true">
+        <access lane="-28225525#3_0" pos="22.37" length="4.36" friendlyPos="1"/>
+        <access lane="22876187_0" pos="0.00" length="40.32" friendlyPos="1"/>
+        <access lane="28225525#3_0" pos="22.20" length="9.16" friendlyPos="1"/>
+        <access lane="496213856#2_0" pos="20.69" length="40.89" friendlyPos="1"/>
+        <access lane="496213856#3_0" pos="0.20" length="37.34" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5885749749" name="Deustuko zubia / Zubiarte" lane="-340820167_0" startPos="103.69" endPos="118.69" friendlyPos="true" lines="13 18 01 10"/>
+    <busStop id="-5931082336" name="Hurtado Amézaga 2 / Geltokia-Estación" lane="-627566671#1_0" startPos="5.42" endPos="20.42" friendlyPos="true" lines="30 85 58 75">
+        <access lane="469939786#2_0" pos="8.39" length="21.00" friendlyPos="1"/>
+        <access lane="496213856#0_0" pos="0.00" length="14.45" friendlyPos="1"/>
+        <access lane="496284683_0" pos="0.00" length="37.27" friendlyPos="1"/>
+        <access lane="627566671#0_0" pos="47.90" length="16.16" friendlyPos="1"/>
+        <access lane="627566671#1_0" pos="0.00" length="13.36" friendlyPos="1"/>
+    </busStop>
+    <busStop id="-5932419499" name="Campo Volantín 21" lane="-174299182#1_0" startPos="29.74" endPos="44.74" friendlyPos="true" lines="G8 71"/>
+    <busStop id="-5938621848" name="Gordóniz 39" lane="-241719194#1_0" startPos="73.01" endPos="88.01" friendlyPos="true" lines="27 77 G3 72"/>
+    <busStop id="-7014997834" name="Bilbao Intermodal 1" lane="-750217298_0" startPos="0.00" endPos="0.20" friendlyPos="true" lines="A3927 A3923 A3926 A3342 A3343 A3341 A3915 A3916 A3247 A0651 A17 A3512 A3933 31"/>
+    <busStop id="1120060542" name="Deustu" lane="262052936#5_0" startPos="1376.45" endPos="1576.45" friendlyPos="true" lines="L2 L1">
+        <access lane="132665161#4_0" pos="255.86" length="47.74" friendlyPos="1"/>
+    </busStop>
+    <busStop id="120060372" name="Campo Volantín / La Salve" lane="897216005_0" startPos="90.54" endPos="105.54" friendlyPos="true"/>
+    <busStop id="1377479823" name="Basurto" lane="569401810#2_0" startPos="0.00" endPos="23.92" friendlyPos="true" lines="T1"/>
+    <busStop id="1576577787" name="San Mamés" lane="558053674#1_0" startPos="0.00" endPos="200.00" friendlyPos="true" lines="C-2 C-1">
+        <access lane="1163978728#0_0" pos="55.75" length="13.52" friendlyPos="1"/>
+        <access lane="221395587#1_0" pos="54.90" length="3.54" friendlyPos="1"/>
+        <access lane="573653242#0_0" pos="41.17" length="11.57" friendlyPos="1"/>
+        <access lane="573653262#2_0" pos="14.36" length="32.00" friendlyPos="1"/>
+        <access lane="886328972#2_0" pos="4.14" length="31.87" friendlyPos="1"/>
+    </busStop>
+    <busStop id="1611159740" name="Autonomía 1" lane="628258768_0" startPos="19.46" endPos="34.46" friendlyPos="true"/>
+    <busStop id="1848293666" name="Autonomía" lane="558053674#1_0" startPos="513.13" endPos="713.13" friendlyPos="true" lines="C-2 C-1">
+        <access lane="-128276598#1_0" pos="102.12" length="20.04" friendlyPos="1"/>
+        <access lane="-25319465#1_0" pos="0.00" length="34.62" friendlyPos="1"/>
+        <access lane="128276598#0_0" pos="7.76" length="15.24" friendlyPos="1"/>
+        <access lane="148008511#0_0" pos="0.00" length="33.18" friendlyPos="1"/>
+        <access lane="25319465#1_0" pos="0.20" length="32.05" friendlyPos="1"/>
+    </busStop>
+    <busStop id="2331111956" name="Tiboli 12" lane="28489660#3_0" startPos="10.32" endPos="25.32" friendlyPos="true"/>
+    <busStop id="246852179" name="Moyua Plaza (Deutsche Bank)" lane="901097952#0_0" startPos="0.00" endPos="9.81" friendlyPos="true" lines="A3224"/>
+    <busStop id="246852183" name="Moyúa 4" lane="902623938#0_0" startPos="0.00" endPos="14.97" friendlyPos="true" lines="A3"/>
+    <busStop id="247081670" name="Urquijo 14 / Instituto" lane="1208848873#2_0" startPos="8.92" endPos="23.92" friendlyPos="true"/>
+    <busStop id="3015894287" name="San Jose plaza (Elcano 5)" lane="411824370#0_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="A2153"/>
+    <busStop id="312995725" name="Anselma de Salces 2" lane="28489657#1_0" startPos="149.86" endPos="164.86" friendlyPos="true"/>
+    <busStop id="312996868" name="Matiko 1" lane="28489842_0" startPos="234.32" endPos="249.32" friendlyPos="true"/>
+    <busStop id="3138104609" name="Plaza Biribila / Gran Vía" lane="623205935_0" startPos="3.77" endPos="18.77" friendlyPos="true" lines="G1 G5 03 A2 A9"/>
+    <busStop id="3271221734" name="Abando" lane="262052936#0_0" startPos="200.30" endPos="400.30" friendlyPos="true" lines="L2 L1">
+        <access lane="448877338#1_0" pos="0.00" length="14.89" friendlyPos="1"/>
+        <access lane="596954359_0" pos="17.35" length="15.19" friendlyPos="1"/>
+        <access lane="596954362_0" pos="0.00" length="12.40" friendlyPos="1"/>
+        <access lane="596954365_0" pos="0.00" length="12.41" friendlyPos="1"/>
+        <access lane="623203026#0_0" pos="2.74" length="12.57" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3271221736" name="Indautxu" lane="262052936#3_0" startPos="538.45" endPos="738.45" friendlyPos="true" lines="L2 L1">
+        <access lane="448047545_0" pos="0.00" length="1.71" friendlyPos="1"/>
+        <access lane="592141508#1_0" pos="46.38" length="4.86" friendlyPos="1"/>
+        <access lane="628997828#3_0" pos="53.14" length="5.19" friendlyPos="1"/>
+        <access lane="862809052#0_0" pos="0.20" length="4.43" friendlyPos="1"/>
+        <access lane="862809052#1_0" pos="0.00" length="1.46" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3290281999" name="Santimami/San Mamés" lane="262052936#5_0" startPos="249.36" endPos="449.36" friendlyPos="true" lines="L2 L1">
+        <access lane="448878907_0" pos="4.09" length="15.04" friendlyPos="1"/>
+        <access lane="448878911_0" pos="4.14" length="11.56" friendlyPos="1"/>
+        <access lane="604266566_0" pos="44.26" length="0.80" friendlyPos="1"/>
+        <access lane="862345273#1_0" pos="0.00" length="17.13" friendlyPos="1"/>
+        <access lane="862345275#1_0" pos="0.20" length="15.75" friendlyPos="1"/>
+    </busStop>
+    <busStop id="3657888856" name="Campo Volantín 23" lane="174299182#2_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="11"/>
+    <busStop id="4205016613" name="Olabeaga / Dikea" lane="975724504_0" startPos="12.44" endPos="27.44" friendlyPos="true" lines="A3"/>
+    <busStop id="4308934530" name="San Ignazio" lane="262052936#5_0" startPos="3093.04" endPos="3293.04" friendlyPos="true" lines="L2 L1"/>
+    <busStop id="4411849558" name="Moyua" lane="262052936#2_0" startPos="202.07" endPos="402.07" friendlyPos="true" lines="L2 L1">
+        <access lane="-1208711554_0" pos="101.23" length="8.26" friendlyPos="1"/>
+        <access lane="-41578898#5_0" pos="0.00" length="8.86" friendlyPos="1"/>
+        <access lane="1208711554_0" pos="0.00" length="10.04" friendlyPos="1"/>
+        <access lane="41578898#5_0" pos="52.68" length="10.54" friendlyPos="1"/>
+        <access lane="418997501#2_0" pos="0.00" length="7.49" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4432818969" name="Arriaga" lane="445935027#1_0" startPos="15.67" endPos="40.67" friendlyPos="true" lines="T1">
+        <access lane="-97894990#3_0" pos="10.27" length="16.07" friendlyPos="1"/>
+        <access lane="1182252236#1_0" pos="0.20" length="21.12" friendlyPos="1"/>
+        <access lane="1182252237#0_0" pos="0.20" length="20.83" friendlyPos="1"/>
+        <access lane="1182252237#1_0" pos="0.00" length="21.20" friendlyPos="1"/>
+        <access lane="97894990#3_0" pos="23.21" length="20.87" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4432846368" name="Guggenheim" lane="445947753#0_0" startPos="114.17" endPos="139.17" friendlyPos="true" lines="T1">
+        <access lane="174088368#0_0" pos="0.15" length="34.94" friendlyPos="1"/>
+        <access lane="174088368#2_0" pos="0.00" length="35.57" friendlyPos="1"/>
+        <access lane="41902261#1_0" pos="141.71" length="10.01" friendlyPos="1"/>
+        <access lane="637085328#0_0" pos="16.44" length="40.87" friendlyPos="1"/>
+        <access lane="637085328#1_0" pos="20.15" length="15.11" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4432854208" name="Abandoibarra" lane="445947753#3_0" startPos="268.32" endPos="293.32" friendlyPos="true" lines="T1">
+        <access lane="1208781882#1_0" pos="22.70" length="25.97" friendlyPos="1"/>
+        <access lane="1208781882#2_0" pos="0.00" length="24.79" friendlyPos="1"/>
+        <access lane="1208782016#1_0" pos="13.87" length="10.05" friendlyPos="1"/>
+        <access lane="1208782274#8_0" pos="46.92" length="23.96" friendlyPos="1"/>
+        <access lane="948481858_0" pos="14.47" length="13.94" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4432868864" name="Sabino Arana" lane="1026672489#2_0" startPos="0.00" endPos="25.00" friendlyPos="true">
+        <access lane="1262290394#1_0" pos="68.69" length="12.07" friendlyPos="1"/>
+        <access lane="499104846#0_0" pos="48.01" length="26.57" friendlyPos="1"/>
+        <access lane="499104846#1_0" pos="10.77" length="11.98" friendlyPos="1"/>
+        <access lane="569403520#1_0" pos="0.20" length="20.08" friendlyPos="1"/>
+        <access lane="569403520#2_0" pos="0.00" length="20.36" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4432868865" name="Sabino Arana" lane="1026672488#2_0" startPos="0.00" endPos="25.00" friendlyPos="true" lines="T1">
+        <access lane="1262290394#1_0" pos="68.69" length="8.47" friendlyPos="1"/>
+        <access lane="499104846#0_0" pos="48.01" length="29.28" friendlyPos="1"/>
+        <access lane="499104846#1_0" pos="11.09" length="16.04" friendlyPos="1"/>
+        <access lane="569403520#1_0" pos="0.00" length="20.75" friendlyPos="1"/>
+        <access lane="569403520#2_0" pos="0.00" length="22.29" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4452040263" name="Deustu" lane="448200753#4_0" startPos="1381.47" endPos="1581.47" friendlyPos="true" lines="L2 L1">
+        <access lane="132665161#4_0" pos="255.86" length="62.70" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4458546393" name="San Mamés" lane="558053673#1_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="1018527817#0_0" pos="0.00" length="28.03" friendlyPos="1"/>
+        <access lane="1163978728#0_0" pos="55.05" length="19.47" friendlyPos="1"/>
+        <access lane="221395587#1_0" pos="54.16" length="9.49" friendlyPos="1"/>
+        <access lane="573653242#0_0" pos="41.87" length="5.62" friendlyPos="1"/>
+        <access lane="573653262#2_0" pos="13.54" length="26.08" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4458957134" name="Autonomía" lane="432968956_0" startPos="257.62" endPos="457.62" friendlyPos="true">
+        <access lane="-128276598#1_0" pos="99.52" length="8.45" friendlyPos="1"/>
+        <access lane="128276598#0_0" pos="10.36" length="3.65" friendlyPos="1"/>
+        <access lane="148008511#0_0" pos="0.00" length="27.15" friendlyPos="1"/>
+        <access lane="148008511#1_0" pos="0.00" length="32.55" friendlyPos="1"/>
+        <access lane="25319465#1_0" pos="0.20" length="32.33" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4541033572" name="Ametzola" lane="432968956_0" startPos="800.88" endPos="1000.88" friendlyPos="true"/>
+    <busStop id="4641951433" name="Abando Indalecio Prieto" lane="170703891_0" startPos="185.13" endPos="385.13" friendlyPos="true">
+        <access lane="-313679780#4_0" pos="139.12" length="47.41" friendlyPos="1"/>
+        <access lane="144717668#3_0" pos="40.49" length="59.71" friendlyPos="1"/>
+        <access lane="313679780#4_0" pos="89.75" length="42.61" friendlyPos="1"/>
+        <access lane="417890290#1_0" pos="40.60" length="45.49" friendlyPos="1"/>
+        <access lane="469939786#0_0" pos="0.00" length="60.43" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4641951435" name="Abando Indalecio Prieto" lane="469939534_0" startPos="0.00" endPos="200.00" friendlyPos="true" lines="Intercity - 00283">
+        <access lane="-313679780#4_0" pos="139.02" length="41.44" friendlyPos="1"/>
+        <access lane="144717668#3_0" pos="39.82" length="59.86" friendlyPos="1"/>
+        <access lane="313679780#4_0" pos="89.85" length="36.64" friendlyPos="1"/>
+        <access lane="417890290#1_0" pos="40.60" length="41.50" friendlyPos="1"/>
+        <access lane="469939786#0_0" pos="0.00" length="61.65" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4641951437" name="Bilbao Abando" lane="170703863#2_0" startPos="220.23" endPos="420.23" friendlyPos="true">
+        <access lane="417890290#18_0" pos="95.40" length="19.14" friendlyPos="1"/>
+        <access lane="417890290#1_0" pos="0.00" length="17.56" friendlyPos="1"/>
+        <access lane="469939786#0_0" pos="9.16" length="3.15" friendlyPos="1"/>
+        <access lane="469939786#1_0" pos="0.00" length="8.78" friendlyPos="1"/>
+        <access lane="496284682_0" pos="0.00" length="9.03" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4641951439" name="Abando Indalecio Prieto" lane="469939536_0" startPos="0.00" endPos="200.00" friendlyPos="true">
+        <access lane="417890290#18_0" pos="95.40" length="13.86" friendlyPos="1"/>
+        <access lane="417890290#1_0" pos="0.00" length="11.63" friendlyPos="1"/>
+        <access lane="469939786#0_0" pos="5.17" length="3.08" friendlyPos="1"/>
+        <access lane="469939786#1_0" pos="0.00" length="14.50" friendlyPos="1"/>
+        <access lane="496284682_0" pos="0.00" length="13.04" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4641951440" name="Bilbao Abando" lane="469939538_0" startPos="0.00" endPos="181.68" friendlyPos="true" lines="C-3">
+        <access lane="469939786#0_0" pos="9.62" length="13.91" friendlyPos="1"/>
+        <access lane="469939786#1_0" pos="4.01" length="3.30" friendlyPos="1"/>
+        <access lane="469939786#2_0" pos="0.00" length="25.16" friendlyPos="1"/>
+        <access lane="496284682_0" pos="0.00" length="12.57" friendlyPos="1"/>
+        <access lane="496284683_0" pos="0.00" length="22.63" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4641951442" name="Bilbao Abando" lane="469939539_0" startPos="0.00" endPos="181.65" friendlyPos="true">
+        <access lane="469939786#0_0" pos="9.62" length="20.93" friendlyPos="1"/>
+        <access lane="469939786#1_0" pos="8.77" length="3.38" friendlyPos="1"/>
+        <access lane="469939786#2_0" pos="0.00" length="18.13" friendlyPos="1"/>
+        <access lane="496284682_0" pos="0.00" length="18.68" friendlyPos="1"/>
+        <access lane="496284683_0" pos="0.00" length="16.19" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4641951444" name="Bilbao Abando" lane="469939541_0" startPos="0.00" endPos="181.59" friendlyPos="true" lines="C-2">
+        <access lane="469939786#1_0" pos="15.64" length="4.57" friendlyPos="1"/>
+        <access lane="469939786#2_0" pos="0.00" length="5.79" friendlyPos="1"/>
+        <access lane="496213856#0_0" pos="0.00" length="27.54" friendlyPos="1"/>
+        <access lane="496284683_0" pos="0.00" length="8.22" friendlyPos="1"/>
+        <access lane="627566671#0_0" pos="47.90" length="26.47" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4641951446" name="Bilbao Abando" lane="469939540_0" startPos="0.00" endPos="181.57" friendlyPos="true">
+        <access lane="469939786#1_0" pos="15.64" length="10.70" friendlyPos="1"/>
+        <access lane="469939786#2_0" pos="1.71" length="3.61" friendlyPos="1"/>
+        <access lane="496213856#0_0" pos="0.00" length="21.35" friendlyPos="1"/>
+        <access lane="496284683_0" pos="0.00" length="10.40" friendlyPos="1"/>
+        <access lane="627566671#0_0" pos="47.90" length="19.46" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4710138121" name="Moyua Plaza (Barclays Bank)" lane="623203039#0_0" startPos="2.13" endPos="17.13" friendlyPos="true"/>
+    <busStop id="4813215917" name="Santimami/San Mamés" lane="448200753#4_0" startPos="249.26" endPos="449.26" friendlyPos="true" lines="L2 L1">
+        <access lane="448878907_0" pos="4.09" length="11.65" friendlyPos="1"/>
+        <access lane="448878911_0" pos="4.14" length="15.56" friendlyPos="1"/>
+        <access lane="604266566_0" pos="44.52" length="5.63" friendlyPos="1"/>
+        <access lane="862345272#1_0" pos="0.20" length="15.90" friendlyPos="1"/>
+        <access lane="862345273#0_0" pos="0.00" length="17.50" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4813215918" name="Indautxu" lane="448200753#2_0" startPos="957.71" endPos="1157.71" friendlyPos="true" lines="L2 L1">
+        <access lane="448047535_0" pos="0.00" length="2.89" friendlyPos="1"/>
+        <access lane="592141508#1_0" pos="46.38" length="4.69" friendlyPos="1"/>
+        <access lane="628997828#3_0" pos="52.59" length="0.25" friendlyPos="1"/>
+        <access lane="862809052#0_0" pos="0.00" length="0.30" friendlyPos="1"/>
+        <access lane="862809054_0" pos="0.20" length="5.24" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4813216424" name="Abando" lane="448200753#0_0" startPos="201.11" endPos="401.11" friendlyPos="true" lines="L2 L1">
+        <access lane="596954362_0" pos="0.02" length="17.20" friendlyPos="1"/>
+        <access lane="596954365_0" pos="0.00" length="17.26" friendlyPos="1"/>
+        <access lane="596959975_0" pos="4.52" length="16.21" friendlyPos="1"/>
+        <access lane="596959992_0" pos="4.25" length="17.45" friendlyPos="1"/>
+        <access lane="623203026#0_0" pos="2.51" length="7.71" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4813216425" name="Moyua" lane="448200753#2_0" startPos="203.07" endPos="403.07" friendlyPos="true" lines="L2 L1">
+        <access lane="-1208711554_0" pos="101.23" length="11.00" friendlyPos="1"/>
+        <access lane="-41578898#5_0" pos="0.00" length="7.76" friendlyPos="1"/>
+        <access lane="1208711554_0" pos="0.00" length="10.34" friendlyPos="1"/>
+        <access lane="41578898#5_0" pos="52.68" length="6.80" friendlyPos="1"/>
+        <access lane="418997501#1_0" pos="68.46" length="9.50" friendlyPos="1"/>
+    </busStop>
+    <busStop id="4813233313" name="Sarriko" lane="448200753#4_0" startPos="2370.59" endPos="2570.59" friendlyPos="true" lines="L2 L1"/>
+    <busStop id="4904228445" name="Alameda Recalde 11" lane="120925519_0" startPos="11.77" endPos="26.77" friendlyPos="true"/>
+    <busStop id="4904228446" name="Moyua plaza (Ogasuna/Hacienda)" lane="902623938#1_0" startPos="0.00" endPos="12.48" friendlyPos="true" lines="A3250"/>
+    <busStop id="4904248623" name="Gran Vía 40" lane="359617709#2_0" startPos="2.61" endPos="17.61" friendlyPos="true"/>
+    <busStop id="4904248624" name="Alameda Recalde 12" lane="157167540#0_0" startPos="19.01" endPos="34.01" friendlyPos="true" lines="13 38 27 48 G1 A3414 A3247"/>
+    <busStop id="4904250794" name="Gran Vía 74 / Basterra" lane="11503698#1_0" startPos="0.00" endPos="8.19" friendlyPos="true"/>
+    <busStop id="4975099101" name="Termibus (Zunzunegi)" lane="508156878#0_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="A2318">
+        <access lane="1163978731_0" pos="33.70" length="39.39" friendlyPos="1"/>
+        <access lane="197273736_0" pos="3.88" length="30.75" friendlyPos="1"/>
+        <access lane="269056662#1_0" pos="0.00" length="37.35" friendlyPos="1"/>
+        <access lane="350055732#5_0" pos="14.44" length="29.64" friendlyPos="1"/>
+        <access lane="630051593_0" pos="202.47" length="34.24" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5020348125" name="La Casilla" lane="628872388#0_0" startPos="0.00" endPos="25.00" friendlyPos="true" lines="T1">
+        <access lane="1219360158#1_0" pos="0.20" length="40.31" friendlyPos="1"/>
+        <access lane="149668397#1_0" pos="10.68" length="28.32" friendlyPos="1"/>
+        <access lane="149668397#2_0" pos="7.74" length="13.84" friendlyPos="1"/>
+        <access lane="35134164_0" pos="0.00" length="26.42" friendlyPos="1"/>
+        <access lane="85681697#3_0" pos="24.03" length="9.19" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5318330534" name="Castaños" lane="550450505_0" startPos="0.00" endPos="3.95" friendlyPos="true"/>
+    <busStop id="5359690881" name="Pío Baroja" lane="445937112#0_0" startPos="0.00" endPos="25.00" friendlyPos="true" lines="T1">
+        <access lane="1018373280#0_0" pos="0.00" length="23.83" friendlyPos="1"/>
+        <access lane="28463164#4_0" pos="28.94" length="20.29" friendlyPos="1"/>
+        <access lane="28463164#5_0" pos="0.00" length="17.78" friendlyPos="1"/>
+        <access lane="432389959#7_0" pos="13.18" length="6.99" friendlyPos="1"/>
+        <access lane="8481762#9_0" pos="12.98" length="18.01" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5359690882" name="Pío Baroja" lane="445937962#0_0" startPos="0.15" endPos="25.15" friendlyPos="true">
+        <access lane="22876233_0" pos="72.45" length="20.22" friendlyPos="1"/>
+        <access lane="28463164#4_0" pos="28.94" length="16.48" friendlyPos="1"/>
+        <access lane="28463164#5_0" pos="0.00" length="12.50" friendlyPos="1"/>
+        <access lane="432389959#7_0" pos="12.71" length="12.22" friendlyPos="1"/>
+        <access lane="8481762#9_0" pos="12.53" length="23.24" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5476063792" name="San Mamés" lane="1026672485#3_0" startPos="9.82" endPos="34.82" friendlyPos="true" lines="T1">
+        <access lane="573653242#0_0" pos="73.18" length="7.58" friendlyPos="1"/>
+        <access lane="886328980_0" pos="0.00" length="6.56" friendlyPos="1"/>
+        <access lane="886328981_0" pos="0.00" length="4.79" friendlyPos="1"/>
+        <access lane="886328982#1_0" pos="0.00" length="0.74" friendlyPos="1"/>
+        <access lane="886328988_0" pos="0.00" length="1.37" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5476063807" name="Ospitalea/Hospital" lane="1026672473_0" startPos="0.00" endPos="25.00" friendlyPos="true" lines="T1">
+        <access lane="-66902829#1_0" pos="21.99" length="14.75" friendlyPos="1"/>
+        <access lane="1018546544#0_0" pos="0.78" length="37.14" friendlyPos="1"/>
+        <access lane="1018546544#1_0" pos="0.00" length="37.21" friendlyPos="1"/>
+        <access lane="66902829#1_0" pos="22.99" length="9.95" friendlyPos="1"/>
+        <access lane="769620782#4_0" pos="22.10" length="11.84" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5476063808" name="Ospitalea/Hospital" lane="1026672471#0_0" startPos="0.00" endPos="25.00" friendlyPos="true">
+        <access lane="-66902829#1_0" pos="22.28" length="18.84" friendlyPos="1"/>
+        <access lane="1018546543#3_0" pos="0.00" length="37.03" friendlyPos="1"/>
+        <access lane="1018546544#1_0" pos="0.20" length="37.57" friendlyPos="1"/>
+        <access lane="66902829#1_0" pos="22.70" length="14.04" friendlyPos="1"/>
+        <access lane="769620782#4_0" pos="22.34" length="7.75" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5476063814" name="Basurto" lane="1026649196#2_0" startPos="0.00" endPos="25.00" friendlyPos="true" lines="T1">
+        <access lane="148008508#1_0" pos="34.28" length="10.06" friendlyPos="1"/>
+        <access lane="569401810#2_0" pos="23.92" length="8.58" friendlyPos="1"/>
+        <access lane="569401810#3_0" pos="1.13" length="5.91" friendlyPos="1"/>
+        <access lane="809516286#4_0" pos="32.56" length="2.25" friendlyPos="1"/>
+        <access lane="809516286#5_0" pos="0.00" length="2.25" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5476076764" name="Euskalduna" lane="1026672495#0_0" startPos="112.34" endPos="137.34" friendlyPos="true" lines="T1">
+        <access lane="41902259#2_0" pos="18.34" length="16.74" friendlyPos="1"/>
+        <access lane="637085329#1_0" pos="147.19" length="12.01" friendlyPos="1"/>
+        <access lane="644961379#4_0" pos="15.00" length="32.31" friendlyPos="1"/>
+        <access lane="904392213#1_0" pos="1.90" length="31.84" friendlyPos="1"/>
+        <access lane="904392213#3_0" pos="0.00" length="32.73" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5478168779" name="Uribitarte" lane="445937112#2_0" startPos="8.35" endPos="33.35" friendlyPos="true" lines="T1">
+        <access lane="1179982172#1_0" pos="17.25" length="25.52" friendlyPos="1"/>
+        <access lane="174297155_0" pos="66.81" length="29.32" friendlyPos="1"/>
+        <access lane="28463164#8_0" pos="18.61" length="17.44" friendlyPos="1"/>
+        <access lane="432389959#5_0" pos="17.67" length="5.95" friendlyPos="1"/>
+        <access lane="8481762#5_0" pos="17.73" length="18.51" friendlyPos="1"/>
+    </busStop>
+    <busStop id="560674206" name="Muelle de la Merced 3" lane="51983868_0" startPos="29.45" endPos="44.45" friendlyPos="true" lines="22"/>
+    <busStop id="571804589" name="Sarriko" lane="262052936#5_0" startPos="2373.38" endPos="2573.38" friendlyPos="true" lines="L2 L1"/>
+    <busStop id="582031670" name="Uribitarte" lane="445937962#1_0" startPos="7.49" endPos="32.49" friendlyPos="true">
+        <access lane="1018375902#0_0" pos="0.00" length="32.21" friendlyPos="1"/>
+        <access lane="1179982172#1_0" pos="16.97" length="20.25" friendlyPos="1"/>
+        <access lane="28463164#8_0" pos="18.28" length="12.17" friendlyPos="1"/>
+        <access lane="432389959#5_0" pos="18.01" length="11.22" friendlyPos="1"/>
+        <access lane="8481762#5_0" pos="18.30" length="23.74" friendlyPos="1"/>
+    </busStop>
+    <busStop id="582037358" name="Abandoibarra" lane="445938970#3_0" startPos="242.38" endPos="267.38" friendlyPos="true">
+        <access lane="1208781882#1_0" pos="22.70" length="24.85" friendlyPos="1"/>
+        <access lane="1208781882#2_0" pos="0.00" length="20.25" friendlyPos="1"/>
+        <access lane="1208782016#1_0" pos="12.50" length="15.27" friendlyPos="1"/>
+        <access lane="171882519_0" pos="0.00" length="22.41" friendlyPos="1"/>
+        <access lane="948481858_0" pos="13.10" length="19.17" friendlyPos="1"/>
+    </busStop>
+    <busStop id="582037359" name="Guggenheim" lane="445938970#0_0" startPos="116.50" endPos="141.50" friendlyPos="true">
+        <access lane="174088368#0_0" pos="0.15" length="33.79" friendlyPos="1"/>
+        <access lane="174088368#2_0" pos="0.00" length="32.23" friendlyPos="1"/>
+        <access lane="41902261#1_0" pos="143.18" length="15.26" friendlyPos="1"/>
+        <access lane="637085328#0_0" pos="16.44" length="37.01" friendlyPos="1"/>
+        <access lane="637085328#1_0" pos="18.67" length="9.87" friendlyPos="1"/>
+    </busStop>
+    <busStop id="582138782" name="San Mamés" lane="1026672484#3_0" startPos="9.71" endPos="34.71" friendlyPos="true">
+        <access lane="573653262#1_0" pos="22.04" length="9.57" friendlyPos="1"/>
+        <access lane="886328980_0" pos="0.00" length="10.22" friendlyPos="1"/>
+        <access lane="886328981_0" pos="0.00" length="9.13" friendlyPos="1"/>
+        <access lane="886328982#1_0" pos="0.20" length="4.94" friendlyPos="1"/>
+        <access lane="886328988_0" pos="0.00" length="5.11" friendlyPos="1"/>
+    </busStop>
+    <busStop id="582138784" name="Euskalduna" lane="1026672496#0_0" startPos="141.77" endPos="166.77" friendlyPos="true">
+        <access lane="41902259#2_0" pos="18.55" length="12.18" friendlyPos="1"/>
+        <access lane="637085329#1_0" pos="147.00" length="16.57" friendlyPos="1"/>
+        <access lane="644961379#4_0" pos="15.32" length="27.76" friendlyPos="1"/>
+        <access lane="904392213#1_0" pos="1.90" length="33.08" friendlyPos="1"/>
+        <access lane="904392213#3_0" pos="0.00" length="32.05" friendlyPos="1"/>
+    </busStop>
+    <busStop id="582149252" name="Abando" lane="555533279#2_0" startPos="9.71" endPos="34.71" friendlyPos="true" lines="T1">
+        <access lane="-28225525#3_0" pos="22.37" length="4.36" friendlyPos="1"/>
+        <access lane="22876187_0" pos="0.00" length="40.32" friendlyPos="1"/>
+        <access lane="28225525#3_0" pos="22.20" length="9.16" friendlyPos="1"/>
+        <access lane="496213856#2_0" pos="20.69" length="40.89" friendlyPos="1"/>
+        <access lane="496213856#3_0" pos="0.20" length="37.34" friendlyPos="1"/>
+    </busStop>
+    <busStop id="582152505" name="Arriaga" lane="445934750#0_0" startPos="15.76" endPos="40.76" friendlyPos="true" lines="T1">
+        <access lane="-97894990#3_0" pos="11.62" length="5.92" friendlyPos="1"/>
+        <access lane="1182252236#0_0" pos="0.20" length="21.84" friendlyPos="1"/>
+        <access lane="1182252236#1_0" pos="0.00" length="21.72" friendlyPos="1"/>
+        <access lane="1182252239#0_0" pos="11.55" length="15.81" friendlyPos="1"/>
+        <access lane="97894990#3_0" pos="21.87" length="10.72" friendlyPos="1"/>
+    </busStop>
+    <busStop id="582158464" name="Ribera" lane="445934751#0_0" startPos="61.79" endPos="86.79" friendlyPos="true" lines="T1">
+        <access lane="1182252241#4_0" pos="90.61" length="1.45" friendlyPos="1"/>
+        <access lane="1182252244#0_0" pos="184.40" length="17.19" friendlyPos="1"/>
+        <access lane="173091213#0_0" pos="0.00" length="136.76" friendlyPos="1"/>
+        <access lane="173091213#1_0" pos="0.00" length="139.26" friendlyPos="1"/>
+        <access lane="412089350#1_0" pos="524.26" length="20.74" friendlyPos="1"/>
+    </busStop>
+    <busStop id="582489148" name="Ametzola" lane="558053674#1_0" startPos="1050.24" endPos="1250.24" friendlyPos="true" lines="C-2 C-1"/>
+    <busStop id="5885749746" name="Gran Vía 7" lane="41551073#1_0" startPos="6.82" endPos="21.82" friendlyPos="true"/>
+    <busStop id="5885749747" name="Gran Vía 37" lane="1208711554_0" startPos="33.87" endPos="48.87" friendlyPos="true"/>
+    <busStop id="5885749748" name="Elcano 2" lane="411824372_0" startPos="121.09" endPos="136.09" friendlyPos="true"/>
+    <busStop id="5885749773" name="Deustuko zubia" lane="623203035#1_0" startPos="14.53" endPos="29.53" friendlyPos="true"/>
+    <busStop id="5885749774" name="Museo 1 / Henao" lane="41867850_0" startPos="16.19" endPos="31.19" friendlyPos="true"/>
+    <busStop id="5885749775" name="Elcano 3" lane="411824370#0_0" startPos="17.14" endPos="32.14" friendlyPos="true"/>
+    <busStop id="5885749776" name="Gran Vía 36" lane="1208711554_0" startPos="35.11" endPos="50.11" friendlyPos="true"/>
+    <busStop id="5885749778" name="Gran Vía 2" lane="623203026#0_0" startPos="44.84" endPos="59.84" friendlyPos="true" lines="A1 G7 40"/>
+    <busStop id="5887242255" name="Mazarredo 3" lane="1208748937_0" startPos="13.32" endPos="28.32" friendlyPos="true" lines="A5"/>
+    <busStop id="5887242256" name="Ibáñez de Bilbao 14" lane="41698387#3_0" startPos="9.60" endPos="24.60" friendlyPos="true" lines="62"/>
+    <busStop id="5924105585" name="Ayala 2" lane="627566670#2_0" startPos="9.63" endPos="24.63" friendlyPos="true" lines="A1 G2 G4"/>
+    <busStop id="5930304562" name="General Eraso / Clínica IMQ" lane="978510842#1_0" startPos="15.68" endPos="30.68" friendlyPos="true" lines="A4"/>
+    <busStop id="5930304563" name="Luis Power 4 / Kiroldegia" lane="534450623#0_0" startPos="21.95" endPos="36.95" friendlyPos="true" lines="A4 11"/>
+    <busStop id="5931082321" name="Hurtado Amézaga 1 / Geltokia-Estación" lane="627566671#0_0" startPos="32.90" endPos="47.90" friendlyPos="true"/>
+    <busStop id="5931082322" name="Hurtado Amézaga 15" lane="899446298#0_0" startPos="6.08" endPos="21.08" friendlyPos="true" lines="G5 A3514 75 71 30"/>
+    <busStop id="5931139346" name="Gran Vía 43" lane="359617709#0_0" startPos="44.05" endPos="59.05" friendlyPos="true"/>
+    <busStop id="5931139347" name="Gregorio de la Revilla 1" lane="22876060#0_0" startPos="12.97" endPos="27.97" friendlyPos="true"/>
+    <busStop id="5931139348" name="Gregorio la Revilla 17" lane="1124251784#0_0" startPos="3.35" endPos="18.35" friendlyPos="true"/>
+    <busStop id="5931139349" name="Alameda San Mamés 33" lane="65495089#1_0" startPos="69.60" endPos="84.60" friendlyPos="true"/>
+    <busStop id="5931139350" name="Alameda San Mamés 8" lane="59466128#1_0" startPos="37.60" endPos="52.60" friendlyPos="true" lines="76"/>
+    <busStop id="5931139372" name="General Concha 26" lane="208403981#3_0" startPos="11.44" endPos="26.44" friendlyPos="true"/>
+    <busStop id="5931139373" name="Elcano 9" lane="628258227_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="76"/>
+    <busStop id="5932419496" name="Hurtado Amézaga 50" lane="1117879243#1_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="5937311359" name="Trenbideko etorbidea / Autonomía" lane="128276597#1_0" startPos="21.85" endPos="36.85" friendlyPos="true"/>
+    <busStop id="5937311360" name="Basurto / Aita Donostia" lane="809516286#5_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="57 85 18 88 G6"/>
+    <busStop id="5937311361" name="Basurto / Briñas" lane="569401810#3_0" startPos="0.00" endPos="6.88" friendlyPos="true" lines="57"/>
+    <busStop id="5938621844" name="Matiko 27" lane="28489842_0" startPos="38.11" endPos="53.11" friendlyPos="true" lines="28"/>
+    <busStop id="5938621847" name="Gregorio la Revilla 35" lane="1124147869#0_0" startPos="5.87" endPos="20.87" friendlyPos="true"/>
+    <busStop id="5938621856" name="Gordóniz 22" lane="241719194#1_0" startPos="2.46" endPos="17.46" friendlyPos="true"/>
+    <busStop id="5938621857" name="Gregorio la Revilla 36" lane="1124147869#0_0" startPos="36.88" endPos="51.88" friendlyPos="true"/>
+    <busStop id="5938621858" name="Gregorio la Revilla 22" lane="22875989#0_0" startPos="11.85" endPos="26.85" friendlyPos="true"/>
+    <busStop id="5938621859" name="Gregorio de la Revilla 2" lane="22876060#0_0" startPos="23.89" endPos="38.89" friendlyPos="true"/>
+    <busStop id="5938621860" name="Gran Vía 8" lane="41551073#1_0" startPos="43.38" endPos="58.38" friendlyPos="true" lines="56 77 G3 G6 A7"/>
+    <busStop id="5938621861" name="Tiboli 1" lane="628997831_0" startPos="51.66" endPos="66.66" friendlyPos="true"/>
+    <busStop id="5938621863" name="Castaños / Funikularra" lane="628997833#5_0" startPos="0.00" endPos="11.81" friendlyPos="true"/>
+    <busStop id="5946092215" name="Autonomía 4" lane="166221982_0" startPos="37.72" endPos="52.72" friendlyPos="true" lines="A3927 A3923 A3926 A3915 A3916 A3512 A3933"/>
+    <busStop id="5946092216" name="Autonomía 50" lane="81062130#1_0" startPos="27.76" endPos="42.76" friendlyPos="true"/>
+    <busStop id="5946092217" name="Autonomía 43" lane="149668397#6_0" startPos="57.92" endPos="72.92" friendlyPos="true"/>
+    <busStop id="5950051630" name="Termibus (EITB)" lane="630051593_0" startPos="162.43" endPos="177.43" friendlyPos="true" lines="A3930"/>
+    <busStop id="5955612347" name="Urquijo / Bizkaia plaza" lane="25317056#2_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="7014977284" name="Bilbao Intermodal 27" lane="750217272_0" startPos="1.29" endPos="16.29" friendlyPos="true"/>
+    <busStop id="7014997786" name="Bilbao Intermodal 26" lane="750217273_0" startPos="0.00" endPos="11.82" friendlyPos="true"/>
+    <busStop id="7014997788" name="Bilbao Intermodal 25" lane="750217274_0" startPos="0.00" endPos="7.60" friendlyPos="true"/>
+    <busStop id="7014997790" name="Bilbao Intermodal 24" lane="750217275_0" startPos="0.00" endPos="3.24" friendlyPos="true"/>
+    <busStop id="7014997792" name="Bilbao Intermodal 23" lane="750217276_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="7014997794" name="Bilbao Intermodal 22" lane="750217277_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="7014997796" name="Bilbao Intermodal 21" lane="750217278_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="7014997798" name="Bilbao Intermodal 20" lane="750217279_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="7014997800" name="Bilbao Intermodal 19" lane="750217280_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="7014997802" name="Bilbao Intermodal 18" lane="750217281_0" startPos="0.00" endPos="9.47" friendlyPos="true"/>
+    <busStop id="7014997804" name="Bilbao Intermodal 17" lane="750217282_0" startPos="0.00" endPos="5.71" friendlyPos="true"/>
+    <busStop id="7014997806" name="Bilbao Intermodal 16" lane="750217283_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="7014997808" name="Bilbao Intermodal 15" lane="750217284_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="7014997810" name="Bilbao Intermodal 14" lane="750217285_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="7014997812" name="Bilbao Intermodal 13" lane="750217286_0" startPos="0.00" endPos="13.78" friendlyPos="true"/>
+    <busStop id="7014997814" name="Bilbao Intermodal 12" lane="750217287_0" startPos="0.00" endPos="10.70" friendlyPos="true"/>
+    <busStop id="7014997816" name="Bilbao Intermodal 11" lane="750217288_0" startPos="0.00" endPos="7.39" friendlyPos="true"/>
+    <busStop id="7014997818" name="Bilbao Intermodal 10" lane="750217289_0" startPos="0.00" endPos="4.43" friendlyPos="true"/>
+    <busStop id="7014997820" name="Bilbao Intermodal 9" lane="750217290_0" startPos="0.00" endPos="0.84" friendlyPos="true"/>
+    <busStop id="7014997822" name="Bilbao Intermodal 8" lane="750217291_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="7014997824" name="Bilbao Intermodal 7" lane="750217292_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="7014997825" name="Bilbao Intermodal 6" lane="750217293_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="7014997826" name="Bilbao Intermodal 5" lane="750217294_0" startPos="0.00" endPos="0.20" friendlyPos="true"/>
+    <busStop id="7014997829" name="Bilbao Intermodal 4" lane="750217295_0" startPos="0.00" endPos="8.75" friendlyPos="true"/>
+    <busStop id="7014997831" name="Bilbao Intermodal 3" lane="750217296_0" startPos="0.00" endPos="5.41" friendlyPos="true"/>
+    <busStop id="7014997832" name="Bilbao Intermodal 2" lane="750217297_0" startPos="0.00" endPos="2.07" friendlyPos="true"/>
+    <busStop id="7014997834" name="Bilbao Intermodal 1" lane="750217298_0" startPos="0.00" endPos="0.20" friendlyPos="true" lines="A3342 A3343 A3341 Bus: Burgos → Medina de Pomar → Bilbao A0651 Bus: Guardo → Bilbao A17 31"/>
+    <busStop id="7057687695" name="General Eguía / Intermodal" lane="809500026#0_0" startPos="0.00" endPos="0.20" friendlyPos="true" lines="38"/>
+    <busStop id="7383226896" name="Bilbao Intermodal 29" lane="789683699_0" startPos="0.00" endPos="3.09" friendlyPos="true"/>
+    <busStop id="7383226898" name="Bilbao Intermodal 28" lane="789683700_0" startPos="0.00" endPos="0.20" friendlyPos="true" lines="N1156"/>
+    <busStop id="7559343574" name="Alameda Recalde 31" lane="157167532#0_0" startPos="11.92" endPos="26.92" friendlyPos="true"/>
+    <busStop id="7563836005" name="Autonomía 13" lane="809155171#1_0" startPos="42.73" endPos="57.73" friendlyPos="true"/>
+    <busStop id="7563836006" name="Autonomía 22" lane="148384180#0_0" startPos="50.26" endPos="65.26" friendlyPos="true"/>
+    <busStop id="7564310151" name="Basurtubekoa / Iparralde" lane="148522225#0_0" startPos="174.14" endPos="189.14" friendlyPos="true"/>
+    <busStop id="7564310152" name="Basurtubekoa / Iparralde" lane="148522225#0_0" startPos="187.51" endPos="202.51" friendlyPos="true"/>
+    <busStop id="7565874276" name="Iparraguirre 42 / Bizkaia Plaza" lane="225469603_0" startPos="17.94" endPos="32.94" friendlyPos="true"/>
+    <busStop id="7565874277" name="Iparraguirre 63" lane="148386665#0_0" startPos="57.13" endPos="72.13" friendlyPos="true"/>
+    <busStop id="7565907380" name="General Concha 2 / Plaza Eguillor" lane="22876126#0_0" startPos="3.46" endPos="18.46" friendlyPos="true"/>
+    <busStop id="7565944662" name="Iparraguirre 29" lane="542617857_0" startPos="14.81" endPos="29.81" friendlyPos="true"/>
+    <busStop id="7569029918" name="Gurtubay / Ospitalea" lane="66902829#2_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="28"/>
+    <busStop id="7569144913" name="Gran Vía 41" lane="359617709#2_0" startPos="14.95" endPos="29.95" friendlyPos="true"/>
+    <busStop id="7579822647" name="Gran Vía 85" lane="812523296_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="56"/>
+    <busStop id="7579859358" name="Gran Vía 63" lane="628258191#4_0" startPos="27.74" endPos="42.74" friendlyPos="true"/>
+    <busStop id="7579861080" name="Urquijo 100" lane="604266566_0" startPos="45.16" endPos="60.16" friendlyPos="true" lines="62"/>
+    <busStop id="7579899393" name="Urquijo 92" lane="810730255#3_0" startPos="14.46" endPos="29.46" friendlyPos="true"/>
+    <busStop id="7579899394" name="Urquijo 68" lane="225469600_0" startPos="17.92" endPos="32.92" friendlyPos="true"/>
+    <busStop id="7579951939" name="Urrutia 1" lane="810725720#1_0" startPos="15.34" endPos="30.34" friendlyPos="true" lines="88"/>
+    <busStop id="7579977455" name="María Díaz de Haro 57" lane="340821945#0_0" startPos="69.41" endPos="84.41" friendlyPos="true"/>
+    <busStop id="7581414562" name="Sabino Arana 32" lane="386699906#2_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="7581453248" name="Luis Briñas 27" lane="755593569#2_0" startPos="44.51" endPos="59.51" friendlyPos="true"/>
+    <busStop id="7589131788" name="Gran Vía 60 / Salazar" lane="628258191#5_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="7591900668" name="Olabeaga / Dikea" lane="975724504_0" startPos="0.00" endPos="15.00" friendlyPos="true"/>
+    <busStop id="8337499027" name="Campo Volantín 13" lane="628997819_0" startPos="152.57" endPos="167.57" friendlyPos="true" lines="22"/>
+    <busStop id="8337598036" name="Campo Volantín 4" lane="628997819_0" startPos="51.25" endPos="66.25" friendlyPos="true"/>
+    <busStop id="8356891675" name="Gran Vía 6" lane="41551073#1_0" startPos="19.39" endPos="34.39" friendlyPos="true" lines="A3925 A3917 A3911 A3912"/>
+    <busStop id="8356905749" name="Abando (Geltokia/Estación)" lane="1134551655#1_0" startPos="0.00" endPos="15.00" friendlyPos="true" lines="A3925 A3917 A3911 A3912"/>
+    <busStop id="8356905750" name="Abando (Geltokia/Estación)" lane="1134551655#1_0" startPos="21.09" endPos="36.09" friendlyPos="true" lines="A3514"/>
+    <busStop id="8356905751" name="Abando (Geltokia/Estación)" lane="1134551655#1_0" startPos="44.30" endPos="59.30" friendlyPos="true"/>
+    <busStop id="8356905752" name="Abando (Geltokia/Estación)" lane="1134551655#1_0" startPos="69.13" endPos="84.13" friendlyPos="true"/>
+    <busStop id="8356905753" name="Abando (Geltokia/Estación)" lane="627566671#0_0" startPos="4.52" endPos="19.52" friendlyPos="true"/>
+    <busStop id="8360401643" name="Bailén 1" lane="41524801#1_0" startPos="60.13" endPos="75.13" friendlyPos="true" lines="A3631 A3632"/>
+</additional>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-07-01 13:09:04 by Eclipse SUMO netconvert Version 1.19.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="${SUMO_HOME}/data/typemap/osmNetconvert.typ.xml,${SUMO_HOME}/data/typemap/osmNetconvertAerialway.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml.gz"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml.gz"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+    </output>
+
+    <projection>
+        <proj.utm value="true"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <junctions>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+    </junctions>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+    </railway>
+
+</configuration>
+-->
+
+<ptLines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/ptlines_file.xsd">
+    <ptLine id="1103043" name="C4 Circular Interior 2" line="C4" type="bus" vClass="bus" completeness="0.03">
+        <route edges="814351068#0 19748798#1 639625555#1 1160125534#0 1160125533 331354694#0 331354694#1 331354694#2"/>
+        <busStop id="8278543284" name="Arjona (Puente de Triana)"/>
+    </ptLine>
+    <ptLine id="12116678" name="43 Reyes Catolicos - El Tardon" line="43" type="bus" vClass="bus" completeness="0.04">
+        <route edges="18978590#0 18978590#1 18978590#4 261491870#1 19124180#0 19124180#2 239209577 239210559#0 239210559#1"/>
+        <busStop id="8278543244" name="Reyes Catolicos"/>
+    </ptLine>
+    <ptLine id="12116679" name="40 Triana - Marqués de Paradas" line="40" type="bus" vClass="bus" completeness="0.05">
+        <route edges="-331354694#2 -331354694#1 -331354694#0 -1160125533 -1160125534#1 -639625555#1 -639625555#0 18978590#0 18978590#1 18978590#4 19124158#0"/>
+        <busStop id="6329569392" name="Mq. de Paradas"/>
+    </ptLine>
+    <ptLine id="12127167" name="EA - Aeropuerto - Plaza de Armas" line="EA" type="bus" vClass="bus" color="yellow" completeness="0.05">
+        <route edges="-331354694#2 -331354694#1 -331354694#0 -1160125533 -1160125534#1 127353237#0 127353237#1 18978590#0 18978590#1 18978590#4 19124158#0 238193527#0 238193527#1 238193527#4 239210559#0 239210559#1"/>
+        <busStop id="6329569392" name="Mq. de Paradas"/>
+    </ptLine>
+    <ptLine id="12127168" name="41 Tablada - Mq. de Paradas" line="41" type="bus" vClass="bus" completeness="0.03">
+        <route edges="-331354694#2 -331354694#1 -331354694#0 -1160125533 -1160125534#1 127353237#0 127353237#1 18978590#0 18978590#1 18978590#4 19124158#0"/>
+        <busStop id="6329569392" name="Mq. de Paradas"/>
+    </ptLine>
+    <ptLine id="12138415" line="3" type="bus" vClass="bus" completeness="0.01">
+        <route edges="814351068#0 19748798#1 639625555#1 1160125534#0 1160125533 331354694#0 331354694#1 331354694#2"/>
+        <busStop id="8278543284" name="Arjona (Puente de Triana)"/>
+    </ptLine>
+    <ptLine id="12154845" name="21 Polígono San Pablo - Plaza de Armas" line="21" type="bus" vClass="bus" completeness="0.05">
+        <route edges="-331354694#2 -331354694#1 -331354694#0 -1160125533 -1160125534#1 127353237#0 127353237#1 18978590#0 18978590#1 18978590#4 19124158#0 238193527#0 238193527#1 238193527#4 239210559#0 239210559#1"/>
+        <busStop id="-8305729276" name="Paseo de Colón (Plaza de Toros)"/>
+        <busStop id="8294328495" name="Mq. de Paradas"/>
+    </ptLine>
+    <ptLine id="1928495" name="21 Plaza de Armas - Polígono San Pablo" line="21" type="bus" vClass="bus" completeness="0.03">
+        <route edges="814351068#0 19748798#1 639625555#1 1160125534#0 1160125533 331354694#0 331354694#1 331354694#2"/>
+        <busStop id="8278543284" name="Arjona (Puente de Triana)"/>
+    </ptLine>
+    <ptLine id="3210346" name="03 Bellavista-S. Jeronimo-Pino Montano" line="3" type="bus" vClass="bus" completeness="0.01">
+        <route edges="-331354694#2 -331354694#1 -331354694#0 -1160125533 -1160125534#1 127353237#0 127353237#1 18978590#0 18978590#1 18978590#4 19124158#0 238193527#0 238193527#1 238193527#4 239210559#0 239210559#1"/>
+        <busStop id="8294328495" name="Mq. de Paradas"/>
+    </ptLine>
+    <ptLine id="3226273" name="40 Marqués de Paradas - Triana" line="40" type="bus" vClass="bus" completeness="0.05">
+        <route edges="19124158#0 238193527#0 238193527#1 238193527#4 239210559#0 239210559#1 814351068#0 19748798#1 639625555#1 1160125534#0 1160125533 331354694#0 331354694#1 331354694#2"/>
+        <busStop id="6329569392" name="Mq. de Paradas"/>
+    </ptLine>
+    <ptLine id="3226291" name="41 Mq. de Paradas - Tablada" line="41" type="bus" vClass="bus" completeness="0.03">
+        <route edges="19124158#0 238193527#0 238193527#1 238193527#4 239210559#0 239210559#1 814351068#0 19748798#1 639625555#1 1160125534#0 1160125533 331354694#0 331354694#1 331354694#2"/>
+        <busStop id="6329569392" name="Mq. de Paradas"/>
+    </ptLine>
+    <ptLine id="36937" name="Pza. Nueva - S. Bernardo" line="T1" type="tram" vClass="tram" completeness="0.10">
+        <route edges="18615546 222105696 222105704#1 222105704#2 222105700#0 222105700#1 222105692#0 222105692#1 222105692#2 -18615546"/>
+        <busStop id="244054578" name="Plaza Nueva"/>
+    </ptLine>
+</ptLines>

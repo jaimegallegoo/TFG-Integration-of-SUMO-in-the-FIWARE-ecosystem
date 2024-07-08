@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-07-01 13:07:11.211709 by osmWebWizard.py v1_19_0+0000-baa66a0f364
+<configuration>
+    <net-file value="C:\Users\Jaime\Sumo\2024-07-01-13-06-59\osm.net.xml.gz"/>
+    <ptlines-file value="C:\Users\Jaime\Sumo\2024-07-01-13-06-59\osm_ptlines.xml"/>
+    <ptstops-file value="C:\Users\Jaime\Sumo\2024-07-01-13-06-59\osm_stops.add.xml"/>
+    <output-file value="C:\Users\Jaime\Sumo\2024-07-01-13-06-59\osm_pt.rou.xml"/>
+    <stopinfos-file value="C:\Users\Jaime\Sumo\2024-07-01-13-06-59\stopinfos.xml"/>
+    <routes-file value="C:\Users\Jaime\Sumo\2024-07-01-13-06-59\vehroutes.xml"/>
+    <trips-file value="C:\Users\Jaime\Sumo\2024-07-01-13-06-59\trips.trips.xml"/>
+    <end value="4000.0"/>
+    <min-stops value="0"/>
+    <extend-to-fringe value="True"/>
+    <random-begin value="True"/>
+    <seed value="42"/>
+    <ignore-errors value="True"/>
+    <vtype-prefix value="pt_"/>
+    <verbose value="True"/>
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="pt_bus" vClass="bus"/>
+    <vType id="pt_tram" vClass="tram"/>
+    <vType id="pt_train" vClass="rail"/>
+    <vType id="pt_subway" vClass="rail_urban"/>
+    <vType id="pt_light_rail" vClass="rail_urban"/>
+    <vType id="pt_monorail" vClass="rail_urban"/>
+    <vType id="pt_trolleybus" vClass="bus"/>
+    <vType id="pt_minibus" vClass="bus"/>
+    <vType id="pt_share_taxi" vClass="taxi"/>
+    <vType id="pt_aerialway" vClass="rail_urban" length="2.5" width="2" personCapacity="4"/>
+    <vType id="pt_ferry" vClass="ship"/>
+    <route id="pt_train_C-2:0" color="250,183,0" edges="10157206" >
+        <stop busStop="3973025548" duration="20" until="47.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_C-3:0" color="135,0,153" edges="1028342655" >
+        <stop busStop="3973025541" duration="20" until="55.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_C-1:0" color="0,154,213" edges="1028342654" >
+        <stop busStop="3973025542" duration="20" until="55.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_C-1:1" color="0,154,213" edges="1028342653" >
+        <stop busStop="3973025543" duration="20" until="55.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_C-3:1" color="135,0,153" edges="1028342655" >
+        <stop busStop="3973025541" duration="20" until="82.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_ER24:0" edges="10157206" >
+        <stop busStop="3973025548" duration="20" until="47.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_C-6:0" color="0,45,154" edges="1028342656" >
+        <stop busStop="3973025540" duration="20" until="55.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_C-1:2" color="0,154,213" edges="1028342654" >
+        <stop busStop="3973025542" duration="20" until="81.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_ER24:1" edges="10157206" >
+        <stop busStop="3973025548" duration="20" until="47.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_C-3:2" color="135,0,153" edges="1028342655" >
+        <stop busStop="3973025541" duration="20" until="55.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_tram_10:0" color="179,203,109" edges="-1068225426" >
+        <stop busStop="-9759469603" duration="20" until="34.0"/> <!-- Alacant -->
+        <stop busStop="3420403041" duration="20" until="145.0"/> <!-- Russafa -->
+        <stop busStop="9759531876" duration="20" until="232.0"/> <!-- Amado Granell-Montolivet -->
+    </route>
+    <route id="pt_tram_10:1" color="179,203,109" edges="320501846#0 320501846#1" >
+        <stop busStop="3420403038" duration="20" until="72.0"/> <!-- Amado Granell-Montolivet -->
+        <stop busStop="1334394371" duration="20" until="159.0"/> <!-- Russafa -->
+        <stop busStop="-9759522716" duration="20" until="269.0"/> <!-- Alacant -->
+    </route>
+    <route id="pt_train_C-6:1" color="0,45,154" edges="1028342656" >
+        <stop busStop="3973025540" duration="20" until="55.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_Alacant_Terminal_=_València_-_Estació_del_Nord:0" edges="10157206" >
+        <stop busStop="3973025548" duration="20" until="47.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_tram_10:3" color="179,203,109" edges="-1068225426" >
+        <stop busStop="-9759469603" duration="20" until="41.0"/> <!-- Alacant -->
+        <stop busStop="3420403041" duration="20" until="152.0"/> <!-- Russafa -->
+        <stop busStop="9759531876" duration="20" until="239.0"/> <!-- Amado Granell-Montolivet -->
+    </route>
+    <route id="pt_train_C-2:1" color="250,183,0" edges="10157206" >
+        <stop busStop="3973025548" duration="20" until="47.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_tram_10:2" color="179,203,109" edges="320501846#0 320501846#1" >
+        <stop busStop="3420403038" duration="20" until="101.0"/> <!-- Amado Granell-Montolivet -->
+        <stop busStop="1334394371" duration="20" until="188.0"/> <!-- Russafa -->
+        <stop busStop="-9759522716" duration="20" until="331.0"/> <!-- Alacant -->
+    </route>
+    <route id="pt_train_L-50:0" color="128,0,128" edges="1028342656" >
+        <stop busStop="3973025540" duration="20" until="55.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_C-2:2" color="250,183,0" edges="10157206" >
+        <stop busStop="3973025548" duration="20" until="47.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_C-5:0" color="0,149,59" edges="41051601" >
+        <stop busStop="3973025546" duration="20" until="55.0"/> <!-- València - Nord -->
+    </route>
+    <route id="pt_train_C-3:3" color="135,0,153" edges="1028342655" >
+        <stop busStop="3973025541" duration="20" until="55.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_València_-_Estació_del_Nord_=_Alacant_Terminal:0" edges="10157206" >
+        <stop busStop="3973025548" duration="20" until="47.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_ER-02:0" color="195,64,63" edges="1028342656" >
+        <stop busStop="3973025540" duration="20" until="55.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_C-2:3" color="250,183,0" edges="10157206" >
+        <stop busStop="3973025548" duration="20" until="47.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_L-50:1" color="128,0,128" edges="1028342656" >
+        <stop busStop="3973025540" duration="20" until="55.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_C-1:3" color="0,154,213" edges="1028342653" >
+        <stop busStop="3973025543" duration="20" until="55.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_C-1:5" color="0,154,213" edges="1028342658 748874041#1" >
+        <stop busStop="3973025544" duration="20" until="55.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_ER-02:1" color="195,64,63" edges="1028342656" >
+        <stop busStop="3973025540" duration="20" until="55.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_C-1:4" color="0,154,213" edges="1028342654" >
+        <stop busStop="3973025542" duration="20" until="55.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_C-5:1" color="0,149,59" edges="41051601" >
+        <stop busStop="3973025546" duration="20" until="55.0"/> <!-- València - Nord -->
+    </route>
+    <route id="pt_bus_Bus_entre_estaciones_Valencia_Norte_y_Joaquín_Sorolla:0" edges="1003466036#0 1003466036#1 261880277#1 261880278" >
+        <stop busStop="2674971391" duration="20" until="36.0"/> <!-- Estación del Norte a Estación Joaquín Sorolla -->
+    </route>
+    <route id="pt_train_L-50:2" color="128,0,128" edges="1028342656" >
+        <stop busStop="3973025540" duration="20" until="55.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_train_L-50:3" color="128,0,128" edges="1028342656" >
+        <stop busStop="3973025540" duration="20" until="55.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_subway_1:1" color="253,198,0" edges="-822279165#2 -822279165#1 -822279165#0 -822279163 -23776427" >
+        <stop busStop="-137045354" duration="20" until="58.0"/> <!-- Campanar -->
+        <stop busStop="-137045360" duration="20" until="138.0"/> <!-- Túria -->
+        <stop busStop="-126738958" duration="20" until="238.0"/> <!-- Àngel Guimerà -->
+        <stop busStop="-474683327" duration="20" until="309.0"/> <!-- Plaça Espanya -->
+    </route>
+    <route id="pt_subway_2:0" color="231,0,149" edges="822279164#0 822279164#1 822279164#2" >
+        <stop busStop="3348096580" duration="20" until="46.0"/> <!-- Plaça Espanya -->
+        <stop busStop="3300258617" duration="20" until="111.0"/> <!-- Àngel Guimerà -->
+        <stop busStop="3300258624" duration="20" until="216.0"/> <!-- Túria -->
+        <stop busStop="3300258625" duration="20" until="297.0"/> <!-- Campanar -->
+        <stop busStop="3300258626" duration="20" until="394.0"/> <!-- Beniferri -->
+    </route>
+    <route id="pt_subway_2:1" color="231,0,149" edges="-822279165#2 -822279165#1 -822279165#0 -822279163 -23776427" >
+        <stop busStop="-137045354" duration="20" until="51.0"/> <!-- Campanar -->
+        <stop busStop="-137045360" duration="20" until="131.0"/> <!-- Túria -->
+        <stop busStop="-126738958" duration="20" until="272.0"/> <!-- Àngel Guimerà -->
+        <stop busStop="-474683327" duration="20" until="343.0"/> <!-- Plaça Espanya -->
+    </route>
+    <route id="pt_train_C-6:2" color="0,45,154" edges="1028342656" >
+        <stop busStop="3973025540" duration="20" until="55.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_subway_1:0" color="253,198,0" edges="822279164#0 822279164#1 822279164#2" >
+        <stop busStop="3348096580" duration="20" until="46.0"/> <!-- Plaça Espanya -->
+        <stop busStop="3300258617" duration="20" until="111.0"/> <!-- Àngel Guimerà -->
+        <stop busStop="3300258624" duration="20" until="216.0"/> <!-- Túria -->
+        <stop busStop="3300258625" duration="20" until="297.0"/> <!-- Campanar -->
+        <stop busStop="3300258626" duration="20" until="394.0"/> <!-- Beniferri -->
+    </route>
+    <route id="pt_train_C-6:3" color="0,45,154" edges="1028342656" >
+        <stop busStop="3973025540" duration="20" until="55.0"/> <!-- València - Estació del Nord -->
+    </route>
+    <route id="pt_subway_7:1" color="242,140,0" edges="330506672 330506085#0 377367122#0 377367122#1" >
+        <stop busStop="3292250673" duration="20" until="59.0"/> <!-- Bailén -->
+        <stop busStop="3288743173" duration="20" until="167.0"/> <!-- Colón -->
+        <stop busStop="3286032162" duration="20" until="239.0"/> <!-- Alameda -->
+        <stop busStop="3290266973" duration="20" until="327.0"/> <!-- Aragó -->
+        <stop busStop="3290266975" duration="20" until="405.0"/> <!-- Amistat -->
+        <stop busStop="3290266999" duration="20" until="495.0"/> <!-- Ayora -->
+    </route>
+    <route id="pt_subway_3:0" color="221,5,43" edges="328525628#0 328525628#1 330506085#0 233678857#0 233678857#1" >
+        <stop busStop="3299339267" duration="20" until="50.0"/> <!-- Mislata Almassil -->
+        <stop busStop="3299339264" duration="20" until="129.0"/> <!-- Mislata -->
+        <stop busStop="3299338356" duration="20" until="216.0"/> <!-- Nou d'Octubre -->
+        <stop busStop="3299338336" duration="20" until="310.0"/> <!-- Avinguda del Cid -->
+        <stop busStop="3352213376" duration="20" until="412.0"/> <!-- Àngel Guimerà -->
+        <stop busStop="3289974569" duration="20" until="503.0"/> <!-- Xàtiva -->
+        <stop busStop="3288743173" duration="20" until="588.0"/> <!-- Colón -->
+        <stop busStop="3352213321" duration="20" until="667.0"/> <!-- Alameda -->
+        <stop busStop="2420238762" duration="20" until="749.0"/> <!-- Facultats Manuel Broseta -->
+    </route>
+    <route id="pt_subway_3:1" color="221,5,43" edges="11697495 328402046 322224864#0 323321229#1 323321229#2" >
+        <stop busStop="104667516" duration="20" until="62.0"/> <!-- Facultats Manuel Broseta -->
+        <stop busStop="100937003" duration="20" until="144.0"/> <!-- Alameda -->
+        <stop busStop="104667613" duration="20" until="216.0"/> <!-- Colón -->
+        <stop busStop="126738929" duration="20" until="301.0"/> <!-- Xàtiva -->
+        <stop busStop="3298673412" duration="20" until="392.0"/> <!-- Àngel Guimerà -->
+        <stop busStop="129946697" duration="20" until="497.0"/> <!-- Avinguda del Cid -->
+        <stop busStop="129946955" duration="20" until="591.0"/> <!-- Nou d'Octubre -->
+        <stop busStop="1145573720" duration="20" until="689.0"/> <!-- Mislata -->
+        <stop busStop="316591398" duration="20" until="757.0"/> <!-- Mislata Almassil -->
+    </route>
+    <route id="pt_subway_9:1" color="183,129,79" edges="328525628#0 328525628#1 330506085#0 233678857#0 233678857#1" >
+        <stop busStop="3299339267" duration="20" until="57.0"/> <!-- Mislata Almassil -->
+        <stop busStop="3299339264" duration="20" until="136.0"/> <!-- Mislata -->
+        <stop busStop="3299338356" duration="20" until="223.0"/> <!-- Nou d'Octubre -->
+        <stop busStop="3299338336" duration="20" until="317.0"/> <!-- Avinguda del Cid -->
+        <stop busStop="3352213376" duration="20" until="419.0"/> <!-- Àngel Guimerà -->
+        <stop busStop="3289974569" duration="20" until="510.0"/> <!-- Xàtiva -->
+        <stop busStop="3288743173" duration="20" until="595.0"/> <!-- Colón -->
+        <stop busStop="3352213321" duration="20" until="667.0"/> <!-- Alameda -->
+        <stop busStop="2420238762" duration="20" until="749.0"/> <!-- Facultats Manuel Broseta -->
+    </route>
+    <route id="pt_subway_9:0" color="183,129,79" edges="11697495 328402046 322224864#0 323321229#1 323321229#2" >
+        <stop busStop="104667516" duration="20" until="63.0"/> <!-- Facultats Manuel Broseta -->
+        <stop busStop="100937003" duration="20" until="145.0"/> <!-- Alameda -->
+        <stop busStop="104667613" duration="20" until="218.0"/> <!-- Colón -->
+        <stop busStop="126738929" duration="20" until="303.0"/> <!-- Xàtiva -->
+        <stop busStop="3298673412" duration="20" until="394.0"/> <!-- Àngel Guimerà -->
+        <stop busStop="129946697" duration="20" until="499.0"/> <!-- Avinguda del Cid -->
+        <stop busStop="129946955" duration="20" until="593.0"/> <!-- Nou d'Octubre -->
+        <stop busStop="1145573720" duration="20" until="691.0"/> <!-- Mislata -->
+        <stop busStop="316591398" duration="20" until="759.0"/> <!-- Mislata Almassil -->
+    </route>
+    <route id="pt_subway_5:0" color="0,152,112" edges="328525628#0 328525628#1 330506085#0 377367122#0 377367122#1" >
+        <stop busStop="3299339267" duration="20" until="57.0"/> <!-- Mislata Almassil -->
+        <stop busStop="3299339264" duration="20" until="136.0"/> <!-- Mislata -->
+        <stop busStop="3299338356" duration="20" until="223.0"/> <!-- Nou d'Octubre -->
+        <stop busStop="3299338336" duration="20" until="317.0"/> <!-- Avinguda del Cid -->
+        <stop busStop="3352213376" duration="20" until="419.0"/> <!-- Àngel Guimerà -->
+        <stop busStop="3289974569" duration="20" until="510.0"/> <!-- Xàtiva -->
+        <stop busStop="3288743173" duration="20" until="595.0"/> <!-- Colón -->
+        <stop busStop="3286032162" duration="20" until="667.0"/> <!-- Alameda -->
+        <stop busStop="3290266973" duration="20" until="755.0"/> <!-- Aragó -->
+        <stop busStop="3290266975" duration="20" until="833.0"/> <!-- Amistat -->
+        <stop busStop="3290266999" duration="20" until="923.0"/> <!-- Ayora -->
+    </route>
+    <route id="pt_subway_7:0" color="242,140,0" edges="377367121#0 377367122#1 328402046 11353724" >
+        <stop busStop="260601661" duration="20" until="65.0"/> <!-- Ayora -->
+        <stop busStop="260594756" duration="20" until="155.0"/> <!-- Amistat -->
+        <stop busStop="100946872" duration="20" until="228.0"/> <!-- Aragó -->
+        <stop busStop="3286032162" duration="20" until="570.0"/> <!-- Alameda -->
+        <stop busStop="104667613" duration="20" until="1086.0"/> <!-- Colón -->
+        <stop busStop="357913578" duration="20" until="1194.0"/> <!-- Bailén -->
+    </route>
+    <route id="pt_subway_5:1" color="0,152,112" edges="377367121#0 377367122#1 328402046 322224864#0 323321229#1 323321229#2" >
+        <stop busStop="260601661" duration="20" until="65.0"/> <!-- Ayora -->
+        <stop busStop="260594756" duration="20" until="155.0"/> <!-- Amistat -->
+        <stop busStop="100946872" duration="20" until="497.0"/> <!-- Aragó -->
+        <stop busStop="3286032162" duration="20" until="840.0"/> <!-- Alameda -->
+        <stop busStop="104667613" duration="20" until="1356.0"/> <!-- Colón -->
+        <stop busStop="126738929" duration="20" until="1441.0"/> <!-- Xàtiva -->
+        <stop busStop="3298673412" duration="20" until="1532.0"/> <!-- Àngel Guimerà -->
+        <stop busStop="129946697" duration="20" until="1637.0"/> <!-- Avinguda del Cid -->
+        <stop busStop="129946955" duration="20" until="1731.0"/> <!-- Nou d'Octubre -->
+        <stop busStop="1145573720" duration="20" until="1829.0"/> <!-- Mislata -->
+        <stop busStop="316591398" duration="20" until="1897.0"/> <!-- Mislata Almassil -->
+    </route>
+    <flow id="pt_train_C-2:0" type="pt_train" route="pt_train_C-2:0" begin="3.0" end="4003.0" period="600" line="C-2:0" >
+        <param key="name" value="C-2: Moixent =&gt; València-Nord"/>
+        <param key="completeness" value="0.06"/>
+    </flow>
+    <flow id="pt_train_C-3:0" type="pt_train" route="pt_train_C-3:0" begin="15.0" end="4015.0" period="600" line="C-3:0" >
+        <param key="name" value="C-3: València-Nord =&gt; Utiel"/>
+        <param key="completeness" value="0.06"/>
+    </flow>
+    <flow id="pt_train_C-1:0" type="pt_train" route="pt_train_C-1:0" begin="52.0" end="4052.0" period="600" line="C-1:0" >
+        <param key="name" value="C-1: Platja i Grau de Gandia =&gt; València - Nord"/>
+        <param key="completeness" value="0.09"/>
+    </flow>
+    <flow id="pt_train_C-1:1" type="pt_train" route="pt_train_C-1:1" begin="60.0" end="4060.0" period="600" line="C-1:1" >
+        <param key="name" value="CIVIS C-1: València - Nord =&gt; Gandia"/>
+        <param key="completeness" value="0.17"/>
+    </flow>
+    <flow id="pt_train_C-3:1" type="pt_train" route="pt_train_C-3:1" begin="55.0" end="4055.0" period="600" line="C-3:1" >
+        <param key="name" value="C-3: València-Nord =&gt; Buñol"/>
+        <param key="completeness" value="0.10"/>
+    </flow>
+    <flow id="pt_train_ER24:0" type="pt_train" route="pt_train_ER24:0" begin="165.0" end="4165.0" period="600" line="ER24:0" >
+        <param key="name" value="ER24: València-Nord =&gt; Alcoi"/>
+        <param key="completeness" value="0.08"/>
+    </flow>
+    <flow id="pt_train_C-6:0" type="pt_train" route="pt_train_C-6:0" begin="119.0" end="4119.0" period="600" line="C-6:0" >
+        <param key="name" value="CIVIS C-6: València-Nord =&gt; Castelló de la Plana"/>
+        <param key="completeness" value="0.12"/>
+    </flow>
+    <flow id="pt_train_C-1:2" type="pt_train" route="pt_train_C-1:2" begin="93.0" end="4093.0" period="600" line="C-1:2" >
+        <param key="name" value="CIVIS C-1: Gandia =&gt; València - Nord"/>
+        <param key="completeness" value="0.17"/>
+    </flow>
+    <flow id="pt_train_ER24:1" type="pt_train" route="pt_train_ER24:1" begin="212.0" end="4212.0" period="600" line="ER24:1" >
+        <param key="name" value="ER24: Alcoi =&gt; València-Nord"/>
+        <param key="completeness" value="0.08"/>
+    </flow>
+    <flow id="pt_train_C-3:2" type="pt_train" route="pt_train_C-3:2" begin="161.0" end="4161.0" period="600" line="C-3:2" >
+        <param key="name" value="C-3: Buñol =&gt; València - Nord"/>
+        <param key="completeness" value="0.10"/>
+    </flow>
+    <flow id="pt_tram_10:0" type="pt_tram" route="pt_tram_10:0" begin="15.0" end="4015.0" period="600" line="10:0" >
+        <param key="name" value="Línia 10: Alacant =&gt; Natzaret"/>
+        <param key="completeness" value="0.38"/>
+    </flow>
+    <flow id="pt_tram_10:1" type="pt_tram" route="pt_tram_10:1" begin="17.0" end="4017.0" period="600" line="10:1" >
+        <param key="name" value="Línia 10: Natzaret =&gt; Alacant"/>
+        <param key="completeness" value="0.38"/>
+    </flow>
+    <flow id="pt_train_C-6:1" type="pt_train" route="pt_train_C-6:1" begin="198.0" end="4198.0" period="600" line="C-6:1" >
+        <param key="name" value="CIVIS C-6: Castelló de la Plana =&gt; València-Nord"/>
+        <param key="completeness" value="0.12"/>
+    </flow>
+    <flow id="pt_train_Alacant_Terminal_=_València_-_Estació_del_Nord:0" type="pt_train" route="pt_train_Alacant_Terminal_=_València_-_Estació_del_Nord:0" begin="259.0" end="4259.0" period="9300" line="Alacant_Terminal_=_València_-_Estació_del_Nord:0" >
+        <param key="name" value="Alacant Terminal =&gt; València - Estació del Nord"/>
+        <param key="completeness" value="0.17"/>
+    </flow>
+    <flow id="pt_tram_10:3" type="pt_tram" route="pt_tram_10:3" begin="47.0" end="4047.0" period="600" line="10:3" >
+        <param key="name" value="Línia 10: Alacant =&gt; Ciutat Arts i Ciències - Justícia"/>
+        <param key="completeness" value="0.60"/>
+    </flow>
+    <flow id="pt_train_C-2:1" type="pt_train" route="pt_train_C-2:1" begin="306.0" end="4306.0" period="600" line="C-2:1" >
+        <param key="name" value="C-2: València-Nord =&gt; Xàtiva"/>
+        <param key="completeness" value="0.08"/>
+    </flow>
+    <flow id="pt_tram_10:2" type="pt_tram" route="pt_tram_10:2" begin="27.0" end="4027.0" period="600" line="10:2" >
+        <param key="name" value="Línia 10: Ciutat Arts i Ciències - Justícia =&gt; Alacant"/>
+        <param key="completeness" value="0.60"/>
+    </flow>
+    <flow id="pt_train_L-50:0" type="pt_train" route="pt_train_L-50:0" begin="277.0" end="4277.0" period="600" line="L-50:0" >
+        <param key="name" value="L-50: València - Estació del Nord =&gt; Tortosa"/>
+        <param key="completeness" value="0.04"/>
+    </flow>
+    <flow id="pt_train_C-2:2" type="pt_train" route="pt_train_C-2:2" begin="353.0" end="4353.0" period="600" line="C-2:2" >
+        <param key="name" value="C-2: Xàtiva =&gt; València-Nord"/>
+        <param key="completeness" value="0.08"/>
+    </flow>
+    <flow id="pt_train_C-5:0" type="pt_train" route="pt_train_C-5:0" begin="346.0" end="4346.0" period="600" line="C-5:0" >
+        <param key="name" value="C-5: València - Nord =&gt; Caudiel"/>
+        <param key="completeness" value="0.08"/>
+    </flow>
+    <flow id="pt_train_C-3:3" type="pt_train" route="pt_train_C-3:3" begin="331.0" end="4331.0" period="600" line="C-3:3" >
+        <param key="name" value="C-3: Utiel =&gt; València - Nord"/>
+        <param key="completeness" value="0.06"/>
+    </flow>
+    <flow id="pt_train_València_-_Estació_del_Nord_=_Alacant_Terminal:0" type="pt_train" route="pt_train_València_-_Estació_del_Nord_=_Alacant_Terminal:0" begin="400.0" end="4400.0" period="600" line="València_-_Estació_del_Nord_=_Alacant_Terminal:0" >
+        <param key="name" value="València - Estació del Nord =&gt; Alacant Terminal"/>
+        <param key="completeness" value="0.17"/>
+    </flow>
+    <flow id="pt_train_ER-02:0" type="pt_train" route="pt_train_ER-02:0" begin="356.0" end="4356.0" period="600" line="ER-02:0" >
+        <param key="name" value="ER-02: Vinarós =&gt; València-Nord"/>
+        <param key="completeness" value="0.04"/>
+    </flow>
+    <flow id="pt_train_C-2:3" type="pt_train" route="pt_train_C-2:3" begin="447.0" end="4447.0" period="600" line="C-2:3" >
+        <param key="name" value="C-2: València-Nord =&gt; Moixent"/>
+        <param key="completeness" value="0.06"/>
+    </flow>
+    <flow id="pt_train_L-50:1" type="pt_train" route="pt_train_L-50:1" begin="435.0" end="4435.0" period="600" line="L-50:1" >
+        <param key="name" value="L-50: Tortosa =&gt; València - Estació del Nord"/>
+        <param key="completeness" value="0.06"/>
+    </flow>
+    <flow id="pt_train_C-1:3" type="pt_train" route="pt_train_C-1:3" begin="497.0" end="4497.0" period="600" line="C-1:3" >
+        <param key="name" value="C-1: València - Nord =&gt; Gandia"/>
+        <param key="completeness" value="0.08"/>
+    </flow>
+    <flow id="pt_train_C-1:5" type="pt_train" route="pt_train_C-1:5" begin="517.0" end="4517.0" period="600" line="C-1:5" >
+        <param key="name" value="C-1: València - Nord =&gt; Platja i Grau de Gandia"/>
+        <param key="completeness" value="0.09"/>
+    </flow>
+    <flow id="pt_train_ER-02:1" type="pt_train" route="pt_train_ER-02:1" begin="514.0" end="4514.0" period="600" line="ER-02:1" >
+        <param key="name" value="ER-02: València-Nord =&gt; Vinarós"/>
+        <param key="completeness" value="0.04"/>
+    </flow>
+    <flow id="pt_train_C-1:4" type="pt_train" route="pt_train_C-1:4" begin="508.0" end="4508.0" period="600" line="C-1:4" >
+        <param key="name" value="C-1: Gandia =&gt; València - Nord"/>
+        <param key="completeness" value="0.08"/>
+    </flow>
+    <flow id="pt_train_C-5:1" type="pt_train" route="pt_train_C-5:1" begin="583.0" end="4583.0" period="600" line="C-5:1" >
+        <param key="name" value="C-5: Caudiel =&gt; València - Nord"/>
+        <param key="completeness" value="0.08"/>
+    </flow>
+    <flow id="pt_bus_Bus_entre_estaciones_Valencia_Norte_y_Joaquín_Sorolla:0" type="pt_bus" route="pt_bus_Bus_entre_estaciones_Valencia_Norte_y_Joaquín_Sorolla:0" begin="535.0" end="4535.0" period="600" line="Bus_entre_estaciones_Valencia_Norte_y_Joaquín_Sorolla:0" >
+        <param key="name" value="Bus entre estaciones Valencia Norte y Joaquín Sorolla"/>
+        <param key="completeness" value="0.25"/>
+    </flow>
+    <flow id="pt_train_L-50:2" type="pt_train" route="pt_train_L-50:2" begin="593.0" end="4593.0" period="600" line="L-50:2" >
+        <param key="name" value="L-50: Tortosa =&gt; València - Estació del Nord"/>
+        <param key="completeness" value="0.07"/>
+    </flow>
+    <flow id="pt_train_L-50:3" type="pt_train" route="pt_train_L-50:3" begin="672.0" end="4672.0" period="600" line="L-50:3" >
+        <param key="name" value="L-50: València - Estació del Nord =&gt; Tortosa"/>
+        <param key="completeness" value="0.07"/>
+    </flow>
+    <flow id="pt_subway_1:1" type="pt_subway" route="pt_subway_1:1" begin="418.0" end="4418.0" period="600" line="1:1" >
+        <param key="name" value="Línia 1: Bétera =&gt; Castelló"/>
+        <param key="completeness" value="0.10"/>
+    </flow>
+    <flow id="pt_subway_2:0" type="pt_subway" route="pt_subway_2:0" begin="383.0" end="4383.0" period="600" line="2:0" >
+        <param key="name" value="Línia 2: Torrent Avinguda =&gt; Llíria"/>
+        <param key="completeness" value="0.15"/>
+    </flow>
+    <flow id="pt_subway_2:1" type="pt_subway" route="pt_subway_2:1" begin="433.0" end="4433.0" period="600" line="2:1" >
+        <param key="name" value="Línia 2: Llíria =&gt; Torrent Avinguda"/>
+        <param key="completeness" value="0.12"/>
+    </flow>
+    <flow id="pt_train_C-6:2" type="pt_train" route="pt_train_C-6:2" begin="751.0" end="4751.0" period="600" line="C-6:2" >
+        <param key="name" value="C-6: València-Nord =&gt; Castelló de la Plana"/>
+        <param key="completeness" value="0.05"/>
+    </flow>
+    <flow id="pt_subway_1:0" type="pt_subway" route="pt_subway_1:0" begin="435.0" end="4435.0" period="600" line="1:0" >
+        <param key="name" value="Línia 1: Castelló =&gt; Bétera"/>
+        <param key="completeness" value="0.12"/>
+    </flow>
+    <flow id="pt_train_C-6:3" type="pt_train" route="pt_train_C-6:3" begin="830.0" end="4830.0" period="600" line="C-6:3" >
+        <param key="name" value="C-6: Castelló de la Plana =&gt; València-Nord"/>
+        <param key="completeness" value="0.05"/>
+    </flow>
+    <flow id="pt_subway_7:1" type="pt_subway" route="pt_subway_7:1" begin="483.0" end="4483.0" period="600" line="7:1" >
+        <param key="name" value="Línia 7: Torrent Avinguda =&gt; Marítim"/>
+        <param key="completeness" value="0.38"/>
+    </flow>
+    <flow id="pt_subway_3:0" type="pt_subway" route="pt_subway_3:0" begin="406.0" end="4406.0" period="600" line="3:0" >
+        <param key="name" value="Línia 3: Aeroport =&gt; Rafelbunyol"/>
+        <param key="completeness" value="0.33"/>
+    </flow>
+    <flow id="pt_subway_3:1" type="pt_subway" route="pt_subway_3:1" begin="437.0" end="4437.0" period="600" line="3:1" >
+        <param key="name" value="Línia 3: Rafelbunyol =&gt; Aeroport"/>
+        <param key="completeness" value="0.33"/>
+    </flow>
+    <flow id="pt_subway_9:1" type="pt_subway" route="pt_subway_9:1" begin="485.0" end="4485.0" period="600" line="9:1" >
+        <param key="name" value="Línia 9: Riba-roja de Túria =&gt; Alboraya-Peris Aragó"/>
+        <param key="completeness" value="0.39"/>
+    </flow>
+    <flow id="pt_subway_9:0" type="pt_subway" route="pt_subway_9:0" begin="484.0" end="4484.0" period="600" line="9:0" >
+        <param key="name" value="Línia 9: Alboraia Peris Aragó =&gt; Riba-roja de Túria"/>
+        <param key="completeness" value="0.39"/>
+    </flow>
+    <flow id="pt_subway_5:0" type="pt_subway" route="pt_subway_5:0" begin="371.0" end="4371.0" period="600" line="5:0" >
+        <param key="name" value="Línia 5: Aeroport =&gt; Marítim"/>
+        <param key="completeness" value="0.61"/>
+    </flow>
+    <flow id="pt_subway_7:0" type="pt_subway" route="pt_subway_7:0" begin="362.0" end="4362.0" period="600" line="7:0" >
+        <param key="name" value="Línia 7: Marítim =&gt; Torrent Avinguda"/>
+        <param key="completeness" value="0.38"/>
+    </flow>
+    <flow id="pt_subway_5:1" type="pt_subway" route="pt_subway_5:1" begin="441.0" end="4441.0" period="600" line="5:1" >
+        <param key="name" value="Línia 5: Marítim =&gt; Aeroport"/>
+        <param key="completeness" value="0.61"/>
+    </flow>
+</routes>
