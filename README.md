@@ -7,7 +7,7 @@ La aplicación proporciona información recopilada desde el simulador SUMO sobre
 Además, ofrece la posibilidad de editar rutas y relanzar simulaciones para visualizar los cambios realizados.
 
 <p align="center">
-    <img src="/web/images/logo_letras_oscuro_transparente.png" alt="UrbanMobilityManager" width="200" style="margin-top: 10px;"/>
+    <img src="/web/images/logo_letras_oscuro_transparente.png" alt="UrbanMobilityManager" width="400" style="margin-top: 10px;"/>
 </p>
 
 ## Guía de instalación
