@@ -12,7 +12,7 @@ Además, ofrece la posibilidad de editar rutas y relanzar simulaciones para visu
 
 ## Guía de instalación
 
-Instrucciones sobre cómo instalar y configurar tu proyecto.
+Instrucciones sobre cómo desplegar el sistema desde cualquier ordenador para acceder a la interfaz web “Urban Mobility Manager”.
 
 ### Requisitos previos
 
@@ -43,7 +43,7 @@ Para cerrar la aplicación y detener todos los contenedores, se ejecuta el sigui
 
 ## Tecnologías Utilizadas
 
-Este proyecto hace uso de varias tecnologías clave, incluyendo:
+En la aplicación se hace uso de varias tecnologías clave, incluyendo:
 
 - **[SUMO](https://www.eclipse.org/sumo/)** - Simulador de tráfico de vehículos utilizado para la creación de escenarios de movilidad urbana.
   <p align="center">
