@@ -12,6 +12,8 @@ Además, ofrece la posibilidad de editar rutas y relanzar simulaciones para visu
 
 ## Demostración de la Aplicación
 
+A continuación, se muestra un ejemplo de uso de la aplicación para la ciudad de Bilbao.
+
 [![Demostración de la Aplicación](/web/images/portada_demo_app.png)](https://www.youtube.com/watch?v=yNvBhrct0QY "Haz clic para ver la demostración de la aplicación")
 
 ## Guía de instalación
