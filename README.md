@@ -10,6 +10,10 @@ Además, ofrece la posibilidad de editar rutas y relanzar simulaciones para visu
     <img src="/web/images/logo_letras_oscuro_transparente_v2.png" alt="UrbanMobilityManager" width="350"/>
 </p>
 
+## Demostración de la Aplicación
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yNvBhrct0QY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Guía de instalación
 
 Instrucciones sobre cómo desplegar el sistema desde cualquier ordenador para acceder a la interfaz web “Urban Mobility Manager”.
@@ -39,7 +43,11 @@ Instrucciones sobre cómo desplegar el sistema desde cualquier ordenador para ac
 ### Cierre de la aplicación
 
 Para cerrar la aplicación y detener todos los contenedores, se ejecuta el siguiente comando:  
-`$ docker compose down`
+## Demostración de la Aplicación
+
+Para ver una demostración de la aplicación, puedes hacer clic en el siguiente enlace: [Demostración de la Aplicación](https://www.youtube.com/embed/TU_VIDEO_ID)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TU_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Tecnologías Utilizadas
 
